@@ -1,0 +1,23 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Ear -->
+  <ellipse cx="60" cy="45" rx="15" ry="45" fill="none" stroke="white" stroke-width="3.5"/>
+  
+  <!-- Right Ear -->
+  <ellipse cx="140" cy="45" rx="15" ry="45" fill="none" stroke="white" stroke-width="3.5"/>
+  
+  <!-- Head -->
+  <circle cx="100" cy="110" r="50" fill="none" stroke="white" stroke-width="3.5"/>
+  
+  <!-- Left Eye -->
+  <circle cx="80" cy="95" r="15" fill="none" stroke="white" stroke-width="3"/>
+  <path d="M 80 88 L 80 102" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 73 95 L 87 95" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Right Eye -->
+  <circle cx="120" cy="95" r="15" fill="none" stroke="white" stroke-width="3"/>
+  <path d="M 120 88 L 120 102" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 113 95 L 127 95" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Nose -->
+  <circle cx="100" cy="125" r="4" fill="white"/>
+</svg>
