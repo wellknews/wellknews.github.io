@@ -44,6 +44,29 @@ if (typeof document !== 'undefined') {
     }
 
     window.addEventListener('touchstart', unlockOnTouch, { passive: true })
+
+    // Defensive guard: on first visit the Preloader may set the attribute after
+    // main.tsx runs. Poll briefly for the presence of the lock and clear it if it
+    // appears. This addresses a race where the preloader's exit path fails to
+    // run on some clients and leaves the page locked until reload.
+    const guardInterval = window.setInterval(() => {
+      try {
+        if ((document.body.dataset && document.body.dataset['scrollLocked']) ||
+            (document.body.style && document.body.style.overflow === 'hidden')) {
+          if (document.body.dataset && document.body.dataset['scrollLocked']) {
+            delete document.body.dataset['scrollLocked']
+          }
+          if (document.body.style && document.body.style.overflow === 'hidden') {
+            document.body.style.overflow = ''
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
+    }, 200)
+
+    // Stop guarding after a short window — this is only needed at initial load.
+    window.setTimeout(() => window.clearInterval(guardInterval), 3500)
   } catch (err) {
     // swallow any errors — this is a defensive fix only
   }
