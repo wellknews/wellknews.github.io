@@ -1,0 +1,16 @@
+.line {
+  display: block;
+  /* 마스크가 디센더(g, y, ,)를 잘라먹지 않도록 줄 상자에 여유를 준다 */
+  padding-bottom: 0.08em;
+}
+
+.charMask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.char {
+  display: inline-block;
+  will-change: transform;
+}

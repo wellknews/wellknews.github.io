@@ -1,13 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>wellknews.github.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>WELLKNEWS — 숏폼으로 보는 소식</title>
+    <meta
+      name="description"
+      content="WELLKNEWS는 숏폼으로 소식을 전하는 뉴스 채널입니다. 확인된 사실만, 넘긴 뒤에도 남는 형태로 전합니다."
+    />
+    <link rel="canonical" href="https://wellknews.github.io/" />
+
+    <!-- 브라우저 UI를 페이지와 같은 검정으로 맞춘다 -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- 공유 카드. 메신저로 링크가 오갈 때 빈 카드가 뜨지 않게 한다. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WELLKNEWS" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:url" content="https://wellknews.github.io/" />
+    <meta property="og:title" content="WELLKNEWS — 숏폼으로 보는 소식" />
+    <meta property="og:description" content="확인된 사실만, 넘긴 뒤에도 남는 형태로 전합니다." />
+    <meta property="og:image" content="https://wellknews.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="검은 배경 위의 WELLKNEWS 로고" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- 검색 결과에 브랜드와 공식 채널을 함께 노출시키기 위한 구조화 데이터 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "WELLKNEWS",
+        "url": "https://wellknews.github.io/",
+        "logo": "https://wellknews.github.io/logo.png",
+        "description": "숏폼으로 소식을 전하는 뉴스 채널",
+        "sameAs": [
+          "https://instagram.com/wellknews",
+          "https://threads.net/@wellknews",
+          "https://www.youtube.com/@wellknews",
+          "https://facebook.com/wellknewskr"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <noscript>
+      <p style="padding: 24px; color: #f2f2ef; font-family: sans-serif">
+        WELLKNEWS는 숏폼으로 소식을 전하는 뉴스 채널입니다. 이 페이지를 보려면 자바스크립트를
+        켜주세요. 소식은
+        <a href="https://instagram.com/wellknews" style="color: inherit">Instagram</a>,
+        <a href="https://threads.net/@wellknews" style="color: inherit">Threads</a>,
+        <a href="https://www.youtube.com/@wellknews" style="color: inherit">YouTube</a>,
+        <a href="https://facebook.com/wellknewskr" style="color: inherit">Facebook</a>
+        에서도 보실 수 있습니다.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

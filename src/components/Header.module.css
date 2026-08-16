@@ -1,0 +1,108 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: var(--z-header);
+  height: var(--header-h);
+  border-bottom: 1px solid var(--color-line);
+  will-change: transform;
+}
+
+/* 최상단을 벗어나면 뒤 내용이 비치지 않게 배경을 깐다. */
+.header[data-solid='true'] {
+  background: color-mix(in srgb, var(--color-bg) 72%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+@supports not (backdrop-filter: blur(12px)) {
+  .header[data-solid='true'] {
+    background: var(--color-bg);
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  /* 로고 이미지 높이만으로는 터치 타깃 최소치(44px)에 미치지 못한다. */
+  min-height: 44px;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.brand[data-visible='true'] {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.brandLogo {
+  width: auto;
+  height: clamp(26px, 3.4vw, 34px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 2.6vw, 44px);
+  /* 로고가 없을 때도 오른쪽에 붙어 있도록 */
+  margin-left: auto;
+}
+
+.navLink {
+  position: relative;
+  /* 터치 타깃 최소 44px 확보 — 글자만으로는 높이가 모자란다. */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 4px;
+
+  color: var(--color-text-muted);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+/* 밑줄이 글자 아래에서 자라난다. 요소를 새로 얹지 않고 링크 자신의 경계를 쓴다. */
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .navLink:hover {
+    color: var(--color-text);
+  }
+
+  .navLink:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background: var(--color-text);
+  transform-origin: left center;
+}

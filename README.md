@@ -1,16 +1,72 @@
-# React + Vite
+# WELLKNEWS
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+숏폼으로 소식을 전하는 뉴스 채널 WELLKNEWS의 공식 사이트.
 
-Currently, two official plugins are available:
+## 실행
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+| 스크립트          | 설명                                      |
+| ----------------- | ----------------------------------------- |
+| `npm run dev`     | 개발 서버                                 |
+| `npm run build`   | 배포용 빌드 (`dist/`)                     |
+| `npm run preview` | 빌드 결과 미리보기                        |
+| `npm run check`   | 포맷 · 린트 · 타입 검사 일괄 실행         |
+| `npm run format`  | 코드 포맷 적용                            |
+| `npm run assets`  | `public/logo.png`, `public/og.png` 재생성 |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 구조
 
-## Expanding the Oxlint configuration
+```
+src/
+  content/site.ts     모든 카피와 링크. 마크업에는 문자열을 두지 않는다.
+  styles/             tokens → reset → global 순으로 적용
+  components/         컴포넌트 + 같은 이름의 CSS Module
+  hooks/              스크롤·포인터 관련 동작
+scripts/              이미지 자산 생성 (원본이 바뀔 때만 수동 실행)
+assets/               로고 벡터 원본 (배포되지 않음)
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+문구를 고칠 일은 대부분 `src/content/site.ts` 한 파일에서 끝난다.
+
+## 디자인 규칙
+
+이 사이트는 아래 규칙을 지키는 것을 전제로 만들어졌다. 요소를 추가하기 전에 확인할 것.
+
+1. **같은 정보를 두 번 넣지 않는다.**
+   브랜드명·슬로건·행동 유도 문구는 페이지 전체에서 각각 한 번만 등장한다.
+   헤더 로고가 히어로를 지나야 나타나는 것도, 푸터에 워드마크가 저작권 표기 한 곳에만
+   있는 것도 이 규칙 때문이다.
+
+2. **새 정보를 담지 못하는 요소는 넣지 않는다.**
+   채널 목록에 플랫폼 로고를 붙이지 않은 이유는 바로 옆에 이름이 적혀 있기 때문이다.
+
+3. **모션의 이동 거리는 짧게 유지한다.**
+   리빌은 10px대만 움직이고 나머지 인상은 불투명도와 타이밍이 만든다.
+   거리를 키우면 곧바로 슬라이드쇼처럼 읽힌다.
+
+4. **검은 색면이 화면을 장악하게 둔다.**
+   장식을 더하는 대신 면을 뒤집는다. 채널 링크 호버가 그 예다.
+
+5. **모든 모션은 `prefers-reduced-motion`을 존중한다.**
+   토큰(`--dur-*`)이 일괄 0으로 떨어지고, 각 컴포넌트도 애니메이션 없는 경로를 갖는다.
+
+## 접근성 기준
+
+- 본문 색 대비는 검정 배경 기준 최소 6:1 (WCAG AA 4.5:1 상회)
+- 최소 글자 크기 12px, 인터랙티브 요소 최소 높이 44px
+- 헤드라인 글자 분할 애니메이션은 스크린리더에 원문을 한 번만 노출
+- 키보드 포커스에도 호버와 동일한 상태를 표시
+
+## 배포
+
+`main` 브랜치에 push하면 GitHub Actions가 포맷·린트·타입 검사를 먼저 돌리고,
+통과한 경우에만 빌드해서 GitHub Pages로 배포한다. 검사가 실패하면 배포되지 않는다.
+
+## 남은 작업
+
+- 제보 접수 창구: 현재 인스타그램 DM으로 연결된다. 전용 폼을 쓰려면
+  `src/App.tsx`의 `REPORT_HREF` 값만 교체하면 된다.

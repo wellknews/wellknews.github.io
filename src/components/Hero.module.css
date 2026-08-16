@@ -1,0 +1,113 @@
+.hero {
+  min-height: 100svh;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.inner {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding-block: calc(var(--header-h) + clamp(48px, 8vh, 110px)) clamp(34px, 6vh, 64px);
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: clamp(24px, 4vw, 48px);
+}
+
+.logo {
+  width: min(22vw, 240px);
+  height: auto;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'headline cue'
+    'position cue';
+  align-items: end;
+  column-gap: 40px;
+}
+
+.headline {
+  grid-area: headline;
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: var(--tracking-display);
+}
+
+.positioning {
+  grid-area: position;
+  margin-top: clamp(18px, 2.4vw, 30px);
+  color: var(--color-text-secondary);
+  font-size: var(--text-lead);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.3;
+}
+
+.cue {
+  grid-area: cue;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+
+  color: var(--color-text-muted);
+  font-size: var(--text-label);
+  letter-spacing: var(--tracking-label);
+  white-space: nowrap;
+}
+
+/* 아래로 흐르는 짧은 선. 화살표 글리프 대신 방향만 남긴다. */
+.cueLine {
+  width: 44px;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left center;
+  animation: drift 2.6s var(--ease-in-out) infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: scaleX(0.35);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 639px) {
+  .mark {
+    justify-content: flex-start;
+    padding-bottom: 18px;
+  }
+
+  .logo {
+    width: min(58vw, 200px);
+  }
+
+  .bottom {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'headline'
+      'position'
+      'cue';
+    row-gap: 0;
+  }
+
+  .cue {
+    justify-self: end;
+    margin-top: clamp(32px, 8vw, 52px);
+    padding-bottom: 0;
+  }
+}

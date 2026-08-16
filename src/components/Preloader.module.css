@@ -1,0 +1,15 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-preloader);
+  display: grid;
+  place-items: center;
+  background: var(--color-bg);
+}
+
+.line {
+  width: min(180px, 30vw);
+  height: 1px;
+  background: var(--color-text);
+  transform-origin: left center;
+}

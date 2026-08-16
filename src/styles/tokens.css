@@ -1,0 +1,82 @@
+/**
+ * Design tokens — 단일 진실 공급원(single source of truth).
+ * 이 파일 밖에서는 raw 색상값/하드코딩된 간격을 쓰지 않는다.
+ */
+
+:root {
+  /* ---------- Color ----------
+   * 뉴스 브랜드라 대비를 WCAG AA(4.5:1) 이상으로 고정한다.
+   * 괄호 안은 --color-bg(#000) 대비 명암비.
+   */
+  --color-bg: #000000;
+  --color-surface: #0a0a0a;
+  --color-text: #f2f2ef; /* 18.9:1 */
+  --color-text-secondary: #a8a8a2; /* 8.4:1  — 본문 보조 */
+  --color-text-muted: #8a8a85; /* 6.1:1  — 라벨/캡션 (AA 통과) */
+  --color-line: rgb(242 242 239 / 0.14);
+  --color-line-strong: rgb(242 242 239 / 0.38);
+  --color-signal: #ff3b30; /* '수신 중' 표시에만 사용 */
+
+  /* ---------- Typography ---------- */
+  --font-display: 'Instrument Serif', 'Pretendard Variable', Georgia, 'Times New Roman', serif;
+  --font-sans:
+    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+
+  /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다 */
+  --text-label: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem); /* 12 → 13px */
+  --text-body: clamp(0.9375rem, 0.9rem + 0.25vw, 1.0625rem); /* 15 → 17px */
+  --text-lead: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+  --text-h2: clamp(2.25rem, 1.4rem + 4.2vw, 5.5rem);
+  --text-h1: clamp(3rem, 1rem + 9.5vw, 9rem);
+  --text-jumbo: clamp(2.5rem, 0.8rem + 8vw, 7rem);
+
+  --tracking-label: 0.16em;
+  --tracking-display: -0.03em;
+  --tracking-tight: -0.02em;
+
+  /* ---------- Layout ---------- */
+  --page-x: clamp(20px, 4vw, 64px);
+  --content-max: 1600px;
+  --header-h: 88px;
+
+  /* 유동 세로 리듬 */
+  --space-section: clamp(96px, 12vw, 200px);
+  --space-block: clamp(48px, 7vw, 100px);
+
+  /* ---------- Motion ----------
+   * "인스턴트하지 않은" 브랜드라서 의도적으로 길고 무거운 이징을 쓴다.
+   * bounce/overshoot 계열은 쓰지 않는다.
+   */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-mask: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --dur-fast: 200ms;
+  --dur-base: 400ms;
+  --dur-slow: 800ms;
+  --dur-reveal: 1100ms;
+
+  /* ---------- Z-index scale ---------- */
+  --z-content: 1;
+  --z-header: 50;
+  --z-cursor: 90;
+  --z-preloader: 100;
+}
+
+@media (max-width: 639px) {
+  :root {
+    --header-h: 72px;
+  }
+}
+
+/* 모션을 끈 사용자에게는 시간 토큰 자체를 0으로 만들어
+ * 개별 컴포넌트가 각자 대응하지 않아도 되게 한다. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+    --dur-reveal: 1ms;
+  }
+}

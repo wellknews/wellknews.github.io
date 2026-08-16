@@ -1,0 +1,80 @@
+.list {
+  border-top: 1px solid var(--color-line);
+}
+
+.item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  /* 색면이 경계선까지 꽉 차야 해서 여백은 안쪽 content가 갖는다. */
+}
+
+/* 아래에서 위로 차오르고, 커서가 떠나면 위로 빠져나간다. */
+.fill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-text);
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition: transform var(--dur-slow) var(--ease-mask);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: clamp(88px, 9vw, 124px);
+  padding-inline: clamp(4px, 1vw, 16px);
+  transition: color var(--dur-slow) var(--ease-mask);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5.4vw, 5rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+}
+
+.arrow {
+  width: clamp(24px, 2.4vw, 34px);
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    color var(--dur-slow) var(--ease-mask);
+}
+
+@media (hover: hover) {
+  .row:hover .fill {
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+
+  .row:hover .content {
+    color: var(--color-bg);
+  }
+
+  .row:hover .arrow {
+    color: var(--color-bg);
+    transform: translate(4px, -4px);
+  }
+}
+
+/* 키보드 포커스에도 같은 상태를 준다 — 마우스가 없어도 어디에 있는지 보여야 한다. */
+.row:focus-visible .fill {
+  transform: scaleY(1);
+  transform-origin: top center;
+}
+
+.row:focus-visible .content,
+.row:focus-visible .arrow {
+  color: var(--color-bg);
+}

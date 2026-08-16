@@ -1,0 +1,18 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-cursor);
+  border-radius: 50%;
+  background: var(--color-text);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* 터치 기기에서는 아예 렌더하지 않지만, 혹시 남더라도 보이지 않게 한다. */
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}

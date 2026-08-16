@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# TypeScript 증분 빌드 캐시
+*.tsbuildinfo
+
+# 로컬 개발 도구 설정 (공개 저장소에 올리지 않는다)
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

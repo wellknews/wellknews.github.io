@@ -1,0 +1,27 @@
+.section {
+  padding-block: var(--space-section);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.index {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 var(--space-block);
+
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-label);
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
+}
+
+.number {
+  font-variant-numeric: tabular-nums;
+}
+
+.divider {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
