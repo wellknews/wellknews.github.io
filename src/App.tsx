@@ -30,16 +30,18 @@ function useSmoothScrollEnabled(): boolean {
   const [enabled] = useState(() => {
     if (typeof window === 'undefined') return false
 
-    // Only enable smooth (Lenis) scrolling when the primary input is a fine pointer
-    // and the device has no touch points. Some tablets/phones can report '(pointer: fine)'
-    // while still supporting touch which causes poor touch/scroll behavior when Lenis
-    // is active. Also respect prefers-reduced-motion.
+    // 데스크톱처럼 정밀 포인터를 사용하는 환경에서만 Lenis를 활성화한다.
     const pointerFine = window.matchMedia('(pointer: fine)').matches
+
+    // 접근성 설정에서 애니메이션 감소를 요청한 경우 Lenis를 사용하지 않는다.
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const hasTouch = (navigator && 'maxTouchPoints' in navigator && (navigator as any).maxTouchPoints > 0) || ('ontouchstart' in window)
+
+    // 스마트폰, 태블릿 및 터치 지원 하이브리드 기기에서는 네이티브 스크롤을 사용한다.
+    const hasTouch = navigator.maxTouchPoints > 0 || 'ontouchstart' in window
 
     return pointerFine && !prefersReduced && !hasTouch
   })
+
   return enabled
 }
 
@@ -49,7 +51,12 @@ type ScrollProviderProps = {
   children: ReactNode
 }
 
-/** 데스크톱에서만 Lenis를 마운트한다. 모바일에서는 아예 개입하지 않는다. */
+/**
+ * 데스크톱에서만 Lenis를 마운트한다.
+ *
+ * 모바일/터치 환경에서는 ReactLenis 자체를 렌더하지 않으므로
+ * 브라우저의 네이티브 스크롤 동작에 개입하지 않는다.
+ */
 function ScrollProvider({ enabled, lenisRef, children }: ScrollProviderProps) {
   if (!enabled) return children
 
@@ -58,11 +65,16 @@ function ScrollProvider({ enabled, lenisRef, children }: ScrollProviderProps) {
       root
       ref={lenisRef}
       options={{
-        // 값이 작을수록 더 오래 미끄러진다. 브랜드 톤에 맞춰 무겁게 잡았다.
+        // 값이 작을수록 관성이 오래 지속된다.
         lerp: 0.08,
+
+        // 마우스 휠 스크롤 속도를 약간 무겁게 조정한다.
         wheelMultiplier: 0.9,
-        // 터치 입력은 이 경로로 들어오지 않지만, 하이브리드 기기를 위해 명시해 둔다.
+
+        // 터치 입력에는 Lenis 관성을 적용하지 않는다.
         syncTouch: false,
+
+        // 앵커 이동 시 고정 헤더 높이만큼 보정한다.
         anchors: { offset: -96 },
       }}
     >
@@ -73,23 +85,41 @@ function ScrollProvider({ enabled, lenisRef, children }: ScrollProviderProps) {
 
 export default function App() {
   const lenisRef = useRef<LenisRef>(null)
+
   const smoothScroll = useSmoothScrollEnabled()
+
   const [introDone, setIntroDone] = useState(false)
 
-  const handleIntroFinish = useCallback(() => setIntroDone(true), [])
+  /**
+   * Preloader 애니메이션이 완전히 종료되면
+   * 메인 콘텐츠와 데스크톱 Lenis 스크롤을 활성화한다.
+   */
+  const handleIntroFinish = useCallback(() => {
+    setIntroDone(true)
+  }, [])
 
-  // 인트로가 도는 동안에는 관성 스크롤도 멈춘다. CSS만으로는 Lenis가 계속 스크롤을 처리한다.
-  // 모바일에는 Lenis가 없고, 스크롤 잠금은 Preloader가 직접 관리한다.
+  /**
+   * 인트로가 실행되는 동안에는 데스크톱 Lenis도 정지시킨다.
+   *
+   * 모바일에서는 ScrollProvider가 Lenis를 마운트하지 않기 때문에
+   * 이 로직은 사실상 데스크톱에만 적용된다.
+   */
   useEffect(() => {
     const lenis = lenisRef.current?.lenis
+
     if (!lenis) return
-    if (introDone) lenis.start()
-    else lenis.stop()
+
+    if (introDone) {
+      lenis.start()
+    } else {
+      lenis.stop()
+    }
   }, [introDone, smoothScroll])
 
   return (
     <ScrollProvider enabled={smoothScroll} lenisRef={lenisRef}>
       <Preloader onFinish={handleIntroFinish} />
+
       <Cursor />
 
       <a className="skip-link" href="#main">
@@ -100,8 +130,11 @@ export default function App() {
 
       <main id="main" tabIndex={-1}>
         <Hero ready={introDone} />
+
         <Report href={REPORT_HREF} />
+
         <Channels />
+
         <About />
       </main>
 

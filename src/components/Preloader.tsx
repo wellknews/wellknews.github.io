@@ -83,10 +83,12 @@ export function Preloader({ onFinish }: Props) {
   if (!active) return null
 
   return (
-    <AnimatePresence onExitComplete={() => {
-      // AnimatePresence가 퇴장 트랜지션을 모두 마친 뒤 부모에 알려준다.
-      onFinish()
-    }}>
+    <AnimatePresence
+      onExitComplete={() => {
+        // AnimatePresence가 퇴장 트랜지션을 모두 마친 뒤 부모에 알려준다.
+        onFinish()
+      }}
+    >
       {visible && (
         <motion.div
           className={styles.overlay}
