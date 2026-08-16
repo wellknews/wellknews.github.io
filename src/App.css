@@ -289,18 +289,28 @@ a {
 .footer-meta {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px 18px;
   flex-wrap: wrap;
 }
 
-.footer-meta a {
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--secondary);
   text-decoration: none;
   transition: color 180ms ease;
 }
 
-.footer-meta a:hover {
+.footer-link:hover {
   color: var(--text);
+}
+
+.footer-link svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+  flex-shrink: 0;
 }
 
 /* TABLET */

@@ -150,10 +150,21 @@ function Footer() {
     <footer className="footer">
       <span>WELLKNEWS</span>
       <div className="footer-meta">
-        <a href="https://instagram.com/muishiz" target="_blank" rel="noreferrer">
-          @muishiz
+        <a className="footer-link" href="https://instagram.com/muishiz" target="_blank" rel="noreferrer" aria-label="Developer Instagram @muishiz">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+          </svg>
+          <span>@muishiz</span>
         </a>
-        <a href="mailto:muishizen51@gmail.com">muishizen51@gmail.com</a>
+        <a className="footer-link" href="mailto:muishizen51@gmail.com" aria-label="Developer email muishizen51@gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+            <path d="M4.5 7l7.5 6 7.5-6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <span>muishizen51@gmail.com</span>
+        </a>
       </div>
       <span>© 2026 WELLKNEWS</span>
     </footer>
