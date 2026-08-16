@@ -20,6 +20,35 @@ if (!container) {
   throw new Error('마운트 지점(#root)을 찾지 못했습니다.')
 }
 
+// Safety: remove any leftover scroll lock that could prevent mobile scrolling.
+// Some environments or interrupted preloader logic may leave `data-scroll-locked` set
+// or `body.style.overflow = 'hidden'`. Remove them proactively so touch scrolling works.
+if (typeof document !== 'undefined') {
+  try {
+    if (document.body.dataset && document.body.dataset['scrollLocked']) {
+      delete document.body.dataset['scrollLocked']
+    }
+
+    if (document.body.style && document.body.style.overflow === 'hidden') {
+      document.body.style.overflow = ''
+    }
+
+    const unlockOnTouch = () => {
+      if (document.body.dataset && document.body.dataset['scrollLocked']) {
+        delete document.body.dataset['scrollLocked']
+      }
+      if (document.body.style && document.body.style.overflow === 'hidden') {
+        document.body.style.overflow = ''
+      }
+      window.removeEventListener('touchstart', unlockOnTouch, { passive: true })
+    }
+
+    window.addEventListener('touchstart', unlockOnTouch, { passive: true })
+  } catch (err) {
+    // swallow any errors — this is a defensive fix only
+  }
+}
+
 createRoot(container).render(
   <StrictMode>
     <App />
