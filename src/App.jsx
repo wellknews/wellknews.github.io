@@ -3,7 +3,7 @@ import './App.css'
 const channels = [
   { name: 'Instagram', href: 'https://instagram.com/wellknews' },
   { name: 'Threads', href: 'https://threads.net/wellknews' },
-  { name: 'YouTube', href: 'https://youtube.com/wellknews' },
+  { name: 'YouTube', href: 'https://www.youtube.com/@wellknews' },
   { name: 'Facebook', href: 'https://facebook.com/wellknewskr' },
 ]
 
