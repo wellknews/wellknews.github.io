@@ -279,10 +279,28 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  gap: 20px;
   padding-block: 52px;
   color: var(--muted);
   font-size: 0.64rem;
   letter-spacing: 0.12em;
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-meta a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.footer-meta a:hover {
+  color: var(--text);
 }
 
 /* TABLET */

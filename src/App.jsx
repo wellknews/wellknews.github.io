@@ -1,9 +1,10 @@
 import './App.css'
 
 const channels = [
-  { name: 'Instagram', href: '#' },
-  { name: 'YouTube', href: '#' },
-  { name: 'Facebook', href: '#' },
+  { name: 'Instagram', href: 'https://instagram.com/wellknews' },
+  { name: 'Threads', href: 'https://threads.net/wellknews' },
+  { name: 'YouTube', href: 'https://youtube.com/wellknews' },
+  { name: 'Facebook', href: 'https://facebook.com/wellknewskr' },
 ]
 
 function Arrow() {
@@ -110,9 +111,8 @@ function Channels() {
             className="editorial-link channel-link"
             href={channel.href}
             key={channel.name}
-            onClick={(event) => {
-              if (channel.href === '#') event.preventDefault()
-            }}
+            target="_blank"
+            rel="noreferrer"
           >
             <span>{channel.name}</span>
             <Arrow />
@@ -149,6 +149,12 @@ function Footer() {
   return (
     <footer className="footer">
       <span>WELLKNEWS</span>
+      <div className="footer-meta">
+        <a href="https://instagram.com/muishiz" target="_blank" rel="noreferrer">
+          @muishiz
+        </a>
+        <a href="mailto:muishizen51@gmail.com">muishizen51@gmail.com</a>
+      </div>
       <span>© 2026 WELLKNEWS</span>
     </footer>
   )
