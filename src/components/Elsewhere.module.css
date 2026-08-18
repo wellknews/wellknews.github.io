@@ -1,0 +1,66 @@
+.list {
+  border-top: 1px solid var(--color-line);
+}
+
+.item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row {
+  display: block;
+  padding-block: clamp(28px, 3.4vw, 44px);
+  padding-inline: clamp(4px, 1vw, 16px);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.6vw, 4.25rem);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+}
+
+.path {
+  /* transform이 먹으려면 인라인 박스여서는 안 된다. */
+  display: inline-block;
+  flex-shrink: 0;
+
+  color: var(--color-text-muted);
+  font-size: var(--text-label);
+  /* 경로는 코드로 읽혀야 한다. 라벨보다 자간을 좁혀 기호가 흩어지지 않게 한다. */
+  letter-spacing: 0.08em;
+  transition:
+    color var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.description {
+  display: block;
+  margin-top: 14px;
+  max-width: 46ch;
+
+  color: var(--color-text-secondary);
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+/* 나가는 문이므로 경로만 조용히 바깥으로 밀린다. 채널 목록처럼 색면을 뒤집지 않는다. */
+@media (hover: hover) {
+  .row:hover .path {
+    color: var(--color-text);
+    transform: translateX(6px);
+  }
+}
+
+/* 키보드 포커스에도 같은 상태를 준다. */
+.row:focus-visible .path {
+  color: var(--color-text);
+  transform: translateX(6px);
+}

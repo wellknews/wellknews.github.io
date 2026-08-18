@@ -1,0 +1,149 @@
+.inner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding-block-start: clamp(32px, 5vw, 80px);
+}
+
+/* ---------- 머리말 ---------- */
+
+.head {
+  grid-column: 2 / 12;
+  margin-block-end: var(--sc-space-block);
+}
+
+.title {
+  max-width: 22ch;
+  font-size: var(--sc-text-title);
+  font-weight: 400;
+  line-height: 1.24;
+}
+
+.subtitle {
+  margin-block-start: 0.7em;
+  max-width: var(--sc-measure);
+  color: var(--sc-text-muted);
+  line-height: 1.7;
+}
+
+/* ---------- 메타 ----------
+ * 여백에 남는 정보. 본문과 같은 줄에서 경쟁하지 않게 왼쪽 칸으로 물러난다.
+ */
+
+.meta {
+  grid-column: 2 / 5;
+  grid-row: 2;
+  color: var(--sc-text-muted);
+}
+
+.metaRow {
+  display: flex;
+  gap: 12px;
+  padding-block: 8px;
+  border-top: 1px solid var(--sc-line);
+}
+
+.metaRow:last-child {
+  border-bottom: 1px solid var(--sc-line);
+}
+
+.metaTerm {
+  flex: 0 0 6.5em;
+}
+
+.metaValue {
+  min-width: 0;
+  color: var(--sc-text);
+  text-transform: none;
+}
+
+/* ---------- 본문 ---------- */
+
+.body {
+  grid-column: 6 / 12;
+  grid-row: 2;
+}
+
+.lead {
+  max-width: var(--sc-measure);
+  margin-block-end: 1.6em;
+  font-size: var(--sc-text-lead);
+  line-height: 1.6;
+}
+
+.paragraph {
+  max-width: var(--sc-measure);
+}
+
+.body > * + * {
+  margin-block-start: 1.5em;
+}
+
+/* 소제목 앞은 문단 사이보다 넓게 벌린다 — 여기서 글이 한 번 끊긴다. */
+.heading {
+  max-width: var(--sc-measure);
+  margin-block-start: 2.6em;
+  font-size: var(--sc-text-lead);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.quote {
+  max-width: 30ch;
+  margin-block: 2em;
+  padding-inline-start: clamp(16px, 2vw, 28px);
+  border-inline-start: 1px solid var(--sc-line-strong);
+  font-size: var(--sc-text-lead);
+  line-height: 1.6;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  margin-block-start: 12px;
+  max-width: var(--sc-measure);
+  color: var(--sc-text-muted);
+  font-size: 0.9375em;
+  line-height: 1.7;
+}
+
+.back {
+  display: inline-block;
+  margin-block-start: var(--sc-space-block);
+  color: var(--sc-text-muted);
+  transition:
+    color var(--sc-dur) var(--sc-ease),
+    transform var(--sc-dur) var(--sc-ease);
+}
+
+@media (hover: hover) {
+  .back:hover {
+    color: var(--sc-text);
+    transform: translateX(-6px);
+  }
+}
+
+.missing {
+  grid-column: 2 / 12;
+  color: var(--sc-text-muted);
+}
+
+@media (max-width: 1023px) {
+  .head,
+  .meta,
+  .body,
+  .missing {
+    grid-column: 1 / 13;
+  }
+
+  .meta {
+    grid-row: auto;
+    margin-block-end: var(--sc-space-block);
+  }
+
+  .body {
+    grid-row: auto;
+  }
+}

@@ -1,0 +1,21 @@
+.fade {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity var(--sc-dur-fade) var(--sc-ease),
+    transform var(--sc-dur-fade) var(--sc-ease);
+}
+
+.fade[data-shown='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+/* 모션을 끈 경우에는 지연 없이 처음부터 보인다. */
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0ms !important;
+  }
+}

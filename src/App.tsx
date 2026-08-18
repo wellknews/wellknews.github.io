@@ -4,6 +4,7 @@ import { ReactLenis, type LenisRef } from 'lenis/react'
 import { About } from './components/About'
 import { Channels } from './components/Channels'
 import { Cursor } from './components/Cursor'
+import { Elsewhere } from './components/Elsewhere'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
@@ -136,6 +137,9 @@ export default function App() {
         <Channels />
 
         <About />
+
+        {/* 다른 프로젝트로 나가는 문은 본문을 다 읽은 뒤에 나온다. */}
+        <Elsewhere />
       </main>
 
       <Footer />

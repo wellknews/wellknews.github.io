@@ -1,0 +1,70 @@
+.header {
+  /* 고정하지 않는다. 스크롤 내내 따라다니는 막대는 이 공간의 속도와 맞지 않는다. */
+  padding-block: clamp(24px, 3vw, 40px);
+}
+
+.inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(18px, 3.4vw, 48px);
+  min-width: 0;
+}
+
+.wordmark {
+  color: var(--sc-text);
+}
+
+/* 돌아가는 문. 이름 대신 글자 하나가 그 역할을 한다. */
+.mark {
+  display: inline-block;
+  font-family: var(--sc-font-serif);
+  font-size: 1.5rem;
+  line-height: 1;
+  /* 세미콜론은 베이스라인 아래로 내려가는 글자라 옆 라벨과 눈높이가 어긋난다. */
+  transform: translateY(0.18em);
+  transition: opacity var(--sc-dur) var(--sc-ease);
+}
+
+.links {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(18px, 3vw, 44px);
+}
+
+.link {
+  color: var(--sc-text-muted);
+  transition: color var(--sc-dur) var(--sc-ease);
+}
+
+.link[aria-current='page'] {
+  color: var(--sc-text);
+}
+
+.path {
+  color: var(--sc-text-muted);
+  white-space: nowrap;
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--sc-text);
+  }
+
+  .mark:hover {
+    opacity: 0.55;
+  }
+}
+
+/* 좁은 화면에서는 주소를 접는다 — 주소창에 이미 있는 정보다. */
+@media (max-width: 479px) {
+  .path {
+    display: none;
+  }
+}

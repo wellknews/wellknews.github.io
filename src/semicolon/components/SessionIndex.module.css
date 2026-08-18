@@ -1,0 +1,84 @@
+.inner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.list,
+.empty {
+  grid-column: 2 / 12;
+}
+
+.empty {
+  color: var(--sc-text-muted);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: clamp(16px, 3vw, 48px);
+
+  padding-block: clamp(24px, 3vw, 40px);
+  border-top: 1px solid var(--sc-line);
+}
+
+.list > li:last-child .row {
+  border-bottom: 1px solid var(--sc-line);
+}
+
+.main {
+  min-width: 0;
+}
+
+.title {
+  display: block;
+  font-size: var(--sc-text-lead);
+  line-height: 1.35;
+  transition: transform var(--sc-dur) var(--sc-ease);
+}
+
+.subtitle {
+  display: block;
+  margin-block-start: 0.4em;
+  max-width: var(--sc-measure);
+  color: var(--sc-text-muted);
+  line-height: 1.7;
+}
+
+.aside {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-shrink: 0;
+  color: var(--sc-text-muted);
+}
+
+/* 초안은 개발 서버에서만 목록에 오른다. 표시가 없으면 실제 글과 구분되지 않는다. */
+.draft {
+  padding: 2px 7px;
+  border: 1px solid var(--sc-line-strong);
+}
+
+@media (hover: hover) {
+  .row:hover .title {
+    transform: translateX(6px);
+  }
+}
+
+.row:focus-visible .title {
+  transform: translateX(6px);
+}
+
+@media (max-width: 767px) {
+  .list,
+  .empty {
+    grid-column: 1 / 13;
+  }
+
+  .row {
+    /* 좁은 화면에서는 날짜를 제목 아래로 내린다. */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

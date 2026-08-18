@@ -18,6 +18,18 @@ export type NavItem = {
   href: string
 }
 
+/** 이 루트에서 갈라져 나온 개인 프로젝트 하나. */
+export type Branch = {
+  /** 화면에 크게 노출되는 이름 */
+  name: string
+  /** 표기용 경로. 주소창에 보이는 그대로 적는다. */
+  path: string
+  /** 실제 링크. 정적 호스팅이 디렉터리 리다이렉트를 하지 않도록 슬래시까지 적는다. */
+  href: string
+  /** 이름만으로 전달되지 않는 한 줄. 설명이 아니라 성격을 적는다. */
+  description: string
+}
+
 export const site = {
   name: 'WELLKNEWS',
   /** 배포 도메인. 메타태그와 구조화 데이터의 절대 URL 기준점. */
@@ -80,6 +92,28 @@ export const site = {
       { term: '맥락', description: '분량을 줄이되 맥락은 덜어내지 않습니다.' },
       { term: '기록', description: '넘긴 뒤에도 남도록 편집합니다.' },
     ],
+  },
+
+  /**
+   * 이 루트에서 갈라져 나온 개인 프로젝트들.
+   *
+   * Semicolon 전용 섹션을 만들지 않는 이유는 하나다 — 프로젝트가 하나 늘 때마다
+   * 메인 구조를 다시 짜야 하기 때문이다. 여기서는 items에 한 줄만 더한다.
+   *
+   * 입구는 끝까지 WELLKNEWS의 언어를 쓴다. 링크 너머의 디자인을 이 화면으로
+   * 미리 가져오지 않는다 — 문을 통과한 뒤에 만나야 다른 세계로 읽힌다.
+   */
+  elsewhere: {
+    index: '04',
+    label: 'ELSEWHERE',
+    items: [
+      {
+        name: 'SEMICOLON',
+        path: '/;',
+        href: '/;/',
+        description: 'A pause inside a busy life.',
+      },
+    ] satisfies Branch[],
   },
 
   footer: {

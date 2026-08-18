@@ -1,0 +1,27 @@
+.foot {
+  margin-top: var(--sc-space-page);
+  padding-block: clamp(32px, 4vw, 56px);
+  border-top: 1px solid var(--sc-line);
+}
+
+.inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.root {
+  color: var(--sc-text-muted);
+  transition: color var(--sc-dur) var(--sc-ease);
+}
+
+.copyright {
+  color: var(--sc-text-muted);
+}
+
+@media (hover: hover) {
+  .root:hover {
+    color: var(--sc-text);
+  }
+}

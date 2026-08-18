@@ -1,0 +1,174 @@
+/* ---------- Hero ----------
+ * 정확한 중앙 정렬을 피한다. 모든 것이 한가운데 놓이면 패션 브랜드의 표지가 되고,
+ * 읽는 공간이 아니게 된다. 12칸 격자 위에서 살짝 어긋나게 세운다.
+ */
+
+.hero {
+  padding-block: clamp(32px, 6vw, 96px) var(--sc-space-page);
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.mark {
+  grid-column: 2 / 9;
+  grid-row: 1;
+
+  font-size: var(--sc-text-mark);
+  /* 큰 글자에서는 가는 획이 종이처럼 읽힌다. */
+  font-weight: 300;
+  line-height: 0.78;
+  letter-spacing: 0;
+  /* 세미콜론은 글자 상자의 아래쪽에만 그려져서 위쪽 여백이 크게 남는다. */
+  margin-block-start: -0.18em;
+}
+
+.headline {
+  grid-column: 5 / 13;
+  grid-row: 2;
+
+  margin-block-start: clamp(16px, 2.5vw, 40px);
+  font-size: var(--sc-text-display);
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: var(--sc-tracking-serif);
+}
+
+.headlineLine {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .mark {
+    grid-column: 1 / 13;
+  }
+
+  .headline {
+    grid-column: 1 / 13;
+    /* 격자를 잃는 대신 들여쓰기로 어긋남을 남긴다. */
+    padding-inline-start: clamp(8px, 4vw, 32px);
+  }
+}
+
+/* ---------- Statement ---------- */
+
+.statement {
+  padding-block-end: var(--sc-space-block);
+}
+
+.statementInner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.column {
+  grid-column: 5 / 12;
+  max-width: var(--sc-measure);
+}
+
+.paragraph + .paragraph {
+  margin-block-start: 1.5em;
+}
+
+@media (max-width: 767px) {
+  .column {
+    grid-column: 1 / 13;
+  }
+}
+
+/* ---------- Principle ----------
+ * 이 공간의 기준선. 한 문장이므로 크기 대신 주변 여백이 무게를 만든다.
+ */
+
+.principle {
+  padding-block: var(--sc-space-block) var(--sc-space-page);
+}
+
+.principleInner {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.principleColumn {
+  grid-column: 2 / 11;
+}
+
+.principleLine {
+  max-width: 26ch;
+  font-size: var(--sc-text-lead);
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .principleColumn {
+    grid-column: 1 / 13;
+  }
+}
+
+/* ---------- Doors ---------- */
+
+.door {
+  display: block;
+  padding-block: clamp(28px, 3.6vw, 48px);
+  border-top: 1px solid var(--sc-line);
+}
+
+/* 마지막 문 아래에도 선을 하나 남겨 목록이 닫히게 한다. */
+.doorList > :last-child .door {
+  border-bottom: 1px solid var(--sc-line);
+}
+
+.doorHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.doorLabel {
+  font-size: var(--sc-text-title);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.doorPath {
+  display: inline-block;
+  flex-shrink: 0;
+  color: var(--sc-text-muted);
+  transition:
+    color var(--sc-dur) var(--sc-ease),
+    transform var(--sc-dur) var(--sc-ease);
+}
+
+.doorConcept {
+  display: block;
+  margin-block-start: clamp(12px, 1.6vw, 20px);
+  color: var(--sc-text-muted);
+}
+
+.doorDefinition {
+  display: block;
+  margin-block-start: 0.6em;
+  max-width: var(--sc-measure);
+}
+
+@media (hover: hover) {
+  .door:hover .doorPath {
+    color: var(--sc-text);
+    transform: translateX(6px);
+  }
+}
+
+.door:focus-visible .doorPath {
+  color: var(--sc-text);
+  transform: translateX(6px);
+}
+
+@media (max-width: 479px) {
+  .doorPath {
+    display: none;
+  }
+}

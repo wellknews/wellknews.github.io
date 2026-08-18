@@ -1,0 +1,66 @@
+/**
+ * Semicolon design tokens.
+ *
+ * WELLKNEWS의 토큰과 이름이 겹치지 않도록 --sc- 접두사를 쓴다. 두 사이트는 번들이
+ * 분리되어 있지만, 언젠가 한 화면에서 만나더라도 서로의 값을 덮어쓰지 않게 한다.
+ *
+ * 값이 적은 이유는 요소가 적기 때문이다. 색은 사실상 흑백 두 개뿐이고, 나머지 색은
+ * 콘텐츠에 들어 있는 사진이 가져온다.
+ */
+
+:root {
+  /* ---------- Color ----------
+   * 괄호 안은 --sc-bg 대비 명암비.
+   */
+  --sc-bg: #fafaf8;
+  --sc-text: #151515; /* 17.3:1 */
+  --sc-text-muted: #6b6b66; /* 5.2:1 — 메타·라벨 (AA 통과) */
+  --sc-line: rgb(21 21 21 / 0.14);
+  --sc-line-strong: rgb(21 21 21 / 0.32);
+
+  /* ---------- Typography ----------
+   * Serif — 제목, 본문, ';'. 읽는 것 전부.
+   * Mono  — 날짜, 경로, 메타데이터, 내비게이션. 코드 에디터를 흉내 내는 것이 아니라
+   *         에디토리얼 지면에 개발자의 사고방식을 조용히 남기는 정도로만 쓴다.
+   */
+  --sc-font-serif:
+    'Noto Serif KR Variable', 'Noto Serif KR', Georgia, 'Times New Roman', 'Apple SD Gothic Neo',
+    serif;
+  --sc-font-mono:
+    'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+
+  /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다 */
+  --sc-text-meta: clamp(0.75rem, 0.73rem + 0.1vw, 0.8125rem); /* 12 → 13px */
+  --sc-text-body: clamp(1rem, 0.95rem + 0.22vw, 1.125rem); /* 16 → 18px */
+  --sc-text-lead: clamp(1.1875rem, 1.05rem + 0.6vw, 1.5rem); /* 19 → 24px */
+  --sc-text-title: clamp(1.75rem, 1.25rem + 2.2vw, 3.25rem);
+  --sc-text-display: clamp(2.25rem, 1.5rem + 3.4vw, 4.5rem);
+  /* 이 공간의 유일한 그래픽 자산 */
+  --sc-text-mark: clamp(7rem, 4rem + 15vw, 17rem);
+
+  --sc-tracking-mono: 0.12em;
+  --sc-tracking-serif: -0.01em;
+
+  /* ---------- Layout ---------- */
+  --sc-page-x: clamp(20px, 5vw, 72px);
+  --sc-max: 1180px;
+  /* 한 줄에 들어갈 글자 수. 넘기면 읽는 속도가 아니라 피로가 늘어난다. */
+  --sc-measure: 34em;
+
+  --sc-space-page: clamp(72px, 9vw, 160px);
+  --sc-space-block: clamp(40px, 5vw, 80px);
+
+  /* ---------- Motion ----------
+   * 여유를 표현하려고 화면을 계속 움직이지 않는다. 짧은 페이드와 미세한 호버가 전부다.
+   */
+  --sc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sc-dur: 260ms;
+  --sc-dur-fade: 700ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --sc-dur: 1ms;
+    --sc-dur-fade: 1ms;
+  }
+}
