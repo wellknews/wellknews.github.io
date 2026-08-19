@@ -23,6 +23,18 @@
   transition: color var(--dur-fast) var(--ease-out);
 }
 
+/*
+ * 날짜는 그 글의 주소이기도 하다. 손가락으로 짚으려면 44px가 필요한데
+ * 글자는 13px이라 그대로 두면 짚히지 않는다. 위아래로 상자만 키우고
+ * 그만큼 음수 여백으로 당겨, 글자는 본문 첫 줄과 같은 높이에 남는다.
+ */
+a.date {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-block: -13px;
+}
+
 @media (hover: hover) {
   a.date:hover {
     color: var(--color-text);

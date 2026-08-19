@@ -123,7 +123,25 @@ export function Stream() {
     [openAt],
   )
 
-  const handleLeave = useCallback(() => {
+  /**
+   * 손가락에는 '떠남'이 없다.
+   *
+   * 터치에서는 손을 떼는 순간 pointerup에 이어 pointerleave가 따라 붙는다.
+   * 그대로 두면 짚자마자 닫혀 아무 일도 일어나지 않는다. 터치로 연 자리는
+   * 시간이 닫고, 이 처리는 마우스와 펜에만 적용한다.
+   */
+  const handleLeave = useCallback(
+    (event: PointerEvent<HTMLDivElement>) => {
+      if (event.pointerType === 'touch') return
+
+      clearHold()
+      setIndex(null)
+    },
+    [clearHold],
+  )
+
+  /** 스크롤 등으로 제스처를 빼앗기면 그 자리는 바로 닫는다. */
+  const handleCancel = useCallback(() => {
     clearHold()
     setIndex(null)
   }, [clearHold])
@@ -143,7 +161,7 @@ export function Stream() {
       onPointerMove={handleMove}
       onPointerDown={handleDown}
       onPointerLeave={handleLeave}
-      onPointerCancel={handleLeave}
+      onPointerCancel={handleCancel}
       aria-hidden="true"
     >
       <div className={styles.rail} ref={railRef}>
