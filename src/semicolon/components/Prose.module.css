@@ -39,14 +39,16 @@
   height: auto;
 }
 
-/* 사진 설명은 글이 아니라 메타데이터다. */
+/*
+ * 사진 설명은 메타데이터의 자리에 있지만 문장이다. 날짜나 경로처럼 고정폭에
+ * 자간을 넣으면 한글이 흩어진다. 크기와 색으로만 본문과 구분한다.
+ */
 .prose figcaption {
   margin-top: 14px;
+  max-width: var(--measure);
   color: var(--color-text-muted);
-  font-family: var(--font-mono);
   font-size: var(--text-meta);
-  line-height: 1.5;
-  letter-spacing: var(--tracking-meta);
+  line-height: 1.6;
 }
 
 /*

@@ -33,8 +33,10 @@ export function Hero() {
           </p>
 
           <h1 className={styles.line}>
-            {hero.line.map((row) => (
+            {hero.line.map((row, line) => (
               <span key={row} className={styles.row}>
+                {/* 줄이 나뉘어 있어도 한 문장으로 낭독되게 한다. */}
+                {line > 0 ? ' ' : null}
                 {row}
               </span>
             ))}

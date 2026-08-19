@@ -18,10 +18,11 @@ export function NotFound() {
           <span className="rule" aria-hidden="true" />
         </p>
 
-        <p className={styles.code}>
+        {/* 이 화면의 제목은 숫자 세 자리다. 낭독에는 뜻을 덧붙인다. */}
+        <h1 className={styles.code}>
           {semicolon.notFound.code}
           <span className="visually-hidden"> — {semicolon.notFound.title}</span>
-        </p>
+        </h1>
       </div>
 
       <BackLink to={path.home} label={BASE} />

@@ -43,8 +43,13 @@ export const template: Session = {
 
       <p>단락.</p>
 
+      {/*
+        사진은 public/images/ 아래에 두고 /images/… 로 참조한다.
+        public/의 내용은 도메인 루트로 그대로 복사되므로 /;/ 를 앞에 붙이지 않는다.
+        폭과 높이를 적어 두면 사진이 늦게 도착해도 글이 밀리지 않는다.
+      */}
       <figure>
-        <img src="/;/images/파일명.jpg" alt="사진이 무엇을 보여주는지" />
+        <img src="/images/파일명.jpg" alt="사진이 무엇을 보여주는지" width={1600} height={1067} />
         <figcaption>이 사진이 어떤 근거인지</figcaption>
       </figure>
 

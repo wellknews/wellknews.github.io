@@ -15,6 +15,23 @@ const PUBLIC_DIR = join(ROOT, 'public')
 /** 로고가 화면에 그려지는 최대 크기는 240px이므로 2배인 512면 충분하다. */
 const LOGO_SIZE = 512
 
+/**
+ * SEMICOLON의 마크.
+ *
+ * 200x200 좌표계 안에 그린 세미콜론 하나. 파비콘과 공유 카드가 같은 작도를
+ * 쓰도록 여기 한 곳에만 둔다. 웹폰트의 ';'를 그대로 쓰지 않는 이유는, 이 두
+ * 자산이 글꼴을 내려받을 수 없는 자리(브라우저 탭, 메신저 미리보기)에
+ * 놓이기 때문이다.
+ */
+const MARK = `
+  <circle cx="100" cy="66" r="17"/>
+  <circle cx="100" cy="120" r="17"/>
+  <path d="M117 116 C 119 149 106 171 79 185 L 70 170 C 90 159 100 145 99 121 Z"/>
+`
+
+const SEMICOLON_BG = '#fafaf8'
+const SEMICOLON_INK = '#111111'
+
 /** 공유 카드 규격 */
 const OG_WIDTH = 1200
 const OG_HEIGHT = 630
@@ -59,5 +76,77 @@ async function buildOgImage(logo) {
   console.log(`og.png    ${OG_WIDTH}x${OG_HEIGHT}, ${output.length} bytes`)
 }
 
+/**
+ * 브라우저 탭에 걸리는 아이콘. 16px에서도 두 점이 붙어 보이지 않아야 한다.
+ */
+async function buildSemicolonFavicon() {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="${SEMICOLON_BG}"/>
+  <g fill="${SEMICOLON_INK}">${MARK}</g>
+</svg>
+`
+
+  await writeFile(join(PUBLIC_DIR, 'semicolon.svg'), svg)
+  console.log(`semicolon.svg  ${svg.length} bytes`)
+}
+
+/** iOS 홈 화면에 걸릴 때 쓰는 아이콘. 규격이 180px 고정이다. */
+async function buildSemicolonTouchIcon() {
+  const size = 180
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="${SEMICOLON_BG}"/>
+  <g fill="${SEMICOLON_INK}">${MARK}</g>
+</svg>
+`
+
+  const output = await sharp(Buffer.from(svg))
+    .png({ compressionLevel: 9, palette: true, effort: 10 })
+    .toBuffer()
+
+  await writeFile(join(PUBLIC_DIR, 'semicolon-touch.png'), output)
+  console.log(`semicolon-touch.png  ${size}x${size}, ${output.length} bytes`)
+}
+
+/**
+ * 메신저로 /; 링크가 오갈 때 뜨는 카드.
+ *
+ * 제목과 설명은 플랫폼이 메타태그에서 가져와 옆에 붙여 준다. 그래서 카드에는
+ * 글자를 얹지 않고 마크와 판면선만 남긴다 — 사이트에서 쓰는 것과 같은 요소다.
+ */
+async function buildSemicolonOgImage() {
+  const inset = 72
+  const mark = 300
+  const tick = 9
+
+  const corner = (x, y) =>
+    `<path d="M${x - tick} ${y} H${x + tick} M${x} ${y - tick} V${y + tick}"/>`
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${OG_WIDTH}" height="${OG_HEIGHT}" viewBox="0 0 ${OG_WIDTH} ${OG_HEIGHT}">
+  <rect width="${OG_WIDTH}" height="${OG_HEIGHT}" fill="${SEMICOLON_BG}"/>
+  <g stroke="${SEMICOLON_INK}" stroke-width="1" opacity="0.16" fill="none">
+    <path d="M${inset} 0 V${OG_HEIGHT} M${OG_WIDTH - inset} 0 V${OG_HEIGHT}"/>
+  </g>
+  <g stroke="${SEMICOLON_INK}" stroke-width="1" opacity="0.34" fill="none">
+    ${corner(inset, inset)}
+    ${corner(OG_WIDTH - inset, inset)}
+    ${corner(inset, OG_HEIGHT - inset)}
+    ${corner(OG_WIDTH - inset, OG_HEIGHT - inset)}
+  </g>
+  <g fill="${SEMICOLON_INK}" transform="translate(${inset + 48} ${(OG_HEIGHT - mark) / 2}) scale(${mark / 200})">${MARK}</g>
+</svg>
+`
+
+  const output = await sharp(Buffer.from(svg))
+    .png({ compressionLevel: 9, palette: true, effort: 10 })
+    .toBuffer()
+
+  await writeFile(join(PUBLIC_DIR, 'semicolon-og.png'), output)
+  console.log(`semicolon-og.png  ${OG_WIDTH}x${OG_HEIGHT}, ${output.length} bytes`)
+}
+
 const logo = await buildLogo()
 await buildOgImage(logo)
+await buildSemicolonFavicon()
+await buildSemicolonTouchIcon()
+await buildSemicolonOgImage()

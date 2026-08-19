@@ -9,6 +9,18 @@ type Props = {
 /** 표시 순서. 시간 → 장소 → 기간 → 종류 순으로 좁혀 읽힌다. */
 const ORDER = ['date', 'location', 'duration', 'type'] as const
 
+/** 한글 음절과 자모. */
+const HANGUL = /[\u1100-\u11ff\u3130-\u318f\uac00-\ud7a3]/
+
+/**
+ * 고정폭 라벨에는 자간을 넉넉히 준다. 라틴 대문자와 숫자는 그래야 읽히지만,
+ * 한글은 같은 자간을 주면 낱글자가 흩어져 오히려 읽기 나빠진다.
+ * '2026-04-12'와 '충주'는 같은 메타데이터라도 다른 글자 체계다.
+ */
+function isKorean(value: string): boolean {
+  return HANGUL.test(value)
+}
+
 /**
  * 콘텐츠에 실제로 들어 있는 메타데이터만 적는다.
  *
@@ -29,7 +41,9 @@ export function MetaLine({ meta, className }: Props) {
   return (
     <ul className={`mono ${styles.list}${className ? ` ${className}` : ''}`} role="list">
       {items.map((item) => (
-        <li key={item.key}>{item.value}</li>
+        <li key={item.key} className={isKorean(item.value) ? styles.words : undefined}>
+          {item.value}
+        </li>
       ))}
     </ul>
   )

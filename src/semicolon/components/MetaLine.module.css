@@ -4,3 +4,9 @@
   gap: 6px clamp(14px, 2vw, 26px);
   color: var(--color-text-muted);
 }
+
+/* 기계가 적은 값이 아니라 사람이 쓴 말. 본문의 글자 체계를 따른다. */
+.words {
+  font-family: var(--font-serif);
+  letter-spacing: normal;
+}

@@ -58,11 +58,6 @@ body {
   padding-bottom: var(--space-section);
 }
 
-/* 읽기 위한 폭. 본문 단락은 예외 없이 이 폭 안에 들어간다. */
-.measure {
-  max-width: var(--measure);
-}
-
 /* 메타데이터의 공통 문법 — 날짜, 경로, 라벨은 전부 이 모습이다. */
 .mono {
   font-family: var(--font-mono);
