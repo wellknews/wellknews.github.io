@@ -12,12 +12,28 @@
 .label {
   margin-top: clamp(20px, 3vw, 40px);
   font-size: var(--text-title);
-  font-weight: 400;
+  font-weight: var(--weight-display);
   line-height: 0.94;
   letter-spacing: var(--tracking-title);
 }
 
+@media (hover: hover) {
+  .definition:hover :global(.kindRunner) {
+    opacity: 1;
+    /* 오른쪽 벽에 닿아 멈춘다. 벽과 겹치지 않도록 한 칸 앞에서 선다. */
+    transform: translateX(58px);
+  }
+
+  .definition:hover :global(.kindTrail) {
+    transform: translateX(8px);
+    opacity: 0.35;
+  }
+}
+
 .definition {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(14px, 2vw, 22px);
   margin-top: clamp(16px, 2vw, 26px);
   max-width: var(--measure);
   color: var(--color-text-secondary);

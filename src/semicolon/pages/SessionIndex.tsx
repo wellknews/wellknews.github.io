@@ -8,6 +8,7 @@ export function SessionIndex() {
   return (
     <div className="shell page">
       <PageHead
+        kind="session"
         label={semicolon.session.label}
         path={path.sessionIndex}
         definition={semicolon.session.definition}

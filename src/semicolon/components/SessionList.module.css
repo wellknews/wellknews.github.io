@@ -32,7 +32,7 @@
 
 .title {
   font-size: var(--text-lead);
-  font-weight: 400;
+  font-weight: var(--weight-display);
   line-height: 1.25;
   letter-spacing: var(--tracking-title);
 }

@@ -1,5 +1,6 @@
 import { semicolon } from '../content/site'
 import { BASE } from '../router'
+import { Stream } from './Stream'
 import styles from './Hero.module.css'
 
 const { hero } = semicolon
@@ -10,9 +11,8 @@ const { hero } = semicolon
  * 모든 것을 화면 중앙에 맞추면 패션 브랜드의 첫 화면이 된다. 그래서 글자는 왼쪽
  * 기둥에, 문장은 그 오른쪽 아래에 붙여 축을 어긋나게 둔다.
  *
- * ';' 뒤로는 같은 글자가 두 겹 어긋나 겹친다. 인쇄가 살짝 밀린 자리에서 나오는
- * 색이고, 이 공간에서 색이 등장하는 유일한 방식이다. 글자 자체는 끝까지 검정이라
- * 색을 빼도 인상이 무너지지 않는다.
+ * 아래에 놓인 눈금 줄은 이 공간이 무엇을 말하는지 문장 대신 손으로 알려 준다.
+ * 영문 슬로건을 한 줄 적어 두는 것보다 그쪽이 짧고 정확하다.
  */
 export function Hero() {
   return (
@@ -41,13 +41,13 @@ export function Hero() {
           </h1>
         </div>
 
-        <p className={`mono ${styles.foot}`}>
-          <span>{hero.subline}</span>
-          <span className="rule" aria-hidden="true" />
-          <span className={styles.cue} aria-hidden="true">
+        <div className={styles.foot}>
+          <Stream />
+
+          <span className={`mono ${styles.cue}`} aria-hidden="true">
             ↓
           </span>
-        </p>
+        </div>
       </div>
     </section>
   )

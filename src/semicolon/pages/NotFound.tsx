@@ -3,16 +3,25 @@ import { semicolon } from '../content/site'
 import { BASE, currentPath, path } from '../router'
 import styles from './NotFound.module.css'
 
+/**
+ * 없는 주소.
+ *
+ * 무엇이 없는지는 주소 자체가 말하고, 무슨 일이 일어났는지는 숫자 세 자리가
+ * 말한다. 여기에 문장을 더 얹어도 알게 되는 것이 없어서 낭독에만 남긴다.
+ */
 export function NotFound() {
   return (
     <div className="shell page">
       <div className={styles.head}>
-        {/* 없는 주소를 그대로 보여준다. 무엇이 없는지가 곧 안내다. */}
-        <p className={`mono ${styles.path}`}>{currentPath()}</p>
+        <p className={`mono ${styles.path}`}>
+          <span>{currentPath()}</span>
+          <span className="rule" aria-hidden="true" />
+        </p>
 
-        <h1 className={styles.title}>{semicolon.notFound.title}</h1>
-
-        <p className={styles.body}>{semicolon.notFound.body}</p>
+        <p className={styles.code}>
+          {semicolon.notFound.code}
+          <span className="visually-hidden"> — {semicolon.notFound.title}</span>
+        </p>
       </div>
 
       <BackLink to={path.home} label={BASE} />

@@ -23,6 +23,7 @@
   min-height: 44px;
   font-family: var(--font-serif);
   font-size: 1.75rem;
+  font-weight: var(--weight-display);
   line-height: 1;
 }
 
@@ -42,23 +43,38 @@
   transition: color var(--dur-fast) var(--ease-out);
 }
 
-/* 지금 있는 자리에만 색이 남는다. 상태 표시이지 장식이 아니다. */
-.link[aria-current='page'] {
-  color: var(--color-text);
-}
-
-.link[aria-current='page']::after {
+/* 밑줄은 링크 자신의 경계를 쓴다. 요소를 새로 얹지 않는다. */
+.link::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 12px;
   height: 1px;
+  background: currentcolor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+/* 지금 있는 자리에만 색이 남는다. 상태 표시이지 장식이 아니다. */
+.link[aria-current='page'] {
+  color: var(--color-text);
+}
+
+.link[aria-current='page']::after {
   background: var(--accent);
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 @media (hover: hover) {
   .link:hover {
     color: var(--color-text);
+  }
+
+  .link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 }

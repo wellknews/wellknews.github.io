@@ -13,7 +13,7 @@ body {
 
   font-family: var(--font-serif);
   font-size: var(--text-body);
-  font-weight: 400;
+  font-weight: var(--weight-body);
   /* 행간을 넉넉하게 둔다. 이 공간의 속도는 모션이 아니라 여백이 만든다. */
   line-height: 1.8;
 
@@ -99,6 +99,25 @@ body {
   font-family: var(--font-serif);
   font-size: 1.75rem;
   line-height: 1;
+}
+
+/*
+ * 기호가 제 뜻을 연기하는 부분.
+ *
+ * 어떤 상태에서 시작할지는 기호를 놓는 쪽이 정하므로 이름을 전역으로 둔다.
+ * 어느 쪽이든 시작은 사람이 한다 — 저절로 움직이는 것은 없다.
+ */
+.kindRunner {
+  opacity: 0;
+  transition:
+    transform var(--dur-slow) var(--ease-out),
+    opacity var(--dur-fast) linear;
+}
+
+.kindTrail {
+  transition:
+    transform var(--dur-slow) var(--ease-out),
+    opacity var(--dur-slow) var(--ease-out);
 }
 
 /* ---------- 모션 ---------- */

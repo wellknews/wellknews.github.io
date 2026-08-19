@@ -47,6 +47,7 @@
 .mark {
   flex-shrink: 0;
   font-size: var(--text-mark);
+  font-weight: var(--weight-display);
   line-height: 0.62;
   letter-spacing: -0.02em;
   /* 세미콜론의 잉크는 글자 상자 아래쪽에만 있다. 위쪽 빈 공간을 걷어낸다. */
@@ -61,7 +62,7 @@
 .line {
   margin-bottom: clamp(4px, 1.4vw, 24px);
   font-size: var(--text-display);
-  font-weight: 400;
+  font-weight: var(--weight-display);
   line-height: 1.16;
   letter-spacing: var(--tracking-title);
 }
@@ -70,16 +71,21 @@
   display: block;
 }
 
-/* 판면의 아래를 닫는 행. 왼쪽 문장, 가운데 괘선, 오른쪽에 더 있다는 표시. */
+/* 판면의 아래를 닫는 행. 만질 수 있는 줄과, 아래에 더 있다는 표시. */
 .foot {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2vw, 24px);
-  color: var(--color-text-muted);
+  gap: clamp(16px, 2.5vw, 32px);
+}
+
+.foot > :first-child {
+  flex: 1;
+  min-width: 0;
 }
 
 .cue {
   flex-shrink: 0;
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 767px) {

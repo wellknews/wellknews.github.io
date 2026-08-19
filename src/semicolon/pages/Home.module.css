@@ -10,7 +10,22 @@
 .head {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2vw, 24px);
+  gap: clamp(12px, 1.6vw, 20px);
+  margin-bottom: var(--space-block);
+}
+
+/* 경계에 부딪혀 멈추는 점, 판을 넘어 흘러 나가는 점. */
+@media (hover: hover) {
+  .head:hover :global(.kindRunner) {
+    opacity: 1;
+    /* 오른쪽 벽에 닿아 멈춘다. 벽과 겹치지 않도록 한 칸 앞에서 선다. */
+    transform: translateX(58px);
+  }
+
+  .head:hover :global(.kindTrail) {
+    transform: translateX(8px);
+    opacity: 0.35;
+  }
 }
 
 .label {
@@ -33,13 +48,4 @@
   .more:hover {
     color: var(--color-text);
   }
-}
-
-.definition {
-  margin-block: clamp(18px, 2.4vw, 30px) var(--space-block);
-  max-width: var(--measure);
-  color: var(--color-text-secondary);
-  font-size: var(--text-lead);
-  line-height: 1.45;
-  letter-spacing: var(--tracking-title);
 }

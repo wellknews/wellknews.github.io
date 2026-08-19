@@ -49,12 +49,17 @@
   letter-spacing: var(--tracking-meta);
 }
 
+/*
+ * 강조는 기울임이 아니라 무게로 한다. 한글에는 이탤릭이라는 관습이 없고
+ * 이 세리프에도 이탤릭이 없어서, 기울여 봤자 브라우저가 만들어 낸 가짜 획이 된다.
+ */
 .prose em {
-  font-style: italic;
+  font-style: normal;
+  font-weight: 600;
 }
 
 .prose strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .prose a {

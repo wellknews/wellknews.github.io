@@ -8,6 +8,7 @@ export function ThreadIndex() {
   return (
     <div className="shell page">
       <PageHead
+        kind="thread"
         label={semicolon.thread.label}
         path={path.threadIndex}
         definition={semicolon.thread.definition}
