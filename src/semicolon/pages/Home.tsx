@@ -30,20 +30,18 @@ type BlockProps = {
 /**
  * 기호, 개념 이름, 그 주소를 하나의 행으로 묶는다.
  *
- * 같은 부품인데 순서가 다르다. SESSION은 괘선이 이름과 주소 사이를 메우며
- * 오른쪽 끝에서 멈추고, THREAD는 주소가 먼저 오고 괘선이 그 뒤로 판면을 넘어
- * 흘러 나간다. 한 줄은 닫히고 한 줄은 닫히지 않는다.
+ * 두 블록의 머리는 같은 모양이다. 한쪽 괘선만 흘려보내 차이를 준 적이 있는데,
+ * 그 정도의 차이는 의도로 읽히지 않고 어긋난 것으로 읽혔다. 두 개념의 차이는
+ * 줄 맨 앞의 기호가 이미 말하고 있다.
  *
  * 무엇을 다루는 자리인지 설명하는 문장은 여기 두지 않는다. 두 블록이 한 화면에
- * 나란히 놓이므로 그 차이만으로 전해진다. 문장이 필요한 사람은 주소를 눌러
+ * 나란히 놓이므로 기호만으로 전해진다. 문장이 필요한 사람은 주소를 눌러
  * 그 개념의 페이지로 가면 된다.
  *
  * 이름 쪽을 링크로 만들지 않는 이유는 같은 목적지로 가는 문을 한 줄에 두 개
  * 두지 않기 위해서다. 문은 경로가 적힌 자리 하나뿐이다.
  */
 function Block({ id, kind, label, to, children }: BlockProps) {
-  const ongoing = kind === 'thread'
-
   return (
     <section className={styles.block} aria-labelledby={id}>
       <div className="shell">
@@ -54,13 +52,11 @@ function Block({ id, kind, label, to, children }: BlockProps) {
             {label}
           </h2>
 
-          {ongoing ? null : <span className="rule" aria-hidden="true" />}
+          <span className="rule" aria-hidden="true" />
 
           <Link to={to} className={`mono ${styles.more}`}>
             {to} <span aria-hidden="true">→</span>
           </Link>
-
-          {ongoing ? <span className="ruleOut" aria-hidden="true" /> : null}
         </div>
 
         {children}
