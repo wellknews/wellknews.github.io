@@ -1,0 +1,79 @@
+.list {
+  border-top: 1px solid var(--color-line);
+}
+
+.item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: var(--margin-col) minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: clamp(20px, 3vw, 48px);
+  min-height: 44px;
+  padding-block: clamp(24px, 3vw, 40px);
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.aside {
+  display: block;
+}
+
+.meta {
+  /* 여백 칼럼에서는 값들이 세로로 쌓인다. */
+  flex-direction: column;
+  gap: 4px;
+}
+
+.main {
+  display: block;
+}
+
+.title {
+  font-size: var(--text-lead);
+  font-weight: var(--weight-display);
+  line-height: 1.25;
+  letter-spacing: var(--tracking-title);
+}
+
+.excerpt {
+  display: block;
+  margin-top: clamp(8px, 1vw, 12px);
+  max-width: var(--measure);
+  color: var(--color-text-secondary);
+}
+
+.arrow {
+  color: var(--color-text-muted);
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+/* 호버는 여기까지만. 색면을 뒤집거나 행을 밀어내지 않는다. */
+@media (hover: hover) {
+  .row:hover .arrow {
+    color: var(--color-text);
+    transform: translateX(6px);
+  }
+}
+
+.row:focus-visible .arrow {
+  color: var(--color-text);
+}
+
+@media (max-width: 767px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 10px;
+  }
+
+  .aside {
+    grid-column: 1 / -1;
+  }
+
+  .meta {
+    flex-direction: row;
+  }
+}

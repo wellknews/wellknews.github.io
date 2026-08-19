@@ -4,6 +4,7 @@ import { ReactLenis, type LenisRef } from 'lenis/react'
 import { About } from './components/About'
 import { Channels } from './components/Channels'
 import { Cursor } from './components/Cursor'
+import { Elsewhere } from './components/Elsewhere'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
@@ -136,6 +137,8 @@ export default function App() {
         <Channels />
 
         <About />
+
+        <Elsewhere />
       </main>
 
       <Footer />

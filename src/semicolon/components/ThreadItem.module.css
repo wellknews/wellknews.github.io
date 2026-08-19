@@ -1,0 +1,113 @@
+/*
+ * SESSION의 목록은 모든 행이 같은 모양이다. 경계를 가진 것들이라 그래야 한다.
+ * THREAD는 반대다. 이어지는 중인 생각에 한 가지 형태를 강제하면 그 순간
+ * 게시판이 된다. 그래서 글이 자기 자리를 고른다.
+ */
+
+/* note — 기본. 날짜가 여백 칼럼에 앉는다. */
+.item {
+  display: grid;
+  grid-template-columns: var(--margin-col) minmax(0, 1fr);
+  column-gap: clamp(20px, 3vw, 48px);
+  padding-block: clamp(32px, 4vw, 56px);
+}
+
+.aside {
+  /* 날짜의 첫 줄이 본문 첫 줄과 같은 높이에서 시작하도록 맞춘다. */
+  padding-top: 0.5em;
+}
+
+.date {
+  display: inline-block;
+  color: var(--color-text-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) {
+  a.date:hover {
+    color: var(--color-text);
+  }
+}
+
+.title {
+  margin-bottom: clamp(14px, 1.6vw, 22px);
+  max-width: var(--measure);
+  font-size: var(--text-lead);
+  font-weight: var(--weight-display);
+  line-height: 1.3;
+  letter-spacing: var(--tracking-title);
+}
+
+/*
+ * loud — 한 문장짜리 생각.
+ *
+ * 여백 칼럼을 버리고 판면 전체를 쓴다. 날짜는 위로 올라가 아주 작게 남고,
+ * 문장이 그 자리를 전부 가져간다. 위아래로도 더 크게 비워 다른 글과
+ * 부딪히지 않게 한다.
+ */
+.item[data-form='loud'] {
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: clamp(16px, 2vw, 28px);
+  padding-block: clamp(48px, 7vw, 104px);
+
+  --prose-size: clamp(1.5rem, 1rem + 2.2vw, 2.625rem);
+  --prose-leading: 1.32;
+  --prose-measure: 21ch;
+}
+
+/* 한 문장을 크게 앉힐 때는 줄 길이를 고르게 나눈다. 어절이 어색하게 남지 않도록. */
+.item[data-form='loud'] .main p {
+  text-wrap: balance;
+}
+
+.item[data-form='loud'] .aside {
+  padding-top: 0;
+}
+
+/*
+ * aside — 곁가지.
+ *
+ * 오른쪽 안쪽으로 물러나 좁게 앉는다. 왼쪽의 빈 자리가 이 글이 본류가 아니라는
+ * 사실을 말한다. 색도 한 단계 물린다.
+ */
+.item[data-form='aside'] {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 27em);
+  row-gap: 10px;
+  padding-block: clamp(28px, 3.4vw, 48px);
+
+  --prose-measure: none;
+}
+
+.item[data-form='aside'] .aside {
+  grid-area: 1 / 2;
+  padding-top: 0;
+}
+
+.item[data-form='aside'] .main {
+  grid-area: 2 / 2;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 767px) {
+  .item,
+  .item[data-form='aside'] {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 14px;
+  }
+
+  .aside,
+  .item[data-form='aside'] .aside {
+    grid-area: auto;
+    padding-top: 0;
+  }
+
+  .item[data-form='aside'] .main {
+    grid-area: auto;
+  }
+
+  /* 좁은 화면에는 물러날 칸이 없다. 대신 한 칸 들여 곁가지라는 것만 남긴다. */
+  .item[data-form='aside'] .aside,
+  .item[data-form='aside'] .main {
+    padding-left: clamp(14px, 5vw, 28px);
+  }
+}

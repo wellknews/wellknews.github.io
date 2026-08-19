@@ -1,0 +1,23 @@
+.empty {
+  display: grid;
+  grid-template-columns: var(--margin-col) minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(20px, 3vw, 48px);
+  min-height: clamp(140px, 16vw, 200px);
+  border-top: 1px solid var(--color-line);
+}
+
+.mark {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 0.62;
+  color: rgb(17 17 17 / 0.13);
+}
+
+@media (max-width: 767px) {
+  .empty {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    min-height: clamp(120px, 26vw, 160px);
+  }
+}

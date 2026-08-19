@@ -1,0 +1,84 @@
+/*
+ * 크기·행간·폭은 바깥에서 바꿀 수 있게 손잡이로 낸다.
+ * 어떤 생각은 한 문장이라 크게 앉아야 하고, 어떤 글은 좁게 물러나야 한다.
+ * 기본값을 두었으므로 아무것도 정하지 않으면 늘 같은 리듬으로 그려진다.
+ */
+.prose {
+  font-size: var(--prose-size, var(--text-body));
+  line-height: var(--prose-leading, 1.85);
+}
+
+.prose p {
+  max-width: var(--prose-measure, var(--measure));
+}
+
+.prose p + p {
+  margin-top: 1.4em;
+}
+
+/* 본문 안의 소제목. 제목 위계를 흉내내기 위한 크기 차이가 아니라 단락 묶음의 경계다. */
+.prose h3 {
+  max-width: var(--prose-measure, var(--measure));
+  margin-top: 2.6em;
+  margin-bottom: 0.7em;
+  font-size: var(--text-lead);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: var(--tracking-title);
+}
+
+.prose blockquote {
+  max-width: var(--prose-measure, var(--measure));
+  margin-block: 2em;
+  padding-left: clamp(16px, 2vw, 28px);
+  border-left: 1px solid var(--color-line-strong);
+  color: var(--color-text-secondary);
+}
+
+.prose figure {
+  margin-block: clamp(36px, 5vw, 64px);
+}
+
+.prose figure img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+ * 사진 설명은 메타데이터의 자리에 있지만 문장이다. 날짜나 경로처럼 고정폭에
+ * 자간을 넣으면 한글이 흩어진다. 크기와 색으로만 본문과 구분한다.
+ */
+.prose figcaption {
+  margin-top: 14px;
+  max-width: var(--measure);
+  color: var(--color-text-muted);
+  font-size: var(--text-meta);
+  line-height: 1.6;
+}
+
+/*
+ * 강조는 기울임이 아니라 무게로 한다. 한글에는 이탤릭이라는 관습이 없고
+ * 이 세리프에도 이탤릭이 없어서, 기울여 봤자 브라우저가 만들어 낸 가짜 획이 된다.
+ */
+.prose em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.prose strong {
+  font-weight: 700;
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-line-strong);
+  transition: text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .prose a:hover {
+    text-decoration-color: currentcolor;
+  }
+}

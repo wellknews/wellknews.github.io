@@ -1,0 +1,106 @@
+/**
+ * SEMICOLON의 디자인 토큰.
+ *
+ * 루트(WELLKNEWS)의 토큰과 이름은 같지만 값이 정반대다. 두 공간은 각자 다른 문서로
+ * 빌드되므로 한 화면에서 섞이지 않는다. 이름을 맞춰 둔 이유는 reset.css처럼 색을
+ * 갖지 않는 파일을 양쪽에서 그대로 재사용하기 위해서다.
+ *
+ * 이 파일 밖에서는 색상값과 간격을 직접 쓰지 않는다.
+ */
+
+:root {
+  /* ---------- Color ----------
+   * 본문은 무채색으로 고정한다. 괄호 안은 --color-bg 대비 명암비.
+   */
+  --color-bg: #fafaf8;
+  --color-text: #111111; /* 18.1:1 */
+  --color-text-secondary: #3d3d39; /* 11.4:1 — 리드 문장 */
+  --color-text-muted: #5e5e59; /* 6.2:1  — 메타데이터 (AA 통과) */
+  --color-line: rgb(17 17 17 / 0.13);
+  --color-line-strong: rgb(17 17 17 / 0.34);
+  /* 지면을 감싸는 판면선. 본문 괘선보다 옅어야 구조로만 읽힌다. */
+  --color-frame: rgb(17 17 17 / 0.1);
+
+  /* ---------- Ink ----------
+   * 색은 여기까지만 쓴다. 글자에는 얹지 않고, 오직
+   *   · 히어로 뒤로 아주 옅게 깔리는 색면
+   *   · 글이 끝났다는 표시
+   *   · 지금 있는 자리를 알리는 밑줄과 선택 영역
+   * 세 곳에만 등장한다. 색을 전부 빼도 인상이 무너지지 않아야 한다.
+   */
+  --wash-mint: rgb(118 214 195 / 0.11);
+  --wash-pink: rgb(244 178 196 / 0.07);
+  --accent: #2f9e8a;
+  --select: rgb(150 230 212 / 0.62);
+
+  /* ---------- Typography ----------
+   * 두 종류만 쓴다.
+   *   serif — 제목, 본문, 큰 ';'
+   *   mono  — 날짜, 경로, 메타데이터, navigation
+   *
+   * 세리프는 명조이되 코딩 글꼴 쪽으로 기울어 있는 것을 고른다. 획 대비가 낮고
+   * 종단이 평평해야 옆에 놓인 고정폭과 한 식구로 읽힌다.
+   * 둘을 위아래로 나누지 않고 같은 줄 위에 나란히 세운다. 라틴 고정폭과
+   * 국문 명조가 한 기준선에 놓일 때 이 공간의 성격이 가장 잘 드러난다.
+   */
+  --font-serif: 'Hahmlet Variable', Georgia, 'Times New Roman', 'Apple SD Gothic Neo', serif;
+  /* 한글 자소가 섞여 들어오면(장소 이름 등) 임의의 시스템 고정폭 대신 본문 세리프로 떨어진다. */
+  --font-mono:
+    'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Hahmlet Variable',
+    monospace;
+
+  /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다.
+   * 메타와 표제 사이의 간격을 크게 벌려 둔다. 그 낙차가 이 지면의 인상을 만든다. */
+  --text-meta: clamp(0.75rem, 0.72rem + 0.14vw, 0.8125rem); /* 12 → 13px */
+  --text-body: clamp(1.0625rem, 1rem + 0.28vw, 1.1875rem); /* 17 → 19px */
+  --text-lead: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
+  --text-title: clamp(2.25rem, 1.3rem + 4.2vw, 4.5rem);
+  --text-display: clamp(2.5rem, 1.1rem + 5.4vw, 5rem);
+  /* 히어로의 ';' 하나. 이 공간에서 가장 큰 그래픽 자산이다. */
+  --text-mark: clamp(12rem, 38vw, 30rem);
+
+  /* 본문 무게. 가변 축이 있어 제목만 한 단계 올려 쓸 수 있다. */
+  --weight-body: 400;
+  --weight-display: 500;
+
+  --tracking-meta: 0.14em;
+  --tracking-title: -0.02em;
+
+  /* 본문 한 줄의 길이. 세리프 본문은 이 폭을 넘기면 눈이 줄을 잃는다. */
+  --measure: 34em;
+  /* 날짜·메타데이터가 앉는 왼쪽 여백 칼럼. 판면의 기준선 역할을 한다. */
+  --margin-col: clamp(96px, 12vw, 168px);
+
+  /* ---------- Layout ---------- */
+  --page-x: clamp(20px, 5vw, 72px);
+  --content-max: 1240px;
+  --header-h: 64px;
+
+  --space-section: clamp(64px, 7.5vw, 108px);
+  --space-block: clamp(32px, 4.5vw, 64px);
+
+  /* ---------- Motion ----------
+   * 여유를 표현하려고 화면을 계속 움직이지 않는다. 짧은 페이드와
+   * 미세한 호버 외에는 시간을 쓰지 않는다.
+   */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --dur-fast: 160ms;
+  --dur-base: 420ms;
+  --dur-slow: 900ms;
+  --dur-fade: 700ms;
+
+  /* ---------- Z-index scale ---------- */
+  --z-content: 1;
+  --z-header: 50;
+  --z-frame: 60;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-slow: 1ms;
+    --dur-fade: 1ms;
+  }
+}
