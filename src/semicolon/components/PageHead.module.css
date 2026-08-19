@@ -1,21 +1,24 @@
 .head {
-  padding-block: clamp(48px, 7vw, 96px) var(--space-block);
+  padding-block: clamp(40px, 6vw, 88px) var(--space-block);
 }
 
 .path {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2vw, 24px);
   color: var(--color-text-muted);
 }
 
 .label {
-  margin-top: clamp(14px, 2vw, 22px);
+  margin-top: clamp(20px, 3vw, 40px);
   font-size: var(--text-title);
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.94;
   letter-spacing: var(--tracking-title);
 }
 
 .definition {
-  margin-top: clamp(16px, 2vw, 24px);
+  margin-top: clamp(16px, 2vw, 26px);
   max-width: var(--measure);
   color: var(--color-text-secondary);
   font-size: var(--text-body);

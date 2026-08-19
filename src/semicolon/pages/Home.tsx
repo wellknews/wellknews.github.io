@@ -26,18 +26,29 @@ type BlockProps = {
   children: ReactNode
 }
 
+/**
+ * 개념 이름과 그 주소를 하나의 행으로 묶는다.
+ *
+ * 이름 쪽을 링크로 만들지 않는 이유는 같은 목적지로 가는 문을 한 줄에 두 개
+ * 두지 않기 위해서다. 문은 경로가 적힌 오른쪽 끝 하나뿐이다.
+ */
 function Block({ id, label, to, definition, children }: BlockProps) {
   return (
     <section className={styles.block} aria-labelledby={id}>
       <div className="shell">
         <div className={styles.head}>
-          <h2 className={styles.label} id={id}>
-            <Link to={to} className={`mono ${styles.labelLink}`}>
-              {label}
-            </Link>
+          <h2 className={`mono ${styles.label}`} id={id}>
+            {label}
           </h2>
-          <p className={styles.definition}>{definition}</p>
+
+          <span className="rule" aria-hidden="true" />
+
+          <Link to={to} className={`mono ${styles.more}`}>
+            {to} <span aria-hidden="true">→</span>
+          </Link>
         </div>
+
+        <p className={styles.definition}>{definition}</p>
 
         {children}
       </div>

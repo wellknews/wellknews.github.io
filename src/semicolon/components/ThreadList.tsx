@@ -1,4 +1,5 @@
 import type { Thread } from '../content/types'
+import { EmptyState } from './EmptyState'
 import { ThreadItem } from './ThreadItem'
 import styles from './ThreadList.module.css'
 
@@ -15,7 +16,7 @@ type Props = {
  */
 export function ThreadList({ threads, empty }: Props) {
   if (threads.length === 0) {
-    return <p className={styles.empty}>{empty}</p>
+    return <EmptyState>{empty}</EmptyState>
   }
 
   return (

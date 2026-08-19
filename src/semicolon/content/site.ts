@@ -13,6 +13,12 @@ export const semicolon = {
   hero: {
     /** 줄바꿈 위치는 디자인이 통제한다. */
     line: ['바쁜 삶 속의', '세미콜론.'],
+    /**
+     * 국문 문장이 뜻을 맡고, 이 줄이 그 아래에서 리듬을 맡는다.
+     * 입구(WELLKNEWS)의 ELSEWHERE 목록에 걸린 한 줄과 같은 문장이라
+     * 문을 통과한 사람은 같은 문장을 다시 만나게 된다.
+     */
+    subline: 'A PAUSE INSIDE A BUSY LIFE.',
   },
 
   session: {

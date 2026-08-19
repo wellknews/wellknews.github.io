@@ -10,50 +10,72 @@
 
 :root {
   /* ---------- Color ----------
-   * 거의 무채색으로만 구성한다. 브랜드 포인트 컬러를 두지 않는 이유는
-   * 콘텐츠에 실린 사진이 이 공간의 유일한 색이 되어야 하기 때문이다.
-   * 괄호 안은 --color-bg 대비 명암비.
+   * 본문은 무채색으로 고정한다. 괄호 안은 --color-bg 대비 명암비.
    */
   --color-bg: #fafaf8;
   --color-text: #111111; /* 18.1:1 */
   --color-text-secondary: #3d3d39; /* 11.4:1 — 리드 문장 */
   --color-text-muted: #5e5e59; /* 6.2:1  — 메타데이터 (AA 통과) */
-  --color-line: rgb(17 17 17 / 0.14);
+  --color-line: rgb(17 17 17 / 0.13);
   --color-line-strong: rgb(17 17 17 / 0.34);
+  /* 지면을 감싸는 판면선. 본문 괘선보다 옅어야 구조로만 읽힌다. */
+  --color-frame: rgb(17 17 17 / 0.1);
+
+  /* ---------- Ink ----------
+   * 색은 여기까지만 쓴다. 글자에는 얹지 않고, 오직
+   *   · 히어로의 ';' 뒤에 어긋나게 겹치는 두 겹의 잉크
+   *   · 그 뒤로 아주 옅게 깔리는 색면
+   *   · 글이 끝났다는 표시와 선택 영역
+   * 세 곳에만 등장한다. 인쇄가 살짝 어긋난 자리처럼 보이는 것이 목적이고,
+   * 화면을 물들이는 것이 목적이 아니다.
+   */
+  --ink-mint: rgb(74 198 174 / 0.5);
+  --ink-pink: rgb(246 166 190 / 0.42);
+  --wash-mint: rgb(118 214 195 / 0.11);
+  --wash-pink: rgb(244 178 196 / 0.07);
+  --accent: #2f9e8a;
+  --select: rgb(150 230 212 / 0.62);
 
   /* ---------- Typography ----------
    * 두 종류만 쓴다.
    *   serif — 제목, 본문, 큰 ';'
    *   mono  — 날짜, 경로, 메타데이터, navigation
-   * mono의 역할은 화면을 코드 에디터처럼 보이게 하는 것이 아니라,
-   * 에디토리얼 지면 위에 만든 사람의 사고방식을 조용히 남기는 것이다.
+   * 둘을 위아래로 나누지 않고 같은 줄 위에 나란히 세운다. 라틴 고정폭과
+   * 국문 명조가 한 기준선에 놓일 때 이 공간의 성격이 가장 잘 드러난다.
    */
   --font-serif:
     'Newsreader Variable', 'Nanum Myeongjo', Georgia, 'Times New Roman', 'Apple SD Gothic Neo',
     serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  /* 한글 자소가 섞여 들어오면(장소 이름 등) 임의의 시스템 고정폭 대신 본문 세리프로 떨어진다. */
+  --font-mono:
+    'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Nanum Myeongjo',
+    monospace;
 
-  /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다 */
+  /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다.
+   * 메타와 표제 사이의 간격을 크게 벌려 둔다. 그 낙차가 이 지면의 인상을 만든다. */
   --text-meta: clamp(0.75rem, 0.72rem + 0.14vw, 0.8125rem); /* 12 → 13px */
   --text-body: clamp(1.0625rem, 1rem + 0.28vw, 1.1875rem); /* 17 → 19px */
   --text-lead: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
-  --text-title: clamp(1.875rem, 1.2rem + 2.9vw, 3.5rem);
+  --text-title: clamp(2.25rem, 1.3rem + 4.2vw, 4.5rem);
+  --text-display: clamp(2.5rem, 1.1rem + 5.4vw, 5rem);
   /* 히어로의 ';' 하나. 이 공간에서 가장 큰 그래픽 자산이다. */
-  --text-mark: clamp(9rem, 4rem + 22vw, 20rem);
+  --text-mark: clamp(12rem, 38vw, 30rem);
 
   --tracking-meta: 0.14em;
-  --tracking-title: -0.015em;
+  --tracking-title: -0.02em;
 
   /* 본문 한 줄의 길이. 세리프 본문은 이 폭을 넘기면 눈이 줄을 잃는다. */
   --measure: 34em;
+  /* 날짜·메타데이터가 앉는 왼쪽 여백 칼럼. 판면의 기준선 역할을 한다. */
+  --margin-col: clamp(96px, 12vw, 168px);
 
   /* ---------- Layout ---------- */
   --page-x: clamp(20px, 5vw, 72px);
   --content-max: 1240px;
   --header-h: 64px;
 
-  --space-section: clamp(72px, 9vw, 140px);
-  --space-block: clamp(36px, 5vw, 72px);
+  --space-section: clamp(64px, 7.5vw, 108px);
+  --space-block: clamp(32px, 4.5vw, 64px);
 
   /* ---------- Motion ----------
    * 여유를 표현하려고 화면을 계속 움직이지 않는다. 짧은 페이드와
@@ -68,6 +90,7 @@
   /* ---------- Z-index scale ---------- */
   --z-content: 1;
   --z-header: 50;
+  --z-frame: 60;
 }
 
 @media (prefers-reduced-motion: reduce) {

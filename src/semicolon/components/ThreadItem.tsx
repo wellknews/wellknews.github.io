@@ -14,6 +14,9 @@ type Props = {
 /**
  * 생각 한 편.
  *
+ * 날짜는 본문 옆 여백 칼럼에 앉는다. 인쇄물의 방주(旁註)와 같은 자리이고,
+ * 고정폭 숫자와 명조 본문이 같은 줄에서 시작하면서 이 공간의 성격이 드러난다.
+ *
  * 제목이 없어도 된다. 완성된 분석이 아니라 이어지는 중인 생각이라서,
  * 이름을 붙여야 할 만큼 정리되지 않은 것도 그대로 남긴다.
  * 대신 날짜는 늘 있고, 그 날짜가 이 글의 주소다.
@@ -24,25 +27,32 @@ export function ThreadItem({ thread, level, linked }: Props) {
 
   return (
     <article className={styles.item}>
-      {linked ? (
-        <Link to={to} className={`mono ${styles.date}`}>
-          <time dateTime={thread.date}>{thread.date}</time>
-        </Link>
-      ) : (
-        <p className={`mono ${styles.date}`}>
-          <time dateTime={thread.date}>{thread.date}</time>
-        </p>
-      )}
+      <div className={styles.aside}>
+        {linked ? (
+          <Link to={to} className={`mono ${styles.date}`}>
+            <time dateTime={thread.date}>{thread.date}</time>
+          </Link>
+        ) : (
+          <p className={`mono ${styles.date}`}>
+            <time dateTime={thread.date}>{thread.date}</time>
+          </p>
+        )}
+      </div>
 
-      {thread.title ? (
-        <Heading className={styles.title}>{thread.title}</Heading>
-      ) : (
-        /* 제목이 없는 글에도 문서 위계는 필요하다. 화면에는 날짜만 남는다. */
-        level === 1 && <h1 className="visually-hidden">{thread.date}</h1>
-      )}
+      <div className={styles.main}>
+        {thread.title ? (
+          <Heading className={styles.title}>{thread.title}</Heading>
+        ) : (
+          /* 제목이 없는 글에도 문서 위계는 필요하다. 화면에는 날짜만 남는다. */
+          level === 1 && <h1 className="visually-hidden">{thread.date}</h1>
+        )}
 
-      <div className={styles.body}>
         <Prose>{thread.body}</Prose>
+
+        {/* 여기서 문장이 잠시 멈춘다는 표시 */}
+        <span className="endmark" aria-hidden="true">
+          ;
+        </span>
       </div>
     </article>
   )

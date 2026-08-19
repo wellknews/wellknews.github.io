@@ -1,5 +1,13 @@
 .item {
-  padding-block: clamp(36px, 4.5vw, 64px);
+  display: grid;
+  grid-template-columns: var(--margin-col) minmax(0, 1fr);
+  column-gap: clamp(20px, 3vw, 48px);
+  padding-block: clamp(32px, 4vw, 56px);
+}
+
+.aside {
+  /* 날짜의 첫 줄이 본문 첫 줄과 같은 높이에서 시작하도록 맞춘다. */
+  padding-top: 0.5em;
 }
 
 .date {
@@ -15,7 +23,7 @@
 }
 
 .title {
-  margin-top: clamp(14px, 1.6vw, 20px);
+  margin-bottom: clamp(14px, 1.6vw, 22px);
   max-width: var(--measure);
   font-size: var(--text-lead);
   font-weight: 400;
@@ -23,6 +31,13 @@
   letter-spacing: var(--tracking-title);
 }
 
-.body {
-  margin-top: clamp(16px, 2vw, 26px);
+@media (max-width: 767px) {
+  .item {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 14px;
+  }
+
+  .aside {
+    padding-top: 0;
+  }
 }

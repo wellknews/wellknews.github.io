@@ -10,7 +10,7 @@
 .inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: clamp(16px, 3vw, 40px);
   height: 100%;
 }
 
@@ -19,7 +19,7 @@
   display: inline-flex;
   align-items: center;
   /* 터치 타깃 최소 44px */
-  min-width: 44px;
+  min-width: 32px;
   min-height: 44px;
   font-family: var(--font-serif);
   font-size: 1.75rem;
@@ -30,9 +30,11 @@
   display: flex;
   align-items: center;
   gap: clamp(20px, 3vw, 40px);
+  margin-left: auto;
 }
 
 .link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -40,8 +42,19 @@
   transition: color var(--dur-fast) var(--ease-out);
 }
 
+/* 지금 있는 자리에만 색이 남는다. 상태 표시이지 장식이 아니다. */
 .link[aria-current='page'] {
   color: var(--color-text);
+}
+
+.link[aria-current='page']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  height: 1px;
+  background: var(--accent);
 }
 
 @media (hover: hover) {

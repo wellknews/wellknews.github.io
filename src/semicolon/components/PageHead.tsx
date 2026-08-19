@@ -12,14 +12,19 @@ type Props = {
 /**
  * 목록 페이지의 머리.
  *
- * 경로를 그대로 적는다. 개발자 흉내를 내려는 장식이 아니라, 이 공간에서
- * SESSION과 THREAD가 개념이자 주소라는 사실을 그대로 보여주는 것이다.
+ * 경로를 먼저 적고 이름을 크게 세운다. 주소가 곧 개념의 이름인 공간이라
+ * 그 둘을 같은 자리에 붙여 둔다. 개발자 흉내를 내려는 장식이 아니다.
  */
 export function PageHead({ label, path, definition }: Props) {
   return (
     <header className={styles.head}>
-      <p className={`mono ${styles.path}`}>{path}</p>
+      <p className={`mono ${styles.path}`}>
+        <span>{path}</span>
+        <span className="rule" aria-hidden="true" />
+      </p>
+
       <h1 className={styles.label}>{label}</h1>
+
       <p className={styles.definition}>{definition}</p>
     </header>
   )
