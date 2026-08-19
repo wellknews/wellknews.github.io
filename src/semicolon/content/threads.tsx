@@ -5,12 +5,22 @@ import type { Thread } from './types'
  *
  * Session이 경험한 것을 분석한다면 Thread는 생각하고 있는 것을 이어간다.
  * 완성되지 않아도 되고, 제목이 없어도 되고, 한 문장이어도 된다.
+ *
+ * form은 그 글이 지면 어디에 앉을지를 스스로 고르는 값이다. 적지 않으면
+ * 기본 형태로 앉는다. 목록이 균일하게 보이지 않는 것이 의도다.
  */
 export const threads: readonly Thread[] = [
+  {
+    slug: 'insert-not-escape',
+    date: '2026-08-19',
+    form: 'loud',
+    body: <p>여유로운 삶을 추구하는 것이 아니라, 바쁜 삶 속에 여유를 삽입한다.</p>,
+  },
   {
     slug: 'why-not-comma',
     date: '2026-08-19',
     title: '왜 쉼표가 아니라 세미콜론인가',
+    form: 'note',
     body: (
       <>
         <p>
@@ -34,6 +44,7 @@ export const threads: readonly Thread[] = [
   {
     slug: 'pause-inside',
     date: '2026-08-19',
+    form: 'aside',
     body: (
       <>
         <p>

@@ -1,10 +1,15 @@
+/*
+ * 크기·행간·폭은 바깥에서 바꿀 수 있게 손잡이로 낸다.
+ * 어떤 생각은 한 문장이라 크게 앉아야 하고, 어떤 글은 좁게 물러나야 한다.
+ * 기본값을 두었으므로 아무것도 정하지 않으면 늘 같은 리듬으로 그려진다.
+ */
 .prose {
-  font-size: var(--text-body);
-  line-height: 1.85;
+  font-size: var(--prose-size, var(--text-body));
+  line-height: var(--prose-leading, 1.85);
 }
 
 .prose p {
-  max-width: var(--measure);
+  max-width: var(--prose-measure, var(--measure));
 }
 
 .prose p + p {
@@ -13,7 +18,7 @@
 
 /* 본문 안의 소제목. 제목 위계를 흉내내기 위한 크기 차이가 아니라 단락 묶음의 경계다. */
 .prose h3 {
-  max-width: var(--measure);
+  max-width: var(--prose-measure, var(--measure));
   margin-top: 2.6em;
   margin-bottom: 0.7em;
   font-size: var(--text-lead);
@@ -23,7 +28,7 @@
 }
 
 .prose blockquote {
-  max-width: var(--measure);
+  max-width: var(--prose-measure, var(--measure));
   margin-block: 2em;
   padding-left: clamp(16px, 2vw, 28px);
   border-left: 1px solid var(--color-line-strong);

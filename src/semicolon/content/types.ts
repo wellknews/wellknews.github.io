@@ -41,10 +41,22 @@ export type Session = {
  * 완성된 분석이 아니므로 제목이 없어도 된다. 대신 날짜는 반드시 있다.
  * 생각을 이어붙인 순서 자체가 Thread의 형식이기 때문이다.
  */
+/**
+ * 이 생각이 지면에 앉는 방식.
+ *
+ *   note   기본. 날짜가 여백 칼럼에 앉고 본문이 그 옆에 온다.
+ *   loud   한 문장짜리 생각. 판면 전체를 쓰고 크게 앉는다.
+ *   aside  곁가지. 오른쪽 안쪽으로 물러나 좁고 낮게 앉는다.
+ *
+ * 길이가 형태를 정하지는 않는다. 어떤 자리에 놓고 싶은지를 글이 직접 고른다.
+ */
+export type ThreadForm = 'note' | 'loud' | 'aside'
+
 export type Thread = {
   slug: string
   /** 'YYYY-MM-DD' */
   date: string
   title?: string
+  form?: ThreadForm
   body: ReactNode
 }
