@@ -1,0 +1,152 @@
+/* SEMICOLON — 전역 타이포그래피 · 레이아웃 프리미티브 · 접근성 유틸리티 */
+
+html {
+  color-scheme: light;
+  background-color: var(--color-bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100svh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  font-family: var(--font-serif);
+  font-size: var(--text-body);
+  font-weight: 400;
+  /* 행간을 넉넉하게 둔다. 이 공간의 속도는 모션이 아니라 여백이 만든다. */
+  line-height: 1.8;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 콘텐츠가 짧은 페이지에서도 나가는 문이 화면 아래에 붙어 있게 한다. */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+#root > main {
+  flex: 1 0 auto;
+}
+
+/* 한국어 본문은 어절 단위로 끊어야 읽힌다 */
+:lang(ko) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* ---------- 레이아웃 프리미티브 ---------- */
+
+.shell {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  padding-inline: var(--page-x);
+}
+
+/*
+ * 목록의 마지막 구분선이 푸터의 경계선과 맞붙어 두 줄로 보이지 않게 한다.
+ * 홈은 마지막 블록이 이미 같은 크기의 여백을 갖고 있어 붙이지 않는다.
+ */
+.page {
+  padding-bottom: var(--space-section);
+}
+
+/* 읽기 위한 폭. 본문 단락은 예외 없이 이 폭 안에 들어간다. */
+.measure {
+  max-width: var(--measure);
+}
+
+/* 메타데이터의 공통 문법 — 날짜, 경로, 라벨은 전부 이 모습이다. */
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: var(--tracking-meta);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 모션 ---------- */
+
+/*
+ * 이 공간에서 허용하는 유일한 등장 방식. 이동 없이 불투명도만 쓴다.
+ * 스크롤 위치에 따라 요소가 하나씩 나타나는 연출도 두지 않는다 —
+ * 화면이 계속 움직이면 여유가 아니라 초조함이 된다.
+ */
+@keyframes sc-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: sc-fade-in var(--dur-fade) var(--ease-out) both;
+}
+
+/* ---------- 접근성 ---------- */
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+:where(a, button):focus:not(:focus-visible) {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: calc(var(--z-header) + 1);
+  padding: 15px 22px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: var(--tracking-meta);
+  transform: translateY(-200%);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

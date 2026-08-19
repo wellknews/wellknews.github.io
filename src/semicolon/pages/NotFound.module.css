@@ -1,0 +1,22 @@
+.head {
+  padding-block: clamp(48px, 7vw, 96px) var(--space-block);
+}
+
+.path {
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.title {
+  margin-top: clamp(14px, 2vw, 22px);
+  font-size: var(--text-title);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: var(--tracking-title);
+}
+
+.body {
+  margin-top: clamp(16px, 2vw, 24px);
+  max-width: var(--measure);
+  color: var(--color-text-secondary);
+}

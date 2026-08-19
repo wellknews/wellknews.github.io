@@ -18,6 +18,14 @@ export type NavItem = {
   href: string
 }
 
+/** ELSEWHERE에 걸리는 하위 프로젝트 한 줄. 새 관심사가 생기면 여기에만 추가한다. */
+export type Elsewhere = {
+  name: string
+  /** 루트 기준 경로. 이 문자열이 화면에도 그대로 노출된다. */
+  path: string
+  summary: string
+}
+
 export const site = {
   name: 'WELLKNEWS',
   /** 배포 도메인. 메타태그와 구조화 데이터의 절대 URL 기준점. */
@@ -28,6 +36,11 @@ export const site = {
   description:
     'WELLKNEWS는 숏폼으로 소식을 전하는 뉴스 채널입니다. 확인된 사실만, 넘긴 뒤에도 남는 형태로 전합니다.',
 
+  /*
+   * 메뉴는 세 칸이 상한이다. 라벨이 12px·0.16em 대문자라 320px 화면에서 네 번째
+   * 항목부터 가로 폭을 넘긴다. ELSEWHERE를 여기 넣지 않은 이유이고,
+   * 새 섹션이 생겨도 이 제약을 먼저 확인한다.
+   */
   nav: [
     { label: 'REPORT', href: '#report' },
     { label: 'CHANNELS', href: '#channels' },
@@ -80,6 +93,26 @@ export const site = {
       { term: '맥락', description: '분량을 줄이되 맥락은 덜어내지 않습니다.' },
       { term: '기록', description: '넘긴 뒤에도 남도록 편집합니다.' },
     ],
+  },
+
+  /**
+   * 이 도메인에서 뻗어나간 다른 관심사로 가는 문.
+   *
+   * 특정 프로젝트를 위한 섹션이 아니라 목록이다. 새 프로젝트가 생기면
+   * items에 한 줄을 더할 뿐, 이 섹션의 구조는 바뀌지 않는다.
+   * 각 프로젝트의 디자인 언어는 문을 통과한 뒤에 시작한다 — 여기서는
+   * 끝까지 WELLKNEWS의 언어만 쓴다.
+   */
+  elsewhere: {
+    index: '04',
+    label: 'ELSEWHERE',
+    items: [
+      {
+        name: 'SEMICOLON',
+        path: '/;',
+        summary: 'A pause inside a busy life.',
+      },
+    ] satisfies Elsewhere[],
   },
 
   footer: {

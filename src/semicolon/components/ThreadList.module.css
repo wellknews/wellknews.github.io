@@ -1,0 +1,14 @@
+.list {
+  border-top: 1px solid var(--color-line);
+}
+
+/* 구분선은 목록이 갖는다. 글 한 편만 놓이는 페이지에서는 선이 필요 없다. */
+.list > * {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.empty {
+  padding-block: clamp(28px, 3.4vw, 48px);
+  border-top: 1px solid var(--color-line);
+  color: var(--color-text-muted);
+}

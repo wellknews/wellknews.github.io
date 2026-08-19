@@ -1,0 +1,72 @@
+.prose {
+  font-size: var(--text-body);
+  line-height: 1.85;
+}
+
+.prose p {
+  max-width: var(--measure);
+}
+
+.prose p + p {
+  margin-top: 1.4em;
+}
+
+/* 본문 안의 소제목. 제목 위계를 흉내내기 위한 크기 차이가 아니라 단락 묶음의 경계다. */
+.prose h3 {
+  max-width: var(--measure);
+  margin-top: 2.6em;
+  margin-bottom: 0.7em;
+  font-size: var(--text-lead);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: var(--tracking-title);
+}
+
+.prose blockquote {
+  max-width: var(--measure);
+  margin-block: 2em;
+  padding-left: clamp(16px, 2vw, 28px);
+  border-left: 1px solid var(--color-line-strong);
+  color: var(--color-text-secondary);
+}
+
+.prose figure {
+  margin-block: clamp(36px, 5vw, 64px);
+}
+
+.prose figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* 사진 설명은 글이 아니라 메타데이터다. */
+.prose figcaption {
+  margin-top: 14px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  line-height: 1.5;
+  letter-spacing: var(--tracking-meta);
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--color-line-strong);
+  transition: text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .prose a:hover {
+    text-decoration-color: currentcolor;
+  }
+}

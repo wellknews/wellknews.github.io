@@ -1,0 +1,45 @@
+.list {
+  border-top: 1px solid var(--color-line);
+}
+
+.item {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.row {
+  display: block;
+  min-height: 44px;
+  padding-block: clamp(28px, 3.4vw, 48px);
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.meta {
+  margin-bottom: clamp(12px, 1.4vw, 18px);
+}
+
+.title {
+  max-width: var(--measure);
+  font-size: var(--text-lead);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: var(--tracking-title);
+}
+
+.excerpt {
+  margin-top: clamp(10px, 1.2vw, 14px);
+  max-width: var(--measure);
+  color: var(--color-text-secondary);
+}
+
+/* 호버는 여기까지만. 색면을 뒤집거나 밀어내지 않는다. */
+@media (hover: hover) {
+  .row:hover {
+    opacity: 0.55;
+  }
+}
+
+.empty {
+  padding-block: clamp(28px, 3.4vw, 48px);
+  border-top: 1px solid var(--color-line);
+  color: var(--color-text-muted);
+}

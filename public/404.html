@@ -7,6 +7,28 @@
     <title>404 — WELLKNEWS</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#000000" />
+
+    <!--
+      /; 아래의 깊은 주소는 여기서 되돌려 보낸다.
+
+      GitHub Pages에는 `/;/session/...`에 해당하는 파일이 없어 이 페이지가 뜬다.
+      원래 경로를 ?p=에 실어 세미콜론 문서로 넘기면, 그쪽 라우터가 주소창을
+      복원한 뒤 평소처럼 그 페이지를 그린다.
+
+      이미 ?p=를 달고 다시 여기 도착했다면 세미콜론 문서 자체를 찾지 못한
+      것이므로 더 보내지 않는다. 무한 리다이렉트를 막는 장치다.
+    -->
+    <script>
+      ;(function () {
+        var path = location.pathname
+        var semicolon = path.indexOf('/;') === 0 || path.toLowerCase().indexOf('/%3b') === 0
+
+        if (semicolon && location.search.indexOf('p=') === -1) {
+          location.replace('/;/?p=' + encodeURIComponent(path + location.search + location.hash))
+        }
+      })()
+    </script>
+
     <style>
       :root {
         color-scheme: dark;

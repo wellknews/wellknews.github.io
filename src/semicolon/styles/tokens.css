@@ -1,0 +1,79 @@
+/**
+ * SEMICOLON의 디자인 토큰.
+ *
+ * 루트(WELLKNEWS)의 토큰과 이름은 같지만 값이 정반대다. 두 공간은 각자 다른 문서로
+ * 빌드되므로 한 화면에서 섞이지 않는다. 이름을 맞춰 둔 이유는 reset.css처럼 색을
+ * 갖지 않는 파일을 양쪽에서 그대로 재사용하기 위해서다.
+ *
+ * 이 파일 밖에서는 색상값과 간격을 직접 쓰지 않는다.
+ */
+
+:root {
+  /* ---------- Color ----------
+   * 거의 무채색으로만 구성한다. 브랜드 포인트 컬러를 두지 않는 이유는
+   * 콘텐츠에 실린 사진이 이 공간의 유일한 색이 되어야 하기 때문이다.
+   * 괄호 안은 --color-bg 대비 명암비.
+   */
+  --color-bg: #fafaf8;
+  --color-text: #111111; /* 18.1:1 */
+  --color-text-secondary: #3d3d39; /* 11.4:1 — 리드 문장 */
+  --color-text-muted: #5e5e59; /* 6.2:1  — 메타데이터 (AA 통과) */
+  --color-line: rgb(17 17 17 / 0.14);
+  --color-line-strong: rgb(17 17 17 / 0.34);
+
+  /* ---------- Typography ----------
+   * 두 종류만 쓴다.
+   *   serif — 제목, 본문, 큰 ';'
+   *   mono  — 날짜, 경로, 메타데이터, navigation
+   * mono의 역할은 화면을 코드 에디터처럼 보이게 하는 것이 아니라,
+   * 에디토리얼 지면 위에 만든 사람의 사고방식을 조용히 남기는 것이다.
+   */
+  --font-serif:
+    'Newsreader Variable', 'Nanum Myeongjo', Georgia, 'Times New Roman', 'Apple SD Gothic Neo',
+    serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다 */
+  --text-meta: clamp(0.75rem, 0.72rem + 0.14vw, 0.8125rem); /* 12 → 13px */
+  --text-body: clamp(1.0625rem, 1rem + 0.28vw, 1.1875rem); /* 17 → 19px */
+  --text-lead: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
+  --text-title: clamp(1.875rem, 1.2rem + 2.9vw, 3.5rem);
+  /* 히어로의 ';' 하나. 이 공간에서 가장 큰 그래픽 자산이다. */
+  --text-mark: clamp(9rem, 4rem + 22vw, 20rem);
+
+  --tracking-meta: 0.14em;
+  --tracking-title: -0.015em;
+
+  /* 본문 한 줄의 길이. 세리프 본문은 이 폭을 넘기면 눈이 줄을 잃는다. */
+  --measure: 34em;
+
+  /* ---------- Layout ---------- */
+  --page-x: clamp(20px, 5vw, 72px);
+  --content-max: 1240px;
+  --header-h: 64px;
+
+  --space-section: clamp(72px, 9vw, 140px);
+  --space-block: clamp(36px, 5vw, 72px);
+
+  /* ---------- Motion ----------
+   * 여유를 표현하려고 화면을 계속 움직이지 않는다. 짧은 페이드와
+   * 미세한 호버 외에는 시간을 쓰지 않는다.
+   */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --dur-fast: 160ms;
+  --dur-base: 420ms;
+  --dur-fade: 700ms;
+
+  /* ---------- Z-index scale ---------- */
+  --z-content: 1;
+  --z-header: 50;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+    --dur-fade: 1ms;
+  }
+}
