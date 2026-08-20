@@ -1,89 +1,154 @@
 .hero {
-  min-height: 100svh;
+  position: relative;
+  min-height: max(720px, 100svh);
+  overflow: clip;
   border-bottom: 1px solid var(--color-line);
+  isolation: isolate;
+}
+
+.artwork {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.artwork picture,
+.artworkImage {
+  width: 100%;
+  height: 100%;
+}
+
+.artworkImage {
+  max-width: none;
+  object-fit: cover;
+  object-position: 58% center;
+  filter: saturate(0.8) contrast(1.04);
+}
+
+/* 이미지와 활자가 한 판면으로 읽히도록 가장자리와 하단을 검정으로 녹인다. */
+.artwork::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 0.78) 0%, rgb(0 0 0 / 0.38) 39%, transparent 72%),
+    linear-gradient(0deg, rgb(0 0 0 / 0.9) 0%, rgb(0 0 0 / 0.18) 45%, rgb(0 0 0 / 0.28) 100%),
+    repeating-linear-gradient(0deg, transparent 0 3px, rgb(242 242 239 / 0.014) 3px 4px);
 }
 
 .inner {
-  min-height: 100svh;
+  position: relative;
+  min-height: max(720px, 100svh);
   display: grid;
-  grid-template-rows: 1fr auto;
-  padding-block: calc(var(--header-h) + clamp(48px, 8vh, 110px)) clamp(34px, 6vh, 64px);
+  grid-template-rows: auto 1fr auto;
+  padding-block: calc(var(--header-h) + clamp(24px, 4vh, 48px)) clamp(30px, 5vh, 56px);
+}
+
+.topRail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .mark {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding-bottom: clamp(24px, 4vw, 48px);
+  gap: clamp(12px, 1.3vw, 20px);
 }
 
 .logo {
-  width: clamp(180px, 16vw, 220px);
+  width: clamp(54px, 5.2vw, 76px);
   height: auto;
 }
 
 .wordmark {
-  width: clamp(180px, 16vw, 220px);
-  margin-top: clamp(12px, 1.2vw, 18px);
   color: var(--color-text);
-  font-size: clamp(0.75rem, 0.68rem + 0.35vw, 1rem);
+  font-size: clamp(0.75rem, 0.68rem + 0.3vw, 0.9375rem);
   font-weight: 650;
-  letter-spacing: calc(var(--tracking-label) * 1.5);
+  letter-spacing: calc(var(--tracking-label) * 1.55);
   line-height: 1;
-  text-align: center;
-  text-indent: calc(var(--tracking-label) * 1.5);
+}
+
+.signal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.12em;
+}
+
+.signalDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-signal);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--color-signal) 65%, transparent);
 }
 
 .bottom {
+  grid-row: 3;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas:
-    'headline cue'
-    'position cue';
+  grid-template-columns: minmax(0, 9fr) minmax(200px, 3fr);
+  gap: clamp(40px, 6vw, 100px);
   align-items: end;
-  column-gap: 40px;
 }
 
 .headline {
-  grid-area: headline;
   margin: 0;
-
+  max-width: none;
   font-family: var(--font-display);
-  font-size: var(--text-h1);
+  font-size: clamp(4.75rem, 8.8vw, 8.75rem);
   font-weight: 400;
-  line-height: 0.92;
+  line-height: 0.84;
   letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+  text-shadow: 0 3px 28px rgb(0 0 0 / 0.4);
+}
+
+.headline > span > span {
+  white-space: nowrap;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(28px, 4vh, 48px);
+  padding-bottom: 6px;
 }
 
 .positioning {
-  grid-area: position;
-  margin-top: clamp(18px, 2.4vw, 30px);
-  color: var(--color-text-secondary);
+  max-width: 14ch;
+  color: var(--color-text);
   font-size: var(--text-lead);
+  font-weight: 500;
   letter-spacing: var(--tracking-tight);
-  line-height: 1.3;
+  line-height: 1.35;
   text-wrap: pretty;
 }
 
 .cue {
-  grid-area: cue;
   display: flex;
   align-items: center;
   gap: 12px;
   min-height: 44px;
-  padding-bottom: 8px;
-
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   white-space: nowrap;
   transition: color var(--dur-fast) var(--ease-out);
 }
 
-/* 아래로 흐르는 짧은 선. 화살표 글리프 대신 방향만 남긴다. */
 .cueLine {
-  width: 44px;
+  width: 54px;
   height: 1px;
   background: currentColor;
   transform-origin: left center;
@@ -108,88 +173,142 @@
   }
 }
 
-@media (max-width: 639px) {
-  .mark {
-    align-items: flex-start;
-    padding-bottom: 18px;
-  }
-
-  .logo {
-    width: min(44vw, 168px);
-  }
-
-  .wordmark {
-    width: min(44vw, 168px);
-  }
-
+@media (max-width: 799px) {
   .bottom {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      'headline'
-      'position'
-      'cue';
-    row-gap: 0;
+    gap: 28px;
   }
 
-  .cue {
-    justify-self: end;
-    margin-top: clamp(32px, 8vw, 52px);
-    padding-bottom: 0;
+  .aside {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }
 
-/* 가로형 휴대폰처럼 세로 공간만 짧을 때는 로고가 h1의 자리를 밀지 않게 분리한다. */
-@media (max-height: 520px) and (orientation: landscape) {
+@media (max-width: 639px) {
+  .hero,
   .inner {
-    position: relative;
-    grid-template-rows: 1fr auto;
-    padding-block: calc(var(--header-h) + 16px) 20px;
+    min-height: max(680px, 100svh);
   }
 
-  .mark {
-    position: absolute;
-    inset: calc(var(--header-h) + 12px) 0 auto;
-    align-items: center;
-    padding-bottom: 0;
+  .artworkImage {
+    object-position: center 35%;
+  }
+
+  .artwork::after {
+    background:
+      linear-gradient(0deg, rgb(0 0 0 / 0.98) 0%, rgb(0 0 0 / 0.76) 35%, transparent 70%),
+      linear-gradient(90deg, rgb(0 0 0 / 0.36), transparent 72%),
+      repeating-linear-gradient(0deg, transparent 0 3px, rgb(242 242 239 / 0.014) 3px 4px);
+  }
+
+  .inner {
+    padding-block: calc(var(--header-h) + 18px) 24px;
   }
 
   .logo {
-    width: clamp(56px, 18vh, 84px);
+    width: 48px;
   }
 
   .wordmark {
-    width: 112px;
-    margin-top: 6px;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
 
-  .bottom {
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas:
-      'headline cue'
-      'position cue';
-    column-gap: clamp(18px, 4vw, 36px);
+  .signal {
+    display: none;
   }
 
   .headline {
-    font-size: clamp(3rem, 15vh, 5rem);
-    line-height: 0.88;
+    max-width: none;
+    font-size: clamp(3.35rem, 15.5vw, 4.75rem);
+    line-height: 0.86;
+  }
+
+  .aside {
+    gap: 20px;
   }
 
   .positioning {
-    margin-top: 8px;
-    font-size: clamp(0.875rem, 3.8vh, 1rem);
+    font-size: 1rem;
   }
 
-  .cue {
-    justify-self: auto;
-    margin-top: 0;
-    padding-bottom: 0;
+  .cueLine {
+    width: 36px;
   }
 }
 
-@media (max-width: 479px) and (max-height: 520px) and (orientation: landscape) {
-  .cue {
+@media (max-width: 639px) and (max-height: 699px) and (orientation: portrait) {
+  .hero,
+  .inner {
+    min-height: 100svh;
+  }
+
+  .headline {
+    font-size: clamp(3rem, 14vw, 3.8rem);
+  }
+
+  .bottom {
+    gap: 18px;
+  }
+
+  .aside {
+    gap: 12px;
+  }
+}
+
+/* 낮은 가로형 화면에서는 판면을 좌우로 압축해 헤드라인을 첫 화면에 남긴다. */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero,
+  .inner {
+    min-height: 100svh;
+  }
+
+  .inner {
+    padding-block: calc(var(--header-h) + 10px) 18px;
+  }
+
+  .topRail {
+    position: absolute;
+    top: calc(var(--header-h) + 8px);
+    left: var(--page-x);
+  }
+
+  .logo {
+    width: 42px;
+  }
+
+  .wordmark {
+    font-size: 0.75rem;
+  }
+
+  .signal {
     display: none;
+  }
+
+  .bottom {
+    grid-template-columns: minmax(0, 8fr) minmax(170px, 4fr);
+    gap: 28px;
+  }
+
+  .headline {
+    font-size: clamp(3.2rem, 14vh, 5rem);
+    line-height: 0.86;
+  }
+
+  .aside {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .positioning {
+    font-size: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cueLine {
+    animation: none;
   }
 }

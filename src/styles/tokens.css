@@ -16,12 +16,19 @@
   --color-line: rgb(242 242 239 / 0.14);
   --color-line-strong: rgb(242 242 239 / 0.38);
   --color-signal: #ff3b30; /* '수신 중' 표시에만 사용 */
+  --color-paper: #e8e2d7;
+  --color-paper-soft: #d7d0c4;
+  --color-ink: #11110f;
+  --color-ink-secondary: #46443f;
+  --color-ink-muted: #4f4c46; /* paper-soft 위에서도 6:1 이상 */
+  --color-ink-line: rgb(17 17 15 / 0.18);
 
   /* ---------- Typography ---------- */
   --font-display: 'Instrument Serif', 'Pretendard Variable', Georgia, 'Times New Roman', serif;
   --font-sans:
     'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
     'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
 
   /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다 */
   --text-label: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem); /* 12 → 13px */

@@ -117,6 +117,45 @@ export default function App() {
     }
   }, [introDone, smoothScroll])
 
+  /**
+   * 주소창에서 해시가 붙은 URL로 바로 들어오면 브라우저의 첫 앵커 탐색 시점에는
+   * React 본문이 아직 없다. 인트로와 첫 렌더가 끝난 뒤 한 번만 위치를 복원한다.
+   */
+  useEffect(() => {
+    if (!introDone || !window.location.hash) return
+
+    let id: string
+
+    try {
+      id = decodeURIComponent(window.location.hash.slice(1))
+    } catch {
+      // 외부에서 유입된 잘못된 퍼센트 인코딩은 앱 전체를 깨뜨리지 않고 무시한다.
+      return
+    }
+    const target = document.getElementById(id)
+
+    if (!target) return
+
+    const frame = window.requestAnimationFrame(() => {
+      const headerHeight =
+        Number.parseFloat(
+          window.getComputedStyle(document.documentElement).getPropertyValue('--header-h'),
+        ) || 0
+      const offset = -(headerHeight + 24)
+      const lenis = lenisRef.current?.lenis
+
+      if (lenis) {
+        lenis.scrollTo(target, { offset, immediate: true })
+        return
+      }
+
+      const top = target.getBoundingClientRect().top + window.scrollY + offset
+      window.scrollTo({ top: Math.max(0, top), behavior: 'auto' })
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [introDone])
+
   return (
     <ScrollProvider enabled={smoothScroll} lenisRef={lenisRef}>
       <Preloader onFinish={handleIntroFinish} />

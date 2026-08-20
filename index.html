@@ -17,6 +17,20 @@
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="/media/hero-newsroom-mobile.webp"
+      type="image/webp"
+      media="(max-width: 639px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/media/hero-newsroom.webp"
+      type="image/webp"
+      media="(min-width: 640px)"
+    />
 
     <!-- 공유 카드. 메신저로 링크가 오갈 때 빈 카드가 뜨지 않게 한다. -->
     <meta property="og:type" content="website" />
@@ -28,7 +42,10 @@
     <meta property="og:image" content="https://wellknews.github.io/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="흑백 뉴스 신호 질감 위의 WELLKNEWS 로고와 슬로건" />
+    <meta
+      property="og:image:alt"
+      content="어두운 편집 아카이브의 수신 장치 위에 놓인 WELLKNEWS 로고와 슬로건"
+    />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- 검색 결과에 브랜드와 공식 채널을 함께 노출시키기 위한 구조화 데이터 -->

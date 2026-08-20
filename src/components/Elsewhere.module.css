@@ -2,13 +2,21 @@
   border-top: 1px solid var(--color-line);
 }
 
+:global(#elsewhere) {
+  padding-block: clamp(80px, 9vw, 140px);
+  background: var(--color-surface);
+}
+
 .item {
   border-bottom: 1px solid var(--color-line);
   transition: border-color var(--dur-base) var(--ease-out);
 }
 
 .row {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(240px, 5fr);
+  gap: clamp(28px, 6vw, 100px);
+  align-items: end;
   /* 터치 타깃 최소치. 두 줄이 들어가므로 실제로는 늘 이보다 크다. */
   min-height: 44px;
   padding-block: clamp(28px, 3.4vw, 46px);
@@ -26,7 +34,7 @@
 
 .name {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.6vw, 3.25rem);
+  font-size: clamp(2.5rem, 5vw, 5.5rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: var(--tracking-display);
@@ -36,6 +44,7 @@
 .path {
   flex-shrink: 0;
   color: var(--color-text-muted);
+  font-family: var(--font-mono);
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   transition: color var(--dur-base) var(--ease-out);
@@ -43,7 +52,7 @@
 
 .summary {
   display: block;
-  margin-top: clamp(10px, 1.2vw, 16px);
+  margin: 0 0 0.4em;
   max-width: 44ch;
   color: var(--color-text-secondary);
   font-size: var(--text-body);
@@ -79,7 +88,12 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
   .head {
     flex-direction: column;
     align-items: flex-start;

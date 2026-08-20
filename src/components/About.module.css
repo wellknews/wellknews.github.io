@@ -1,52 +1,173 @@
-.lead {
-  margin: 0;
-  max-width: 18ch;
+:global(#about) {
+  --color-text: var(--color-ink);
+  --color-text-secondary: var(--color-ink-secondary);
+  --color-text-muted: var(--color-ink-muted);
+  --color-line: var(--color-ink-line);
+  --color-line-strong: rgb(17 17 15 / 0.42);
 
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(320px, 5fr);
+  gap: clamp(44px, 8vw, 128px);
+  align-items: end;
+}
+
+.lead {
+  align-self: end;
+  margin: 0 0 0.08em;
+  max-width: 8.2ch;
   font-family: var(--font-sans);
-  font-size: var(--text-h2);
-  font-weight: 600;
-  line-height: 1.14;
-  letter-spacing: var(--tracking-tight);
+  font-size: clamp(3rem, 6.2vw, 7rem);
+  font-weight: 620;
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.visual figure {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.visual figure::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(0deg, rgb(0 0 0 / 0.66), transparent 28%),
+    repeating-linear-gradient(0deg, transparent 0 3px, rgb(242 242 239 / 0.012) 3px 4px);
+}
+
+.visual img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(1.04);
+  transform: scale(1.006);
+}
+
+.visual figcaption {
+  position: absolute;
+  z-index: 1;
+  inset: auto clamp(18px, 2vw, 30px) clamp(18px, 2vw, 28px);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgb(242 242 239 / 0.78);
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.11em;
 }
 
 .principles {
-  margin: clamp(64px, 8vw, 120px) 0 0;
-  border-top: 1px solid var(--color-line);
-}
-
-.row {
   display: grid;
-  grid-template-columns: minmax(110px, 2fr) minmax(0, 8fr);
-  gap: clamp(20px, 4vw, 64px);
-  align-items: baseline;
-  padding-block: clamp(24px, 3vw, 38px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: clamp(72px, 10vw, 156px) 0 0;
+  border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
 }
 
-.term {
+.row {
+  min-height: clamp(260px, 25vw, 390px);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: clamp(24px, 3vw, 44px);
+  border-right: 1px solid var(--color-line);
+}
+
+.row:last-child {
+  border-right: 0;
+}
+
+.number {
   color: var(--color-text-muted);
+  font-family: var(--font-mono);
   font-size: var(--text-label);
-  letter-spacing: var(--tracking-label);
+  letter-spacing: 0.1em;
+}
+
+.term {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 5.2vw, 6rem);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+}
+
+.term > span:last-child {
+  align-self: center;
 }
 
 .description {
   margin: 0;
-  max-width: 40ch;
-  color: var(--color-text);
-  font-size: var(--text-lead);
-  line-height: 1.5;
+  max-width: 24ch;
+  color: var(--color-text-secondary);
+  font-size: var(--text-body);
+  line-height: 1.62;
   letter-spacing: var(--tracking-tight);
   text-wrap: pretty;
 }
 
-@media (max-width: 639px) {
+@media (max-width: 899px) {
+  .intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .lead {
-    font-size: clamp(1.625rem, 8.25vw, var(--text-h2));
-    white-space: nowrap;
+    max-width: 10ch;
+  }
+
+  .visual {
+    width: min(78%, 560px);
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .lead {
+    font-size: clamp(2.55rem, 12vw, 4.5rem);
+    line-height: 1.08;
+  }
+
+  .visual {
+    width: 100%;
+  }
+
+  .visual figure {
+    aspect-ratio: 4 / 5;
+  }
+
+  .principles {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 64px;
   }
 
   .row {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 10px;
+    min-height: 240px;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .row:last-child {
+    border-bottom: 0;
+  }
+
+  .term {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+}
+
+@media (max-width: 479px) {
+  .visual figcaption {
+    flex-direction: column;
+    gap: 5px;
   }
 }

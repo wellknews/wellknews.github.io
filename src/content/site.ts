@@ -87,7 +87,7 @@ export const site = {
     index: '03',
     label: 'ABOUT',
     /** 브랜드명·슬로건을 반복하지 않고, 편집 기준 자체를 본문으로 삼는다. */
-    lead: ['짧게 전하지만', '가볍게 만들지 않습니다.'],
+    lead: ['짧게 전하지만', '가볍게 만들지', '않습니다.'],
     principles: [
       { term: '확인', description: '출처가 분명한 것만 다룹니다.' },
       { term: '맥락', description: '분량을 줄이되 맥락은 덜어내지 않습니다.' },

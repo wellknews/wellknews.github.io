@@ -68,6 +68,7 @@
   padding-block: 4px;
 
   color: var(--color-text-muted);
+  font-family: var(--font-mono);
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   transition: color var(--dur-fast) var(--ease-out);

@@ -138,7 +138,7 @@ async function buildLogo() {
 
 /** 생성형 배경에는 글자나 로고를 넣지 않고, 이 단계에서 canonical 자산과 정확한 카피를 합성한다. */
 async function buildOgImage(logo) {
-  const background = await readFile(join(ASSETS_DIR, 'og-background.webp'))
+  const background = await readFile(join(ASSETS_DIR, 'og-background-v2.webp'))
   const mark = await sharp(logo)
     .resize(OG_LOGO_SIZE, OG_LOGO_SIZE, { fit: 'inside' })
     .png()

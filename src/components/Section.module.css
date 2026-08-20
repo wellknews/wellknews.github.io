@@ -10,7 +10,7 @@
   margin: 0 0 var(--space-block);
 
   color: var(--color-text-muted);
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-label);
   font-weight: 400;
   letter-spacing: var(--tracking-label);
