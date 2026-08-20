@@ -29,7 +29,7 @@ export function Header() {
           aria-hidden={!pastHero}
           tabIndex={pastHero ? 0 : -1}
         >
-          <img src="/logo.png" alt="" width={512} height={512} className={styles.brandLogo} />
+          <img src="/logo.svg" alt="" width={512} height={512} className={styles.brandLogo} />
         </a>
 
         <nav className={styles.nav} aria-label="주요 메뉴">

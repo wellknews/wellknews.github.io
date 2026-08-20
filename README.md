@@ -20,14 +20,14 @@ npm install
 npm run dev
 ```
 
-| 스크립트          | 설명                              |
-| ----------------- | --------------------------------- |
-| `npm run dev`     | 개발 서버                         |
-| `npm run build`   | 배포용 빌드 (`dist/`)             |
-| `npm run preview` | 빌드 결과 미리보기                |
-| `npm run check`   | 포맷 · 린트 · 타입 검사 일괄 실행 |
-| `npm run format`  | 코드 포맷 적용                    |
-| `npm run assets`  | 로고 · 공유 카드 · 파비콘 재생성  |
+| 스크립트          | 설명                                    |
+| ----------------- | --------------------------------------- |
+| `npm run dev`     | 개발 서버                               |
+| `npm run build`   | 배포용 빌드 (`dist/`)                   |
+| `npm run preview` | 빌드 결과 미리보기                      |
+| `npm run check`   | 포맷 · 린트 · 타입 검사 일괄 실행       |
+| `npm run format`  | 코드 포맷 적용                          |
+| `npm run assets`  | 양쪽 브랜드의 로고·아이콘·OG 카드 재생성 |
 
 ## 구조
 
@@ -41,12 +41,22 @@ src/
   hooks/              스크롤·포인터 관련 동작
   semicolon/          /; 아래의 모든 것 (아래 참고)
 scripts/            이미지 자산 생성 (원본이 바뀔 때만 수동 실행)
-                    SEMICOLON의 파비콘과 공유 카드는 웹폰트를 쓸 수 없는
-                    자리라, 같은 벡터 작도 하나에서 함께 뽑는다
-assets/             로고 벡터 원본 (배포되지 않음)
+                    WELLKNEWS와 SEMICOLON의 파생 자산을 함께 생성
+assets/             canonical 로고·OG 배경 원본 (배포되지 않음)
+public/media/       404·REPORT용 최적화 이미지
 ```
 
 입구의 문구를 고칠 일은 대부분 `src/content/site.ts` 한 파일에서 끝난다.
+
+## 이미지 자산
+
+- `assets/logo.svg`가 로고의 단일 원본이다. 화면용 SVG와 PNG, 파비콘, Apple 아이콘은
+  `npm run assets`로 생성한다.
+- `assets/og-background.webp`는 OG 카드의 배경판이며 로고와 문구는 생성 스크립트가 정확히
+  합성한다.
+- `public/media/404-signal.webp`와 `public/media/report-evidence.webp`는 생성형 이미지로 만든
+  추상 편집 자산이다. 실제 인물·사건·문서 또는 보도 사진을 나타내지 않는다. 생성 프롬프트와
+  제약은 `assets/IMAGEGEN.md`에 기록한다.
 
 ## 디자인 규칙 — WELLKNEWS
 

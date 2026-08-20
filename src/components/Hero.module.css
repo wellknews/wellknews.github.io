@@ -12,6 +12,7 @@
 
 .mark {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: clamp(24px, 4vw, 48px);
@@ -20,6 +21,18 @@
 .logo {
   width: min(22vw, 240px);
   height: auto;
+}
+
+.wordmark {
+  width: min(22vw, 240px);
+  margin-top: clamp(14px, 1.5vw, 22px);
+  color: var(--color-text);
+  font-size: clamp(0.75rem, 0.68rem + 0.35vw, 1rem);
+  font-weight: 650;
+  letter-spacing: calc(var(--tracking-label) * 1.5);
+  line-height: 1;
+  text-align: center;
+  text-indent: calc(var(--tracking-label) * 1.5);
 }
 
 .bottom {
@@ -88,11 +101,15 @@
 
 @media (max-width: 639px) {
   .mark {
-    justify-content: flex-start;
+    align-items: flex-start;
     padding-bottom: 18px;
   }
 
   .logo {
+    width: min(58vw, 200px);
+  }
+
+  .wordmark {
     width: min(58vw, 200px);
   }
 

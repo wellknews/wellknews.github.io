@@ -39,6 +39,11 @@
 }
 
 @media (max-width: 639px) {
+  .lead {
+    font-size: clamp(1.625rem, 8.25vw, var(--text-h2));
+    white-space: nowrap;
+  }
+
   .row {
     grid-template-columns: minmax(0, 1fr);
     gap: 10px;

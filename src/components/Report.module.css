@@ -1,3 +1,7 @@
+:global(#report) {
+  background: var(--color-surface);
+}
+
 .grid {
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(260px, 3fr);
@@ -52,6 +56,35 @@
   background: var(--color-text-muted);
 }
 
+/* 생성 이미지는 실제 사건 장면이 아니라 제보 자료 유형을 암시하는 편집 정물이다.
+ * 텍스트가 이미 같은 정보를 제공하므로 접근성 트리에서는 장식으로만 취급한다. */
+.visual {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  margin-top: clamp(64px, 8vw, 120px);
+  overflow: hidden;
+  border-block: 1px solid var(--color-line);
+  background: var(--color-surface);
+}
+
+.visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(0 0 0 / 0.18), transparent 24% 76%, rgb(0 0 0 / 0.18)),
+    repeating-linear-gradient(0deg, transparent 0 3px, rgb(242 242 239 / 0.012) 3px 4px);
+}
+
+.visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.78) contrast(1.04);
+  transform: scale(1.005);
+}
+
 /* ---------- CTA ---------- */
 
 .cta {
@@ -59,7 +92,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-top: clamp(72px, 9vw, 140px);
+  margin-top: clamp(44px, 6vw, 88px);
   padding-block: clamp(24px, 3vw, 36px);
 
   border-top: 1px solid var(--color-line);
@@ -70,7 +103,20 @@
 }
 
 .ctaLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 1.4vw, 18px);
   font-weight: 500;
+}
+
+.ctaLabel::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-signal);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color-signal) 58%, transparent);
 }
 
 .ctaArrow {
@@ -109,5 +155,16 @@
 
   .meta {
     padding-top: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .visual {
+    aspect-ratio: 4 / 3;
+    margin-top: clamp(48px, 14vw, 72px);
+  }
+
+  .visual img {
+    object-position: 46% center;
   }
 }

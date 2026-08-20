@@ -45,14 +45,15 @@ export function Hero({ ready }: Props) {
           animate={state}
         >
           <img
-            src="/logo.png"
-            alt={`${site.name} 로고`}
+            src="/logo.svg"
+            alt=""
             width={512}
             height={512}
             className={styles.logo}
             fetchPriority="high"
             decoding="async"
           />
+          <span className={styles.wordmark}>{site.name}</span>
         </motion.div>
 
         <div className={styles.bottom}>

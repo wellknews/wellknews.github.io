@@ -39,6 +39,17 @@ export function Report({ href }: Props) {
         </Reveal>
       </div>
 
+      <Reveal className={styles.visual} delay={0.18}>
+        <img
+          src="/media/report-evidence.webp"
+          alt=""
+          width={1600}
+          height={700}
+          loading="lazy"
+          decoding="async"
+        />
+      </Reveal>
+
       <Reveal delay={0.2}>
         {href === null ? (
           <p className={styles.pending} lang="ko">
