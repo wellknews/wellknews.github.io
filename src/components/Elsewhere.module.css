@@ -12,7 +12,9 @@
   /* 터치 타깃 최소치. 두 줄이 들어가므로 실제로는 늘 이보다 크다. */
   min-height: 44px;
   padding-block: clamp(28px, 3.4vw, 46px);
-  transition: transform var(--dur-base) var(--ease-out);
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out);
 }
 
 .head {
@@ -46,6 +48,7 @@
   color: var(--color-text-secondary);
   font-size: var(--text-body);
   letter-spacing: var(--tracking-tight);
+  text-wrap: pretty;
 }
 
 /*
@@ -68,6 +71,12 @@
 
 .row:focus-visible .path {
   color: var(--color-text);
+}
+
+@media (hover: none) {
+  .row:active {
+    opacity: 0.68;
+  }
 }
 
 @media (max-width: 479px) {

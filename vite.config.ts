@@ -1,13 +1,49 @@
 import { fileURLToPath } from 'node:url'
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
 const entry = (path: string) => fileURLToPath(new URL(path, import.meta.url))
 
+/**
+ * GitHub Pages에서는 공용 404가 `/;/...` 깊은 주소를 SEMICOLON 문서로 되돌린다.
+ * Vite 개발 서버는 기본 fallback이 루트 index.html이라 같은 주소에서 WELLKNEWS를
+ * 보여 주므로, 개발 중에만 두 번째 문서를 선택한다. 주소창은 건드리지 않는다.
+ */
+function semicolonDevFallback(): Plugin {
+  return {
+    name: 'semicolon-dev-fallback',
+    configureServer(server) {
+      server.middlewares.use((request, _response, next) => {
+        const url = request.url
+
+        if (!url) return next()
+
+        const queryAt = url.indexOf('?')
+        const rawPath = queryAt === -1 ? url : url.slice(0, queryAt)
+        const search = queryAt === -1 ? '' : url.slice(queryAt)
+
+        let pathname: string
+
+        try {
+          pathname = decodeURIComponent(rawPath)
+        } catch {
+          return next()
+        }
+
+        if (pathname !== '/;/index.html' && (pathname === '/;' || pathname.startsWith('/;/'))) {
+          request.url = `/;/index.html${search}`
+        }
+
+        next()
+      })
+    },
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
   base: '/',
-  plugins: [react()],
+  plugins: [semicolonDevFallback(), react()],
   css: {
     modules: {
       // 개발 중 DevTools에서 어느 컴포넌트의 클래스인지 바로 읽히도록 한다.

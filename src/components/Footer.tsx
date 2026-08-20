@@ -16,6 +16,7 @@ export function Footer() {
                 <a
                   className={styles.link}
                   href={contact.href}
+                  aria-label={contact.external ? `${contact.label} (새 창)` : undefined}
                   {...(contact.external ? { target: '_blank', rel: 'noreferrer' } : {})}
                 >
                   {contact.label}

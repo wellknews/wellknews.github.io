@@ -19,8 +19,10 @@ type Props = {
  * 이 공간이 무엇을 다루는지에 대한 선언이다.
  */
 export function Header({ route }: Props) {
-  const inSession = route.kind === 'session' || route.kind === 'session-index'
-  const inThread = route.kind === 'thread' || route.kind === 'thread-index'
+  const sessionCurrent =
+    route.kind === 'session-index' ? 'page' : route.kind === 'session' ? 'location' : undefined
+  const threadCurrent =
+    route.kind === 'thread-index' ? 'page' : route.kind === 'thread' ? 'location' : undefined
 
   return (
     <header className={styles.header}>
@@ -35,11 +37,11 @@ export function Header({ route }: Props) {
         </Link>
 
         <nav className={styles.nav} aria-label="주요 메뉴">
-          <Link to={path.sessionIndex} className={`mono ${styles.link}`} current={inSession}>
+          <Link to={path.sessionIndex} className={`mono ${styles.link}`} current={sessionCurrent}>
             {semicolon.session.label}
           </Link>
 
-          <Link to={path.threadIndex} className={`mono ${styles.link}`} current={inThread}>
+          <Link to={path.threadIndex} className={`mono ${styles.link}`} current={threadCurrent}>
             {semicolon.thread.label}
           </Link>
         </nav>

@@ -1,4 +1,4 @@
-import { motion, useReducedMotion, useScroll, useTransform, type Variants } from 'motion/react'
+import { motion, useReducedMotion, type Variants } from 'motion/react'
 import { site } from '../content/site'
 import { SplitText } from './SplitText'
 import styles from './Hero.module.css'
@@ -29,10 +29,7 @@ const positioningVariants: Variants = {
 
 export function Hero({ ready }: Props) {
   const prefersReduced = useReducedMotion()
-  const { scrollYProgress } = useScroll()
 
-  // 스크롤을 시작하면 안내가 할 일을 다했으므로 사라진다.
-  const cueOpacity = useTransform(scrollYProgress, [0, 0.04], [1, 0])
   const state = ready ? 'visible' : 'hidden'
 
   return (
@@ -71,10 +68,14 @@ export function Hero({ ready }: Props) {
             {site.hero.positioning}
           </motion.p>
 
-          <motion.span className={styles.cue} style={{ opacity: prefersReduced ? 1 : cueOpacity }}>
+          <a
+            className={styles.cue}
+            href="#report"
+            aria-label={`${site.report.label} 섹션으로 이동`}
+          >
             {site.hero.scrollCue}
             <span className={styles.cueLine} aria-hidden="true" />
-          </motion.span>
+          </a>
         </div>
       </div>
     </section>

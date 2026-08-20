@@ -16,15 +16,35 @@
 
 /* 로고를 따로 만들지 않는다. 이름 자체가 이 글자다. */
 .mark {
+  position: relative;
   display: inline-flex;
   align-items: center;
   /* 터치 타깃 최소 44px */
-  min-width: 32px;
+  min-width: 44px;
   min-height: 44px;
   font-family: var(--font-serif);
   font-size: 1.75rem;
   font-weight: var(--weight-display);
   line-height: 1;
+}
+
+/* 홈도 SESSION·THREAD와 같은 방식으로 현재 위치를 남긴다. */
+.mark::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 12px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.mark[aria-current='page']::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav {
@@ -58,23 +78,39 @@
 }
 
 /* 지금 있는 자리에만 색이 남는다. 상태 표시이지 장식이 아니다. */
-.link[aria-current='page'] {
+.link[aria-current] {
   color: var(--color-text);
 }
 
-.link[aria-current='page']::after {
+.link[aria-current]::after {
   background: var(--accent);
   transform: scaleX(1);
   transform-origin: left;
 }
 
 @media (hover: hover) {
+  .mark:hover,
   .link:hover {
     color: var(--color-text);
+  }
+
+  .mark:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
   .link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
   }
+}
+
+.mark:focus-visible::after,
+.link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.link:focus-visible {
+  color: var(--color-text);
 }

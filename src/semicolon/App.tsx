@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 import { Footer } from './components/Footer'
 import { Frame } from './components/Frame'
@@ -63,10 +63,30 @@ function keyOf(route: Route): string {
 
 export default function App() {
   const route = useRoute()
+  const routeKey = keyOf(route)
+  const previousRoute = useRef(routeKey)
+  const mainRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     document.title = titleOf(route)
   }, [route])
+
+  /*
+   * SPA 안에서 링크를 따라가면 눌렀던 링크에 초점이 남는다. 그 링크가 새 화면에서
+   * 사라지는 경우 스크린리더와 키보드 사용자는 어디로 이동했는지 알기 어렵다.
+   * 첫 진입 때는 초점을 빼앗지 않고, 실제 라우트 전환 뒤에만 새 본문 시작점으로 옮긴다.
+   */
+  useEffect(() => {
+    if (previousRoute.current === routeKey) return
+
+    previousRoute.current = routeKey
+
+    const frame = window.requestAnimationFrame(() => {
+      mainRef.current?.focus({ preventScroll: true })
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [routeKey])
 
   return (
     <>
@@ -82,7 +102,7 @@ export default function App() {
         페이지가 바뀔 때만 짧게 페이드된다. 화려한 전환을 두지 않는 이유는
         전환 자체가 눈에 띄는 순간 이 공간이 표현하려던 속도가 사라지기 때문이다.
       */}
-      <main id="main" tabIndex={-1} key={keyOf(route)} className="fade">
+      <main id="main" ref={mainRef} tabIndex={-1} key={routeKey} className="fade">
         {render(route)}
       </main>
 

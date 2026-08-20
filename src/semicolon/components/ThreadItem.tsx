@@ -26,12 +26,13 @@ type Props = {
 export function ThreadItem({ thread, level, linked }: Props) {
   const Heading = level === 1 ? 'h1' : 'h2'
   const to = path.thread(thread.slug)
+  const accessibleTitle = `${thread.date} — ${thread.title ?? thread.slug}`
 
   return (
-    <article className={styles.item} data-form={thread.form ?? 'note'}>
+    <article className={styles.item} data-form={thread.form ?? 'note'} data-linked={linked}>
       <div className={styles.aside}>
         {linked ? (
-          <Link to={to} className={`mono ${styles.date}`}>
+          <Link to={to} className={`mono ${styles.date}`} aria-label={accessibleTitle}>
             <time dateTime={thread.date}>{thread.date}</time>
           </Link>
         ) : (
@@ -46,7 +47,7 @@ export function ThreadItem({ thread, level, linked }: Props) {
           <Heading className={styles.title}>{thread.title}</Heading>
         ) : (
           /* 제목이 없는 글에도 문서 위계는 필요하다. 화면에는 날짜만 남는다. */
-          level === 1 && <h1 className="visually-hidden">{thread.date}</h1>
+          <Heading className="visually-hidden">{accessibleTitle}</Heading>
         )}
 
         <Prose>{thread.body}</Prose>

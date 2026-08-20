@@ -32,7 +32,9 @@
   gap: 24px;
   min-height: clamp(88px, 9vw, 124px);
   padding-inline: clamp(4px, 1vw, 16px);
-  transition: color var(--dur-slow) var(--ease-mask);
+  transition:
+    color var(--dur-slow) var(--ease-mask),
+    opacity var(--dur-fast) var(--ease-out);
 }
 
 .name {
@@ -77,4 +79,10 @@
 .row:focus-visible .content,
 .row:focus-visible .arrow {
   color: var(--color-bg);
+}
+
+@media (hover: none) {
+  .row:active .content {
+    opacity: 0.68;
+  }
 }

@@ -32,15 +32,15 @@ export function SessionList({ sessions, empty }: Props) {
         <li key={session.slug} className={styles.item}>
           <Link to={path.session(session.slug)} className={styles.row}>
             {/* 메타데이터가 없는 세션도 있으므로 칸 자체는 늘 자리를 지킨다. */}
-            <span className={styles.aside}>
+            <div className={styles.aside}>
               <MetaLine meta={session.meta} className={styles.meta} />
-            </span>
+            </div>
 
-            <span className={styles.main}>
+            <div className={styles.main}>
               <h2 className={styles.title}>{session.title}</h2>
 
               {session.excerpt ? <span className={styles.excerpt}>{session.excerpt}</span> : null}
-            </span>
+            </div>
 
             <span className={`mono ${styles.arrow}`} aria-hidden="true">
               →

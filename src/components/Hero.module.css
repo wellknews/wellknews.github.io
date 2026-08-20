@@ -19,13 +19,13 @@
 }
 
 .logo {
-  width: min(22vw, 240px);
+  width: clamp(180px, 16vw, 220px);
   height: auto;
 }
 
 .wordmark {
-  width: min(22vw, 240px);
-  margin-top: clamp(14px, 1.5vw, 22px);
+  width: clamp(180px, 16vw, 220px);
+  margin-top: clamp(12px, 1.2vw, 18px);
   color: var(--color-text);
   font-size: clamp(0.75rem, 0.68rem + 0.35vw, 1rem);
   font-weight: 650;
@@ -63,6 +63,7 @@
   font-size: var(--text-lead);
   letter-spacing: var(--tracking-tight);
   line-height: 1.3;
+  text-wrap: pretty;
 }
 
 .cue {
@@ -70,12 +71,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  min-height: 44px;
   padding-bottom: 8px;
 
   color: var(--color-text-muted);
   font-size: var(--text-label);
   letter-spacing: var(--tracking-label);
   white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
 /* 아래로 흐르는 짧은 선. 화살표 글리프 대신 방향만 남긴다. */
@@ -99,6 +102,12 @@
   }
 }
 
+@media (hover: hover) {
+  .cue:hover {
+    color: var(--color-text);
+  }
+}
+
 @media (max-width: 639px) {
   .mark {
     align-items: flex-start;
@@ -106,11 +115,11 @@
   }
 
   .logo {
-    width: min(58vw, 200px);
+    width: min(44vw, 168px);
   }
 
   .wordmark {
-    width: min(58vw, 200px);
+    width: min(44vw, 168px);
   }
 
   .bottom {
@@ -126,5 +135,61 @@
     justify-self: end;
     margin-top: clamp(32px, 8vw, 52px);
     padding-bottom: 0;
+  }
+}
+
+/* 가로형 휴대폰처럼 세로 공간만 짧을 때는 로고가 h1의 자리를 밀지 않게 분리한다. */
+@media (max-height: 520px) and (orientation: landscape) {
+  .inner {
+    position: relative;
+    grid-template-rows: 1fr auto;
+    padding-block: calc(var(--header-h) + 16px) 20px;
+  }
+
+  .mark {
+    position: absolute;
+    inset: calc(var(--header-h) + 12px) 0 auto;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .logo {
+    width: clamp(56px, 18vh, 84px);
+  }
+
+  .wordmark {
+    width: 112px;
+    margin-top: 6px;
+    font-size: 0.625rem;
+  }
+
+  .bottom {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      'headline cue'
+      'position cue';
+    column-gap: clamp(18px, 4vw, 36px);
+  }
+
+  .headline {
+    font-size: clamp(3rem, 15vh, 5rem);
+    line-height: 0.88;
+  }
+
+  .positioning {
+    margin-top: 8px;
+    font-size: clamp(0.875rem, 3.8vh, 1rem);
+  }
+
+  .cue {
+    justify-self: auto;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 479px) and (max-height: 520px) and (orientation: landscape) {
+  .cue {
+    display: none;
   }
 }

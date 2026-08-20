@@ -6,7 +6,6 @@ html {
 }
 
 body {
-  min-width: 320px;
   min-height: 100svh;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -34,6 +33,11 @@ body {
   position: relative;
   z-index: var(--z-content);
   flex: 1 0 auto;
+}
+
+/* 라우트 전환 뒤 초점을 받는 문서 시작점에는 거대한 외곽선을 그리지 않는다. */
+#main:focus {
+  outline: none;
 }
 
 /* 한국어 본문은 어절 단위로 끊어야 읽힌다 */

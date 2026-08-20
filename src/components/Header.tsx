@@ -1,20 +1,70 @@
-import { motion, useScroll } from 'motion/react'
+import { useEffect, useState } from 'react'
+import { motion, useReducedMotion, useScroll } from 'motion/react'
 import { site } from '../content/site'
 import { useHeaderState } from '../hooks/useHeaderState'
 import styles from './Header.module.css'
 
+/**
+ * 뷰포트 상단보다 조금 아래의 읽기 기준선에 걸린 섹션을 현재 위치로 본다.
+ * 헤더가 고정돼 있어 실제 화면 맨 위를 기준으로 삼으면 활성 상태가 너무 빨리 바뀐다.
+ */
+function useActiveNavHref(): string | null {
+  const [activeHref, setActiveHref] = useState<string | null>(null)
+
+  useEffect(() => {
+    const sections = site.nav.flatMap((item) => {
+      const section = document.querySelector<HTMLElement>(item.href)
+      return section ? [{ href: item.href, section }] : []
+    })
+
+    let frame = 0
+
+    const read = () => {
+      frame = 0
+      const readingLine = Math.min(window.innerHeight * 0.35, 320)
+      const current = sections.find(({ section }) => {
+        const rect = section.getBoundingClientRect()
+        return rect.top <= readingLine && rect.bottom > readingLine
+      })
+
+      setActiveHref((previous) => (previous === current?.href ? previous : (current?.href ?? null)))
+    }
+
+    const scheduleRead = () => {
+      if (frame) return
+      frame = window.requestAnimationFrame(read)
+    }
+
+    window.addEventListener('scroll', scheduleRead, { passive: true })
+    window.addEventListener('resize', scheduleRead, { passive: true })
+    read()
+
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', scheduleRead)
+      window.removeEventListener('resize', scheduleRead)
+    }
+  }, [])
+
+  return activeHref
+}
+
 export function Header() {
   const { direction, atTop, pastHero } = useHeaderState()
+  const prefersReduced = useReducedMotion()
   const { scrollYProgress } = useScroll()
+  const activeHref = useActiveNavHref()
 
-  const hidden = direction === 'down' && !atTop
+  const hidden = !prefersReduced && direction === 'down' && !atTop
 
   return (
     <motion.header
       className={styles.header}
       data-solid={!atTop}
       animate={{ y: hidden ? '-101%' : '0%' }}
-      transition={{ duration: 0.55, ease: [0.65, 0, 0.35, 1] }}
+      transition={
+        prefersReduced ? { duration: 0 } : { duration: 0.55, ease: [0.65, 0, 0.35, 1] as const }
+      }
     >
       <div className={`shell ${styles.inner}`}>
         {/*
@@ -34,7 +84,12 @@ export function Header() {
 
         <nav className={styles.nav} aria-label="주요 메뉴">
           {site.nav.map((item) => (
-            <a key={item.href} href={item.href} className={styles.navLink}>
+            <a
+              key={item.href}
+              href={item.href}
+              className={styles.navLink}
+              aria-current={activeHref === item.href ? 'location' : undefined}
+            >
               {item.label}
             </a>
           ))}

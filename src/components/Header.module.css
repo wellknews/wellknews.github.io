@@ -9,11 +9,12 @@
 
 /* 최상단을 벗어나면 뒤 내용이 비치지 않게 배경을 깐다. */
 .header[data-solid='true'] {
-  background: color-mix(in srgb, var(--color-bg) 72%, transparent);
-  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--color-bg) 82%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
 }
 
-@supports not (backdrop-filter: blur(12px)) {
+@supports not (backdrop-filter: blur(14px)) {
   .header[data-solid='true'] {
     background: var(--color-bg);
   }
@@ -84,6 +85,14 @@
   transform: scaleX(0);
   transform-origin: right;
   transition: transform var(--dur-base) var(--ease-out);
+}
+
+.navLink[aria-current='location'] {
+  color: var(--color-text);
+}
+
+.navLink[aria-current='location']::after {
+  transform: scaleX(1);
 }
 
 @media (hover: hover) {

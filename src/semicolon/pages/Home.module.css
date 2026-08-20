@@ -44,8 +44,28 @@
   transition: color var(--dur-fast) var(--ease-out);
 }
 
+.more:focus-visible {
+  color: var(--color-text);
+}
+
 @media (hover: hover) {
   .more:hover {
     color: var(--color-text);
+  }
+}
+
+/* 320px에서도 기호·이름·주소가 한 줄 안에 남도록 보조 괘선만 덜어낸다. */
+@media (max-width: 479px) {
+  .head {
+    gap: 10px;
+  }
+
+  .head > :global(.rule),
+  .head > :global(.ruleOut) {
+    display: none;
+  }
+
+  .more {
+    margin-left: auto;
   }
 }

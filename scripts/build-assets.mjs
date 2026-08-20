@@ -12,6 +12,24 @@ import sharp from 'sharp'
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const ASSETS_DIR = join(ROOT, 'assets')
 const PUBLIC_DIR = join(ROOT, 'public')
+const PRETENDARD_BOLD = join(
+  ROOT,
+  'node_modules',
+  'pretendard',
+  'dist',
+  'public',
+  'static',
+  'alternative',
+  'Pretendard-Bold.ttf',
+)
+const INSTRUMENT_SERIF = join(
+  ROOT,
+  'node_modules',
+  '@fontsource',
+  'instrument-serif',
+  'files',
+  'instrument-serif-latin-400-normal.woff2',
+)
 
 /** 화면에서는 SVG를 쓰지만 크롤러와 메타데이터용 PNG도 함께 제공한다. */
 const LOGO_SIZE = 512
@@ -59,6 +77,27 @@ function addFaviconBackground(source) {
   return `${source.slice(0, rootEnd)}${background}${source.slice(rootEnd)}`
 }
 
+/**
+ * OG 카피는 설치된 시스템 글꼴에 기대지 않고 프로젝트에 고정된 웹폰트로 래스터화한다.
+ * 덕분에 macOS·Windows·CI에서 자산을 다시 만들어도 같은 브랜드 활자가 나온다.
+ */
+async function renderOgText({ text, font, fontfile, size, tracking = 0 }) {
+  const letterSpacing = Math.round(tracking * 1024)
+  const markup = `<span foreground="#f2f2ef" letter_spacing="${letterSpacing}">${text}</span>`
+
+  return sharp({
+    text: {
+      text: markup,
+      font: `${font} ${size}`,
+      fontfile,
+      dpi: 72,
+      rgba: true,
+    },
+  })
+    .png()
+    .toBuffer()
+}
+
 async function buildLogo() {
   const canonical = await readFile(join(ASSETS_DIR, 'logo.svg'), 'utf8')
   const logoSvg = addIntrinsicSize(canonical)
@@ -104,6 +143,27 @@ async function buildOgImage(logo) {
     .resize(OG_LOGO_SIZE, OG_LOGO_SIZE, { fit: 'inside' })
     .png()
     .toBuffer()
+  const wordmark = await renderOgText({
+    text: 'WELLKNEWS',
+    font: 'Pretendard',
+    fontfile: PRETENDARD_BOLD,
+    size: 30,
+    tracking: 7,
+  })
+  const headlineOne = await renderOgText({
+    text: 'EVERY NEWS,',
+    font: 'Instrument Serif',
+    fontfile: INSTRUMENT_SERIF,
+    size: 96,
+    tracking: -2,
+  })
+  const headlineTwo = await renderOgText({
+    text: 'WELL KNEW.',
+    font: 'Instrument Serif',
+    fontfile: INSTRUMENT_SERIF,
+    size: 96,
+    tracking: -2,
+  })
 
   const shade = Buffer.from(`
     <svg width="${OG_WIDTH}" height="${OG_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
@@ -118,14 +178,8 @@ async function buildOgImage(logo) {
     </svg>
   `)
 
-  const copy = Buffer.from(`
+  const rule = Buffer.from(`
     <svg width="${OG_WIDTH}" height="${OG_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
-      <text x="234" y="151" fill="#f2f2ef" font-family="Arial, sans-serif" font-size="30"
-        font-weight="700" letter-spacing="7">WELLKNEWS</text>
-      <text x="76" y="430" fill="#f2f2ef" font-family="Georgia, serif" font-size="88"
-        letter-spacing="-3">EVERY NEWS,</text>
-      <text x="76" y="522" fill="#f2f2ef" font-family="Georgia, serif" font-size="88"
-        letter-spacing="-3">WELL KNEW.</text>
       <line x1="76" y1="574" x2="1124" y2="574" stroke="#f2f2ef" stroke-opacity="0.3" />
     </svg>
   `)
@@ -135,7 +189,10 @@ async function buildOgImage(logo) {
     .composite([
       { input: shade, left: 0, top: 0 },
       { input: mark, left: 76, top: 72 },
-      { input: copy, left: 0, top: 0 },
+      { input: wordmark, left: 234, top: 128 },
+      { input: headlineOne, left: 76, top: 344 },
+      { input: headlineTwo, left: 76, top: 442 },
+      { input: rule, left: 0, top: 0 },
     ])
     .png({ compressionLevel: 9, palette: true, effort: 10 })
     .toBuffer()

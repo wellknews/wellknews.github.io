@@ -10,6 +10,10 @@
   overflow-wrap: anywhere;
 }
 
+.path > span:first-child {
+  min-width: 0;
+}
+
 /* 숫자를 고정폭으로 크게 세운다. 이 화면에서 유일하게 큰 글자다. */
 .code {
   margin-top: clamp(20px, 3vw, 40px);

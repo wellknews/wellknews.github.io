@@ -18,6 +18,10 @@
   transition: color var(--dur-fast) var(--ease-out);
 }
 
+.back:focus-visible {
+  color: var(--color-text);
+}
+
 @media (hover: hover) {
   .back:hover {
     color: var(--color-text);

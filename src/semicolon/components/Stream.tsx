@@ -78,7 +78,7 @@ export function Stream() {
       // 폭은 상태가 아니라 이 순간의 판면에서 읽는다. 시연은 한 번뿐이라
       // 이 효과가 폭 변화를 따라 다시 돌 이유가 없다.
       const ticks = Math.max(MIN_TICKS, Math.round((railRef.current?.clientWidth ?? 0) / SPACING))
-      setIndex(Math.round(ticks * HINT_RATIO))
+      setIndex(Math.min(ticks - 2, Math.round(ticks * HINT_RATIO)))
 
       holdRef.current = window.setTimeout(() => {
         if (!touchedRef.current) setIndex(null)
@@ -98,7 +98,9 @@ export function Stream() {
 
       touchedRef.current = true
       clearHold()
-      setIndex(Math.min(count - 1, Math.max(0, Math.round(ratio * (count - 1)))))
+      // 마지막 눈금의 오른쪽에는 갈라질 다음 칸이 없다. 끝을 찍어도 마지막 두
+      // 눈금 사이가 열리게 해야 ';'가 overflow에 잘리지 않는다.
+      setIndex(Math.min(count - 2, Math.max(0, Math.round(ratio * (count - 1)))))
     },
     [clearHold, count],
   )
@@ -129,7 +131,7 @@ export function Stream() {
   }, [clearHold])
 
   /* 폭이 줄면 눈금 수도 줄어든다. 열려 있던 자리가 줄 밖으로 나가지 않게 한다. */
-  const at = index === null ? null : Math.min(index, count - 1)
+  const at = index === null ? null : Math.min(index, count - 2)
 
   /*
    * 갈라진 자리의 한가운데. 눈금 k와 k+1 사이가 열리므로 글자는 그 둘의

@@ -25,10 +25,11 @@
 }
 
 .body {
+  max-width: 34ch;
   color: var(--color-text-secondary);
   font-size: var(--text-body);
   line-height: 1.75;
-  max-width: 34ch;
+  text-wrap: pretty;
 }
 
 .types {
@@ -99,7 +100,9 @@
   border-bottom: 1px solid var(--color-line);
   font-size: clamp(1.5rem, 3.2vw, 2.75rem);
   letter-spacing: var(--tracking-tight);
-  transition: border-color var(--dur-base) var(--ease-out);
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out);
 }
 
 .ctaLabel {
@@ -160,11 +163,15 @@
 
 @media (max-width: 639px) {
   .visual {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 2;
     margin-top: clamp(48px, 14vw, 72px);
   }
 
   .visual img {
-    object-position: 46% center;
+    object-position: 48% center;
   }
+}
+
+.cta:active {
+  opacity: 0.68;
 }

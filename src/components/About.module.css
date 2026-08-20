@@ -36,6 +36,7 @@
   font-size: var(--text-lead);
   line-height: 1.5;
   letter-spacing: var(--tracking-tight);
+  text-wrap: pretty;
 }
 
 @media (max-width: 639px) {

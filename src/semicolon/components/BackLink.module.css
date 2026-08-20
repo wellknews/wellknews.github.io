@@ -13,6 +13,10 @@
   transition: color var(--dur-fast) var(--ease-out);
 }
 
+.link:focus-visible {
+  color: var(--color-text);
+}
+
 @media (hover: hover) {
   .link:hover {
     color: var(--color-text);

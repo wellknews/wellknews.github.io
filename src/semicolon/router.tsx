@@ -104,8 +104,16 @@ export function restoreDeepLink() {
 
   if (!target) return
 
+  // `/%3B/...`로 들어온 주소도 public/404.html이 넘길 수 있다. 경로 부분만
+  // 디코딩해야 query/hash 안의 `%26` 같은 값이 구분자로 바뀌지 않는다.
+  const suffixAt = target.search(/[?#]/)
+  const targetPath = suffixAt === -1 ? target : target.slice(0, suffixAt)
+  const suffix = suffixAt === -1 ? '' : target.slice(suffixAt)
+  const decodedPath = decode(targetPath)
+
   // 이 공간 안의 경로만 복원한다. 바깥으로 튀는 값은 홈으로 되돌린다.
-  const safe = target.startsWith(`${BASE}/`) || target === BASE ? target : path.home
+  const safe =
+    decodedPath.startsWith(`${BASE}/`) || decodedPath === BASE ? decodedPath + suffix : path.home
 
   window.history.replaceState(null, '', safe)
 }
@@ -115,7 +123,7 @@ type LinkProps = {
   children: ReactNode
   className?: string | undefined
   /** 현재 위치를 가리키는 링크인지. 메뉴에서 쓴다. */
-  current?: boolean | undefined
+  current?: boolean | 'page' | 'location' | undefined
   'aria-label'?: string | undefined
 }
 
@@ -126,6 +134,8 @@ type LinkProps = {
  * 주소가 진짜 href로 들어 있어야 그 동작들이 살아 있다.
  */
 export function Link({ to, children, className, current, ...rest }: LinkProps) {
+  const ariaCurrent = current === true ? 'page' : current
+
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.defaultPrevented) return
     if (event.button !== 0) return
@@ -140,7 +150,7 @@ export function Link({ to, children, className, current, ...rest }: LinkProps) {
       href={to}
       className={className}
       onClick={handleClick}
-      {...(current ? { 'aria-current': 'page' as const } : {})}
+      {...(ariaCurrent ? { 'aria-current': ariaCurrent } : {})}
       {...rest}
     >
       {children}

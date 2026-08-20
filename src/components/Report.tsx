@@ -29,7 +29,7 @@ export function Report({ href }: Props) {
           </p>
 
           {/* 무엇을 보낼 수 있는지 — 본문이 말하지 않는 정보만 담는다. */}
-          <ul className={styles.types} role="list">
+          <ul className={styles.types} role="list" aria-label="제보 가능한 자료">
             {report.types.map((type) => (
               <li key={type} className={styles.type}>
                 {type}
@@ -56,7 +56,13 @@ export function Report({ href }: Props) {
             제보 창구 준비 중
           </p>
         ) : (
-          <a className={styles.cta} href={href} target="_blank" rel="noreferrer">
+          <a
+            className={styles.cta}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${report.cta} (새 창)`}
+          >
             <span className={styles.ctaLabel} lang="ko">
               {report.cta}
             </span>

@@ -18,7 +18,13 @@ export function Channels() {
         {channels.items.map((channel, index) => (
           <li key={channel.name} className={styles.item}>
             <Reveal delay={index * 0.06}>
-              <a className={styles.row} href={channel.href} target="_blank" rel="noreferrer">
+              <a
+                className={styles.row}
+                href={channel.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${channel.name} 채널 (새 창)`}
+              >
                 <span className={styles.fill} aria-hidden="true" />
                 <span className={styles.content}>
                   <span className={styles.name}>{channel.name}</span>

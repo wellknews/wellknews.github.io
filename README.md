@@ -20,13 +20,13 @@ npm install
 npm run dev
 ```
 
-| 스크립트          | 설명                                    |
-| ----------------- | --------------------------------------- |
-| `npm run dev`     | 개발 서버                               |
-| `npm run build`   | 배포용 빌드 (`dist/`)                   |
-| `npm run preview` | 빌드 결과 미리보기                      |
-| `npm run check`   | 포맷 · 린트 · 타입 검사 일괄 실행       |
-| `npm run format`  | 코드 포맷 적용                          |
+| 스크립트          | 설명                                     |
+| ----------------- | ---------------------------------------- |
+| `npm run dev`     | 개발 서버                                |
+| `npm run build`   | 배포용 빌드 (`dist/`)                    |
+| `npm run preview` | 빌드 결과 미리보기                       |
+| `npm run check`   | 포맷 · 린트 · 타입 검사 일괄 실행        |
+| `npm run format`  | 코드 포맷 적용                           |
 | `npm run assets`  | 양쪽 브랜드의 로고·아이콘·OG 카드 재생성 |
 
 ## 구조
@@ -53,7 +53,8 @@ public/media/       404·REPORT용 최적화 이미지
 - `assets/logo.svg`가 로고의 단일 원본이다. 화면용 SVG와 PNG, 파비콘, Apple 아이콘은
   `npm run assets`로 생성한다.
 - `assets/og-background.webp`는 OG 카드의 배경판이며 로고와 문구는 생성 스크립트가 정확히
-  합성한다.
+  합성한다. 카피는 프로젝트에 설치된 Pretendard와 Instrument Serif 파일로 직접
+  래스터화하므로 운영체제의 대체 글꼴에 영향을 받지 않는다.
 - `public/media/404-signal.webp`와 `public/media/report-evidence.webp`는 생성형 이미지로 만든
   추상 편집 자산이다. 실제 인물·사건·문서 또는 보도 사진을 나타내지 않는다. 생성 프롬프트와
   제약은 `assets/IMAGEGEN.md`에 기록한다.
@@ -248,6 +249,10 @@ CMS나 에디터를 두지 않고 직접 하드코딩한다. 임시방편이 아
 돌려준다. 그 페이지가 원래 경로를 `?p=`에 실어 `/;/`로 넘기면 라우터가 주소창을
 복원한 뒤 평소처럼 그 화면을 그린다. `?p=`를 달고 다시 404에 도착하면 더 보내지
 않는다 — 무한 리다이렉트를 막는 장치다.
+
+개발 서버에서는 `vite.config.ts`의 `semicolon-dev-fallback`이 `/;/...` 요청에 두 번째
+문서를 제공한다. 브라우저 주소는 그대로 두므로 깊은 주소와 인코딩된 `/%3B/...` 경로를
+배포 환경과 같은 라우터로 바로 검증할 수 있다.
 
 ## 접근성 기준
 
