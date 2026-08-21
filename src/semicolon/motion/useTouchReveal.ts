@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type PointerEvent } from 'react'
 
-import { useViewport } from '../layout/useViewport'
-
 /** 찍은 자리가 반응한 채로 머무는 시간(ms). */
 const HOLD = 1700
 
@@ -17,29 +15,23 @@ type Reveal = {
  * hover에 걸어 둔 반응을 touch에서 그냥 포기하지 않으려고 만든 계기다.
  * 찍으면 반응하고, 손을 떼고 나면 스스로 가라앉는다.
  *
- * 다만 아주 좁은 화면에서는 아무 일도 하지 않는다. 커서가 없는 화면에서 PC의
- * 반응을 전부 되살리려 하면, 각각은 작아도 한 줄 안에 모여 결국 «움직이는
- * 것이 많은 화면»이 된다. 모바일은 hover가 없는 PC가 아니라 다른 매체다.
+ * 화면이 좁다고 이것을 끄지는 않는다. 좁은 화면에서 줄여야 하는 것은 한 번에
+ * 일어나는 일의 수이지 만질 수 있는지 여부가 아니다.
  *
  * 마우스는 hover가 이미 같은 일을 하므로 여기서 다시 처리하지 않는다.
  */
 export function useTouchReveal(): Reveal {
   const [active, setActive] = useState(false)
   const timer = useRef<number | undefined>(undefined)
-  const viewport = useViewport()
 
-  const onPointerDown = useCallback(
-    (event: PointerEvent<Element>) => {
-      if (event.pointerType !== 'touch') return
-      if (viewport === 'compact') return
+  const onPointerDown = useCallback((event: PointerEvent<Element>) => {
+    if (event.pointerType !== 'touch') return
 
-      setActive(true)
+    setActive(true)
 
-      window.clearTimeout(timer.current)
-      timer.current = window.setTimeout(() => setActive(false), HOLD)
-    },
-    [viewport],
-  )
+    window.clearTimeout(timer.current)
+    timer.current = window.setTimeout(() => setActive(false), HOLD)
+  }, [])
 
   useEffect(() => () => window.clearTimeout(timer.current), [])
 

@@ -109,6 +109,19 @@ export function Faces({ front, back }: Props) {
       >
         <span className="visually-hidden">{showBack ? '앞면 보기' : '뒷면 보기'}</span>
       </button>
+
+      {/*
+        지금 어느 쪽을 보고 있는지, 그리고 반대쪽이 있다는 것.
+
+        커서에는 모양이 힌트가 되지만 손가락에는 그런 것이 없다. 뒤집을 수
+        있다는 사실을 모르면 뒷면은 아무도 보지 못한 채로 남으므로, 두 자리
+        숫자만큼의 최소한을 남긴다. 버튼도 화살표도 그리지 않는다.
+      */}
+      <p className={`mono ${styles.count}`} aria-hidden="true">
+        <span data-current={!showBack}>01</span>
+        <span className={styles.slash}>/</span>
+        <span data-current={showBack}>02</span>
+      </p>
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react'
 
-import { useCursor } from '../layout/useCursor'
 import { useViewport } from '../layout/useViewport'
 import { clamp, damp, settled } from '../motion/damp'
 import { useReducedMotion } from '../motion/useReducedMotion'
@@ -34,6 +33,15 @@ const SCROLL_REFERENCE = 900
 const STRETCH_SCALE = 0.05
 const STRETCH_DRAG = 2.5
 
+/**
+ * 좁은 판면에서 움직임의 양을 줄이는 비율.
+ *
+ * 반응을 없애지는 않는다. 같은 폭으로 밀리면 넓은 화면에서 «공간의 온도»였던
+ * 것이 좁은 화면에서는 화면 전체가 흔들리는 일이 되기 때문에, 일어나는 일은
+ * 그대로 두고 그 크기만 절반 아래로 낮춘다.
+ */
+const COMPACT_DAMPING = 0.4
+
 type Vec = { x: number; y: number }
 
 /**
@@ -54,7 +62,6 @@ export function Field() {
   const ref = useRef<HTMLDivElement>(null)
   const reduced = useReducedMotion()
   const viewport = useViewport()
-  const cursor = useCursor()
 
   /* 커서가 지정한 목표. 손을 떼도 제자리로 돌아오지 않는다 — 밀린 채로 멈춘다. */
   const target = useRef<Vec>({ x: 0, y: 0 })
@@ -66,43 +73,53 @@ export function Field() {
   const stretchTarget = useRef(0)
   const lastScroll = useRef(0)
 
+  const damping = viewport === 'compact' ? COMPACT_DAMPING : 1
+
   const wake = useSettling(
-    useCallback((dt: number) => {
-      const element = ref.current
+    useCallback(
+      (dt: number) => {
+        const element = ref.current
 
-      if (!element) return false
+        if (!element) return false
 
-      const to = target.current
+        const to = target.current
 
-      mint.current.x = damp(mint.current.x, to.x, RATE_MINT, dt)
-      mint.current.y = damp(mint.current.y, to.y, RATE_MINT, dt)
-      pink.current.x = damp(pink.current.x, to.x, RATE_PINK, dt)
-      pink.current.y = damp(pink.current.y, to.y, RATE_PINK, dt)
+        mint.current.x = damp(mint.current.x, to.x, RATE_MINT, dt)
+        mint.current.y = damp(mint.current.y, to.y, RATE_MINT, dt)
+        pink.current.x = damp(pink.current.x, to.x, RATE_PINK, dt)
+        pink.current.y = damp(pink.current.y, to.y, RATE_PINK, dt)
 
-      stretchTarget.current = damp(stretchTarget.current, 0, RATE_RELEASE, dt)
-      stretch.current = damp(stretch.current, stretchTarget.current, RATE_STRETCH, dt)
+        stretchTarget.current = damp(stretchTarget.current, 0, RATE_RELEASE, dt)
+        stretch.current = damp(stretch.current, stretchTarget.current, RATE_STRETCH, dt)
 
-      const drag = stretch.current * STRETCH_DRAG
+        const drag = stretch.current * STRETCH_DRAG * damping
+        const mintTravel = TRAVEL_MINT * damping
+        const pinkTravel = TRAVEL_PINK * damping
 
-      element.style.setProperty('--mint-x', (mint.current.x * TRAVEL_MINT).toFixed(3))
-      element.style.setProperty('--mint-y', (mint.current.y * TRAVEL_MINT - drag).toFixed(3))
-      element.style.setProperty('--pink-x', (pink.current.x * TRAVEL_PINK).toFixed(3))
-      element.style.setProperty('--pink-y', (pink.current.y * TRAVEL_PINK + drag).toFixed(3))
-      element.style.setProperty('--field-scale', (1 + stretch.current * STRETCH_SCALE).toFixed(4))
+        element.style.setProperty('--mint-x', (mint.current.x * mintTravel).toFixed(3))
+        element.style.setProperty('--mint-y', (mint.current.y * mintTravel - drag).toFixed(3))
+        element.style.setProperty('--pink-x', (pink.current.x * pinkTravel).toFixed(3))
+        element.style.setProperty('--pink-y', (pink.current.y * pinkTravel + drag).toFixed(3))
+        element.style.setProperty(
+          '--field-scale',
+          (1 + stretch.current * STRETCH_SCALE * damping).toFixed(4),
+        )
 
-      const moving =
-        !settled(mint.current.x, to.x) ||
-        !settled(mint.current.y, to.y) ||
-        !settled(pink.current.x, to.x) ||
-        !settled(pink.current.y, to.y) ||
-        !settled(stretch.current, stretchTarget.current) ||
-        !settled(stretchTarget.current, 0)
+        const moving =
+          !settled(mint.current.x, to.x) ||
+          !settled(mint.current.y, to.y) ||
+          !settled(pink.current.x, to.x) ||
+          !settled(pink.current.y, to.y) ||
+          !settled(stretch.current, stretchTarget.current) ||
+          !settled(stretchTarget.current, 0)
 
-      // 가라앉고 나면 합성 레이어를 붙들고 있을 이유가 없다.
-      if (!moving) element.dataset.active = 'false'
+        // 가라앉고 나면 합성 레이어를 붙들고 있을 이유가 없다.
+        if (!moving) element.dataset.active = 'false'
 
-      return moving
-    }, []),
+        return moving
+      },
+      [damping],
+    ),
   )
 
   const nudge = useCallback(() => {
@@ -114,16 +131,8 @@ export function Field() {
   }, [wake])
 
   useEffect(() => {
-    /*
-     * 움직임을 줄이기로 한 사람에게는 리스너조차 붙이지 않는다.
-     *
-     * 커서가 없으면 색을 밀어낼 것도 없다. 그리고 좁은 판면에서는 눌렸다
-     * 늘어나는 색면이 «공간의 온도»가 아니라 화면 전체가 흔들리는 일이 된다.
-     * 색은 그대로 두고 동작만 지운다 — 모바일에서 이 공간의 정체성은
-     * 반응이 아니라 잔상이다.
-     */
+    // 움직임을 줄이기로 한 사람에게만 리스너를 붙이지 않는다.
     if (reduced) return
-    if (!cursor && viewport === 'compact') return
 
     const handleMove = (event: PointerEvent) => {
       const nx = clamp((event.clientX / window.innerWidth - 0.5) * 2, -1, 1)
@@ -147,15 +156,18 @@ export function Field() {
 
     lastScroll.current = window.scrollY
 
-    /* 전부 passive다. 네이티브 스크롤과 터치는 이 층이 만지지 않는다. */
-    if (cursor) window.addEventListener('pointermove', handleMove, { passive: true })
-    if (viewport !== 'compact') window.addEventListener('scroll', handleScroll, { passive: true })
+    /*
+     * 전부 passive다. 네이티브 스크롤과 터치는 이 층이 만지지 않는다.
+     * 손가락으로 끌 때도 pointermove가 오므로 마우스와 같은 규칙으로 반응한다.
+     */
+    window.addEventListener('pointermove', handleMove, { passive: true })
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('pointermove', handleMove)
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [cursor, nudge, reduced, viewport])
+  }, [nudge, reduced])
 
   return (
     <div className={styles.field} ref={ref} aria-hidden="true">

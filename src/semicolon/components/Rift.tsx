@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, type PointerEvent } from 'react'
 
 import { semicolon } from '../content/site'
-import { useCursor } from '../layout/useCursor'
 import { clamp, damp, settled } from '../motion/damp'
 import { useReducedMotion } from '../motion/useReducedMotion'
 import { useSettling } from '../motion/useSettling'
@@ -63,7 +62,6 @@ export function Rift() {
   const pinkGradientRef = useRef<SVGLinearGradientElement>(null)
 
   const reduced = useReducedMotion()
-  const cursor = useCursor()
 
   const size = useRef({ w: 0, h: 0 })
   const center = useRef(0)
@@ -261,16 +259,15 @@ export function Rift() {
   )
 
   /*
-   * 선이 정지하는 조건.
+   * 선이 정지하는 조건은 하나뿐이다.
    *
    * 움직임을 줄이기로 한 사람에게는 선이 닫힌 채로 있고 ';'는 처음부터 온전한
    * 잉크를 갖는다. 다가가야 보이는 기호가 되면 안 되기 때문이다.
    *
-   * 커서가 없는 화면도 같다. 손가락으로 열리기는 하지만, 그러려면 열 수 있다는
-   * 것을 먼저 알아야 한다. 커서 모양이 그 말을 대신하고 있었으므로 손가락에는
-   * 전해질 방법이 없다 — 알 수 없는 장치는 장치가 아니라 장식이다.
+   * 손가락에는 커서 모양 같은 힌트가 없지만, 그렇다고 판을 죽이지는 않는다.
+   * 찍어 보는 사람에게 아무 일도 일어나지 않는 것보다는 찍으면 열리는 편이 낫다.
    */
-  const still = reduced || !cursor
+  const still = reduced
 
   return (
     <div
