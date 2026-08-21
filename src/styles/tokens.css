@@ -34,9 +34,6 @@
   --text-label: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem); /* 12 → 13px */
   --text-body: clamp(0.9375rem, 0.9rem + 0.25vw, 1.0625rem); /* 15 → 17px */
   --text-lead: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
-  --text-h2: clamp(2.25rem, 1.4rem + 4.2vw, 5.5rem);
-  --text-h1: clamp(3rem, 1rem + 9.5vw, 9rem);
-  --text-jumbo: clamp(2.5rem, 0.8rem + 8vw, 7rem);
 
   --tracking-label: 0.16em;
   --tracking-display: -0.03em;

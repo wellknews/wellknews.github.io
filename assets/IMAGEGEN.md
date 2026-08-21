@@ -23,7 +23,11 @@ a real news event, no legible newspaper copy, no text, no numbers, no logos, no 
 Avoid: cyberpunk neon, colorful glitch effects, busy collage, fake headlines, stock-photo look
 ```
 
-## `assets/og-background.webp`
+## Initial OG background — superseded (`assets/og-background.webp`)
+
+이 첫 배경판은 현재 빌드에서 사용하지 않는다. 생성 이력과 회귀 비교를 위해 원본만
+보존하며, 현행 공유 카드는 아래 `hero-newsroom.webp`에서 파생한
+`assets/og-background-v2.webp`를 사용한다.
 
 ```text
 Use case: stylized-concept

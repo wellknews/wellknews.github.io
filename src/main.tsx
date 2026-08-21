@@ -9,7 +9,7 @@ import { createRoot } from 'react-dom/client'
  */
 import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css'
 import '@fontsource/instrument-serif/400.css'
-import '@fontsource/ibm-plex-mono/400.css'
+import '@fontsource/ibm-plex-mono/latin-400.css'
 
 /* Lenis 기본 스타일 */
 import 'lenis/dist/lenis.css'

@@ -3,7 +3,6 @@
   --color-text-secondary: var(--color-ink-secondary);
   --color-text-muted: var(--color-ink-muted);
   --color-line: var(--color-ink-line);
-  --color-line-strong: rgb(17 17 15 / 0.42);
 
   background: var(--color-paper);
   color: var(--color-ink);
@@ -46,14 +45,14 @@
   align-items: stretch;
 }
 
-.visual,
-.visual figure {
-  min-height: 100%;
+.visual {
+  align-self: center;
 }
 
 .visual figure {
   position: relative;
-  aspect-ratio: 4 / 3;
+  width: 100%;
+  aspect-ratio: 16 / 7;
   overflow: hidden;
   background: var(--color-bg);
 }
@@ -62,10 +61,10 @@
   width: 100%;
   height: 100%;
   max-width: none;
+  /* 16:7 원본 비율을 데스크톱 프레임에서도 보존해 양끝의 제보 매체가 잘리지 않게 한다. */
   object-fit: cover;
-  object-position: 50% center;
+  object-position: center;
   filter: saturate(0.72) contrast(1.06);
-  transform: scale(1.01);
 }
 
 .rail {
@@ -209,10 +208,6 @@
 
   .visual figure {
     aspect-ratio: 3 / 2;
-  }
-
-  .visual img {
-    object-position: 48% center;
   }
 
   .rail {
