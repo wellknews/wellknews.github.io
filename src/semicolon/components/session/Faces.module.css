@@ -1,34 +1,44 @@
 /*
- * 기본은 두 장을 위아래로 놓는 것이다.
+ * 앞면과 뒷면을 같은 자리에 겹치고 뒤집어 본다.
  *
- * 뒤집는 장치는 커서가 있는 화면에서만 성립한다. `cursor: ew-resize`가
- * «여기서 무언가 할 수 있다»고 알려 주기 때문인데, 손가락에는 그 힌트가 없다.
- * 눌러야 뒤집힌다는 사실을 알아차릴 이유가 없으면 그것은 장치가 아니라
- * 그냥 사진이고, 뒷면은 아무도 보지 못한 채로 남는다.
+ * 마우스는 판 위를 가로지르면 반대쪽이 보이고, 손가락은 톡 누르거나 좌우로 민다.
+ * 화면에는 버튼을 그리지 않지만 판 전체를 덮는 진짜 버튼이 있어서 키보드와
+ * 스크린리더에도 평범한 버튼으로 보인다.
  *
- * 그래서 좁은 화면에서는 앞면과 뒷면을 담담하게 순서대로 놓는다.
- * 움직임을 줄이기로 한 사람이 보는 화면도 같다.
+ * 손가락에는 커서 모양 같은 힌트가 없으므로 «01 / 02»만 남겨 반대쪽이 있다는
+ * 사실을 알린다. 그 두 자리가 없으면 뒷면은 아무도 보지 못한 채로 남는다.
  */
 .faces {
   position: relative;
   display: grid;
-  row-gap: clamp(20px, 5vw, 40px);
+  grid-template-areas: 'stack';
 }
 
 .face {
+  grid-area: stack;
   display: block;
   width: 100%;
   height: auto;
+  transition: opacity var(--dur-base) var(--ease-out);
 }
 
-/*
- * 판 전체를 덮는 버튼.
- *
- * 두 장이 겹쳐 있을 때만 존재한다. 순서대로 놓인 화면에서는 뒤집을 것이
- * 없으므로 이 버튼도 없다.
- */
+/* 뒤집는 것이지 넘기는 것이 아니다. 자리를 옮기지 않고 잉크만 바꾼다. */
+.reverse {
+  opacity: 0;
+}
+
+.faces[data-back='true'] .face {
+  opacity: 0;
+}
+
+.faces[data-back='true'] .reverse {
+  opacity: 1;
+}
+
+/* 판 전체를 덮는 버튼. 화면에는 아무것도 더하지 않는다. */
 .flip {
-  display: none;
+  position: absolute;
+  inset: 0;
   appearance: none;
   border: 0;
   padding: 0;
@@ -43,39 +53,42 @@
   outline-offset: 6px;
 }
 
+/* 지금 보고 있는 쪽과 반대쪽. 숫자 두 개와 빗금 하나가 전부다. */
+.count {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: clamp(14px, 2.4vw, 22px);
+  color: var(--color-text-muted);
+}
+
+.count span[data-current='true'] {
+  color: var(--color-text);
+}
+
+.slash {
+  opacity: 0.5;
+}
+
 /*
- * 여기서부터가 뒤집는 장치다.
- *
- * 폭이 아니라 커서 유무로 나눈다. 900px이 넘는 태블릿에도 커서는 없고,
- * 그곳의 사정은 휴대폰과 같다.
+ * 움직임을 줄이기로 한 사람에게는 두 장이 위아래로 놓인다.
+ * 뒤집는 동작 없이도 앞뒤를 다 볼 수 있으므로 버튼과 숫자를 치운다.
  */
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: reduce) {
   .faces {
-    grid-template-areas: 'stack';
-    row-gap: 0;
+    grid-template-areas: none;
+    row-gap: clamp(20px, 4vw, 40px);
   }
 
-  .face {
-    grid-area: stack;
-    transition: opacity var(--dur-base) var(--ease-out);
-  }
-
-  /* 뒤집는 것이지 넘기는 것이 아니다. 자리를 옮기지 않고 잉크만 바꾼다. */
+  .face,
   .reverse {
-    opacity: 0;
-  }
-
-  .faces[data-back='true'] .face {
-    opacity: 0;
-  }
-
-  .faces[data-back='true'] .reverse {
+    grid-area: auto;
     opacity: 1;
+    transition: none;
   }
 
-  .flip {
-    display: block;
-    position: absolute;
-    inset: 0;
+  .flip,
+  .count {
+    display: none;
   }
 }
