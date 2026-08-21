@@ -1,0 +1,27 @@
+.category {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text);
+}
+
+/*
+ * 축의 온도. 핑크는 CARE, 블루는 CURIOSITY다.
+ * 성별의 의미가 아니라는 것이 이 프로젝트의 전제이므로(§21), 색이 사람이 아니라
+ * 태도를 가리키도록 라벨 옆의 점 하나에만 쓴다.
+ */
+.category::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mama-pink);
+}
+
+.category[data-axis='curiosity']::before {
+  background: var(--boy-blue);
+}
+
+.type {
+  color: var(--color-text-muted);
+}

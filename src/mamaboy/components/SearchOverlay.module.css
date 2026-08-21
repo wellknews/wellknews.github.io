@@ -1,0 +1,143 @@
+/*
+ * <dialog>의 기본 모습(가운데 정렬된 상자, 테두리, 좁은 최대 폭)을 전부 지우고
+ * 화면을 덮는 판면으로 되돌린다. 이 요소가 상자로 보이면 안 된다.
+ */
+.overlay[open] {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+  backdrop-filter: blur(24px) saturate(1.2);
+  color: var(--color-text);
+  animation: overlay-in var(--dur-base) var(--ease-touch) both;
+}
+
+/* 뒤쪽 판면을 어둡게 덮지 않는다. 이 공간은 어두워지지 않는다. */
+.overlay::backdrop {
+  background: color-mix(in srgb, var(--color-bg) 70%, transparent);
+}
+
+/* 위에서 아래로 짧게 펼쳐진다. 눌렀던 자리에서 자라 나오는 인상. */
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.panel {
+  padding-block: clamp(18px, 3vw, 40px) clamp(40px, 8vw, 96px);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-line-strong);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  border: none;
+  background: none;
+  color: var(--color-text);
+  font-size: clamp(1.375rem, 1rem + 1.8vw, 2.25rem);
+  font-weight: var(--weight-headline);
+  letter-spacing: var(--tracking-headline);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+  font-weight: var(--weight-body);
+}
+
+.input:focus {
+  outline: none;
+}
+
+/* 검색어를 지우는 브라우저 기본 버튼은 이 판면과 어울리지 않는다. */
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-text-muted);
+  transition: color var(--dur-touch) var(--ease-touch);
+}
+
+.close:hover,
+.close:focus-visible {
+  color: var(--color-text);
+}
+
+.scope {
+  margin-top: 12px;
+}
+
+.empty {
+  margin-top: clamp(32px, 6vw, 64px);
+  color: var(--color-text-secondary);
+  font-size: var(--text-lead);
+}
+
+.results {
+  display: grid;
+  margin-top: clamp(20px, 3vw, 36px);
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: baseline;
+  min-height: 56px;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--color-line);
+  transition: background-color var(--dur-touch) linear;
+}
+
+.resultCategory {
+  color: var(--color-text-muted);
+}
+
+.resultTitle {
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+  line-height: 1.4;
+}
+
+.resultMeta {
+  text-align: right;
+}
+
+@media (hover: hover) {
+  .result:hover {
+    background: color-mix(in srgb, var(--mama-pink) 12%, transparent);
+  }
+}
+
+@media (max-width: 639px) {
+  .result {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .resultMeta {
+    text-align: left;
+  }
+}

@@ -1,0 +1,17 @@
+.note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border-radius: var(--radius-tag);
+  background: color-mix(in srgb, var(--boy-blue) 26%, transparent);
+}
+
+.badge {
+  color: var(--color-text);
+}
+
+.text {
+  color: var(--color-text-secondary);
+}

@@ -9,22 +9,35 @@
     <meta name="theme-color" content="#000000" />
 
     <!--
-      /; 아래의 깊은 주소는 여기서 되돌려 보낸다.
+      하위 프로젝트의 깊은 주소는 여기서 되돌려 보낸다.
 
-      GitHub Pages에는 `/;/session/...`에 해당하는 파일이 없어 이 페이지가 뜬다.
-      원래 경로를 ?p=에 실어 세미콜론 문서로 넘기면, 그쪽 라우터가 주소창을
-      복원한 뒤 평소처럼 그 페이지를 그린다.
+      GitHub Pages에는 `/;/session/...`이나 `/mamaboy/article/...`에 해당하는
+      파일이 없어 이 페이지가 뜬다. 원래 경로를 ?p=에 실어 그 프로젝트의 문서로
+      넘기면, 그쪽 라우터가 주소창을 복원한 뒤 평소처럼 그 페이지를 그린다.
 
-      이미 ?p=를 달고 다시 여기 도착했다면 세미콜론 문서 자체를 찾지 못한
+      이미 ?p=를 달고 다시 여기 도착했다면 프로젝트 문서 자체를 찾지 못한
       것이므로 더 보내지 않는다. 무한 리다이렉트를 막는 장치다.
     -->
     <script>
       ;(function () {
         var path = location.pathname
-        var semicolon = path.indexOf('/;') === 0 || path.toLowerCase().indexOf('/%3b') === 0
+        var lower = path.toLowerCase()
 
-        if (semicolon && location.search.indexOf('p=') === -1) {
-          location.replace('/;/?p=' + encodeURIComponent(path + location.search + location.hash))
+        // 세미콜론은 일부 클라이언트가 %3B로 인코딩해 보내므로 두 가지를 함께 본다.
+        var projects = [
+          { home: '/;/', hit: path.indexOf('/;') === 0 || lower.indexOf('/%3b') === 0 },
+          { home: '/mamaboy/', hit: lower.indexOf('/mamaboy/') === 0 },
+        ]
+
+        if (location.search.indexOf('p=') !== -1) return
+
+        for (var i = 0; i < projects.length; i++) {
+          if (projects[i].hit) {
+            location.replace(
+              projects[i].home + '?p=' + encodeURIComponent(path + location.search + location.hash),
+            )
+            return
+          }
         }
       })()
     </script>
