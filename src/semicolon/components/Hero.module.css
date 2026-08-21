@@ -40,7 +40,7 @@
   color: var(--color-text-muted);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 599px) {
   .inner {
     min-height: min(82svh, 680px);
   }

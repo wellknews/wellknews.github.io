@@ -66,3 +66,22 @@
     animation-name: none;
   }
 }
+
+/*
+ * 작은 판면에서는 괘선을 걷어낸다.
+ *
+ * 넓은 지면에서 이 선은 좌우를 나누는 구조였다. 한 줄뿐인 화면에서는
+ * «여기 또 구역이 있습니다»라는 표시가 되어 구획만 늘린다. 두 개념 사이에
+ * 무언가 있었다는 사실은 기호 하나로 충분하다.
+ */
+@media (max-width: 599px) {
+  .rule {
+    display: none;
+  }
+
+  .seam {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-block: clamp(20px, 6vw, 32px);
+  }
+}

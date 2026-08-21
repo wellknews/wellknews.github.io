@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react'
 
+import { useCursor } from '../layout/useCursor'
+import { useViewport } from '../layout/useViewport'
 import { clamp, damp, settled } from '../motion/damp'
 import { useReducedMotion } from '../motion/useReducedMotion'
 import { useSettling } from '../motion/useSettling'
@@ -51,6 +53,8 @@ type Vec = { x: number; y: number }
 export function Field() {
   const ref = useRef<HTMLDivElement>(null)
   const reduced = useReducedMotion()
+  const viewport = useViewport()
+  const cursor = useCursor()
 
   /* 커서가 지정한 목표. 손을 떼도 제자리로 돌아오지 않는다 — 밀린 채로 멈춘다. */
   const target = useRef<Vec>({ x: 0, y: 0 })
@@ -110,8 +114,16 @@ export function Field() {
   }, [wake])
 
   useEffect(() => {
-    // 움직임을 줄이기로 한 사람에게는 리스너조차 붙이지 않는다.
+    /*
+     * 움직임을 줄이기로 한 사람에게는 리스너조차 붙이지 않는다.
+     *
+     * 커서가 없으면 색을 밀어낼 것도 없다. 그리고 좁은 판면에서는 눌렸다
+     * 늘어나는 색면이 «공간의 온도»가 아니라 화면 전체가 흔들리는 일이 된다.
+     * 색은 그대로 두고 동작만 지운다 — 모바일에서 이 공간의 정체성은
+     * 반응이 아니라 잔상이다.
+     */
     if (reduced) return
+    if (!cursor && viewport === 'compact') return
 
     const handleMove = (event: PointerEvent) => {
       const nx = clamp((event.clientX / window.innerWidth - 0.5) * 2, -1, 1)
@@ -136,14 +148,14 @@ export function Field() {
     lastScroll.current = window.scrollY
 
     /* 전부 passive다. 네이티브 스크롤과 터치는 이 층이 만지지 않는다. */
-    window.addEventListener('pointermove', handleMove, { passive: true })
-    window.addEventListener('scroll', handleScroll, { passive: true })
+    if (cursor) window.addEventListener('pointermove', handleMove, { passive: true })
+    if (viewport !== 'compact') window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('pointermove', handleMove)
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [nudge, reduced])
+  }, [cursor, nudge, reduced, viewport])
 
   return (
     <div className={styles.field} ref={ref} aria-hidden="true">

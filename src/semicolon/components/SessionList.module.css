@@ -179,7 +179,7 @@
   transform: translateX(6px);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
   .row {
     grid-template-columns: minmax(0, 1fr) auto auto;
     row-gap: 10px;
@@ -191,5 +191,61 @@
 
   .meta {
     flex-direction: row;
+  }
+}
+
+/*
+ * 작은 판면의 한 행.
+ *
+ * 넓은 지면에서 이 행에는 날짜·종류·제목·발췌·이미지 조각·화살표·벽·모이는
+ * 색면이 함께 있었다. 각각은 작지만 한 줄 안에 다 모이면 목록이 아니라
+ * 카드가 된다.
+ *
+ * 여기 남는 것은 세 가지뿐이다 — 언제, 무엇, 그리고 사진 한 장.
+ * 나머지는 들어가서 발견하면 된다.
+ */
+@media (max-width: 599px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: clamp(14px, 4vw, 20px);
+    padding-inline: 0;
+    padding-block: clamp(20px, 6vw, 32px);
+  }
+
+  /* 종류는 제목이 이미 말한다. 남기는 것은 언제뿐이다. */
+  .meta li:not(:first-child) {
+    display: none;
+  }
+
+  /* 목록에서 무엇을 볼지 미리 설명하지 않는다. */
+  .excerpt {
+    display: none;
+  }
+
+  /* 다른 주소로 이어진다는 것은 행 전체가 이미 말한다. */
+  .arrow {
+    display: none;
+  }
+
+  /* 색이 모이는 것도, 부딪히는 벽도 좁은 화면에서는 구획만 늘린다. */
+  .item::before,
+  .item::after {
+    display: none;
+  }
+
+  /*
+   * 조각이 아니라 사진 한 장.
+   *
+   * 확대해 잘라 놓은 조각은 넓은 지면에서 «무언가 있다»는 신호였다.
+   * 한 줄뿐인 화면에서는 그 자리가 곧 이 기록의 얼굴이라, 잘라내는 대신
+   * 정직하게 전부 보여 주는 편이 낫다.
+   */
+  .glimpse {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-size: contain;
+    background-position: center;
+    opacity: 1;
+    filter: none;
   }
 }
