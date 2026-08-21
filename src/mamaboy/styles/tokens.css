@@ -1,0 +1,125 @@
+/**
+ * MAMABOY의 디자인 토큰.
+ *
+ * 이름은 다른 두 공간(WELLKNEWS, SEMICOLON)과 겹치지만 값은 전부 다르다. 세 공간은
+ * 각자 다른 문서로 빌드되므로 한 화면에서 섞이지 않는다. 이름을 맞춰 두는 이유는
+ * 색을 갖지 않는 reset.css를 셋이 그대로 공유하기 위해서다.
+ *
+ * 이 파일 밖에서는 색상값·시간·반경을 직접 쓰지 않는다.
+ */
+
+:root {
+  /* ---------- Color ----------
+   * 1차 팔레트는 네 가지다. 괄호 안은 --color-bg 대비 명암비.
+   *
+   * PINK와 BLUE를 성별의 의미로 쓰지 않는다. 둘은 이 지면의 두 가지 온도이고,
+   * 넓은 면을 칠하는 데 쓰지 않는다 — 포인트와 아주 옅은 gradient에서만 쓴다.
+   */
+  --milk: #f7f4ee;
+  --ink: #191817;
+  --mama-pink: #f0b8c8;
+  --boy-blue: #bfd8ed;
+
+  --color-bg: var(--milk);
+  /* 젤·코팅면처럼 바탕보다 반 톤 밝은 표면. 카드가 아니라 '표면'으로 쓴다. */
+  --color-surface: #fffdf8;
+  --color-text: var(--ink); /* 16.0:1 */
+  --color-text-secondary: #4a4744; /* 8.4:1 — 요약문 */
+  --color-text-muted: #5e5a55; /* 7.0:1 — 라벨·출처·시간 */
+  --color-line: rgb(25 24 23 / 0.12);
+  --color-line-strong: rgb(25 24 23 / 0.3);
+
+  /*
+   * 온도.
+   *
+   * CARE 쪽 글에는 핑크, CURIOSITY 쪽 글에는 블루가 아주 옅게 배어 있다.
+   * 카테고리를 바꾸면 카드가 날아다니는 대신 지면 전체의 이 온도가 바뀐다(§39).
+   * 실제 농도는 components/Temperature가 정한다 — 여기서는 재료만 둔다.
+   */
+  /* 강조 잉크. 핑크·블루는 글자 위에 얹기에 너무 밝아 어두운 짝을 따로 둔다. */
+  --accent: #b4526e; /* 5.0:1 — 큰 글자와 아이콘에만 */
+  --accent-deep: #8e3d55; /* 7.4:1 — 본문 크기 링크 */
+  --select: rgb(240 184 200 / 0.55);
+
+  /* ---------- Gloss ----------
+   * 이 공간의 소재는 종이가 아니라 피부·젤·코팅면이다(§22).
+   * 반사광은 늘 흰빛 한 겹과 아주 옅은 그림자 한 겹으로만 만든다.
+   */
+  --gloss-high: rgb(255 255 255 / 0.72);
+  --gloss-low: rgb(255 255 255 / 0);
+  --shadow-soft: 0 1px 2px rgb(25 24 23 / 0.04), 0 8px 24px rgb(25 24 23 / 0.06);
+  --shadow-press: 0 1px 1px rgb(25 24 23 / 0.06), 0 3px 10px rgb(25 24 23 / 0.05);
+
+  /* ---------- Typography ----------
+   * 로고는 서체가 아니라 그려 둔 레터링이다(components/Wordmark).
+   * 화면의 글자는 한 목소리로 통일하고, 크기·무게·자간으로만 위계를 만든다.
+   * 로고의 장난기를 본문까지 반복하지 않는다(§24).
+   */
+  --font-sans:
+    'Schibsted Grotesk Variable', 'Noto Sans KR Variable', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
+
+  /* 유동 타입 스케일 — 최소값은 접근성 하한(12px)을 넘긴다. */
+  --text-label: clamp(0.6875rem, 0.66rem + 0.12vw, 0.75rem); /* 11 → 12px */
+  --text-meta: clamp(0.75rem, 0.72rem + 0.14vw, 0.8125rem); /* 12 → 13px */
+  --text-body: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem); /* 16 → 17px */
+  --text-lead: clamp(1.125rem, 1.02rem + 0.5vw, 1.375rem);
+  --text-brief: clamp(1.0625rem, 0.98rem + 0.4vw, 1.25rem);
+  --text-standard: clamp(1.375rem, 1.15rem + 1.1vw, 1.875rem);
+  --text-feature: clamp(2.25rem, 1.4rem + 3.8vw, 4.25rem);
+  --text-page: clamp(1.875rem, 1.3rem + 2.6vw, 3.25rem);
+
+  --weight-body: 400;
+  --weight-medium: 500;
+  --weight-headline: 600;
+  --weight-display: 700;
+
+  --tracking-label: 0.16em;
+  --tracking-meta: 0.02em;
+  --tracking-headline: -0.02em;
+  --tracking-feature: -0.035em;
+
+  --measure: 38em;
+
+  /* ---------- Radius ----------
+   * 곡선은 허용하지만 모든 요소를 둥근 카드로 만들지 않는다(§23).
+   * 반경은 이미지 마스크·버튼·태그, 세 자리에만 쓴다. Rounded ≠ Card UI.
+   */
+  --radius-mask: clamp(16px, 2vw, 26px);
+  --radius-pill: 999px;
+  --radius-tag: 8px;
+
+  /* ---------- Layout ---------- */
+  --page-x: clamp(20px, 4.5vw, 64px);
+  --content-max: 1320px;
+  --header-h: 60px;
+
+  --space-section: clamp(56px, 7vw, 104px);
+  --space-block: clamp(28px, 4vw, 56px);
+  --gap-feed: clamp(28px, 3.4vw, 52px);
+
+  /* ---------- Motion ----------
+   * «Interaction as Touch». 움직임은 물체를 만지는 감각이지 의미의 설명이 아니다.
+   * 120–300ms의 microinteraction만 쓴다. 길게 흐르는 연출은 두지 않는다(§40).
+   */
+  --ease-touch: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-soft: cubic-bezier(0.32, 0.72, 0, 1);
+
+  --dur-touch: 120ms;
+  --dur-base: 200ms;
+  --dur-soft: 300ms;
+
+  /* ---------- Z-index scale ---------- */
+  --z-temp: -1;
+  --z-content: 1;
+  --z-header: 50;
+  --z-overlay: 80;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-touch: 1ms;
+    --dur-base: 1ms;
+    --dur-soft: 1ms;
+  }
+}

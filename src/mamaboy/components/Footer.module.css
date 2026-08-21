@@ -1,0 +1,45 @@
+.footer {
+  margin-top: var(--space-section);
+  border-top: 1px solid var(--color-line);
+}
+
+.inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 64px);
+  flex-wrap: wrap;
+  padding-block: clamp(28px, 4vw, 56px) clamp(36px, 5vw, 72px);
+}
+
+/*
+ * 브랜드를 설명하는 카피는 두지 않지만, 이 한 문장만은 남긴다.
+ * 지면을 다 읽고 내려온 자리에서 읽히는 것이 이 문장의 제자리다.
+ */
+.belief {
+  max-width: 22ch;
+  font-size: var(--text-lead);
+  font-weight: var(--weight-medium);
+  line-height: 1.35;
+  letter-spacing: var(--tracking-headline);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 36px);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-text-muted);
+  transition: color var(--dur-touch) var(--ease-touch);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    color: var(--color-text);
+  }
+}

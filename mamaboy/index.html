@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>mamaboy — CARE + CURIOSITY</title>
+    <meta
+      name="description"
+      content="나이는 먹는다. 늙는 방식은 고른다. 스킨케어·웰니스·노화 연구와 장난감·게임·새로운 문화를 한 지면에서 큐레이션하는 매거진."
+    />
+    <link rel="canonical" href="https://wellknews.github.io/mamaboy/" />
+
+    <!-- 이 공간의 바탕은 우윳빛이다. 브라우저 UI도 같은 색으로 맞춘다. -->
+    <meta name="theme-color" content="#f7f4ee" />
+    <meta name="color-scheme" content="light" />
+
+    <link rel="icon" href="/mamaboy.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/mamaboy-touch.png" />
+
+    <!--
+      첫 화면의 큰 이미지는 그날의 FEATURE 기사에서 온다. 어떤 그림이 올지
+      빌드 시점에 알 수 없으므로 preload 하지 않는다. 대신 FEATURE만 즉시
+      로드하고 나머지 이미지는 전부 지연 로드한다(§36).
+    -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="mamaboy" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:url" content="https://wellknews.github.io/mamaboy/" />
+    <meta property="og:title" content="mamaboy — CARE + CURIOSITY" />
+    <meta property="og:description" content="나이는 먹는다. 늙는 방식은 고른다." />
+    <meta property="og:image" content="https://wellknews.github.io/mamaboy-og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="우윳빛 바탕 위에 놓인 mamaboy 레터링과 CARE + CURIOSITY"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 24px; color: #191817; font-family: sans-serif">
+        mamaboy는 스킨케어·웰니스·노화 연구와 장난감·게임·새로운 문화를 함께 큐레이션하는
+        매거진입니다. 이 페이지를 보려면 자바스크립트를 켜주세요.
+        <a href="/" style="color: inherit">WELLKNEWS로 돌아가기</a>
+      </p>
+    </noscript>
+    <script type="module" src="/src/mamaboy/main.tsx"></script>
+  </body>
+</html>

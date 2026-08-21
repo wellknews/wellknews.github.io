@@ -1,0 +1,51 @@
+.field {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-temp);
+  pointer-events: none;
+}
+
+.care,
+.curiosity {
+  position: absolute;
+  inset: -30%;
+  transition: opacity var(--dur-soft) var(--ease-soft);
+}
+
+.care {
+  background: radial-gradient(
+    58vw 58vw at 12% 0%,
+    color-mix(in srgb, var(--mama-pink) 72%, transparent),
+    transparent 70%
+  );
+}
+
+.curiosity {
+  background: radial-gradient(
+    62vw 62vw at 88% 22%,
+    color-mix(in srgb, var(--boy-blue) 72%, transparent),
+    transparent 70%
+  );
+}
+
+/* 홈은 둘의 공존이 곧 정체성이므로 어느 쪽도 물러나지 않는다(§9). */
+.field[data-axis='both'] .care,
+.field[data-axis='both'] .curiosity {
+  opacity: 0.5;
+}
+
+.field[data-axis='care'] .care {
+  opacity: 1;
+}
+
+.field[data-axis='care'] .curiosity {
+  opacity: 0.1;
+}
+
+.field[data-axis='curiosity'] .care {
+  opacity: 0.1;
+}
+
+.field[data-axis='curiosity'] .curiosity {
+  opacity: 1;
+}

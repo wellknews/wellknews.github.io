@@ -1,0 +1,408 @@
+/**
+ * 지면을 검증하기 위한 예시 데이터(Phase 2).
+ *
+ * RSS를 붙이기 전에 디자인을 먼저 완성한다. 기능부터 만들면 이 공간은 높은
+ * 확률로 «예쁜 RSS 리더»에서 멈추기 때문이다(§46).
+ *
+ * 여기 있는 출처는 전부 실재하지 않는 이름이고, 본문도 이 파일에서 지어낸
+ * 것이다. 실제 매체의 이름을 빌려 오지 않는다 — 없는 글을 진짜 매체의 것처럼
+ * 보이게 두는 순간, 이 프로젝트가 지키려는 attribution 원칙이 먼저 무너진다.
+ * 원문 주소는 문서용으로 예약된 example.com을 쓴다.
+ *
+ * 이미지는 사진이 아니라 sharp로 합성한 추상 색면이다(public/mamaboy/plate-*.webp).
+ * 무엇을 찍은 것처럼 보이지 않아야 하므로 인물·제품·장소를 담지 않는다.
+ */
+import type { Article, Feed } from './types'
+
+/** 예시 데이터는 시간이 지나도 «오늘의 지면»으로 읽혀야 한다. */
+function hoursAgo(hours: number): string {
+  return new Date(Date.now() - hours * 3600_000).toISOString()
+}
+
+const FETCHED = hoursAgo(0.4)
+
+type Seed = Omit<Article, 'id' | 'fetchedAt'> & { hours: number }
+
+const entries: Seed[] = [
+  {
+    hours: 2,
+    slug: 'retinol-every-night',
+    titleOriginal: 'You probably do not need retinol every night',
+    titleKo: '레티놀을 매일 밤 쓸 필요는 없다',
+    summaryOriginal:
+      'Tolerance studies keep landing in the same place: the skin barrier recovers on the nights you skip, and the outcome after twelve weeks looks the same.',
+    summaryKo:
+      '내성 연구는 계속 같은 자리에 도착한다. 건너뛴 밤에 장벽이 회복되고, 12주 뒤의 결과는 매일 쓴 쪽과 다르지 않다.',
+    sourceName: 'SKIN LEDGER',
+    sourceUrl: 'https://example.com/skin-ledger',
+    originalUrl: 'https://example.com/skin-ledger/retinol-every-night',
+    author: 'A. Moreau',
+    publishedAt: '',
+    language: 'en',
+    category: 'skin',
+    careScore: 0.92,
+    curiosityScore: 0.24,
+    keywords: ['retinol', '레티놀', '피부장벽', 'tolerance'],
+    image: {
+      url: '/mamaboy/plate-1.webp',
+      width: 1600,
+      height: 1000,
+      alt: '',
+    },
+    translationStatus: 'done',
+    contentType: 'expert',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 4,
+    slug: 'sofubi-second-wave',
+    titleOriginal: '소프비의 두 번째 유행은 어른의 지갑에서 시작됐다',
+    summaryKo:
+      '1970년대의 성형 방식 그대로 만드는 소프트 비닐 완구가 다시 팔린다. 사는 사람의 평균 연령은 마흔에 가깝다.',
+    sourceName: '취미의 총량',
+    sourceUrl: 'https://example.com/hobby-mass',
+    originalUrl: 'https://example.com/hobby-mass/sofubi-second-wave',
+    publishedAt: '',
+    language: 'ko',
+    category: 'play',
+    careScore: 0.08,
+    curiosityScore: 0.88,
+    keywords: ['소프비', '완구', '수집', 'kidult'],
+    image: {
+      url: '/mamaboy/plate-2.webp',
+      width: 1600,
+      height: 1000,
+      alt: '',
+    },
+    translationStatus: 'none',
+    contentType: 'news',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 6,
+    slug: 'sleep-regularity-beats-duration',
+    titleOriginal: 'Sleep regularity predicts mortality better than sleep duration',
+    titleKo: '수면 시간보다 수면의 규칙성이 더 정확한 예측 변수였다',
+    summaryOriginal:
+      'A cohort of 60,000 wrist-worn recordings found the variance of bedtime, not the total hours, carried most of the signal.',
+    summaryKo:
+      '손목 기록 6만 건을 본 코호트에서, 신호의 대부분을 가진 것은 총 수면 시간이 아니라 잠드는 시각의 편차였다.',
+    sourceName: 'HALF LIFE JOURNAL',
+    sourceUrl: 'https://example.com/half-life',
+    originalUrl: 'https://example.com/half-life/sleep-regularity',
+    publishedAt: '',
+    language: 'en',
+    category: 'body',
+    careScore: 0.95,
+    curiosityScore: 0.3,
+    keywords: ['sleep', '수면', 'cohort', '규칙성'],
+    translationStatus: 'done',
+    contentType: 'research',
+    contentPolicy: 'link',
+  },
+  {
+    hours: 8,
+    slug: 'character-attachment-after-thirty',
+    titleOriginal: 'What character attachment looks like after thirty',
+    titleKo: '서른 이후의 캐릭터 애착은 어떤 모양인가',
+    summaryOriginal:
+      'The objects do not get younger with us. Interviews with collectors in their thirties and forties about what stayed and what quietly left.',
+    summaryKo:
+      '물건은 우리와 함께 어려지지 않는다. 삼사십대 수집가들에게 무엇이 남았고 무엇이 조용히 떠났는지 물었다.',
+    sourceName: 'PLAY OFFICE',
+    sourceUrl: 'https://example.com/play-office',
+    originalUrl: 'https://example.com/play-office/character-attachment',
+    publishedAt: '',
+    language: 'en',
+    category: 'play',
+    careScore: 0.12,
+    curiosityScore: 0.82,
+    keywords: ['character', '캐릭터', 'collecting'],
+    image: {
+      url: '/mamaboy/plate-3.webp',
+      width: 1600,
+      height: 1000,
+      alt: '',
+    },
+    translationStatus: 'done',
+    contentType: 'opinion',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 11,
+    slug: 'sunscreen-reapplication-indoors',
+    titleOriginal: '실내에서의 자외선차단제 덧바름은 어디까지 필요한가',
+    summaryKo:
+      '창을 통과하는 UVA의 양은 유리 종류에 따라 열 배 넘게 차이난다. 덧바름의 기준을 시간이 아니라 자리로 바꾼다.',
+    sourceName: '느린 관리',
+    sourceUrl: 'https://example.com/slow-care',
+    originalUrl: 'https://example.com/slow-care/indoor-reapplication',
+    publishedAt: '',
+    language: 'ko',
+    category: 'skin',
+    careScore: 0.86,
+    curiosityScore: 0.18,
+    keywords: ['자외선', 'UVA', '선크림', '덧바름'],
+    translationStatus: 'none',
+    contentType: 'expert',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 13,
+    slug: 'senolytics-trial-readout',
+    titleOriginal: 'First large senolytics readout lands without the headline effect',
+    titleKo: '첫 대규모 세놀리틱스 결과가 기대했던 표제 없이 도착했다',
+    summaryOriginal:
+      'The primary endpoint moved by less than the trial was powered to detect. The interesting part is in the subgroup that had the highest baseline burden.',
+    summaryKo:
+      '1차 평가변수는 검출하도록 설계한 폭보다 적게 움직였다. 흥미로운 부분은 기저 부담이 가장 높았던 하위군에 있다.',
+    sourceName: 'HALF LIFE JOURNAL',
+    sourceUrl: 'https://example.com/half-life',
+    originalUrl: 'https://example.com/half-life/senolytics-readout',
+    publishedAt: '',
+    language: 'en',
+    category: 'age',
+    careScore: 0.9,
+    curiosityScore: 0.44,
+    keywords: ['senolytics', '노화', 'trial', 'longevity'],
+    translationStatus: 'done',
+    contentType: 'research',
+    contentPolicy: 'link',
+  },
+  {
+    hours: 16,
+    slug: 'gel-texture-everywhere',
+    titleOriginal: 'Why everything wants to look like gel right now',
+    titleKo: '지금 모든 것이 젤처럼 보이고 싶어 하는 이유',
+    summaryOriginal:
+      'From phone cases to fonts, the surface of the year is translucent, wet-looking and slightly soft. A short history of the finish.',
+    summaryKo:
+      '휴대폰 케이스부터 서체까지, 올해의 표면은 반투명하고 젖은 것처럼 보이며 약간 무르다. 이 마감의 짧은 역사.',
+    sourceName: 'SOFT PLASTIC',
+    sourceUrl: 'https://example.com/soft-plastic',
+    originalUrl: 'https://example.com/soft-plastic/gel-texture',
+    publishedAt: '',
+    language: 'en',
+    category: 'culture',
+    careScore: 0.06,
+    curiosityScore: 0.9,
+    keywords: ['gel', '질감', 'design', '트렌드'],
+    image: {
+      url: '/mamaboy/plate-4.webp',
+      width: 1600,
+      height: 1000,
+      alt: '',
+    },
+    translationStatus: 'done',
+    contentType: 'opinion',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 19,
+    slug: 'protein-timing-overrated',
+    titleOriginal: 'Protein timing keeps failing to matter',
+    titleKo: '단백질 섭취 타이밍은 계속 중요하지 않은 것으로 나온다',
+    summaryOriginal:
+      'Total daily intake explains almost all of the variance. The window keeps shrinking every time someone measures it properly.',
+    summaryKo:
+      '거의 모든 분산을 설명하는 것은 하루 총량이다. 제대로 측정할 때마다 그 «창»은 계속 좁아진다.',
+    sourceName: 'PROTOCOL BODY',
+    sourceUrl: 'https://example.com/protocol-body',
+    originalUrl: 'https://example.com/protocol-body/protein-timing',
+    publishedAt: '',
+    language: 'en',
+    category: 'body',
+    careScore: 0.84,
+    curiosityScore: 0.22,
+    keywords: ['protein', '단백질', 'nutrition'],
+    translationStatus: 'done',
+    contentType: 'expert',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 22,
+    slug: 'handheld-console-forty',
+    titleOriginal: '휴대용 게임기를 다시 사는 사람들의 평균 연령',
+    summaryKo: '중고 거래 데이터에서 읽히는 것은 향수가 아니라 시간의 재분배다.',
+    sourceName: '취미의 총량',
+    sourceUrl: 'https://example.com/hobby-mass',
+    originalUrl: 'https://example.com/hobby-mass/handheld-console',
+    publishedAt: '',
+    language: 'ko',
+    category: 'play',
+    careScore: 0.05,
+    curiosityScore: 0.76,
+    keywords: ['게임기', 'handheld', '중고'],
+    translationStatus: 'none',
+    contentType: 'news',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 26,
+    slug: 'barrier-repair-ceramide-ratio',
+    titleOriginal: 'The ceramide ratio that actually repairs a barrier',
+    titleKo: '장벽을 실제로 회복시키는 세라마이드 비율',
+    summaryOriginal:
+      'Three lipids, one ratio, and a lot of products that get it wrong on purpose because the correct one feels unpleasant.',
+    summaryKo:
+      '세 가지 지질과 하나의 비율. 그리고 그 비율이 사용감이 나쁘다는 이유로 일부러 어긋나게 만든 많은 제품들.',
+    sourceName: 'AFTERGLOW LAB',
+    sourceUrl: 'https://example.com/afterglow',
+    originalUrl: 'https://example.com/afterglow/ceramide-ratio',
+    publishedAt: '',
+    language: 'en',
+    category: 'skin',
+    careScore: 0.88,
+    curiosityScore: 0.35,
+    keywords: ['ceramide', '세라마이드', '장벽'],
+    translationStatus: 'pending',
+    contentType: 'expert',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 30,
+    slug: 'grip-strength-as-a-clock',
+    titleOriginal: 'Grip strength is doing a lot of work as a clock',
+    titleKo: '악력은 시계 노릇을 꽤 잘하고 있다',
+    summaryOriginal:
+      'It is cheap, it is fast, and it keeps out-predicting more expensive markers of biological age.',
+    summaryKo: '싸고 빠르다. 그리고 훨씬 비싼 생물학적 나이 지표들보다 계속 더 잘 맞힌다.',
+    sourceName: 'HALF LIFE JOURNAL',
+    sourceUrl: 'https://example.com/half-life',
+    originalUrl: 'https://example.com/half-life/grip-strength',
+    publishedAt: '',
+    language: 'en',
+    category: 'age',
+    careScore: 0.87,
+    curiosityScore: 0.4,
+    keywords: ['grip strength', '악력', 'biomarker'],
+    translationStatus: 'done',
+    contentType: 'research',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 34,
+    slug: 'blind-box-economy',
+    titleOriginal: 'The blind box economy grew up and got a subscription model',
+    titleKo: '블라인드 박스 경제는 어른이 되더니 구독 모델을 얻었다',
+    summaryOriginal:
+      'What began as a vending machine impulse now has retention metrics, and the people paying are not children.',
+    summaryKo:
+      '자판기 앞의 충동으로 시작한 것에 이제 리텐션 지표가 붙었다. 돈을 내는 사람은 아이가 아니다.',
+    sourceName: 'SOFT PLASTIC',
+    sourceUrl: 'https://example.com/soft-plastic',
+    originalUrl: 'https://example.com/soft-plastic/blind-box-economy',
+    publishedAt: '',
+    language: 'en',
+    category: 'culture',
+    careScore: 0.04,
+    curiosityScore: 0.8,
+    keywords: ['blind box', '블라인드박스', '소비'],
+    translationStatus: 'done',
+    contentType: 'news',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 38,
+    slug: 'zone-two-without-a-watch',
+    titleOriginal: 'Zone two, without buying anything',
+    titleKo: '아무것도 사지 않고 존2 하기',
+    summaryOriginal: 'The talk test still beats the strap for most people, and it is free.',
+    summaryKo: '대부분의 사람에게는 말하기 테스트가 여전히 스트랩보다 낫다. 게다가 공짜다.',
+    sourceName: 'PROTOCOL BODY',
+    sourceUrl: 'https://example.com/protocol-body',
+    originalUrl: 'https://example.com/protocol-body/zone-two',
+    publishedAt: '',
+    language: 'en',
+    category: 'body',
+    careScore: 0.8,
+    curiosityScore: 0.28,
+    keywords: ['zone 2', '유산소', 'training'],
+    translationStatus: 'done',
+    contentType: 'expert',
+    contentPolicy: 'summary',
+  },
+  {
+    hours: 44,
+    slug: 'skin-microbiome-claims',
+    titleOriginal: 'Most microbiome claims on a label mean nothing yet',
+    titleKo: '라벨 위의 마이크로바이옴 문구는 아직 대부분 아무 뜻이 없다',
+    summaryOriginal:
+      'The science is real and early. The marketing is neither. A guide to telling them apart in a shop.',
+    summaryKo: '과학은 진짜이고 이르다. 마케팅은 둘 다 아니다. 매장에서 그 둘을 구분하는 법.',
+    sourceName: 'AFTERGLOW LAB',
+    sourceUrl: 'https://example.com/afterglow',
+    originalUrl: 'https://example.com/afterglow/microbiome-claims',
+    publishedAt: '',
+    language: 'en',
+    category: 'skin',
+    careScore: 0.78,
+    curiosityScore: 0.42,
+    keywords: ['microbiome', '마이크로바이옴', '성분'],
+    translationStatus: 'failed',
+    contentType: 'product',
+    contentPolicy: 'link',
+  },
+  {
+    hours: 52,
+    slug: 'nostalgia-is-not-the-product',
+    titleOriginal: '향수는 상품이 아니다',
+    summaryKo:
+      '리메이크가 팔리는 이유를 향수로 설명하면 그다음이 없다. 다시 사는 사람들은 과거가 아니라 밀도를 산다.',
+    sourceName: '밤의 루틴',
+    sourceUrl: 'https://example.com/night-routine',
+    originalUrl: 'https://example.com/night-routine/nostalgia',
+    publishedAt: '',
+    language: 'ko',
+    category: 'culture',
+    careScore: 0.1,
+    curiosityScore: 0.72,
+    keywords: ['향수', 'nostalgia', '리메이크'],
+    translationStatus: 'none',
+    contentType: 'opinion',
+    contentPolicy: 'full',
+    bodyOriginal: [
+      '리메이크가 팔리는 이유를 향수로 설명하면 그다음 문장이 없다. 향수는 감정의 이름이지 구매의 이유가 아니다.',
+      '다시 사는 사람들이 되찾으려는 것은 그 시절이 아니라 그 시절에 가능했던 밀도다. 한 가지를 오래 들여다보는 일, 끝까지 가보는 일.',
+      '그래서 같은 물건이라도 «그때 그대로»를 파는 쪽보다 «지금 만들었다면 이랬을 것»을 파는 쪽이 더 오래 남는다.',
+    ],
+  },
+  {
+    hours: 60,
+    slug: 'longevity-clinics-price',
+    titleOriginal: 'What a longevity clinic actually sells',
+    titleKo: '롱제비티 클리닉이 실제로 파는 것',
+    summaryOriginal:
+      'Panels, scans, and a schedule. Two of the three you can get from a normal doctor for a fraction of the price.',
+    summaryKo: '검사 패널과 영상, 그리고 일정표. 셋 중 둘은 동네 병원에서 훨씬 싸게 받을 수 있다.',
+    sourceName: 'SKIN LEDGER',
+    sourceUrl: 'https://example.com/skin-ledger',
+    originalUrl: 'https://example.com/skin-ledger/longevity-clinics',
+    publishedAt: '',
+    language: 'en',
+    category: 'age',
+    careScore: 0.7,
+    curiosityScore: 0.5,
+    keywords: ['longevity clinic', '검진', '비용'],
+    translationStatus: 'done',
+    contentType: 'news',
+    contentPolicy: 'summary',
+  },
+]
+
+const articles: Article[] = []
+
+for (const { hours, ...entry } of entries) {
+  articles.push({
+    ...entry,
+    id: `prototype:${entry.slug}`,
+    publishedAt: hoursAgo(hours),
+    fetchedAt: FETCHED,
+  })
+}
+
+export const seedFeed: Feed = {
+  generatedAt: FETCHED,
+  prototype: true,
+  articles,
+}

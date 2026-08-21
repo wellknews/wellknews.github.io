@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+  # MAMABOY의 피드가 갱신되면 그 결과를 품고 다시 배포한다. 봇이 만든 커밋은
+  # push 이벤트를 일으키지 않으므로, 그 워크플로의 완료를 직접 듣는다.
+  workflow_run:
+    workflows: ['MAMABOY feed']
+    types: [completed]
 
 permissions:
   contents: read

@@ -1,0 +1,138 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: color-mix(in srgb, var(--color-bg) 86%, transparent);
+  backdrop-filter: blur(20px) saturate(1.2);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-base) var(--ease-touch);
+}
+
+.header[data-open='true'] {
+  border-bottom-color: var(--color-line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 48px);
+  height: var(--header-h);
+}
+
+/* 이름이 로고다. 다른 어떤 심볼도 옆에 두지 않는다(§20). */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-text);
+}
+
+.mark {
+  width: auto;
+  height: clamp(15px, 1.5vw, 18px);
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2vw, 30px);
+}
+
+.link,
+.action {
+  display: inline-flex;
+  align-items: center;
+  /* 터치 타깃 최소 44px */
+  min-height: 44px;
+  color: var(--color-text-muted);
+  transition: color var(--dur-touch) var(--ease-touch);
+}
+
+/* 지금 있는 자리에만 잉크가 남는다. 상태 표시이지 장식이 아니다. */
+.link[aria-current] {
+  color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: clamp(16px, 3vw, 40px);
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (hover: hover) {
+  .link:hover,
+  .action:hover,
+  .brand:hover {
+    color: var(--color-text);
+  }
+}
+
+.action:active {
+  transform: scale(0.96);
+}
+
+/* ---------- 펼친 카테고리 ---------- */
+
+.panel {
+  border-top: 1px solid var(--color-line);
+  background: var(--color-bg);
+}
+
+.panelList {
+  display: grid;
+  padding-block: 8px 20px;
+}
+
+.panelLink {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-height: 48px;
+  padding-block: 12px;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-text);
+}
+
+.panelList > li:last-child .panelLink {
+  border-bottom: none;
+}
+
+.panelTitle {
+  color: var(--color-text-muted);
+}
+
+.panelLink[aria-current] .panelTitle {
+  color: var(--color-text-secondary);
+}
+
+/* ---------- 모바일 ---------- */
+
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+
+  .actions {
+    margin-left: auto;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 768px) {
+  /* 데스크톱에서는 펼칠 일이 없다. 목록이 이미 헤더에 있다. */
+  .panel {
+    display: none;
+  }
+}
