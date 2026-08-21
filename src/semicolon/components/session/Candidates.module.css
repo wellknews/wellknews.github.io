@@ -68,3 +68,23 @@
     color: var(--color-text-muted);
   }
 }
+
+/*
+ * 작은 판면에서는 흩어놓지 않는다.
+ *
+ * 넓은 지면에서 이 들여쓰기는 «생각나는 대로 적어 둔 자리»였다. 360px에서
+ * 18vw는 65px밖에 되지 않아 공간적 배치가 아니라 예쁘게 꾸민 목록으로 보인다.
+ * 그러면 철학보다 스타일이 먼저 읽힌다. 일렬로 세우고, 고른 것만 진하게 둔다.
+ */
+@media (max-width: 599px) {
+  .option:nth-child(2),
+  .option:nth-child(3),
+  .option:nth-child(4) {
+    margin-left: 0;
+  }
+
+  .candidates {
+    row-gap: clamp(12px, 3vw, 18px);
+    padding-block: clamp(24px, 7vw, 40px);
+  }
+}

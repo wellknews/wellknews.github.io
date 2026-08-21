@@ -29,3 +29,14 @@
   letter-spacing: var(--tracking-title);
   text-wrap: balance;
 }
+
+/* 좁은 화면에서는 행간을 한 단계 좁힌다. 글줄이 짧아 1.85는 문단이 흩어진다. */
+@media (max-width: 599px) {
+  .passage p {
+    line-height: 1.7;
+  }
+
+  .passage[data-tone='loud'] p {
+    line-height: 1.32;
+  }
+}

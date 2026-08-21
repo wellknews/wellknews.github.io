@@ -80,7 +80,7 @@
 }
 
 /* 320px에서도 기호·이름·주소가 한 줄 안에 남도록 간격만 압축한다. */
-@media (max-width: 479px) {
+@media (max-width: 599px) {
   .head {
     gap: 10px;
   }

@@ -146,7 +146,7 @@ a.date:focus-visible {
   color: var(--color-text-secondary);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
   .item,
   .item[data-form='aside'] {
     grid-template-columns: minmax(0, 1fr);

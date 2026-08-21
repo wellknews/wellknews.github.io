@@ -3,6 +3,7 @@ import { MetaLine } from '../components/MetaLine'
 import { Prose } from '../components/Prose'
 import { Opening } from '../components/session/Opening'
 import { findSession } from '../content/sessions'
+import { useViewport } from '../layout/useViewport'
 import { path } from '../router'
 import { NotFound } from './NotFound'
 import styles from './SessionEntry.module.css'
@@ -25,15 +26,22 @@ type Props = {
  */
 export function SessionEntry({ slug }: Props) {
   const session = findSession(slug)
+  const viewport = useViewport()
 
   if (!session) return <NotFound />
 
   if (session.display === 'stage') {
+    /*
+     * 좁은 화면에는 다른 배치가 있을 수 있다. 내용은 같고 장면 수만 다르다.
+     * 두 벌을 다 그려 놓고 숨기지 않는 이유는 `layout/useViewport.ts`에 적었다.
+     */
+    const arrangement = viewport === 'compact' && session.compact ? session.compact : session.body
+
     return (
       <article className={styles.stage}>
         <Opening session={session} path={path.session(session.slug)} />
 
-        {session.body}
+        {arrangement}
 
         <div className="shell">
           <BackLink to={path.sessionIndex} label={path.sessionIndex} />

@@ -28,3 +28,24 @@
   width: min(100%, var(--content-max));
   margin-inline: auto;
 }
+
+/*
+ * 작은 판면의 여백.
+ *
+ * 1200px 화면에서 200px은 침묵이지만, 800px 화면에서는 화면의 4분의 1이다.
+ * 그만큼 비워 두면 «여백 → 장치 → 여백 → 장치»라는 반복 자체가 눈에 띄기
+ * 시작하고, 조용해지려던 것이 연출이 있다는 사실을 계속 알리게 된다.
+ */
+@media (max-width: 599px) {
+  .scene {
+    padding-block: clamp(28px, 8vw, 44px);
+  }
+
+  .scene[data-air='true'] {
+    padding-block: clamp(52px, 15vw, 80px);
+  }
+
+  .stack {
+    row-gap: clamp(22px, 6vw, 34px);
+  }
+}
