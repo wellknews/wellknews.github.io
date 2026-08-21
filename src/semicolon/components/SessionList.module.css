@@ -68,7 +68,7 @@
 
 .row {
   display: grid;
-  grid-template-columns: var(--margin-col) minmax(0, 1fr) auto;
+  grid-template-columns: var(--margin-col) minmax(0, 1fr) auto auto;
   align-items: baseline;
   column-gap: clamp(20px, 3vw, 48px);
   min-height: 44px;
@@ -105,6 +105,60 @@
   color: var(--color-text-secondary);
 }
 
+/*
+ * 이미지의 한 조각.
+ *
+ * 목록에서 그 기록이 무엇인지 설명하지 않는다. 제목이 호기심을 만들고,
+ * 내용은 들어가서 발견하게 한다. 그래서 이 조각도 알아볼 만큼 보여 주지 않는다 —
+ * 다가가면 조금 또렷해지는 정도까지다.
+ */
+.glimpse {
+  align-self: center;
+  width: clamp(48px, 7vw, 84px);
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  /*
+   * 크게 확대해 한 부분만 보이게 한다. 전체가 보이면 목록이 상품 목록이 된다.
+   * 잘리는 창이 피사체 안에 들어가도록 배율을 잡는다 — 창이 넓으면 바탕이
+   * 같이 들어와 조각이 아니라 축소판이 된다.
+   */
+  background-size: 420%;
+  background-position: var(--fx, 50%) var(--fy, 50%);
+  opacity: 0.28;
+  filter: blur(1px);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    filter var(--dur-base) var(--ease-out);
+}
+
+.item:focus-within .glimpse,
+.item:has(:active) .glimpse {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media (hover: hover) {
+  .item:hover .glimpse {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* 손가락에는 hover가 없다. 찍기 전에도 무언가 있다는 것은 보여야 한다. */
+@media (hover: none) {
+  .glimpse {
+    opacity: 0.5;
+  }
+}
+
+/* 움직임을 줄이기로 한 사람에게는 처음부터 또렷하다. */
+@media (prefers-reduced-motion: reduce) {
+  .glimpse {
+    opacity: 1;
+    filter: none;
+  }
+}
+
 /* 화살표도 벽 앞에서 멈춘다. 행을 밀어내거나 색면을 뒤집지 않는다. */
 .arrow {
   color: var(--color-text-muted);
@@ -127,7 +181,7 @@
 
 @media (max-width: 767px) {
   .row {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     row-gap: 10px;
   }
 

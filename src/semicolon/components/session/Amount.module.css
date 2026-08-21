@@ -1,0 +1,21 @@
+.amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(10px, 1.6vw, 18px);
+  padding-block: clamp(40px, 8vw, 96px);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+/* 단위는 숫자에 붙은 라벨이지 같은 크기의 정보가 아니다. */
+.currency {
+  color: var(--color-text-muted);
+}

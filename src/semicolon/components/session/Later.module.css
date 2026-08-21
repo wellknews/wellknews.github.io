@@ -1,0 +1,28 @@
+.later {
+  margin-top: clamp(28px, 5vw, 56px);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .later {
+      animation-name: later-in;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      /* 앞의 문장이 자리를 잡고 한참 뒤에 들어선다. */
+      animation-range: entry 70% cover 30%;
+    }
+  }
+}
+
+@keyframes later-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

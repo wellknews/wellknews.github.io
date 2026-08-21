@@ -1,3 +1,14 @@
+/*
+ * 판면을 통째로 가져가는 기록.
+ *
+ * 안쪽의 각 구간이 자기 여백을 직접 정하므로 여기서는 바깥 폭만 열어 준다.
+ * 마지막의 돌아가는 링크만 평소의 판면 안에 앉는다.
+ */
+.stage {
+  display: block;
+  padding-bottom: var(--space-section);
+}
+
 .head {
   padding-block: clamp(40px, 6vw, 88px) var(--space-block);
 }

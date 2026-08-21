@@ -1,0 +1,78 @@
+.opening {
+  position: relative;
+}
+
+.inner {
+  display: grid;
+  row-gap: clamp(40px, 8vw, 96px);
+  padding-block: clamp(24px, 4vw, 44px) clamp(56px, 10vw, 120px);
+}
+
+.path {
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}
+
+/*
+ * 표지.
+ *
+ * 첫 화면을 거의 다 쓴다. 이 이미지가 무엇인지 알아보려고 손을 대는 동안이
+ * 이 기록의 도입부다. 작게 걸면 그냥 지나쳐 버린다.
+ */
+.cover {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.title {
+  display: grid;
+  row-gap: clamp(14px, 2.2vw, 22px);
+  justify-items: center;
+  text-align: center;
+}
+
+.headline {
+  max-width: 14ch;
+  font-size: var(--text-title);
+  font-weight: var(--weight-display);
+  line-height: 1.06;
+  letter-spacing: var(--tracking-title);
+  text-wrap: balance;
+}
+
+/* 영문 보조 표기는 제목을 번역하는 것이 아니라 한 줄의 라벨이다. 작게 둔다. */
+.subtitle {
+  color: var(--color-text-muted);
+}
+
+.meta {
+  justify-content: center;
+}
+
+/*
+ * 제목은 스크롤해서 내려와야 들어선다.
+ *
+ * 표지와 제목이 한 화면에 같이 보이면 표지를 만질 이유가 없어진다.
+ * 타임라인이 없는 화면에서는 처음부터 보인다 — 정보가 사라지지는 않는다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .title {
+      animation-name: title-in;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 60%;
+    }
+  }
+}
+
+@keyframes title-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

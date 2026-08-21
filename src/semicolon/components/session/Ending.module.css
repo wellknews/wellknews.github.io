@@ -1,0 +1,43 @@
+.ending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(140px, 24svh, 240px);
+}
+
+/*
+ * 위쪽을 가려 둔 세미콜론.
+ *
+ * 자르는 위치는 두 획 사이의 빈 자리다. 이 글꼴에서 위 점은 글자 상자의
+ * 42.7~55.8%, 아래 획은 80.4~99.6%를 차지하므로 그 사이인 68%에서 자른다.
+ * 비율로 자르기 때문에 글자 크기가 달라져도 같은 자리에 떨어진다.
+ * 어긋나면 획이 반쯤 잘려 글자가 깨진 것처럼 보이므로 눈대중으로 정하지 않았다.
+ *
+ * `inset()`은 그대로 전이되므로 사용자 지정 속성을 등록하지 않아도 되고,
+ * 잘라내기를 모르는 브라우저에는 온전한 기호가 그냥 보인다.
+ */
+.mark {
+  /*
+   * 인라인 상자에는 잘라내기의 백분율 기준이 제대로 잡히지 않는다.
+   * 블록 상자를 줘야 68%가 글자 상자의 68%가 된다.
+   */
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-weight: var(--weight-display);
+  line-height: 1;
+  color: var(--accent);
+  clip-path: inset(68% 0 0 0);
+  transition: clip-path var(--dur-slow) var(--ease-out);
+}
+
+.ending[data-open='true'] .mark {
+  clip-path: inset(0 0 0 0);
+}
+
+/* 움직임을 줄이기로 한 사람에게는 처음부터 온전한 기호가 서 있는다. */
+@media (prefers-reduced-motion: reduce) {
+  .mark {
+    clip-path: none;
+  }
+}

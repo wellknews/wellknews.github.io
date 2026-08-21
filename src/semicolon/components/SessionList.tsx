@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+
 import type { Session } from '../content/types'
 import { Link, path } from '../router'
 import { EmptyState } from './EmptyState'
@@ -41,6 +43,25 @@ export function SessionList({ sessions, empty }: Props) {
 
               {session.excerpt ? <span className={styles.excerpt}>{session.excerpt}</span> : null}
             </div>
+
+            {/*
+              그 기록에 실린 이미지의 작은 조각.
+              무엇인지 알아볼 만큼은 아니고, 무엇인가 있다는 것만 알 만큼이다.
+              제목이 이미 이 행의 이름이므로 낭독에서는 건너뛴다.
+            */}
+            {session.cover ? (
+              <span
+                className={styles.glimpse}
+                aria-hidden="true"
+                style={
+                  {
+                    backgroundImage: `url("${session.cover.src}")`,
+                    '--fx': `${(session.cover.focus?.x ?? 0.5) * 100}%`,
+                    '--fy': `${(session.cover.focus?.y ?? 0.5) * 100}%`,
+                  } as CSSProperties
+                }
+              />
+            ) : null}
 
             <span className={`mono ${styles.arrow}`} aria-hidden="true">
               →

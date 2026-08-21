@@ -25,6 +25,48 @@ export type Meta = {
  * 중심이고 어떤 경험은 문장이 중심이기 때문이다. 공통 문법(Prose)은 유지하되
  * 구조는 콘텐츠마다 새로 짠다.
  */
+/**
+ * 목록과 본문이 함께 쓰는 한 장.
+ *
+ * 완성품 사진일 필요는 없다. 그 경험이 시작될 때의 상태를 보여 주는 편이
+ * 더 정확할 때가 많다 — 만들기 전의 시안이라든지.
+ */
+export type Cover = {
+  src: string
+  /** 이 사진이 무엇을 보여주는지. 장식이 아니므로 빈 alt를 쓰지 않는다. */
+  alt: string
+  width: number
+  height: number
+  /**
+   * 이 이미지에서 의미가 있는 자리(0..1의 비율).
+   *
+   * 연출값이 아니라 이미지에 대한 사실이다. 어디에 무엇이 찍혀 있는지는
+   * 이 파일을 고른 사람만 알고, 표지든 목록이든 그 자리를 기준으로 보여 준다.
+   */
+  focus?: { x: number; y: number }
+  /**
+   * 흰 바탕에 오려 놓은 컷인지.
+   *
+   * 제품 시안처럼 흰 배경을 가진 이미지를 종이 위에 그냥 얹으면 흰 사각형이
+   * 생기고, 그 순간 이미지가 지면의 일부가 아니라 붙여 놓은 카드로 보인다.
+   * 곱하기로 겹치면 흰 바탕이 종이색이 되고 검은 부분만 남는다.
+   *
+   * 실제로 찍은 사진에는 쓰지 않는다. 사진 전체가 어두워진다.
+   */
+  onPaper?: boolean
+}
+
+/**
+ * 이 경험이 지면을 어떻게 쓰는지.
+ *
+ *   column  기본. 제목·메타데이터·본문이 정해진 판면에 앉는다.
+ *   stage   본문이 판면 전체를 가져간다. 그 경험에만 있는 인터랙션이 필요할 때.
+ *
+ * 대부분의 SESSION은 column이다. stage는 형태 자체가 그 경험의 일부일 때만 쓴다 —
+ * 남발하면 SESSION마다 다른 사이트가 되고, 그러면 공통 문법이 사라진다.
+ */
+export type SessionDisplay = 'column' | 'stage'
+
 export type Session = {
   slug: string
   title: string
@@ -32,6 +74,8 @@ export type Session = {
   meta?: Meta
   /** 목록에 걸리는 한 줄. 없으면 목록은 제목만 보여준다. */
   excerpt?: string
+  cover?: Cover
+  display?: SessionDisplay
   body: ReactNode
 }
 

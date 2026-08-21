@@ -1,0 +1,30 @@
+.scene {
+  padding-block: clamp(40px, 7vw, 88px);
+}
+
+/*
+ * 한 장면 안에 여러 개가 놓일 때의 간격.
+ *
+ * 기호 옆에 바로 문장이 붙으면 그 문장이 기호의 캡션이 된다. 둘 사이를
+ * 벌려야 각자 자기 말을 한다.
+ */
+.stack {
+  display: grid;
+  row-gap: clamp(28px, 5vw, 64px);
+}
+
+/* 장면이 바뀌는 자리에서는 더 크게 비운다. 여백이 곧 문단 사이의 침묵이다. */
+.scene[data-air='true'] {
+  padding-block: clamp(88px, 16vw, 200px);
+}
+
+/*
+ * 판면 여백까지 쓰는 장면.
+ *
+ * 판면 최대 폭은 지킨다. 아주 넓은 화면에서 사진이 끝까지 늘어나면
+ * 이 공간의 판면이 사라지고 그냥 전체 화면 이미지가 된다.
+ */
+.scene[data-width='bleed'] {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+}

@@ -1,0 +1,70 @@
+.candidates {
+  display: grid;
+  row-gap: clamp(18px, 3.5vw, 34px);
+  padding-block: clamp(32px, 6vw, 72px);
+  justify-items: start;
+}
+
+/*
+ * 흩어놓는다. 목록처럼 왼쪽에 줄 세우면 선택지가 아니라 메뉴가 된다.
+ * 자리마다 들여쓰기를 달리해 «생각나는 대로 적어 둔 것»에 가깝게 만든다.
+ */
+.option:nth-child(2) {
+  margin-left: clamp(24px, 12vw, 140px);
+}
+
+.option:nth-child(3) {
+  margin-left: clamp(12px, 6vw, 72px);
+}
+
+.option:nth-child(4) {
+  margin-left: clamp(36px, 18vw, 210px);
+}
+
+/*
+ * 기본이 곧 끝난 상태다.
+ *
+ * 스크롤 타임라인이 없거나 움직임을 줄이기로 한 화면에서는 여기서 멈춘다 —
+ * 만든 것은 진하고 나머지는 물러나 있다. 물러난 쪽도 본문 대비 6:1을 넘는
+ * 색이라 읽을 수 있다. 투명도로 지우지 않는 이유가 그것이다.
+ */
+.option {
+  font-size: clamp(1.125rem, 3.4vw, 1.75rem);
+  letter-spacing: 0.16em;
+  color: var(--color-text-muted);
+  transition: color var(--dur-slow) var(--ease-out);
+}
+
+.option[data-chosen='true'] {
+  color: var(--color-text);
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .candidates {
+      view-timeline-name: --candidates;
+    }
+
+    /*
+     * 하나씩 물러난다. 순서(--order)만큼 늦게 시작해서 차례가 보이게 한다.
+     * 만든 것에는 이 애니메이션을 걸지 않는다 — 끝까지 그 자리에 있다.
+     */
+    .option:not([data-chosen='true']) {
+      animation-name: candidate-out;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --candidates;
+      animation-range: entry calc(30% + var(--order) * 12%) cover calc(40% + var(--order) * 12%);
+    }
+  }
+}
+
+@keyframes candidate-out {
+  from {
+    color: var(--color-text);
+  }
+
+  to {
+    color: var(--color-text-muted);
+  }
+}

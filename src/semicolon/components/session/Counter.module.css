@@ -1,0 +1,99 @@
+.counter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(200px, 34svh, 320px);
+}
+
+/*
+ * 두 숫자가 같은 자리에 겹쳐 앉는다. 위아래로 나열하면 '바뀌었다'가 아니라
+ * '둘 다 있다'가 되고, 그러면 이 장면이 사건이 아니라 목록이 된다.
+ */
+.figure {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: clamp(2.75rem, 9vw, 5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.before,
+.after {
+  grid-area: 1 / 1;
+  transition: opacity var(--dur-slow) var(--ease-out);
+}
+
+.before {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+.after {
+  color: var(--color-text);
+  opacity: 0;
+}
+
+.counter[data-reached='true'] .before {
+  opacity: 0;
+}
+
+.counter[data-reached='true'] .after {
+  opacity: 1;
+}
+
+/*
+ * 색이 한 번 퍼졌다가 멈춘다.
+ *
+ * 저절로 도는 애니메이션이 아니다 — 사람이 여기까지 스크롤해서 왔기 때문에
+ * 한 번 일어나고, 끝나면 다시 정지한다.
+ */
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(60vw, 420px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--field-bound) 0%, transparent 68%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes counter-pulse {
+  from {
+    opacity: 0;
+    scale: 0.4;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    scale: 1;
+  }
+}
+
+.counter[data-reached='true'] .pulse {
+  animation: counter-pulse 1800ms var(--ease-out) both;
+}
+
+/* 움직임을 줄이기로 한 사람에게는 바뀐 숫자만 남는다. 정보는 그대로다. */
+@media (prefers-reduced-motion: reduce) {
+  .before {
+    display: none;
+  }
+
+  .after {
+    opacity: 1;
+  }
+
+  .pulse {
+    display: none;
+  }
+}

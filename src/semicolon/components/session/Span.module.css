@@ -1,0 +1,66 @@
+.span {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 20px);
+  padding-block: clamp(28px, 5vw, 56px);
+}
+
+.label {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.track {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 1px;
+}
+
+.rule {
+  position: absolute;
+  inset: 0;
+  background: var(--color-line);
+}
+
+/*
+ * 기본은 끝에 가 있는 상태다. 스크롤 타임라인이 없거나 움직임을 줄이기로 한
+ * 화면에서는 점이 도착점에 그냥 서 있는다 — 걸린 시간은 옆의 문장이 말한다.
+ */
+.runner {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .span {
+      view-timeline-name: --span;
+    }
+
+    .runner {
+      animation-name: span-run;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --span;
+      /* 짧다. 이 구간을 지나는 사이에 이미 끝나 있어야 «금방»으로 읽힌다. */
+      animation-range: entry 45% entry 72%;
+    }
+  }
+}
+
+@keyframes span-run {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: 100%;
+  }
+}

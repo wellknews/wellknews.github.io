@@ -1,0 +1,59 @@
+.quotes {
+  display: grid;
+  row-gap: clamp(28px, 5vw, 56px);
+  padding-block: clamp(32px, 6vw, 72px);
+}
+
+/*
+ * 물어본 쪽은 왼쪽, 답한 쪽은 오른쪽. 말풍선 없이 자리만으로 나눈다.
+ * 이 정도면 누가 한 말인지 헷갈리지 않고, 화면은 대화창이 되지 않는다.
+ */
+.quote {
+  max-width: min(100%, 22ch);
+  font-size: var(--text-lead);
+  line-height: 1.4;
+  letter-spacing: var(--tracking-title);
+  text-wrap: balance;
+}
+
+.quote[data-from='me'] {
+  justify-self: start;
+  color: var(--color-text);
+}
+
+.quote[data-from='maker'] {
+  justify-self: end;
+  text-align: right;
+  color: var(--color-text-secondary);
+}
+
+/*
+ * 기본은 전부 보이는 상태다. 스크롤 타임라인이 없어도 대화는 그대로 읽힌다.
+ * 있는 경우에만 한 문장씩 차례로 들어선다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .quotes {
+      view-timeline-name: --quotes;
+    }
+
+    .quote {
+      animation-name: quote-in;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --quotes;
+      animation-range: entry calc(24% + var(--order) * 16%) entry calc(52% + var(--order) * 16%);
+    }
+  }
+}
+
+/* 자리는 그대로 두고 잉크만 들어온다. 문장이 움직이면 대화가 아니라 연출이 된다. */
+@keyframes quote-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
