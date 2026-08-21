@@ -10,28 +10,36 @@
 
 :root {
   /* ---------- Color ----------
-   * 본문은 무채색으로 고정한다. 괄호 안은 --color-bg 대비 명암비.
+   *
+   * SEMICOLON은 완전한 흰색보다 미세하게 따뜻한 종이색을 기본으로 한다.
+   * 민트와 블러시는 글자색이 아니라 공간과 움직임에만 사용한다.
    */
-  --color-bg: #fafaf8;
-  --color-text: #111111; /* 18.1:1 */
-  --color-text-secondary: #3d3d39; /* 11.4:1 — 리드 문장 */
-  --color-text-muted: #5e5e59; /* 6.2:1  — 메타데이터 (AA 통과) */
-  --color-line: rgb(17 17 17 / 0.13);
-  --color-line-strong: rgb(17 17 17 / 0.34);
-  /* 지면을 감싸는 판면선. 본문 괘선보다 옅어야 구조로만 읽힌다. */
-  --color-frame: rgb(17 17 17 / 0.1);
+  --color-bg: #faf9f6;
+  --color-surface: #f6f3ee;
+  --color-surface-session: #f1f8f5;
 
-  /* ---------- Ink ----------
-   * 색은 여기까지만 쓴다. 글자에는 얹지 않고, 오직
-   *   · 히어로 뒤로 아주 옅게 깔리는 색면
-   *   · 글이 끝났다는 표시
-   *   · 지금 있는 자리를 알리는 밑줄과 선택 영역
-   * 세 곳에만 등장한다. 색을 전부 빼도 인상이 무너지지 않아야 한다.
+  --color-text: #171817;
+  --color-text-secondary: #404440;
+  --color-text-muted: #6b706c;
+
+  --color-line: rgb(23 24 23 / 0.13);
+  --color-line-strong: rgb(23 24 23 / 0.42);
+  /* 지면을 감싸는 판면선. 본문 괘선보다 옅어야 구조로만 읽힌다. */
+  --color-frame: rgb(23 24 23 / 0.1);
+
+  /* Interactive inks */
+  --ink-mint: #b7e6dc;
+  --ink-mint-soft: #ddf3ed;
+
+  --ink-blush: #efc8d4;
+  --ink-blush-soft: #f7e4e9;
+
+  /*
+   * accent는 글 전체를 칠하지 않는다.
+   * ';', 현재 위치, 선택처럼 의미가 실제로 있는 순간에만 사용한다.
    */
-  --wash-mint: rgb(118 214 195 / 0.11);
-  --wash-pink: rgb(244 178 196 / 0.07);
-  --accent: #2f9e8a;
-  --select: rgb(150 230 212 / 0.62);
+  --accent: #29776e;
+  --select: rgb(183 230 220 / 0.68);
 
   /* ---------- Typography ----------
    * 두 종류만 쓴다.
@@ -80,8 +88,10 @@
   --space-block: clamp(32px, 4.5vw, 64px);
 
   /* ---------- Motion ----------
-   * 여유를 표현하려고 화면을 계속 움직이지 않는다. 짧은 페이드와
-   * 미세한 호버 외에는 시간을 쓰지 않는다.
+   *
+   * SEMICOLON의 움직임은 장식이 아니라 의미 전달 수단이다.
+   * 저절로 계속 재생되는 애니메이션은 만들지 않고,
+   * pointer / touch / focus가 시작한 움직임만 사용한다.
    */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 

@@ -1,31 +1,126 @@
 .block {
+  position: relative;
+  overflow: hidden;
+
   padding-block: var(--space-section);
-  border-bottom: 1px solid var(--color-line);
+
+  transition:
+    background-color var(--dur-slow) var(--ease-out),
+    box-shadow var(--dur-slow) var(--ease-out);
 }
 
-.block:last-of-type {
-  border-bottom: none;
+/*
+ * SESSION
+ *
+ * 하나의 닫힌 경험.
+ * 민트 색면도 섹션 경계 안에 머문다.
+ */
+.block[data-kind='session'] {
+  background:
+    radial-gradient(circle at 18% 28%, rgb(174 231 222 / 0.32), transparent 38%),
+    linear-gradient(135deg, rgb(235 248 246 / 0.76), var(--color-surface-session));
+}
+
+/*
+ * THREAD
+ *
+ * 면이 화면 바깥으로 흐르는 느낌.
+ * session처럼 하나의 박스 안에 갇힌 인상을 만들지 않는다.
+ */
+.block[data-kind='thread'] {
+  background:
+    radial-gradient(ellipse at 92% 36%, rgb(245 204 218 / 0.34), transparent 42%),
+    radial-gradient(ellipse at 18% 78%, rgb(190 233 225 / 0.18), transparent 46%), var(--color-bg);
+}
+
+.block::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition:
+    opacity 800ms var(--ease-out),
+    transform 1200ms var(--ease-out);
+}
+
+.block[data-kind='session']::before {
+  inset: 12% 8%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgb(255 255 255 / 0.54), transparent 66%);
+
+  transform: scale(0.82);
+}
+
+.block[data-kind='thread']::before {
+  inset: -20% -28%;
+
+  background: radial-gradient(ellipse, rgb(246 213 224 / 0.28), transparent 62%);
+
+  transform: translateX(-4%);
+}
+
+@media (hover: hover) {
+  .block:hover::before {
+    opacity: 1;
+  }
+
+  .block[data-kind='session']:hover::before {
+    transform: scale(1);
+  }
+
+  .block[data-kind='thread']:hover::before {
+    transform: translateX(7%);
+  }
 }
 
 .head {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   align-items: center;
   gap: clamp(12px, 1.6vw, 20px);
+
   margin-bottom: var(--space-block);
 }
 
-/* 경계에 부딪혀 멈추는 점, 판을 넘어 흘러 나가는 점. */
+/*
+ * SESSION의 runner는 끝까지 이동한 뒤 닫힌 벽 앞에서 멈춘다.
+ */
 @media (hover: hover) {
+  .block[data-kind='session']:hover :global(.kindRunner),
   .head:hover :global(.kindRunner) {
     opacity: 1;
-    /* 오른쪽 벽에 닿아 멈춘다. 벽과 겹치지 않도록 한 칸 앞에서 선다. */
+
     transform: translateX(58px);
   }
 
+  /*
+   * THREAD는 점들이 기호 자체의 viewport를 넘어 계속 흐른다.
+   */
+  .block[data-kind='thread']:hover :global(.kindTrail),
   .head:hover :global(.kindTrail) {
-    transform: translateX(8px);
-    opacity: 0.35;
+    transform: translateX(18px);
+    opacity: 0;
   }
+}
+
+/* 키보드에서도 같은 의미를 전달한다. */
+.block[data-kind='session']:focus-within :global(.kindRunner) {
+  opacity: 1;
+  transform: translateX(58px);
+}
+
+.block[data-kind='thread']:focus-within :global(.kindTrail) {
+  transform: translateX(18px);
+  opacity: 0;
 }
 
 .label {
@@ -37,15 +132,56 @@
 .more {
   display: inline-flex;
   align-items: center;
+
   gap: 8px;
+
   min-height: 44px;
+
+  margin-left: auto;
+
   color: var(--color-text-muted);
+
   white-space: nowrap;
-  transition: color var(--dur-fast) var(--ease-out);
+  text-decoration: none;
+
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.more:focus-visible {
+  color: var(--color-text);
 }
 
 @media (hover: hover) {
   .more:hover {
     color: var(--color-text);
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 479px) {
+  .head {
+    gap: 10px;
+  }
+
+  /*
+   * 모바일에서는 링크를 누르는 동안 기호가 의미를 보여준다.
+   */
+  .block[data-kind='session']:active :global(.kindRunner) {
+    opacity: 1;
+    transform: translateX(58px);
+  }
+
+  .block[data-kind='thread']:active :global(.kindTrail) {
+    transform: translateX(18px);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block::before,
+  .more {
+    transition: none;
   }
 }

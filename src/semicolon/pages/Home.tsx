@@ -43,7 +43,7 @@ type BlockProps = {
  */
 function Block({ id, kind, label, to, children }: BlockProps) {
   return (
-    <section className={styles.block} aria-labelledby={id}>
+    <section className={styles.block} data-kind={kind} aria-labelledby={id}>
       <div className="shell">
         <div className={styles.head}>
           <KindMark kind={kind} />
