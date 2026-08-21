@@ -6,10 +6,47 @@
 
 /* note — 기본. 날짜가 여백 칼럼에 앉는다. */
 .item {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: var(--margin-col) minmax(0, 1fr);
   column-gap: clamp(20px, 3vw, 48px);
   padding-block: clamp(32px, 4vw, 56px);
+}
+
+/*
+ * THREAD는 경계가 없다. 이어지는 중인 생각이라 색도 영역 안에 갇히지 않는다.
+ *
+ * 다가가면 색이 오른쪽 판면 밖으로 새어 나간다. 자르지 않는 것이 이 규칙의
+ * 전부다 — SESSION의 `overflow: hidden`과 정확히 반대되는 한 줄이고,
+ * 두 개념의 정의는 이 대비로 이미 다 말해진다.
+ *
+ * 문서 폭 밖으로 나간 색은 #root에서 잘려 가로 스크롤을 만들지 않는다.
+ */
+.item::before {
+  content: '';
+  position: absolute;
+  inset: -6% -24% -6% 34%;
+  z-index: -1;
+  background: radial-gradient(56% 128% at 88% 50%, var(--field-bound) 0%, transparent 72%);
+  opacity: 0;
+  transform: translateX(-5%);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+
+.item:focus-within::before,
+.item:has(:active)::before {
+  opacity: 1;
+  transform: translateX(7%);
+}
+
+@media (hover: hover) {
+  .item:hover::before {
+    opacity: 1;
+    transform: translateX(7%);
+  }
 }
 
 .aside {

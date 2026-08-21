@@ -2,11 +2,13 @@ import type { ReactNode } from 'react'
 
 import { Hero } from '../components/Hero'
 import { KindMark } from '../components/KindMark'
+import { Seam } from '../components/Seam'
 import { SessionList } from '../components/SessionList'
 import { ThreadList } from '../components/ThreadList'
 import { semicolon } from '../content/site'
 import { sessions } from '../content/sessions'
 import { threads } from '../content/threads'
+import { useTouchReveal } from '../motion/useTouchReveal'
 import { Link, path } from '../router'
 import styles from './Home.module.css'
 
@@ -30,20 +32,25 @@ type BlockProps = {
 /**
  * 기호, 개념 이름, 그 주소를 하나의 행으로 묶는다.
  *
- * 같은 부품을 쓰되 SESSION은 옅은 종이면에, THREAD는 열린 배경에 놓인다.
- * 전폭 괘선 대신 면과 여백의 차이로 두 개념의 속도를 구분한다.
- *
- * 무엇을 다루는 자리인지 설명하는 문장은 여기 두지 않는다. 문장이 필요한 사람은
- * 주소를 눌러 그 개념의 페이지로 가면 된다.
+ * 무엇을 다루는 자리인지 설명하는 문장은 여기 두지 않는다. 두 기호가 한
+ * 화면에 나란히 놓이고, 다가가면 한쪽 점은 벽에 부딪혀 멈추고 다른 쪽 점들은
+ * 판을 넘어 흘러 나간다. 그 차이가 곧 정의다. 문장이 필요한 사람은 주소를
+ * 눌러 그 개념의 페이지로 가면 된다.
  *
  * 이름 쪽을 링크로 만들지 않는 이유는 같은 목적지로 가는 문을 한 줄에 두 개
  * 두지 않기 위해서다. 문은 경로가 적힌 자리 하나뿐이다.
  */
 function Block({ id, kind, label, to, children }: BlockProps) {
+  const touch = useTouchReveal()
+
   return (
     <section className={styles.block} data-kind={kind} aria-labelledby={id}>
       <div className="shell">
-        <div className={styles.head}>
+        <div
+          className={styles.head}
+          data-touched={touch.active}
+          onPointerDown={touch.onPointerDown}
+        >
           <KindMark kind={kind} />
 
           <h2 className={`mono ${styles.label}`} id={id}>
@@ -74,6 +81,11 @@ export function Home() {
       >
         <SessionList sessions={sessions.slice(0, HOME_SESSIONS)} empty={semicolon.session.empty} />
       </Block>
+
+      {/* 한쪽이 끝나고 다른 쪽이 시작하는 자리. 마침표가 아니라 세미콜론이 온다. */}
+      <div className="shell">
+        <Seam />
+      </div>
 
       <Block id="home-thread" kind="thread" label={semicolon.thread.label} to={path.threadIndex}>
         <ThreadList threads={threads.slice(0, HOME_THREADS)} empty={semicolon.thread.empty} />

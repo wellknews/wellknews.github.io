@@ -27,6 +27,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
+  /*
+   * THREAD의 색면은 판면 밖으로 흘러 나가도록 되어 있다. 그 색 때문에 가로
+   * 스크롤이 생기면 안 되므로 문서 폭에서 잘라 낸다. `clip`은 `hidden`과 달리
+   * 스크롤 컨테이너를 만들지 않아 sticky 헤더가 그대로 살아 있다.
+   */
+  overflow-x: clip;
 }
 
 #root > main {
@@ -91,7 +97,7 @@ body {
  * 기호가 제 뜻을 연기하는 부분.
  *
  * 어떤 상태에서 시작할지는 기호를 놓는 쪽이 정하므로 이름을 전역으로 둔다.
- * 어느 쪽이든 시작은 사람이 한다 — 저절로 움직이는 것은 없다.
+ * 어느 쪽이든 시작은 사람이 한다 — hover든 touch든, 저절로 움직이는 것은 없다.
  */
 .kindRunner {
   opacity: 0;

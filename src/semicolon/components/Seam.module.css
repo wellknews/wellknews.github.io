@@ -1,0 +1,68 @@
+/*
+ * 0이면 선이 닫혀 있고 1이면 ';'가 들어설 만큼 열려 있다.
+ * 등록해 두어야 스크롤을 따라 중간값으로 보간된다.
+ */
+@property --seam-open {
+  syntax: '<number>';
+  inherits: true;
+  /* 스크롤 타임라인이 없는 곳에서는 이 값에 멈춰 있는다 — 열린 상태다. */
+  initial-value: 1;
+}
+
+.seam {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: calc(var(--seam-open) * clamp(14px, 2.5vw, 34px));
+  padding-block: clamp(8px, 1.5vw, 16px);
+}
+
+.rule {
+  height: 1px;
+  background: var(--color-line);
+}
+
+.mark {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: var(--weight-display);
+  line-height: 1;
+  color: var(--color-text-muted);
+  /* 잉크는 기준선 언저리에 있어 상자 가운데보다 조금 아래다. */
+  transform: translateY(-0.16em) scale(calc(0.7 + var(--seam-open) * 0.3));
+  opacity: var(--seam-open);
+}
+
+@keyframes seam-open {
+  from {
+    --seam-open: 0;
+  }
+
+  to {
+    --seam-open: 1;
+  }
+}
+
+/*
+ * 단축 속성(animation)은 animation-timeline을 auto로 되돌린다. 개별 속성으로 쓴다.
+ *
+ * 이음매가 화면에 들어오는 동안 열리고, 지나가는 동안 그대로 있는다. 되감아
+ * 올리면 다시 닫힌다 — 스크롤은 사람이 하는 일이므로 되돌릴 수 있어야 한다.
+ */
+@supports (animation-timeline: view()) {
+  .seam {
+    animation-name: seam-open;
+    animation-duration: auto;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 12% cover 38%;
+  }
+}
+
+/* 움직임을 줄이기로 한 사람에게는 처음부터 열려 있다. */
+@media (prefers-reduced-motion: reduce) {
+  .seam {
+    animation-name: none;
+  }
+}

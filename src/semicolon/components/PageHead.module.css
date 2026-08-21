@@ -14,14 +14,29 @@
   letter-spacing: var(--tracking-title);
 }
 
-.definition {
+/*
+ * 선이 앉는 자리. 이 개념을 설명하는 것은 여기다.
+ *
+ * 만질 수 있는 폭을 확보하되 선 자체는 그대로 둔다. 크게 그리면 그래픽이 되고,
+ * 그래픽이 되는 순간 '무슨 일이 일어나는지 보라'는 신호가 사라진다.
+ */
+.figure {
   display: flex;
-  align-items: baseline;
-  gap: clamp(14px, 2vw, 22px);
-  margin-top: clamp(16px, 2vw, 26px);
+  align-items: center;
+  width: fit-content;
+  min-height: 44px;
+  margin-top: clamp(20px, 2.6vw, 32px);
+  /* 흘러 나가는 점이 판 밖으로 나가도 세로 스크롤은 그대로 넘긴다. */
+  touch-action: pan-y;
+}
+
+/* 문장은 선 아래에 물러나 앉는다. 크기로 주장하지 않는다. */
+.definition {
+  margin-top: clamp(14px, 1.8vw, 20px);
   max-width: var(--measure);
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
   font-size: var(--text-body);
+  line-height: 1.6;
   text-wrap: balance;
 }
 
@@ -30,20 +45,35 @@
   text-align: right;
 }
 
+.head[data-kind='thread'] .figure {
+  margin-left: auto;
+}
+
 .head[data-kind='thread'] .definition {
   /* 글줄 길이만큼만 차지해야 오른쪽 끝에 정말로 붙는다. */
   width: fit-content;
   margin-left: auto;
 }
 
+/* 손가락에는 hover가 없으므로 찍었을 때도 같은 일이 일어난다. */
+.figure[data-touched='true'] :global(.kindRunner) {
+  opacity: 1;
+  /* 오른쪽 벽에 닿아 멈춘다. 벽과 겹치지 않도록 한 칸 앞에서 선다. */
+  transform: translateX(58px);
+}
+
+.figure[data-touched='true'] :global(.kindTrail) {
+  transform: translateX(8px);
+  opacity: 0.35;
+}
+
 @media (hover: hover) {
-  .definition:hover :global(.kindRunner) {
+  .figure:hover :global(.kindRunner) {
     opacity: 1;
-    /* 오른쪽 벽에 닿아 멈춘다. 벽과 겹치지 않도록 한 칸 앞에서 선다. */
     transform: translateX(58px);
   }
 
-  .definition:hover :global(.kindTrail) {
+  .figure:hover :global(.kindTrail) {
     transform: translateX(8px);
     opacity: 0.35;
   }

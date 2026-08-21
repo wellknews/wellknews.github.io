@@ -1,5 +1,10 @@
+/*
+ * 색면으로 바닥을 막지 않는다. 판면 뒤의 색은 페이지 끝까지 그대로 이어지고,
+ * 나가는 문이 있다는 것만 얇은 선 하나로 알린다. 여기서 상자를 하나 칠하면
+ * 공간이 '끝난' 것이 되는데, 이 공간은 끝나지 않는다.
+ */
 .footer {
-  background: var(--color-surface);
+  border-top: 1px solid var(--color-line);
 }
 
 .inner {

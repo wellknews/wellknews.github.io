@@ -28,6 +28,26 @@
   line-height: 1;
 }
 
+/*
+ * 페이지가 바뀔 때마다 잉크가 한 번 다시 앉는다.
+ *
+ * 저절로 도는 애니메이션이 아니다 — 사람이 링크를 눌렀을 때만 일어난다.
+ * 본문이 페이드로 바뀌는 것과 같은 계기이고, 같은 시간을 쓴다.
+ */
+@keyframes mark-reink {
+  from {
+    opacity: 0.25;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.ink {
+  animation: mark-reink var(--dur-base) var(--ease-out) both;
+}
+
 /* 홈도 SESSION·THREAD와 같은 방식으로 현재 위치를 남긴다. */
 .mark::after {
   content: '';

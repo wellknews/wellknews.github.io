@@ -197,12 +197,19 @@ Avoid: wellness or lifestyle cliché, coffee-and-notebook stock photo, fake arch
 technical blueprint aesthetic, dramatic cinema lighting, glossy CGI, heavy film grain, fake typography
 ```
 
-## `public/media/semicolon-interval-cool.webp`
+## `public/media/semicolon-interval-cool.webp` (인터페이스에서 내려옴)
 
 2026-08-21에 위 정물의 은유와 구도를 유지하되 색온도와 조명만 청량하게 바꾸는 편집을
 Codex 내장 ImageGen으로 수행했다. 캐시된 warm study와 구분하기 위해 새 파일명을 쓰며,
 `semicolon-interval-cool-mobile.webp`는 같은 결과의 중앙 4:5 크롭이다. 공유 카드도 캐시를
 분리한 `public/semicolon-og-cool.png`로 생성한다.
+
+같은 날 SEMICOLON이 Interactive Gradient Minimalism으로 방향을 되돌리면서 이 정물은
+홈에서 내려왔다. 파일은 지우지 않는다 — `npm run assets`가 공유 카드를 합성할 때 쓰는
+배경판으로 남고, 모바일 크롭은 아카이브 자산이다. Hero에 정물을 놓으면 사람이 `;`보다
+그림을 먼저 해석하게 되고, 그 순간 이 공간은 스스로 의미를 전달하는 인터페이스가 아니라
+그림의 뜻을 풀어야 하는 웹사이트가 된다. 생성 이미지는 SEMICOLON을 도울 수는 있어도
+SEMICOLON을 정의하지는 않는다.
 
 ```text
 Use case: lighting-weather

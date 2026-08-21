@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 
+import { Field } from './components/Field'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { semicolon } from './content/site'
@@ -11,7 +12,7 @@ import { SessionEntry } from './pages/SessionEntry'
 import { SessionIndex } from './pages/SessionIndex'
 import { ThreadEntry } from './pages/ThreadEntry'
 import { ThreadIndex } from './pages/ThreadIndex'
-import { useRoute, type Route } from './router'
+import { routeKey, useRoute, type Route } from './router'
 
 function render(route: Route) {
   switch (route.kind) {
@@ -55,15 +56,10 @@ function titleOf(route: Route): string {
   }
 }
 
-/** 페이드를 다시 재생시키기 위한 키. 같은 페이지 안에서는 바뀌지 않는다. */
-function keyOf(route: Route): string {
-  return 'slug' in route ? `${route.kind}/${route.slug}` : route.kind
-}
-
 export default function App() {
   const route = useRoute()
-  const routeKey = keyOf(route)
-  const previousRoute = useRef(routeKey)
+  const key = routeKey(route)
+  const previousRoute = useRef(key)
   const mainRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -76,16 +72,16 @@ export default function App() {
    * 첫 진입 때는 초점을 빼앗지 않고, 실제 라우트 전환 뒤에만 새 본문 시작점으로 옮긴다.
    */
   useEffect(() => {
-    if (previousRoute.current === routeKey) return
+    if (previousRoute.current === key) return
 
-    previousRoute.current = routeKey
+    previousRoute.current = key
 
     const frame = window.requestAnimationFrame(() => {
       mainRef.current?.focus({ preventScroll: true })
     })
 
     return () => window.cancelAnimationFrame(frame)
-  }, [routeKey])
+  }, [key])
 
   return (
     <>
@@ -93,13 +89,16 @@ export default function App() {
         본문으로 건너뛰기
       </a>
 
+      {/* 판면 뒤에 깔린 색. 이 공간의 재료이자, 사람이 움직일 때 반응하는 유일한 배경. */}
+      <Field />
+
       <Header route={route} />
 
       {/*
         페이지가 바뀔 때만 짧게 페이드된다. 화려한 전환을 두지 않는 이유는
         전환 자체가 눈에 띄는 순간 이 공간이 표현하려던 속도가 사라지기 때문이다.
       */}
-      <main id="main" ref={mainRef} tabIndex={-1} key={routeKey} className="fade">
+      <main id="main" ref={mainRef} tabIndex={-1} key={key} className="fade">
         {render(route)}
       </main>
 

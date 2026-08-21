@@ -64,6 +64,16 @@ export const path = {
   thread: (slug: string) => `${BASE}/thread/${slug}`,
 }
 
+/**
+ * 라우트 하나를 가리키는 문자열.
+ *
+ * 같은 화면 안에서는 바뀌지 않고 실제로 페이지가 바뀔 때만 바뀐다. 전환에
+ * 맞춰 무언가를 다시 재생시켜야 하는 곳에서 이 값을 key로 쓴다.
+ */
+export function routeKey(route: Route): string {
+  return 'slug' in route ? `${route.kind}/${route.slug}` : route.kind
+}
+
 export function navigate(to: string) {
   if (to === window.location.pathname) return
 
