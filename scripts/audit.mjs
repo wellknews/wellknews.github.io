@@ -591,7 +591,14 @@ async function waitForServer(url, tries = 60) {
 const dir = await mkdtemp(join(tmpdir(), 'semicolon-audit-'))
 let server
 
-if (!(await waitForServer(`${BASE}/`, 1))) {
+if (await waitForServer(`${BASE}/`, 1)) {
+  /*
+   * 이미 떠 있는 서버를 그대로 쓴다. 대신 그 사실을 밝힌다 — 오래 띄워 둔
+   * 서버는 모듈 그래프가 낡아 있을 수 있고, 그러면 코드가 멀쩡한데도 요청이
+   * 무더기로 실패한다. 결과가 이상하면 서버를 내리고 다시 돌리면 된다.
+   */
+  console.log(`포트 ${PORT}에 이미 떠 있는 서버를 쓴다. (결과가 이상하면 내리고 다시 돌린다)`)
+} else {
   console.log(`개발 서버를 띄운다 (포트 ${PORT})…`)
   server = spawn('npx', ['vite', '--port', String(PORT), '--strictPort'], { stdio: 'ignore' })
   if (!(await waitForServer(`${BASE}/`))) {
