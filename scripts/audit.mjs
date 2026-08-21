@@ -20,7 +20,10 @@
  *                   안 된다. 손으로 세어 확인하던 것을 여기로 옮겼다.
  *   4. 안 열린 글   움직임을 끈 사람에게 모든 문장이 실제로 보이는지.
  *                   스크롤로 열리는 글은 그 사람에게는 열리지 않는다.
- *   5. 가로 넘침    어느 폭에서도 가로로 밀리지 않는지.
+ *   5. 한 번뿐인 장면  사건으로 만든 장면을 지나갔다 돌아왔을 때 다시 볼 수
+ *                   있는지. 한 번 켜고 관찰을 끊어 버리면, 빠르게 지나간
+ *                   사람은 그 장면을 영영 못 본다.
+ *   6. 가로 넘침    어느 폭에서도 가로로 밀리지 않는지.
  *
  * 실행: npm run audit   (개발 서버가 떠 있어야 한다. 없으면 알아서 띄운다.)
  */
@@ -473,7 +476,93 @@ async function auditReducedMotion(page, screen, pageName) {
   }
 }
 
-/* ─────────────────────────────  5. 가로 넘침  ───────────────────────────── */
+/* ─────────────────────────────  5. 한 번뿐인 장면  ───────────────────────────── */
+
+/**
+ * 사건으로 만든 장면이 다시 볼 수 있는 상태인지.
+ *
+ * 999가 1,000이 되는 것처럼 «변화 자체가 내용»인 장면은, 한 번 지나가면 다시
+ * 볼 방법이 없어지기 쉽다. 관성 스크롤로 빠르게 지나간 사람은 바뀐 뒤의 숫자만
+ * 보고 무슨 일이 일어났는지 모른 채로 남는다. 돌아왔을 때 처음이어야 한다.
+ *
+ * 세 가지를 본다. 들어오면 켜지는가, 경계에서 깜빡이지 않는가(일부만 보이는
+ * 동안에는 켜진 채로 있어야 한다), 완전히 벗어났다 돌아오면 다시 일어나는가.
+ */
+const REPLAYS = [
+  {
+    page: 'session',
+    label: '999 → 1,000 장면',
+    target: '[class*="Counter-module__counter"]',
+    read: (el) => el.dataset.reached,
+  },
+  {
+    page: 'session',
+    label: '끝의 기호',
+    target: '[class*="Ending-module__ending"]',
+    read: (el) => el.dataset.open,
+  },
+]
+
+async function auditReplay(page, screen, pageName) {
+  for (const scene of REPLAYS.filter((r) => r.page === pageName)) {
+    const target = page.locator(scene.target).first()
+
+    if ((await target.count()) === 0) continue
+
+    const state = async () => page.evaluate(scene.read, await target.elementHandle())
+    const subject = `${scene.label}${josa(scene.label, '이', '가')}`
+
+    /* 1. 들어오면 켜진다. */
+    await target.scrollIntoViewIfNeeded()
+    await page.waitForTimeout(900)
+
+    if ((await state()) !== 'true') {
+      fail(`${screen.name} ${subject} 화면 가운데 와도 일어나지 않는다.`)
+      continue
+    }
+
+    /* 2. 살짝 물러나 일부만 보이는 동안에는 켜진 채로 있어야 한다. */
+    await target.evaluate((el) => {
+      const top = el.getBoundingClientRect().top + window.scrollY
+
+      /* 아래쪽 20px만 화면에 걸치게 둔다. 아직 사라진 것은 아니다. */
+      window.scrollTo(0, top - window.innerHeight + 20)
+    })
+    await page.waitForTimeout(900)
+
+    if ((await state()) !== 'true') {
+      fail(
+        `${screen.name} ${subject} 조금 물러났을 뿐인데 처음으로 돌아간다 — ` +
+          `경계에서 껐다 켜지면 사건이 아니라 깜빡이는 화면이 된다.`,
+      )
+      continue
+    }
+
+    /* 3. 완전히 벗어났다 돌아오면 다시 일어난다. */
+    await page.evaluate(() => window.scrollTo(0, 0))
+    await page.waitForTimeout(900)
+
+    if ((await state()) !== 'false') {
+      fail(
+        `${screen.name} ${subject} 지나가고 나면 다시 볼 수 없다 — ` +
+          `되감아 올려도 처음으로 돌아가지 않는다(useInView의 replay).`,
+      )
+      continue
+    }
+
+    await target.scrollIntoViewIfNeeded()
+    await page.waitForTimeout(900)
+
+    if ((await state()) !== 'true') {
+      fail(`${screen.name} ${subject} 되돌아간 뒤 다시 내려가도 일어나지 않는다.`)
+      continue
+    }
+
+    pass(`${screen.name} ${subject} 지나갔다 돌아오면 다시 일어난다`)
+  }
+}
+
+/* ─────────────────────────────  6. 가로 넘침  ───────────────────────────── */
 
 async function auditOverflow(page, screen, pageName) {
   const over = await page.evaluate(
@@ -550,6 +639,8 @@ for (const screen of SCREENS) {
     await auditDevices(page, screen, target.name, dir)
 
     collected.set(target.name, await page.evaluate(HARVEST))
+
+    await auditReplay(page, screen, target.name)
 
     if (target.name === 'session') await auditClipping(page, screen, dir)
   }

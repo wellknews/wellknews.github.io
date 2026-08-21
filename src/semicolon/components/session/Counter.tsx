@@ -15,7 +15,7 @@ import styles from './Counter.module.css'
  * 보여 주는 그림이지 읽어야 할 정보가 아니다.
  */
 export function Counter() {
-  const { ref, inView } = useInView<HTMLDivElement>({ amount: 0.6 })
+  const { ref, inView } = useInView<HTMLDivElement>({ amount: 0.6, replay: true })
 
   return (
     <div className={styles.counter} ref={ref} data-reached={inView}>

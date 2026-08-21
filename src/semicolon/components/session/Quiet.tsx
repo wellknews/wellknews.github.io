@@ -22,7 +22,7 @@ type Props = {
  * 지나가면 색은 천천히 돌아온다. 이 구간이 이 기록의 끝은 아니기 때문이다.
  */
 export function Quiet({ children }: Props) {
-  const { ref, inView } = useInView<HTMLDivElement>({ amount: 0.3, once: false })
+  const { ref, inView } = useInView<HTMLDivElement>({ amount: 0.3, replay: true })
 
   useQuiet(inView)
 

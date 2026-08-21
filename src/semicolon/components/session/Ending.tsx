@@ -16,7 +16,7 @@ import styles from './Ending.module.css'
  * 훨씬 깨끗하고, 실제로 일어나는 일도 그쪽에 가깝다.
  */
 export function Ending() {
-  const { ref, inView } = useInView<HTMLDivElement>({ amount: 0.8 })
+  const { ref, inView } = useInView<HTMLDivElement>({ amount: 0.8, replay: true })
 
   return (
     <div className={styles.ending} ref={ref} data-open={inView}>
