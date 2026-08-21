@@ -17,23 +17,6 @@
 }
 
 /*
- * 흰 바탕에 오려 놓은 컷은 종이 위에 곱하기로 얹는다.
- * 흰 배경이 종이색이 되어 사라지고, 인쇄된 것처럼 지면의 일부가 된다.
- *
- * 섞일 바탕을 이 상자가 직접 갖는다. mix-blend-mode는 가장 가까운 쌓임
- * 맥락 안의 배경과만 섞이는데, 본문(main)이 이미 쌓임 맥락이라 그 안에서는
- * 섞일 것이 없다. 종이색을 여기 깔고 그 위에서 섞는다.
- */
-.materialize[data-paper='true'] {
-  background: var(--color-bg);
-  isolation: isolate;
-}
-
-.materialize[data-paper='true'] img {
-  mix-blend-mode: multiply;
-}
-
-/*
  * 아직 다 존재하지 않는 상태.
  *
  * 형태는 있지만 무엇인지 단정할 수 없다. 이 값이 0에 가까우면 사람이

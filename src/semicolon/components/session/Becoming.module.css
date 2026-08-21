@@ -20,16 +20,6 @@
   height: auto;
 }
 
-/* 흰 바탕에 오려 놓은 컷은 종이 위에 곱하기로 얹는다. */
-.paper {
-  background: var(--color-bg);
-  isolation: isolate;
-}
-
-.paper img {
-  mix-blend-mode: multiply;
-}
-
 /*
  * 여기서부터가 연출이다.
  *

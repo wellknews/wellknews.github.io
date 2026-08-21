@@ -2,9 +2,6 @@
   position: relative;
   display: grid;
   grid-template-areas: 'stack';
-  /* 곱하기가 섞일 바탕. 자세한 이유는 Materialize.module.css에 적어 두었다. */
-  background: var(--color-bg);
-  isolation: isolate;
 }
 
 .face {
@@ -13,11 +10,6 @@
   width: 100%;
   height: auto;
   transition: opacity var(--dur-base) var(--ease-out);
-}
-
-/* 흰 바탕에 오려 놓은 컷은 종이 위에 곱하기로 얹는다. */
-.paper {
-  mix-blend-mode: multiply;
 }
 
 /* 뒤집는 것이지 넘기는 것이 아니다. 자리를 옮기지 않고 잉크만 바꾼다. */

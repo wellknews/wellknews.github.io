@@ -19,37 +19,38 @@ import type { Cover, Session } from '../types'
  * 전부 실제로 이 일에 있었던 것들이다. 분위기를 만들려고 새로 만든 그림은
  * 한 장도 없다. 시안 두 장은 업체에 실제로 보낸 파일이라 이 사건의 기록이고,
  * 나머지 두 장은 도착한 물건과 그것을 입은 모습이다.
+ *
+ * 시안은 배경이 투명하다. 그래서 종이 위에 그대로 얹으면 흰 사각형이 생기지
+ * 않고, 판면 뒤의 색면이 티셔츠 주위로 그대로 비쳐 보인다.
  */
 const mockupFront: Cover = {
-  src: '/media/session/1k/mockup-front.png',
-  alt: '검은 티셔츠 앞면 시안. 왼쪽 가슴에 흰 선으로 그린 토끼 얼굴이 있다.',
+  src: '/media/session/1k/mockup-front.webp',
+  alt: '검은 반팔 티셔츠 앞면 시안. 왼쪽 가슴에 흰 선으로 그린 토끼 얼굴이 작게 들어가 있다.',
   width: 800,
   height: 800,
-  onPaper: true,
   /* 화면 안에 있던 것 중 실제로 옷으로 옮겨간 부분. */
   focus: { x: 0.6, y: 0.33 },
 }
 
 const mockupBack: Cover = {
-  src: '/media/session/1k/mockup-back.png',
-  alt: '검은 티셔츠 뒷면 시안. 등 위쪽에 흰 대문자로 WELLKNEWS라고 적혀 있다.',
+  src: '/media/session/1k/mockup-back.webp',
+  alt: '같은 티셔츠 뒷면 시안. 등 위쪽에 흰 산세리프 대문자로 WELLKNEWS라고 적혀 있다.',
   width: 800,
   height: 800,
-  onPaper: true,
 }
 
 const packaged: Cover = {
-  src: '/media/session/1k/package.jpg',
-  alt: '비닐에 넣어 접힌 채 마루에 놓인 검은 티셔츠. 목 안쪽에 제조사 라벨이 보인다.',
-  width: 2000,
-  height: 1500,
+  src: '/media/session/1k/package.webp',
+  alt: '투명 비닐에 넣어 접힌 채 나무 바닥에 놓인 검은 티셔츠. 목 안쪽에 제조사 라벨이 보인다.',
+  width: 1600,
+  height: 1200,
 }
 
 const worn: Cover = {
-  src: '/media/session/1k/worn.jpg',
-  alt: '거울 앞에서 그 티셔츠를 입고 휴대폰으로 찍은 사진. 왼쪽 가슴의 토끼 얼굴이 보인다.',
-  width: 1128,
-  height: 1440,
+  src: '/media/session/1k/worn.webp',
+  alt: '회색 벽 앞에서 그 티셔츠를 입고 거울로 찍은 사진. 왼쪽 가슴의 토끼 얼굴이 보인다.',
+  width: 1122,
+  height: 1402,
 }
 
 /**

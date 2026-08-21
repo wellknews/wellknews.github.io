@@ -79,7 +79,7 @@ export function Faces({ front, back }: Props) {
   return (
     <div className={styles.faces} data-back={showBack}>
       <img
-        className={`${styles.face}${front.onPaper ? ` ${styles.paper}` : ''}`}
+        className={styles.face}
         src={front.src}
         alt={front.alt}
         width={front.width}
@@ -89,7 +89,7 @@ export function Faces({ front, back }: Props) {
       />
 
       <img
-        className={`${styles.face} ${styles.reverse}${back.onPaper ? ` ${styles.paper}` : ''}`}
+        className={`${styles.face} ${styles.reverse}`}
         src={back.src}
         alt={back.alt}
         width={back.width}

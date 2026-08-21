@@ -25,7 +25,7 @@ type Props = {
 export function Becoming({ from, to }: Props) {
   return (
     <div className={styles.becoming}>
-      <figure className={`${styles.frame} ${styles.from}${from.onPaper ? ` ${styles.paper}` : ''}`}>
+      <figure className={`${styles.frame} ${styles.from}`}>
         <img
           src={from.src}
           alt={from.alt}
@@ -36,7 +36,7 @@ export function Becoming({ from, to }: Props) {
         />
       </figure>
 
-      <figure className={`${styles.frame} ${styles.to}${to.onPaper ? ` ${styles.paper}` : ''}`}>
+      <figure className={`${styles.frame} ${styles.to}`}>
         <img
           src={to.src}
           alt={to.alt}

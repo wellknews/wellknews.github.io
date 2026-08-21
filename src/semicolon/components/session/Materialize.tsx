@@ -118,7 +118,6 @@ export function Materialize({ image, focus, rest }: Props) {
       className={styles.materialize}
       ref={hostRef}
       data-lit="false"
-      data-paper={image.onPaper === true}
       style={rest === undefined ? undefined : ({ '--rest': rest } as CSSProperties)}
       onPointerMove={handleMove}
       onPointerDown={handleDown}
