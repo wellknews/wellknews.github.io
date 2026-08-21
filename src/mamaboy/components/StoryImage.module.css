@@ -7,7 +7,12 @@
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-mask);
-  background: color-mix(in srgb, var(--ink) 5%, var(--color-surface));
+  /*
+   * 깊이 Level 1 — 콘텐츠. 아주 약한 그림자만 갖는다. 이 판이 떠 보이기
+   * 시작하면 젤·유리와 같은 층으로 읽히고, 그러면 깊이 체계가 무너진다.
+   */
+  box-shadow: var(--shadow-content);
+  background: color-mix(in srgb, var(--ink) 4%, var(--surface-clean));
 }
 
 .image {
@@ -15,7 +20,7 @@
   height: 100%;
   object-fit: cover;
   /* hover에서 이미지를 확대하지 않는다. 움직이는 것은 표면의 광택뿐이다(§39). */
-  transition: filter var(--dur-soft) var(--ease-soft);
+  transition: filter var(--dur-micro-slow) var(--ease-soft);
 }
 
 /* 표면이 살아 있다는 감각만 준다. 밝기를 1% 올리는 정도. */

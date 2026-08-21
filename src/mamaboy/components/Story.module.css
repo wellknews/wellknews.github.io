@@ -51,6 +51,7 @@
 
 .featureTitle {
   margin: 0;
+  font-family: var(--font-editorial);
   font-size: var(--text-feature);
   font-weight: var(--weight-display);
   line-height: 1.02;
@@ -89,6 +90,7 @@
 
 .standardTitle {
   margin: 0;
+  font-family: var(--font-editorial);
   font-size: var(--text-standard);
   font-weight: var(--weight-headline);
   line-height: 1.18;
@@ -106,12 +108,13 @@
   padding-top: 14px;
   border-top: 1px solid var(--color-line);
   transition:
-    border-color var(--dur-base) var(--ease-touch),
+    border-color var(--dur-micro) var(--ease-touch),
     transform var(--dur-touch) var(--ease-touch);
 }
 
 .briefTitle {
   margin: 0;
+  font-family: var(--font-editorial);
   font-size: var(--text-brief);
   font-weight: var(--weight-medium);
   line-height: 1.32;

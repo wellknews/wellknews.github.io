@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react'
 
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
-import { Temperature } from './components/Temperature'
+import { Ambient } from './components/Ambient'
 import { findArticle } from './content/feed'
-import { axisOf, mamaboy } from './content/site'
+import { mamaboy } from './content/site'
 import { title as titleOf } from './services/present'
 import { ArticlePage } from './pages/ArticlePage'
 import { CategoryPage } from './pages/CategoryPage'
@@ -12,7 +12,7 @@ import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { SourcesPage } from './pages/SourcesPage'
 import { routeKey, useRoute, type Route } from './router'
-import type { Axis } from './content/types'
+import type { Material } from './content/types'
 
 function render(route: Route) {
   switch (route.kind) {
@@ -51,18 +51,18 @@ function documentTitle(route: Route): string {
 }
 
 /**
- * 지금 지면이 기울어 있는 쪽(§39).
+ * 지금 지면의 공기가 기울어 있는 쪽(§12).
  *
- * 홈은 어느 쪽도 아니다 — 두 축의 공존이 이 매거진의 정체성이라 첫 화면에서
- * 한쪽으로 기울면 안 된다.
+ * 홈은 어느 쪽도 아니다 — 두 성격의 공존이 이 매거진의 정체성이라 첫 화면에서
+ * 한쪽 소재로 기울면 안 된다.
  */
-function axisOfRoute(route: Route): Axis | null {
-  if (route.kind === 'category') return axisOf(route.category)
+function materialOf(route: Route): Material | null {
+  if (route.kind === 'category') return mamaboy.categories[route.category].material
 
   if (route.kind === 'article') {
     const article = findArticle(route.slug)
 
-    return article ? axisOf(article.category) : null
+    return article ? mamaboy.categories[article.category].material : null
   }
 
   return null
@@ -101,7 +101,7 @@ export default function App() {
         본문으로 건너뛰기
       </a>
 
-      <Temperature axis={axisOfRoute(route)} />
+      <Ambient material={materialOf(route)} />
 
       <Header route={route} />
 

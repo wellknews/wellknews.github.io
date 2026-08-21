@@ -1,4 +1,4 @@
-/* MAMABOY — 전역 타이포그래피 · 레이아웃 프리미티브 · 접근성 유틸리티 */
+/* MAMABOY — 전역 타이포그래피 · 소재 · 레이아웃 프리미티브 · 접근성 유틸리티 */
 
 html {
   color-scheme: light;
@@ -10,7 +10,8 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
 
-  font-family: var(--font-sans);
+  /* 본문은 읽기 위한 글꼴이 맡는다. 제목만 editorial로 올라간다. */
+  font-family: var(--font-reading);
   font-size: var(--text-body);
   font-weight: var(--weight-body);
   line-height: 1.65;
@@ -25,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-  /* 지면의 온도(색면)가 판면 밖으로 번져도 가로 스크롤이 생기지 않게 한다.
+  /* 오브젝트와 색면이 판면 밖으로 번져도 가로 스크롤이 생기지 않게 한다.
      clip은 hidden과 달리 스크롤 컨테이너를 만들지 않아 sticky 헤더가 살아 있다. */
   overflow-x: clip;
 }
@@ -63,6 +64,7 @@ body {
  * 대문자와 넓은 자간은 라틴 약어에만 준다. 한글이 섞이면 자간을 줄인다.
  */
 .label {
+  font-family: var(--font-editorial);
   font-size: var(--text-label);
   font-weight: var(--weight-headline);
   line-height: 1.2;
@@ -84,14 +86,40 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* ---------- 표면 ---------- */
+/* 제목은 grotesk가 맡는다. 국문이 섞이면 Pretendard가 이어받는다. */
+.editorial {
+  font-family: var(--font-editorial);
+  letter-spacing: var(--tracking-headline);
+}
+
+/* ---------- 소재 ----------
+ * CREAM PAPER → ORANGE GEL → LIQUID GLASS → CHROME LIGHT
+ *
+ * 넷을 아무 데나 섞지 않는다. 지면은 종이이고, 만질 수 있는 것만 젤이나 유리가
+ * 된다. Chrome은 그 둘의 가장자리에만 붙는 빛이지 독립된 소재가 아니다.
+ */
 
 /*
- * 이 공간의 유일한 '광택'.
+ * LIQUID GLASS.
  *
- * 카드마다 유리를 덮는 흔한 glassmorphism은 쓰지 않는다(§22). 표면 위를
- * 아주 약한 반사광 한 겹이 지나갈 뿐이고, 그 위치는 포인터가 정한다
- * (motion/useGloss). 포인터가 없으면 왼쪽 위에 고정된 채 조용히 있는다.
+ * 흔한 반투명 카드처럼 보이면 실패다. 조금 더 두껍고 젤리 같아야 하므로,
+ * 흐림 위에 위쪽 가장자리의 흰 선(chrome)과 아래쪽의 그림자를 함께 얹는다.
+ */
+.glass {
+  position: relative;
+  background: var(--surface-glass);
+  backdrop-filter: blur(18px) saturate(1.6);
+  box-shadow:
+    inset 0 1px 0 var(--glass-edge),
+    inset 0 -1px 0 var(--chrome-shade),
+    var(--shadow-float);
+}
+
+/*
+ * 표면 위를 지나가는 반사광(HARD LIGHT).
+ *
+ * 위치는 포인터가 정한다(motion/useGloss). 손가락에는 hover가 없으므로 굵은
+ * 포인터에서는 켜지 않고, 움직임을 줄인 사람에게도 붙이지 않는다.
  */
 .gloss {
   position: relative;
@@ -106,11 +134,11 @@ body {
   border-radius: inherit;
   background: radial-gradient(
     circle at var(--gx, 30%) var(--gy, 18%),
-    var(--gloss-high),
-    var(--gloss-low) 42%
+    var(--chrome-light),
+    transparent 45%
   );
   opacity: 0;
-  transition: opacity var(--dur-soft) var(--ease-soft);
+  transition: opacity var(--dur-micro-slow) var(--ease-soft);
   pointer-events: none;
   mix-blend-mode: soft-light;
 }
@@ -155,7 +183,7 @@ body {
   font-size: var(--text-meta);
   font-weight: var(--weight-medium);
   transform: translateY(-200%);
-  transition: transform var(--dur-base) var(--ease-touch);
+  transition: transform var(--dur-micro) var(--ease-touch);
 }
 
 .skip-link:focus-visible {
@@ -163,6 +191,7 @@ body {
   outline-offset: 2px;
 }
 
+/* 선택 영역에는 노랑을 쓴다. 글자는 그대로 잉크라 대비가 떨어지지 않는다. */
 ::selection {
   background: var(--select);
   color: var(--color-text);

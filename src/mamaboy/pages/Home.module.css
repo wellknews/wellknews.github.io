@@ -24,8 +24,10 @@
 .mark {
   width: auto;
   /* 헤더의 것보다 크지만 화면을 차지하지는 않는 크기. */
-  height: clamp(26px, 4.6vw, 56px);
+  height: clamp(28px, 5vw, 62px);
   color: var(--color-text);
+  /* 로고에서 유일하게 잉크가 아닌 자리. 떠 있는 반짝임 하나뿐이다. */
+  --wordmark-accent: var(--orange);
 }
 
 /*
@@ -33,6 +35,7 @@
  * 아래의 기사 배열이 이미 말한다.
  */
 .formula {
+  font-family: var(--font-editorial);
   color: var(--color-text-muted);
   font-size: var(--text-label);
   font-weight: var(--weight-headline);

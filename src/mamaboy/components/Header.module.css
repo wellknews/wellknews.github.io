@@ -2,10 +2,15 @@
   position: sticky;
   top: 0;
   z-index: var(--z-header);
-  background: color-mix(in srgb, var(--color-bg) 86%, transparent);
-  backdrop-filter: blur(20px) saturate(1.2);
+  /*
+   * 헤더는 떠 있는 유리가 아니라 종이의 연장이다. Liquid Glass는 만질 수 있는
+   * 것에만 준다(검색 필드, 언어 전환) — 화면 위에 늘 붙어 있는 판까지 유리로
+   * 만들면 «어디를 만질 수 있는가»라는 신호가 사라진다.
+   */
+  background: color-mix(in srgb, var(--color-bg) 84%, transparent);
+  backdrop-filter: blur(20px) saturate(1.3);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--dur-base) var(--ease-touch);
+  transition: border-color var(--dur-micro) var(--ease-touch);
 }
 
 .header[data-open='true'] {
@@ -30,6 +35,7 @@
 .mark {
   width: auto;
   height: clamp(15px, 1.5vw, 18px);
+  --wordmark-accent: var(--orange);
 }
 
 .nav {
@@ -44,6 +50,7 @@
 
 .link,
 .action {
+  font-family: var(--font-editorial);
   display: inline-flex;
   align-items: center;
   /* 터치 타깃 최소 44px */

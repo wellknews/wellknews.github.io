@@ -5,19 +5,13 @@ import styles from './Tag.module.css'
 /**
  * 카테고리 표시.
  *
- * 기사 카드에 반드시 있는 세 가지 중 하나다 — CATEGORY / TITLE / SOURCE·TIME(§27).
+ * 기사 카드에 반드시 있는 세 가지 중 하나다 — CATEGORY / TITLE / SOURCE·TIME.
  * 색을 칠한 알약으로 만들지 않는다. 다섯 개의 카테고리에 다섯 개의 색을 주면
- * 지면이 색으로 분류되고, 이 매거진이 섞으려던 것이 다시 갈라진다.
- * 대신 축(CARE/CURIOSITY)에 따라 앞의 점 하나만 색 온도를 바꾼다.
+ * 지면이 색으로 분류되고, 이 매거진이 섞으려던 것이 다시 갈라진다. 카테고리를
+ * 가르는 것은 색이 아니라 소재의 강도다 — 그것은 지면 전체가 맡는다(Ambient).
  */
 export function CategoryTag({ category }: { category: Category }) {
-  const { label, axis } = mamaboy.categories[category]
-
-  return (
-    <span className={`label ${styles.category}`} data-axis={axis}>
-      {label}
-    </span>
-  )
+  return <span className={`label ${styles.category}`}>{mamaboy.categories[category].label}</span>
 }
 
 /**

@@ -20,6 +20,18 @@ export type Category = 'skin' | 'body' | 'age' | 'play' | 'culture'
 export type Axis = 'care' | 'curiosity'
 
 /**
+ * 그 카테고리가 지면에서 강조하는 소재(§12).
+ *
+ *   clean   종이가 맑아진다 — SKIN · BODY
+ *   chrome  차가운 빛이 스친다 — AGE
+ *   gel     젤이 번진다 — PLAY · CULTURE
+ *
+ * 소재를 카테고리마다 새로 만들지 않는다. 팔레트도 물성도 하나이고,
+ * 여기서 정하는 것은 그 하나를 얼마나 세게 쓰는가뿐이다.
+ */
+export type Material = 'clean' | 'chrome' | 'gel'
+
+/**
  * 콘텐츠의 성격(§33).
  *
  * 건강 관련 정보가 들어오므로 연구 결과와 개인의 경험담을 같은 무게로 보여주지

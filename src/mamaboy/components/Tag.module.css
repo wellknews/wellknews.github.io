@@ -1,27 +1,28 @@
 .category {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   color: var(--color-text);
+  font-family: var(--font-editorial);
 }
 
 /*
- * 축의 온도. 핑크는 CARE, 블루는 CURIOSITY다.
- * 성별의 의미가 아니라는 것이 이 프로젝트의 전제이므로(§21), 색이 사람이 아니라
- * 태도를 가리키도록 라벨 옆의 점 하나에만 쓴다.
+ * 젤 점 하나(§21).
+ *
+ * 다섯 카테고리에 다섯 색을 주지 않는다. 그렇게 하면 MAMABOY보다 카테고리가
+ * 강해진다. 색은 하나뿐이고, 이 점은 분류가 아니라 브랜드의 물성을 나른다 —
+ * 위쪽 안쪽에 흰 하이라이트가 하나 박힌, 아주 작은 주황 젤 방울.
  */
 .category::before {
   content: '';
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--mama-pink);
-}
-
-.category[data-axis='curiosity']::before {
-  background: var(--boy-blue);
+  background:
+    radial-gradient(circle at 32% 28%, var(--chrome-light), transparent 46%), var(--surface-gel);
 }
 
 .type {
   color: var(--color-text-muted);
+  font-family: var(--font-editorial);
 }

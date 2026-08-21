@@ -11,7 +11,7 @@
  * 성별을 분류 기준으로 쓰지 않는다(§5). MEN / WOMEN / FOR HIM / FOR HER 같은
  * 라벨은 이 파일에 들어올 수 없다. BOY는 성별이 아니라 «아직 굳어지지 않은 상태»다.
  */
-import type { Axis, Category, ContentType, TranslationStatus } from './types'
+import type { Axis, Category, ContentType, Material, TranslationStatus } from './types'
 
 export const mamaboy = {
   name: 'mamaboy',
@@ -33,39 +33,52 @@ export const mamaboy = {
     editionLabel: 'TODAY',
   },
 
-  /** 다섯 개의 1차 분류(§8). 순서가 곧 헤더의 순서다. */
+  /**
+   * 다섯 개의 1차 분류. 순서가 곧 헤더의 순서다.
+   *
+   * axis는 지면을 섞을 때 쓰고(services/editorial), material은 그 카테고리에
+   * 들어갔을 때 판면의 공기가 어느 쪽으로 기우는지를 정한다(components/Ambient).
+   */
   categories: {
     skin: {
       label: 'SKIN',
+      material: 'clean',
       axis: 'care',
       title: '피부',
       definition: '스킨케어, 피부과학, 성분, 자외선, 피부 노화 연구.',
     },
     body: {
       label: 'BODY',
+      material: 'clean',
       axis: 'care',
       title: '몸',
       definition: '운동, 영양, 수면, 회복, 신체 건강.',
     },
     age: {
       label: 'AGE',
+      material: 'chrome',
       axis: 'care',
       title: '나이',
       definition: '노화 연구, longevity, 건강수명, 노화를 다루는 기술.',
     },
     play: {
       label: 'PLAY',
+      material: 'gel',
       axis: 'curiosity',
       title: '놀이',
       definition: '게임, 장난감, 캐릭터, 키덜트, 취미, 수집.',
     },
     culture: {
       label: 'CULTURE',
+      material: 'gel',
       axis: 'curiosity',
       title: '문화',
       definition: '세대 문화, 새로운 소비, 라이프스타일, 지금 생겨나는 취향.',
     },
-  } satisfies Record<Category, { label: string; axis: Axis; title: string; definition: string }>,
+  } satisfies Record<
+    Category,
+    { label: string; material: Material; axis: Axis; title: string; definition: string }
+  >,
 
   /** 두 개의 축. 화면을 나누지 않고 섞는 데 쓴다(§9). */
   axes: {
