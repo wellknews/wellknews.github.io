@@ -158,13 +158,14 @@ Avoid: detective cliché, crime scene, fingerprints, police imagery, neon, color
 stock-photo aesthetic, visual clutter
 ```
 
-## `public/media/semicolon-interval.webp`
+## SEMICOLON interval — initial warm study (superseded)
 
 2026-08-21에 Codex 내장 ImageGen으로 생성했다. 실제 SESSION이나 사건 기록이 아니라
 SEMICOLON의 “흐름 안에 삽입된 구간”을 재료로 표현한 홈 전용 편집 오브제다.
-`semicolon-interval-mobile.webp`는 같은 원본의 중앙 루프를 보존한 4:5 크롭이며,
+당시 `semicolon-interval-mobile.webp`는 같은 원본의 중앙 루프를 보존한 4:5 크롭이었으며,
 `scripts/build-assets.mjs`가 이 원본과 canonical 세미콜론 마크를 합성해
-`public/semicolon-og.png`를 만든다.
+공유 카드를 만들었다. 두 warm study 파일은 아래 cool revision으로 대체되어 현재 배포하지
+않는다.
 
 ```text
 Use case: stylized-concept
@@ -190,4 +191,37 @@ no real event, no desk props, no clocks, no newspapers, no screens, no UI, no co
 calibration marks, no grids, no watermark
 Avoid: wellness or lifestyle cliché, coffee-and-notebook stock photo, fake archival evidence,
 technical blueprint aesthetic, dramatic cinema lighting, glossy CGI, heavy film grain, fake typography
+```
+
+## `public/media/semicolon-interval-cool.webp`
+
+2026-08-21에 위 정물의 은유와 구도를 유지하되 색온도와 조명만 청량하게 바꾸는 편집을
+Codex 내장 ImageGen으로 수행했다. 캐시된 warm study와 구분하기 위해 새 파일명을 쓰며,
+`semicolon-interval-cool-mobile.webp`는 같은 결과의 중앙 4:5 크롭이다. 공유 카드도 캐시를
+분리한 `public/semicolon-og-cool.png`로 생성한다.
+
+```text
+Use case: lighting-weather
+Asset type: SEMICOLON homepage editorial hero plate, cool-color revision
+Input images: Image 1 is the edit target
+Primary request: change only the color temperature, light, and reflected color so the existing
+paper-loop still life feels crisp, refreshing, lucid, and cool rather than warm
+Scene/backdrop: preserve the exact seamless studio plane and all existing geometry; shift it to a very
+pale cool white with a restrained blue-gray cast
+Subject: preserve the exact single continuous archival paper strip, the central suspended loop, both
+landing points, natural torn edges, proportions, and placement
+Style/medium: preserve photorealistic premium editorial object photography and tactile paper fiber
+Composition/framing: preserve the exact camera angle, 3:2 framing, central loop safe area, negative
+space, and crop compatibility
+Lighting/mood: clean high-key north-window daylight around a cool 6500K impression; airy, clear,
+quiet, lightly aquatic; graphite-blue shadow with soft edges
+Color palette: glacial white, pale mist blue, faint transparent aqua and cool mint reflections;
+charcoal-blue shadow
+Materials/textures: preserve unprinted paper fiber, gentle creases, matte surface, natural imperfect
+edges
+Constraints: change only lighting, color temperature, reflections, and shadow hue; keep all geometry,
+composition, scale, focus, textures, and object count unchanged; no text, no letters, no punctuation,
+no logo, no people, no added props, no grid, no watermark
+Avoid: beige, cream, sepia, amber, yellow cast, peach, pink, blush, cozy sunlight, warm lifestyle mood,
+glossy CGI, dramatic contrast, saturated cyan
 ```

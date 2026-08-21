@@ -86,17 +86,6 @@ export function Hero({ ready }: Props) {
             />
             <span className={styles.wordmark}>{site.name}</span>
           </motion.div>
-
-          <motion.p
-            className={styles.signal}
-            variants={positioningVariants}
-            initial={prefersReduced ? false : 'hidden'}
-            animate={animationState}
-            aria-hidden="true"
-          >
-            <span className={styles.signalDot} />
-            VERIFY&nbsp;&nbsp;·&nbsp;&nbsp;CONTEXT&nbsp;&nbsp;·&nbsp;&nbsp;RECORD
-          </motion.p>
         </div>
 
         <div className={styles.bottom}>

@@ -3,7 +3,7 @@
 }
 
 .block[data-kind='session'] {
-  background: var(--color-surface-mint);
+  background: var(--color-surface-session);
 }
 
 .head {

@@ -50,8 +50,8 @@ const MARK = `
   <path d="M117 116 C 119 149 106 171 79 185 L 70 170 C 90 159 100 145 99 121 Z"/>
 `
 
-const SEMICOLON_BG = '#f7f4ee'
-const SEMICOLON_INK = '#111111'
+const SEMICOLON_BG = '#f4fafc'
+const SEMICOLON_INK = '#101820'
 
 /** 공유 카드 규격 */
 const OG_WIDTH = 1200
@@ -235,7 +235,7 @@ async function buildSemicolonTouchIcon() {
 
 /** 메신저 카드에도 홈의 '삽입된 구간' 이미지와 canonical 마크를 그대로 쓴다. */
 async function buildSemicolonOgImage() {
-  const background = await readFile(join(PUBLIC_DIR, 'media', 'semicolon-interval.webp'))
+  const background = await readFile(join(PUBLIC_DIR, 'media', 'semicolon-interval-cool.webp'))
   const mark =
     Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 200 200">
   <g fill="${SEMICOLON_INK}">${MARK}</g>
@@ -262,8 +262,8 @@ async function buildSemicolonOgImage() {
     .png({ compressionLevel: 9, palette: true, effort: 10 })
     .toBuffer()
 
-  await writeFile(join(PUBLIC_DIR, 'semicolon-og.png'), output)
-  console.log(`semicolon-og.png  ${OG_WIDTH}x${OG_HEIGHT}, ${output.length} bytes`)
+  await writeFile(join(PUBLIC_DIR, 'semicolon-og-cool.png'), output)
+  console.log(`semicolon-og-cool.png  ${OG_WIDTH}x${OG_HEIGHT}, ${output.length} bytes`)
 }
 
 const logo = await buildLogo()

@@ -41,12 +41,12 @@ export function Hero() {
         <picture className={styles.visual}>
           <source
             media="(max-width: 899px)"
-            srcSet="/media/semicolon-interval-mobile.webp"
+            srcSet="/media/semicolon-interval-cool-mobile.webp"
             width="900"
             height="1125"
           />
           <img
-            src="/media/semicolon-interval.webp"
+            src="/media/semicolon-interval-cool.webp"
             alt=""
             width="1536"
             height="1024"

@@ -10,24 +10,24 @@
 
 :root {
   /* ---------- Color ----------
-   * 본문은 무채색으로 고정한다. 괄호 안은 --color-bg 대비 명암비.
+   * 본문은 청흑색 단일 잉크로 고정한다. 괄호 안은 --color-bg 대비 명암비.
    */
-  --color-bg: #f7f4ee;
-  --color-surface: #eee9df;
-  --color-surface-mint: #edf2ee;
-  --color-text: #111111; /* 18.1:1 */
-  --color-text-secondary: #3d3d39; /* 11.4:1 — 리드 문장 */
-  --color-text-muted: #5e5e59; /* 6.2:1  — 메타데이터 (AA 통과) */
-  --color-line-strong: rgb(17 17 17 / 0.34);
+  --color-bg: #f4fafc;
+  --color-surface: #e6f2f5;
+  --color-surface-session: #eaf6f7;
+  --color-text: #101820; /* 16.98:1 */
+  --color-text-secondary: #2f474f; /* 9.33:1 — 리드 문장 */
+  --color-text-muted: #405c66; /* 6.78:1 — 메타데이터 */
+  --color-line-strong: rgb(16 24 32 / 0.5);
 
   /* ---------- Ink ----------
    * 색은 여기까지만 쓴다. 글자에는 얹지 않고, 오직
    *   · 글이 끝났다는 표시
    *   · 지금 있는 자리를 알리는 밑줄과 선택 영역
-   * 두 곳에만 등장한다. Hero의 색은 생성 이미지가 맡고 HTML 글자는 끝까지 검정이다.
+   * 두 곳에만 등장한다. Hero의 색은 생성 이미지가 맡고 HTML 글자는 끝까지 청흑색이다.
    */
-  --accent: #2f9e8a;
-  --select: rgb(150 230 212 / 0.62);
+  --accent: #006d82;
+  --select: rgb(169 228 234 / 0.72);
 
   /* ---------- Typography ----------
    * 두 종류만 쓴다.

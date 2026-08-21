@@ -73,25 +73,6 @@
   line-height: 1;
 }
 
-.signal {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 8px 0 0;
-  color: var(--color-text-secondary);
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: 0.12em;
-}
-
-.signalDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-signal);
-  box-shadow: 0 0 20px color-mix(in srgb, var(--color-signal) 65%, transparent);
-}
-
 .bottom {
   grid-row: 3;
   display: grid;
@@ -215,10 +196,6 @@
     font-size: 0.75rem;
   }
 
-  .signal {
-    display: none;
-  }
-
   .headline {
     max-width: none;
     font-size: clamp(3.35rem, 15.5vw, 4.75rem);
@@ -280,10 +257,6 @@
 
   .wordmark {
     font-size: 0.75rem;
-  }
-
-  .signal {
-    display: none;
   }
 
   .bottom {
