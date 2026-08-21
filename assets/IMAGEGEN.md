@@ -157,3 +157,37 @@ identifiable event, no watermark
 Avoid: detective cliché, crime scene, fingerprints, police imagery, neon, colorful gradients, glossy
 stock-photo aesthetic, visual clutter
 ```
+
+## `public/media/semicolon-interval.webp`
+
+2026-08-21에 Codex 내장 ImageGen으로 생성했다. 실제 SESSION이나 사건 기록이 아니라
+SEMICOLON의 “흐름 안에 삽입된 구간”을 재료로 표현한 홈 전용 편집 오브제다.
+`semicolon-interval-mobile.webp`는 같은 원본의 중앙 루프를 보존한 4:5 크롭이며,
+`scripts/build-assets.mjs`가 이 원본과 canonical 세미콜론 마크를 합성해
+`public/semicolon-og.png`를 만든다.
+
+```text
+Use case: stylized-concept
+Asset type: SEMICOLON homepage editorial hero plate
+Primary request: a quiet premium studio still life expressing a deliberate pause inserted into an
+otherwise continuous life
+Scene/backdrop: seamless warm ivory matte plane
+Subject: one long strip of blank heavyweight archival paper enters from the left, rises once into a
+generous suspended sculptural loop at the center, settles back onto the same plane, and continues out
+of the right edge without breaking
+Style/medium: photorealistic editorial object photography; tactile paper sculpture; restrained
+contemporary Korean design-magazine art direction
+Composition/framing: 3:2 landscape, low-oblique top view; keep the entire loop and both landing points
+inside the center 40% safe area; endpoints may exit the side edges; generous quiet field above and
+below; crop-safe for 16:9 and 4:5
+Lighting/mood: soft lateral daylight; precise graphite shadow; calm, contemplative, materially real
+Color palette: warm ivory and charcoal; one very faint mint reflection and a distant pale blush
+reflection only
+Materials/textures: visible unprinted paper fiber, gentle creases, matte surface, natural imperfect
+edges
+Constraints: no text, no letters, no punctuation glyphs, no logo, no people, no readable documents,
+no real event, no desk props, no clocks, no newspapers, no screens, no UI, no code, no rulers or
+calibration marks, no grids, no watermark
+Avoid: wellness or lifestyle cliché, coffee-and-notebook stock photo, fake archival evidence,
+technical blueprint aesthetic, dramatic cinema lighting, glossy CGI, heavy film grain, fake typography
+```

@@ -1,112 +1,105 @@
 .hero {
   position: relative;
-  border-bottom: 1px solid var(--color-line);
-}
-
-/*
- * 지면에 아주 옅게 깔리는 색. 경계가 보이면 실패한 것이라 반경을 크게 잡고
- * 두 색이 만나는 자리를 화면 밖으로 밀어낸다.
- */
-.wash {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(90% 85% at 10% 35%, var(--wash-mint) 0%, transparent 72%),
-    radial-gradient(80% 75% at 92% 88%, var(--wash-pink) 0%, transparent 74%);
 }
 
 .inner {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: min(80svh, 760px);
-  padding-block: clamp(28px, 4vw, 44px) clamp(28px, 4vw, 48px);
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 5vw, 72px);
+  min-height: min(82svh, 780px);
+  padding-block: clamp(36px, 5vw, 64px);
 }
 
-/* 이름과 주소를 한 줄로 묶는 머리. 사이의 괘선이 둘을 같은 행으로 만든다. */
+.copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 선 없이 양끝의 정보만 남긴다. 두 항목의 거리 자체가 한 행을 만든다. */
 .kicker {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 2vw, 24px);
+  justify-content: space-between;
+  gap: 24px;
   color: var(--color-text-muted);
 }
 
-/*
- * ';'와 문장을 같은 기준선 위에 세운다. 글자 상자를 손으로 깎아 맞추는 대신
- * 브라우저의 baseline 정렬에 맡기면, 글자 크기를 바꿔도 관계가 유지된다.
- */
-.stage {
+.statement {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: clamp(24px, 5vw, 88px);
-  padding-block: clamp(24px, 3vw, 48px);
+  flex-direction: column;
+  gap: clamp(42px, 6vh, 72px);
+  padding-top: clamp(72px, 10vh, 120px);
 }
 
 .mark {
-  flex-shrink: 0;
-  /* 판면선 바깥으로 조금 걸친다. 이 글자가 지면보다 크다는 뜻이다. */
   margin-left: -0.035em;
-  font-size: var(--text-mark);
+  font-size: clamp(11rem, 18vw, 17rem);
   font-weight: var(--weight-display);
-  line-height: 0.62;
+  line-height: 0.72;
   letter-spacing: -0.02em;
-  /* 세미콜론의 잉크는 글자 상자 아래쪽에만 있다. 위쪽 빈 공간을 걷어낸다. */
-  margin-top: -0.22em;
-  /*
-   * 글자에는 색을 얹지 않는다. 뒤에 색을 어긋나게 겹쳐 인쇄가 밀린 자리처럼
-   * 만들어 봤지만, 이만한 크기의 단단한 글자 뒤에서는 어떤 세기로 줄여도
-   * 입체 그림자로 읽혔다. 색은 뒤에 깔린 면이 맡고 글자는 끝까지 검정이다.
-   */
 }
 
 .line {
-  /* 글자는 왼쪽 끝, 문장은 오른쪽 끝. 그 사이의 빈 자리가 이 화면의 크기다. */
-  text-align: right;
-  margin-bottom: clamp(4px, 1.4vw, 24px);
-  font-size: var(--text-display);
+  margin-top: clamp(16px, 2vw, 28px);
+  max-width: 8.5em;
+  font-size: clamp(2.5rem, 4.4vw, 4rem);
   font-weight: var(--weight-display);
-  line-height: 1.16;
+  line-height: 1.14;
   letter-spacing: var(--tracking-title);
 }
 
 .row {
   display: block;
+  white-space: nowrap;
 }
 
-/* 판면의 아래를 닫는 행. 만질 수 있는 줄과, 아래에 더 있다는 표시. */
-.foot {
-  display: flex;
-  align-items: center;
-  gap: clamp(16px, 2.5vw, 32px);
-}
-
-.foot > :first-child {
-  flex: 1;
+.visual {
+  display: block;
   min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-bg);
 }
 
-.cue {
-  flex-shrink: 0;
-  color: var(--color-text-muted);
+.visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 899px) {
   .inner {
-    min-height: min(72svh, 620px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(32px, 9vw, 52px);
+    min-height: auto;
+    padding-block: clamp(32px, 9vw, 56px) clamp(48px, 12vw, 72px);
   }
 
-  .stage {
-    gap: clamp(16px, 5vw, 32px);
+  .copy {
+    gap: clamp(52px, 14vw, 88px);
+  }
+
+  .statement {
+    gap: clamp(34px, 9vw, 52px);
+    padding-top: 0;
+  }
+
+  .mark {
+    font-size: clamp(9rem, 40vw, 14rem);
   }
 
   .line {
-    text-align: left;
-    margin-bottom: 0;
-    margin-top: clamp(-16px, -2vw, -8px);
-    /* 글자 기둥에서 한 칸 들여 축을 어긋나게 유지한다. */
-    margin-left: clamp(10px, 5vw, 28px);
+    font-size: clamp(2.5rem, 12vw, 4.25rem);
+  }
+
+  .visual {
+    aspect-ratio: 4 / 5;
+  }
+
+  .visual img {
+    object-position: 50% 50%;
   }
 }

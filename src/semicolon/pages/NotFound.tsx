@@ -15,7 +15,6 @@ export function NotFound() {
       <div className={styles.head}>
         <p className={`mono ${styles.path}`}>
           <span>{currentPath()}</span>
-          <span className="rule" aria-hidden="true" />
         </p>
 
         {/* 이 화면의 제목은 숫자 세 자리다. 낭독에는 뜻을 덧붙인다. */}

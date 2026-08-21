@@ -28,7 +28,6 @@ export function SessionEntry({ slug }: Props) {
         <header className={styles.head}>
           <p className={`mono ${styles.path}`}>
             <span>{path.session(session.slug)}</span>
-            <span className="rule" aria-hidden="true" />
           </p>
 
           <h1 className={styles.title}>{session.title}</h1>

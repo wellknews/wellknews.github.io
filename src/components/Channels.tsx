@@ -29,9 +29,6 @@ export function Channels() {
               loading="lazy"
               decoding="async"
             />
-            <span className={styles.previewLabel}>
-              CHANNEL {String(activeChannel + 1).padStart(2, '0')}
-            </span>
           </div>
         </Reveal>
 

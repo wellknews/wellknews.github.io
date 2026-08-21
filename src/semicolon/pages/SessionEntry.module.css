@@ -1,6 +1,5 @@
 .head {
   padding-block: clamp(40px, 6vw, 88px) var(--space-block);
-  border-bottom: 1px solid var(--color-line);
 }
 
 .path {

@@ -41,10 +41,6 @@ export function Report({ href }: Props) {
               loading="lazy"
               decoding="async"
             />
-            <figcaption className={styles.visualCaption} aria-hidden="true">
-              <span>EVIDENCE DESK</span>
-              <span>{report.types.join(' · ')}</span>
-            </figcaption>
           </figure>
         </Reveal>
 

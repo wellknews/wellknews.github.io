@@ -24,10 +24,6 @@ export function About() {
               loading="lazy"
               decoding="async"
             />
-            <figcaption aria-hidden="true">
-              <span>EDITORIAL STANDARD</span>
-              <span>{about.principles.map((principle) => principle.term).join(' · ')}</span>
-            </figcaption>
           </figure>
         </Reveal>
       </div>

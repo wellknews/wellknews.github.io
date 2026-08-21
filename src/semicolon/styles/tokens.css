@@ -12,24 +12,20 @@
   /* ---------- Color ----------
    * 본문은 무채색으로 고정한다. 괄호 안은 --color-bg 대비 명암비.
    */
-  --color-bg: #fafaf8;
+  --color-bg: #f7f4ee;
+  --color-surface: #eee9df;
+  --color-surface-mint: #edf2ee;
   --color-text: #111111; /* 18.1:1 */
   --color-text-secondary: #3d3d39; /* 11.4:1 — 리드 문장 */
   --color-text-muted: #5e5e59; /* 6.2:1  — 메타데이터 (AA 통과) */
-  --color-line: rgb(17 17 17 / 0.13);
   --color-line-strong: rgb(17 17 17 / 0.34);
-  /* 지면을 감싸는 판면선. 본문 괘선보다 옅어야 구조로만 읽힌다. */
-  --color-frame: rgb(17 17 17 / 0.1);
 
   /* ---------- Ink ----------
    * 색은 여기까지만 쓴다. 글자에는 얹지 않고, 오직
-   *   · 히어로 뒤로 아주 옅게 깔리는 색면
    *   · 글이 끝났다는 표시
    *   · 지금 있는 자리를 알리는 밑줄과 선택 영역
-   * 세 곳에만 등장한다. 색을 전부 빼도 인상이 무너지지 않아야 한다.
+   * 두 곳에만 등장한다. Hero의 색은 생성 이미지가 맡고 HTML 글자는 끝까지 검정이다.
    */
-  --wash-mint: rgb(118 214 195 / 0.11);
-  --wash-pink: rgb(244 178 196 / 0.07);
   --accent: #2f9e8a;
   --select: rgb(150 230 212 / 0.62);
 
@@ -55,9 +51,6 @@
   --text-body: clamp(1.0625rem, 1rem + 0.28vw, 1.1875rem); /* 17 → 19px */
   --text-lead: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
   --text-title: clamp(2.25rem, 1.3rem + 4.2vw, 4.5rem);
-  --text-display: clamp(2.5rem, 1.1rem + 5.4vw, 5rem);
-  /* 히어로의 ';' 하나. 이 공간에서 가장 큰 그래픽 자산이다. */
-  --text-mark: clamp(12rem, 38vw, 30rem);
 
   /* 본문 무게. 가변 축이 있어 제목만 한 단계 올려 쓸 수 있다. */
   --weight-body: 400;
@@ -73,7 +66,7 @@
 
   /* ---------- Layout ---------- */
   --page-x: clamp(20px, 5vw, 72px);
-  --content-max: 1240px;
+  --content-max: 1320px;
   --header-h: 64px;
 
   --space-section: clamp(64px, 7.5vw, 108px);
@@ -93,7 +86,6 @@
   /* ---------- Z-index scale ---------- */
   --z-content: 1;
   --z-header: 50;
-  --z-frame: 60;
 }
 
 @media (prefers-reduced-motion: reduce) {

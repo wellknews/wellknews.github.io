@@ -3,9 +3,6 @@
 }
 
 .path {
-  display: flex;
-  align-items: center;
-  gap: clamp(14px, 2vw, 24px);
   color: var(--color-text-muted);
 }
 
@@ -37,7 +34,6 @@
   /* 글줄 길이만큼만 차지해야 오른쪽 끝에 정말로 붙는다. */
   width: fit-content;
   margin-left: auto;
-  margin-right: -16px;
 }
 
 @media (hover: hover) {
@@ -50,12 +46,5 @@
   .definition:hover :global(.kindTrail) {
     transform: translateX(8px);
     opacity: 0.35;
-  }
-}
-
-@media (max-width: 639px) {
-  .head[data-kind='thread'] .definition {
-    /* 좁은 화면에서는 여백 자체가 좁아 더 밀어낼 자리가 없다. */
-    margin-right: -8px;
   }
 }

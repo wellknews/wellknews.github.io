@@ -20,16 +20,6 @@
   background: var(--color-surface);
 }
 
-.previewFrame::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(to top, rgb(0 0 0 / 0.5), transparent 34%),
-    repeating-linear-gradient(0deg, transparent 0 3px, rgb(242 242 239 / 0.012) 3px 4px);
-}
-
 .atlas {
   width: 200%;
   max-width: none;
@@ -51,20 +41,6 @@
 
 .previewFrame[data-channel='3'] .atlas {
   transform: translate3d(-50%, -50%, 0);
-}
-
-.previewLabel {
-  position: absolute;
-  left: clamp(14px, 1.6vw, 24px);
-  bottom: clamp(12px, 1.4vw, 20px);
-  z-index: 1;
-  padding: 7px 9px;
-  background: color-mix(in srgb, var(--color-bg) 78%, transparent);
-  color: var(--color-text-secondary);
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: var(--tracking-label);
-  line-height: 1;
 }
 
 .list {
@@ -180,10 +156,6 @@
     height: 100%;
     transform: none;
     will-change: auto;
-  }
-
-  .previewLabel {
-    display: none;
   }
 
   .list {

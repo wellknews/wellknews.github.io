@@ -1,10 +1,9 @@
 .block {
   padding-block: var(--space-section);
-  border-bottom: 1px solid var(--color-line);
 }
 
-.block:last-of-type {
-  border-bottom: none;
+.block[data-kind='session'] {
+  background: var(--color-surface-mint);
 }
 
 .head {
@@ -42,6 +41,7 @@
   color: var(--color-text-muted);
   white-space: nowrap;
   transition: color var(--dur-fast) var(--ease-out);
+  margin-left: auto;
 }
 
 .more:focus-visible {
@@ -54,18 +54,9 @@
   }
 }
 
-/* 320px에서도 기호·이름·주소가 한 줄 안에 남도록 보조 괘선만 덜어낸다. */
+/* 320px에서도 기호·이름·주소가 한 줄 안에 남도록 간격만 압축한다. */
 @media (max-width: 479px) {
   .head {
     gap: 10px;
-  }
-
-  .head > :global(.rule),
-  .head > :global(.ruleOut) {
-    display: none;
-  }
-
-  .more {
-    margin-left: auto;
   }
 }

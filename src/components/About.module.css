@@ -34,16 +34,6 @@
   background: var(--color-bg);
 }
 
-.visual figure::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(0deg, rgb(0 0 0 / 0.66), transparent 28%),
-    repeating-linear-gradient(0deg, transparent 0 3px, rgb(242 242 239 / 0.012) 3px 4px);
-}
-
 .visual img {
   width: 100%;
   height: 100%;
@@ -51,19 +41,6 @@
   object-fit: cover;
   filter: saturate(0.72) contrast(1.04);
   transform: scale(1.006);
-}
-
-.visual figcaption {
-  position: absolute;
-  z-index: 1;
-  inset: auto clamp(18px, 2vw, 30px) clamp(18px, 2vw, 28px);
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  color: rgb(242 242 239 / 0.78);
-  font-family: var(--font-mono);
-  font-size: var(--text-label);
-  letter-spacing: 0.11em;
 }
 
 .principles {
@@ -162,12 +139,5 @@
 
   .term {
     font-size: clamp(3rem, 15vw, 5rem);
-  }
-}
-
-@media (max-width: 479px) {
-  .visual figcaption {
-    flex-direction: column;
-    gap: 5px;
   }
 }

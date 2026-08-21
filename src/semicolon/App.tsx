@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 
 import { Footer } from './components/Footer'
-import { Frame } from './components/Frame'
 import { Header } from './components/Header'
 import { semicolon } from './content/site'
 import { findSession } from './content/sessions'
@@ -93,8 +92,6 @@ export default function App() {
       <a className="skip-link" href="#main">
         본문으로 건너뛰기
       </a>
-
-      <Frame />
 
       <Header route={route} />
 

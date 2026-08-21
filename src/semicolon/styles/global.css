@@ -73,35 +73,6 @@ body {
 }
 
 /*
- * 라벨과 메타 사이를 잇는 괘선.
- *
- * 지면에서 이 선은 장식이 아니라 두 정보가 같은 줄에 속한다는 표시다.
- * 왼쪽의 개념 이름과 오른쪽의 주소를 하나의 행으로 묶는다.
- */
-.rule {
-  flex: 1;
-  height: 1px;
-  min-width: 24px;
-  background: var(--color-line);
-}
-
-/*
- * 끝나지 않는 줄.
- *
- * 양끝이 닫힌 괘선이 SESSION의 문법이라면, 이쪽은 THREAD의 문법이다.
- * 판면의 오른쪽 경계를 넘어 흘러 나가며 흐려진다. 어디서 끝나는지
- * 적지 않는 것이 이 개념에 대해 할 수 있는 가장 짧은 말이다.
- */
-.ruleOut {
-  flex: 1;
-  height: 1px;
-  min-width: 24px;
-  /* 판면선 바깥까지 나간다. 좁은 화면의 여백보다 짧게 잡아 가로 스크롤을 만들지 않는다. */
-  margin-right: -16px;
-  background: linear-gradient(to right, var(--color-line) 55%, transparent);
-}
-
-/*
  * 글이 끝났다는 표시.
  *
  * 인쇄물에서 기사 끝에 찍는 사각형과 같은 자리에 놓는다. 이 공간에서는
@@ -183,7 +154,7 @@ body {
   position: fixed;
   top: 12px;
   left: 12px;
-  z-index: calc(var(--z-frame) + 1);
+  z-index: calc(var(--z-header) + 1);
   padding: 15px 22px;
   background: var(--color-text);
   color: var(--color-bg);

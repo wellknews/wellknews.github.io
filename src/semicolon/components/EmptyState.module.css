@@ -1,24 +1,32 @@
 .empty {
-  display: grid;
-  grid-template-columns: var(--margin-col) minmax(0, 1fr);
-  align-items: center;
-  column-gap: clamp(20px, 3vw, 48px);
-  min-height: clamp(140px, 16vw, 200px);
-  border-top: 1px solid var(--color-line);
-  border-bottom: 1px solid var(--color-line);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(32px, 6vw, 88px);
+  min-height: clamp(150px, 16vw, 220px);
+  padding: clamp(28px, 4vw, 56px);
+  background: color-mix(in srgb, var(--color-bg) 58%, transparent);
+}
+
+.message {
+  max-width: 22ch;
+  color: var(--color-text-secondary);
+  font-size: var(--text-lead);
+  line-height: 1.45;
+  text-wrap: balance;
 }
 
 .mark {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 6vw, 6rem);
+  flex-shrink: 0;
+  font-size: clamp(3rem, 5vw, 5rem);
   line-height: 0.62;
-  color: rgb(17 17 17 / 0.13);
+  color: var(--accent);
 }
 
 @media (max-width: 767px) {
   .empty {
-    grid-template-columns: minmax(0, 1fr);
-    align-items: center;
-    min-height: clamp(120px, 26vw, 160px);
+    min-height: 144px;
+    padding: 24px;
   }
 }

@@ -50,7 +50,7 @@ const MARK = `
   <path d="M117 116 C 119 149 106 171 79 185 L 70 170 C 90 159 100 145 99 121 Z"/>
 `
 
-const SEMICOLON_BG = '#fafaf8'
+const SEMICOLON_BG = '#f7f4ee'
 const SEMICOLON_INK = '#111111'
 
 /** 공유 카드 규격 */
@@ -233,36 +233,32 @@ async function buildSemicolonTouchIcon() {
   console.log(`semicolon-touch.png  ${size}x${size}, ${output.length} bytes`)
 }
 
-/**
- * 메신저로 /; 링크가 오갈 때 뜨는 카드.
- *
- * 제목과 설명은 플랫폼이 메타태그에서 가져와 옆에 붙여 준다. 그래서 카드에는
- * 글자를 얹지 않고 마크와 판면선만 남긴다 — 사이트에서 쓰는 것과 같은 요소다.
- */
+/** 메신저 카드에도 홈의 '삽입된 구간' 이미지와 canonical 마크를 그대로 쓴다. */
 async function buildSemicolonOgImage() {
-  const inset = 72
-  const mark = 300
-  const tick = 9
+  const background = await readFile(join(PUBLIC_DIR, 'media', 'semicolon-interval.webp'))
+  const mark =
+    Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 200 200">
+  <g fill="${SEMICOLON_INK}">${MARK}</g>
+</svg>`)
+  const wash =
+    Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${OG_WIDTH}" height="${OG_HEIGHT}">
+  <defs>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="${SEMICOLON_BG}" stop-opacity="0.96" />
+      <stop offset="0.28" stop-color="${SEMICOLON_BG}" stop-opacity="0.72" />
+      <stop offset="0.62" stop-color="${SEMICOLON_BG}" stop-opacity="0.08" />
+      <stop offset="1" stop-color="${SEMICOLON_BG}" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#wash)" />
+</svg>`)
 
-  const corner = (x, y) =>
-    `<path d="M${x - tick} ${y} H${x + tick} M${x} ${y - tick} V${y + tick}"/>`
-
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${OG_WIDTH}" height="${OG_HEIGHT}" viewBox="0 0 ${OG_WIDTH} ${OG_HEIGHT}">
-  <rect width="${OG_WIDTH}" height="${OG_HEIGHT}" fill="${SEMICOLON_BG}"/>
-  <g stroke="${SEMICOLON_INK}" stroke-width="1" opacity="0.16" fill="none">
-    <path d="M${inset} 0 V${OG_HEIGHT} M${OG_WIDTH - inset} 0 V${OG_HEIGHT}"/>
-  </g>
-  <g stroke="${SEMICOLON_INK}" stroke-width="1" opacity="0.34" fill="none">
-    ${corner(inset, inset)}
-    ${corner(OG_WIDTH - inset, inset)}
-    ${corner(inset, OG_HEIGHT - inset)}
-    ${corner(OG_WIDTH - inset, OG_HEIGHT - inset)}
-  </g>
-  <g fill="${SEMICOLON_INK}" transform="translate(${inset + 48} ${(OG_HEIGHT - mark) / 2}) scale(${mark / 200})">${MARK}</g>
-</svg>
-`
-
-  const output = await sharp(Buffer.from(svg))
+  const output = await sharp(background)
+    .resize(OG_WIDTH, OG_HEIGHT, { fit: 'cover' })
+    .composite([
+      { input: wash, left: 0, top: 0 },
+      { input: mark, left: 76, top: 72 },
+    ])
     .png({ compressionLevel: 9, palette: true, effort: 10 })
     .toBuffer()
 

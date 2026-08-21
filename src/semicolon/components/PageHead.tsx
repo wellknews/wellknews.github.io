@@ -12,14 +12,8 @@ type Props = {
 }
 
 /**
- * 목록 페이지의 머리. 두 개념이 서로 반대편 축에 앉는다.
- *
- *   SESSION   왼쪽에 붙는다. 경로에서 시작해 괘선이 오른쪽 끝에서 멈춘다.
- *   THREAD    오른쪽으로 물러난다. 괘선은 왼쪽에서 흘러 들어오고,
- *             기호의 점들은 판면 밖으로 빠져나간다.
- *
- * 같은 부품을 순서만 바꿔 놓은 것이지만, 두 페이지를 나란히 보면 하나는
- * 닫혀 있고 하나는 열려 있다. 정형과 비정형의 차이가 곧 두 개념의 차이다.
+ * 목록 페이지의 머리. SESSION은 왼쪽 축에, THREAD는 오른쪽 축에 앉는다.
+ * 화면을 가로지르는 선 없이 위치와 기호만으로 정형과 비정형의 차이를 남긴다.
  *
  * 이 개념이 무엇인지 문장으로 밝히는 자리는 사이트 전체에서 여기 한 곳뿐이다.
  * 그래서 그 문장 옆에 기호를 나란히 세워 둔다 — 다른 화면에서 기호만 보게 될
@@ -31,9 +25,7 @@ export function PageHead({ kind, label, path, definition }: Props) {
   return (
     <header className={styles.head} data-kind={kind}>
       <p className={`mono ${styles.path}`}>
-        {ongoing ? <span className="rule" aria-hidden="true" /> : null}
         <span>{path}</span>
-        {ongoing ? null : <span className="rule" aria-hidden="true" />}
       </p>
 
       <h1 className={styles.label}>{label}</h1>
