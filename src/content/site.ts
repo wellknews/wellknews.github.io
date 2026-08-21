@@ -112,6 +112,11 @@ export const site = {
         path: '/;',
         summary: 'A pause inside a busy life.',
       },
+      {
+        name: 'MAMABOY',
+        path: '/mamaboy',
+        summary: 'CARE + CURIOSITY',
+      },
     ] satisfies Elsewhere[],
   },
 

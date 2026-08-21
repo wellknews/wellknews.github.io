@@ -1,0 +1,40 @@
+.next {
+  margin-top: clamp(56px, 8vw, 104px);
+}
+
+.nextLabel {
+  margin: 0 0 clamp(16px, 2vw, 24px);
+  color: var(--color-text-muted);
+}
+
+.nextList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.back {
+  margin-top: clamp(36px, 5vw, 64px);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--color-text-muted);
+  transition: color var(--dur-touch) var(--ease-touch);
+}
+
+@media (hover: hover) {
+  .backLink:hover {
+    color: var(--color-text);
+  }
+}
+
+@media (max-width: 767px) {
+  .nextList {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}

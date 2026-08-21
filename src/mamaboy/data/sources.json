@@ -1,0 +1,76 @@
+{
+  "sources": [
+    {
+      "id": "labmuffin",
+      "name": "Lab Muffin Beauty Science",
+      "feedUrl": "https://labmuffin.com/feed/",
+      "homepage": "https://labmuffin.com/",
+      "language": "en",
+      "categories": ["skin"],
+      "trustType": "expert",
+      "contentPolicy": "summary",
+      "enabled": false,
+      "note": "화학자가 쓰는 스킨케어 과학 블로그. 이용 조건 확인 전까지 꺼 둔다."
+    },
+    {
+      "id": "lifespan-io",
+      "name": "Lifespan.io",
+      "feedUrl": "https://www.lifespan.io/feed/",
+      "homepage": "https://www.lifespan.io/",
+      "language": "en",
+      "categories": ["age"],
+      "trustType": "research",
+      "contentPolicy": "summary",
+      "enabled": false,
+      "note": "longevity 연구 소식. 이용 조건 확인 전까지 꺼 둔다."
+    },
+    {
+      "id": "fight-aging",
+      "name": "Fight Aging!",
+      "feedUrl": "https://www.fightaging.org/feed/",
+      "homepage": "https://www.fightaging.org/",
+      "language": "en",
+      "categories": ["age"],
+      "trustType": "opinion",
+      "contentPolicy": "summary",
+      "enabled": false,
+      "note": "노화 연구를 논평하는 개인 매체. 연구 자체가 아니므로 opinion으로 둔다."
+    },
+    {
+      "id": "nature-aging",
+      "name": "Nature Aging",
+      "feedUrl": "https://www.nature.com/nataging.rss",
+      "homepage": "https://www.nature.com/nataging/",
+      "language": "en",
+      "categories": ["age", "body"],
+      "trustType": "research",
+      "contentPolicy": "link",
+      "enabled": false,
+      "note": "학술지. 초록조차 옮길 권한이 없다고 보고 link로 둔다."
+    },
+    {
+      "id": "toy-book",
+      "name": "The Toy Book",
+      "feedUrl": "https://toybook.com/feed/",
+      "homepage": "https://toybook.com/",
+      "language": "en",
+      "categories": ["play"],
+      "trustType": "news",
+      "contentPolicy": "summary",
+      "enabled": false,
+      "note": "완구 산업 매체. 제품 홍보성 글이 섞이므로 편집 필터를 세게 건다."
+    },
+    {
+      "id": "its-nice-that",
+      "name": "It's Nice That",
+      "feedUrl": "https://www.itsnicethat.com/feed",
+      "homepage": "https://www.itsnicethat.com/",
+      "language": "en",
+      "categories": ["culture"],
+      "trustType": "news",
+      "contentPolicy": "summary",
+      "enabled": false,
+      "note": "시각문화 매체. 이용 조건 확인 전까지 꺼 둔다."
+    }
+  ]
+}

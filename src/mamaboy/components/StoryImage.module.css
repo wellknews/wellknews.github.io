@@ -1,0 +1,24 @@
+/*
+ * 이미지에 주는 곡률은 이 공간에서 곡선이 허용된 세 자리 중 하나다(§23).
+ * 카드를 둥글게 만드는 것이 아니라 이미지를 둥글게 «자른다» — 마스크는
+ * 이미지의 성질이고, 카드는 여전히 상자가 아니다.
+ */
+.frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-mask);
+  background: color-mix(in srgb, var(--ink) 5%, var(--color-surface));
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* hover에서 이미지를 확대하지 않는다. 움직이는 것은 표면의 광택뿐이다(§39). */
+  transition: filter var(--dur-soft) var(--ease-soft);
+}
+
+/* 표면이 살아 있다는 감각만 준다. 밝기를 1% 올리는 정도. */
+.frame[data-lit='true'] .image {
+  filter: brightness(1.01) saturate(1.02);
+}

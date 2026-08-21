@@ -4,7 +4,7 @@
  *
  *   node scripts/build-assets.mjs
  */
-import { readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import sharp from 'sharp'
@@ -21,6 +21,14 @@ const PRETENDARD_BOLD = join(
   'static',
   'alternative',
   'Pretendard-Bold.ttf',
+)
+const SCHIBSTED_GROTESK = join(
+  ROOT,
+  'node_modules',
+  '@fontsource-variable',
+  'schibsted-grotesk',
+  'files',
+  'schibsted-grotesk-latin-wght-normal.woff2',
 )
 const INSTRUMENT_SERIF = join(
   ROOT,
@@ -52,6 +60,46 @@ const MARK = `
 
 const SEMICOLON_BG = '#f4fafc'
 const SEMICOLON_INK = '#101820'
+
+/**
+ * MAMABOY의 레터링.
+ *
+ * 화면에서는 src/mamaboy/components/Wordmark.tsx가 같은 작도를 그린다. 여기에
+ * 한 번 더 두는 이유는 파비콘과 공유 카드가 글꼴을 내려받을 수 없는 자리(브라우저
+ * 탭, 메신저 미리보기)에 놓이기 때문이다. 두 곳의 좌표는 같아야 한다 —
+ * 기준선 150 · x-높이 60 · 어센더 26 · 디센더 188 · 획 두께 24.
+ */
+const MAMABOY_STROKE = 24
+const MAMABOY_MILK = '#f7f4ee'
+const MAMABOY_INK = '#191817'
+const MAMABOY_PINK = '#f0b8c8'
+const MAMABOY_BLUE = '#bfd8ed'
+
+const glyph = {
+  m: (x) =>
+    `M ${x},150 V 88 A 28,28 0 0 1 ${x + 56},88 V 150 M ${x + 56},88 A 28,28 0 0 1 ${x + 112},88 V 150`,
+  bowl: (x) => `M ${x},105 A 45,45 0 0 1 ${x + 90},105 A 45,45 0 0 1 ${x},105`,
+  a: (x) => `${glyph.bowl(x)} M ${x + 90},60 V 150`,
+  b: (x) => `${glyph.bowl(x)} M ${x},26 V 150`,
+  y: (x) =>
+    `M ${x},60 V 105 A 45,45 0 0 0 ${x + 90},105 M ${x + 90},60 V 158 A 30,30 0 0 1 ${x + 60},188`,
+}
+
+const MAMABOY_WORDMARK = [
+  glyph.m(12),
+  glyph.a(172),
+  glyph.m(310),
+  glyph.a(470),
+  glyph.b(608),
+  glyph.bowl(746),
+  glyph.y(884),
+]
+
+const MAMABOY_WORDMARK_BOX = { width: 990, height: 214 }
+
+/** 예시 데이터가 쓰는 추상 색면. 사진이 아니므로 인물·제품·장소를 담지 않는다. */
+const PLATE_WIDTH = 1600
+const PLATE_HEIGHT = 1000
 
 /** 공유 카드 규격 */
 const OG_WIDTH = 1200
@@ -266,8 +314,174 @@ async function buildSemicolonOgImage() {
   console.log(`semicolon-og-cool.png  ${OG_WIDTH}x${OG_HEIGHT}, ${output.length} bytes`)
 }
 
+function mamaboyPaths(color = MAMABOY_INK) {
+  return `<g fill="none" stroke="${color}" stroke-width="${MAMABOY_STROKE}" stroke-linecap="round" stroke-linejoin="round">${MAMABOY_WORDMARK.map(
+    (d) => `<path d="${d}"/>`,
+  ).join('')}</g>`
+}
+
+/**
+ * 브라우저 탭에 걸리는 아이콘.
+ *
+ * 레터링 전체를 넣으면 16px에서 글자가 뭉개진다. 첫 글자 하나만 쓴다 —
+ * 아치 두 개의 리듬이 이 브랜드에서 가장 먼저 알아보게 되는 형태다.
+ * viewBox를 글자의 잉크에 맞춰 잘라서 여백을 사방으로 같게 만든다.
+ */
+function mamaboyMarkSvg(size) {
+  const box = { x: -32, y: 17, size: 176 }
+  const dimensions = size ? ` width="${size}" height="${size}"` : ''
+
+  return `<svg xmlns="http://www.w3.org/2000/svg"${dimensions} viewBox="${box.x} ${box.y} ${box.size} ${box.size}">
+  <rect x="${box.x}" y="${box.y}" width="${box.size}" height="${box.size}" rx="40" fill="${MAMABOY_MILK}"/>
+  <g fill="none" stroke="${MAMABOY_INK}" stroke-width="${MAMABOY_STROKE}" stroke-linecap="round" stroke-linejoin="round">
+    <path d="${glyph.m(0)}"/>
+  </g>
+</svg>
+`
+}
+
+async function buildMamaboyFavicon() {
+  const svg = mamaboyMarkSvg()
+
+  await writeFile(join(PUBLIC_DIR, 'mamaboy.svg'), svg)
+  console.log(`mamaboy.svg  ${svg.length} bytes`)
+}
+
+/** iOS 홈 화면에 걸릴 때 쓰는 아이콘. 규격이 180px 고정이다. */
+async function buildMamaboyTouchIcon() {
+  const size = 180
+  const output = await sharp(Buffer.from(mamaboyMarkSvg(size)), { density: 288 })
+    .resize(size, size)
+    .png({ compressionLevel: 9, palette: true, effort: 10 })
+    .toBuffer()
+
+  await writeFile(join(PUBLIC_DIR, 'mamaboy-touch.png'), output)
+  console.log(`mamaboy-touch.png  ${size}x${size}, ${output.length} bytes`)
+}
+
+/**
+ * 젤·코팅면의 표면감(§22).
+ *
+ * 무엇을 찍은 사진이 아니라 브랜드의 색면이다. 예시 데이터의 대표 이미지로만
+ * 쓰이고, 실제 RSS가 붙으면 각 매체의 이미지가 그 자리를 가져간다.
+ */
+function plateSvg({ pink, blue, highlight }) {
+  return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${PLATE_WIDTH}" height="${PLATE_HEIGHT}" viewBox="0 0 ${PLATE_WIDTH} ${PLATE_HEIGHT}">
+  <defs>
+    <radialGradient id="pink" cx="${pink.x}" cy="${pink.y}" r="${pink.r}">
+      <stop offset="0" stop-color="${MAMABOY_PINK}" stop-opacity="${pink.alpha}"/>
+      <stop offset="1" stop-color="${MAMABOY_PINK}" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blue" cx="${blue.x}" cy="${blue.y}" r="${blue.r}">
+      <stop offset="0" stop-color="${MAMABOY_BLUE}" stop-opacity="${blue.alpha}"/>
+      <stop offset="1" stop-color="${MAMABOY_BLUE}" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 반사광은 도형이 아니라 빛이다. 가장자리가 보이는 순간 광택이 아니라
+         무늬가 되므로, 경계에서 완전히 투명해지는 방사형으로만 만든다. -->
+    <radialGradient id="gloss">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="${highlight}"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="${(highlight * 0.42).toFixed(3)}"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="${MAMABOY_MILK}"/>
+  <rect width="100%" height="100%" fill="url(#pink)"/>
+  <rect width="100%" height="100%" fill="url(#blue)"/>
+  <ellipse cx="${PLATE_WIDTH * 0.42}" cy="${PLATE_HEIGHT * 0.3}" rx="${PLATE_WIDTH * 0.62}" ry="${PLATE_HEIGHT * 0.34}" fill="url(#gloss)" transform="rotate(-14 ${PLATE_WIDTH * 0.42} ${PLATE_HEIGHT * 0.3})"/>
+</svg>`)
+}
+
+const PLATES = [
+  {
+    pink: { x: '22%', y: '24%', r: '68%', alpha: 0.95 },
+    blue: { x: '86%', y: '84%', r: '58%', alpha: 0.5 },
+    highlight: 0.8,
+  },
+  {
+    pink: { x: '88%', y: '18%', r: '52%', alpha: 0.5 },
+    blue: { x: '18%', y: '72%', r: '72%', alpha: 0.95 },
+    highlight: 0.72,
+  },
+  {
+    pink: { x: '10%', y: '88%', r: '62%', alpha: 0.8 },
+    blue: { x: '72%', y: '12%', r: '66%', alpha: 0.8 },
+    highlight: 0.86,
+  },
+  {
+    pink: { x: '52%', y: '108%', r: '58%', alpha: 0.9 },
+    blue: { x: '50%', y: '-14%', r: '48%', alpha: 0.42 },
+    highlight: 0.64,
+  },
+]
+
+async function buildMamaboyPlates() {
+  await mkdir(join(PUBLIC_DIR, 'mamaboy'), { recursive: true })
+
+  for (const [index, plate] of PLATES.entries()) {
+    const output = await sharp(plateSvg(plate), { density: 96 })
+      .webp({ quality: 78, effort: 6 })
+      .toBuffer()
+
+    await writeFile(join(PUBLIC_DIR, 'mamaboy', `plate-${index + 1}.webp`), output)
+    console.log(
+      `mamaboy/plate-${index + 1}.webp  ${PLATE_WIDTH}x${PLATE_HEIGHT}, ${output.length} bytes`,
+    )
+  }
+}
+
+/**
+ * 공유 카드.
+ *
+ * 배경으로 쓸 생성 이미지를 두지 않는다. 이 브랜드의 표면은 색면과 반사광이고,
+ * 그것은 여기서 그대로 합성할 수 있다. 글자는 레터링(경로)과 라틴 한 줄뿐이라
+ * 운영체제의 대체 글꼴에 영향받지 않는다.
+ */
+async function buildMamaboyOgImage() {
+  const background = plateSvg({
+    pink: { x: '16%', y: '18%', r: '66%', alpha: 0.85 },
+    blue: { x: '88%', y: '86%', r: '62%', alpha: 0.7 },
+    highlight: 0.78,
+  })
+
+  const wordmarkWidth = 620
+  const wordmarkHeight = Math.round(
+    (wordmarkWidth / MAMABOY_WORDMARK_BOX.width) * MAMABOY_WORDMARK_BOX.height,
+  )
+  const wordmark = Buffer.from(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${wordmarkWidth}" height="${wordmarkHeight}" viewBox="0 0 ${MAMABOY_WORDMARK_BOX.width} ${MAMABOY_WORDMARK_BOX.height}">${mamaboyPaths()}</svg>`,
+  )
+
+  const formula = await sharp({
+    text: {
+      text: `<span foreground="${MAMABOY_INK}" letter_spacing="${Math.round(0.16 * 1024)}">CARE + CURIOSITY</span>`,
+      font: 'Schibsted Grotesk 26',
+      fontfile: SCHIBSTED_GROTESK,
+      dpi: 72,
+      rgba: true,
+    },
+  })
+    .png()
+    .toBuffer()
+
+  const output = await sharp(background, { density: 96 })
+    .resize(OG_WIDTH, OG_HEIGHT, { fit: 'cover' })
+    .composite([
+      { input: wordmark, left: 96, top: 236 },
+      { input: formula, left: 100, top: 400 },
+    ])
+    .png({ compressionLevel: 9, effort: 10 })
+    .toBuffer()
+
+  await writeFile(join(PUBLIC_DIR, 'mamaboy-og.png'), output)
+  console.log(`mamaboy-og.png  ${OG_WIDTH}x${OG_HEIGHT}, ${output.length} bytes`)
+}
+
 const logo = await buildLogo()
 await buildOgImage(logo)
 await buildSemicolonFavicon()
 await buildSemicolonTouchIcon()
 await buildSemicolonOgImage()
+await buildMamaboyFavicon()
+await buildMamaboyTouchIcon()
+await buildMamaboyPlates()
+await buildMamaboyOgImage()
