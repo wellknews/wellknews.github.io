@@ -1,20 +1,24 @@
 /*
- * 기사 카드.
+ * 기사 조판.
  *
  * 이름은 카드지만 상자를 그리지 않는다. 배경도 테두리도 그림자도 없고,
- * 곡선은 이미지 마스크에만 있다(§23). 카드가 보이는 대신 기사가 보이게 한다.
+ * 곡선은 이미지 마스크에만 있다. 카드가 보이는 대신 기사가 보여야 한다.
  */
 
-.link {
+.featureLink,
+.standardLink,
+.briefLink {
   display: block;
-  /* «Interaction as Touch» — 누르면 실제로 눌린다. 1~2% 안쪽의 변형(§39). */
+  /* «Interaction as Touch» — 누르면 실제로 눌린다. 1~2% 안쪽의 변형. */
   transition:
     transform var(--dur-touch) var(--ease-touch),
     opacity var(--dur-touch) linear;
 }
 
-.link:active {
-  transform: scale(0.988);
+.featureLink:active,
+.standardLink:active,
+.briefLink:active {
+  transform: scale(0.99);
 }
 
 .tags {
@@ -26,27 +30,27 @@
 
 /* ---------- FEATURE ---------- */
 
-.feature {
-  container-type: inline-size;
-}
-
-.feature .link {
+.featureLink {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: clamp(20px, 2.6vw, 44px);
-  align-items: end;
 }
 
+/*
+ * 이미지가 위로 올라가고 제목이 그 아래에서 시작한다. 둘의 윗선을 맞추지 않는
+ * 것이 이 조판의 전부다 — 맞추는 순간 큰 카드가 된다.
+ */
 .featureImage {
-  grid-column: 6 / -1;
+  grid-column: 7 / -1;
   grid-row: 1;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 4 / 3;
 }
 
 .featureText {
-  grid-column: 1 / 6;
+  grid-column: 1 / 7;
   grid-row: 1;
-  padding-bottom: clamp(4px, 1vw, 20px);
+  align-self: end;
+  padding-bottom: clamp(8px, 2vw, 40px);
 }
 
 .featureTitle {
@@ -54,14 +58,14 @@
   font-family: var(--font-editorial);
   font-size: var(--text-feature);
   font-weight: var(--weight-display);
-  line-height: 1.02;
+  line-height: 1;
   letter-spacing: var(--tracking-feature);
   text-wrap: balance;
 }
 
 .lead {
   margin-top: clamp(14px, 1.4vw, 22px);
-  max-width: 34ch;
+  max-width: 32ch;
   color: var(--color-text-secondary);
   font-size: var(--text-lead);
   line-height: 1.5;
@@ -71,21 +75,37 @@
 
 /*
  * 이미지가 없는 FEATURE는 제목이 판면을 통째로 가져간다.
- * 빈 자리를 채우지 않는다 — 그 자체가 이 지면의 한 가지 리듬이다(§37).
+ * 빈 자리를 채우지 않는다 — 그 자체가 이 지면의 한 가지 리듬이다.
  */
-.feature .link:not(:has(.featureImage)) .featureText {
-  grid-column: 1 / -1;
+.featureLink:not(:has(.featureImage)) .featureText {
+  grid-column: 1 / 11;
+  padding-bottom: 0;
 }
 
-.feature .link:not(:has(.featureImage)) .featureTitle {
-  max-width: 18ch;
+.featureLink:not(:has(.featureImage)) .featureTitle {
+  max-width: 16ch;
 }
 
 /* ---------- STANDARD ---------- */
 
 .standardImage {
-  margin-bottom: clamp(14px, 1.4vw, 20px);
   aspect-ratio: 4 / 3;
+}
+
+.standard[data-composition='stacked'] .standardImage {
+  margin-bottom: clamp(14px, 1.4vw, 20px);
+}
+
+/* 이미지가 옆으로 붙는 조판. 같은 무게의 기사에 다른 지면 사용법을 준다. */
+.standard[data-composition='side'] .standardLink {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(16px, 2vw, 32px);
+  align-items: center;
+}
+
+.standard[data-composition='side'] .standardImage {
+  aspect-ratio: 1;
 }
 
 .standardTitle {
@@ -93,7 +113,7 @@
   font-family: var(--font-editorial);
   font-size: var(--text-standard);
   font-weight: var(--weight-headline);
-  line-height: 1.18;
+  line-height: 1.16;
   letter-spacing: var(--tracking-headline);
   text-wrap: pretty;
 }
@@ -101,15 +121,34 @@
 /* ---------- BRIEF ---------- */
 
 /*
- * 이미지 없이 서는 줄. 위에 그은 가는 선 하나가 이 형태의 전부다 —
+ * 이미지 없이 서는 줄. 위에 그은 가는 선과 번호 하나가 이 조판의 전부다 —
  * 상자를 만들지 않고도 이 기사가 다른 리듬으로 읽힌다.
  */
-.brief .link {
+.briefLink {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(12px, 1.4vw, 20px);
   padding-top: 14px;
-  border-top: 1px solid var(--color-line);
+  border-top: 1px solid var(--color-line-strong);
   transition:
     border-color var(--dur-micro) var(--ease-touch),
     transform var(--dur-touch) var(--ease-touch);
+}
+
+/* 이미지 자리를 대신하는 숫자. 활자만으로 지면이 성립한다는 주장. */
+.briefIndex {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
+  font-weight: var(--weight-display);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.briefCategory {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .briefTitle {
@@ -117,17 +156,17 @@
   font-family: var(--font-editorial);
   font-size: var(--text-brief);
   font-weight: var(--weight-medium);
-  line-height: 1.32;
-  letter-spacing: -0.01em;
+  line-height: 1.28;
+  letter-spacing: -0.012em;
   text-wrap: pretty;
 }
 
 /* ---------- 반응 ---------- */
 
 @media (hover: hover) {
-  .link:hover .featureTitle,
-  .link:hover .standardTitle,
-  .link:hover .briefTitle {
+  .featureLink:hover .featureTitle,
+  .standardLink:hover .standardTitle,
+  .briefLink:hover .briefTitle {
     /* 밑줄을 긋지 않는다. 제목이 아주 조금 진해지는 것으로 충분하다. */
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -135,22 +174,28 @@
     text-decoration-color: var(--color-line-strong);
   }
 
-  .brief .link:hover {
-    border-color: var(--color-line-strong);
+  .briefLink:hover {
+    border-color: var(--color-text);
+  }
+
+  .briefLink:hover .briefIndex {
+    color: var(--accent-ink);
   }
 }
 
 @media (hover: none) {
-  .link:active {
+  .featureLink:active,
+  .standardLink:active,
+  .briefLink:active {
     opacity: 0.72;
   }
 }
 
 /* ---------- 모바일 ----------
- * 축소판이 아니라 다시 짠 지면이다. 기사 크기의 차이는 유지한다(§41).
+ * 축소판이 아니라 다시 짠 지면이다. 배치는 단순해지지만 무게의 차이는 남는다.
  */
 @media (max-width: 767px) {
-  .feature .link {
+  .featureLink {
     display: flex;
     flex-direction: column;
     gap: clamp(16px, 4vw, 24px);
@@ -160,11 +205,19 @@
     aspect-ratio: 3 / 2;
   }
 
-  .featureText {
+  .featureText,
+  .featureLink:not(:has(.featureImage)) .featureText {
     padding-bottom: 0;
   }
 
-  .standardImage {
+  .standardImage,
+  .standard[data-composition='side'] .standardImage {
     aspect-ratio: 3 / 2;
+    margin-bottom: clamp(12px, 3vw, 18px);
+  }
+
+  /* 좁은 화면에서 옆으로 붙는 조판은 성립하지 않는다. 이미지가 너무 작아진다. */
+  .standard[data-composition='side'] .standardLink {
+    display: block;
   }
 }

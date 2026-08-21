@@ -1,0 +1,97 @@
+/*
+ * 젤.
+ *
+ * 표면은 세 겹이다. 위쪽 안쪽의 흰 하이라이트, 아래로 도는 노란 반사,
+ * 그리고 구의 바탕색. 안쪽 그림자가 아래쪽을 눌러야 평평한 원이 아니라
+ * 부풀어 오른 물체로 읽힌다.
+ */
+.object {
+  position: relative;
+  z-index: var(--z-object);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 24%, rgb(255 255 255 / 0.95), transparent 34%),
+    radial-gradient(
+      circle at 74% 78%,
+      color-mix(in srgb, var(--yellow) 92%, transparent),
+      transparent 46%
+    ),
+    radial-gradient(circle at 46% 42%, var(--orange), #d95400 78%);
+  box-shadow:
+    inset -8px -12px 26px rgb(120 40 0 / 0.34),
+    inset 6px 8px 18px rgb(255 255 255 / 0.18),
+    var(--shadow-float);
+  /* 포인터를 따라 움직이는 하이라이트가 이 표면의 유일한 움직임이다. */
+  transition: transform var(--dur-object) var(--ease-elastic);
+}
+
+/*
+ * 눌린 원과 캡슐. 구에서 파생된 형태만 쓴다.
+ */
+.object[data-shape='capsule'] {
+  aspect-ratio: 5 / 3;
+  border-radius: var(--radius-pill);
+}
+
+.object[data-shape='blob'] {
+  aspect-ratio: 6 / 5;
+  border-radius: 58% 42% 46% 54% / 52% 48% 52% 48%;
+}
+
+.object[data-size='sm'] {
+  width: clamp(38px, 4vw, 62px);
+}
+
+.object[data-size='md'] {
+  width: clamp(64px, 8vw, 124px);
+}
+
+.object[data-size='lg'] {
+  width: clamp(96px, 13vw, 196px);
+}
+
+/* 포인터가 지나가면 표면의 빛이 따라온다(motion/useGloss). */
+.object::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--gx, 34%) var(--gy, 24%),
+    rgb(255 255 255 / 0.85),
+    transparent 38%
+  );
+  opacity: 0;
+  transition: opacity var(--dur-micro-slow) var(--ease-soft);
+}
+
+.object[data-lit='true']::after {
+  opacity: 1;
+}
+
+/*
+ * 스크롤한 만큼 아주 조금 떠오른다.
+ *
+ * 저절로 도는 애니메이션이 아니다 — 사람이 스크롤을 멈추면 물체도 멈춘다.
+ * 타임라인을 모르는 브라우저에서는 그냥 제자리에 있는다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .object {
+      animation: gel-drift linear both;
+      animation-timeline: view();
+      animation-range: entry 10% exit 90%;
+    }
+  }
+}
+
+@keyframes gel-drift {
+  from {
+    transform: translateY(14px) rotate(-4deg);
+  }
+
+  to {
+    transform: translateY(-14px) rotate(4deg);
+  }
+}

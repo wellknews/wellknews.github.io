@@ -57,9 +57,14 @@ export function scoreOf(article: Article, now: number = Date.now()): number {
   return peak * bothBonus * TYPE_WEIGHT[article.contentType] * (0.35 + 0.65 * recency)
 }
 
-/** 통과 기준(§10). 두 축 모두 낮으면 지면에 올리지 않는다. */
-export function passesEditorialFilter(article: Article, threshold = 0.35): boolean {
-  return Math.max(article.careScore, article.curiosityScore) >= threshold
+/**
+ * DROP 판정.
+ *
+ * 두 축 모두 낮으면 지면에 올리지 않는다. 수집한 것을 전부 보여주는 것은 편집이
+ * 아니므로, 이 함수가 «아니오»라고 말할 수 있어야 이곳이 RSS Reader가 아니게 된다.
+ */
+export function isDropped(article: Article, threshold = 0.35): boolean {
+  return Math.max(article.careScore, article.curiosityScore) < threshold
 }
 
 type ComposeOptions = {
@@ -76,7 +81,7 @@ type ComposeOptions = {
 export function compose(source: Article[], options: ComposeOptions = {}): Placed[] {
   const now = options.now ?? Date.now()
   const ranked = [...source]
-    .filter((article) => passesEditorialFilter(article))
+    .filter((article) => !isDropped(article))
     .sort((a, b) => scoreOf(b, now) - scoreOf(a, now))
 
   if (ranked.length === 0) return []

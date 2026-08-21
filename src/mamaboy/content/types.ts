@@ -63,8 +63,18 @@ export type ContentPolicy = 'full' | 'summary' | 'link'
  */
 export type TranslationStatus = 'none' | 'done' | 'pending' | 'failed'
 
-/** 편집 가중치(§17). 지면에서 이 기사가 차지하는 크기. */
-export type Weight = 'feature' | 'standard' | 'brief'
+/**
+ * 편집 가중치. 지면에서 이 기사가 차지하는 크기.
+ *
+ *   feature   그날의 지면을 여는 기사
+ *   standard  일반 기사
+ *   brief     짧게 확인할 만한 글. 이미지가 없어도 된다
+ *   drop      MAMABOY의 기준에 맞지 않아 지면에 올리지 않는 글
+ *
+ * drop이 있어야 이곳이 RSS Aggregator에서 벗어난다. 수집한 것을 전부 보여주는
+ * 것은 편집이 아니다 — 무엇을 버렸는지가 무엇을 골랐는지를 만든다.
+ */
+export type Weight = 'feature' | 'standard' | 'brief' | 'drop'
 
 /** RSS의 대표 이미지. 언제든 깨질 수 있다고 가정한다(§37). */
 export type ArticleImage = {
