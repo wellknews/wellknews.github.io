@@ -37,17 +37,96 @@ function list(value) {
   return Array.isArray(value) ? value : [value]
 }
 
-function stripHtml(value) {
-  return text(value)
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&nbsp;/gi, ' ')
+/**
+ * 이름이 붙은 실체 참조 중 실제로 피드에 나오는 것들.
+ *
+ * 전부 담지 않는다 — 숫자 참조로 대부분 해결되고, 나머지는 그대로 두어도
+ * 읽는 데 지장이 없다. 여기 있는 것은 실제 피드에서 눈으로 확인한 것들이다.
+ */
+const NAMED = {
+  nbsp: ' ',
+  lt: '<',
+  gt: '>',
+  quot: '"',
+  apos: "'",
+  ldquo: '\u201c',
+  rdquo: '\u201d',
+  lsquo: '\u2018',
+  rsquo: '\u2019',
+  mdash: '\u2014',
+  ndash: '\u2013',
+  hellip: '\u2026',
+  bull: '\u2022',
+  deg: '\u00b0',
+  eacute: '\u00e9',
+  egrave: '\u00e8',
+  ecirc: '\u00ea',
+  agrave: '\u00e0',
+  aacute: '\u00e1',
+  acirc: '\u00e2',
+  auml: '\u00e4',
+  aring: '\u00e5',
+  aelig: '\u00e6',
+  ccedil: '\u00e7',
+  iacute: '\u00ed',
+  icirc: '\u00ee',
+  ntilde: '\u00f1',
+  oacute: '\u00f3',
+  ocirc: '\u00f4',
+  ouml: '\u00f6',
+  oslash: '\u00f8',
+  uacute: '\u00fa',
+  ucirc: '\u00fb',
+  uuml: '\u00fc',
+  szlig: '\u00df',
+  Eacute: '\u00c9',
+  Auml: '\u00c4',
+  Ouml: '\u00d6',
+  Uuml: '\u00dc',
+  amp: '&',
+}
+
+/**
+ * 실체 참조를 실제 글자로 되돌린다.
+ *
+ * 태그만 벗기고 여기를 건너뛰면 본문에 «&#8220;»가 그대로 박힌다. RSS는 따옴표와
+ * 줄표를 거의 언제나 실체 참조로 보내므로, 실제 기사에서는 한 문단에 몇 개씩
+ * 나온다 — 화면에서 곧바로 눈에 띄는 종류의 잘못이다.
+ *
+ * &amp;를 맨 마지막에 푸는 이유는 두 번 인코딩된 «&amp;#8220;» 때문이다. 먼저
+ * 풀면 그것이 &#8220;가 되었다가 다시 따옴표로 풀려, 원문에 있던 «&#8220;»라는
+ * 글자 자체를 없애 버린다.
+ */
+function decodeEntities(value) {
+  return value
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => codePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, digits) => codePoint(Number(digits)))
+    .replace(/&([a-z]+);/gi, (whole, name) => {
+      /* Eacute와 eacute는 다른 글자다. 원형을 먼저 보고, 없을 때만 소문자로 찾는다. */
+      const found = NAMED[name] ?? NAMED[name.toLowerCase()]
+
+      return found === undefined || name.toLowerCase() === 'amp' ? whole : found
+    })
     .replace(/&amp;/gi, '&')
-    .replace(/&lt;/gi, '<')
-    .replace(/&gt;/gi, '>')
-    .replace(/&quot;/gi, '"')
-    .replace(/&#39;/gi, "'")
+}
+
+function codePoint(number) {
+  if (!Number.isFinite(number) || number < 1 || number > 0x10ffff) return ''
+
+  try {
+    return String.fromCodePoint(number)
+  } catch {
+    return ''
+  }
+}
+
+function stripHtml(value) {
+  return decodeEntities(
+    text(value)
+      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' '),
+  )
     .replace(/\s+/g, ' ')
     .trim()
 }
