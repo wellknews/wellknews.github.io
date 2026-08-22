@@ -61,7 +61,7 @@ export function Header({ route }: Props) {
           <div className={styles.actions}>
             <button
               type="button"
-              className={`label ${styles.action}`}
+              className={`label pressable ${styles.action}`}
               onClick={() => setSearchOpen(true)}
               aria-label={mamaboy.search.open}
             >
@@ -70,7 +70,7 @@ export function Header({ route }: Props) {
 
             <button
               type="button"
-              className={`label ${styles.action} ${styles.menuButton}`}
+              className={`label pressable ${styles.action} ${styles.menuButton}`}
               onClick={() => setMenuOpen((open) => !open)}
               aria-expanded={menuOpen}
               aria-controls="mamaboy-menu"

@@ -42,7 +42,7 @@ export function ArticleReader({ article }: { article: Article }) {
 
           <button
             type="button"
-            className={`label ${styles.language}`}
+            className={`label pressable ${styles.language}`}
             onClick={() => setMode('ko')}
             aria-pressed={mode === 'ko'}
           >
@@ -52,7 +52,7 @@ export function ArticleReader({ article }: { article: Article }) {
           {canReadOriginalHere ? (
             <button
               type="button"
-              className={`label ${styles.language}`}
+              className={`label pressable ${styles.language}`}
               onClick={() => setMode('original')}
               aria-pressed={mode === 'original'}
             >
@@ -60,7 +60,7 @@ export function ArticleReader({ article }: { article: Article }) {
             </button>
           ) : (
             <a
-              className={`label ${styles.language}`}
+              className={`label pressable ${styles.language}`}
               href={article.originalUrl}
               target="_blank"
               rel="noopener noreferrer"

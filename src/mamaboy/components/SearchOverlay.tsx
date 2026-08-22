@@ -79,7 +79,7 @@ export function SearchOverlay({ open, onClose }: Props) {
 
           <button
             type="button"
-            className={`label ${styles.close}`}
+            className={`label pressable ${styles.close}`}
             onClick={onClose}
             aria-label={mamaboy.search.close}
           >
@@ -103,7 +103,7 @@ export function SearchOverlay({ open, onClose }: Props) {
               <li key={article.id}>
                 <Link
                   to={path.article(article.slug)}
-                  className={styles.result}
+                  className={`pressable ${styles.result}`}
                   onNavigate={onClose}
                 >
                   <span className={`label ${styles.resultCategory}`}>

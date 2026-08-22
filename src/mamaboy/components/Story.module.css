@@ -5,20 +5,11 @@
  * 곡선은 이미지 마스크에만 있다. 카드가 보이는 대신 기사가 보여야 한다.
  */
 
+/* 누름은 전역의 .pressable이 맡는다(styles/global.css). 여기서 다시 정의하지 않는다. */
 .featureLink,
 .standardLink,
 .briefLink {
   display: block;
-  /* «Interaction as Touch» — 누르면 실제로 눌린다. 1~2% 안쪽의 변형. */
-  transition:
-    transform var(--dur-touch) var(--ease-touch),
-    opacity var(--dur-touch) linear;
-}
-
-.featureLink:active,
-.standardLink:active,
-.briefLink:active {
-  transform: scale(0.99);
 }
 
 .tags {
@@ -180,14 +171,6 @@
 
   .briefLink:hover .briefIndex {
     color: var(--accent-ink);
-  }
-}
-
-@media (hover: none) {
-  .featureLink:active,
-  .standardLink:active,
-  .briefLink:active {
-    opacity: 0.72;
   }
 }
 

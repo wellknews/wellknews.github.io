@@ -114,18 +114,13 @@
   color: var(--color-text-muted);
   transition:
     background-color var(--dur-touch) var(--ease-touch),
-    color var(--dur-touch) var(--ease-touch),
-    transform var(--dur-touch) var(--ease-touch);
+    color var(--dur-touch) var(--ease-touch);
 }
 
 .language[aria-pressed='true'] {
   background: var(--surface-clean);
   box-shadow: var(--shadow-press);
   color: var(--color-text);
-}
-
-.language:active {
-  transform: scale(0.97);
 }
 
 @media (hover: hover) {
@@ -195,17 +190,13 @@
     inset 0 1px 0 rgb(255 255 255 / 0.45),
     var(--shadow-float);
   color: var(--ink);
-  transition:
-    transform var(--dur-touch) var(--ease-touch),
-    box-shadow var(--dur-touch) var(--ease-touch);
 }
 
 /*
- * 누르면 실제로 눌린다. 그림자도 함께 짧아져야 «떠 있던 것이 내려앉았다»로
- * 읽힌다 — 그림자는 장식이 아니라 상태다(§11).
+ * 누르는 동작 자체는 전역의 .pressable이 맡고, 여기서는 그림자만 바꾼다.
+ * 떠 있던 것이 내려앉으려면 그림자도 짧아져야 한다 — 그림자는 상태다.
  */
 .original:active {
-  transform: scale(0.98);
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 0.3),
     var(--shadow-press);

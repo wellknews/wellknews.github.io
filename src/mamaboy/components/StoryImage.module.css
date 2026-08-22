@@ -15,6 +15,22 @@
   background: color-mix(in srgb, var(--ink) 4%, var(--surface-clean));
 }
 
+/*
+ * Chrome은 독립된 소재가 아니다. 판의 위 가장자리에 흰 선 하나, 둘레에 아주
+ * 옅은 그림자 하나 — 그것이 이 지면에서 chrome이 하는 일의 전부다.
+ */
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 1px 0 var(--chrome-light),
+    inset 0 0 0 1px var(--chrome-shade);
+  pointer-events: none;
+}
+
 .image {
   width: 100%;
   height: 100%;

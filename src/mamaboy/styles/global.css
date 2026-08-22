@@ -147,6 +147,59 @@ body {
   opacity: 1;
 }
 
+/* ---------- 반응 ----------
+ * 허용하는 반응은 세 가지뿐이다.
+ *
+ *   TOUCH   누르면 1~2% 눌린다
+ *   LIGHT   포인터를 따라 표면의 빛이 옮겨 간다 (motion/useGloss)
+ *   REVEAL  스크롤이 닿으면 짧게 등장한다
+ *
+ * 그 밖의 움직임은 이유를 댈 수 있을 때만 만든다.
+ */
+
+/* TOUCH — 만질 수 있는 것은 전부 같은 규칙으로 눌린다. */
+.pressable {
+  transition:
+    transform var(--dur-touch) var(--ease-touch),
+    box-shadow var(--dur-touch) var(--ease-touch),
+    opacity var(--dur-touch) linear;
+}
+
+.pressable:active {
+  transform: scale(0.985);
+}
+
+/* 손가락에는 눌린 깊이가 잘 보이지 않으므로 밝기로도 알린다. */
+@media (hover: none) {
+  .pressable:active {
+    opacity: 0.76;
+  }
+}
+
+/*
+ * REVEAL — 스크롤이 닿으면 짧게 올라온다.
+ *
+ * 자바스크립트로 관찰하지 않는다. 스크롤 타임라인을 모르는 브라우저에서는
+ * 규칙 자체가 적용되지 않으므로 «끝난 상태»가 그냥 보인다 — 연출이 사라져도
+ * 읽을 수 있는 것이 하나도 줄지 않아야 한다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: mb-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 4% entry 42%;
+    }
+  }
+}
+
+@keyframes mb-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
 /* ---------- 접근성 ---------- */
 
 :where(a, button, [tabindex]):focus-visible {

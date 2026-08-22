@@ -30,6 +30,8 @@ export function GelObject({ shape = 'sphere', size = 'md', className }: Props) {
     <div
       ref={gloss.ref}
       onPointerMove={gloss.onPointerMove}
+      onPointerDown={gloss.onPointerDown}
+      onPointerUp={gloss.onPointerUp}
       onPointerLeave={gloss.onPointerLeave}
       className={`${styles.object}${className ? ` ${className}` : ''}`}
       data-shape={shape}

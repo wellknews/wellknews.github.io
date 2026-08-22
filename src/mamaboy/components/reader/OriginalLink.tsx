@@ -17,7 +17,12 @@ type Props = {
  */
 export function OriginalLink({ href, sourceName }: Props) {
   return (
-    <a className={`label ${styles.original}`} href={href} target="_blank" rel="noopener noreferrer">
+    <a
+      className={`label pressable ${styles.original}`}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {mamaboy.reader.readOriginal}
       <span aria-hidden="true">↗</span>
       <span className="visually-hidden">{`— ${sourceName}, 새 탭에서 열림`}</span>

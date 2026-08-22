@@ -34,7 +34,7 @@ export function FeatureStory({ article, priority = false }: Props) {
 
   return (
     <article className={styles.feature}>
-      <Link to={path.article(article.slug)} className={styles.featureLink}>
+      <Link to={path.article(article.slug)} className={`pressable ${styles.featureLink}`}>
         {article.image ? (
           <StoryImage image={article.image} priority={priority} className={styles.featureImage} />
         ) : null}
@@ -80,7 +80,7 @@ export function StandardStory({ article, composition = 'stacked' }: StandardProp
 
   return (
     <article className={styles.standard} data-composition={composition}>
-      <Link to={path.article(article.slug)} className={styles.standardLink}>
+      <Link to={path.article(article.slug)} className={`pressable ${styles.standardLink}`}>
         {article.image ? (
           <StoryImage image={article.image} className={styles.standardImage} />
         ) : null}
@@ -119,7 +119,7 @@ export function BriefStory({ article, index }: BriefProps) {
 
   return (
     <article className={styles.brief}>
-      <Link to={path.article(article.slug)} className={styles.briefLink}>
+      <Link to={path.article(article.slug)} className={`pressable ${styles.briefLink}`}>
         {index === undefined ? null : (
           <span className={styles.briefIndex} aria-hidden="true">
             {`${index}`.padStart(2, '0')}

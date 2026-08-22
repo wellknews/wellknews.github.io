@@ -50,13 +50,42 @@
 
 .link,
 .action {
-  font-family: var(--font-editorial);
+  position: relative;
   display: inline-flex;
   align-items: center;
   /* 터치 타깃 최소 44px */
   min-height: 44px;
+  font-family: var(--font-editorial);
   color: var(--color-text-muted);
   transition: color var(--dur-touch) var(--ease-touch);
+}
+
+/*
+ * 지금 있는 자리에는 젤 방울 하나가 남는다.
+ *
+ * 선택 상태를 밑줄이나 색면으로 표시하지 않는다. 이 지면에서 «지금 여기»를
+ * 말하는 것은 브랜드의 물성이지 UI의 관습이 아니다.
+ */
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, var(--chrome-light), transparent 46%), var(--surface-gel);
+  transform: translate(-50%, 4px) scale(0);
+  opacity: 0;
+  transition:
+    transform var(--dur-micro) var(--ease-elastic),
+    opacity var(--dur-touch) linear;
+}
+
+.link[aria-current]::after {
+  transform: translate(-50%, 0) scale(1);
+  opacity: 1;
 }
 
 /* 지금 있는 자리에만 잉크가 남는다. 상태 표시이지 장식이 아니다. */
@@ -83,15 +112,19 @@
   }
 }
 
-.action:active {
-  transform: scale(0.96);
-}
-
 /* ---------- 펼친 카테고리 ---------- */
 
+/*
+ * 펼친 카테고리는 종이 위에 얹힌 판이 아니라 떠 있는 유리다 — 잠깐 나타났다
+ * 사라지는 것이고, 뒤의 지면이 비쳐야 그렇게 읽힌다.
+ */
 .panel {
   border-top: 1px solid var(--color-line);
-  background: var(--color-bg);
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px) saturate(1.5);
+  box-shadow:
+    inset 0 1px 0 var(--glass-edge),
+    var(--shadow-float);
 }
 
 .panelList {

@@ -31,6 +31,8 @@ export function StoryImage({ image, priority = false, className }: Props) {
     <div
       ref={gloss.ref}
       onPointerMove={gloss.onPointerMove}
+      onPointerDown={gloss.onPointerDown}
+      onPointerUp={gloss.onPointerUp}
       onPointerLeave={gloss.onPointerLeave}
       className={`gloss ${styles.frame}${className ? ` ${className}` : ''}`}
     >

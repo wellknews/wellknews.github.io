@@ -91,13 +91,7 @@
   padding-inline: 18px;
   border-radius: var(--radius-pill);
   color: var(--color-text-muted);
-  transition:
-    color var(--dur-touch) var(--ease-touch),
-    transform var(--dur-touch) var(--ease-touch);
-}
-
-.close:active {
-  transform: scale(0.96);
+  transition: color var(--dur-touch) var(--ease-touch);
 }
 
 .close:hover,

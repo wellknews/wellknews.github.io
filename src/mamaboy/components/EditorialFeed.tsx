@@ -86,7 +86,7 @@ export function EditorialFeed({ items, priority = true }: Props) {
         nodes.push(
           <li
             key={`object-${index}`}
-            className={styles.object}
+            className={`reveal ${styles.object}`}
             style={slotStyle(object)}
             data-lift={object.lift ?? 0}
             data-object={objects - 1}
@@ -99,7 +99,7 @@ export function EditorialFeed({ items, priority = true }: Props) {
 
     if (item.weight === 'feature') {
       nodes.push(
-        <li key={item.article.id} className={styles.item} data-weight="feature">
+        <li key={item.article.id} className={`reveal ${styles.item}`} data-weight="feature">
           <FeatureStory article={item.article} priority={priority && index === 0} />
         </li>,
       )
@@ -113,7 +113,7 @@ export function EditorialFeed({ items, priority = true }: Props) {
       nodes.push(
         <li
           key={item.article.id}
-          className={styles.item}
+          className={`reveal ${styles.item}`}
           style={slotStyle(slot)}
           data-lift={slot.lift ?? 0}
           data-width={widthOf(slot)}
@@ -130,7 +130,7 @@ export function EditorialFeed({ items, priority = true }: Props) {
     nodes.push(
       <li
         key={item.article.id}
-        className={styles.item}
+        className={`reveal ${styles.item}`}
         style={slotStyle(slot)}
         data-lift={slot.lift ?? 0}
         data-width={widthOf(slot)}
