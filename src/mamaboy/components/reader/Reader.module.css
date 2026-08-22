@@ -104,11 +104,12 @@
     var(--shadow-rest);
 }
 
+/* 유리 안에 앉는 버튼이라 히트 영역을 음수 마진으로 넓힐 수 없다 — 실제로 44px로 만든다. */
 .language {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: 36px;
+  min-height: 44px;
   padding-inline: 16px;
   border-radius: var(--radius-pill);
   color: var(--color-text-muted);

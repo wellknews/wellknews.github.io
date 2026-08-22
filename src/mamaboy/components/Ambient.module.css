@@ -3,6 +3,11 @@
   inset: 0;
   z-index: var(--z-paper);
   pointer-events: none;
+  /*
+   * 안쪽의 세 겹은 경계를 감추려고 화면보다 크게 잡혀 있다(inset: -30%).
+   * 그것이 밖으로 새면 브라우저에 따라 가로 스크롤이 생긴다 — 여기서 잘라 둔다.
+   */
+  overflow: hidden;
 }
 
 .gel,
