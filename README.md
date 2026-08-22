@@ -1073,10 +1073,23 @@ MAMABOY의 피드 워크플로는 여섯 시간마다 따로 돈다. 봇이 만�
 
 - 제보 접수 창구: 현재 인스타그램 DM으로 연결된다. 전용 폼을 쓰려면
   `src/App.tsx`의 `REPORT_HREF` 값만 교체하면 된다.
-- MAMABOY의 RSS 소스: `src/mamaboy/data/sources.json`의 모든 항목이 아직
-  `enabled: false`다. Actions에서 `MAMABOY source probe`를 돌려 응답을 확인하고,
-  각 매체의 이용 조건을 사람이 본 뒤 하나씩 켠다. 하나라도 켜지는 순간 예시
-  데이터와 PROTOTYPE 표시는 저절로 사라진다.
+- MAMABOY의 RSS 소스: 등록된 일곱 곳의 이용 조건을 2026-08-22에 한 번 확인했고,
+  결과는 `sources.json`의 `note`에 매체별로 적혀 있다. 조건 없이 쓸 수 있는 것은
+  **Fight Aging!(CC BY 4.0)** 하나뿐이다. Lab Muffin은 사전 허락이 필요하고,
+  Nature Aging은 건별 유료 허가에다 피드가 0건이며, The Toy Book은 약관이 공개
+  게시를 금지하고, It's Nice That은 피드가 404다. Lifespan.io는 조건을 확인하지
+  못했다 — 모르는 것은 허락받은 것이 아니다.
+
+  그래서 아직 전부 `enabled: false`다. Fight Aging! 하나만 켜서 실제로 돌려 봤더니
+  8건이 전부 AGE 한 카테고리였다. 조건이 맞는 매체가 한 곳뿐이면 이곳은 매거진이
+  아니라 장수 연구 뉴스레터가 된다. CURIOSITY 쪽에 쓸 수 있는 매체가 생기는 날
+  함께 켠다. The Public Domain Review는 CC BY-SA라 조건은 맞지만 받아 온 6건이
+  전부 편집 기준에서 떨어졌다 — 이곳의 CULTURE는 «지금 생겨나는 취향»이고 그
+  매체는 퍼블릭 도메인 미술사다. 조건이 맞는 것과 지면에 맞는 것은 다른 문제다.
+
+- MAMABOY의 번역: `ANTHROPIC_API_KEY`가 저장소 시크릿에 없다. 없어도 수집은
+  끝나지만 모든 기사가 `translationStatus: 'pending'`으로 남아 원문 제목 그대로
+  걸린다. 소스를 켜기 전에 이 키부터 넣어야 한다.
 - MAMABOY의 검색: 지금은 모든 기사가 클라이언트에 있으므로 `services/search.ts`가
   직접 훑는다. 누적된 기사가 수백 건을 넘으면 색인을 미리 만들어 두는 쪽으로 바꾼다.
 - SEMICOLON의 두 번째 SESSION: 첫 기록(`wellknews-1k`)은 `display: 'stage'`로
