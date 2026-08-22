@@ -21,6 +21,10 @@
  *   7. 죽은 검색    «/»로 열리고, 치면 걸리고, 칩으로 좁혀지고, Escape로 닫히는지.
  *   8. 그림이 다 죽었을 때  이미지를 전부 막아도 지면이 남는지. 외부 이미지는
  *                   언제든 사라진다는 것이 이 매거진의 전제다.
+ *   9. 무너진 구조  h1이 하나인지, 제목 단계를 건너뛰지 않는지, 이름 없는
+ *                   링크와 버튼이 없는지. 눈으로는 멀쩡해 보이는 자리다.
+ *  10. 낮은 대비    모든 글자가 배경 기준 6:1을 넘는지. 반투명한 유리 위의
+ *                   글자는 아래 색까지 섞어서 재야 실제 대비가 나온다.
  *
  * 실행: npm run audit:mamaboy   (개발 서버가 없으면 알아서 띄운다.)
  */
@@ -247,6 +251,139 @@ async function auditReducedMotion(page, screen, pageName) {
   else pass(`${screen.name} ${pageName} 움직임을 꺼도 전부 보인다`)
 }
 
+/**
+ * 눈으로는 멀쩡해 보이는 구조.
+ *
+ * 제목 단계와 이름은 화면에서 확인할 수 없다. 그것이 무너져 있으면 스크린리더로
+ * 읽는 사람에게만 지면이 다르게 보인다.
+ */
+async function auditStructure(page, screen, pageName) {
+  const found = await page.evaluate(() => {
+    const issues = []
+    const headings = [...document.querySelectorAll('main h1, main h2, main h3, main h4')]
+    const ones = headings.filter((heading) => heading.tagName === 'H1')
+
+    if (ones.length !== 1) issues.push(`h1이 ${ones.length}개다`)
+
+    let previous = 0
+
+    for (const heading of headings) {
+      const level = Number(heading.tagName[1])
+
+      if (previous && level > previous + 1)
+        issues.push(
+          `제목 단계를 건너뛴다 h${previous}→h${level} «${heading.textContent.trim().slice(0, 18)}»`,
+        )
+
+      previous = level
+    }
+
+    for (const tag of ['main', 'header', 'footer'])
+      if (!document.querySelector(tag)) issues.push(`${tag}가 없다`)
+
+    if (document.documentElement.lang !== 'ko') issues.push('html의 lang이 ko가 아니다')
+
+    for (const image of document.querySelectorAll('img'))
+      if (image.getAttribute('alt') === null) issues.push('alt를 적지 않은 그림이 있다')
+
+    for (const element of document.querySelectorAll('a, button')) {
+      const box = element.getBoundingClientRect()
+
+      if (box.width === 0 || box.height === 0) continue
+
+      const name = (element.textContent ?? '').trim() || element.getAttribute('aria-label')
+
+      if (!name) issues.push(`이름이 없는 ${element.tagName === 'A' ? '링크' : '버튼'}`)
+    }
+
+    return [...new Set(issues)]
+  })
+
+  for (const issue of found) fail(`${screen.name} ${pageName} ${issue}`)
+
+  if (!found.length) pass(`${screen.name} ${pageName} 구조 — h1 하나 · 단계 · 이름 · 랜드마크`)
+}
+
+/**
+ * 대비.
+ *
+ * 이 지면의 유리와 젤은 반투명이라 배경색 하나만 보면 실제 대비가 나오지 않는다.
+ * 조상의 반투명한 겹을 바깥에서 안쪽으로 차례로 섞은 뒤에 잰다.
+ */
+async function auditContrast(page, screen, pageName) {
+  const low = await page.evaluate(() => {
+    const paper = [245, 239, 228]
+
+    /* rgb()와 color(srgb …)를 모두 0..255로 읽는다. 후자의 성분은 0..1 실수다. */
+    const channels = (value) => {
+      const numbers = (value.match(/-?\d*\.?\d+/g) ?? []).map(Number)
+
+      return value.startsWith('color(')
+        ? numbers.slice(0, 3).map((n) => n * 255)
+        : numbers.slice(0, 3)
+    }
+    const alpha = (value) => {
+      const numbers = (value.match(/-?\d*\.?\d+/g) ?? []).map(Number)
+
+      return numbers.length > 3 ? numbers[3] : 1
+    }
+    const luminance = ([r, g, b]) => {
+      const f = (c) => {
+        const v = c / 255
+
+        return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4
+      }
+
+      return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b)
+    }
+
+    const out = []
+
+    for (const element of document.querySelectorAll('main *, header *, footer *')) {
+      if (![...element.childNodes].some((node) => node.nodeType === 3 && node.textContent.trim()))
+        continue
+
+      const style = getComputedStyle(element)
+      const box = element.getBoundingClientRect()
+
+      if (box.width === 0 || style.visibility === 'hidden' || style.opacity === '0') continue
+
+      const layers = []
+
+      for (let parent = element; parent; parent = parent.parentElement) {
+        const background = getComputedStyle(parent).backgroundColor
+
+        if (background && background !== 'rgba(0, 0, 0, 0)' && background !== 'transparent')
+          layers.push(background)
+      }
+
+      let behind = paper
+
+      for (const layer of layers.reverse()) {
+        const color = channels(layer)
+        const a = alpha(layer)
+
+        behind = color.map((value, index) => value * a + behind[index] * (1 - a))
+      }
+
+      const front = luminance(channels(style.color))
+      const back = luminance(behind)
+      const ratio = (Math.max(front, back) + 0.05) / (Math.min(front, back) + 0.05)
+
+      if (ratio < 6)
+        out.push(
+          `${ratio.toFixed(2)}:1 «${element.textContent.trim().slice(0, 18)}» ${Math.round(parseFloat(style.fontSize))}px`,
+        )
+    }
+
+    return [...new Set(out)]
+  })
+
+  for (const item of low) fail(`${screen.name} ${pageName} 대비가 6:1 아래다 — ${item}`)
+
+  if (!low.length) pass(`${screen.name} ${pageName} 모든 글자가 6:1 이상`)
+}
+
 /** 검색이 열리고, 걸리고, 좁혀지고, 닫히는가. */
 async function auditSearch(page, screen) {
   await page.keyboard.press('/')
@@ -392,6 +529,8 @@ for (const screen of screens) {
     await page.waitForTimeout(500)
 
     await auditLayout(page, screen, target.name)
+    await auditStructure(page, screen, target.name)
+    await auditContrast(page, screen, target.name)
 
     if (target.name === 'home') await auditReveal(page, screen, target.name)
   }
@@ -401,6 +540,8 @@ for (const screen of screens) {
   await page.locator('main a[href*="/article/"]').first().click()
   await page.waitForTimeout(600)
   await auditLayout(page, screen, 'article')
+  await auditStructure(page, screen, 'article')
+  await auditContrast(page, screen, 'article')
 
   await page.goto(`${BASE}/`, { waitUntil: 'networkidle' })
   await page.waitForTimeout(400)
