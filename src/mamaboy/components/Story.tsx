@@ -28,6 +28,23 @@ type Props = {
  * 위로 올라가고 제목이 그 아래에서 시작하면서 판면에 어긋남이 생긴다.
  * 요약문이 붙는 유일한 조판이기도 하다.
  */
+/**
+ * 제목의 길이대(§20).
+ *
+ * FEATURE의 글자 크기는 그날 걸린 제목이 정한다. 72px에 고정해 두면 짧은 제목은
+ * 지면을 여는 한 줄이 되지만 긴 제목은 일곱 줄이 되어 첫 화면을 통째로 먹는다 —
+ * 실제 기사를 걸고 나서야 보였다. 예시 데이터의 제목이 전부 짧았기 때문이다.
+ *
+ * 한글은 라틴 글자보다 폭이 넓어 같은 글자 수라도 더 길게 앉는다. 그래서 낱말이
+ * 아니라 글자 수로 센다.
+ */
+function length(text: string): 'short' | 'medium' | 'long' {
+  if (text.length > 44) return 'long'
+  if (text.length > 26) return 'medium'
+
+  return 'short'
+}
+
 export function FeatureStory({ article, priority = false }: Props) {
   const heading = title(article)
   const lead = summary(article)
@@ -45,7 +62,11 @@ export function FeatureStory({ article, priority = false }: Props) {
             <ContentTypeTag type={article.contentType} />
           </p>
 
-          <h2 className={styles.featureTitle} lang={heading.lang}>
+          <h2
+            className={styles.featureTitle}
+            lang={heading.lang}
+            data-length={length(heading.text)}
+          >
             {heading.text}
           </h2>
 
