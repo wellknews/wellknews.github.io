@@ -47,14 +47,41 @@ export const GLOSSARY = [
   { en: 'placebo', ko: ['플라세보', '위약'] },
   { en: 'microbiome', ko: ['마이크로바이옴'] },
 
-  // 연구기관·학술지
-  { en: 'nature', ko: ['Nature'] },
-  { en: 'the lancet', ko: ['The Lancet', '랜싯'] },
-  { en: 'cell', ko: ['Cell'] },
-  { en: 'nih', ko: ['NIH'] },
-  { en: 'fda', ko: ['FDA'] },
-  { en: 'who', ko: ['WHO', '세계보건기구'] },
+  /*
+   * 연구기관·학술지.
+   *
+   * 여기 있는 것들은 cased를 붙인다. 대소문자를 가리지 않으면 학술지 «Nature»가
+   * 흔한 명사 nature에, 세계보건기구 «WHO»가 영어 대명사 who에 걸린다. 실제로
+   * 그렇게 만들어 놨더니 거의 모든 기사가 «용어가 사라졌다»로 떨어졌고, 번역문의
+   * who를 전부 WHO로 바꾸려 들었다.
+   */
+  { en: 'Nature', ko: ['Nature'], cased: true },
+  { en: 'The Lancet', ko: ['The Lancet', '랜싯'], cased: true },
+  { en: 'Cell', ko: ['Cell'], cased: true },
+  { en: 'NIH', ko: ['NIH'], cased: true },
+  { en: 'FDA', ko: ['FDA'], cased: true },
+  { en: 'WHO', ko: ['WHO', '세계보건기구'], cased: true },
 ]
+
+/** 정규식에 그대로 넣을 수 없는 글자를 막는다. */
+function escapeRegExp(value) {
+  return value.replaceAll(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+/**
+ * 원문에 이 용어가 «낱말로» 들어 있는가.
+ *
+ * 부분 문자열로 찾으면 collagen이 procollagenase 안쪽에 걸린다. 낱말 경계에서만
+ * 찾고, cased가 붙은 것은 대소문자까지 가린다.
+ */
+export function termPattern({ en, cased }, flags = 'g') {
+  return new RegExp(`\\b${escapeRegExp(en)}\\b`, cased ? flags : `${flags}i`)
+}
+
+/** 원문에 실제로 나온 용어만. 다른 모듈이 전부 이 함수를 거친다. */
+export function termsIn(text) {
+  return GLOSSARY.filter((entry) => termPattern(entry, '').test(text))
+}
 
 /**
  * 번역에서 사라진 용어를 찾는다.
@@ -65,22 +92,18 @@ export const GLOSSARY = [
  * @returns {string[]} 사라진 용어들.
  */
 export function missingTerms(original, translated) {
-  const source = original.toLowerCase()
-  const result = translated.toLowerCase()
+  return termsIn(original)
+    .filter((entry) => {
+      if (termPattern(entry, '').test(translated)) return false
 
-  return GLOSSARY.filter(({ en, ko }) => {
-    if (!source.includes(en)) return false
-    if (result.includes(en)) return false
-
-    return !ko.some((form) => translated.includes(form) || result.includes(form.toLowerCase()))
-  }).map(({ en }) => en)
+      return !entry.ko.some((form) => translated.toLowerCase().includes(form.toLowerCase()))
+    })
+    .map(({ en }) => en)
 }
 
 /** 요청에 함께 보내는 목록. 원문에 실제로 나온 용어만 넣는다. */
 export function glossaryFor(original) {
-  const source = original.toLowerCase()
-
-  return GLOSSARY.filter(({ en }) => source.includes(en)).map(
+  return termsIn(original).map(
     ({ en, ko }) => `- ${en} → ${ko.join(' 또는 ')} (원어를 지우지 않는다)`,
   )
 }

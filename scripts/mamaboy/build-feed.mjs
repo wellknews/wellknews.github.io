@@ -44,7 +44,12 @@ const MAX_AGE_DAYS = 30
 const MAX_PER_SOURCE = 20
 /** 이보다 오래 쓰이지 않은 번역은 캐시에서 내린다. 파일이 끝없이 자라지 않게. */
 const CACHE_KEEP_DAYS = 90
-const FETCH_TIMEOUT_MS = 15_000
+/*
+ * 15초로는 모자란 피드가 있다. Longevity.Technology는 한 번에 1500건을 뱉어
+ * 12초 넘게 걸리고, 러너가 붐비면 그대로 시간 초과가 된다 — 실제로 한 번
+ * 놓쳤다. 넉넉히 두는 값이 한 소스를 통째로 잃는 것보다 싸다.
+ */
+const FETCH_TIMEOUT_MS = 40_000
 
 async function readJson(path, fallback) {
   try {
