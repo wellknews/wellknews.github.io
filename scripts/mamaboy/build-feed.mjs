@@ -19,7 +19,7 @@ import { dirname, join } from 'node:path'
 import { classify, dropReason } from './classify.mjs'
 import { deduplicate } from './deduplicate.mjs'
 import { normalize } from './normalize.mjs'
-import { createTranslator } from './translate.mjs'
+import { createTranslator, TRANSLATION_VERSION } from './translate.mjs'
 import { validateFeed } from './validate.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
@@ -50,6 +50,8 @@ const CACHE_KEEP_DAYS = 90
  * 놓쳤다. 넉넉히 두는 값이 한 소스를 통째로 잃는 것보다 싸다.
  */
 const FETCH_TIMEOUT_MS = 40_000
+const FETCH_RETRIES = 2
+const FETCH_BACKOFF_MS = 3_000
 
 async function readJson(path, fallback) {
   try {
@@ -60,33 +62,47 @@ async function readJson(path, fallback) {
 }
 
 /**
- * 피드 하나를 가져온다.
+ * 피드 하나를 받아 온다.
  *
- * 한 소스가 죽어 있다고 해서 그날의 지면 전체가 비면 안 된다. 실패는 그 소스만
- * 건너뛰고 로그에 남긴다.
+ * 한 번 실패했다고 그 소스를 그 판에서 통째로 빼지 않는다. 1500건을 뱉는
+ * 피드는 십수 초가 걸리고 가끔 연결이 끊기는데, 그때마다 그 매체가 맡고 있던
+ * 카테고리가 지면에서 사라진다 — 실제로 SKIN과 BODY가 한 번 통째로 비었다.
+ * 끊기는 것은 대개 일시적이므로 물러섰다 한 번 더 해 본다.
  */
 async function fetchFeed(source) {
-  try {
-    const response = await fetch(source.feedUrl, {
-      headers: {
-        // 우리가 누구인지 밝힌다. 차단하려는 매체가 차단할 수 있어야 한다.
-        'user-agent': 'mamaboy-feed/1.0 (+https://wellknews.github.io/mamaboy/)',
-        accept: 'application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8',
-      },
-      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
-    })
+  for (let attempt = 0; ; attempt += 1) {
+    try {
+      const response = await fetch(source.feedUrl, {
+        headers: {
+          // 우리가 누구인지 밝힌다. 차단하려는 매체가 차단할 수 있어야 한다.
+          'user-agent': 'mamaboy-feed/1.0 (+https://wellknews.github.io/mamaboy/)',
+          accept: 'application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8',
+        },
+        signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+      })
 
-    if (!response.ok) {
-      console.warn(`fetch  ${source.id} — HTTP ${response.status}`)
+      /* 4xx는 우리가 잘못 부른 것이다. 다시 불러도 같은 답이 온다. */
+      if (!response.ok) {
+        if (response.status < 500 || attempt >= FETCH_RETRIES) {
+          console.warn(`fetch  ${source.id} — HTTP ${response.status}`)
 
-      return null
+          return null
+        }
+
+        throw new Error(`HTTP ${response.status}`)
+      }
+
+      return await response.text()
+    } catch (error) {
+      if (attempt >= FETCH_RETRIES) {
+        console.warn(`fetch  ${source.id} — ${error.message} (${attempt + 1}번 시도)`)
+
+        return null
+      }
+
+      console.warn(`fetch  ${source.id} — ${error.message}, 다시 시도한다`)
+      await new Promise((resolve) => setTimeout(resolve, FETCH_BACKOFF_MS * (attempt + 1)))
     }
-
-    return await response.text()
-  } catch (error) {
-    console.warn(`fetch  ${source.id} — ${error.message}`)
-
-    return null
   }
 }
 
@@ -241,12 +257,18 @@ async function main() {
    * 번역하면 돈만 든다.
    */
   const cutoff = now.getTime() - CACHE_KEEP_DAYS * 86_400_000
+  const current = `${TRANSLATION_VERSION}:`
   let pruned = 0
 
   for (const [key, entry] of Object.entries(cache)) {
     const at = Date.parse(entry?.at ?? '')
+    const stale = !Number.isNaN(at) && at < cutoff
 
-    if (!Number.isNaN(at) && at < cutoff) {
+    /*
+     * 판이 지난 것도 함께 내린다. 규칙을 고쳐 판을 올리면 옛 판의 결과는 다시
+     * 쓰이지 않는데, 날짜로만 정리하면 90일 동안 파일에 그대로 남는다.
+     */
+    if (stale || !key.startsWith(current)) {
       delete cache[key]
       pruned += 1
     }
