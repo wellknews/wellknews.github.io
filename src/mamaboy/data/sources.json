@@ -91,21 +91,6 @@
       "note": "피드 주소가 404다. 재사용 조건도 확인하지 못했다. 배제. 2026-08-22 확인."
     },
     {
-      "id": "nia",
-      "name": "National Institute on Aging",
-      "feedUrl": "https://www.nia.nih.gov/news/rss.xml",
-      "homepage": "https://www.nia.nih.gov/news",
-      "language": "en",
-      "categories": ["age", "body"],
-      "careWeight": 1.2,
-      "curiosityWeight": 0.75,
-      "trustType": "research",
-      "trustLevel": 5,
-      "contentPolicy": "summary",
-      "enabled": false,
-      "note": "미국 국립노화연구소. 연방정부 저작물이라 본문은 퍼블릭 도메인이고 허락 없이 쓸 수 있다. 출처만 밝히면 된다. 사진은 저작권이 섞여 있어 별개다. 피드 응답 확인 뒤에 켠다. 2026-08-22 확인."
-    },
-    {
       "id": "public-domain-review",
       "name": "The Public Domain Review",
       "feedUrl": "https://publicdomainreview.org/rss.xml",
@@ -117,7 +102,7 @@
       "trustType": "expert",
       "trustLevel": 4,
       "contentPolicy": "link",
-      "enabled": false,
+      "enabled": true,
       "note": "대부분의 글이 CC BY-SA 4.0이다. 동일조건변경허락이라 요약을 옮기면 우리 번역문에도 같은 라이선스가 따라붙는다. 그 의무를 지지 않으려고 link로 둔다 — 제목과 출처, 그리고 원문 링크만. 피드 응답 확인 뒤에 켠다. 2026-08-22 확인."
     }
   ]
