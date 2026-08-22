@@ -51,3 +51,33 @@
   letter-spacing: 0.3em;
   color: var(--color-text-muted);
 }
+
+/*
+ * 눌러 볼 수 있는 칸.
+ *
+ * 버튼처럼 그리지 않는다. 테두리도 배경도 없고, 커서 모양과 아주 옅은 밑줄만
+ * 여기에 무언가 있다는 것을 알린다. 계기판 위에 버튼 하나가 솟아 있으면
+ * 계기판이 아니라 조작판이 된다.
+ */
+.guess {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-line);
+  justify-self: start;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.guess:hover,
+.guess:focus-visible {
+  color: var(--color-text);
+}
+
+.guess:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+}

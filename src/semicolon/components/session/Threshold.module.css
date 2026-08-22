@@ -1,11 +1,47 @@
 .threshold {
+  display: grid;
+  justify-items: center;
+  padding-block: clamp(32px, 6vw, 72px);
+}
+
+.numeral {
   font-family: var(--font-mono);
   font-size: clamp(3.5rem, 13vw, 8rem);
   line-height: 1;
   letter-spacing: 0.01em;
   font-variant-numeric: tabular-nums;
-  text-align: center;
-  /* 색은 Weight가 정한다. 여기서 색을 적으면 물러나는 일이 일어나지 않는다. */
-  color: inherit;
-  padding-block: clamp(32px, 6vw, 72px);
+  /*
+   * 기본은 물러난 상태다.
+   *
+   * 여기서 멈춰도 숫자는 그대로 읽힌다 — 이 색도 종이 대비 11:1을 넘는다.
+   * 스크롤 타임라인이 없는 화면에서도, 움직임을 줄이기로 한 사람에게도 같다.
+   */
+  color: var(--color-text-secondary);
+  transition: color var(--dur-slow) var(--ease-out);
+  /* 세로 스크롤은 그대로 넘긴다. 이 숫자는 쥐고 있는지만 안다. */
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+/* 쥐고 있는 동안. 놓치지 않는다. */
+.numeral[data-held='true'] {
+  color: var(--color-text);
+  transition-duration: var(--dur-base);
+}
+
+@media (hover: none) {
+  .numeral {
+    cursor: auto;
+  }
+}
+
+/*
+ * 움직임을 줄이기로 한 사람에게는 처음부터 제 잉크로 서 있는다.
+ * 쥐어야만 읽히는 숫자가 되면 안 된다.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .numeral {
+    color: var(--color-text);
+    transition: none;
+  }
 }

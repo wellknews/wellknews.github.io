@@ -1,11 +1,9 @@
-import { useCallback, useEffect, useRef, type CSSProperties, type PointerEvent } from 'react'
+import { useCallback, useRef, type CSSProperties } from 'react'
 
 import type { Cover } from '../../content/types'
 import { clamp } from '../../motion/damp'
+import { usePointerLight } from '../../motion/usePointerLight'
 import styles from './Materialize.module.css'
-
-/** 손가락으로 찍은 자리가 밝은 채로 머무는 시간(ms). */
-const HOLD = 2200
 
 /** 초점이 반응하기 시작하는 거리(이미지 폭 대비). */
 const FOCUS_REACH = 0.28
@@ -38,24 +36,10 @@ type Props = {
  */
 export function Materialize({ image, focus, rest }: Props) {
   const hostRef = useRef<HTMLDivElement>(null)
-  const holdTimer = useRef<number | undefined>(undefined)
 
-  useEffect(() => () => window.clearTimeout(holdTimer.current), [])
-
-  const light = useCallback(
-    (clientX: number, clientY: number) => {
-      const host = hostRef.current
-
-      if (!host) return
-
-      const rect = host.getBoundingClientRect()
-      const x = (clientX - rect.left) / rect.width
-      const y = (clientY - rect.top) / rect.height
-
-      host.style.setProperty('--x', `${(x * 100).toFixed(2)}%`)
-      host.style.setProperty('--y', `${(y * 100).toFixed(2)}%`)
-      host.dataset.lit = 'true'
-
+  /* 초점은 이 장치에만 있는 계산이다. 자리를 읽는 일은 공용 규칙이 맡는다. */
+  const aim = useCallback(
+    (x: number, y: number, rect: DOMRect) => {
       if (!focus) return
 
       /* 세로 거리는 종횡비로 보정한다. 그러지 않으면 납작한 이미지에서 초점이 세로로만 넓어진다. */
@@ -63,55 +47,12 @@ export function Materialize({ image, focus, rest }: Props) {
       const dy = (y - focus.y) * (rect.height / rect.width)
       const near = 1 - Math.hypot(dx, dy) / FOCUS_REACH
 
-      host.style.setProperty('--focus', clamp(near, 0, 1).toFixed(3))
+      hostRef.current?.style.setProperty('--focus', clamp(near, 0, 1).toFixed(3))
     },
     [focus],
   )
 
-  const dim = useCallback(() => {
-    const host = hostRef.current
-
-    if (!host) return
-
-    window.clearTimeout(holdTimer.current)
-    host.dataset.lit = 'false'
-    host.style.setProperty('--focus', '0')
-  }, [])
-
-  const handleMove = useCallback(
-    (event: PointerEvent<HTMLDivElement>) => {
-      // 터치는 누르는 동안만 따라간다. 끌고 다니면 스크롤을 방해한다.
-      if (event.pointerType === 'touch') return
-
-      light(event.clientX, event.clientY)
-    },
-    [light],
-  )
-
-  const handleDown = useCallback(
-    (event: PointerEvent<HTMLDivElement>) => {
-      light(event.clientX, event.clientY)
-
-      if (event.pointerType !== 'touch') return
-
-      window.clearTimeout(holdTimer.current)
-      holdTimer.current = window.setTimeout(dim, HOLD)
-    },
-    [dim, light],
-  )
-
-  /*
-   * 터치는 손을 떼는 순간 포인터가 사라지면서 leave가 곧바로 따라온다.
-   * 그 신호로 끄면 찍은 자리가 밝을 시간이 없다. 손가락이 켠 빛은 타이머가 끈다.
-   */
-  const handleLeave = useCallback(
-    (event: PointerEvent<HTMLDivElement>) => {
-      if (event.pointerType === 'touch') return
-
-      dim()
-    },
-    [dim],
-  )
+  const light = usePointerLight(hostRef, aim)
 
   return (
     <div
@@ -119,10 +60,7 @@ export function Materialize({ image, focus, rest }: Props) {
       ref={hostRef}
       data-lit="false"
       style={rest === undefined ? undefined : ({ '--rest': rest } as CSSProperties)}
-      onPointerMove={handleMove}
-      onPointerDown={handleDown}
-      onPointerLeave={handleLeave}
-      onPointerCancel={dim}
+      {...light}
     >
       {/* 아직 다 존재하지 않는 상태. 형태만 있다. */}
       <img

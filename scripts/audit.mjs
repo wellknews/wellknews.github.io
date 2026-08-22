@@ -228,9 +228,43 @@ const DEVICES = [
     changed: (before, after) => before !== after,
     click: true,
   },
+  {
+    kind: 'session',
+    label: '본문의 사진',
+    target: '[class*="Plate-module__frame"]',
+    read: () => document.querySelector('[class*="Plate-module__frame"]')?.dataset.lit,
+    changed: (before, after) => before !== after && after === 'true',
+  },
+  {
+    kind: 'session',
+    label: '잴 수 없는 칸',
+    target: '[class*="Condition-module__guess"]',
+    read: () => document.querySelector('[class*="Condition-module__guess"]')?.textContent,
+    changed: (before, after) => before !== after,
+    click: true,
+  },
+  {
+    kind: 'session',
+    label: '붙잡는 51%',
+    target: '[class*="Threshold-module__numeral"]',
+    read: () =>
+      getComputedStyle(document.querySelector('[class*="Threshold-module__numeral"]')).color,
+    changed: (before, after) => before !== after,
+    /*
+     * 쥐고 있는 동안에만 색이 바뀐다. 눌렀다 떼면 원래대로 돌아오므로,
+     * 손가락에서는 누른 채로 재야 한다.
+     */
+    hold: true,
+  },
 ]
 
-/** 요소를 찍어 회색조 픽셀로 돌려준다. 두 번 찍어 비교하기 위한 것. */
+/**
+ * 요소를 찍어 색이 그대로 있는 픽셀로 돌려준다. 두 번 찍어 비교하기 위한 것.
+ *
+ * 회색조로 바꾸지 않는다. 채도만 바뀌는 장치는 밝기가 거의 그대로여서, 회색조로
+ * 재면 «아무 일도 안 일어났다»로 읽힌다. 실제로 사진의 색이 돌아오는 장치를
+ * 그 방식으로 놓칠 뻔했다.
+ */
 async function pixels(page, locator, file, pad = 8) {
   const box = await locator.boundingBox()
 
@@ -246,7 +280,7 @@ async function pixels(page, locator, file, pad = 8) {
     },
   })
 
-  const { data } = await sharp(file).greyscale().raw().toBuffer({ resolveWithObject: true })
+  const { data } = await sharp(file).removeAlpha().raw().toBuffer({ resolveWithObject: true })
 
   return data
 }
@@ -286,6 +320,14 @@ async function auditDevices(page, screen, where, dir) {
 
     if ((await target.count()) === 0) continue
 
+    /*
+     * 재기 전에 커서를 판 밖으로 치운다.
+     *
+     * 앞 장치를 만진 자리에 커서가 남아 있으면, 스크롤한 뒤 그 자리에 온 다음
+     * 장치가 이미 켜진 채로 «처음» 상태를 재게 된다. 그러면 살아 있는 장치가
+     * 죽은 것으로 나온다.
+     */
+    await page.mouse.move(0, 0)
     await target.scrollIntoViewIfNeeded()
     await page.waitForTimeout(400)
 
@@ -303,7 +345,11 @@ async function auditDevices(page, screen, where, dir) {
     const x = box.x + box.width / 2
     const y = box.y + box.height / 2
 
-    if (screen.touch) {
+    if (device.hold) {
+      /* 놓으면 되돌아가는 장치는 쥔 채로 잰다. */
+      await page.mouse.move(x, y)
+      await page.mouse.down()
+    } else if (screen.touch) {
       await page.touchscreen.tap(x, y)
     } else if (device.click) {
       await page.mouse.click(x, y)
@@ -315,6 +361,8 @@ async function auditDevices(page, screen, where, dir) {
 
     const after = await page.evaluate(device.read)
     const afterPixels = await pixels(page, target, `${stem}-after.png`)
+
+    if (device.hold) await page.mouse.up()
     const moved = movedFraction(beforePixels, afterPixels)
     const subject = `${device.label}${josa(device.label, '이', '가')}`
     const input = screen.touch ? '탭' : '커서'
@@ -707,12 +755,12 @@ for (const screen of SCREENS) {
     await page.goto(`${BASE}${target.path}`, { waitUntil: 'networkidle' })
     await page.waitForTimeout(600)
 
+    /* 손대기 전에 걷는다. 눌러 본 뒤에 걷으면 눌린 결과를 원문으로 착각한다. */
+    collected.set(target.name, await page.evaluate(HARVEST))
+
     await auditOverflow(page, screen, target.name)
     await auditGutter(page, screen, target.name)
     await auditDevices(page, screen, target, dir)
-
-    collected.set(target.name, await page.evaluate(HARVEST))
-
     await auditReplay(page, screen, target)
 
     if (target.kind === 'session') await auditClipping(page, screen, dir)

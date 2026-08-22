@@ -147,9 +147,10 @@ export const wellknews1k: Session = {
   display: 'stage',
 
   meta: {
-    date: '2026-08',
+    date: '2026-08-21',
     type: 'WELLKNEWS 1K',
   },
+  excerpt: '화면 안에서만 존재하던 것이 처음으로 현실의 물건이 되었다.',
 
   /* 표지는 완성품이 아니라 시안이다. 아직 물건이 아닌 상태에서 시작해야 한다. */
   cover: mockupFront,

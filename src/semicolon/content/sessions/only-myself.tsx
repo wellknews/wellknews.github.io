@@ -45,6 +45,13 @@ const chongYung: Cover = {
   height: 1402,
 }
 
+const naengmyeon: Cover = {
+  src: '/media/session/only-myself/06-bongpiyang-naengmyeon.webp',
+  alt: '황동 그릇에 담긴 봉피양 평양냉면과 곁들임 접시들',
+  width: 1086,
+  height: 1448,
+}
+
 const tschangYeul: Cover = {
   src: '/media/session/only-myself/05-kim-tschang-yeul-house.webp',
   alt: '대형 문자 작품과 붓, 작업도구가 남아 있는 김창열 화가의 집 작업실',
@@ -524,7 +531,7 @@ const strange = (
 const condition = [
   { label: 'FATIGUE', value: 8 },
   { label: 'RAIN', value: 10 },
-  { label: 'STOMACH', value: '???' },
+  { label: 'STOMACH', value: '???', guessable: true },
 ] as const
 
 const tension = [
@@ -762,7 +769,10 @@ export const onlyMyself: Session = {
         <Passage tone="loud">{zombie}</Passage>
       </Scene>
 
-      <Scene air>
+      {/* 방금까지 화가의 작업실을 보다가 화면을 가득 채우는 냉면. 그 낙차가 이 구간이다. */}
+      <Scene width="bleed" air>
+        <Plate image={naengmyeon} note="RECOVERY" />
+
         <Place name="BONGPIYANG GYEONGBOKGUNG" address="서울 종로구 자하문로 20" />
       </Scene>
 
@@ -869,9 +879,7 @@ export const onlyMyself: Session = {
        * 버린 것이 아니라 원래 뜻으로 되돌린 것이기 때문이다.
        */}
       <Scene air>
-        <Weight direction="thin">
-          <Threshold value="51%" />
-        </Weight>
+        <Threshold value="51%" />
       </Scene>
 
       <Scene>
@@ -1056,7 +1064,10 @@ export const onlyMyself: Session = {
         <Passage tone="loud">{zombie}</Passage>
       </Scene>
 
-      <Scene air>
+      {/* 방금까지 화가의 작업실을 보다가 화면을 가득 채우는 냉면. 그 낙차가 이 구간이다. */}
+      <Scene width="bleed" air>
+        <Plate image={naengmyeon} note="RECOVERY" />
+
         <Place name="BONGPIYANG GYEONGBOKGUNG" address="서울 종로구 자하문로 20" />
       </Scene>
 
@@ -1137,9 +1148,7 @@ export const onlyMyself: Session = {
       </Quiet>
 
       <Scene air>
-        <Weight direction="thin">
-          <Threshold value="51%" />
-        </Weight>
+        <Threshold value="51%" />
       </Scene>
 
       <Scene>

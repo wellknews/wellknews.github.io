@@ -3,12 +3,81 @@
   row-gap: clamp(10px, 1.6vw, 16px);
 }
 
-.plate img {
+.frame {
+  display: grid;
+  /* 두 겹이 정확히 같은 자리에 놓여야 한 장으로 보인다. */
+  grid-template-areas: 'stack';
+  /* 여기에 무언가가 더 있다는 것을 커서 모양으로 알린다. */
+  cursor: crosshair;
+  /* 세로 스크롤은 그대로 넘긴다. 이 판은 어디를 보고 있는지만 읽는다. */
+  touch-action: pan-y;
+}
+
+.frame img {
+  grid-area: stack;
   display: block;
   width: 100%;
   height: auto;
   /* 모서리를 깎지 않는다. 사진은 카드가 아니라 지면에 앉은 한 장이다. */
   border-radius: 0;
+}
+
+/*
+ * 가라앉은 상태.
+ *
+ * 흐린 날의 기억에 가깝게 채도와 대비를 한 단계 내린다. 지우는 것이 아니다 —
+ * 손을 대지 않아도 무엇이 찍혀 있는지는 전부 보인다.
+ */
+.base {
+  filter: saturate(0.55) contrast(0.94) brightness(1.03);
+  transition: filter var(--dur-slow) var(--ease-out);
+}
+
+/*
+ * 보고 있는 자리.
+ *
+ * 원을 넓게 잡는다. 좁게 만들면 사진을 훑는 손전등 놀이가 되고, 그러면 이것이
+ * 무엇인지 보는 대신 빛을 쫓게 된다.
+ */
+.seen {
+  opacity: 0;
+  mask-image: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #000 0%, transparent 52%);
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.frame[data-lit='true'] .seen {
+  opacity: 1;
+}
+
+/*
+ * 손가락에는 커서 모양 같은 힌트가 없다.
+ *
+ * 그래서 찍기 전의 상태를 한 단계 올린다. 반응을 없애는 대신 시작점을 옮기는
+ * 쪽이다 — 찍으면 그 자리가 제 색을 내는 것은 커서와 똑같다.
+ */
+@media (hover: none) {
+  .frame {
+    cursor: auto;
+  }
+
+  .base {
+    filter: saturate(0.75) contrast(0.97) brightness(1.01);
+  }
+}
+
+/*
+ * 움직임을 줄이기로 한 사람에게는 사진이 처음부터 제 색으로 보인다.
+ * 다가가야만 보이는 사진이 되면 그 사람은 이 기록의 절반을 잃는다.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .base {
+    filter: none;
+    transition: none;
+  }
+
+  .seen {
+    display: none;
+  }
 }
 
 .note {
