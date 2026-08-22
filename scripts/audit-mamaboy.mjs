@@ -449,6 +449,21 @@ async function auditWithoutImages(browser, screen) {
   await page.goto(`${BASE}/`, { waitUntil: 'networkidle' })
   await page.waitForTimeout(600)
 
+  /*
+   * 끝까지 한 번 내려갔다 온다.
+   *
+   * 지면의 그림은 첫 화면의 것만 즉시 받고 나머지는 지연 로드다(§36). 내려가
+   * 보지 않으면 화면 밖의 그림은 아직 요청조차 하지 않은 상태라 실패할 기회도
+   * 없고, «죽은 그림이 자리를 차지한 채 남아 있다»는 판정이 거짓으로 나온다.
+   */
+  await page.evaluate(async () => {
+    for (let y = 0; y <= document.body.scrollHeight; y += 400) {
+      window.scrollTo(0, y)
+      await new Promise((resolve) => setTimeout(resolve, 60))
+    }
+  })
+  await page.waitForTimeout(900)
+
   const state = await page.evaluate(() => ({
     stories: document.querySelectorAll('main a[href*="/article/"]').length,
     images: document.querySelectorAll('main img').length,
@@ -503,10 +518,18 @@ const browser = await chromium.launch({
 function watch(page, label) {
   page.on('pageerror', (error) => fail(`${label} 콘솔 예외: ${error.message}`))
   page.on('requestfailed', (request) => {
-    /* 개발 서버의 HMR 소켓과 예시 데이터의 가짜 이미지 주소는 검사 대상이 아니다. */
+    /*
+     * 우리 것이 실패했을 때만 센다.
+     *
+     * 지면에 걸리는 그림은 남의 서버에 있고, 그것이 죽는 것은 이 매거진의
+     * 전제다(§37) — 죽었을 때 지면이 어떻게 되는지는 아래 auditWithoutImages가
+     * 따로 본다. 게다가 이 저장소의 개발 환경은 바깥으로 나가는 요청을 막아
+     * 두어서, 바깥 주소까지 세면 검사가 «전부 실패»만 말하게 된다.
+     */
     const url = request.url()
 
-    if (!url.includes('/@vite') && !url.includes('example.com')) fail(`${label} 요청 실패: ${url}`)
+    if (url.startsWith(BASE.replace('/mamaboy', '')) && !url.includes('/@vite'))
+      fail(`${label} 요청 실패: ${url}`)
   })
 }
 

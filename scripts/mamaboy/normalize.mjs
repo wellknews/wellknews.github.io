@@ -133,7 +133,7 @@ function stripHtml(value) {
 
 /** 본문에 실을 것이 못 되는 그림. 추적 픽셀·아바타·공유 버튼·이모지가 여기 걸린다. */
 const JUNK_IMAGE =
-  /(feedburner|feedproxy|gravatar|wp-emoji|pixel|1x1|spacer|blank\.gif|doubleclick|share|badge|button|icon|avatar|logo)/i
+  /(feedburner|feedproxy|gravatar|wp-emoji|s\.w\.org|\/emoji\/|pixel|1x1|spacer|blank\.gif|doubleclick|share|badge|button|icon|avatar|logo)/i
 
 /** 원문에서 온 주소를 절대 주소로 편다. 상대 경로는 우리 도메인에서 깨진다. */
 function absolute(url, base) {

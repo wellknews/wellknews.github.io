@@ -32,11 +32,18 @@
   color: var(--color-text);
 }
 
-/* 번역이 없는 글의 배지는 «원문»이라는 사실만 조용히 알린다. */
+/*
+ * 번역이 없는 글의 배지는 «원문»이라는 사실만 조용히 알린다.
+ *
+ * 글자색은 --color-text-muted가 아니다. 그 값은 맨 크림 위에서 6.3:1로 잡은
+ * 것이고, 이렇게 잉크를 6% 섞은 칩 위에 올리면 5.6:1로 떨어진다. 대비는 색
+ * 하나의 성질이 아니라 그것이 놓인 자리와의 관계다 — 조용하게 만들려고 배경을
+ * 깔았으면 글자도 그 배경에 맞춰 다시 골라야 한다(7.7:1).
+ */
 .badge[data-status='pending'],
 .badge[data-status='failed'] {
   background: color-mix(in srgb, var(--ink) 6%, transparent);
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .title {
