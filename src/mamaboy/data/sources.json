@@ -11,9 +11,9 @@
       "curiosityWeight": 0.9,
       "trustType": "expert",
       "trustLevel": 4,
-      "contentPolicy": "summary",
+      "contentPolicy": "link",
       "enabled": false,
-      "note": "화학자가 쓰는 스킨케어 과학 블로그. 이용 조건 확인 전까지 꺼 둔다."
+      "note": "저작권 보유. 본문을 상당량 인용하거나 이미지를 옮기려면 사전 허락이 필요하고, 링크백만 «감사한 일»로 적어 두었다. 무상 재사용 허락이 아니므로 끈 채로 둔다. 2026-08-22 확인."
     },
     {
       "id": "lifespan-io",
@@ -26,9 +26,9 @@
       "curiosityWeight": 0.95,
       "trustType": "research",
       "trustLevel": 4,
-      "contentPolicy": "summary",
+      "contentPolicy": "link",
       "enabled": false,
-      "note": "longevity 연구 소식. 이용 조건 확인 전까지 꺼 둔다."
+      "note": "피드는 살아 있고 매일 갱신되지만 재사용 조건을 확인하지 못했다. 조건을 모르는 것은 허락받은 것이 아니므로 끈 채로 둔다. 2026-08-22 확인 시도."
     },
     {
       "id": "fight-aging",
@@ -42,8 +42,8 @@
       "trustType": "opinion",
       "trustLevel": 3,
       "contentPolicy": "summary",
-      "enabled": false,
-      "note": "노화 연구를 논평하는 개인 매체. 연구 자체가 아니므로 opinion으로 둔다."
+      "enabled": true,
+      "note": "CC BY 4.0. 원문 링크·저자·매체를 밝히면 재게시와 재작성을 명시적으로 허용한다. 전문까지 실을 수 있지만 요약과 링크로 충분해 summary로 둔다. 2026-08-22 확인."
     },
     {
       "id": "nature-aging",
@@ -58,7 +58,7 @@
       "trustLevel": 5,
       "contentPolicy": "link",
       "enabled": false,
-      "note": "학술지. 초록조차 옮길 권한이 없다고 보고 link로 둔다."
+      "note": "Springer Nature. 재사용은 RightsLink를 통해 건별로 허가받고 대개 비용이 든다. 게다가 피드 주소가 로그인 페이지로 넘어가 항목이 0건이다. 배제. 2026-08-22 확인."
     },
     {
       "id": "toy-book",
@@ -71,9 +71,9 @@
       "curiosityWeight": 1.1,
       "trustType": "news",
       "trustLevel": 2,
-      "contentPolicy": "summary",
+      "contentPolicy": "link",
       "enabled": false,
-      "note": "완구 산업 매체. 제품 홍보성 글이 섞이므로 편집 필터를 세게 건다."
+      "note": "이용약관이 «개인적·비상업적 열람»만 허용하고 공개 게시를 명시적으로 금지한다. 배제. 2026-08-22 확인."
     },
     {
       "id": "its-nice-that",
@@ -86,9 +86,39 @@
       "curiosityWeight": 1.15,
       "trustType": "news",
       "trustLevel": 3,
+      "contentPolicy": "link",
+      "enabled": false,
+      "note": "피드 주소가 404다. 재사용 조건도 확인하지 못했다. 배제. 2026-08-22 확인."
+    },
+    {
+      "id": "nia",
+      "name": "National Institute on Aging",
+      "feedUrl": "https://www.nia.nih.gov/news/rss.xml",
+      "homepage": "https://www.nia.nih.gov/news",
+      "language": "en",
+      "categories": ["age", "body"],
+      "careWeight": 1.2,
+      "curiosityWeight": 0.75,
+      "trustType": "research",
+      "trustLevel": 5,
       "contentPolicy": "summary",
       "enabled": false,
-      "note": "시각문화 매체. 이용 조건 확인 전까지 꺼 둔다."
+      "note": "미국 국립노화연구소. 연방정부 저작물이라 본문은 퍼블릭 도메인이고 허락 없이 쓸 수 있다. 출처만 밝히면 된다. 사진은 저작권이 섞여 있어 별개다. 피드 응답 확인 뒤에 켠다. 2026-08-22 확인."
+    },
+    {
+      "id": "public-domain-review",
+      "name": "The Public Domain Review",
+      "feedUrl": "https://publicdomainreview.org/rss.xml",
+      "homepage": "https://publicdomainreview.org/",
+      "language": "en",
+      "categories": ["culture"],
+      "careWeight": 0.7,
+      "curiosityWeight": 1.2,
+      "trustType": "expert",
+      "trustLevel": 4,
+      "contentPolicy": "link",
+      "enabled": false,
+      "note": "대부분의 글이 CC BY-SA 4.0이다. 동일조건변경허락이라 요약을 옮기면 우리 번역문에도 같은 라이선스가 따라붙는다. 그 의무를 지지 않으려고 link로 둔다 — 제목과 출처, 그리고 원문 링크만. 피드 응답 확인 뒤에 켠다. 2026-08-22 확인."
     }
   ]
 }

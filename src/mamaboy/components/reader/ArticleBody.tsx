@@ -33,8 +33,9 @@ export function ArticleBody({ article, mode }: Props) {
         ? { paragraphs: article.bodyOriginal, lang: article.language }
         : null
 
+  /* 원문 보기도 같은 제한을 받는다. link 정책이면 원문 요약도 싣지 않는다. */
   const leadText =
-    mode === 'original' && article.summaryOriginal
+    mode === 'original' && article.summaryOriginal && article.contentPolicy !== 'link'
       ? { text: article.summaryOriginal, lang: article.language }
       : lead
 

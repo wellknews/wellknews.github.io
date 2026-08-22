@@ -22,7 +22,17 @@ export function title(article: Article): Reading {
   return { text: article.titleOriginal, lang: article.language, translated: false }
 }
 
+/**
+ * 카드와 읽기 화면이 함께 쓰는 요약(§15).
+ *
+ * link 정책의 글에는 요약이 없다. 화면에는 «제목과 출처만 옮긴다»고 적어 두고
+ * 실제로는 그 매체의 요약문을 그대로 실으면, 적어 둔 말이 거짓이 된다. 무엇을
+ * 실을 수 있는지는 수집 단계에서 정해지고, 그 값을 지키는 자리는 여기 하나뿐이라
+ * 카드와 본문이 서로 다르게 판단할 여지도 없앤다.
+ */
 export function summary(article: Article): Reading | null {
+  if (article.contentPolicy === 'link') return null
+
   if (article.summaryKo) {
     return { text: article.summaryKo, lang: 'ko', translated: article.language !== 'ko' }
   }
