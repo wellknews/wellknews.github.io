@@ -33,6 +33,8 @@ const HEALTH_FILE = join(OUT_DIR, 'sources-health.json')
 /** 지면에 남기는 최대치와 기간. 오래된 것은 검색에도 남기지 않는다. */
 const MAX_ARTICLES = 120
 const MAX_AGE_DAYS = 30
+/** 이보다 오래 쓰이지 않은 번역은 캐시에서 내린다. 파일이 끝없이 자라지 않게. */
+const CACHE_KEEP_DAYS = 90
 const FETCH_TIMEOUT_MS = 15_000
 
 async function readJson(path, fallback) {
@@ -203,6 +205,27 @@ async function main() {
 
     return
   }
+
+  /*
+   * 오래된 번역을 내린다.
+   *
+   * 캐시는 지우지 않으면 계속 자란다. 다만 이번 실행에 쓰이지 않았다고 바로
+   * 버리지는 않는다 — 기간을 벗어났다가 다시 걸리는 글이 있고, 그때 다시
+   * 번역하면 돈만 든다.
+   */
+  const cutoff = now.getTime() - CACHE_KEEP_DAYS * 86_400_000
+  let pruned = 0
+
+  for (const [key, entry] of Object.entries(cache)) {
+    const at = Date.parse(entry?.at ?? '')
+
+    if (!Number.isNaN(at) && at < cutoff) {
+      delete cache[key]
+      pruned += 1
+    }
+  }
+
+  if (pruned > 0) console.log(`번역 캐시   ${pruned}건 정리`)
 
   await writeFile(FEED_FILE, `${JSON.stringify(feed, null, 2)}\n`)
   await writeFile(CACHE_FILE, `${JSON.stringify(cache, null, 2)}\n`)
