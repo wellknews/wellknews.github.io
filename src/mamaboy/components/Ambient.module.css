@@ -1,0 +1,92 @@
+.field {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-paper);
+  pointer-events: none;
+  /*
+   * 안쪽의 세 겹은 경계를 감추려고 화면보다 크게 잡혀 있다(inset: -30%).
+   * 그것이 밖으로 새면 브라우저에 따라 가로 스크롤이 생긴다 — 여기서 잘라 둔다.
+   */
+  overflow: hidden;
+}
+
+.gel,
+.clean,
+.chrome {
+  position: absolute;
+  inset: -30%;
+  /* 소재가 바뀌는 것은 오브젝트의 사건이므로 마이크로 모션보다 길게 간다. */
+  transition: opacity var(--dur-object-slow) var(--ease-soft);
+}
+
+/* 젤이 종이 밑에서 번진다. 경계가 보이면 색면이 아니라 도형이 되므로 크게 잡는다. */
+.gel {
+  background: radial-gradient(
+    64vw 64vw at 88% 6%,
+    color-mix(in srgb, var(--orange) 34%, transparent),
+    transparent 68%
+  );
+}
+
+/* 종이가 맑아진다. 흰 웅덩이가 크림 위에 아주 얕게 고인다. */
+.clean {
+  background: radial-gradient(
+    70vw 70vw at 14% 2%,
+    color-mix(in srgb, var(--surface-clean) 92%, transparent),
+    transparent 66%
+  );
+}
+
+/* 차가운 빛이 한 번 스친다. Chrome은 독립된 소재가 아니라 이런 반사로만 나온다. */
+.chrome {
+  background: linear-gradient(104deg, transparent 26%, rgb(255 255 255 / 0.5) 42%, transparent 58%);
+}
+
+/* 홈 — 둘의 공존이 정체성이라 어느 소재도 앞서지 않는다. */
+.field[data-material='mixed'] .gel {
+  opacity: 0.5;
+}
+
+.field[data-material='mixed'] .clean {
+  opacity: 0.55;
+}
+
+.field[data-material='mixed'] .chrome {
+  opacity: 0.28;
+}
+
+.field[data-material='gel'] .gel {
+  opacity: 1;
+}
+
+.field[data-material='gel'] .clean {
+  opacity: 0.25;
+}
+
+.field[data-material='gel'] .chrome {
+  opacity: 0.2;
+}
+
+.field[data-material='clean'] .gel {
+  opacity: 0.16;
+}
+
+.field[data-material='clean'] .clean {
+  opacity: 1;
+}
+
+.field[data-material='clean'] .chrome {
+  opacity: 0.16;
+}
+
+.field[data-material='chrome'] .gel {
+  opacity: 0.22;
+}
+
+.field[data-material='chrome'] .clean {
+  opacity: 0.5;
+}
+
+.field[data-material='chrome'] .chrome {
+  opacity: 0.9;
+}

@@ -18,6 +18,7 @@
  */
 .belief {
   max-width: 22ch;
+  font-family: var(--font-editorial);
   font-size: var(--text-lead);
   font-weight: var(--weight-medium);
   line-height: 1.35;

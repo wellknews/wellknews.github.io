@@ -10,6 +10,9 @@ type Props = {
   route: Route
 }
 
+/** 이 안에서 눌린 «/»는 단축키가 아니라 글자다. */
+const TYPING = new Set(['INPUT', 'TEXTAREA', 'SELECT'])
+
 /**
  * 헤더(§25).
  *
@@ -28,6 +31,31 @@ export function Header({ route }: Props) {
   useEffect(() => {
     setMenuOpen(false)
   }, [route])
+
+  /*
+   * «/»로 검색을 연다(§31).
+   *
+   * 글을 쓰고 있는 칸에서 «/»는 슬래시여야 하므로, 입력 요소 안에서 눌린 것은
+   * 건드리지 않는다. 이 단축키가 없어도 헤더의 SEARCH로 같은 자리에 닿는다 —
+   * 단축키는 빠른 길이지 유일한 길이 아니다.
+   */
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return
+
+      const target = event.target
+
+      if (target instanceof HTMLElement && (target.isContentEditable || TYPING.has(target.tagName)))
+        return
+
+      event.preventDefault()
+      setSearchOpen(true)
+    }
+
+    document.addEventListener('keydown', onKeyDown)
+
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [])
 
   return (
     <>
@@ -61,7 +89,7 @@ export function Header({ route }: Props) {
           <div className={styles.actions}>
             <button
               type="button"
-              className={`label ${styles.action}`}
+              className={`label pressable ${styles.action}`}
               onClick={() => setSearchOpen(true)}
               aria-label={mamaboy.search.open}
             >
@@ -70,7 +98,7 @@ export function Header({ route }: Props) {
 
             <button
               type="button"
-              className={`label ${styles.action} ${styles.menuButton}`}
+              className={`label pressable ${styles.action} ${styles.menuButton}`}
               onClick={() => setMenuOpen((open) => !open)}
               aria-expanded={menuOpen}
               aria-controls="mamaboy-menu"

@@ -36,7 +36,12 @@ jobs:
 
       - name: Collect and translate
         # 키가 없으면 번역 단계만 건너뛴다. 수집 자체는 그대로 끝난다.
+        #
+        # Azure Translator의 무료 티어가 달마다 200만 자를 준다. 한도를 넘으면
+        # 과금되는 것이 아니라 429/403이 오고, 그 글은 원문 그대로 걸린다.
         env:
+          AZURE_TRANSLATOR_KEY: ${{ secrets.AZURE_TRANSLATOR_KEY }}
+          AZURE_TRANSLATOR_REGION: ${{ secrets.AZURE_TRANSLATOR_REGION }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/mamaboy/build-feed.mjs
 

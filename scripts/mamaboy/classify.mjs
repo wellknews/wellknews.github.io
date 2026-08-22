@@ -12,6 +12,15 @@
  */
 
 /** 카테고리별 신호어. 한국어와 영어를 함께 둔다. */
+/*
+ * 신호는 낱말이 아니라 «그 분야에서만 쓰이는 낱말»이어야 한다.
+ *
+ * barrier 하나로 건축 기사가 SKIN에 실렸다 — 그물 칸막이를 두고 «internal
+ * barrier»라고 쓴 문장이 피부 장벽으로 읽혔다. 영어에서 더 흔한 뜻이 이 지면
+ * 밖에 있는 낱말은 구절로 적는다. console(가구/위로하다), figure(수치/인물),
+ * plush(고급스러운), strength(강도)도 같은 이유로 바꿨다 — 지금 켜 둔 소스에
+ * 건축·디자인 매체가 셋이라 언제 터져도 이상하지 않았다.
+ */
 const SIGNALS = {
   skin: [
     'skin',
@@ -24,7 +33,10 @@ const SIGNALS = {
     'uva',
     'ceramide',
     'niacinamide',
-    'barrier',
+    'skin barrier',
+    'moisture barrier',
+    'barrier repair',
+    'barrier function',
     'acne',
     'collagen',
     '피부',
@@ -47,7 +59,8 @@ const SIGNALS = {
     'cardio',
     'recovery',
     'vo2',
-    'strength',
+    'strength training',
+    'grip strength',
     'diet',
     '수면',
     '운동',
@@ -77,16 +90,19 @@ const SIGNALS = {
   play: [
     'toy',
     'toys',
-    'figure',
+    'action figure',
+    'figurine',
     'sofubi',
     'game',
     'gaming',
-    'console',
+    'game console',
+    'handheld console',
     'lego',
     'collector*',
     'collecting',
     'character',
-    'plush',
+    'plush toy',
+    'plushie',
     'gunpla',
     '장난감',
     '완구',
@@ -238,13 +254,49 @@ export function classify(article, source) {
   return {
     ...article,
     category,
+    trustLevel: source.trustLevel ?? 3,
     careScore: Number(careScore.toFixed(2)),
     curiosityScore: Number(curiosityScore.toFixed(2)),
     contentType,
   }
 }
 
+/** 이보다 낮으면 어느 축으로도 이 지면의 글이 아니다. */
+const PASS_THRESHOLD = 0.4
+
+/** 건강 카테고리에서 앞자리를 차지하려면 이만큼의 신뢰도가 필요하다. */
+const HEALTH_TRUST_FLOOR = 2
+const HEALTH = new Set(['skin', 'body', 'age'])
+
+/**
+ * 왜 떨어뜨렸는지(§18의 DROP).
+ *
+ * 통과 여부만 돌려주면 로그에 «몇 건 떨어졌다»만 남고, 필터가 지나치게
+ * 조이는지 느슨한지 알 수 없다. 이유를 함께 돌려주면 그것이 드러난다.
+ *
+ * @returns {string | null} 떨어뜨린 이유. 통과하면 null.
+ */
+export function dropReason(article) {
+  const peak = Math.max(article.careScore, article.curiosityScore)
+
+  if (peak < PASS_THRESHOLD) return '두 축 모두 낮음'
+
+  /*
+   * 건강 정보는 «누가 말했는가»가 정보의 일부다. 신뢰도가 낮은 소스의
+   * 제품 홍보성 글이 SKIN·BODY·AGE의 지면에 오르면, 연구와 광고가 같은
+   * 무게로 읽히게 된다.
+   */
+  if (HEALTH.has(article.category)) {
+    if ((article.trustLevel ?? 3) < HEALTH_TRUST_FLOOR) return '건강 지면에 신뢰도 부족'
+    if (article.contentType === 'product' && article.careScore < 0.8) {
+      return '건강 지면의 제품 홍보'
+    }
+  }
+
+  return null
+}
+
 /** 편집 필터(§10). 두 축 모두 낮으면 이 지면에 올리지 않는다. */
-export function passes(article, threshold = 0.4) {
-  return Math.max(article.careScore, article.curiosityScore) >= threshold
+export function passes(article) {
+  return dropReason(article) === null
 }

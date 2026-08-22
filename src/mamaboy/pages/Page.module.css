@@ -10,6 +10,7 @@
 
 .title {
   margin: 10px 0 0;
+  font-family: var(--font-editorial);
   font-size: var(--text-page);
   font-weight: var(--weight-display);
   line-height: 1.1;
@@ -29,4 +30,9 @@
   padding-block: clamp(48px, 10vw, 120px);
   color: var(--color-text-secondary);
   font-size: var(--text-lead);
+}
+
+/* 목차는 머리와 지면 사이에 놓인다. 지면이 시작되기 전의 마지막 안내다. */
+.index {
+  margin-bottom: clamp(28px, 4vw, 56px);
 }

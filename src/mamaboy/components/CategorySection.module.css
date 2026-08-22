@@ -1,0 +1,90 @@
+/*
+ * 종이 위의 종이.
+ *
+ * 좌우로는 판면의 여백을 그대로 두고, 안쪽에만 자기 여백을 갖는다. 화면을 꽉
+ * 채우면 «구역»이 아니라 «배경»이 되어 구분이 사라진다.
+ */
+.surface {
+  border-radius: clamp(24px, 3vw, 44px);
+  background: var(--surface-paper);
+  /*
+   * 카드가 아니다. 위쪽의 1px은 종이의 가장자리이고, 아래의 넓은 그림자는
+   * 그 종이가 바닥에서 아주 조금 떠 있다는 것만 말한다.
+   */
+  box-shadow:
+    0 1px 1px rgb(23 21 19 / 0.02),
+    0 20px 60px rgb(23 21 19 / 0.035);
+}
+
+.surface + .surface {
+  margin-top: clamp(40px, 7vw, 104px);
+}
+
+.inner {
+  padding: clamp(24px, 3.4vw, 56px) clamp(18px, 2.6vw, 44px) clamp(32px, 4.4vw, 72px);
+}
+
+.head {
+  margin: 0 0 clamp(20px, 2.6vw, 40px);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+ * 카테고리 이름 하나뿐이다. 정의문을 여기에 두면 지면이 시작되기 전에 읽을
+ * 것이 생기고, 그 순간 이 면은 «구역»이 아니라 «소개»가 된다.
+ */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--color-text);
+  transition: color var(--dur-touch) var(--ease-touch);
+}
+
+.arrow {
+  color: var(--color-text-muted);
+  transition:
+    transform var(--dur-micro) var(--ease-elastic),
+    color var(--dur-touch) var(--ease-touch);
+}
+
+@media (hover: hover) {
+  .link:hover .arrow {
+    transform: translate(2px, -2px);
+    color: var(--accent-ink);
+  }
+}
+
+/*
+ * 카테고리마다의 공기.
+ *
+ * 전부 크림에서 출발해 아주 조금씩만 기운다. 색을 알아보게 하는 것이 목적이
+ * 아니라, 내려가는 동안 «구역이 바뀌었다»는 것만 몸으로 느끼게 하는 것이다.
+ */
+.surface[data-category='skin'] {
+  background: #fbf7f0;
+}
+
+.surface[data-category='body'] {
+  background: color-mix(in srgb, #f7a06a 6%, #fdfbf7);
+}
+
+.surface[data-category='age'] {
+  background: color-mix(in srgb, #7d8b99 5%, #fbfaf8);
+}
+
+.surface[data-category='play'] {
+  background: color-mix(in srgb, var(--orange) 6%, #fdfaf5);
+}
+
+.surface[data-category='culture'] {
+  background: color-mix(in srgb, var(--yellow) 9%, #fdfbf5);
+}
+
+@media (max-width: 639px) {
+  .surface {
+    border-radius: clamp(18px, 4vw, 26px);
+  }
+}

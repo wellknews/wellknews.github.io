@@ -44,7 +44,7 @@ export function ArticleHeader({ article, heading }: Props) {
 
       <p className={`meta ${styles.byline}`}>
         <a
-          className={styles.source}
+          className={`touchable ${styles.source}`}
           href={article.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"

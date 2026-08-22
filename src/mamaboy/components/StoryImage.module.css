@@ -7,15 +7,56 @@
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-mask);
-  background: color-mix(in srgb, var(--ink) 5%, var(--color-surface));
+  /*
+   * 깊이 Level 1 — 콘텐츠. 아주 약한 그림자만 갖는다. 이 판이 떠 보이기
+   * 시작하면 젤·유리와 같은 층으로 읽히고, 그러면 깊이 체계가 무너진다.
+   */
+  box-shadow: var(--shadow-content);
+  /*
+   * 기다리는 자리는 회색이 아니라 밝아진 크림이다. 도착하면 이미지가 그
+   * 위로 스며든다.
+   */
+  background: color-mix(in srgb, var(--surface-clean) 72%, var(--cream));
+}
+
+/*
+ * Chrome은 독립된 소재가 아니다. 판의 위 가장자리에 흰 선 하나, 둘레에 아주
+ * 옅은 그림자 하나 — 그것이 이 지면에서 chrome이 하는 일의 전부다.
+ */
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 1px 0 var(--chrome-light),
+    inset 0 0 0 1px var(--chrome-shade);
+  pointer-events: none;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* hover에서 이미지를 확대하지 않는다. 움직이는 것은 표면의 광택뿐이다(§39). */
-  transition: filter var(--dur-soft) var(--ease-soft);
+  opacity: 0;
+  /* hover에서 이미지를 확대하지 않는다. 움직이는 것은 표면의 광택과 도착뿐이다. */
+  transition:
+    opacity var(--dur-object) var(--ease-soft),
+    filter var(--dur-micro-slow) var(--ease-soft);
+}
+
+.frame[data-loaded='true'] .image {
+  opacity: 1;
+}
+
+/*
+ * 기다리는 동안 그 면은 크림보다 반 톤 밝다. 그것으로 끝이다 — 좌우로 흐르는
+ * skeleton을 두지 않는다. 저절로 도는 애니메이션을 두지 않기로 한 이상,
+ * «오는 중»이라는 상태도 움직임이 아니라 밝기로 말해야 한다.
+ */
+.frame:not([data-loaded='true']) {
+  background: color-mix(in srgb, var(--surface-clean) 94%, var(--cream));
 }
 
 /* 표면이 살아 있다는 감각만 준다. 밝기를 1% 올리는 정도. */

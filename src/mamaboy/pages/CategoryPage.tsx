@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 
+import { CategoryIndex } from '../components/CategoryIndex'
 import { EditorialFeed } from '../components/EditorialFeed'
 import { articlesIn } from '../content/feed'
 import { mamaboy } from '../content/site'
@@ -25,6 +26,10 @@ export function CategoryPage({ category }: { category: Category }) {
         <h1 className={styles.title}>{meta.title}</h1>
         <p className={styles.definition}>{meta.definition}</p>
       </header>
+
+      <div className={`shell ${styles.index}`}>
+        <CategoryIndex current={category} />
+      </div>
 
       <div className="shell">
         {items.length > 0 ? (

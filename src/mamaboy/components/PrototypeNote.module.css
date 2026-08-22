@@ -1,14 +1,18 @@
+/*
+ * 노랑은 이 지면에서 가장 적게 쓰는 색이다(1.5%). 폭 전체를 칠하는 대신
+ * 라벨 하나만 노랗게 두고, 문장은 종이 위에 그대로 앉힌다.
+ */
 .note {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 12px;
   flex-wrap: wrap;
-  padding: 10px 14px;
-  border-radius: var(--radius-tag);
-  background: color-mix(in srgb, var(--boy-blue) 26%, transparent);
 }
 
 .badge {
+  padding: 4px 9px;
+  border-radius: var(--radius-tag);
+  background: color-mix(in srgb, var(--yellow) 62%, transparent);
   color: var(--color-text);
 }
 

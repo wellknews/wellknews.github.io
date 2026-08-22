@@ -22,13 +22,13 @@ const PRETENDARD_BOLD = join(
   'alternative',
   'Pretendard-Bold.ttf',
 )
-const SCHIBSTED_GROTESK = join(
+const PLUS_JAKARTA_SANS = join(
   ROOT,
   'node_modules',
   '@fontsource-variable',
-  'schibsted-grotesk',
+  'plus-jakarta-sans',
   'files',
-  'schibsted-grotesk-latin-wght-normal.woff2',
+  'plus-jakarta-sans-latin-wght-normal.woff2',
 )
 const INSTRUMENT_SERIF = join(
   ROOT,
@@ -67,35 +67,54 @@ const SEMICOLON_INK = '#101820'
  * 화면에서는 src/mamaboy/components/Wordmark.tsx가 같은 작도를 그린다. 여기에
  * 한 번 더 두는 이유는 파비콘과 공유 카드가 글꼴을 내려받을 수 없는 자리(브라우저
  * 탭, 메신저 미리보기)에 놓이기 때문이다. 두 곳의 좌표는 같아야 한다 —
- * 기준선 150 · x-높이 60 · 어센더 26 · 디센더 188 · 획 두께 24.
+ * 기준선 150 · x-높이 바깥 50 · 어센더 18 · 디센더 196 · 획 두께 32.
  */
-const MAMABOY_STROKE = 24
-const MAMABOY_MILK = '#f7f4ee'
-const MAMABOY_INK = '#191817'
-const MAMABOY_PINK = '#f0b8c8'
-const MAMABOY_BLUE = '#bfd8ed'
+const MAMABOY_STROKE = 32
+const MAMABOY_CREAM = '#f5efe4'
+const MAMABOY_INK = '#171513'
+const MAMABOY_ORANGE = '#ff7417'
+const MAMABOY_YELLOW = '#ffc83d'
 
 const glyph = {
   m: (x) =>
-    `M ${x},150 V 88 A 28,28 0 0 1 ${x + 56},88 V 150 M ${x + 56},88 A 28,28 0 0 1 ${x + 112},88 V 150`,
-  bowl: (x) => `M ${x},105 A 45,45 0 0 1 ${x + 90},105 A 45,45 0 0 1 ${x},105`,
-  a: (x) => `${glyph.bowl(x)} M ${x + 90},60 V 150`,
-  b: (x) => `${glyph.bowl(x)} M ${x},26 V 150`,
-  y: (x) =>
-    `M ${x},60 V 105 A 45,45 0 0 0 ${x + 90},105 M ${x + 90},60 V 158 A 30,30 0 0 1 ${x + 60},188`,
+    `M ${x},150 V 96 A 30,30 0 0 1 ${x + 60},96 V 150 M ${x + 60},96 A 30,30 0 0 1 ${x + 120},96 V 150`,
+  bowl: (cx) => `M ${cx - 34},100 A 34,34 0 0 1 ${cx + 34},100 A 34,34 0 0 1 ${cx - 34},100`,
+  a: (cx) => `${glyph.bowl(cx)} M ${cx + 34},66 V 150`,
+  b: (cx) => `${glyph.bowl(cx)} M ${cx - 34},34 V 150`,
+  y: (cx) =>
+    `M ${cx - 34},66 V 116 A 34,34 0 0 0 ${cx + 34},116 M ${cx + 34},66 V 150 A 30,30 0 0 1 ${cx + 4},180`,
 }
 
-const MAMABOY_WORDMARK = [
-  glyph.m(12),
-  glyph.a(172),
-  glyph.m(310),
-  glyph.a(470),
-  glyph.b(608),
-  glyph.bowl(746),
-  glyph.y(884),
-]
+/** 네 갈래 반짝임. 옆구리를 오목하게 만들어 별이 아니라 빛으로 읽히게 한다. */
+function sparkle(cx, cy, r) {
+  const k = r * 0.16
 
-const MAMABOY_WORDMARK_BOX = { width: 990, height: 214 }
+  return [
+    `M ${cx},${cy - r}`,
+    `Q ${cx + k},${cy - k} ${cx + r},${cy}`,
+    `Q ${cx + k},${cy + k} ${cx},${cy + r}`,
+    `Q ${cx - k},${cy + k} ${cx - r},${cy}`,
+    `Q ${cx - k},${cy - k} ${cx},${cy - r}`,
+    'Z',
+  ].join(' ')
+}
+
+/** 속을 반짝임 모양으로 도려낸 원반. o의 자리에 들어가 리듬을 깬다. */
+function sparkleO(cx, cy) {
+  const disc = `M ${cx - 50},${cy} A 50,50 0 1 0 ${cx + 50},${cy} A 50,50 0 1 0 ${cx - 50},${cy} Z`
+
+  return `${disc} ${sparkle(cx, cy, 34)}`
+}
+
+const MAMABOY_STROKED = [
+  glyph.m(16),
+  glyph.a(222),
+  glyph.m(308),
+  glyph.a(514),
+  glyph.b(634),
+  glyph.y(874),
+]
+const MAMABOY_WORDMARK_BOX = { width: 928, height: 200 }
 
 /** 예시 데이터가 쓰는 추상 색면. 사진이 아니므로 인물·제품·장소를 담지 않는다. */
 const PLATE_WIDTH = 1600
@@ -314,28 +333,30 @@ async function buildSemicolonOgImage() {
   console.log(`semicolon-og-cool.png  ${OG_WIDTH}x${OG_HEIGHT}, ${output.length} bytes`)
 }
 
-function mamaboyPaths(color = MAMABOY_INK) {
-  return `<g fill="none" stroke="${color}" stroke-width="${MAMABOY_STROKE}" stroke-linecap="round" stroke-linejoin="round">${MAMABOY_WORDMARK.map(
+function mamaboyLetters(color = MAMABOY_INK) {
+  return `<g fill="none" stroke="${color}" stroke-width="${MAMABOY_STROKE}" stroke-linecap="round" stroke-linejoin="round">${MAMABOY_STROKED.map(
     (d) => `<path d="${d}"/>`,
-  ).join('')}</g>`
+  ).join('')}</g>
+  <path d="${sparkleO(754, 100)}" fill="${color}" fill-rule="evenodd"/>`
 }
 
 /**
  * 브라우저 탭에 걸리는 아이콘.
  *
- * 레터링 전체를 넣으면 16px에서 글자가 뭉개진다. 첫 글자 하나만 쓴다 —
- * 아치 두 개의 리듬이 이 브랜드에서 가장 먼저 알아보게 되는 형태다.
- * viewBox를 글자의 잉크에 맞춰 잘라서 여백을 사방으로 같게 만든다.
+ * 레터링 전체를 넣으면 16px에서 글자가 뭉개진다. 첫 글자 하나와 반짝임만 쓴다 —
+ * 아치 두 개의 리듬과 떠 있는 빛, 이 브랜드에서 가장 먼저 알아보게 되는 두 가지다.
+ * viewBox를 잉크에 맞춰 잘라 여백을 사방으로 같게 만든다.
  */
 function mamaboyMarkSvg(size) {
-  const box = { x: -32, y: 17, size: 176 }
+  const box = { x: -28, y: 14, size: 196 }
   const dimensions = size ? ` width="${size}" height="${size}"` : ''
 
   return `<svg xmlns="http://www.w3.org/2000/svg"${dimensions} viewBox="${box.x} ${box.y} ${box.size} ${box.size}">
-  <rect x="${box.x}" y="${box.y}" width="${box.size}" height="${box.size}" rx="40" fill="${MAMABOY_MILK}"/>
+  <rect x="${box.x}" y="${box.y}" width="${box.size}" height="${box.size}" rx="44" fill="${MAMABOY_CREAM}"/>
   <g fill="none" stroke="${MAMABOY_INK}" stroke-width="${MAMABOY_STROKE}" stroke-linecap="round" stroke-linejoin="round">
     <path d="${glyph.m(0)}"/>
   </g>
+  <path d="${sparkle(140, 48, 26)}" fill="${MAMABOY_ORANGE}"/>
 </svg>
 `
 }
@@ -360,57 +381,63 @@ async function buildMamaboyTouchIcon() {
 }
 
 /**
- * 젤·코팅면의 표면감(§22).
+ * 크림 종이 위의 젤과 빛(§8).
  *
- * 무엇을 찍은 사진이 아니라 브랜드의 색면이다. 예시 데이터의 대표 이미지로만
+ * 무엇을 찍은 사진이 아니라 브랜드의 소재다. 예시 데이터의 대표 이미지로만
  * 쓰이고, 실제 RSS가 붙으면 각 매체의 이미지가 그 자리를 가져간다.
+ *
+ * 층은 셋뿐이다 — 크림 종이, 번지는 젤, 그 위를 한 번 스치는 chrome.
+ * 반사광은 도형이 아니라 빛이므로 경계에서 완전히 투명해지는 방사형만 쓴다.
  */
-function plateSvg({ pink, blue, highlight }) {
+function plateSvg({ gel, warm, highlight, tilt }) {
   return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${PLATE_WIDTH}" height="${PLATE_HEIGHT}" viewBox="0 0 ${PLATE_WIDTH} ${PLATE_HEIGHT}">
   <defs>
-    <radialGradient id="pink" cx="${pink.x}" cy="${pink.y}" r="${pink.r}">
-      <stop offset="0" stop-color="${MAMABOY_PINK}" stop-opacity="${pink.alpha}"/>
-      <stop offset="1" stop-color="${MAMABOY_PINK}" stop-opacity="0"/>
+    <radialGradient id="gel" cx="${gel.x}" cy="${gel.y}" r="${gel.r}">
+      <stop offset="0" stop-color="${MAMABOY_ORANGE}" stop-opacity="${gel.alpha}"/>
+      <stop offset="0.62" stop-color="${MAMABOY_ORANGE}" stop-opacity="${(gel.alpha * 0.3).toFixed(3)}"/>
+      <stop offset="1" stop-color="${MAMABOY_ORANGE}" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="blue" cx="${blue.x}" cy="${blue.y}" r="${blue.r}">
-      <stop offset="0" stop-color="${MAMABOY_BLUE}" stop-opacity="${blue.alpha}"/>
-      <stop offset="1" stop-color="${MAMABOY_BLUE}" stop-opacity="0"/>
+    <radialGradient id="warm" cx="${warm.x}" cy="${warm.y}" r="${warm.r}">
+      <stop offset="0" stop-color="${MAMABOY_YELLOW}" stop-opacity="${warm.alpha}"/>
+      <stop offset="1" stop-color="${MAMABOY_YELLOW}" stop-opacity="0"/>
     </radialGradient>
-    <!-- 반사광은 도형이 아니라 빛이다. 가장자리가 보이는 순간 광택이 아니라
-         무늬가 되므로, 경계에서 완전히 투명해지는 방사형으로만 만든다. -->
-    <radialGradient id="gloss">
+    <radialGradient id="chrome">
       <stop offset="0" stop-color="#ffffff" stop-opacity="${highlight}"/>
-      <stop offset="0.55" stop-color="#ffffff" stop-opacity="${(highlight * 0.42).toFixed(3)}"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="${(highlight * 0.4).toFixed(3)}"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="100%" height="100%" fill="${MAMABOY_MILK}"/>
-  <rect width="100%" height="100%" fill="url(#pink)"/>
-  <rect width="100%" height="100%" fill="url(#blue)"/>
-  <ellipse cx="${PLATE_WIDTH * 0.42}" cy="${PLATE_HEIGHT * 0.3}" rx="${PLATE_WIDTH * 0.62}" ry="${PLATE_HEIGHT * 0.34}" fill="url(#gloss)" transform="rotate(-14 ${PLATE_WIDTH * 0.42} ${PLATE_HEIGHT * 0.3})"/>
+  <rect width="100%" height="100%" fill="${MAMABOY_CREAM}"/>
+  <rect width="100%" height="100%" fill="url(#warm)"/>
+  <rect width="100%" height="100%" fill="url(#gel)"/>
+  <ellipse cx="${PLATE_WIDTH * 0.4}" cy="${PLATE_HEIGHT * 0.26}" rx="${PLATE_WIDTH * 0.6}" ry="${PLATE_HEIGHT * 0.32}" fill="url(#chrome)" transform="rotate(${tilt} ${PLATE_WIDTH * 0.4} ${PLATE_HEIGHT * 0.26})"/>
 </svg>`)
 }
 
 const PLATES = [
   {
-    pink: { x: '22%', y: '24%', r: '68%', alpha: 0.95 },
-    blue: { x: '86%', y: '84%', r: '58%', alpha: 0.5 },
-    highlight: 0.8,
+    gel: { x: '24%', y: '30%', r: '64%', alpha: 0.92 },
+    warm: { x: '84%', y: '82%', r: '58%', alpha: 0.5 },
+    highlight: 0.82,
+    tilt: -14,
   },
   {
-    pink: { x: '88%', y: '18%', r: '52%', alpha: 0.5 },
-    blue: { x: '18%', y: '72%', r: '72%', alpha: 0.95 },
-    highlight: 0.72,
+    gel: { x: '86%', y: '22%', r: '58%', alpha: 0.7 },
+    warm: { x: '16%', y: '74%', r: '66%', alpha: 0.66 },
+    highlight: 0.7,
+    tilt: 9,
   },
   {
-    pink: { x: '10%', y: '88%', r: '62%', alpha: 0.8 },
-    blue: { x: '72%', y: '12%', r: '66%', alpha: 0.8 },
-    highlight: 0.86,
+    gel: { x: '50%', y: '112%', r: '62%', alpha: 0.85 },
+    warm: { x: '50%', y: '-12%', r: '52%', alpha: 0.44 },
+    highlight: 0.9,
+    tilt: -6,
   },
   {
-    pink: { x: '52%', y: '108%', r: '58%', alpha: 0.9 },
-    blue: { x: '50%', y: '-14%', r: '48%', alpha: 0.42 },
+    gel: { x: '12%', y: '84%', r: '54%', alpha: 0.6 },
+    warm: { x: '74%', y: '18%', r: '62%', alpha: 0.72 },
     highlight: 0.64,
+    tilt: 17,
   },
 ]
 
@@ -432,30 +459,31 @@ async function buildMamaboyPlates() {
 /**
  * 공유 카드.
  *
- * 배경으로 쓸 생성 이미지를 두지 않는다. 이 브랜드의 표면은 색면과 반사광이고,
- * 그것은 여기서 그대로 합성할 수 있다. 글자는 레터링(경로)과 라틴 한 줄뿐이라
- * 운영체제의 대체 글꼴에 영향받지 않는다.
+ * 배경으로 쓸 생성 이미지를 두지 않는다. 이 브랜드의 표면은 크림 종이와 젤과
+ * 빛이고, 그것은 여기서 그대로 합성할 수 있다. 글자는 레터링(경로)과 라틴 한
+ * 줄뿐이라 운영체제의 대체 글꼴에 영향받지 않는다.
  */
 async function buildMamaboyOgImage() {
   const background = plateSvg({
-    pink: { x: '16%', y: '18%', r: '66%', alpha: 0.85 },
-    blue: { x: '88%', y: '86%', r: '62%', alpha: 0.7 },
-    highlight: 0.78,
+    gel: { x: '94%', y: '8%', r: '46%', alpha: 0.62 },
+    warm: { x: '8%', y: '94%', r: '50%', alpha: 0.34 },
+    highlight: 0.72,
+    tilt: -10,
   })
 
-  const wordmarkWidth = 620
+  const wordmarkWidth = 640
   const wordmarkHeight = Math.round(
     (wordmarkWidth / MAMABOY_WORDMARK_BOX.width) * MAMABOY_WORDMARK_BOX.height,
   )
   const wordmark = Buffer.from(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${wordmarkWidth}" height="${wordmarkHeight}" viewBox="0 0 ${MAMABOY_WORDMARK_BOX.width} ${MAMABOY_WORDMARK_BOX.height}">${mamaboyPaths()}</svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${wordmarkWidth}" height="${wordmarkHeight}" viewBox="0 0 ${MAMABOY_WORDMARK_BOX.width} ${MAMABOY_WORDMARK_BOX.height}">${mamaboyLetters()}<path d="${sparkle(812, 26, 24)}" fill="${MAMABOY_ORANGE}"/></svg>`,
   )
 
   const formula = await sharp({
     text: {
       text: `<span foreground="${MAMABOY_INK}" letter_spacing="${Math.round(0.16 * 1024)}">CARE + CURIOSITY</span>`,
-      font: 'Schibsted Grotesk 26',
-      fontfile: SCHIBSTED_GROTESK,
+      font: 'Plus Jakarta Sans 26',
+      fontfile: PLUS_JAKARTA_SANS,
       dpi: 72,
       rgba: true,
     },
@@ -466,8 +494,8 @@ async function buildMamaboyOgImage() {
   const output = await sharp(background, { density: 96 })
     .resize(OG_WIDTH, OG_HEIGHT, { fit: 'cover' })
     .composite([
-      { input: wordmark, left: 96, top: 236 },
-      { input: formula, left: 100, top: 400 },
+      { input: wordmark, left: 96, top: 232 },
+      { input: formula, left: 100, top: 404 },
     ])
     .png({ compressionLevel: 9, effort: 10 })
     .toBuffer()

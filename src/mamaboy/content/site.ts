@@ -11,7 +11,7 @@
  * 성별을 분류 기준으로 쓰지 않는다(§5). MEN / WOMEN / FOR HIM / FOR HER 같은
  * 라벨은 이 파일에 들어올 수 없다. BOY는 성별이 아니라 «아직 굳어지지 않은 상태»다.
  */
-import type { Axis, Category, ContentType, TranslationStatus } from './types'
+import type { Axis, Category, ContentType, Material, TranslationStatus } from './types'
 
 export const mamaboy = {
   name: 'mamaboy',
@@ -33,39 +33,52 @@ export const mamaboy = {
     editionLabel: 'TODAY',
   },
 
-  /** 다섯 개의 1차 분류(§8). 순서가 곧 헤더의 순서다. */
+  /**
+   * 다섯 개의 1차 분류. 순서가 곧 헤더의 순서다.
+   *
+   * axis는 지면을 섞을 때 쓰고(services/editorial), material은 그 카테고리에
+   * 들어갔을 때 판면의 공기가 어느 쪽으로 기우는지를 정한다(components/Ambient).
+   */
   categories: {
     skin: {
       label: 'SKIN',
+      material: 'clean',
       axis: 'care',
       title: '피부',
       definition: '스킨케어, 피부과학, 성분, 자외선, 피부 노화 연구.',
     },
     body: {
       label: 'BODY',
+      material: 'clean',
       axis: 'care',
       title: '몸',
       definition: '운동, 영양, 수면, 회복, 신체 건강.',
     },
     age: {
       label: 'AGE',
+      material: 'chrome',
       axis: 'care',
       title: '나이',
       definition: '노화 연구, longevity, 건강수명, 노화를 다루는 기술.',
     },
     play: {
       label: 'PLAY',
+      material: 'gel',
       axis: 'curiosity',
       title: '놀이',
       definition: '게임, 장난감, 캐릭터, 키덜트, 취미, 수집.',
     },
     culture: {
       label: 'CULTURE',
+      material: 'gel',
       axis: 'curiosity',
       title: '문화',
       definition: '세대 문화, 새로운 소비, 라이프스타일, 지금 생겨나는 취향.',
     },
-  } satisfies Record<Category, { label: string; axis: Axis; title: string; definition: string }>,
+  } satisfies Record<
+    Category,
+    { label: string; material: Material; axis: Axis; title: string; definition: string }
+  >,
 
   /** 두 개의 축. 화면을 나누지 않고 섞는 데 쓴다(§9). */
   axes: {
@@ -100,6 +113,8 @@ export const mamaboy = {
     summaryOnly: '이 글은 요약까지만 옮긴다. 전문은 원 사이트에 있다.',
     linkOnly: '이 글은 제목과 출처만 옮긴다. 본문은 원 사이트에 있다.',
     translatedNote: '기계 번역을 사람이 손보지 않은 상태다. 정확한 표현은 원문을 따른다.',
+    /* 기사 아래에 이어 붙는 것들. 같은 카테고리의 최신순이 아니라는 뜻에서 «관련»이라 하지 않는다. */
+    next: '이어서',
     /** 건강 관련 글에 붙는 한 줄. 의학적 조언이 아니라는 사실을 숨기지 않는다. */
     healthNote: '의학적 조언이 아니다. 판단이 필요한 일은 전문가와 상의한다.',
   },
@@ -111,8 +126,16 @@ export const mamaboy = {
     scope: '번역 제목 · 원문 제목 · 요약 · 카테고리 · 출처 · 키워드',
     empty: '걸리는 것이 없다.',
     close: '검색 닫기',
-    open: '검색 열기',
+    /** «/»를 누르면 열린다는 사실은 알려 두되, 그것 없이도 되는 자리에 둔다. */
+    open: '검색 열기 (단축키 /)',
     resultCount: (count: number) => `${count}건`,
+    /** 아직 아무것도 치지 않았을 때. 빈 상자를 보여주는 대신 최근 것을 건넨다. */
+    startersLabel: '방금 걸린 것',
+    /** 결과를 더 좁히는 줄. 무엇으로 좁힐 수 있는지를 결과에서 뽑아 보여준다. */
+    narrowLabel: '좁히기',
+    all: '전체',
+    facetCount: (label: string, count: number) => `${label} ${count}건`,
+    more: (count: number) => `아래로 ${count}건 더. 낱말을 하나 더 붙이면 좁혀진다.`,
   },
 
   /*
@@ -130,6 +153,14 @@ export const mamaboy = {
     /** 지면에 아무것도 없을 때. 상태를 숨기지 않는다. */
     empty: '오늘 이 지면에 올릴 것을 아직 고르지 못했다.',
     more: '더 보기',
+    /*
+     * 지면 맨 아래의 단 하나의 문(§18).
+     *
+     * 카테고리로 가는 길은 면마다 이미 있다. 그러니 여기에 같은 목록을 한 번 더
+     * 두면 둘 다 약해진다. 남길 것은 그 목록이 주지 않는 곳 — 이 글들이 어디서
+     * 왔는지다.
+     */
+    origin: '어디서 오는가',
   },
 
   /** 출처 목록 페이지(§34). attribution은 디자인 요소가 아니라 시스템 요구사항이다. */
@@ -139,6 +170,9 @@ export const mamaboy = {
     definition:
       'MAMABOY는 기사를 쓰지 않는다. 아래 매체의 공개 피드에서 발견하고, 고르고, 옮긴다. 모든 글의 저작자는 원 매체와 그 필자다.',
     disabled: '지금은 쉬는 중',
+    /** 지금 지면에 이 매체의 글이 몇 건 걸려 있는지. 목록을 명단이 아니라 현황으로 만든다. */
+    onPage: (count: number) => `지금 ${count}건`,
+    onPageNone: '지금 걸린 글 없음',
   },
 
   /**

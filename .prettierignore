@@ -2,3 +2,7 @@ dist
 node_modules
 package-lock.json
 public/fonts
+
+# 파이프라인이 쓰는 생성물. 사람이 손으로 고치는 파일이 아니고, 모양은
+# build-feed.mjs가 정한다 — 봇이 커밋할 때마다 형식 검사가 배포를 막았다.
+src/mamaboy/content/generated

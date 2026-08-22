@@ -20,6 +20,18 @@ export type Category = 'skin' | 'body' | 'age' | 'play' | 'culture'
 export type Axis = 'care' | 'curiosity'
 
 /**
+ * 그 카테고리가 지면에서 강조하는 소재(§12).
+ *
+ *   clean   종이가 맑아진다 — SKIN · BODY
+ *   chrome  차가운 빛이 스친다 — AGE
+ *   gel     젤이 번진다 — PLAY · CULTURE
+ *
+ * 소재를 카테고리마다 새로 만들지 않는다. 팔레트도 물성도 하나이고,
+ * 여기서 정하는 것은 그 하나를 얼마나 세게 쓰는가뿐이다.
+ */
+export type Material = 'clean' | 'chrome' | 'gel'
+
+/**
  * 콘텐츠의 성격(§33).
  *
  * 건강 관련 정보가 들어오므로 연구 결과와 개인의 경험담을 같은 무게로 보여주지
@@ -51,8 +63,18 @@ export type ContentPolicy = 'full' | 'summary' | 'link'
  */
 export type TranslationStatus = 'none' | 'done' | 'pending' | 'failed'
 
-/** 편집 가중치(§17). 지면에서 이 기사가 차지하는 크기. */
-export type Weight = 'feature' | 'standard' | 'brief'
+/**
+ * 편집 가중치. 지면에서 이 기사가 차지하는 크기.
+ *
+ *   feature   그날의 지면을 여는 기사
+ *   standard  일반 기사
+ *   brief     짧게 확인할 만한 글. 이미지가 없어도 된다
+ *   drop      MAMABOY의 기준에 맞지 않아 지면에 올리지 않는 글
+ *
+ * drop이 있어야 이곳이 RSS Aggregator에서 벗어난다. 수집한 것을 전부 보여주는
+ * 것은 편집이 아니다 — 무엇을 버렸는지가 무엇을 골랐는지를 만든다.
+ */
+export type Weight = 'feature' | 'standard' | 'brief' | 'drop'
 
 /** RSS의 대표 이미지. 언제든 깨질 수 있다고 가정한다(§37). */
 export type ArticleImage = {
@@ -63,6 +85,15 @@ export type ArticleImage = {
   /** 원문이 준 설명. 없으면 장식으로 취급해 빈 alt로 둔다. */
   alt?: string
 }
+
+/**
+ * 본문을 이루는 한 조각(§15).
+ *
+ * 외부 HTML을 그대로 주입하지 않는다. 수집 단계에서 태그를 벗기고 이 둘 중
+ * 하나로만 남긴다 — 평문 한 덩어리이거나, 그림 한 장이거나.
+ */
+export type BodyBlock =
+  { kind: 'text'; text: string } | { kind: 'image'; url: string; alt?: string }
 
 export type Article = {
   /** 소스와 원문 주소로 만든 안정적인 식별자. 다시 수집해도 같은 값이 나온다. */
@@ -77,10 +108,20 @@ export type Article = {
   summaryKo?: string
 
   /**
-   * 전문 게재가 허용된 글(TYPE A)의 본문. 문단 단위의 평문만 담는다.
-   * 외부 HTML을 그대로 주입하지 않기 위해 수집 단계에서 태그를 벗긴다.
+   * 전문 게재가 허용된 글(TYPE A)의 본문.
+   *
+   * 글과 그림이 원문에 있던 순서 그대로 섞여 들어온다. 요약만 옮기면 읽을
+   * 것이 남지 않고, 문단만 옮기면 원문에서 글 사이에 있던 그림이 통째로
+   * 사라진다 — 사진이 논지의 일부인 글에서는 그것이 본문의 손실이다.
    */
-  bodyOriginal?: string[]
+  bodyOriginal?: BodyBlock[]
+  /**
+   * 번역된 글 블록만, 원문에 나온 순서대로.
+   *
+   * 그림은 번역할 것이 없으므로 여기 담지 않는다. 화면은 bodyOriginal을 걸어
+   * 가면서 n번째 글 블록을 이 배열의 n번째로 갈아 끼운다. 그래야 번역이
+   * 실패하거나 일부만 되어도 그림의 자리가 흔들리지 않는다.
+   */
   bodyKo?: string[]
 
   sourceName: string
@@ -96,6 +137,8 @@ export type Article = {
   language: string
 
   category: Category
+  /** 이 글을 낸 소스의 신뢰도(1..5). 수집 단계에서 레지스트리를 보고 붙인다. */
+  trustLevel?: number
   /** 0..1. 자기 자신을 더 오래 건강하게 유지하는 데 의미 있는가(§10). */
   careScore: number
   /** 0..1. 새로운 관심·놀이·문화·취향을 발견하게 하는가(§10). */

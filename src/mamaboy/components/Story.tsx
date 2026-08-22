@@ -8,35 +8,72 @@ import styles from './Story.module.css'
 
 type Props = {
   article: Article
-  /** 첫 화면의 첫 FEATURE에만 준다. 이 이미지 하나만 즉시 로드된다(§36). */
+  /** 첫 화면의 첫 FEATURE에만 준다. 이 이미지 하나만 즉시 로드된다. */
   priority?: boolean
+  /**
+   * 카테고리 태그를 붙일지.
+   *
+   * 카테고리 면 안에서는 붙이지 않는다. 면의 제목이 이미 SKIN이라고 말하고
+   * 있는데 그 안의 기사마다 SKIN을 한 번 더 달면 같은 말이 두 번 나온다.
+   */
+  showCategory?: boolean
 }
 
 /**
- * FEATURE(§17).
+ * 기사는 카드가 아니라 조판이다(§19).
  *
- * 그날의 지면을 여는 자리다. 브랜드 소개 영역을 크게 만들지 않는 대신
- * 이 기사가 Hero 역할을 한다(§26). 요약문이 붙는 유일한 카드이기도 하다 —
- * 모든 카드에 요약을 붙이면 사용자가 지면의 구조를 읽지 못한다(§27).
+ * 세 가지 무게가 같은 틀에 크기만 다르게 들어가면 그것은 결국 카드 목록이다.
+ * 그래서 무게마다 조판 자체를 다르게 짠다 — FEATURE는 제목과 이미지가 어긋나게
+ * 놓이고, STANDARD는 이미지가 위로 가거나 옆으로 붙고, BRIEF는 번호와 제목만
+ * 남는다. 지면의 리듬은 크기가 아니라 이 차이가 만든다.
  */
-export function FeatureStory({ article, priority = false }: Props) {
+
+/**
+ * 제목의 길이대(§20).
+ *
+ * FEATURE의 글자 크기는 그날 걸린 제목이 정한다. 72px에 고정해 두면 짧은 제목은
+ * 지면을 여는 한 줄이 되지만 긴 제목은 일곱 줄이 되어 첫 화면을 통째로 먹는다 —
+ * 실제 기사를 걸고 나서야 보였다. 예시 데이터의 제목이 전부 짧았기 때문이다.
+ *
+ * 한글은 라틴 글자보다 폭이 넓어 같은 글자 수라도 더 길게 앉는다. 그래서 낱말이
+ * 아니라 글자 수로 센다.
+ */
+function length(text: string): 'short' | 'medium' | 'long' {
+  if (text.length > 44) return 'long'
+  if (text.length > 26) return 'medium'
+
+  return 'short'
+}
+
+/**
+ * FEATURE.
+ *
+ * 그날의 지면을 여는 자리다. 제목과 이미지를 같은 선에 맞추지 않는다 — 이미지가
+ * 위로 올라가고 제목이 그 아래에서 시작하면서 판면에 어긋남이 생긴다.
+ * 요약문이 붙는 유일한 조판이기도 하다.
+ */
+export function FeatureStory({ article, priority = false, showCategory = true }: Props) {
   const heading = title(article)
   const lead = summary(article)
 
   return (
     <article className={styles.feature}>
-      <Link to={path.article(article.slug)} className={styles.link}>
+      <Link to={path.article(article.slug)} className={`pressable ${styles.featureLink}`}>
         {article.image ? (
           <StoryImage image={article.image} priority={priority} className={styles.featureImage} />
         ) : null}
 
         <div className={styles.featureText}>
           <p className={styles.tags}>
-            <CategoryTag category={article.category} />
+            {showCategory ? <CategoryTag category={article.category} /> : null}
             <ContentTypeTag type={article.contentType} />
           </p>
 
-          <h2 className={styles.featureTitle} lang={heading.lang}>
+          <h2
+            className={styles.featureTitle}
+            lang={heading.lang}
+            data-length={length(heading.text)}
+          >
             {heading.text}
           </h2>
 
@@ -53,59 +90,87 @@ export function FeatureStory({ article, priority = false }: Props) {
   )
 }
 
-/**
- * STANDARD.
- *
- * 지면의 대부분을 차지하는 일반 기사. 이미지가 있으면 이미지가 먼저 오고,
- * 없으면 제목이 그 자리를 그대로 가져간다. 빈 자리를 placeholder로 메우지
- * 않는 이유는 §37에 적어 두었다.
- */
-export function StandardStory({ article }: Props) {
+type StandardProps = Props & {
+  /**
+   * 이 기사가 지면을 어떻게 쓰는지.
+   *
+   *   stacked  이미지가 위, 글이 아래
+   *   side     이미지가 왼쪽, 글이 오른쪽
+   *
+   * 어느 쪽인지는 지면(EditorialFeed)이 정한다. 기사 자신은 모른다 —
+   * 같은 기사라도 앞뒤에 무엇이 오느냐에 따라 조판이 달라져야 하기 때문이다.
+   */
+  composition?: 'stacked' | 'side'
+}
+
+export function StandardStory({
+  article,
+  composition = 'stacked',
+  showCategory = true,
+}: StandardProps) {
   const heading = title(article)
 
   return (
-    <article className={styles.standard}>
-      <Link to={path.article(article.slug)} className={styles.link}>
+    <article className={styles.standard} data-composition={composition}>
+      <Link to={path.article(article.slug)} className={`pressable ${styles.standardLink}`}>
         {article.image ? (
           <StoryImage image={article.image} className={styles.standardImage} />
         ) : null}
 
-        <p className={styles.tags}>
-          <CategoryTag category={article.category} />
-          <ContentTypeTag type={article.contentType} />
-        </p>
+        <div className={styles.standardText}>
+          <p className={styles.tags}>
+            {showCategory ? <CategoryTag category={article.category} /> : null}
+            <ContentTypeTag type={article.contentType} />
+          </p>
 
-        <h2 className={styles.standardTitle} lang={heading.lang}>
-          {heading.text}
-        </h2>
+          <h2 className={styles.standardTitle} lang={heading.lang}>
+            {heading.text}
+          </h2>
 
-        <SourceLine article={article} />
+          <SourceLine article={article} />
+        </div>
       </Link>
     </article>
   )
 }
 
+type BriefProps = Props & {
+  /** 지면에서 몇 번째 BRIEF인지. 활자만 남은 조판에서 이 숫자가 이미지 자리를 대신한다. */
+  index?: number
+}
+
 /**
  * BRIEF.
  *
- * 이미지 없이 제목만으로 서는 줄. 모든 콘텐츠를 카드화하지 않기 위해 필요한
- * 형태다(§17). 텍스트만 있는 기사와 이미지 중심 기사가 섞여야 지면에 리듬이 생긴다.
+ * 이미지 없이 제목만으로 서는 줄. 빈 자리를 placeholder로 채우지 않고, 대신
+ * 큰 번호 하나를 놓는다 — 활자와 숫자만으로도 지면이 성립한다는 것이 이 조판의
+ * 주장이다(§15, §28).
  */
-export function BriefStory({ article }: Props) {
+export function BriefStory({ article, index, showCategory = true }: BriefProps) {
   const heading = title(article)
 
   return (
     <article className={styles.brief}>
-      <Link to={path.article(article.slug)} className={styles.link}>
-        <p className={styles.tags}>
-          <CategoryTag category={article.category} />
-        </p>
+      <Link to={path.article(article.slug)} className={`pressable ${styles.briefLink}`}>
+        {index === undefined ? null : (
+          <span className={styles.briefIndex} aria-hidden="true">
+            {`${index}`.padStart(2, '0')}
+          </span>
+        )}
 
-        <h2 className={styles.briefTitle} lang={heading.lang}>
-          {heading.text}
-        </h2>
+        <span className={styles.briefBody}>
+          {showCategory ? (
+            <span className={`label ${styles.briefCategory}`}>
+              <CategoryTag category={article.category} />
+            </span>
+          ) : null}
 
-        <SourceLine article={article} />
+          <h2 className={styles.briefTitle} lang={heading.lang}>
+            {heading.text}
+          </h2>
+
+          <SourceLine article={article} />
+        </span>
       </Link>
     </article>
   )

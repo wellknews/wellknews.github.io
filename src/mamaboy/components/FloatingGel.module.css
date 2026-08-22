@@ -1,0 +1,115 @@
+/*
+ * 판면 뒤의 층.
+ *
+ * 문서의 높이를 만들지 않고, 아무것도 가리지 않으며, 누를 수도 없다. z는
+ * 종이(--z-paper)와 내용(--z-content) 사이다 — 카테고리 면이 불투명하므로
+ * 그 위를 지날 때는 저절로 가려진다(§12).
+ */
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--x);
+  /* 틈의 한가운데에 젤의 «중심»을 놓는다. 위아래 절반은 면 뒤로 들어간다. */
+  top: calc(var(--top) - var(--size) / 2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+}
+
+/*
+ * 스크롤을 내리면 올라온다(§9).
+ *
+ * 자바스크립트로 스크롤을 듣지 않는다. 저장소가 이미 쓰는 스크롤 타임라인
+ * (.reveal과 같은 장치)에 맡기면 브라우저가 알아서 이 젤이 화면을 지나는 동안만
+ * 계산한다 — 사람이 멈추면 함께 멈추고, 페이지가 길어져도 제 틈을 벗어나지 않는다.
+ *
+ * 처음에는 «내려온 총 거리»에 비례해 올렸는데, 아래로 갈수록 젤이 제자리에서
+ * 수천 px 위로 날아가 면 뒤에 영영 숨었다. 오르는 거리는 페이지가 아니라 그
+ * 젤이 화면을 지나는 동안에 매여 있어야 한다.
+ *
+ * 타임라인을 모르는 브라우저에서는 규칙이 통째로 적용되지 않아 젤이 제 틈에
+ * 가만히 앉아 있는다. 장식이므로 그것으로 충분하다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .bubble {
+      animation: mb-gel-rise linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+  }
+}
+
+@keyframes mb-gel-rise {
+  from {
+    transform: translate3d(calc(var(--drift) * -1px), calc(var(--rise) * 0.5px), 0)
+      rotate(calc(var(--spin) * -1deg));
+  }
+
+  to {
+    transform: translate3d(calc(var(--drift) * 1px), calc(var(--rise) * -0.5px), 0)
+      rotate(calc(var(--spin) * 1deg));
+  }
+}
+
+/*
+ * 색을 여러 개 쓰지 않는다. 같은 주황이 빛을 다르게 반사하는 것처럼 보이게
+ * 한다(§13) — 원색을 나눠 주면 풍선이 되고, 소재를 나누면 젤이 된다.
+ */
+.bubble[data-material='gel'] {
+  background:
+    radial-gradient(circle at 32% 26%, var(--chrome-light), transparent 44%),
+    radial-gradient(circle at 68% 78%, rgb(23 21 19 / 0.1), transparent 52%),
+    color-mix(in srgb, var(--orange) 62%, transparent);
+}
+
+.bubble[data-material='glass'] {
+  background:
+    radial-gradient(circle at 30% 24%, rgb(255 255 255 / 0.8), transparent 46%),
+    color-mix(in srgb, var(--orange) 34%, transparent);
+  backdrop-filter: blur(2px);
+}
+
+.bubble[data-material='milk'] {
+  background:
+    radial-gradient(circle at 34% 28%, var(--chrome-light), transparent 50%),
+    color-mix(in srgb, var(--orange) 30%, var(--glass-white));
+}
+
+.bubble[data-material='yellow'] {
+  background:
+    radial-gradient(circle at 30% 26%, rgb(255 255 255 / 0.7), transparent 48%),
+    color-mix(in srgb, var(--yellow) 62%, transparent);
+}
+
+/*
+ * 좁은 화면(§11).
+ *
+ * 한 화면에 하나만 보이면 된다. 자리를 페이지 전체에 멀리 떼어 놓았으므로 그
+ * 조건은 저절로 지켜진다 — 지우는 것이 아니라 사이를 벌리는 것이 답이었다.
+ *
+ * 좌우 여백이 20px뿐이라 안쪽에 두면 늘 가려진다. 그래서 화면 밖으로 반쯤
+ * 내보내 가장자리에서 초승달처럼 걸리게 한다. 작게 줄이고, 읽는 자리를 침범하지
+ * 않는다.
+ */
+@media (max-width: 899px) {
+  .bubble {
+    width: calc(var(--size) * 0.66);
+    height: calc(var(--size) * 0.66);
+    top: calc(var(--top) - var(--size) * 0.33);
+  }
+}
+
+/* 장식이므로 움직임을 끈 사람에게는 그냥 가만히 있으면 된다(§22). */
+@media (prefers-reduced-motion: reduce) {
+  .bubble {
+    transform: none;
+  }
+}

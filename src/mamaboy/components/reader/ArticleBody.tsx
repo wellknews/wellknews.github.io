@@ -1,4 +1,5 @@
 import { mamaboy } from '../../content/site'
+import { StoryImage } from '../StoryImage'
 import { body, isHealth, summary } from '../../services/present'
 import type { Article } from '../../content/types'
 import styles from './Reader.module.css'
@@ -23,18 +24,12 @@ type Props = {
  * 같은 규칙이 여러 곳에 흩어지기 때문이다.
  */
 export function ArticleBody({ article, mode }: Props) {
-  const full = body(article)
+  const full = body(article, mode)
   const lead = summary(article)
 
-  const paragraphs =
-    full && (mode === 'ko' || !article.bodyOriginal)
-      ? full
-      : full && article.bodyOriginal
-        ? { paragraphs: article.bodyOriginal, lang: article.language }
-        : null
-
+  /* 원문 보기도 같은 제한을 받는다. link 정책이면 원문 요약도 싣지 않는다. */
   const leadText =
-    mode === 'original' && article.summaryOriginal
+    mode === 'original' && article.summaryOriginal && article.contentPolicy !== 'link'
       ? { text: article.summaryOriginal, lang: article.language }
       : lead
 
@@ -46,13 +41,24 @@ export function ArticleBody({ article, mode }: Props) {
         </p>
       ) : null}
 
-      {paragraphs
-        ? paragraphs.paragraphs.map((paragraph) => (
-            <p key={paragraph} className={styles.paragraph} lang={paragraphs.lang}>
-              {paragraph}
-            </p>
-          ))
-        : null}
+      {/*
+        글과 그림이 원문에 있던 순서 그대로 나온다. 그림은 본문의 장식이 아니라
+        본문의 일부라, 문단을 다 그린 뒤에 몰아 놓지 않는다.
+      */}
+      {full?.blocks.map((block, index) =>
+        block.kind === 'text' ? (
+          <p key={block.text} className={styles.paragraph} lang={full.lang}>
+            {block.text}
+          </p>
+        ) : (
+          <figure key={block.url} className={styles.figure}>
+            <StoryImage image={block} priority={index === 0} />
+            {block.alt ? (
+              <figcaption className={`meta ${styles.caption}`}>{block.alt}</figcaption>
+            ) : null}
+          </figure>
+        ),
+      )}
 
       {article.contentPolicy === 'summary' ? (
         <p className={`meta ${styles.limit}`}>{mamaboy.reader.summaryOnly}</p>
