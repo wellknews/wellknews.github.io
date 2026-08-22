@@ -12,6 +12,15 @@
  */
 
 /** 카테고리별 신호어. 한국어와 영어를 함께 둔다. */
+/*
+ * 신호는 낱말이 아니라 «그 분야에서만 쓰이는 낱말»이어야 한다.
+ *
+ * barrier 하나로 건축 기사가 SKIN에 실렸다 — 그물 칸막이를 두고 «internal
+ * barrier»라고 쓴 문장이 피부 장벽으로 읽혔다. 영어에서 더 흔한 뜻이 이 지면
+ * 밖에 있는 낱말은 구절로 적는다. console(가구/위로하다), figure(수치/인물),
+ * plush(고급스러운), strength(강도)도 같은 이유로 바꿨다 — 지금 켜 둔 소스에
+ * 건축·디자인 매체가 셋이라 언제 터져도 이상하지 않았다.
+ */
 const SIGNALS = {
   skin: [
     'skin',
@@ -24,7 +33,10 @@ const SIGNALS = {
     'uva',
     'ceramide',
     'niacinamide',
-    'barrier',
+    'skin barrier',
+    'moisture barrier',
+    'barrier repair',
+    'barrier function',
     'acne',
     'collagen',
     '피부',
@@ -47,7 +59,8 @@ const SIGNALS = {
     'cardio',
     'recovery',
     'vo2',
-    'strength',
+    'strength training',
+    'grip strength',
     'diet',
     '수면',
     '운동',
@@ -77,16 +90,19 @@ const SIGNALS = {
   play: [
     'toy',
     'toys',
-    'figure',
+    'action figure',
+    'figurine',
     'sofubi',
     'game',
     'gaming',
-    'console',
+    'game console',
+    'handheld console',
     'lego',
     'collector*',
     'collecting',
     'character',
-    'plush',
+    'plush toy',
+    'plushie',
     'gunpla',
     '장난감',
     '완구',

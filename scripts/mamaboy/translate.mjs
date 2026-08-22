@@ -36,7 +36,7 @@ const MODEL = 'claude-opus-5'
  * 순간 예전 규칙으로 옮겨 둔 문장이 전부 다시 번역된다. 규칙을 바꿔 놓고
  * 옛 결과를 그대로 쓰면 지면에 두 세대의 번역이 섞인다.
  */
-const TRANSLATION_VERSION = 2
+const TRANSLATION_VERSION = 3
 
 /** 일시적인 실패에만 한 번 더 시도한다. 거절은 다시 물어도 거절이다. */
 const RETRY_DELAY_MS = 1500
