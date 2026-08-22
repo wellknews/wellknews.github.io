@@ -27,13 +27,18 @@ const MAX_ITEMS = 900
 const TIMEOUT_MS = 30_000
 
 /*
- * F0는 달마다 200만 자를 주지만 «한꺼번에» 주지는 않는다. 초당 요청 수에도
- * 제한이 있어서, 쉬지 않고 부르면 3만 자도 못 넘기고 429가 온다 — 실제로
- * 29,117자에서 막혔다. 요청 사이를 띄우는 것이 재시도보다 싸다.
+ * F0는 달마다 200만 자를 주지만 «한꺼번에» 주지는 않는다. 분당 한도가 따로
+ * 있어서, 요청 사이만 띄우고 양을 보지 않으면 그대로 걸린다 — 20초에
+ * 51,945자를 밀어 넣었더니 429가 왔다.
+ *
+ * 그래서 요청 수가 아니라 글자 수로 속도를 잰다. 한 기사가 8,000자일 때와
+ * 300자일 때 쉬어야 하는 시간이 같을 리 없다. 분당 30,000자로 맞춘다 —
+ * 문서가 말하는 한도보다 낮게 잡아 두는 편이 재시도보다 싸다.
  */
-const PACE_MS = 1_200
-const RETRIES = 4
-const BACKOFF_MS = 2_000
+const CHARS_PER_MINUTE = 30_000
+const WINDOW_MS = 60_000
+const RETRIES = 5
+const BACKOFF_MS = 3_000
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
@@ -153,8 +158,44 @@ async function post(body, { key, region }) {
  * 쓴 글자 수를 세어 돌려준다 — 무료 한도가 달마다 정해져 있으므로 얼마나 남았는지
  * 로그에 남아야 판단할 수 있다.
  */
-export function createAzureTranslator({ key, region }) {
+/**
+ * 분당 글자 수를 지키는 속도 조절기.
+ *
+ * 창 하나가 60초다. 이번 요청을 보내면 창의 몫을 넘길 것 같으면, 창이 새로
+ * 열릴 때까지 기다렸다가 보낸다. 429를 맞고 물러서는 것보다 처음부터 천천히
+ * 가는 편이 결과적으로 빠르다 — 물러서는 동안에도 시간은 똑같이 간다.
+ */
+function createPacer(limit = CHARS_PER_MINUTE) {
+  let windowStart = Date.now()
+  let inWindow = 0
+
+  return async function wait(size) {
+    const now = Date.now()
+
+    if (now - windowStart >= WINDOW_MS) {
+      windowStart = now
+      inWindow = 0
+    }
+
+    if (inWindow > 0 && inWindow + size > limit) {
+      const rest = windowStart + WINDOW_MS - now
+
+      if (rest > 0) {
+        console.log(`translate  분당 한도에 닿았다 — ${Math.ceil(rest / 1000)}초 쉰다`)
+        await sleep(rest)
+      }
+
+      windowStart = Date.now()
+      inWindow = 0
+    }
+
+    inWindow += size
+  }
+}
+
+export function createAzureTranslator({ key, region, limit }) {
   let charactersUsed = 0
+  const pace = createPacer(limit)
 
   async function translate(texts) {
     if (!texts.length) return []
@@ -164,6 +205,8 @@ export function createAzureTranslator({ key, region }) {
     for (const group of batches(texts.map((text) => markTerms(text)))) {
       const payload = group.map((text) => ({ Text: text }))
       let result
+
+      await pace(group.reduce((sum, text) => sum + text.length, 0))
 
       for (let attempt = 0; ; attempt += 1) {
         try {
@@ -188,9 +231,6 @@ export function createAzureTranslator({ key, region }) {
       for (const item of result) {
         out.push(item?.translations?.[0]?.text ?? '')
       }
-
-      /* 다음 요청까지 한 박자 쉰다. 429를 맞고 물러서는 것보다 이쪽이 빠르다. */
-      await sleep(PACE_MS)
     }
 
     if (out.length !== texts.length) {
