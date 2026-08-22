@@ -115,8 +115,8 @@ export function validateFeed(feed, { now = Date.now() } = {}) {
      * 화면은 kind로 갈라 그린다. 모르는 kind가 하나라도 섞이면 그 블록은 조용히
      * 사라지므로, 여기서 걸러 «본문이 일부만 나오는» 판을 내보내지 않는다.
      */
-    for (const [index, block] of (article?.bodyOriginal ?? []).entries()) {
-      const at = `${where} 본문 ${index + 1}번째 블록`
+    for (const [position, block] of (article?.bodyOriginal ?? []).entries()) {
+      const at = `${where} 본문 ${position + 1}번째 블록`
 
       if (block?.kind === 'text') {
         if (typeof block.text !== 'string' || !block.text.trim())

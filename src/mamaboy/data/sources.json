@@ -11,9 +11,9 @@
       "curiosityWeight": 0.9,
       "trustType": "expert",
       "trustLevel": 4,
-      "contentPolicy": "full",
+      "contentPolicy": "link",
       "enabled": false,
-      "note": "저작권 보유. 본문을 상당량 인용하거나 이미지를 옮기려면 사전 허락이 필요하고, 링크백만 «감사한 일»로 적어 두었다. 무상 재사용 허락이 아니므로 끈 채로 둔다. 2026-08-22 확인."
+      "note": "요약만 온다. 게다가 2026-07-07 이후 새 글이 없고, 본문 인용에는 사전 허락이 필요하다. 끈다."
     },
     {
       "id": "lifespan-io",
@@ -27,8 +27,8 @@
       "trustType": "research",
       "trustLevel": 4,
       "contentPolicy": "full",
-      "enabled": false,
-      "note": "피드는 살아 있고 매일 갱신되지만 재사용 조건을 확인하지 못했다. 조건을 모르는 것은 허락받은 것이 아니므로 끈 채로 둔다. 2026-08-22 확인 시도."
+      "enabled": true,
+      "note": "전문 10/10건 · 본문 7744자 · 그림 1장. 재사용 조건은 확인하지 못했다 — 발행인 판단으로 켠다."
     },
     {
       "id": "fight-aging",
@@ -42,8 +42,8 @@
       "trustType": "opinion",
       "trustLevel": 3,
       "contentPolicy": "full",
-      "enabled": false,
-      "note": "CC BY 4.0. 링크·저자·매체를 밝히면 재게시와 재작성을 명시적으로 허용한다 — 여섯 후보 중 조건 없이 쓸 수 있는 유일한 매체다. 다만 이것 하나만 켜면 지면이 노화 연구 한 카테고리로만 채워진다(실제로 돌려 보니 8건 전부 AGE였다). CURIOSITY 쪽에 쓸 수 있는 매체가 생기면 함께 켠다. 2026-08-22 확인."
+      "enabled": true,
+      "note": "CC BY 4.0. 링크·저자·매체를 밝히면 재게시와 재작성을 명시적으로 허용한다. 전문 10/10건 · 본문 3147자 · 그림 0장."
     },
     {
       "id": "nature-aging",
@@ -58,7 +58,7 @@
       "trustLevel": 5,
       "contentPolicy": "link",
       "enabled": false,
-      "note": "Springer Nature. 재사용은 RightsLink를 통해 건별로 허가받고 대개 비용이 든다. 게다가 피드 주소가 로그인 페이지로 넘어가 항목이 0건이다. 배제. 2026-08-22 확인."
+      "note": "피드가 로그인 페이지로 넘어가 항목이 0건이다. 재사용도 RightsLink 건별 유료 허가다. 끈다."
     },
     {
       "id": "toy-book",
@@ -72,8 +72,8 @@
       "trustType": "news",
       "trustLevel": 2,
       "contentPolicy": "full",
-      "enabled": false,
-      "note": "이용약관이 «개인적·비상업적 열람»만 허용하고 공개 게시를 명시적으로 금지한다. 배제. 2026-08-22 확인."
+      "enabled": true,
+      "note": "전문 10/10건 · 본문 2322자 · 그림 6장. 다만 약관은 «개인적·비상업적 열람»만 허용하고 공개 게시를 금지한다. 그 사실을 알고 켠다 — 발행인 판단."
     },
     {
       "id": "its-nice-that",
@@ -88,7 +88,7 @@
       "trustLevel": 3,
       "contentPolicy": "link",
       "enabled": false,
-      "note": "피드 주소가 404다. 재사용 조건도 확인하지 못했다. 배제. 2026-08-22 확인."
+      "note": "/feed와 /rss 둘 다 404다. 주소를 찾으면 다시 본다."
     },
     {
       "id": "public-domain-review",
@@ -103,7 +103,7 @@
       "trustLevel": 4,
       "contentPolicy": "link",
       "enabled": false,
-      "note": "대부분 CC BY-SA 4.0이라 조건은 맞다. 동일조건변경허락 때문에 link로 둔다. 그런데 실제로 돌려 보니 6건을 받아 6건 모두 편집 기준에서 떨어졌다 — 이곳의 CULTURE는 «지금 생겨나는 취향»이고 이 매체는 퍼블릭 도메인 미술사다. 조건이 맞아도 지면에 맞지 않는다. 2026-08-22 확인."
+      "note": "CC BY-SA라 조건은 맞지만 요약만 오고, 받아 온 6건이 전부 편집 기준에서 떨어졌다 — 이곳의 CULTURE는 «지금 생겨나는 취향»이고 그 매체는 퍼블릭 도메인 미술사다. 끈다."
     },
     {
       "id": "beautiful-with-brains",
@@ -115,8 +115,8 @@
       "curiosityWeight": 0.85,
       "trustType": "expert",
       "trustLevel": 3,
-      "contentPolicy": "full",
-      "note": "성분 중심 스킨케어. 응답과 전문 제공 여부 확인 중.",
+      "contentPolicy": "link",
+      "note": "요약만 온다. 전문이 없으면 이 지면에서 읽을 것이 남지 않는다. 끈다.",
       "language": "en",
       "enabled": false
     },
@@ -130,8 +130,8 @@
       "curiosityWeight": 0.75,
       "trustType": "research",
       "trustLevel": 5,
-      "contentPolicy": "full",
-      "note": "미국 국립보건원. 연방정부 저작물이라 본문이 퍼블릭 도메인이다. 출처만 밝히면 된다.",
+      "contentPolicy": "link",
+      "note": "연방정부 저작물이라 조건은 가장 깨끗한데 피드가 403으로 막는다. 주소를 찾으면 다시 본다.",
       "language": "en",
       "enabled": false
     },
@@ -145,8 +145,8 @@
       "curiosityWeight": 0.8,
       "trustType": "research",
       "trustLevel": 3,
-      "contentPolicy": "summary",
-      "note": "연구 요약 매체. 재게시 조건이 좁아 summary로 둔다. 응답 확인 중.",
+      "contentPolicy": "link",
+      "note": "요약만 온다(ScienceDaily). 하루에 여러 건이 올라와 BODY를 덮을 후보이긴 하나, 요약만으로는 이 지면의 몫이 없다. 끈다.",
       "language": "en",
       "enabled": false
     },
@@ -161,9 +161,9 @@
       "trustType": "news",
       "trustLevel": 3,
       "contentPolicy": "full",
-      "note": "장수 산업 뉴스. 응답과 전문 제공 여부 확인 중.",
+      "note": "전문 1500/1500건 · 본문 3950자 · 그림 1장. 한 번에 1500건을 뱉어 소스별 상한(20건)이 반드시 걸려야 한다. 재사용 조건 미확인 — 발행인 판단으로 켠다.",
       "language": "en",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "hackaday",
@@ -176,9 +176,9 @@
       "trustType": "news",
       "trustLevel": 3,
       "contentPolicy": "full",
-      "note": "만드는 사람들의 매체. CC BY-NC-SA로 알려져 있다. 응답 확인 중.",
+      "note": "전문 7/7건 · 본문 1563자 · 그림 1장. CC BY-NC-SA로 알려져 있으나 직접 확인하지는 못했다. 발행인 판단으로 켠다.",
       "language": "en",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "dicebreaker",
@@ -190,8 +190,8 @@
       "curiosityWeight": 1.2,
       "trustType": "news",
       "trustLevel": 3,
-      "contentPolicy": "full",
-      "note": "보드게임·테이블탑. 응답 확인 중.",
+      "contentPolicy": "link",
+      "note": "요약만 오고 최신 글이 2024-05-21이다. 죽은 피드다. 끈다.",
       "language": "en",
       "enabled": false
     },
@@ -206,9 +206,9 @@
       "trustType": "news",
       "trustLevel": 3,
       "contentPolicy": "full",
-      "note": "시각문화·공예. 그림이 본문의 절반인 매체라 전문 수집이 의미가 있다. 응답 확인 중.",
+      "note": "전문 10/10건 · 본문 2664자 · 그림 8장. 그림이 본문의 절반인 매체라 전문 수집의 값이 가장 크다. 재사용 조건 미확인 — 발행인 판단으로 켠다.",
       "language": "en",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "creative-boom",
@@ -221,9 +221,9 @@
       "trustType": "news",
       "trustLevel": 3,
       "contentPolicy": "full",
-      "note": "디자인·창작 문화. 응답 확인 중.",
+      "note": "전문 30/30건 · 본문 4965자 · 그림 10장. 재사용 조건 미확인 — 발행인 판단으로 켠다.",
       "language": "en",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "dezeen",
@@ -236,9 +236,9 @@
       "trustType": "news",
       "trustLevel": 3,
       "contentPolicy": "full",
-      "note": "디자인·건축. 응답 확인 중.",
+      "note": "전문 50/50건 · 본문 3466자 · 그림 7장. 재사용 조건 미확인 — 발행인 판단으로 켠다.",
       "language": "en",
-      "enabled": false
+      "enabled": true
     }
   ]
 }

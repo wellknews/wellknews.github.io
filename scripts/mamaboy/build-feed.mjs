@@ -33,6 +33,15 @@ const HEALTH_FILE = join(OUT_DIR, 'sources-health.json')
 /** 지면에 남기는 최대치와 기간. 오래된 것은 검색에도 남기지 않는다. */
 const MAX_ARTICLES = 120
 const MAX_AGE_DAYS = 30
+/**
+ * 한 소스가 한 번에 들여올 수 있는 최대치.
+ *
+ * 어떤 피드는 한 번에 1500건을 뱉는다. 상한이 전체에만 걸려 있으면 그런 소스
+ * 하나가 지면을 통째로 가져가고, 전문 번역까지 하는 지금은 그 값이 그대로
+ * 비용이 된다. 각 소스에서 최신 것부터 이만큼만 받는다 — 여러 곳을 섞겠다는
+ * 것이 이 매거진의 전제이므로, 한 곳이 많이 쓴다고 더 많이 실리지 않는다.
+ */
+const MAX_PER_SOURCE = 20
 /** 이보다 오래 쓰이지 않은 번역은 캐시에서 내린다. 파일이 끝없이 자라지 않게. */
 const CACHE_KEEP_DAYS = 90
 const FETCH_TIMEOUT_MS = 15_000
@@ -134,11 +143,20 @@ async function main() {
       ...record,
       lastSuccess: now.toISOString(),
       failureCount: 0,
-      articleCount: kept.length,
+      articleCount: Math.min(kept.length, MAX_PER_SOURCE),
     }
 
-    console.log(`  ${source.id.padEnd(18)} ${normalized.length}건 수집 → ${kept.length}건 통과`)
-    collected.push(...kept)
+    /* 최신 것부터 상한까지만. 자르는 것은 이 소스 안에서이지 지면 전체가 아니다. */
+    const taken = [...kept]
+      .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))
+      .slice(0, MAX_PER_SOURCE)
+
+    const trimmed = kept.length > taken.length ? ` (상한 ${MAX_PER_SOURCE}건으로 자름)` : ''
+
+    console.log(
+      `  ${source.id.padEnd(22)} ${normalized.length}건 수집 → ${kept.length}건 통과 → ${taken.length}건 사용${trimmed}`,
+    )
+    collected.push(...taken)
   }
 
   const oldest = now.getTime() - MAX_AGE_DAYS * 86_400_000
