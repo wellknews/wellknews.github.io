@@ -200,6 +200,23 @@ body {
   }
 }
 
+/*
+ * 장이 바뀌는 순간.
+ *
+ * 카테고리를 옮기면 지면이 한 번 짧게 들어온다. 이동을 «설명하는» 전환이
+ * 아니라 새 장이 놓였다는 것만 알리는 정도이고, 불투명도 하나만 쓴다 —
+ * 첫 화면의 큰 이미지가 이 애니메이션 때문에 늦게 보이면 안 된다.
+ */
+.page-in {
+  animation: mb-page-in var(--dur-micro-slow) var(--ease-soft) both;
+}
+
+@keyframes mb-page-in {
+  from {
+    opacity: 0;
+  }
+}
+
 /* ---------- 접근성 ---------- */
 
 :where(a, button, [tabindex]):focus-visible {

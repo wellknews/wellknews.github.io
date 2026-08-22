@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 
+import { CategoryIndex } from '../components/CategoryIndex'
 import { EditorialFeed } from '../components/EditorialFeed'
 import { PrototypeNote } from '../components/PrototypeNote'
 import { Wordmark } from '../components/Wordmark'
@@ -47,6 +48,11 @@ export function Home() {
         ) : (
           <p className={styles.empty}>{mamaboy.feed.empty}</p>
         )}
+      </div>
+
+      {/* 지면을 다 읽고 내려온 자리에서 다른 장으로 갈 수 있게 한다. */}
+      <div className={`shell ${styles.index}`}>
+        <CategoryIndex label={mamaboy.feed.more} />
       </div>
     </div>
   )

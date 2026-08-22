@@ -31,3 +31,8 @@
   color: var(--color-text-secondary);
   font-size: var(--text-lead);
 }
+
+/* 목차는 머리와 지면 사이에 놓인다. 지면이 시작되기 전의 마지막 안내다. */
+.index {
+  margin-bottom: clamp(28px, 4vw, 56px);
+}

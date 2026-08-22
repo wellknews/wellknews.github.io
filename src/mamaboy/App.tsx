@@ -105,7 +105,7 @@ export default function App() {
 
       <Header route={route} />
 
-      <main id="main" ref={mainRef} tabIndex={-1} key={key}>
+      <main id="main" ref={mainRef} tabIndex={-1} key={key} className="page-in">
         {render(route)}
       </main>
 
