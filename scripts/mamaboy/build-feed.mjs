@@ -198,8 +198,12 @@ async function main() {
   }
 
   console.log(`기간·중복   ${stats.kept - unique.length}건 제외 → ${unique.length}건`)
+  /* 무료 한도가 달마다 정해져 있으므로 얼마나 썼는지가 로그에 남아야 한다. */
+  const used = translate.used?.() ?? 0
+  const characters = used ? ` · 쓴 글자 ${used.toLocaleString('ko-KR')}자` : ''
+
   console.log(
-    `번역        완료 ${translated.done ?? 0} · 실패 ${translated.failed ?? 0} · 대기 ${translated.pending ?? 0} · 불필요 ${translated.none ?? 0}`,
+    `번역        완료 ${translated.done ?? 0} · 실패 ${translated.failed ?? 0} · 대기 ${translated.pending ?? 0} · 불필요 ${translated.none ?? 0}${characters}`,
   )
   console.log(`최종        ${articles.length}건`)
 

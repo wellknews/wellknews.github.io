@@ -1,42 +1,50 @@
 {
   "lifespan-io": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 6
+    "articleCount": 6,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "fight-aging": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 8
+    "articleCount": 8,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "toy-book": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 10
+    "articleCount": 10,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "longevity-technology": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 20
+    "articleCount": 20,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "hackaday": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 0
+    "articleCount": 0,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "colossal": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 1
+    "articleCount": 1,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "creative-boom": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 6
+    "articleCount": 6,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "dezeen": {
-    "failureCount": 0,
+    "failureCount": 1,
     "lastSuccess": "2026-08-22T05:49:26.726Z",
-    "articleCount": 20
+    "articleCount": 20,
+    "lastFailure": "2026-08-22T06:17:13.235Z"
   }
 }
