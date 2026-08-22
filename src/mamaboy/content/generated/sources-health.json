@@ -1,0 +1,42 @@
+{
+  "lifespan-io": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 6
+  },
+  "fight-aging": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 8
+  },
+  "toy-book": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 10
+  },
+  "longevity-technology": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 20
+  },
+  "hackaday": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 0
+  },
+  "colossal": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 1
+  },
+  "creative-boom": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 6
+  },
+  "dezeen": {
+    "failureCount": 0,
+    "lastSuccess": "2026-08-22T05:43:28.595Z",
+    "articleCount": 20
+  }
+}
