@@ -238,13 +238,49 @@ export function classify(article, source) {
   return {
     ...article,
     category,
+    trustLevel: source.trustLevel ?? 3,
     careScore: Number(careScore.toFixed(2)),
     curiosityScore: Number(curiosityScore.toFixed(2)),
     contentType,
   }
 }
 
+/** 이보다 낮으면 어느 축으로도 이 지면의 글이 아니다. */
+const PASS_THRESHOLD = 0.4
+
+/** 건강 카테고리에서 앞자리를 차지하려면 이만큼의 신뢰도가 필요하다. */
+const HEALTH_TRUST_FLOOR = 2
+const HEALTH = new Set(['skin', 'body', 'age'])
+
+/**
+ * 왜 떨어뜨렸는지(§18의 DROP).
+ *
+ * 통과 여부만 돌려주면 로그에 «몇 건 떨어졌다»만 남고, 필터가 지나치게
+ * 조이는지 느슨한지 알 수 없다. 이유를 함께 돌려주면 그것이 드러난다.
+ *
+ * @returns {string | null} 떨어뜨린 이유. 통과하면 null.
+ */
+export function dropReason(article) {
+  const peak = Math.max(article.careScore, article.curiosityScore)
+
+  if (peak < PASS_THRESHOLD) return '두 축 모두 낮음'
+
+  /*
+   * 건강 정보는 «누가 말했는가»가 정보의 일부다. 신뢰도가 낮은 소스의
+   * 제품 홍보성 글이 SKIN·BODY·AGE의 지면에 오르면, 연구와 광고가 같은
+   * 무게로 읽히게 된다.
+   */
+  if (HEALTH.has(article.category)) {
+    if ((article.trustLevel ?? 3) < HEALTH_TRUST_FLOOR) return '건강 지면에 신뢰도 부족'
+    if (article.contentType === 'product' && article.careScore < 0.8) {
+      return '건강 지면의 제품 홍보'
+    }
+  }
+
+  return null
+}
+
 /** 편집 필터(§10). 두 축 모두 낮으면 이 지면에 올리지 않는다. */
-export function passes(article, threshold = 0.4) {
-  return Math.max(article.careScore, article.curiosityScore) >= threshold
+export function passes(article) {
+  return dropReason(article) === null
 }

@@ -21,8 +21,24 @@ export type Source = {
   language: string
   /** 이 소스가 주로 걸리는 자리. 분류기의 출발점이지 최종값이 아니다. */
   categories: Category[]
+  /**
+   * 이 소스가 두 축에 얼마나 기여하는지(1이 기준).
+   *
+   * 학술지의 완구 기사와 완구 매체의 노화 기사를 같은 무게로 다루지 않기 위한
+   * 값이다. 분류기가 계산한 점수에 곱해지고, 상한 1은 그대로 지킨다.
+   */
+  careWeight: number
+  curiosityWeight: number
   /** 이 매체가 내는 글의 기본 성격(§33). 글마다 달라질 수 있다. */
   trustType: ContentType
+  /**
+   * 얼마나 믿을 수 있는가. 1..5.
+   *
+   * 콘텐츠의 «종류»(trustType)와 «신뢰도»는 다르다. 같은 NEWS라도 학술 출판사의
+   * 뉴스와 제품 홍보에 가까운 업계지의 뉴스가 있다. 건강 카테고리에서는 이 값이
+   * 낮은 소스가 지면의 앞자리를 차지하지 못하게 한다.
+   */
+  trustLevel: number
   /** 이 지면에 어디까지 실을 수 있는지(§15). 모르면 가장 좁은 쪽으로 둔다. */
   contentPolicy: ContentPolicy
   enabled: boolean

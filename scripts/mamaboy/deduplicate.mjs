@@ -29,6 +29,27 @@ const STOPWORDS = new Set([
   'you',
 ])
 
+/**
+ * 매체 이름을 떼어 낸 제목.
+ *
+ * 많은 피드가 제목 끝에 «| 매체명»이나 «- 매체명»을 붙인다. 그대로 두면 같은
+ * 보도를 두 매체가 낸 경우 서로 다른 낱말이 하나씩 더 붙어 겹침이 낮아지고,
+ * 반대로 같은 매체의 서로 다른 기사끼리는 그 이름 때문에 더 닮아 보인다.
+ */
+function stripSourceName(title, sourceName) {
+  const name = sourceName?.toLowerCase().trim()
+
+  let cleaned = title.replace(/\s*[|·—–-]\s*[^|·—–-]{2,40}$/u, (tail) =>
+    name && tail.toLowerCase().includes(name) ? '' : tail,
+  )
+
+  if (name && cleaned.toLowerCase().startsWith(`${name}:`)) {
+    cleaned = cleaned.slice(name.length + 1)
+  }
+
+  return cleaned.trim() || title
+}
+
 function tokens(title) {
   return new Set(
     title
@@ -49,15 +70,23 @@ function jaccard(a, b) {
   return shared / (a.size + b.size - shared)
 }
 
-/** 겹치는 정도가 이보다 높고 발행 시각이 가까우면 같은 보도로 본다. */
-const SIMILARITY = 0.72
+/**
+ * 겹치는 정도가 이보다 높고 발행 시각이 가까우면 같은 보도로 본다.
+ *
+ * 기준을 시간에 따라 움직인다. 같은 연구가 하루 사이에 여러 매체로 퍼질 때는
+ * 제목이 조금만 닮아도 같은 보도일 가능성이 크고, 사흘쯤 지난 뒤의 비슷한
+ * 제목은 후속 보도나 다른 각도의 분석일 가능성이 크다.
+ */
+const SIMILARITY_NEAR = 0.62
+const SIMILARITY_FAR = 0.74
+const NEAR_HOURS = 8
 const WINDOW_HOURS = 72
 
 export function deduplicate(articles) {
   const kept = []
 
   for (const article of articles) {
-    const signature = tokens(article.titleOriginal)
+    const signature = tokens(stripSourceName(article.titleOriginal, article.sourceName))
     const at = Date.parse(article.publishedAt)
 
     const twinIndex = kept.findIndex((existing) => {
@@ -67,7 +96,9 @@ export function deduplicate(articles) {
 
       if (apart > WINDOW_HOURS) return false
 
-      return jaccard(existing.signature, signature) >= SIMILARITY
+      const threshold = apart <= NEAR_HOURS ? SIMILARITY_NEAR : SIMILARITY_FAR
+
+      return jaccard(existing.signature, signature) >= threshold
     })
 
     if (twinIndex === -1) {

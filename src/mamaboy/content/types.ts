@@ -118,6 +118,8 @@ export type Article = {
   language: string
 
   category: Category
+  /** 이 글을 낸 소스의 신뢰도(1..5). 수집 단계에서 레지스트리를 보고 붙인다. */
+  trustLevel?: number
   /** 0..1. 자기 자신을 더 오래 건강하게 유지하는 데 의미 있는가(§10). */
   careScore: number
   /** 0..1. 새로운 관심·놀이·문화·취향을 발견하게 하는가(§10). */

@@ -15,13 +15,21 @@
  * 때마다 판면이 흔들리지 않는다.
  */
 import { axisOf } from '../content/site'
-import type { Article, Axis, ContentType, Placed, Weight } from '../content/types'
+import type { Article, Axis, Category, ContentType, Placed, Weight } from '../content/types'
 
 /** 24시간마다 절반으로 줄어든다. 하루 지난 글은 오늘 글의 절반 무게. */
 const HALF_LIFE_HOURS = 24
 
 /** 두 번째 FEATURE가 앉는 자리. 첫 화면을 지나 한 번 숨이 필요한 지점이다. */
 const SECOND_FEATURE_AT = 5
+
+/**
+ * «첫 화면»으로 치는 기사 수(§37).
+ *
+ * 여기까지는 한 출처가 두 번 나오지 않는다. 처음 보이는 화면이 한 매체로
+ * 채워지면, 무엇을 골랐는지가 아니라 어디서 가져왔는지가 먼저 보인다.
+ */
+const FIRST_VIEW = 4
 
 /**
  * 콘텐츠의 성격에 따른 가중.
@@ -54,7 +62,16 @@ export function scoreOf(article: Article, now: number = Date.now()): number {
   // 두 축을 모두 건드리는 글에는 아주 작은 웃돈을 준다. 이 브랜드의 한가운데다.
   const bothBonus = 1 + both * 0.15
 
-  return peak * bothBonus * TYPE_WEIGHT[article.contentType] * (0.35 + 0.65 * recency)
+  /*
+   * 출처의 신뢰도(1..5)를 ±15% 안에서 반영한다.
+   *
+   * 이 값으로 순위를 뒤집지 않는다. 같은 이야기를 두 곳이 냈을 때 어느 쪽을
+   * 앞에 둘지 정도의 크기다 — 신뢰도가 콘텐츠의 가치를 대신하면 이 지면은
+   * 매체 목록이 된다.
+   */
+  const trust = 0.85 + ((article.trustLevel ?? 3) - 1) * 0.075
+
+  return peak * bothBonus * TYPE_WEIGHT[article.contentType] * (0.35 + 0.65 * recency) * trust
 }
 
 /**
@@ -105,8 +122,10 @@ export function compose(source: Article[], options: ComposeOptions = {}): Placed
       .map((article) => article.id),
   )
 
+  const [leadArticle] = features
   const body = mix(
     rest.map((article) => place(article, briefIds.has(article.id) ? 'brief' : 'standard')),
+    leadArticle ? { source: leadArticle.sourceName, category: leadArticle.category } : {},
   )
 
   /*
@@ -136,35 +155,63 @@ function place(article: Article, weight: Weight): Placed {
  * 지면을 섞는다.
  *
  * 일반적인 웰니스 매거진에서는 어색한 배열이 여기서는 정체성이 된다 —
- * 레티놀 다음에 캐릭터 완구, 그다음에 수면(§9). 점수 순서를 완전히 버리지 않고,
- * «바로 앞과 다른 축, 다른 출처»를 만족하는 가장 높은 점수의 글을 하나씩 뽑는다.
+ * 레티놀 다음에 캐릭터 완구, 그다음에 수면. 점수 순서를 완전히 버리지 않고,
+ * 아래 규칙을 만족하는 가장 높은 점수의 글을 하나씩 뽑는다.
+ *
+ *   1. 바로 앞과 다른 축
+ *   2. 같은 카테고리가 세 번 연달아 오지 않는다
+ *   3. 바로 앞과 다른 출처
+ *   4. 첫 화면에서는 한 출처가 두 번 나오지 않는다
+ *
+ * 네 가지를 모두 만족하는 후보가 없으면 하나씩 풀어 준다. 규칙 때문에 지면이
+ * 비는 것보다는 규칙이 한 번 어긋나는 편이 낫다 — 순서는 편집의 도구이지
+ * 지켜야 할 계율이 아니다.
  */
-function mix(items: Placed[]): Placed[] {
+function mix(items: Placed[], seed: { source?: string; category?: Category } = {}): Placed[] {
   const pool = [...items]
   const out: Placed[] = []
+  const viewportSources = new Set<string>()
+
+  if (seed.source) viewportSources.add(seed.source)
 
   let previousAxis: Axis | null = null
-  let previousSource: string | null = null
+  let previousSource: string | undefined = seed.source
+  let run = { category: seed.category, length: seed.category ? 1 : 0 }
+
+  const fits = (item: Placed, level: number) => {
+    const source = item.article.sourceName
+    const inViewport = out.length < FIRST_VIEW
+
+    // 4 → 1 순으로 조건을 풀어 준다. level 0에서는 전부 지킨다.
+    if (level < 4 && inViewport && viewportSources.has(source)) return false
+    if (level < 3 && source === previousSource) return false
+    if (level < 2 && run.category === item.article.category && run.length >= 2) return false
+    if (level < 1 && item.axis === previousAxis) return false
+
+    return true
+  }
 
   while (pool.length > 0) {
-    let index = pool.findIndex(
-      (item) => item.axis !== previousAxis && item.article.sourceName !== previousSource,
-    )
+    let index = -1
 
-    // 축을 바꾸는 것이 불가능하면 출처만이라도 겹치지 않게 한다.
-    if (index === -1) {
-      index = pool.findIndex((item) => item.article.sourceName !== previousSource)
+    for (let level = 0; level <= 4 && index === -1; level += 1) {
+      index = pool.findIndex((item) => fits(item, level))
     }
 
-    if (index === -1) index = 0
-
-    const [next] = pool.splice(index, 1)
+    const [next] = pool.splice(index === -1 ? 0 : index, 1)
 
     if (!next) break
 
     out.push(next)
+
     previousAxis = next.axis
     previousSource = next.article.sourceName
+    run =
+      run.category === next.article.category
+        ? { category: run.category, length: run.length + 1 }
+        : { category: next.article.category, length: 1 }
+
+    if (out.length <= FIRST_VIEW) viewportSources.add(next.article.sourceName)
   }
 
   return out

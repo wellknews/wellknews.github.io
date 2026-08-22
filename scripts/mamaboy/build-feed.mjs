@@ -16,7 +16,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
-import { classify, passes } from './classify.mjs'
+import { classify, dropReason } from './classify.mjs'
 import { deduplicate } from './deduplicate.mjs'
 import { normalize } from './normalize.mjs'
 import { createTranslator } from './translate.mjs'
@@ -89,6 +89,8 @@ async function main() {
   const health = await readJson(HEALTH_FILE, {})
   const collected = []
   const stats = { attempted: 0, succeeded: 0, normalized: 0, kept: 0 }
+  /** 무엇 때문에 떨어뜨렸는지. 필터가 조이는지 느슨한지는 여기서만 보인다. */
+  const drops = {}
 
   for (const source of sources) {
     stats.attempted += 1
@@ -114,7 +116,14 @@ async function main() {
 
     const normalized = normalize(xml, source, now)
     const classified = normalized.map((article) => classify(article, source))
-    const kept = classified.filter((article) => passes(article))
+    const kept = []
+
+    for (const article of classified) {
+      const reason = dropReason(article)
+
+      if (reason) drops[reason] = (drops[reason] ?? 0) + 1
+      else kept.push(article)
+    }
 
     stats.normalized += normalized.length
     stats.kept += kept.length
@@ -163,6 +172,11 @@ async function main() {
   console.log(`소스        ${stats.succeeded}/${stats.attempted} 응답`)
   console.log(`수집        ${stats.normalized}건`)
   console.log(`편집 필터   ${stats.normalized - stats.kept}건 제외 → ${stats.kept}건`)
+
+  for (const [reason, count] of Object.entries(drops).sort((a, b) => b[1] - a[1])) {
+    console.log(`            · ${reason} ${count}건`)
+  }
+
   console.log(`기간·중복   ${stats.kept - unique.length}건 제외 → ${unique.length}건`)
   console.log(
     `번역        완료 ${translated.done ?? 0} · 실패 ${translated.failed ?? 0} · 대기 ${translated.pending ?? 0} · 불필요 ${translated.none ?? 0}`,
