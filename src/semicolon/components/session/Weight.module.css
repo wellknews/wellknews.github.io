@@ -1,0 +1,55 @@
+/*
+ * 기본은 가장 진한 상태다. 여기서 멈춰도 글은 그대로 읽힌다.
+ * 스크롤 타임라인이 있는 화면에서만 그 앞뒤가 생긴다.
+ */
+.weight {
+  color: var(--color-text);
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .weight {
+      view-timeline-name: --weight;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --weight;
+    }
+
+    /* 다가올수록 진해진다. 화면 가운데에 왔을 때 다 도착해 있다. */
+    .weight[data-direction='gain'] {
+      animation-name: weight-gain;
+      animation-range: entry 24% entry 78%;
+    }
+
+    /*
+     * 지나가면서 한 단계만 물러난다.
+     *
+     * 완전히 지우지 않는 것이 이 장치의 전부다. 51%라는 생각 자체가 폐기된
+     * 것이 아니라 원래 뜻으로 돌아간 것이므로, 글자도 사라지지 않고 남는다.
+     */
+    .weight[data-direction='thin'] {
+      animation-name: weight-thin;
+      animation-range: exit 10% exit 90%;
+    }
+  }
+}
+
+@keyframes weight-gain {
+  from {
+    color: var(--color-text-muted);
+  }
+
+  to {
+    color: var(--color-text);
+  }
+}
+
+@keyframes weight-thin {
+  from {
+    color: var(--color-text);
+  }
+
+  to {
+    color: var(--color-text-secondary);
+  }
+}

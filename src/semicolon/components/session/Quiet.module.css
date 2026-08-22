@@ -4,6 +4,11 @@
  */
 .quiet {
   padding-block: clamp(72px, 14vw, 168px);
+  /*
+   * 이 구간은 Scene 밖에 놓이므로 판면의 여백을 스스로 가져야 한다.
+   * 없으면 좁은 화면에서 글이 화면 양쪽 끝에 그대로 닿는다.
+   */
+  padding-inline: var(--page-x);
 }
 
 .quiet p {

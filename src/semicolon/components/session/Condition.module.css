@@ -1,0 +1,53 @@
+.condition {
+  display: grid;
+  row-gap: clamp(14px, 2.4vw, 22px);
+  justify-items: center;
+  padding-block: clamp(36px, 7vw, 80px);
+}
+
+.head {
+  font-size: var(--text-meta);
+  letter-spacing: 0.22em;
+  color: var(--color-text-muted);
+}
+
+.rows {
+  display: grid;
+  row-gap: clamp(8px, 1.4vw, 12px);
+}
+
+.rows li {
+  display: grid;
+  grid-template-columns: 7em auto;
+  column-gap: clamp(14px, 2.4vw, 24px);
+  align-items: center;
+}
+
+.label {
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  color: var(--color-text-muted);
+}
+
+/* 눈금. 칸 하나가 10분의 1이다. */
+.gauge {
+  display: flex;
+  gap: 3px;
+}
+
+.gauge span {
+  width: clamp(9px, 2vw, 13px);
+  height: 10px;
+  background: var(--color-line);
+}
+
+.gauge span[data-filled='true'] {
+  background: var(--color-text);
+}
+
+/* 잴 수 없는 칸. */
+.unknown {
+  font-size: var(--text-meta);
+  letter-spacing: 0.3em;
+  color: var(--color-text-muted);
+}

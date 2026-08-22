@@ -1,0 +1,18 @@
+.move {
+  display: grid;
+  justify-items: center;
+  row-gap: clamp(8px, 1.4vw, 14px);
+  padding-block: clamp(48px, 10vw, 120px);
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+}
+
+.arrow {
+  color: var(--color-line-strong);
+}
+
+/* 옆 건물로 옮기는 정도. 여백도 글자도 한 단계 줄인다. */
+.move[data-quiet='true'] {
+  padding-block: clamp(20px, 4vw, 44px);
+  font-size: var(--text-meta);
+}

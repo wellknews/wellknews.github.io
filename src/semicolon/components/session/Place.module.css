@@ -1,0 +1,68 @@
+.place {
+  display: grid;
+  row-gap: 4px;
+}
+
+/*
+ * 장소의 이름.
+ *
+ * 본문 글자체를 쓰되 자간을 벌린다. 라틴 대문자는 그래야 한 덩어리의 이름으로
+ * 읽히고, 그 상태에서 아래의 고정폭 주소와 확실히 다른 층이 된다.
+ */
+.name {
+  font-family: var(--font-serif);
+  font-size: clamp(0.9375rem, 0.88rem + 0.3vw, 1.0625rem);
+  font-weight: var(--weight-display);
+  letter-spacing: 0.14em;
+  color: var(--color-text);
+}
+
+.address,
+.where {
+  font-size: var(--text-meta);
+  color: var(--color-text-muted);
+}
+
+/* 링크로 꾸미지 않는다. 주소는 주소로 보여야 한다. */
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 0.4em;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+/* 커서가 있는 화면에서만, 그 자리에 무언가 있다는 것을 아주 작게 알린다. */
+@media (hover: hover) {
+  .link:hover .arrow,
+  .link:focus-visible .arrow {
+    opacity: 1;
+  }
+}
+
+/*
+ * 손가락에는 화살표를 두지 않는다.
+ *
+ * 늘 띄워 두면 주소마다 기호가 하나씩 붙어 목록처럼 보이고, 숨겨 두면 나타날
+ * 방법이 없는 자리만 남는다. 주소를 눌러 지도로 가는 것은 그대로 된다.
+ */
+@media (hover: none) {
+  .arrow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    transition: none;
+  }
+}

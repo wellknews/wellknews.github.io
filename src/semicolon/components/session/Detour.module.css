@@ -1,0 +1,32 @@
+.detour {
+  display: grid;
+  row-gap: clamp(10px, 1.8vw, 16px);
+  padding-block: clamp(40px, 8vw, 96px);
+  /* 한 걸음의 폭. 세 자리가 전부 이 값으로 자리를 잡는다. */
+  --stride: clamp(14px, 3vw, 34px);
+}
+
+.run {
+  display: grid;
+  row-gap: 4px;
+  justify-items: start;
+  color: var(--color-line-strong);
+}
+
+/* 한 걸음마다 조금씩 더 밀려 나간다. 잘못 가고 있다는 것을 자리가 말한다. */
+.run span {
+  margin-left: calc(var(--step) * var(--stride));
+}
+
+/* 알아차린 자리. 제일 멀리 나간 걸음과 나란히 선다. */
+.note {
+  margin-left: calc((var(--out) - 1) * var(--stride));
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  color: var(--color-text-muted);
+}
+
+/* 돌아오는 걸음은 그 자리에서 출발해 왼쪽으로 걷는다. */
+.returning span {
+  margin-left: calc((var(--out) - 1 - var(--step)) * var(--stride));
+}

@@ -23,7 +23,9 @@
  *   5. 한 번뿐인 장면  사건으로 만든 장면을 지나갔다 돌아왔을 때 다시 볼 수
  *                   있는지. 한 번 켜고 관찰을 끊어 버리면, 빠르게 지나간
  *                   사람은 그 장면을 영영 못 본다.
- *   6. 가로 넘침    어느 폭에서도 가로로 밀리지 않는지.
+ *   6. 화면에 닿은 글  판면의 여백이 실제로 있는지. 넘치지는 않지만 글자가
+ *                   화면 양쪽 끝에 붙어 버린 구간이 배포된 적이 있다.
+ *   7. 가로 넘침    어느 폭에서도 가로로 밀리지 않는지.
  *
  * 실행: npm run audit   (개발 서버가 떠 있어야 한다. 없으면 알아서 띄운다.)
  */
@@ -45,11 +47,19 @@ const SCREENS = [
   { name: 'wide', width: 1440, height: 900, touch: false },
 ]
 
+/**
+ * 열어 볼 화면.
+ *
+ * kind는 «이 화면에 무엇이 있을 수 있는가»를 말한다. 기록이 늘어날 때마다
+ * 검사 항목을 하나씩 옮겨 적지 않기 위한 것이다 — 새 기록은 여기 한 줄만
+ * 더하면 그 기록에 실제로 있는 장치만 골라서 검사한다.
+ */
 const PAGES = [
-  { name: 'home', path: '/' },
-  { name: 'session', path: '/session/wellknews-1k' },
-  { name: 'session-index', path: '/session' },
-  { name: 'thread-index', path: '/thread' },
+  { name: 'home', path: '/', kind: 'home' },
+  { name: 'session/wellknews-1k', path: '/session/wellknews-1k', kind: 'session' },
+  { name: 'session/only-myself', path: '/session/only-myself', kind: 'session' },
+  { name: 'session-index', path: '/session', kind: 'index' },
+  { name: 'thread-index', path: '/thread', kind: 'index' },
 ]
 
 const failures = []
@@ -131,7 +141,7 @@ async function auditClipping(page, screen, dir) {
   await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
   await page.waitForTimeout(1600)
 
-  const open = await inkRows(page, mark, join(dir, `${screen.name}-end-open.png`))
+  const open = await inkRows(page, mark, join(dir, `${screen.name}-${Date.now()}-end-open.png`))
 
   const natural = await page.evaluate(() => {
     const el = document.querySelector('[class*="Ending-module__mark"]')
@@ -196,7 +206,7 @@ async function auditClipping(page, screen, dir) {
  */
 const DEVICES = [
   {
-    page: 'home',
+    kind: 'home',
     label: '히어로의 선',
     target: '[class*="Rift-module__rift"]',
     read: () =>
@@ -204,14 +214,14 @@ const DEVICES = [
     changed: (before, after) => Number(after) > Number(before) + 0.05,
   },
   {
-    page: 'session',
+    kind: 'session',
     label: '표지 이미지',
     target: '[class*="Materialize-module__materialize"]',
     read: () => document.querySelector('[class*="Materialize-module__materialize"]')?.dataset.lit,
     changed: (before, after) => before !== after && after === 'true',
   },
   {
-    page: 'session',
+    kind: 'session',
     label: '앞뒤 시안 뒤집기',
     target: '[class*="Faces-module__flip"]',
     read: () => document.querySelector('[class*="Faces-module__faces"]')?.dataset.back,
@@ -255,8 +265,8 @@ function movedFraction(before, after) {
 /** 눈에 보이는 변화로 인정하는 최소 비율. 이보다 작으면 아무 일도 안 일어난 것과 같다. */
 const VISIBLE = 0.001
 
-async function auditDevices(page, screen, pageName, dir) {
-  const devices = DEVICES.filter((d) => d.page === pageName)
+async function auditDevices(page, screen, where, dir) {
+  const devices = DEVICES.filter((d) => d.kind === where.kind)
 
   if (devices.length === 0) return
 
@@ -279,7 +289,11 @@ async function auditDevices(page, screen, pageName, dir) {
     await target.scrollIntoViewIfNeeded()
     await page.waitForTimeout(400)
 
-    const stem = join(dir, `${screen.name}-${pageName}-${devices.indexOf(device)}`)
+    /* 화면 이름에 슬래시가 들어가므로 파일 이름으로 쓰기 전에 바꾼다. */
+    const stem = join(
+      dir,
+      `${screen.name}-${where.name.replace(/\//g, '-')}-${devices.indexOf(device)}`,
+    )
     const before = await page.evaluate(device.read)
     const beforePixels = await pixels(page, target, `${stem}-before.png`)
     const box = await target.boundingBox()
@@ -490,21 +504,21 @@ async function auditReducedMotion(page, screen, pageName) {
  */
 const REPLAYS = [
   {
-    page: 'session',
+    kind: 'session',
     label: '999 → 1,000 장면',
     target: '[class*="Counter-module__counter"]',
     read: (el) => el.dataset.reached,
   },
   {
-    page: 'session',
+    kind: 'session',
     label: '끝의 기호',
     target: '[class*="Ending-module__ending"]',
     read: (el) => el.dataset.open,
   },
 ]
 
-async function auditReplay(page, screen, pageName) {
-  for (const scene of REPLAYS.filter((r) => r.page === pageName)) {
+async function auditReplay(page, screen, where) {
+  for (const scene of REPLAYS.filter((r) => r.kind === where.kind)) {
     const target = page.locator(scene.target).first()
 
     if ((await target.count()) === 0) continue
@@ -562,7 +576,58 @@ async function auditReplay(page, screen, pageName) {
   }
 }
 
-/* ─────────────────────────────  6. 가로 넘침  ───────────────────────────── */
+/* ─────────────────────────────  6. 화면에 닿은 글  ───────────────────────────── */
+
+/**
+ * 판면의 여백이 실제로 있는지.
+ *
+ * 가로 넘침 검사는 이것을 못 잡는다. 글이 화면 폭에 딱 맞으면 넘치지는 않지만
+ * 글자가 양쪽 끝에 그대로 붙고, 좁은 화면에서는 읽는 동안 손가락에 문장이 가린다.
+ * 실제로 Scene 밖에 놓인 구간 하나가 여백 없이 배포되어 있었다.
+ *
+ * 사진은 여백까지 쓰기로 한 것이 있으므로 보지 않는다. 여기서 보는 것은 글이다.
+ */
+const MIN_GUTTER = 8
+
+async function auditGutter(page, screen, pageName) {
+  const touching = await page.evaluate((min) => {
+    const BLOCKS = 'p, h1, h2, h3, li, blockquote, figcaption'
+    const out = []
+
+    for (const el of document.querySelectorAll(BLOCKS)) {
+      if (el.querySelector(BLOCKS)) continue
+
+      const text = (el.textContent ?? '').replace(/\s+/g, ' ').trim()
+
+      if (!/[가-힣]/.test(text)) continue
+
+      const box = el.getBoundingClientRect()
+
+      if (box.width === 0 || box.height === 0) continue
+
+      const left = Math.round(box.left)
+      const right = Math.round(window.innerWidth - box.right)
+
+      if (left < min || right < min) out.push({ text: text.slice(0, 32), left, right })
+    }
+
+    return out
+  }, MIN_GUTTER)
+
+  if (touching.length) {
+    const worst = touching[0]
+
+    fail(
+      `${screen.name} ${pageName}에서 글 ${touching.length}곳이 화면 끝에 닿는다 — ` +
+        `예: «${worst.text}…» (왼쪽 ${worst.left}px, 오른쪽 ${worst.right}px). ` +
+        `판면 밖에 놓인 구간은 여백을 스스로 가져야 한다.`,
+    )
+  } else {
+    pass(`${screen.name} ${pageName} 글이 화면 끝에 닿지 않는다`)
+  }
+}
+
+/* ─────────────────────────────  7. 가로 넘침  ───────────────────────────── */
 
 async function auditOverflow(page, screen, pageName) {
   const over = await page.evaluate(
@@ -643,13 +708,14 @@ for (const screen of SCREENS) {
     await page.waitForTimeout(600)
 
     await auditOverflow(page, screen, target.name)
-    await auditDevices(page, screen, target.name, dir)
+    await auditGutter(page, screen, target.name)
+    await auditDevices(page, screen, target, dir)
 
     collected.set(target.name, await page.evaluate(HARVEST))
 
-    await auditReplay(page, screen, target.name)
+    await auditReplay(page, screen, target)
 
-    if (target.name === 'session') await auditClipping(page, screen, dir)
+    if (target.kind === 'session') await auditClipping(page, screen, dir)
   }
 
   await page.close()

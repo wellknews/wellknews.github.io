@@ -1,0 +1,20 @@
+.locker {
+  display: grid;
+  justify-items: center;
+  row-gap: clamp(8px, 1.4vw, 14px);
+  padding-block: clamp(32px, 6vw, 72px);
+}
+
+.label {
+  font-size: var(--text-meta);
+  letter-spacing: 0.22em;
+  color: var(--color-text-muted);
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}

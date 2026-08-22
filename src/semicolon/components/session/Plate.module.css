@@ -1,0 +1,18 @@
+.plate {
+  display: grid;
+  row-gap: clamp(10px, 1.6vw, 16px);
+}
+
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* 모서리를 깎지 않는다. 사진은 카드가 아니라 지면에 앉은 한 장이다. */
+  border-radius: 0;
+}
+
+.note {
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  color: var(--color-text-muted);
+}
