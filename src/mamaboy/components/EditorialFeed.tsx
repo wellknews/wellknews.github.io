@@ -1,6 +1,5 @@
 import type { CSSProperties } from 'react'
 
-import { GelObject } from './GelObject'
 import { BriefStory, FeatureStory, StandardStory } from './Story'
 import type { Placed } from '../content/types'
 import styles from './EditorialFeed.module.css'
@@ -37,24 +36,20 @@ const BRIEF_SLOTS: Slot[] = [
   { col: 2, span: 4, lift: 2 },
 ]
 
-/**
- * 젤 오브젝트가 앉는 자리(§21).
- *
- * 빈 공간을 전부 오브젝트로 채우지 않는다. 지면이 한 번 숨을 쉬는 자리에만
- * 하나씩 놓아 시선을 돌리고, 그 다음 기사가 다시 시작되게 한다.
- */
-const OBJECTS: (Slot & { shape: 'sphere' | 'capsule' | 'blob'; size: 'sm' | 'md' | 'lg' })[] = [
-  { col: 10, span: 3, shape: 'sphere', size: 'md' },
-  { col: 2, span: 3, shape: 'capsule', size: 'sm' },
-]
-
-/** 오브젝트가 끼어드는 지점. 지면의 앞쪽과 중간에 하나씩. */
-const OBJECT_AT = [3, 9]
-
 type Props = {
   items: Placed[]
   /** 이 지면의 첫 이미지만 즉시 로드한다. 목록 안의 목록에서는 꺼 둔다. */
   priority?: boolean
+  /**
+   * 자리표의 시작점(§17).
+   *
+   * 같은 표를 늘 0번부터 읽으면 카테고리 면마다 첫 기사가 같은 자리에서
+   * 시작한다 — 면이 다섯 장 이어지면 그것이 그대로 반복되는 표로 보인다.
+   * 시작점을 옮기면 같은 표에서 다른 리듬이 나온다.
+   */
+  offset?: number
+  /** 카테고리 면 안에서는 기사마다 카테고리를 다시 적지 않는다. */
+  showCategory?: boolean
 }
 
 function slotStyle(slot: Slot): CSSProperties {
@@ -71,36 +66,21 @@ function widthOf(slot: Slot): 'wide' | 'narrow' {
   return slot.span >= 5 ? 'wide' : 'narrow'
 }
 
-export function EditorialFeed({ items, priority = true }: Props) {
-  let standards = 0
-  let briefs = 0
-  let objects = 0
+export function EditorialFeed({ items, priority = true, offset = 0, showCategory = true }: Props) {
+  let standards = offset
+  let briefs = offset
 
   const rendered = items.flatMap((item, index) => {
     const nodes = []
 
-    if (OBJECT_AT.includes(index) && objects < OBJECTS.length) {
-      const object = OBJECTS[objects++]
-
-      if (object) {
-        nodes.push(
-          <li
-            key={`object-${index}`}
-            className={`reveal ${styles.object}`}
-            style={slotStyle(object)}
-            data-lift={object.lift ?? 0}
-            data-object={objects - 1}
-          >
-            <GelObject shape={object.shape} size={object.size} />
-          </li>,
-        )
-      }
-    }
-
     if (item.weight === 'feature') {
       nodes.push(
         <li key={item.article.id} className={`reveal ${styles.item}`} data-weight="feature">
-          <FeatureStory article={item.article} priority={priority && index === 0} />
+          <FeatureStory
+            article={item.article}
+            priority={priority && index === 0}
+            showCategory={showCategory}
+          />
         </li>,
       )
 
@@ -119,14 +99,18 @@ export function EditorialFeed({ items, priority = true }: Props) {
           data-width={widthOf(slot)}
           data-visual={item.article.image ? 'yes' : 'no'}
         >
-          <StandardStory article={item.article} composition={slot.composition ?? 'stacked'} />
+          <StandardStory
+            article={item.article}
+            composition={slot.composition ?? 'stacked'}
+            showCategory={showCategory}
+          />
         </li>,
       )
 
       return nodes
     }
 
-    const slot = BRIEF_SLOTS[briefs % BRIEF_SLOTS.length] ?? { col: 1, span: 4 }
+    const slot = BRIEF_SLOTS[briefs++ % BRIEF_SLOTS.length] ?? { col: 1, span: 4 }
 
     nodes.push(
       <li
@@ -137,7 +121,7 @@ export function EditorialFeed({ items, priority = true }: Props) {
         data-width={widthOf(slot)}
         data-visual="no"
       >
-        <BriefStory article={item.article} index={++briefs} />
+        <BriefStory article={item.article} index={briefs - offset} showCategory={showCategory} />
       </li>,
     )
 

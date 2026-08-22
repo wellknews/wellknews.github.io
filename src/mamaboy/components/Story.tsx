@@ -10,6 +10,13 @@ type Props = {
   article: Article
   /** 첫 화면의 첫 FEATURE에만 준다. 이 이미지 하나만 즉시 로드된다. */
   priority?: boolean
+  /**
+   * 카테고리 태그를 붙일지.
+   *
+   * 카테고리 면 안에서는 붙이지 않는다. 면의 제목이 이미 SKIN이라고 말하고
+   * 있는데 그 안의 기사마다 SKIN을 한 번 더 달면 같은 말이 두 번 나온다.
+   */
+  showCategory?: boolean
 }
 
 /**
@@ -21,13 +28,6 @@ type Props = {
  * 남는다. 지면의 리듬은 크기가 아니라 이 차이가 만든다.
  */
 
-/**
- * FEATURE.
- *
- * 그날의 지면을 여는 자리다. 제목과 이미지를 같은 선에 맞추지 않는다 — 이미지가
- * 위로 올라가고 제목이 그 아래에서 시작하면서 판면에 어긋남이 생긴다.
- * 요약문이 붙는 유일한 조판이기도 하다.
- */
 /**
  * 제목의 길이대(§20).
  *
@@ -45,7 +45,14 @@ function length(text: string): 'short' | 'medium' | 'long' {
   return 'short'
 }
 
-export function FeatureStory({ article, priority = false }: Props) {
+/**
+ * FEATURE.
+ *
+ * 그날의 지면을 여는 자리다. 제목과 이미지를 같은 선에 맞추지 않는다 — 이미지가
+ * 위로 올라가고 제목이 그 아래에서 시작하면서 판면에 어긋남이 생긴다.
+ * 요약문이 붙는 유일한 조판이기도 하다.
+ */
+export function FeatureStory({ article, priority = false, showCategory = true }: Props) {
   const heading = title(article)
   const lead = summary(article)
 
@@ -58,7 +65,7 @@ export function FeatureStory({ article, priority = false }: Props) {
 
         <div className={styles.featureText}>
           <p className={styles.tags}>
-            <CategoryTag category={article.category} />
+            {showCategory ? <CategoryTag category={article.category} /> : null}
             <ContentTypeTag type={article.contentType} />
           </p>
 
@@ -96,7 +103,11 @@ type StandardProps = Props & {
   composition?: 'stacked' | 'side'
 }
 
-export function StandardStory({ article, composition = 'stacked' }: StandardProps) {
+export function StandardStory({
+  article,
+  composition = 'stacked',
+  showCategory = true,
+}: StandardProps) {
   const heading = title(article)
 
   return (
@@ -108,7 +119,7 @@ export function StandardStory({ article, composition = 'stacked' }: StandardProp
 
         <div className={styles.standardText}>
           <p className={styles.tags}>
-            <CategoryTag category={article.category} />
+            {showCategory ? <CategoryTag category={article.category} /> : null}
             <ContentTypeTag type={article.contentType} />
           </p>
 
@@ -135,7 +146,7 @@ type BriefProps = Props & {
  * 큰 번호 하나를 놓는다 — 활자와 숫자만으로도 지면이 성립한다는 것이 이 조판의
  * 주장이다(§15, §28).
  */
-export function BriefStory({ article, index }: BriefProps) {
+export function BriefStory({ article, index, showCategory = true }: BriefProps) {
   const heading = title(article)
 
   return (
@@ -148,9 +159,11 @@ export function BriefStory({ article, index }: BriefProps) {
         )}
 
         <span className={styles.briefBody}>
-          <span className={`label ${styles.briefCategory}`}>
-            <CategoryTag category={article.category} />
-          </span>
+          {showCategory ? (
+            <span className={`label ${styles.briefCategory}`}>
+              <CategoryTag category={article.category} />
+            </span>
+          ) : null}
 
           <h2 className={styles.briefTitle} lang={heading.lang}>
             {heading.text}

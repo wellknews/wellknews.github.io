@@ -1,0 +1,85 @@
+/*
+ * 판면 뒤의 층.
+ *
+ * 문서의 높이를 만들지 않고, 아무것도 가리지 않으며, 누를 수도 없다. z는
+ * 종이(--z-paper)와 내용(--z-content) 사이다 — 카테고리 면이 불투명하므로
+ * 그 위를 지날 때는 저절로 가려진다(§12).
+ */
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  --scrolled: 0;
+}
+
+.bubble {
+  position: absolute;
+  left: var(--x);
+  top: var(--top);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  /*
+   * 스크롤한 만큼 위로. 좌우로도 아주 조금 흔들리고 아주 조금 돈다 — 그것이
+   * 없으면 흔한 패럴랙스처럼 보인다. 핵심은 언제나 위로 오르는 움직임이다.
+   */
+  transform: translate3d(
+      calc(var(--drift) * var(--scrolled) * 1px),
+      calc(var(--rise) * var(--scrolled) * -1px),
+      0
+    )
+    rotate(calc(var(--spin) * var(--scrolled) * 1deg));
+  will-change: transform;
+}
+
+/*
+ * 색을 여러 개 쓰지 않는다. 같은 주황이 빛을 다르게 반사하는 것처럼 보이게
+ * 한다(§13) — 원색을 나눠 주면 풍선이 되고, 소재를 나누면 젤이 된다.
+ */
+.bubble[data-material='gel'] {
+  background:
+    radial-gradient(circle at 32% 26%, var(--chrome-light), transparent 44%),
+    radial-gradient(circle at 68% 78%, rgb(23 21 19 / 0.1), transparent 52%),
+    color-mix(in srgb, var(--orange) 62%, transparent);
+}
+
+.bubble[data-material='glass'] {
+  background:
+    radial-gradient(circle at 30% 24%, rgb(255 255 255 / 0.8), transparent 46%),
+    color-mix(in srgb, var(--orange) 22%, transparent);
+  backdrop-filter: blur(2px);
+}
+
+.bubble[data-material='milk'] {
+  background:
+    radial-gradient(circle at 34% 28%, var(--chrome-light), transparent 50%),
+    color-mix(in srgb, var(--orange) 30%, var(--glass-white));
+}
+
+.bubble[data-material='yellow'] {
+  background:
+    radial-gradient(circle at 30% 26%, rgb(255 255 255 / 0.7), transparent 48%),
+    color-mix(in srgb, var(--yellow) 52%, transparent);
+}
+
+/*
+ * 좁은 화면에는 젤이 설 자리가 없다(§11).
+ *
+ * 면이 판면을 거의 다 쓰고 좌우에 20px만 남는다. 그 틈으로 드러나는 구간이
+ * 스크롤 전체의 5%뿐이라, 있으나 없으나 같으면서 자리만 차지한다. 컴포넌트도
+ * 같은 폭에서 스크롤 듣기를 걸지 않는다.
+ */
+@media (max-width: 899px) {
+  .layer {
+    display: none;
+  }
+}
+
+/* 장식이므로 움직임을 끈 사람에게는 그냥 가만히 있으면 된다(§22). */
+@media (prefers-reduced-motion: reduce) {
+  .bubble {
+    transform: none;
+  }
+}

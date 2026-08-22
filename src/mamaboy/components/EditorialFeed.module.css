@@ -10,8 +10,7 @@
  * 자리는 컴포넌트가 인라인 변수로 넘긴다. 열 시작점이 항목마다 다르기 때문에
  * 클래스로 미리 만들어 둘 수 없고, 만들어 두면 조판이 아니라 표가 된다.
  */
-.item,
-.object {
+.item {
   grid-column: var(--col, 1) / span var(--span, 12);
   min-width: 0;
 }
@@ -41,23 +40,12 @@
  * 같은 행의 기사들이 같은 선에서 시작하면 지면은 즉시 격자로 읽힌다.
  * 한 칸씩 내려 앉히면 격자는 유지되면서 눈은 그것을 격자로 보지 않는다.
  */
-.item[data-lift='1'],
-.object[data-lift='1'] {
+.item[data-lift='1'] {
   margin-top: clamp(8px, 1.2vw, 22px);
 }
 
-.item[data-lift='2'],
-.object[data-lift='2'] {
+.item[data-lift='2'] {
   margin-top: clamp(14px, 2.2vw, 42px);
-}
-
-/* 오브젝트는 정보가 아니라 물성이므로 자리를 크게 차지하지 않는다. */
-.object {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  min-height: clamp(72px, 8vw, 140px);
 }
 
 /* ---------- 태블릿 ---------- */
@@ -76,10 +64,6 @@
   .item[data-width='narrow'] {
     grid-column: span 3;
   }
-
-  .object {
-    grid-column: span 2;
-  }
 }
 
 /* ---------- 모바일 ----------
@@ -92,28 +76,13 @@
   }
 
   .item,
-  .item[data-weight='feature'],
-  .object {
+  .item[data-weight='feature'] {
     grid-column: 1 / -1;
   }
 
   .item[data-lift='1'],
   .item[data-lift='2'],
-  .object[data-lift='1'],
-  .object[data-lift='2'],
   .item[data-weight='feature']:not(:first-child) {
     margin-top: 0;
-  }
-
-  /* 좁은 화면에서는 오브젝트를 하나만 남긴다. 손바닥 안에서는 금방 시끄러워진다. */
-  .object[data-object='1'] {
-    display: none;
-  }
-
-  /* 남은 하나는 가운데가 아니라 한쪽으로 물러나 앉는다. */
-  .object[data-object='0'] {
-    justify-content: flex-end;
-    padding-right: 12%;
-    min-height: 0;
   }
 }
