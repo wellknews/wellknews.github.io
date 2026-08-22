@@ -93,8 +93,7 @@ export type ArticleImage = {
  * 하나로만 남긴다 — 평문 한 덩어리이거나, 그림 한 장이거나.
  */
 export type BodyBlock =
-  | { kind: 'text'; text: string }
-  | { kind: 'image'; url: string; alt?: string }
+  { kind: 'text'; text: string } | { kind: 'image'; url: string; alt?: string }
 
 export type Article = {
   /** 소스와 원문 주소로 만든 안정적인 식별자. 다시 수집해도 같은 값이 나온다. */
