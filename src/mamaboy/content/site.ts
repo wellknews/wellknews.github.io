@@ -126,8 +126,16 @@ export const mamaboy = {
     scope: '번역 제목 · 원문 제목 · 요약 · 카테고리 · 출처 · 키워드',
     empty: '걸리는 것이 없다.',
     close: '검색 닫기',
-    open: '검색 열기',
+    /** «/»를 누르면 열린다는 사실은 알려 두되, 그것 없이도 되는 자리에 둔다. */
+    open: '검색 열기 (단축키 /)',
     resultCount: (count: number) => `${count}건`,
+    /** 아직 아무것도 치지 않았을 때. 빈 상자를 보여주는 대신 최근 것을 건넨다. */
+    startersLabel: '방금 걸린 것',
+    /** 결과를 더 좁히는 줄. 무엇으로 좁힐 수 있는지를 결과에서 뽑아 보여준다. */
+    narrowLabel: '좁히기',
+    all: '전체',
+    facetCount: (label: string, count: number) => `${label} ${count}건`,
+    more: (count: number) => `아래로 ${count}건 더. 낱말을 하나 더 붙이면 좁혀진다.`,
   },
 
   /*
@@ -154,6 +162,9 @@ export const mamaboy = {
     definition:
       'MAMABOY는 기사를 쓰지 않는다. 아래 매체의 공개 피드에서 발견하고, 고르고, 옮긴다. 모든 글의 저작자는 원 매체와 그 필자다.',
     disabled: '지금은 쉬는 중',
+    /** 지금 지면에 이 매체의 글이 몇 건 걸려 있는지. 목록을 명단이 아니라 현황으로 만든다. */
+    onPage: (count: number) => `지금 ${count}건`,
+    onPageNone: '지금 걸린 글 없음',
   },
 
   /**
