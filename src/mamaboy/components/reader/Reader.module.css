@@ -164,7 +164,11 @@
 .limit {
   margin-top: clamp(20px, 2.4vw, 28px);
   padding-left: 14px;
-  border-left: 2px solid var(--surface-gel);
+  /*
+   * 읽는 화면에서는 주황을 줄인다. 이 판면에서 주황이 남는 자리는 원문으로
+   * 나가는 버튼 하나뿐이고, 주의 문구는 잉크의 가는 선으로 충분하다.
+   */
+  border-left: 2px solid var(--color-line-strong);
   color: var(--color-text-muted);
 }
 
