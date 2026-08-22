@@ -28,6 +28,14 @@
   position: absolute;
   inset: -6% -24% -6% 34%;
   z-index: -1;
+  /*
+   * 색면은 장식이다. 포인터를 받으면 안 된다.
+   *
+   * 이 층은 위아래로 6%씩 항목 밖으로 나가는데, 긴 글에서는 그 6%가 앞
+   * 구간의 링크 위까지 올라간다. 그러면 «/;/thread →»를 눌러도 이 색면이
+   * 대신 눌린다. 실제로 그렇게 배포되어 있었다.
+   */
+  pointer-events: none;
   background: radial-gradient(56% 128% at 88% 50%, var(--field-bound) 0%, transparent 72%);
   opacity: 0;
   transform: translateX(-5%);
