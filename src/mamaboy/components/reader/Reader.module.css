@@ -161,6 +161,26 @@
   line-height: 1.75;
 }
 
+/*
+ * 본문 속의 그림.
+ *
+ * 표지(.cover)는 읽는 폭보다 넓게 나가지만 이쪽은 그러지 않는다. 읽는 도중에
+ * 나오는 그림이 글줄보다 넓으면 눈이 한 번 판면 밖으로 끌려 나갔다 돌아와야
+ * 하고, 그 왕복이 문장 사이에서 일어나면 읽기가 끊긴다. 글의 폭 안에 머문다.
+ */
+.figure {
+  margin: clamp(28px, 3.4vw, 44px) 0 0;
+}
+
+.figure img {
+  border-radius: var(--radius-mask);
+}
+
+.caption {
+  margin-top: 10px;
+  color: var(--color-text-muted);
+}
+
 /* 이 지면이 어디까지 옮겼는지, 그리고 이 정보의 성격이 무엇인지. */
 .limit {
   margin-top: clamp(20px, 2.4vw, 28px);

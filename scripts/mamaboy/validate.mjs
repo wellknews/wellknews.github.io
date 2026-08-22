@@ -108,6 +108,29 @@ export function validateFeed(feed, { now = Date.now() } = {}) {
     if (article?.image && !isHttpUrl(article.image.url) && !article.image.url?.startsWith('/')) {
       problems.push(`${where}: image.url이 주소가 아니다`)
     }
+
+    /*
+     * 본문 블록.
+     *
+     * 화면은 kind로 갈라 그린다. 모르는 kind가 하나라도 섞이면 그 블록은 조용히
+     * 사라지므로, 여기서 걸러 «본문이 일부만 나오는» 판을 내보내지 않는다.
+     */
+    for (const [index, block] of (article?.bodyOriginal ?? []).entries()) {
+      const at = `${where} 본문 ${index + 1}번째 블록`
+
+      if (block?.kind === 'text') {
+        if (typeof block.text !== 'string' || !block.text.trim())
+          problems.push(`${at}: 글이 비었다`)
+      } else if (block?.kind === 'image') {
+        if (!isHttpUrl(block.url)) problems.push(`${at}: 그림 주소가 아니다`)
+      } else {
+        problems.push(`${at}: 알 수 없는 kind`)
+      }
+    }
+
+    if (article?.bodyKo && !Array.isArray(article.bodyKo)) {
+      problems.push(`${where}: bodyKo가 배열이 아니다`)
+    }
   }
 
   return { ok: problems.length === 0, problems }

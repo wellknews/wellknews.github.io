@@ -86,6 +86,16 @@ export type ArticleImage = {
   alt?: string
 }
 
+/**
+ * 본문을 이루는 한 조각(§15).
+ *
+ * 외부 HTML을 그대로 주입하지 않는다. 수집 단계에서 태그를 벗기고 이 둘 중
+ * 하나로만 남긴다 — 평문 한 덩어리이거나, 그림 한 장이거나.
+ */
+export type BodyBlock =
+  | { kind: 'text'; text: string }
+  | { kind: 'image'; url: string; alt?: string }
+
 export type Article = {
   /** 소스와 원문 주소로 만든 안정적인 식별자. 다시 수집해도 같은 값이 나온다. */
   id: string
@@ -99,10 +109,20 @@ export type Article = {
   summaryKo?: string
 
   /**
-   * 전문 게재가 허용된 글(TYPE A)의 본문. 문단 단위의 평문만 담는다.
-   * 외부 HTML을 그대로 주입하지 않기 위해 수집 단계에서 태그를 벗긴다.
+   * 전문 게재가 허용된 글(TYPE A)의 본문.
+   *
+   * 글과 그림이 원문에 있던 순서 그대로 섞여 들어온다. 요약만 옮기면 읽을
+   * 것이 남지 않고, 문단만 옮기면 원문에서 글 사이에 있던 그림이 통째로
+   * 사라진다 — 사진이 논지의 일부인 글에서는 그것이 본문의 손실이다.
    */
-  bodyOriginal?: string[]
+  bodyOriginal?: BodyBlock[]
+  /**
+   * 번역된 글 블록만, 원문에 나온 순서대로.
+   *
+   * 그림은 번역할 것이 없으므로 여기 담지 않는다. 화면은 bodyOriginal을 걸어
+   * 가면서 n번째 글 블록을 이 배열의 n번째로 갈아 끼운다. 그래야 번역이
+   * 실패하거나 일부만 되어도 그림의 자리가 흔들리지 않는다.
+   */
   bodyKo?: string[]
 
   sourceName: string

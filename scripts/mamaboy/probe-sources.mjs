@@ -16,7 +16,7 @@ import { readFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
-import { normalize } from './normalize.mjs'
+import { normalize, richness } from './normalize.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const REGISTRY = join(ROOT, 'src', 'mamaboy', 'data', 'sources.json')
@@ -68,9 +68,22 @@ async function probe(source) {
       .map((name) => `${name.replace('Original', '')}:${field(first, name)}`)
       .join(' ')
 
+    /*
+     * 이 피드가 전문을 주는가.
+     *
+     * 요약만 오는 피드에 contentPolicy: 'full'을 걸어 봐야 읽을 것이 늘지 않는다.
+     * 그래서 응답 여부와 함께 «본문이 몇 글자이고 그 안에 그림이 몇 장 들어 있는가»를
+     * 같이 잰다. 라이선스가 허용하더라도 피드가 주지 않으면 전문은 없는 것이다.
+     */
+    const rich = richness(body)
+    const fullness = rich.withBody
+      ? `전문 ${rich.withBody}/${rich.total}건 · 본문 ${rich.medianChars}자(중앙값) · 그림 ${rich.medianImages}장`
+      : `전문 없음 — 요약만 온다`
+
     return [
       `HTTP ${response.status}  ${took}ms  ${format}  ${items.length}건${redirected}`,
       `      ${fields}`,
+      `      ${fullness}`,
       `      최신: ${first.publishedAt}  ${first.titleOriginal.slice(0, 56)}`,
       `      주소: ${first.originalUrl}`,
     ].join('\n')

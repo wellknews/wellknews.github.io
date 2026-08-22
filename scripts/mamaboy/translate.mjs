@@ -50,13 +50,26 @@ function outputContract(hasBody) {
 }
 
 /**
+ * 번역할 것만 꺼낸다.
+ *
+ * 본문은 글과 그림이 섞인 블록이지만 그림에는 옮길 것이 없다. 글 블록만 순서대로
+ * 꺼내 보내고, 돌아온 것을 같은 순서로 다시 끼운다(화면의 present.body). 그래서
+ * 번역이 일부만 되어도 그림의 자리는 흔들리지 않는다.
+ */
+function textBlocks(article) {
+  return (article.bodyOriginal ?? [])
+    .filter((block) => block?.kind === 'text')
+    .map((block) => block.text)
+}
+
+/**
  * 캐시 키(§26).
  *
  * 같은 글인지 아닌지는 주소로 정하고, 그 글이 바뀌었는지는 내용의 해시로
  * 정한다. 거기에 규칙의 판을 더한다 — 셋 중 하나라도 달라지면 다시 번역한다.
  */
 function cacheKey(article, version = TRANSLATION_VERSION) {
-  const body = (article.bodyOriginal ?? []).join('\n')
+  const body = textBlocks(article).join('\n')
   const content = createHash('sha1')
     .update([article.titleOriginal, article.summaryOriginal ?? '', body].join(' '))
     .digest('hex')
@@ -166,7 +179,7 @@ export async function createTranslator(cache, options = {}) {
     }
 
     // 전문을 실을 수 있는 글만 본문까지 옮긴다. 나머지는 제목과 요약이 전부다.
-    const body = article.contentPolicy === 'full' ? (article.bodyOriginal ?? []) : []
+    const body = article.contentPolicy === 'full' ? textBlocks(article) : []
     const source = [article.titleOriginal, article.summaryOriginal ?? '', ...body].join('\n')
     const glossary = glossaryFor(source)
     const terms = glossary.length ? `\n\n반드시 살려야 하는 용어:\n${glossary.join('\n')}` : ''
