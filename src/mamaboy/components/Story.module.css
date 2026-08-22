@@ -95,6 +95,17 @@
   align-items: center;
 }
 
+/*
+ * 옆에 붙일 이미지가 없으면 두 칸으로 나누지 않는다.
+ *
+ * RSS의 이미지는 언제든 없거나 깨진다. 그때 빈 칸을 그대로 두면 글이 판면의
+ * 왼쪽 42%에 몰리고 나머지가 이유 없이 비어 «무너진 조판»으로 읽힌다.
+ * 이미지가 없는 기사는 이미지가 없는 대로 완결되어야 한다.
+ */
+.standard[data-composition='side'] .standardLink:not(:has(.standardImage)) {
+  display: block;
+}
+
 .standard[data-composition='side'] .standardImage {
   aspect-ratio: 1;
 }

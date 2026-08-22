@@ -6,10 +6,12 @@
  *
  *   scripts/mamaboy/build-feed.mjs  →  content/generated/feed.json  →  이 파일
  *
- * 아직 그 파일이 없으면 예시 데이터(seed)로 지면을 그린다. 파이프라인이 붙기
- * 전에도 디자인을 끝까지 검증할 수 있어야 하기 때문이다. 두 경우를 구분해 두는
- * 이유는 하나뿐이다 — 예시 데이터일 때 그 사실을 화면에 표시하기 위해서다.
+ * 아직 그 파일이 없으면 예시 데이터(seed)로 지면을 그린다. 다만 그것이 허용되는
+ * 것은 소스를 하나도 켜지 않은 «검증 단계»까지다. 소스를 켠 뒤에 생성물이 없다는
+ * 것은 파이프라인이 실패했다는 뜻이고, 그 자리에 지어낸 기사를 세우면 사고를
+ * 감추는 것이 된다(아래 seedAllowed).
  */
+import { enabledSources } from '../data/sources'
 import { seedFeed } from './seed'
 import type { Article, Category, Feed } from './types'
 
@@ -22,15 +24,31 @@ const generated = import.meta.glob<Feed>('./generated/feed.json', {
   import: 'default',
 })
 
+/** 아무것도 고르지 못한 지면. 화면은 이 상태를 숨기지 않고 그대로 말한다. */
+const EMPTY: Feed = { generatedAt: new Date(0).toISOString(), prototype: false, articles: [] }
+
+/**
+ * 예시 데이터를 써도 되는 때인지.
+ *
+ * 소스가 하나도 켜져 있지 않다면 아직 지면을 검증하는 단계이고, 그때의 예시
+ * 데이터는 PROTOTYPE 표시와 함께 정직하게 쓰인다. 반대로 소스를 하나라도 켠
+ * 뒤에 생성물이 없다는 것은 파이프라인이 실패했다는 뜻이다 — 그 자리에 지어낸
+ * 기사를 대신 세우면 사고를 감추는 것이 된다. 그때는 비어 있다고 말한다.
+ *
+ * 개발 중에는 언제나 예시 데이터를 쓴다. 화면을 고치는 사람이 매번 수집기를
+ * 돌려야 한다면 그것대로 잘못된 구조다.
+ */
+const seedAllowed = import.meta.env.DEV || enabledSources.length === 0
+
 function pick(): Feed {
   const candidate = Object.values(generated)[0]
 
   // 파이프라인이 한 번도 돌지 않았거나, 돌았지만 한 건도 통과하지 못한 경우.
-  if (!candidate || !Array.isArray(candidate.articles) || candidate.articles.length === 0) {
-    return seedFeed
+  if (candidate && Array.isArray(candidate.articles) && candidate.articles.length > 0) {
+    return candidate
   }
 
-  return candidate
+  return seedAllowed ? seedFeed : EMPTY
 }
 
 export const feed = pick()

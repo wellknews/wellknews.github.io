@@ -96,7 +96,8 @@
    * UI식 중간 크기를 반복하지 않는다. 작은 것은 확실히 작게, 큰 것은 확실히 크게.
    * FEATURE 제목과 메타데이터 사이의 낙차가 이 지면의 인상을 만든다.
    */
-  --text-label: clamp(0.6875rem, 0.66rem + 0.12vw, 0.75rem); /* 11 → 12px */
+  /* 접근성 하한은 12px다. 라벨이라고 그 아래로 내려가지 않는다. */
+  --text-label: clamp(0.75rem, 0.73rem + 0.1vw, 0.8125rem); /* 12 → 13px */
   --text-meta: clamp(0.75rem, 0.72rem + 0.14vw, 0.8125rem); /* 12 → 13px */
   --text-body: clamp(1rem, 0.95rem + 0.24vw, 1.125rem); /* 16 → 18px */
   --text-lead: clamp(1.125rem, 1rem + 0.6vw, 1.4375rem);

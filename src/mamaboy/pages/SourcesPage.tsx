@@ -32,7 +32,12 @@ export function SourcesPage() {
           {sources.map((source) => (
             <li key={source.id} className={styles.item} data-enabled={source.enabled}>
               <p className={styles.name}>
-                <a href={source.homepage} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="touchable"
+                  href={source.homepage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {source.name}
                 </a>
               </p>

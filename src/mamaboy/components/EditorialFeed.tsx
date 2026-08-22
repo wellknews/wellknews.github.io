@@ -117,6 +117,7 @@ export function EditorialFeed({ items, priority = true }: Props) {
           style={slotStyle(slot)}
           data-lift={slot.lift ?? 0}
           data-width={widthOf(slot)}
+          data-visual={item.article.image ? 'yes' : 'no'}
         >
           <StandardStory article={item.article} composition={slot.composition ?? 'stacked'} />
         </li>,
@@ -134,6 +135,7 @@ export function EditorialFeed({ items, priority = true }: Props) {
         style={slotStyle(slot)}
         data-lift={slot.lift ?? 0}
         data-width={widthOf(slot)}
+        data-visual="no"
       >
         <BriefStory article={item.article} index={++briefs} />
       </li>,

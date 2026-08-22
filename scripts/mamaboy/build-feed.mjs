@@ -20,12 +20,15 @@ import { classify, passes } from './classify.mjs'
 import { deduplicate } from './deduplicate.mjs'
 import { normalize } from './normalize.mjs'
 import { createTranslator } from './translate.mjs'
+import { validateFeed } from './validate.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const REGISTRY = join(ROOT, 'src', 'mamaboy', 'data', 'sources.json')
 const OUT_DIR = join(ROOT, 'src', 'mamaboy', 'content', 'generated')
 const FEED_FILE = join(OUT_DIR, 'feed.json')
 const CACHE_FILE = join(OUT_DIR, 'translations.json')
+/** 소스별 건강 기록(§18). 어떤 피드가 계속 실패하는지 여기서 드러난다. */
+const HEALTH_FILE = join(OUT_DIR, 'sources-health.json')
 
 /** 지면에 남기는 최대치와 기간. 오래된 것은 검색에도 남기지 않는다. */
 const MAX_ARTICLES = 120
@@ -83,18 +86,47 @@ async function main() {
     return
   }
 
+  const health = await readJson(HEALTH_FILE, {})
   const collected = []
+  const stats = { attempted: 0, succeeded: 0, normalized: 0, kept: 0 }
 
   for (const source of sources) {
-    const xml = await fetchFeed(source)
+    stats.attempted += 1
 
-    if (!xml) continue
+    const xml = await fetchFeed(source)
+    const record = health[source.id] ?? { failureCount: 0 }
+
+    if (!xml) {
+      /*
+       * 한 소스가 죽었다고 그날의 지면 전체가 비면 안 된다. 실패는 그 소스만
+       * 건너뛰고 기록에 남긴다 — 계속 실패하는 피드는 숫자로 드러나야 한다.
+       */
+      health[source.id] = {
+        ...record,
+        lastFailure: now.toISOString(),
+        failureCount: (record.failureCount ?? 0) + 1,
+      }
+
+      continue
+    }
+
+    stats.succeeded += 1
 
     const normalized = normalize(xml, source, now)
     const classified = normalized.map((article) => classify(article, source))
     const kept = classified.filter((article) => passes(article))
 
-    console.log(`${source.id}  ${normalized.length}건 중 ${kept.length}건 통과`)
+    stats.normalized += normalized.length
+    stats.kept += kept.length
+
+    health[source.id] = {
+      ...record,
+      lastSuccess: now.toISOString(),
+      failureCount: 0,
+      articleCount: kept.length,
+    }
+
+    console.log(`  ${source.id.padEnd(18)} ${normalized.length}건 수집 → ${kept.length}건 통과`)
     collected.push(...kept)
   }
 
@@ -106,24 +138,63 @@ async function main() {
 
   const unique = deduplicate(fresh).slice(0, MAX_ARTICLES)
 
-  console.log(`중복 제거 후 ${unique.length}건`)
-
   const cache = await readJson(CACHE_FILE, {})
   const translate = await createTranslator(cache)
   const articles = []
+  const translated = { done: 0, failed: 0, pending: 0, none: 0 }
 
   for (const article of unique) {
-    articles.push(await translate(article))
+    const result = await translate(article)
+
+    translated[result.translationStatus] = (translated[result.translationStatus] ?? 0) + 1
+    articles.push(result)
   }
 
-  await mkdir(OUT_DIR, { recursive: true })
-  await writeFile(
-    FEED_FILE,
-    `${JSON.stringify({ generatedAt: now.toISOString(), prototype: false, articles }, null, 2)}\n`,
+  const feed = { generatedAt: now.toISOString(), prototype: false, articles }
+  const { ok, problems } = validateFeed(feed, { now: now.getTime() })
+
+  /*
+   * 관측 가능성(§49).
+   *
+   * 무엇이 몇 건 들어와서 몇 건이 떨어졌는지가 로그에 남아야 한다. 화면을 보고
+   * 역추적하는 구조를 피하는 것이 이 블록의 목적이다.
+   */
+  console.log('')
+  console.log(`소스        ${stats.succeeded}/${stats.attempted} 응답`)
+  console.log(`수집        ${stats.normalized}건`)
+  console.log(`편집 필터   ${stats.normalized - stats.kept}건 제외 → ${stats.kept}건`)
+  console.log(`기간·중복   ${stats.kept - unique.length}건 제외 → ${unique.length}건`)
+  console.log(
+    `번역        완료 ${translated.done ?? 0} · 실패 ${translated.failed ?? 0} · 대기 ${translated.pending ?? 0} · 불필요 ${translated.none ?? 0}`,
   )
+  console.log(`최종        ${articles.length}건`)
+
+  await mkdir(OUT_DIR, { recursive: true })
+  await writeFile(HEALTH_FILE, `${JSON.stringify(health, null, 2)}\n`)
+
+  if (!ok) {
+    /*
+     * 마지막 정상 feed를 유지한다(§47).
+     *
+     * 새 결과가 기준에 못 미치면 덮어쓰지 않는다. 지면은 어제의 정상 데이터로
+     * 계속 서 있고, 워크플로는 실패로 끝나 사람이 이유를 보게 된다.
+     */
+    console.error('')
+    console.error(`검증 실패 — 기존 feed를 그대로 둔다 (${problems.length}건)`)
+
+    for (const problem of problems.slice(0, 20)) console.error(`  · ${problem}`)
+    if (problems.length > 20) console.error(`  · 그 밖 ${problems.length - 20}건`)
+
+    process.exitCode = 1
+
+    return
+  }
+
+  await writeFile(FEED_FILE, `${JSON.stringify(feed, null, 2)}\n`)
   await writeFile(CACHE_FILE, `${JSON.stringify(cache, null, 2)}\n`)
 
-  console.log(`feed.json  ${articles.length}건`)
+  console.log('')
+  console.log(`feed.json  ${articles.length}건 기록`)
 }
 
 await main()

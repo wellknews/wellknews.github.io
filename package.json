@@ -14,7 +14,8 @@
     "check": "npm run format:check && npm run lint && npm run typecheck",
     "assets": "node scripts/build-assets.mjs",
     "audit": "node scripts/audit.mjs",
-    "feed": "node scripts/mamaboy/build-feed.mjs"
+    "feed": "node scripts/mamaboy/build-feed.mjs",
+    "feed:probe": "node scripts/mamaboy/probe-sources.mjs"
   },
   "dependencies": {
     "@fontsource-variable/hahmlet": "^5.3.0",

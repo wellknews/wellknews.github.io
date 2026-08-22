@@ -19,7 +19,7 @@ export function SourceAttribution({ article }: { article: Article }) {
       <p className={`label ${styles.attributionLabel}`}>{mamaboy.sources.label}</p>
 
       <p className={styles.attributionName}>
-        <a href={article.sourceUrl} target="_blank" rel="noopener noreferrer">
+        <a className="touchable" href={article.sourceUrl} target="_blank" rel="noopener noreferrer">
           {article.sourceName}
         </a>
         {article.author ? <span className={styles.attributionAuthor}>{article.author}</span> : null}
