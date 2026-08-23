@@ -371,7 +371,12 @@ export const divideAndConquer: Session = {
   body: (
     <>
       <Scene>
-        <Place name="SUSHI ICHI" district="EULJIRO" date="2026.08.23" />
+        <Place
+          name="SUSHI ICHI"
+          address="서울 중구 을지로12길 28"
+          district="EULJIRO"
+          date="2026.08.23"
+        />
 
         <Passage>{arrive}</Passage>
       </Scene>
@@ -407,7 +412,11 @@ export const divideAndConquer: Session = {
       <Scene width="bleed">
         <Plate image={lounge} />
 
-        <Place name="JANGCHUNG LOUNGE R" district="JANGCHUNG-DONG" />
+        <Place
+          name="JANGCHUNG LOUNGE R"
+          address="서울 중구 장충단로4길 25"
+          district="JANGCHUNG-DONG"
+        />
       </Scene>
 
       <Scene>
@@ -580,7 +589,12 @@ export const divideAndConquer: Session = {
   compact: (
     <>
       <Scene>
-        <Place name="SUSHI ICHI" district="EULJIRO" date="2026.08.23" />
+        <Place
+          name="SUSHI ICHI"
+          address="서울 중구 을지로12길 28"
+          district="EULJIRO"
+          date="2026.08.23"
+        />
 
         <Passage>{arrive}</Passage>
       </Scene>
@@ -612,7 +626,11 @@ export const divideAndConquer: Session = {
       <Scene width="bleed">
         <Plate image={lounge} />
 
-        <Place name="JANGCHUNG LOUNGE R" district="JANGCHUNG-DONG" />
+        <Place
+          name="JANGCHUNG LOUNGE R"
+          address="서울 중구 장충단로4길 25"
+          district="JANGCHUNG-DONG"
+        />
 
         <Passage>{app}</Passage>
       </Scene>

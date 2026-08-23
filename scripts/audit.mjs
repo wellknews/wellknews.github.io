@@ -206,6 +206,10 @@ async function auditClipping(page, screen, dir) {
  * 반응의 크기를 줄이는 것은 여기서 걸리지 않는다. 좁은 화면에서 움직임을 얌전하게
  * 만드는 것은 판단이고, 아예 없애는 것은 기능을 지우는 것이다. 이 검사가 지키는
  * 선이 그 사이다.
+ *
+ * 누르는 자리와 달라지는 자리가 다를 수 있다. 코스에서 하나를 고르면 달라지는
+ * 것은 나머지이고, 한 번 더 나누면 새 선은 누른 자리 위에 생긴다. 그런 장치는
+ * `watch`에 «어디를 보아야 하는가»를 따로 적는다. 안 적으면 누르는 자리를 본다.
  */
 const DEVICES = [
   {
@@ -244,6 +248,24 @@ const DEVICES = [
     target: '[class*="Condition-module__guess"]',
     read: () => document.querySelector('[class*="Condition-module__guess"]')?.textContent,
     changed: (before, after) => before !== after,
+    click: true,
+  },
+  {
+    kind: 'session',
+    label: '코스의 한 단위',
+    target: '[class*="Course-module__name"]',
+    watch: '[class*="Course-module__course"]',
+    read: () => document.querySelector('[class*="Course-module__course"]')?.dataset.attending,
+    changed: (before, after) => before !== after && after === 'true',
+    click: true,
+  },
+  {
+    kind: 'session',
+    label: '한 번 더 나누기',
+    target: '[class*="Breakdown-module__further"]',
+    watch: '[class*="Breakdown-module__breakdown"]',
+    read: () => document.querySelectorAll('[class*="Breakdown-module__stack"] li').length,
+    changed: (before, after) => Number(after) > Number(before),
     click: true,
   },
   {
@@ -339,8 +361,11 @@ async function auditDevices(page, screen, where, dir) {
       dir,
       `${screen.name}-${where.name.replace(/\//g, '-')}-${devices.indexOf(device)}`,
     )
+    /* 달라지는 자리가 누르는 자리와 다를 수 있다. */
+    const seen = device.watch ? page.locator(device.watch).first() : target
+
     const before = await page.evaluate(device.read)
-    const beforePixels = await pixels(page, target, `${stem}-before.png`)
+    const beforePixels = await pixels(page, seen, `${stem}-before.png`)
     const box = await target.boundingBox()
 
     if (!box) continue
@@ -363,7 +388,7 @@ async function auditDevices(page, screen, where, dir) {
     await page.waitForTimeout(700)
 
     const after = await page.evaluate(device.read)
-    const afterPixels = await pixels(page, target, `${stem}-after.png`)
+    const afterPixels = await pixels(page, seen, `${stem}-after.png`)
 
     if (device.hold) await page.mouse.up()
     const moved = movedFraction(beforePixels, afterPixels)
@@ -396,7 +421,10 @@ async function auditDevices(page, screen, where, dir) {
 
     pass(
       `${screen.name} ${subject} ${input}에 반응한다` +
-        (moved === null ? '' : ` (화면의 ${(moved * 100).toFixed(1)}%가 달라진다)`),
+        /* 잰 자리의 크기 자체가 달라지면 픽셀을 맞대어 볼 수 없다. 그것도 눈에 보이는 변화다. */
+        (moved === null
+          ? ' (차지하는 자리가 달라진다)'
+          : ` (화면의 ${(moved * 100).toFixed(1)}%가 달라진다)`),
     )
   }
 

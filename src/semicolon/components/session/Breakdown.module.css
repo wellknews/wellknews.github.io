@@ -5,7 +5,13 @@
   padding-block: clamp(48px, 9vw, 112px);
 }
 
-.breakdown li {
+.stack {
+  display: grid;
+  row-gap: clamp(20px, 3.6vw, 40px);
+  justify-items: center;
+}
+
+.stack li {
   display: grid;
   row-gap: 8px;
   justify-items: center;
@@ -22,7 +28,7 @@
   color: var(--color-text-secondary);
 }
 
-.breakdown li:first-child .name {
+.stack li:first-child .name {
   color: var(--color-text);
 }
 
@@ -39,11 +45,11 @@
 
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .breakdown {
+    .stack {
       view-timeline-name: --breakdown;
     }
 
-    .breakdown li {
+    .stack li {
       animation-name: breakdown-divide;
       animation-timing-function: linear;
       animation-fill-mode: both;
@@ -64,4 +70,63 @@
     opacity: 1;
     scale: 1 1;
   }
+}
+
+/*
+ * 한 번 더 나누는 자리.
+ *
+ * 버튼처럼 그리지 않는다. 쌓인 선들의 맨 아래에 그보다 더 짧은 선 하나가
+ * 있을 뿐이고, 그것이 누를 수 있는 자리다. 여기에 «나눈다»라고 적어 두면
+ * 이 장치가 조작 설명이 되고, 그 순간 나누는 일이 기능이 된다.
+ */
+.further {
+  appearance: none;
+  border: 0;
+  padding: clamp(10px, 1.8vw, 16px);
+  background: none;
+  cursor: pointer;
+  /* 선 자체는 얇으므로 누를 면적을 여백으로 확보한다. */
+  display: grid;
+  justify-items: center;
+}
+
+.further .rule {
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    width var(--dur-base) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .further:hover .rule,
+  .further:focus-visible .rule {
+    background: var(--color-text);
+  }
+}
+
+/*
+ * 손가락에는 커서 모양이 없다. 그래서 이 선만 조금 더 진하게 둔다 —
+ * 여기가 누를 수 있는 자리라는 것을 알릴 방법이 그것뿐이다.
+ */
+@media (hover: none) {
+  .further {
+    cursor: auto;
+  }
+
+  .further .rule {
+    background: var(--color-text-muted);
+  }
+}
+
+.further:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+}
+
+/* 더 나눌 수 없는 자리. 눌러도 아무 일이 없고, 그것이 이 장치의 마지막이다. */
+.further:disabled {
+  cursor: default;
+}
+
+.further:disabled .rule {
+  background: var(--color-line);
 }
