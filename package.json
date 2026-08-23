@@ -13,6 +13,7 @@
     "format:check": "prettier --check .",
     "check": "npm run format:check && npm run lint && npm run typecheck",
     "assets": "node scripts/build-assets.mjs",
+    "photos": "node scripts/add-session-photos.mjs",
     "audit": "node scripts/audit.mjs",
     "audit:mamaboy": "node scripts/audit-mamaboy.mjs",
     "feed": "node scripts/mamaboy/build-feed.mjs",
