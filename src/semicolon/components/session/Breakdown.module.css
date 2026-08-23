@@ -1,0 +1,67 @@
+.breakdown {
+  display: grid;
+  row-gap: clamp(20px, 3.6vw, 40px);
+  justify-items: center;
+  padding-block: clamp(48px, 9vw, 112px);
+}
+
+.breakdown li {
+  display: grid;
+  row-gap: 8px;
+  justify-items: center;
+}
+
+/*
+ * 단계마다 한 단계씩 작아진다.
+ *
+ * 마지막 이름이 제일 작다. 그때가 «손으로 집어 들 수 있을 정도»다.
+ */
+.name {
+  font-size: calc(clamp(0.9375rem, 0.86rem + 0.4vw, 1.125rem) - var(--order) * 0.09rem);
+  letter-spacing: calc(0.22em - var(--order) * 0.03em);
+  color: var(--color-text-secondary);
+}
+
+.breakdown li:first-child .name {
+  color: var(--color-text);
+}
+
+/*
+ * 선이 절반씩 짧아진다. 나누는 일이 눈에 보이는 자리가 여기다.
+ * 단계마다 폭이 반이 되므로 네 단계면 처음의 8분의 1이 된다.
+ */
+.rule {
+  width: calc(clamp(180px, 46vw, 420px) / var(--half));
+  height: 1px;
+  background: var(--color-line-strong);
+  transform-origin: center;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .breakdown {
+      view-timeline-name: --breakdown;
+    }
+
+    .breakdown li {
+      animation-name: breakdown-divide;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --breakdown;
+      animation-range: entry calc(18% + var(--order) * 12%) entry calc(48% + var(--order) * 12%);
+    }
+  }
+}
+
+/* 선이 가운데에서 양쪽으로 그어지고 이름이 뒤따라 앉는다. */
+@keyframes breakdown-divide {
+  from {
+    opacity: 0;
+    scale: 0.7 1;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1 1;
+  }
+}

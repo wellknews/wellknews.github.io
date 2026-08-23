@@ -58,6 +58,7 @@ const PAGES = [
   { name: 'home', path: '/', kind: 'home' },
   { name: 'session/wellknews-1k', path: '/session/wellknews-1k', kind: 'session' },
   { name: 'session/only-myself', path: '/session/only-myself', kind: 'session' },
+  { name: 'session/divide-and-conquer', path: '/session/divide-and-conquer', kind: 'session' },
   { name: 'session-index', path: '/session', kind: 'index' },
   { name: 'thread-index', path: '/thread', kind: 'index' },
 ]

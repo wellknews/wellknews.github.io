@@ -19,6 +19,25 @@
 }
 
 /*
+ * 서두르는 구간.
+ *
+ * 여백이 한 단계씩 좁아진다. 읽는 사람은 무엇이 달라졌는지 알아차리지 못한
+ * 채로 조금씩 빨라진다 — 초읽기를 화면에 그리지 않고 지면의 호흡으로 하는
+ * 편이 이 공간에 맞는다.
+ */
+.scene[data-pace='brisk'] {
+  padding-block: clamp(30px, 5vw, 64px);
+}
+
+.scene[data-pace='fast'] {
+  padding-block: clamp(22px, 3.6vw, 44px);
+}
+
+.scene[data-pace='rushed'] {
+  padding-block: clamp(14px, 2.4vw, 28px);
+}
+
+/*
  * 판면 여백까지 쓰는 장면.
  *
  * 판면 최대 폭은 지킨다. 아주 넓은 화면에서 사진이 끝까지 늘어나면
@@ -50,6 +69,25 @@
 @media (max-width: 599px) {
   .scene {
     padding-block: clamp(28px, 8vw, 44px);
+  }
+
+  /*
+   * 서두름의 사다리를 좁은 판면에 맞춰 다시 놓는다.
+   *
+   * 넓은 판면의 값을 그대로 쓰면 첫 칸(brisk)이 이 화면의 기본 여백과 거의
+   * 같아져서, 좁아지기 시작하는 순간이 통째로 사라진다. 실제로 그랬다.
+   * 기본이 작아진 만큼 각 칸도 같이 내려가야 사다리가 사다리로 남는다.
+   */
+  .scene[data-pace='brisk'] {
+    padding-block: clamp(18px, 6vw, 30px);
+  }
+
+  .scene[data-pace='fast'] {
+    padding-block: clamp(12px, 4vw, 20px);
+  }
+
+  .scene[data-pace='rushed'] {
+    padding-block: clamp(8px, 2.6vw, 13px);
   }
 
   .scene[data-air='true'] {

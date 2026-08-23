@@ -1,0 +1,169 @@
+/*
+ * 넓은 판면 — 위로 한 번, 옆으로 한 번.
+ *
+ *              PYEONGCHANG
+ *                   │
+ *   CHEONGDAM ──────┴──────── EULJIRO
+ */
+.axis {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  column-gap: clamp(16px, 3vw, 40px);
+  row-gap: clamp(10px, 1.6vw, 18px);
+  padding-block: clamp(48px, 9vw, 112px);
+  font-size: var(--text-meta);
+  letter-spacing: 0.18em;
+  color: var(--color-text-secondary);
+}
+
+.up {
+  grid-area: 1 / 2;
+  color: var(--color-text);
+}
+
+/* 올라가는 선. */
+.rise {
+  grid-area: 2 / 2;
+  width: 1px;
+  height: clamp(28px, 5vw, 56px);
+  background: var(--color-line-strong);
+  transform-origin: bottom;
+}
+
+.familiar {
+  grid-area: 3 / 1;
+  justify-self: end;
+}
+
+/* 옆으로 가는 선. */
+.reach {
+  grid-area: 3 / 2;
+  width: clamp(56px, 14vw, 180px);
+  height: 1px;
+  background: var(--color-line-strong);
+  transform-origin: left;
+}
+
+.across {
+  grid-area: 3 / 3;
+  justify-self: start;
+  color: var(--color-text);
+}
+
+/*
+ * 두 선이 자란다.
+ *
+ * 기본은 다 자란 상태다. 스크롤 타임라인이 없거나 움직임을 줄이기로 한
+ * 화면에서도 세 지명과 두 방향은 그대로 읽힌다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .axis {
+      view-timeline-name: --axis;
+    }
+
+    .rise,
+    .reach,
+    .up,
+    .across {
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --axis;
+    }
+
+    .rise {
+      animation-name: axis-rise;
+      animation-range: entry 30% entry 60%;
+    }
+
+    .up {
+      animation-name: axis-arrive;
+      animation-range: entry 44% entry 68%;
+    }
+
+    /* 옆으로 가는 쪽이 조금 늦다. 위로 간 것을 보고 나서야 «옆»이 읽힌다. */
+    .reach {
+      animation-name: axis-reach;
+      animation-range: entry 52% entry 82%;
+    }
+
+    .across {
+      animation-name: axis-arrive;
+      animation-range: entry 66% entry 90%;
+    }
+  }
+}
+
+@keyframes axis-rise {
+  from {
+    scale: 1 0;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes axis-reach {
+  from {
+    scale: 0 1;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes axis-arrive {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * 좁은 판면 — 2차원 좌표를 억지로 접지 않는다.
+ *
+ * 위로 간 것과 옆으로 간 것을 두 줄로 나눠 적는다. 세 지명은 그대로 한 번씩
+ * 나오고, 관계만 세로로 다시 놓인다.
+ */
+@media (max-width: 599px) {
+  .axis {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-items: start;
+    justify-content: center;
+    row-gap: 8px;
+  }
+
+  .up {
+    grid-area: 1 / 1 / 2 / 4;
+    justify-self: center;
+  }
+
+  .rise {
+    grid-area: 2 / 1 / 3 / 4;
+    justify-self: center;
+    height: clamp(20px, 6vw, 32px);
+  }
+
+  .familiar {
+    grid-area: 3 / 1;
+    justify-self: end;
+  }
+
+  .reach {
+    grid-area: 3 / 2;
+    width: clamp(28px, 10vw, 56px);
+  }
+
+  .across {
+    grid-area: 3 / 3;
+  }
+}
