@@ -1,0 +1,65 @@
+.choice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: clamp(24px, 8vw, 88px);
+  padding-block: clamp(40px, 8vw, 96px);
+  font-family: var(--font-mono);
+  font-size: clamp(1.125rem, 3.4vw, 1.75rem);
+  letter-spacing: 0.16em;
+}
+
+.taken {
+  color: var(--color-text);
+}
+
+/*
+ * 지나친 쪽.
+ *
+ * 옅어지는 것을 투명도가 아니라 잉크의 농도로 한다. 투명하게 만들면 어느
+ * 지점에서 읽을 수 없는 낱말이 생기고, 그러면 연출을 위해 내용을 가린 것이
+ * 된다. 제일 옅은 자리에서도 종이 대비 6:1을 넘는 색으로 물러난다.
+ *
+ * 기본이 이미 물러난 상태다. 움직임이 없는 화면에서도 어느 쪽을 택했는지가
+ * 보여야 하기 때문이다.
+ */
+.passed {
+  color: var(--color-text-muted);
+}
+
+/* 좁은 판면에서는 위아래로 놓는다. 한 줄에 걸치면 둘 사이의 거리가 사라진다. */
+@media (max-width: 599px) {
+  .choice {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(14px, 4vw, 20px);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .choice {
+      view-timeline-name: --choice;
+    }
+
+    .passed {
+      animation-name: choice-recede;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --choice;
+      animation-range: entry 45% cover 40%;
+    }
+  }
+}
+
+/* 처음에는 두 낱말이 같은 무게다. 그때 실제로 그랬다. */
+@keyframes choice-recede {
+  from {
+    color: var(--color-text);
+  }
+
+  to {
+    color: var(--color-text-muted);
+  }
+}
