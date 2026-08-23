@@ -1,5 +1,6 @@
 import { divideAndConquer } from './sessions/divide-and-conquer'
 import { onlyMyself } from './sessions/only-myself'
+import { pleasureIsNotASin } from './sessions/pleasure-is-not-a-sin'
 import { wellknews1k } from './sessions/wellknews-1k'
 import type { Session } from './types'
 
@@ -13,7 +14,12 @@ import type { Session } from './types'
  * 새 세션을 쓰려면 sessions/_template.tsx를 복사해 파일을 만들고 여기에 추가한다.
  * 순서는 최신 순으로 직접 정렬한다 — 자동 정렬 규칙을 만들 만큼 많지 않다.
  */
-export const sessions: readonly Session[] = [divideAndConquer, onlyMyself, wellknews1k]
+export const sessions: readonly Session[] = [
+  pleasureIsNotASin,
+  divideAndConquer,
+  onlyMyself,
+  wellknews1k,
+]
 
 export function findSession(slug: string): Session | undefined {
   return sessions.find((session) => session.slug === slug)

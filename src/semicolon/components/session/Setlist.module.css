@@ -1,0 +1,92 @@
+.setlist {
+  /* 기호를 그리지 않으므로 그 자리도 비워 두지 않는다. */
+  list-style: none;
+  padding: 0;
+  display: grid;
+  row-gap: clamp(10px, 1.8vw, 18px);
+  padding-block: clamp(32px, 6vw, 72px);
+}
+
+.setlist li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(20px, 5vw, 56px);
+  align-items: baseline;
+  font-size: var(--text-meta);
+  letter-spacing: 0.18em;
+}
+
+.expected {
+  grid-column: 1;
+  justify-self: end;
+  color: var(--color-text-muted);
+}
+
+/*
+ * 실제로 온 것.
+ *
+ * 기본값이 이미 밀려난 자리다. 도착한 상태를 기본으로 두면 움직임이 없는
+ * 화면에서도 어긋남이 그대로 보인다.
+ */
+.actual {
+  grid-column: 2;
+  justify-self: start;
+  color: var(--color-text);
+  transform: translateX(calc(var(--step) * var(--slip)));
+}
+
+/*
+ * 좁은 판면에서는 두 열을 포기하고 위아래로 놓는다.
+ *
+ * 예상과 실제를 나란히 두는 것이 이 장치의 요령이지만, 390px에서 두 열로
+ * 쪼개면 «UNRELEASED» 같은 낱말이 한 열에 겨우 들어가면서 글자 사이가
+ * 무너진다. 위아래로 놓아도 짝은 그대로 읽히고, 밀려나는 것도 그대로 보인다.
+ */
+@media (max-width: 599px) {
+  .setlist {
+    row-gap: clamp(14px, 4vw, 22px);
+  }
+
+  .setlist li {
+    grid-template-columns: 1fr;
+    row-gap: 3px;
+  }
+
+  .expected,
+  .actual {
+    grid-column: 1;
+    justify-self: start;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .setlist {
+      view-timeline-name: --setlist;
+    }
+
+    .actual {
+      animation-name: setlist-slip;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --setlist;
+      animation-range: entry 40% cover 45%;
+    }
+  }
+}
+
+@property --slip {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 7px;
+}
+
+@keyframes setlist-slip {
+  from {
+    --slip: 0px;
+  }
+
+  to {
+    --slip: clamp(4px, 1.1vw, 11px);
+  }
+}
