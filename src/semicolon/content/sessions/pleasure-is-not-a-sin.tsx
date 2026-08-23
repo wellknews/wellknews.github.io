@@ -7,22 +7,52 @@ import { Move } from '../../components/session/Move'
 import { Nightfall } from '../../components/session/Nightfall'
 import { Passage } from '../../components/session/Passage'
 import { Place } from '../../components/session/Place'
+import { Plate } from '../../components/session/Plate'
 import { Quiet } from '../../components/session/Quiet'
 import { Scene } from '../../components/session/Scene'
 import { Setlist, type Beat } from '../../components/session/Setlist'
 import { Tension } from '../../components/session/Tension'
-import type { Session } from '../types'
+import type { Cover, Session } from '../types'
 
 /* ─────────────────────────────  사진  ─────────────────────────────
  *
- * 아직 없다. 나중에 들어올 자리는 세 군데다 — 공연, ??? 식당, 음식과 맥주.
- * 자리가 비어 있다고 임시 이미지를 만들어 채우지 않는다. 이 기록은 사진이
- * 한 장도 없어도 끝까지 읽히도록 썼고, 사진이 도착하면 그 문단의 근거로
- * 들어가지 장식으로 들어가지 않는다.
+ * 네 장이다. 사진 없이도 끝까지 읽히도록 쓴 글이라, 들어온 사진은 장식이
+ * 아니라 각자 한 문단의 근거로 들어간다.
  *
- * 표지를 고를 때는 공연이 이 글의 주제로 보이지 않는 컷이어야 한다. 이 기록은
- * 콘서트 후기가 아니다.
+ * 표지는 DJ 부스의 한 컷이다. 무대에서 춤추는 컷을 표지로 걸면 이 기록이
+ * 콘서트 후기로 읽히는데, 이 글이 공연에서 실제로 붙잡은 것은 그쪽이
+ * 아니라 «이거다 싶었던» 그 자리다. 그리고 왕관을 쓴 채 장비 앞에 앉아
+ * 뒤를 돌아보는 자세가, 이 기록이 그 장면에서 본 것 — 아직 이쪽 다리에
+ * 있으면서 다음 것을 이미 쥔 상태 — 과 정확히 겹친다.
  */
+
+const yenaDjSet: Cover = {
+  src: '/media/session/pleasure-is-not-a-sin/01-yena-dj-set.webp',
+  alt: '검은 무대 위, 반짝이는 왕관을 얹은 검은 방울 모자를 쓰고 DJ 장비 앞에 앉아 뒤를 돌아보는 최예나',
+  width: 1023,
+  height: 1537,
+}
+
+const yenaStage: Cover = {
+  src: '/media/session/pleasure-is-not-a-sin/02-yena-stage.webp',
+  alt: '가죽 코트를 펼치고 마이크를 든 채 어두운 무대에 선 최예나',
+  width: 1023,
+  height: 1537,
+}
+
+const nowimyoung: Cover = {
+  src: '/media/session/pleasure-is-not-a-sin/03-nowimyoung.webp',
+  alt: '푸른 조명을 등지고 마이크를 쥔 채 웃고 있는 래퍼 나우아임영',
+  width: 852,
+  height: 1600,
+}
+
+const unknownPlate: Cover = {
+  src: '/media/session/pleasure-is-not-a-sin/04-unknown-plate.webp',
+  alt: '나무 받침에 올린 검은 무쇠판 위의 고기와 계란 요리, 옆에 뚜껑 덮인 스테인리스 공기',
+  width: 1122,
+  height: 1402,
+}
 
 /* ─────────────────────────────  자리  ─────────────────────────────
  *
@@ -503,6 +533,7 @@ export const pleasureIsNotASin: Session = {
     location: '서울 장충동 · 동대문',
   },
   excerpt: '술은 마시지 않았는데 이미 취해 있었다.',
+  cover: yenaDjSet,
   display: 'stage',
 
   /*
@@ -545,12 +576,16 @@ export const pleasureIsNotASin: Session = {
         <Passage tone="loud">{container}</Passage>
       </Scene>
 
-      <Scene>
+      <Scene width="bleed">
+        <Plate image={yenaStage} />
+
         <Passage>{open}</Passage>
       </Scene>
 
       {/* 게스트가 등장하는 자리부터 여백이 한 단계씩 좁아진다. */}
-      <Scene pace="brisk">
+      <Scene width="bleed" pace="brisk">
+        <Plate image={nowimyoung} />
+
         <Passage>{guest}</Passage>
       </Scene>
 
@@ -652,8 +687,10 @@ export const pleasureIsNotASin: Session = {
         <Tension pairs={roomAndTable} />
       </Scene>
 
-      <Scene>
+      <Scene width="bleed">
         <Passage>{ordering}</Passage>
+
+        <Plate image={unknownPlate} />
       </Scene>
 
       {/* 자리를 옮긴 것이 아니다. 같은 가게에서 조명만 내려갔다. */}
@@ -746,13 +783,17 @@ export const pleasureIsNotASin: Session = {
         <Passage tone="loud">{container}</Passage>
       </Scene>
 
-      <Scene>
+      <Scene width="bleed">
+        <Plate image={yenaStage} />
+
         <Passage>{open}</Passage>
 
         <Passage>{guest}</Passage>
       </Scene>
 
-      <Scene pace="brisk">
+      <Scene width="bleed" pace="brisk">
+        <Plate image={nowimyoung} />
+
         <Passage>{duet}</Passage>
       </Scene>
 
@@ -824,6 +865,8 @@ export const pleasureIsNotASin: Session = {
         <Tension pairs={roomAndTable} />
 
         <Passage>{ordering}</Passage>
+
+        <Plate image={unknownPlate} />
       </Scene>
 
       <Nightfall at="7:50 PM">
