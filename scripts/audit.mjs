@@ -28,6 +28,10 @@
  *   7. 가려진 링크  보이는 링크를 실제로 누를 수 있는지. 투명한 장식 층이
  *                   위를 덮고 있으면 화면은 멀쩡해 보이는데 눌리지 않는다.
  *   8. 가로 넘침    어느 폭에서도 가로로 밀리지 않는지.
+ *   9. 기울어진 목록  기호를 그리지 않는 목록이 없는 기호의 자리만큼
+ *                   들여쓰여 있지 않은지. 브라우저 기본 들여쓰기 40px가
+ *                   남으면 가운데 맞춤 장치의 잉크가 통째로 20px 밀린다.
+ *                   Course와 Breakdown이 그렇게 밀린 채 배포된 적이 있다.
  *
  * 실행: npm run audit   (개발 서버가 떠 있어야 한다. 없으면 알아서 띄운다.)
  */
@@ -781,6 +785,78 @@ async function auditOverflow(page, screen, pageName) {
   else pass(`${screen.name} ${pageName} 가로 넘침 없음`)
 }
 
+/* ─────────────────────────────  9. 기울어진 목록  ───────────────────────────── */
+
+/**
+ * 그리지도 않는 기호의 자리를 비워 둔 목록이 없는지.
+ *
+ * 브라우저는 <ul>과 <ol>에 기본으로 40px의 들여쓰기를 준다. 점이나 번호를
+ * 놓을 자리다. 이 공간의 목록은 그 기호를 하나도 그리지 않는다 — 항목을
+ * grid나 contents로 놓기 때문에 애초에 그려질 수가 없다. 그런데 자리는
+ * 남는다. reset.css는 role="list"가 붙은 목록만 지우므로, role을 빠뜨린
+ * 목록 하나가 조용히 40px 밀린 채로 남는다.
+ *
+ * 밀린 목록이 «가운데 맞춤»이라고 선언한 장치 안에 있으면, 장치의 잉크
+ * 전체가 판면 중심에서 정확히 20px — 들여쓰기의 절반 — 어긋난다. Course와
+ * Breakdown이 그렇게 어긋난 채로 배포됐다.
+ *
+ * 이런 어긋남은 눈으로 잡히지 않는다. 20px은 «틀렸다»로 보이지 않고 «어딘가
+ * 어색하다»로만 보이며, 어느 요소가 원인인지는 끝까지 보이지 않는다. 그래서
+ * 픽셀이 아니라 규칙으로 본다 — 기호를 그리지 않는 목록은 들여쓰기도 없다.
+ */
+async function auditListIndent(page, screen, pageName) {
+  const leaning = await page.evaluate(() => {
+    const out = []
+
+    for (const list of document.querySelectorAll('ul, ol')) {
+      const style = getComputedStyle(list)
+      const start = Number.parseFloat(style.paddingInlineStart) || 0
+      const end = Number.parseFloat(style.paddingInlineEnd) || 0
+
+      if (start === 0 && end === 0) continue
+
+      /*
+       * 기호가 실제로 그려지는지는 목록이 아니라 항목에게 물어야 한다.
+       * <ol>의 list-style-type이 decimal이어도 항목이 list-item으로 놓이지
+       * 않으면 번호는 그려지지 않는다 — 그리고 자리만 남는다. 바로 그 상태가
+       * 배포됐었다.
+       */
+      const drawsMarker = [...list.children].some((item) => {
+        if (item.tagName !== 'LI') return false
+
+        const itemStyle = getComputedStyle(item)
+
+        return itemStyle.display.includes('list-item') && itemStyle.listStyleType !== 'none'
+      })
+
+      if (drawsMarker) continue
+
+      out.push({
+        tag: list.tagName.toLowerCase(),
+        cls: typeof list.className === 'string' ? list.className : '(없음)',
+        role: list.getAttribute('role') ?? '(없음)',
+        start,
+        end,
+      })
+    }
+
+    return out
+  })
+
+  if (leaning.length) {
+    const worst = leaning[0]
+
+    fail(
+      `${screen.name} ${pageName}에 그리지도 않는 기호의 자리를 비워 둔 목록이 ` +
+        `${leaning.length}개 있다 — 예: <${worst.tag} class="${worst.cls}" ` +
+        `role="${worst.role}">가 앞 ${worst.start}px, 뒤 ${worst.end}px. ` +
+        `가운데 맞춤 안에서는 이 차이의 절반만큼 잉크 전체가 옆으로 밀린다.`,
+    )
+  } else {
+    pass(`${screen.name} ${pageName}의 목록이 없는 기호의 자리를 비워 두지 않는다`)
+  }
+}
+
 /* ─────────────────────────────  실행  ───────────────────────────── */
 
 async function waitForServer(url, tries = 60) {
@@ -856,6 +932,7 @@ for (const screen of SCREENS) {
     await auditOverflow(page, screen, target.name)
     await auditGutter(page, screen, target.name)
     await auditReach(page, screen, target.name)
+    await auditListIndent(page, screen, target.name)
     await auditDevices(page, screen, target, dir)
     await auditReplay(page, screen, target)
 

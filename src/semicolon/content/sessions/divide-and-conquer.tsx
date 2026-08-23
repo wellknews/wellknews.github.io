@@ -429,14 +429,19 @@ export const divideAndConquer: Session = {
         <Passage>{rooms}</Passage>
       </Scene>
 
-      <Scene air>
+      <Scene>
         <Tension pairs={twoOldnesses} />
 
         <Passage tone="loud">{twoOlds}</Passage>
       </Scene>
 
-      {/* 여기서 이 기록의 구조가 처음으로 나뉜다. */}
-      <Scene width="bleed" air>
+      {/*
+       * 여기서 이 기록의 구조가 처음으로 나뉜다.
+       *
+       * air를 주지 않는다. 판면을 다 쓰는 사진과 자기 여백을 가진 부품이 이미
+       * 들어 있어서, 장면까지 크게 비우면 한 자리를 세 번 비우게 된다.
+       */}
+      <Scene width="bleed">
         <Plate image={flight} />
 
         <Course whole="ESPRESSO FLIGHT" parts={flightParts} />
@@ -493,7 +498,7 @@ export const divideAndConquer: Session = {
       </Scene>
 
       {/* 흩어져 있던 네 가지가 하나의 이름으로 모인다. */}
-      <Scene air>
+      <Scene>
         <Course whole="ONE COURSE" parts={oneCourse} direction="gather" />
 
         <Passage>{unrelated}</Passage>
@@ -519,7 +524,7 @@ export const divideAndConquer: Session = {
         </Weight>
       </Scene>
 
-      <Scene air>
+      <Scene>
         <Breakdown steps={steps} />
 
         <Passage>{howItGoes}</Passage>
@@ -552,16 +557,19 @@ export const divideAndConquer: Session = {
         <Passage>{habit}</Passage>
       </Scene>
 
-      {/* 앞의 서두름과 정확히 반대로, 여기서는 한 문장씩 크게 비운다. */}
+      {/*
+       * 앞의 서두름과 정확히 반대로 크게 비운다.
+       *
+       * 다만 세 줄을 세 장면으로 쪼개지 않는다. 한 번 나누고, 또 나누고,
+       * 그만두는 하나의 호흡이라 한 자리에 있어야 한다. 장면마다 끊으면 같은
+       * 크기의 빈 자리가 세 번 반복되고, 그때부터 여백은 침묵이 아니라
+       * 서식이 된다.
+       */}
       <Scene air>
         <Passage tone="loud">{divide}</Passage>
-      </Scene>
 
-      <Scene air>
         <Passage tone="loud">{again}</Passage>
-      </Scene>
 
-      <Scene air>
         <Passage tone="loud">{untilSmallEnough}</Passage>
       </Scene>
 
@@ -645,7 +653,7 @@ export const divideAndConquer: Session = {
         <Passage tone="loud">{twoOlds}</Passage>
       </Scene>
 
-      <Scene width="bleed" air>
+      <Scene width="bleed">
         <Plate image={flight} />
 
         <Course whole="ESPRESSO FLIGHT" parts={flightParts} />
@@ -683,7 +691,7 @@ export const divideAndConquer: Session = {
         <Passage>{fineDining}</Passage>
       </Scene>
 
-      <Scene air>
+      <Scene>
         <Course whole="ONE COURSE" parts={oneCourse} direction="gather" />
 
         <Passage>{unrelated}</Passage>
@@ -705,7 +713,7 @@ export const divideAndConquer: Session = {
         </Weight>
       </Scene>
 
-      <Scene air>
+      <Scene>
         <Breakdown steps={steps} />
 
         <Passage>{howItGoes}</Passage>

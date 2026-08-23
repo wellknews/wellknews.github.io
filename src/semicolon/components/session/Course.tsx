@@ -58,7 +58,7 @@ export function Course({ whole, parts, direction = 'split' }: Props) {
     <div className={styles.course} data-direction={direction} data-attending={active !== null}>
       <p className={`mono ${styles.whole}`}>{whole}</p>
 
-      <ol className={styles.parts} onPointerLeave={() => setNear(null)}>
+      <ol className={styles.parts} role="list" onPointerLeave={() => setNear(null)}>
         {parts.map((part, index) => (
           <li key={part} style={{ '--order': index } as CSSProperties}>
             <span className={`mono ${styles.index}`}>{String(index + 1).padStart(2, '0')}</span>

@@ -45,7 +45,7 @@ export function Breakdown({ steps }: Props) {
 
   return (
     <div className={styles.breakdown}>
-      <ol className={styles.stack}>
+      <ol className={styles.stack} role="list">
         {steps.map((step, index) => (
           <li key={step} style={{ '--order': index, '--half': 2 ** index } as CSSProperties}>
             <span className={`mono ${styles.name}`}>{step}</span>

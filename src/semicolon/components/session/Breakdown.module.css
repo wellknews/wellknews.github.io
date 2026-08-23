@@ -2,10 +2,13 @@
   display: grid;
   row-gap: clamp(20px, 3.6vw, 40px);
   justify-items: center;
-  padding-block: clamp(48px, 9vw, 112px);
+  padding-block: clamp(40px, 8vw, 96px);
 }
 
 .stack {
+  /* 목록 기호가 없으므로 기본 들여쓰기도 없다. 남으면 그만큼 중심이 밀린다. */
+  list-style: none;
+  padding: 0;
   display: grid;
   row-gap: clamp(20px, 3.6vw, 40px);
   justify-items: center;
