@@ -26,14 +26,43 @@ type Props = {
 }
 
 /**
+ * 그날 간판에 있던 글자들.
+ *
+ * 러시아어인지 몽골어인지 끝내 몰랐다. 두 문자가 원래 비슷해서 구분하지
+ * 못한 것인지도 몰랐다. 그래서 아무 기호나 쓰지 않고 실제로 그때 눈앞에
+ * 있었을 법한 글자를 쓴다 — 읽히지 않는 것이 요점이지 낯설어 보이는 것이
+ * 요점이 아니다.
+ *
+ * 고정폭 글자체(IBM Plex Mono)가 이 글자들을 전부 가지고 있어서 물음표와
+ * 폭이 정확히 같다. 폭이 흔들리면 줄이 늘었다 줄었다 하며 옆 글자를 민다.
+ */
+const FOREIGN = 'ЖЩЫЭЮЯФДЛЦЧШБГИП'
+
+/** 한 자리가 지나가는 낯선 글자의 수. */
+const PASSES = 4
+
+/**
  * 한 줄을 글자 단위로 쪼갠다.
  *
- * 물음표가 여러 번 반복되므로 글자만으로는 서로를 구분할 수 없다. 몇 번째
- * 자리인가가 곧 그 글자의 정체라, 자리를 이름에 넣어 둔다. step은 그 글자가
- * 몇 번째로 눌릴지를 정한다.
+ * 물음표만 낯선 글자로 흩어진다. 서울과 구와 로는 가만히 있는다 — 주소의
+ * 골격은 알고 있었고 거기 들어갈 값을 못 읽은 것이지, 주소라는 사실 자체를
+ * 몰랐던 것은 아니다.
+ *
+ * 자리마다 다른 글자를 뽑는다. 같은 글자가 나란히 지나가면 흩어지는 것이
+ * 아니라 무늬가 된다.
  */
 function toGlyphs(line: string) {
-  return [...line].map((glyph, index) => ({ id: `${index}:${glyph}`, glyph, step: index }))
+  return [...line].map((glyph, index) => ({
+    id: `${index}:${glyph}`,
+    glyph,
+    step: index,
+    masked: glyph === '?',
+    passes: Array.from({ length: PASSES }, (_, pass) => ({
+      id: `${index}:${pass}`,
+      pass,
+      foreign: FOREIGN[(index * 5 + pass * 3) % FOREIGN.length],
+    })),
+  }))
 }
 
 /**
@@ -61,15 +90,26 @@ export function Place({ name, address, district, date, unknown = false }: Props)
           <span className="visually-hidden">{address}</span>
 
           <span aria-hidden="true">
-            {toGlyphs(address).map(({ id, glyph, step }) =>
-              glyph === ' ' ? (
-                ' '
-              ) : (
-                <span key={id} className={styles.glyph} style={{ '--step': step } as CSSProperties}>
-                  {glyph}
+            {toGlyphs(address).map(({ id, glyph, step, masked, passes }) => {
+              if (glyph === ' ') return ' '
+              if (!masked) return <span key={id}>{glyph}</span>
+
+              return (
+                <span key={id} className={styles.slot} style={{ '--step': step } as CSSProperties}>
+                  {passes.map(({ id: passId, pass, foreign }) => (
+                    <span
+                      key={passId}
+                      className={styles.pass}
+                      style={{ '--pass': pass } as CSSProperties}
+                    >
+                      {foreign}
+                    </span>
+                  ))}
+
+                  <span className={styles.settled}>{glyph}</span>
                 </span>
-              ),
-            )}
+              )
+            })}
           </span>
         </p>
       ) : null}
