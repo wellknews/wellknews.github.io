@@ -25,7 +25,9 @@
  *                   사람은 그 장면을 영영 못 본다.
  *   6. 화면에 닿은 글  판면의 여백이 실제로 있는지. 넘치지는 않지만 글자가
  *                   화면 양쪽 끝에 붙어 버린 구간이 배포된 적이 있다.
- *   7. 가로 넘침    어느 폭에서도 가로로 밀리지 않는지.
+ *   7. 가려진 링크  보이는 링크를 실제로 누를 수 있는지. 투명한 장식 층이
+ *                   위를 덮고 있으면 화면은 멀쩡해 보이는데 눌리지 않는다.
+ *   8. 가로 넘침    어느 폭에서도 가로로 밀리지 않는지.
  *
  * 실행: npm run audit   (개발 서버가 떠 있어야 한다. 없으면 알아서 띄운다.)
  */
@@ -676,7 +678,71 @@ async function auditGutter(page, screen, pageName) {
   }
 }
 
-/* ─────────────────────────────  7. 가로 넘침  ───────────────────────────── */
+/* ─────────────────────────────  7. 가려진 링크  ───────────────────────────── */
+
+/**
+ * 링크를 실제로 누를 수 있는지.
+ *
+ * 화면에 보이고 주소도 맞는데 눌리지 않는 링크가 있다. 위에 다른 무언가가
+ * 덮고 있으면 그렇게 된다. 이 공간에는 판면 밖으로 새어 나가는 장식용 색면이
+ * 여럿 있어서, 그중 하나가 항목 밖으로 나가 앞 구간의 링크를 삼킨 채로
+ * 배포된 적이 있다 — 홈의 «/;/thread →»가 눌리지 않았다.
+ *
+ * 눈으로는 알 수 없다. 덮은 쪽이 투명하면 화면은 아무 이상이 없어 보인다.
+ * 그래서 각 링크의 한가운데에서 실제로 무엇이 잡히는지 물어본다.
+ */
+async function auditReach(page, screen, pageName) {
+  const blocked = await page.evaluate(() => {
+    const out = []
+
+    for (const link of document.querySelectorAll('a[href]')) {
+      const box = link.getBoundingClientRect()
+
+      if (box.width === 0 || box.height === 0) continue
+
+      /* 화면 안으로 들여놓고 재야 한다. 밖에 있으면 아무것도 안 잡힌다. */
+      link.scrollIntoView({ block: 'center', behavior: 'instant' })
+
+      const rect = link.getBoundingClientRect()
+      const hit = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2)
+
+      /*
+       * 아무것도 안 잡히면 그 지점이 화면 밖이라는 뜻이다. 덮인 것이 아니다.
+       * 본문으로 건너뛰는 링크처럼 포커스를 받기 전까지 화면 밖에 두는 것이 있다.
+       */
+      if (!hit) continue
+
+      /* 링크 자신이거나 그 안의 글자면 된다. */
+      if (hit === link || link.contains(hit) || hit.contains(link)) continue
+
+      const name = (el) =>
+        !el
+          ? '아무것도'
+          : el.tagName.toLowerCase() +
+            (typeof el.className === 'string' && el.className
+              ? `.${el.className.split(' ')[0]}`
+              : '')
+
+      out.push({ href: link.getAttribute('href'), by: name(hit) })
+    }
+
+    return out
+  })
+
+  if (blocked.length) {
+    const worst = blocked[0]
+
+    fail(
+      `${screen.name} ${pageName}에서 링크 ${blocked.length}개가 눌리지 않는다 — ` +
+        `예: «${worst.href}»를 ${worst.by}가 덮고 있다. ` +
+        `장식용 층에는 pointer-events: none을 준다.`,
+    )
+  } else {
+    pass(`${screen.name} ${pageName}의 링크가 전부 눌린다`)
+  }
+}
+
+/* ─────────────────────────────  8. 가로 넘침  ───────────────────────────── */
 
 async function auditOverflow(page, screen, pageName) {
   const over = await page.evaluate(
@@ -761,6 +827,7 @@ for (const screen of SCREENS) {
 
     await auditOverflow(page, screen, target.name)
     await auditGutter(page, screen, target.name)
+    await auditReach(page, screen, target.name)
     await auditDevices(page, screen, target, dir)
     await auditReplay(page, screen, target)
 
