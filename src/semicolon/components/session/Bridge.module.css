@@ -3,6 +3,7 @@
   align-items: center;
   gap: clamp(12px, 2.4vw, 22px);
   padding-block: clamp(40px, 8vw, 96px);
+  touch-action: pan-y;
 }
 
 .label {
@@ -10,6 +11,7 @@
   font-size: var(--text-meta);
   letter-spacing: 0.22em;
   color: var(--color-text-muted);
+  transition: color var(--dur-base) var(--ease-out);
 }
 
 .track {
@@ -36,6 +38,21 @@
   inset: 0 0 0 0;
   transform-origin: left center;
   background: var(--color-line-strong);
+  transition: background var(--dur-base) var(--ease-out);
+}
+
+/*
+ * 쥐고 있는 동안.
+ *
+ * 선이 제 힘을 얻는다. 놓으면 다시 느슨해진다 — 쥐고 있는 동안에만 쥔 것이고,
+ * 그래서 이 장치는 «건너갔다»를 한 번도 말하지 않는다.
+ */
+.bridge[data-held='true'] .reach {
+  background: var(--accent);
+}
+
+.bridge[data-held='true'] .label {
+  color: var(--color-text);
 }
 
 /* 아직 서 있는 자리. 이 점은 어디로도 가지 않는다. */

@@ -5,6 +5,12 @@
   padding-block: clamp(40px, 8vw, 96px);
 }
 
+/*
+ * 그때 몸에 있던 것들.
+ *
+ * 기본은 한 단계 물러나 있고, 아래의 계기를 붙잡는 동안 제 잉크로 올라온다.
+ * 물러난 자리도 종이 대비 6.8:1이라 손을 대지 않아도 다 읽힌다.
+ */
 .states {
   display: flex;
   flex-wrap: wrap;
@@ -13,12 +19,27 @@
   font-size: var(--text-meta);
   letter-spacing: 0.22em;
   color: var(--color-text-muted);
+  transition: color var(--dur-base) var(--ease-out);
 }
 
+.drift[data-held='true'] .states {
+  color: var(--color-text);
+}
+
+/*
+ * 눌러 보는 자리.
+ *
+ * 계기판처럼 테두리를 두르지 않는다. 만질 수 있다는 것은 손을 얹었을 때
+ * 위쪽이 밝아지는 것으로 알게 되고, 그 전까지는 그냥 숫자 하나다.
+ */
 .meter {
   display: grid;
   justify-items: center;
   row-gap: clamp(4px, 0.8vw, 8px);
+  /* 손가락이 닿을 자리를 확보하되 보이는 위치는 바꾸지 않는다. */
+  padding: 12px clamp(20px, 6vw, 56px);
+  margin: -12px calc(-1 * clamp(20px, 6vw, 56px));
+  touch-action: pan-y;
 }
 
 .label {

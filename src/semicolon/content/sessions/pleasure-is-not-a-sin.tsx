@@ -24,20 +24,23 @@ import type { Session } from '../types'
  * 콘서트 후기가 아니다.
  */
 
-/* ─────────────────────────────  제작자료  ─────────────────────────────
+/* ─────────────────────────────  자리  ─────────────────────────────
  *
- * 이 기록에 나오는 자리들. 화면에는 이 중 어느 것도 주소로 나가지 않는다.
+ * 하루에 세 곳을 지난다. 두 곳은 이름과 주소가 있고 한 곳은 없다.
  *
- *   장충체육관        서울 중구 동호로 241
- *   메가박스 동대문   서울 중구 장충단로 247 굿모닝시티 9층
- *   ??? 식당          미확정. 을지로44길 일대의 한 곳으로 짐작만 하고 있다.
+ *   JANGCHUNG ARENA      서울 중구 동호로 241
+ *   ???                  ―
+ *   MEGABOX DONGDAEMUN   서울 중구 장충단로 247
  *
- * 앞의 둘은 이름만 쓰고 주소는 쓰지 않는다. 이 기록은 하루의 동선이 아니라
- * 그날의 리듬에 관한 것이라, 주소를 세 개 늘어놓는 순간 여행 일정표가 된다.
+ * 층과 호수는 적지 않는다. Place는 «장소가 바뀌었다»를 알리는 자리이지
+ * 찾아가는 안내가 아니다(굿모닝시티 9층은 그래서 뺐다).
  *
- * 마지막 하나는 애초에 확정된 적이 없다. 짐작을 확정처럼 적어 두면 다음에
- * 이 파일을 여는 사람이 그것을 사실로 읽는다. 그리고 설령 확정된다 해도
- * 화면에는 나가지 않는다 — 이유는 아래 Place 옆에 적었다.
+ * 가운데 한 곳만 비어 있는 것이 이 기록의 형태다. 지금 찾아보면 나올지도
+ * 모르지만 확정된 적이 없고, 무엇보다 그날의 나는 끝까지 몰랐다. 짐작을
+ * 확정처럼 적어 두면 다음에 이 파일을 여는 사람이 그것을 사실로 읽는다.
+ *
+ * meta의 location에도 두 곳만 적는다. 가운데를 어디라고 적는 순간 본문이
+ * 끝까지 감추는 것을 머리말이 먼저 알려 주게 된다.
  */
 
 /* ─────────────────────────────  장치의 재료  ───────────────────────────── */
@@ -497,7 +500,7 @@ export const pleasureIsNotASin: Session = {
   title: '즐거움을 좇는 게 죄는 아니잖아',
   meta: {
     date: '2026-08-23',
-    location: '서울 장충동 · 을지로 · 동대문',
+    location: '서울 장충동 · 동대문',
   },
   excerpt: '술은 마시지 않았는데 이미 취해 있었다.',
   display: 'stage',
@@ -517,6 +520,13 @@ export const pleasureIsNotASin: Session = {
   body: (
     <>
       <Scene>
+        <Place
+          name="JANGCHUNG ARENA"
+          address="서울 중구 동호로 241"
+          district="JANGCHUNG"
+          date="2026.08.23"
+        />
+
         <Passage tone="loud">{best}</Passage>
       </Scene>
 
@@ -587,6 +597,13 @@ export const pleasureIsNotASin: Session = {
         <Passage tone="loud">{stopThinking}</Passage>
       </Scene>
 
+      {/*
+       * 여기에는 Move를 두지 않는다.
+       *
+       * Move는 «어디에서 어디로 갔다»이고, 이 구간에는 갈 곳이 없었다. 화살표
+       * 하나를 그려 넣는 순간 정처 없이 걸은 일이 목적지가 있는 이동이 된다.
+       * 자리가 바뀐 것은 다음 Place가 알린다.
+       */}
       <Scene>
         <Passage>{wander}</Passage>
 
@@ -657,6 +674,8 @@ export const pleasureIsNotASin: Session = {
       </Scene>
 
       <Scene>
+        <Place name="MEGABOX DONGDAEMUN" address="서울 중구 장충단로 247" district="DONGDAEMUN" />
+
         <Passage>{spider}</Passage>
       </Scene>
 
@@ -705,6 +724,13 @@ export const pleasureIsNotASin: Session = {
   compact: (
     <>
       <Scene>
+        <Place
+          name="JANGCHUNG ARENA"
+          address="서울 중구 동호로 241"
+          district="JANGCHUNG"
+          date="2026.08.23"
+        />
+
         <Passage tone="loud">{best}</Passage>
 
         <Passage>{grammar}</Passage>
@@ -815,6 +841,8 @@ export const pleasureIsNotASin: Session = {
       </Scene>
 
       <Scene>
+        <Place name="MEGABOX DONGDAEMUN" address="서울 중구 장충단로 247" district="DONGDAEMUN" />
+
         <Passage>{spider}</Passage>
       </Scene>
 

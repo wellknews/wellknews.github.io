@@ -280,6 +280,25 @@ const DEVICES = [
   },
   {
     kind: 'session',
+    label: '움직이지 않는 0.00%',
+    target: '[class*="Drift-module__meter"]',
+    watch: '[class*="Drift-module__drift"]',
+    read: () => getComputedStyle(document.querySelector('[class*="Drift-module__states"]')).color,
+    changed: (before, after) => before !== after,
+    /* 눌러 봐도 숫자는 그대로다. 달라지는 것은 그 위의 낱말이라 watch가 따로 있다. */
+    hold: true,
+  },
+  {
+    kind: 'session',
+    label: '쥐고 있는 다음 다리',
+    target: '[class*="Bridge-module__bridge"]',
+    read: () =>
+      getComputedStyle(document.querySelector('[class*="Bridge-module__reach"]')).backgroundColor,
+    changed: (before, after) => before !== after,
+    hold: true,
+  },
+  {
+    kind: 'session',
     label: '붙잡는 51%',
     target: '[class*="Threshold-module__numeral"]',
     read: () =>
