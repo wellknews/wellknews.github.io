@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+
 import styles from './Place.module.css'
 
 type Props = {
@@ -9,6 +11,29 @@ type Props = {
   district?: string
   /** '2026.08.22' — 하루짜리 기록에서는 처음 한 번이면 충분하다. */
   date?: string
+  /**
+   * 주소를 끝내 몰랐던 자리.
+   *
+   * 자리를 비우는 것과 모르는 것은 다르다. 비우면 아직 안 채운 칸으로 보이고,
+   * 모른다고 적으면 그날의 상태가 된다. 그래서 주소 줄을 지우지 않고 주소의
+   * 모양만 남긴다 — 어디가 구이고 어디가 도로명이고 어디가 번호인지는
+   * 그대로 보이는데, 그 자리에 들어갈 것을 하나도 읽지 못한 상태다.
+   *
+   * 지도로는 걸지 않는다. 링크가 하나 생기는 순간 «모르는 곳»이 «찾아갈 수
+   * 있는 곳»이 된다.
+   */
+  unknown?: boolean
+}
+
+/**
+ * 한 줄을 글자 단위로 쪼갠다.
+ *
+ * 물음표가 여러 번 반복되므로 글자만으로는 서로를 구분할 수 없다. 몇 번째
+ * 자리인가가 곧 그 글자의 정체라, 자리를 이름에 넣어 둔다. step은 그 글자가
+ * 몇 번째로 눌릴지를 정한다.
+ */
+function toGlyphs(line: string) {
+  return [...line].map((glyph, index) => ({ id: `${index}:${glyph}`, glyph, step: index }))
 }
 
 /**
@@ -23,14 +48,33 @@ type Props = {
  * 커서를 올렸을 때만 작은 화살표가 뒤에 선다. 손가락에는 그 화살표를 두지
  * 않는다 — 힌트를 줄 수 없는 자리에 힌트 자리만 비워 두면 그게 더 어수선하다.
  */
-export function Place({ name, address, district, date }: Props) {
+export function Place({ name, address, district, date, unknown = false }: Props) {
   const where = [district, date].filter(Boolean).join(' · ')
 
   return (
     <div className={styles.place}>
       <p className={styles.name}>{name}</p>
 
-      {address ? (
+      {unknown && address ? (
+        <p className={`mono ${styles.address} ${styles.unknown}`}>
+          {/* 읽어 주는 쪽에는 한 줄로 전한다. 글자를 쪼개는 것은 화면에서만 하는 일이다. */}
+          <span className="visually-hidden">{address}</span>
+
+          <span aria-hidden="true">
+            {toGlyphs(address).map(({ id, glyph, step }) =>
+              glyph === ' ' ? (
+                ' '
+              ) : (
+                <span key={id} className={styles.glyph} style={{ '--step': step } as CSSProperties}>
+                  {glyph}
+                </span>
+              ),
+            )}
+          </span>
+        </p>
+      ) : null}
+
+      {!unknown && address ? (
         <p className={`mono ${styles.address}`}>
           <a
             className={styles.link}

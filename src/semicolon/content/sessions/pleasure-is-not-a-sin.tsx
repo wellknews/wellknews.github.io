@@ -627,7 +627,7 @@ export const pleasureIsNotASin: Session = {
        * 곳»이 된다.
        */}
       <Scene>
-        <Place name="???" district="???" />
+        <Place name="???" address="서울 ??구 ???로 ??" district="???" unknown />
 
         <Passage>{stopped}</Passage>
 
@@ -801,7 +801,7 @@ export const pleasureIsNotASin: Session = {
       </Scene>
 
       <Scene>
-        <Place name="???" district="???" />
+        <Place name="???" address="서울 ??구 ???로 ??" district="???" unknown />
 
         <Passage>{stopped}</Passage>
 

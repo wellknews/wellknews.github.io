@@ -66,3 +66,88 @@
     transition: none;
   }
 }
+
+/*
+ * ─────────────  끝내 읽지 못한 주소  ─────────────
+ *
+ * 주소의 모양은 그대로 두고 값만 물음표로 남긴다. 줄을 통째로 «???»로 바꾸면
+ * 아직 안 채운 칸처럼 보이는데, 그날 일어난 일은 칸이 빈 것이 아니라 거기
+ * 적힌 것을 하나도 읽지 못한 것이었다.
+ *
+ * 이 줄만 흔들린다.
+ *
+ * 지나가는 동안 글자가 세로로 눌렸다 늘어난다. 매트리스를 손으로 눌렀을 때처럼
+ * 한 글자가 눌리면 옆 글자가 늦게 따라 눌린다. 위아래의 두 주소는 꼼짝도
+ * 하지 않는다 — 확정된 것은 가만히 있고 확정되지 않은 것만 자리를 못 잡는다는
+ * 것이 이 한 줄이 하는 말이다.
+ *
+ * 폭은 건드리지 않는다. 가로로 함께 늘리면 줄 길이가 계속 달라져서 옆의
+ * 글자가 밀리고, 그러면 흔들리는 것이 아니라 망가진 것으로 보인다.
+ */
+.unknown {
+  /* 눌렸다 늘어나도 아래 줄을 밀지 않도록 자리를 미리 잡아 둔다. */
+  line-height: 1.9;
+}
+
+.glyph {
+  display: inline-block;
+  /*
+   * 기본은 눌리지 않은 상태다. 스크롤 타임라인이 없거나 움직임을 줄이기로 한
+   * 화면에서는 그냥 반듯한 주소 모양으로 서 있는다 — 읽어야 할 것은 흔들림이
+   * 아니라 «여기를 못 읽었다»는 사실이고, 그건 물음표가 이미 말한다.
+   */
+  transform-origin: center bottom;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .unknown {
+      view-timeline-name: --unknown;
+    }
+
+    .glyph {
+      animation-name: place-sag;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+      animation-timeline: --unknown;
+      /*
+       * 글자마다 늦게 눌린다. 그 시차가 «한 덩어리가 커졌다 작아지는 것»과
+       * «물결이 한 번 지나가는 것»을 가른다.
+       *
+       * 처음에는 시차를 글자당 3%만 줬는데, 각 글자가 도는 구간이 길어서
+       * 처음 글자와 끝 글자의 차이가 0.02밖에 안 났다. 실제로 재 보니
+       * 물결이 아니라 줄 전체가 같이 부푸는 것이었다. 구간을 짧게 잡고
+       * 시차를 글자당 4%로 벌려야 앞 글자가 눌린 뒤에 뒷 글자가 눌린다.
+       */
+      animation-range: cover calc(6% + var(--step) * 4%) cover calc(40% + var(--step) * 4%);
+    }
+  }
+}
+
+/*
+ * 눌렸다가 되돌아오고, 한 번 더 얕게 눌린다.
+ *
+ * 한 번만 눌리고 끝나면 그냥 크기가 변한 것으로 보인다. 되돌아오는 과정에서
+ * 한 번 더 출렁여야 눌린 자리가 스스로 복원되는 것처럼 읽힌다.
+ */
+@keyframes place-sag {
+  0% {
+    transform: scaleY(1);
+  }
+
+  28% {
+    transform: scaleY(0.72);
+  }
+
+  52% {
+    transform: scaleY(1.16);
+  }
+
+  74% {
+    transform: scaleY(0.93);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
