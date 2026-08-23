@@ -23,6 +23,15 @@
  * 코스에서 순서는 내용의 절반이라, 번호가 흔들리면 그 절반이 흐려진다.
  */
 .parts {
+  /*
+   * 목록 기호를 쓰지 않으므로 브라우저 기본 들여쓰기도 지운다.
+   *
+   * 남겨 두면 그 40px만큼 목록이 오른쪽으로 밀려, 바로 아래위의 이름과 중심이
+   * 20px 어긋난다. 눈으로는 «어딘가 삐뚤다»로만 보이고 무엇이 틀렸는지는
+   * 보이지 않는 종류의 어긋남이다.
+   */
+  list-style: none;
+  padding: 0;
   display: grid;
   grid-template-columns: auto auto;
   column-gap: clamp(12px, 2vw, 20px);

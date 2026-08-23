@@ -13,7 +13,7 @@
   justify-items: center;
   column-gap: clamp(16px, 3vw, 40px);
   row-gap: clamp(10px, 1.6vw, 18px);
-  padding-block: clamp(48px, 9vw, 112px);
+  padding-block: clamp(40px, 8vw, 96px);
   font-size: var(--text-meta);
   letter-spacing: 0.18em;
   color: var(--color-text-secondary);
