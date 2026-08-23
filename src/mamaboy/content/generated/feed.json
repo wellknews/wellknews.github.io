@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T13:48:49.933Z",
+  "generatedAt": "2026-08-23T19:11:16.473Z",
   "prototype": false,
   "articles": [
     {
@@ -254,7 +254,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/fight-aging-newsletter-august-24th-2026",
       "author": "Reason",
       "publishedAt": "2026-08-23T11:30:25.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Newsletters"
@@ -380,16 +380,16 @@
       "originalUrl": "https://www.dezeen.com/2026/08/23/innovative-smartphones-dumbphones-design-first",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-08-23T09:00:13.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
         "Products",
         "Technology",
+        "Mobile phones",
         "Roundups",
         "Smartphones",
-        "Dumbphones",
-        "Mobile phones"
+        "Dumbphones"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/07/light-phone-flip-design_dezeen_2364_sq-411x411.jpg"
@@ -486,7 +486,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/23/ktgy-revamps-interiors-fairmont-hotel-chicago",
       "author": "Ben Dreith",
       "publishedAt": "2026-08-23T05:00:29.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -610,7 +610,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/22/tiffany-co-pop-up-jk-iguatemi-mall-sao-paulo-estudio-campana",
       "author": "Dan Howarth",
       "publishedAt": "2026-08-22T17:00:08.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -824,7 +824,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/22/basketball-courts-design-roundup",
       "author": "Ben Dreith",
       "publishedAt": "2026-08-22T09:00:30.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -971,16 +971,16 @@
       "originalUrl": "https://www.dezeen.com/2026/08/22/this-week-on-dezeen-ikea-collection-collectible-design-affordable",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-08-22T05:00:52.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Furniture",
         "all",
         "Design",
         "This week on Dezeen",
-        "Andu Masebo",
         "IKEA",
-        "Collectible design"
+        "Collectible design",
+        "Andu Masebo"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/kea-konstrunda-collection-sq-411x411.jpg"
@@ -1043,7 +1043,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/timp2-protein-therapy-favorable-adjusts-the-behavior-of-microglia-in-the-aging-brain",
       "author": "Reason",
       "publishedAt": "2026-08-21T18:39:05.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -1145,17 +1145,17 @@
       "originalUrl": "https://www.dezeen.com/2026/08/21/kraft-heinz-love-lid-ketchup-adjustable",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-08-21T17:00:02.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
         "News",
-        "Heinz",
         "Product design",
         "USA",
         "Food",
-        "Packaging"
+        "Packaging",
+        "Heinz"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/heinz-ketchup-love-lid_dezeen_2364_sq-1-411x411.jpg"
@@ -1357,7 +1357,7 @@
       "originalUrl": "https://longevity.technology/news/can-we-prime-skin-to-regenerate-better",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-21T16:49:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -1478,7 +1478,7 @@
       "originalUrl": "https://longevity.technology/news/whole-body-mri-is-leaving-the-biohacker-bubble",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-21T16:40:52.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -1580,7 +1580,7 @@
       "originalUrl": "https://toybook.com/oink-games-loop-40-eggsposed-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-08-21T14:58:03.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News",
@@ -1747,7 +1747,7 @@
       "originalUrl": "https://toybook.com/video-games-august-20",
       "author": "Katherine Hill",
       "publishedAt": "2026-08-21T14:42:07.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -1829,7 +1829,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/a-histological-aging-clock",
       "author": "Reason",
       "publishedAt": "2026-08-21T10:08:50.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1980,7 +1980,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/21/waka-waka-ribbon-collection",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-08-21T05:00:52.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -2028,6 +2028,174 @@
       ]
     },
     {
+      "id": "lifespan-io:b3f58ddae4",
+      "slug": "how-old-fat-cells-trigger-inflammation-and-raise-b3f58d",
+      "titleOriginal": "How Old Fat Cells Trigger Inflammation and Raise Risks",
+      "summaryOriginal": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality […]",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people."
+        },
+        {
+          "kind": "text",
+          "text": "Too much of a regulator leads to dysregulation"
+        },
+        {
+          "kind": "image",
+          "url": "https://lifespan.io/wp-content/uploads/2025/05/Inflammation.jpg",
+          "alt": "Inflammation"
+        },
+        {
+          "kind": "text",
+          "text": "Chronic Inflammation Chronic inflammation refers to a persistent, low-grade buzz of immune activity that settles into the body without the drama of an infection or obvious injury. In the world of aging, this slow, smoldering fire is often called inflammaging, a term coined by Claudio Franceschi to capture the systemic, hard-to-detect inflammation that creeps in with advancing years. Read More"
+        },
+        {
+          "kind": "text",
+          "text": "This paper introduces itself with a standard explanation of the relationship between senescence and inflammaging, including the contributions of the senescence-associated secretory phenotype (SASP) that senescent cells emit. The authors state the need for a clear understanding of the “molecular mediators” involved, focusing specifically on the contributions of fat (adipose) tissue, which has been identified in previous work as a crucial link [1]."
+        },
+        {
+          "kind": "text",
+          "text": "Adipose tissue is not just energy storage; it is an endocrine organ all its own that regulates metabolism [2], and the aging of this tissue pushes it towards dysregulation and inflammation [3]. This includes SASP emissions, which senescent adipose tissue creates in sufficient quantities to stimulate systemic inflammation [4]. This paper makes it clear that aging fatty tissues are a cause, rather than just a consequence, of other aspects of aging [5]."
+        },
+        {
+          "kind": "text",
+          "text": "The related molecule on which this paper focuses is ANGPTL8, a metabolic regulator that itself is upregulated when insulin is administered [6]. However, this team has previously pinpointed it as being related to multiple serious metabolic issues, such as diabetes-related kidney disease (nepropathy) [7]. Other teams have corroborated such findings, finding it to be related to diabetic atherosclerosis [8] and a higher risk of future heart attacks in existing cardiovascular disease patients [9]. Additionally, higher circulating ANGPTL8 levels have been found to be associated with all-cause mortality in diabetic patients [10]."
+        },
+        {
+          "kind": "text",
+          "text": "A significant predictor As the first part of this paper, the researchers built their own biomarker-based clock, MBA8-Clock using data from the China Cardiometabolic Disease and Cancer Cohort, which recruited nearly ten thousand people. Comparing five separate algorithms, the team found that a multilayer perceptron-based framework was the best way to utilize this clock, as it gave estimated ages with an error rate of approximately five years."
+        },
+        {
+          "kind": "text",
+          "text": "This clock contained many basic measurements of metabolic health, including ANGPTL8. The researchers found that circulating ANGPTL8 values of approximately 250 nanograms per liter of serum were associated with the lowest biological age estimations. At values higher than that, particularly in people with four times as much or more, biological age was likely to be estimated markedly higher. Removing ANGPTL8 from the clock notably diminished its predictive abilities. The researchers hold that “circulating ANGPTL8 represents a consistent, biologically meaningful contributor to age prediction across individuals.”"
+        },
+        {
+          "kind": "text",
+          "text": "The next step was to create another clock, AIMR-Model, this one based on all-cause mortality over a ten-year period. The researchers used five algorithmic analyses, and this time they discovered that an extreme gradient-based framework yielded the most accurate results. Once more, ANGPTL8 was found to be a significant contributor; people who had been found to have higher ANGPTL8 levels were significantly more likely to have died within 10 years of that initial assessment. Further analysis revealed that “ANGPTL8 may amplify age-related clinical vulnerability rather than acting solely as an isolated risk marker,” as it was consistently found to occur alongside high blood pressure and other well-known risk factors for age-related disease."
+        },
+        {
+          "kind": "text",
+          "text": "Mice without ANGPTL8 live longer The researchers then turned to mice. As in humans, ANGPTL8 naturally increases in mice with age: 4-month-old (young) wild-type mice have significantly less of it than their 22-month-old (old) counterparts. As expected, the source was found to be the adipose tissue rather than the liver or any other organs; while hepatocytes did somewhat increase their production of the protein, that was localized rather than systemic."
+        },
+        {
+          "kind": "text",
+          "text": "In addition, the researchers created a group of mice that do not express the murine gene Angptl8 . Compared to their wild-type counterparts, the old Angptl8 -less mice performed considerably better on various physical tests at older ages. They had less fat mass, less senescence in their fat, and reductions in circulating SASP factors. They were also able to hang onto a rotarod longer, performed better on a treadmill, engaged in more exploratory behavior, and had more gastrocnemius muscle mass along with more fast-twitch fibers. Finally, and perhaps most importantly, these mice also lived longer."
+        },
+        {
+          "kind": "image",
+          "url": "https://lifespan.io/wp-content/uploads/2026/08/Survival-curve-ANGPTL8.png",
+          "alt": "Survival curve ANGPTL8"
+        },
+        {
+          "kind": "text",
+          "text": "The specific pathway involved in the relationship between ANGPTL8 and senescence was identified. This protein was found to bind to AKT2 on the molecular level, affecting the fundamental AKT/mTOR/S6K pathway, and this finding was confirmed in mice; mice with Angptl8 turned off have significantly decreased activity of AKT, mTOR, and S6K. Deriving fat precursor cells (preadipocytes) from older mice confirmed these findings, and experiments using cells with Angptl8 overexpression found that AKT is indeed necessary for ANGPTL8 to contribute to cellular senescence."
+        },
+        {
+          "kind": "text",
+          "text": "These researchers are of the clear opinion that they have hit upon a significant target, stating that “from a translational standpoint, the dual identity of ANGPTL8 as both a circulating biomarker and a functional effector of aging is particularly compelling.” However, this paper did not test any potential method of removing circulating ANGPTL8 from the bloodstreams of wild-type animals. If such a drug can be developed and proven to work in a human clinical trial, it may be possible to grant additional healthspan and lifespan to older people suffering from metabolic issues."
+        },
+        {
+          "kind": "text",
+          "text": "We would like to ask you a small favor. We are a non-profit foundation , and unlike some other organizations, we have no shareholders and no products to sell you. All our news and educational content is free for everyone to read, but it does mean that we rely on the help of people like you. Every contribution, no matter if it’s big or small, supports independent ethical journalism and sustains our future. Yes I will donate❤️"
+        },
+        {
+          "kind": "text",
+          "text": "Literature [1] Hotamisligil, G. S. (2017). Inflammation, metaflammation and immunometabolic disorders. Nature , 542 (7640), 177-185."
+        },
+        {
+          "kind": "text",
+          "text": "[2] Ou, M. Y., Zhang, H., Tan, P. C., Zhou, S. B., & Li, Q. F. (2022). Adipose tissue aging: mechanisms and therapeutic implications. Cell death & disease , 13 (4), 300."
+        },
+        {
+          "kind": "text",
+          "text": "[3] Tchkonia, T., Morbeck, D. E., Von Zglinicki, T., Van Deursen, J., Lustgarten, J., Scrable, H., … & Kirkland, J. L. (2010). Fat tissue, aging, and cellular senescence. Aging cell , 9 (5), 667-684."
+        },
+        {
+          "kind": "text",
+          "text": "[4] Dahlquist, K. J., & Camell, C. D. (2022). Aging leukocytes and the inflammatory microenvironment of the adipose tissue. Diabetes , 71 (1), 23-30."
+        },
+        {
+          "kind": "text",
+          "text": "[5] Franceschi, C., Garagnani, P., Vitale, G., Capri, M., & Salvioli, S. (2017). Inflammaging and ‘Garb-aging’. Trends in Endocrinology & Metabolism , 28 (3), 199-212."
+        },
+        {
+          "kind": "text",
+          "text": "[6] Abu-Farha, M., Ghosh, A., Al-Khairi, I., Madiraju, S. M., Abubaker, J., & Prentki, M. (2020). The multi-faces of Angptl8 in health and disease: Novel functions beyond lipoprotein lipase modulation. Progress in lipid research , 80 , 101067."
+        },
+        {
+          "kind": "text",
+          "text": "[7] Pan, L., He, Y., Xiang, Y., Mao, B., Meng, X., Guo, Y., … & Yu, X. (2025). Angiopoietin-like protein 8 mediates inflammation and fibrosis of tubular cells in diabetic kidney disease progression by interacting with Akt2. Metabolism , 156418."
+        },
+        {
+          "kind": "text",
+          "text": "[8] Ye, H., Zhu, Q., Zong, Q., Luo, S., Ji, Z., Zhang, R., & Zou, H. (2026). Elevated ANGPTL8 (Angiopoietin‐Like Protein 8) Levels as a Novel Predictor of Atherosclerosis in Type 2 Diabetes: Beyond Lipid Metabolism. Journal of the American Heart Association , 15 (3), e044806."
+        },
+        {
+          "kind": "text",
+          "text": "[9] Morinaga, J., Kashiwabara, K., Torigoe, D., Okadome, Y., Aizawa, K., Uemura, K., … & Oike, Y. (2023). Plasma ANGPTL8 levels and risk for secondary cardiovascular events in Japanese patients with stable coronary artery disease receiving statin therapy. Arteriosclerosis, thrombosis, and vascular biology , 43 (8), 1549-1559."
+        },
+        {
+          "kind": "text",
+          "text": "[10] Zou, H., Xu, Y., Chen, X., Yin, P., Li, D., Li, W., … & Yu, X. (2020). Predictive values of ANGPTL8 on risk of all-cause mortality in diabetic patients: results from the REACTION Study. Cardiovascular Diabetology , 19 (1), 121."
+        }
+      ],
+      "sourceName": "Lifespan.io",
+      "sourceUrl": "https://www.lifespan.io/",
+      "originalUrl": "https://lifespan.io/how-old-fat-cells-trigger-inflammation-and-raise-risks",
+      "author": "Josh Conway",
+      "publishedAt": "2026-08-20T22:15:04.000Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
+      "language": "en",
+      "keywords": [
+        "News",
+        "Cellular Senescence",
+        "Diabetes",
+        "Metabolic Syndrome",
+        "Metabolism",
+        "mTOR",
+        "White Adipose Tissue"
+      ],
+      "image": {
+        "url": "https://lifespan.io/wp-content/uploads/2026/08/Fat-cells-262x187.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 4,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "research",
+      "titleKo": "오래된 지방 세포가 염증을 유발하고 위험을 높이는 방법",
+      "summaryKo": "코호트 연구와 마우스 모델을 활용해 연구자들은 노화된 지방 세포가 생성하는 순환 인자 ANGPTL8가 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다 [...]",
+      "bodyKo": [
+        "코호트 연구와 마우스 모델을 활용해 노화 지방 세포가 생성하는 순환 인자 ANGPTL8가 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다.",
+        "조절 요인이 너무 많으면 조절 장애가 생깁니다",
+        "만성 염증 만성 염증은 감염이나 명백한 부상이라는 드라마 없이 몸에 자리 잡는 지속적이고 저강도의 면역 활동 윙윙거림을 의미합니다. 노화의 세계에서 이 느리고 타오르는 불꽃은 흔히 인플라매징(inflammaging)이라고 불리는데, 이는 클라우디오 프란체스키가 나이가 들면서 스며드는 전신적이고 감지하기 어려운 염증을 표현하기 위해 만든 용어입니다. 더 읽기",
+        "이 논문은 노화세포과 염증 사이의 관계에 대한 표준적인 설명과 함께 노화 세포가 방출하는 노화세포 관련 분비 표현형(SASP)의 기여를 소개합니다. 저자들은 관련 \"분자 매개체\"에 대한 명확한 이해가 필요하며, 특히 이전 연구에서 중요한 연관성으로 확인된 지방(지방) 조직의 기여에 초점을 맞췄다고 말합니다 [1].",
+        "지방 조직은 단순한 에너지 저장이 아닙니다; 이 조직은 신진대사를 조절하는 독립적인 내분비 기관이며[2], 노화는 이 조직을 조절 이상과 염증으로 유도합니다 [3]. 여기에는 노화 지방 조직이 충분한 양을 생성하여 전신 염증을 유발하는 SASP 배출물이 포함됩니다 [4]. 이 논문은 노화가 노화의 다른 측면의 결과가 아니라 원인임을 분명히 합니다 [5].",
+        "이 논문이 집중하는 관련 분자는 ANGPTL8로, 인슐린 투여 시 대사 조절자로 상향 조절됩니다 [6]. 하지만 이 연구팀은 이전에 당뇨병 관련 신장 질환(네프로병증)과 같은 여러 심각한 대사 문제와 관련이 있다고 지목한 바 있습니다 [7]. 다른 연구진도 이러한 결과를 확인하며, 당뇨병성 동맥경화와 관련 있고 기존 심혈관 질환 환자에서 미래 심장마비 위험이 더 높다는 것을 발견했습니다 [9]. 또한, 더 높은 순환 ANGPTL8 수치는 당뇨병 환자의 모든 원인 사망과 연관이 있는 것으로 밝혀졌습니다 [10].",
+        "중요한 예측 변수 이 논문의 첫 부분에서 연구진은 거의 만 명을 모집한 중국 심대사질환암 코호트의 데이터를 활용해 자체 바이오마커 기반 시계인 MBA8-Clock을 만들었습니다. 다섯 가지 알고리즘을 비교한 결과, 팀은 약 5년의 오류율로 추정 연령을 제공하는 다층 퍼셉트론 기반 프레임워크가 이 시계를 활용하는 가장 좋은 방법임을 발견했습니다.",
+        "이 시계에는 ANGPTL8을 포함한 대사 건강의 기본 측정값이 많이 포함되어 있었습니다. 연구진은 약 250나노그램/리터의 혈청 ANGPTL8 유통 값이 가장 낮은 생물학적 나이 추정치와 연관되어 있음을 발견했습니다. 특히 4배 이상 높은 사람들의 경우 생물학적 나이가 현저히 더 높게 추정될 가능성이 높았습니다. 시계에서 ANGPTL8을 제거하면 예측 능력이 현저히 감소했습니다. 연구진은 \"순환 ANGPTL8이 개인 간 연령 예측에 일관되고 생물학적으로 의미 있는 기여를 한다\"고 주장합니다.",
+        "다음 단계는 10년간의 모든 원인 사망률을 기반으로 한 또 다른 시계인 AIMR 모델을 만드는 것이었습니다. 연구진은 다섯 가지 알고리즘 분석을 사용했으며, 이번에는 극단적인 구배 기반 프레임워크가 가장 정확한 결과를 내는 것을 발견했습니다. 다시 한 번, ANGPTL8가 중요한 기여자로 밝혀졌다; ANGPTL8 수치가 높은 것으로 밝혀진 사람들은 초기 평가 후 10년 이내에 사망할 확률이 유의하게 높았습니다. 추가 분석 결과, \"ANGPTL8 고립된 위험 지표로만 작용하기보다는 연령 관련 임상적 취약성을 증폭시킬 수 있다\"는 사실이 밝혀졌는데, 이는 고혈압 및 연령 관련 질환의 잘 알려진 위험 인자와 함께 일관되게 발견되었습니다.",
+        "ANGPTL8 없는 쥐는 더 오래 살기 때문입니다. 연구진은 쥐로 전환했습니다. 인간과 마찬가지로, ANGPTL8 생수도 나이가 들수록 자연스럽게 증가합니다: 4개월(어린 야생) 생쥐는 22개월(노년) 쥐보다 이 수치가 현저히 적습니다. 예상대로 원인은 간이나 다른 장기가 아닌 지방 조직으로 밝혀졌다; 간세포가 단백질 생산을 어느 정도 증가시키긴 했지만, 이는 전신이 아니라 국소적인 것이었습니다.",
+        "또한, 연구진은 쥐 유전자 Angptl8을 발현하지 않는 쥐 그룹을 만들었습니다. 야생형 마우스와 비교했을 때, Angptl8이 없는 기존 쥐들은 나이가 들었을 때 다양한 신체 테스트에서 훨씬 더 좋은 성과를 보였습니다. 그들은 지방 덩어리가 적고, 지방 내 노화세포가 적으며, 순환하는 SASP 인자가 감소했습니다. 또한 회전 운동을 더 오래 유지할 수 있었고, 러닝머신에서 더 좋은 성과를 내며, 더 많은 탐색 행동을 보였고, 복근 근육량과 빠른 근육 섬유도 더 많았습니다. 마지막으로, 아마도 가장 중요한 점은, 이 쥐들이 더 오래 살았다는 것입니다.",
+        "ANGPTL8와 노화세포 사이의 관계에 관련된 구체적인 경로가 확인되었다. 이 단백질은 분자 수준에서 AKT2에 결합하여 기본적인 AKT/mTOR/S6K 경로에 영향을 미치는 것으로 밝혀졌고, 이 발견은 쥐에서도 확인되었습니다; Angptl8을 꺼둔 쥐는 AKT, mTOR, S6K 활성이 유저히 감소했습니다. 노년 마우스에서 지방 전구세포(전지방세포)를 얻어 이러한 결과가 확인되었고, Angptl8 과발현 세포를 이용한 실험에서는 AKT가 세포 노화세포에 기여하는 데 ANGPTL8 필수적임을 확인했습니다.",
+        "이 연구자들은 \"번역 관점에서 ANGPTL8가 순환하는 바이오마커이자 노화의 기능적 효과자로서 이중 정체성을 갖는 점이 특히 설득력 있다\"고 명확히 말합니다. 그러나 이 논문은 야생형 동물의 혈류에서 순환 ANGPTL8을 제거하는 잠재적 방법을 시험하지 않았습니다. 만약 이러한 약물이 개발되어 인간 임상시험에서 효과가 입증된다면, 대사 문제를 겪는 노인들에게 추가적인 건강수명과 수명을 부여할 수 있을 것입니다.",
+        "작은 부탁 하나 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻이기도 합니다. 크든 작든 모든 기여는 독립적이고 윤리적인 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 기부❤️하겠습니다",
+        "문헌 [1] 호타미슬리길, G. S. (2017). 염증, 대화화염 및 면역대사 장애. Nature, 542 (7640), 177-185.",
+        "[2] 오, M. Y., 장, H., 탄, P. C., 저우, S. B., 그리고 리, Q. F. (2022). 지방 조직 노화: 기전 및 치료적 함의. Cell death and disease, 13 (4), 300.",
+        "[3] 치코니아, T., 모르벡, D. E., 폰 즈글리니츠키, T., 반 듀르센, J., 러스트가르텐, J., 스크레이블, H., ... & 커클랜드, J. L. (2010). 지방 조직, 노화, 세포 노화세포. 노화 세포, 9 (5), 667-684.",
+        "[4] 달퀴스트, K. J., & 카멜, C. D. (2022). 노화 백혈구와 지방 조직의 염증성 미세환경. 당뇨병, 71 (1), 23-30.",
+        "[5] 프란체스키, C., 가라냐니, P., 비탈레, G., 카프리, M., 살비올리, S. (2017). 염증과 '쓰레기 노화'. 내분비학 및 대사 동향, 28 (3), 199-212.",
+        "[6] 아부-파르하, M., 고쉬, A., 알-카이리, I., 마디라주, S. M., 아부바커, J., 그리고 프렌트키, M. (2020). 건강과 질병에서 Angptl8의 다면성: 지단백질 리파아제 조절을 넘어선 새로운 기능. 지질 연구 진척, 80, 101067.",
+        "[7] 판, L., 허, Y., 샹, Y., 마오, B., 멍, X., 궈, Y., ... & Yu, X. (2025). 혈관생성계 유사 단백질 8은 Akt2와 상호작용하여 당뇨병 신장 질환 진행에서 세뇨관 세포의 염증과 섬유화를 매개합니다. 신진대사, 156418.",
+        "[8] 예, H., 주, Q., 종, Q., 루오, S., 지, Z., 장, R., & 조우, H. (2026). 제2형 당뇨병에서 동맥경화증의 새로운 예측 인자로서 ANGPTL8(피지오포이에틴 유사 단백질 8) 수치 상승: 지질 대사를 넘어서. 미국 심장 협회 저널, 15권 (3호), e044806.",
+        "[9] 모리나가, J., 카시와바라, K., 토리고에, D., 오카도메, Y., 아이자와, K., 우에무라, K., ... & 오이케, Y. (2023). 안정 관상동맥질환 환자 중 스타틴 치료를 받는 일본 환자에서 혈장 수치와 2차 심혈관 사건 위험이 ANGPTL8. 동맥경화, 혈전증, 그리고 혈관생물학, 43권 (8호), 1549-1559.",
+        "[10] 조우, H., 쉬, Y., 첸, X., 인, P., 리, D., 리, W., ... & 유, X. (2020). 당뇨병 환자의 전원인 사망 위험에 대한 ANGPTL8 예측 가치: REACTION 연구 결과. 심혈관 당뇨병학, 19 (1), 121."
+      ]
+    },
+    {
       "id": "fight-aging:5de589d0a5",
       "slug": "rankl-inhibition-slows-aging-in-progeroid-mice-5de589",
       "titleOriginal": "RANKL Inhibition Slows Aging in Progeroid Mice",
@@ -2063,7 +2231,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/rankl-inhibition-slows-aging-in-progeroid-mice",
       "author": "Reason",
       "publishedAt": "2026-08-20T18:07:09.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -2178,7 +2346,7 @@
       "originalUrl": "https://longevity.technology/news/the-longevity-trap",
       "author": "Guest Contributor",
       "publishedAt": "2026-08-20T16:53:41.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -2322,7 +2490,7 @@
       "originalUrl": "https://longevity.technology/news/enveda-makes-exercise-pill-that-skips-the-treadmill",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-20T16:49:12.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -2437,7 +2605,7 @@
       "originalUrl": "https://toybook.com/brand-licensing-europe-2026-bluey-minecraft-sessions-news",
       "author": "Natalie Miller",
       "publishedAt": "2026-08-20T16:43:21.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Brand Licensing Europe",
@@ -2734,7 +2902,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/20/chapati-vending-machine-among-projects-from-the-university-of-nottingham-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-08-20T15:00:04.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2865,7 +3033,7 @@
       "originalUrl": "https://toybook.com/fizz-creations-hasbro-news",
       "author": "Taylor Battle",
       "publishedAt": "2026-08-20T14:41:22.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -2985,15 +3153,15 @@
       "originalUrl": "https://www.dezeen.com/2026/08/20/mit-engineers-bacteria-transitors",
       "author": "Ben Dreith",
       "publishedAt": "2026-08-20T14:00:37.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
         "Technology",
+        "Biofabrication",
         "Bacteria",
         "MIT",
-        "Technology and Design",
-        "Biofabrication"
+        "Technology and Design"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/mit-bacterial-transitors-sq-411x411.jpg"
@@ -3108,7 +3276,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/grace-baldwin-giant-junk-drawer-sculpture",
       "author": "Kate Mothes",
       "publishedAt": "2026-08-20T13:49:28.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -3176,7 +3344,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/biograph-launches-comprehensive-womens-health-program-for-preventive-care",
       "publishedAt": "2026-08-20T11:56:41.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -3242,7 +3410,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/longevity-brand-wonderfeel-named-fastest-growing-biotech-in-america",
       "publishedAt": "2026-08-20T11:51:41.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -3301,7 +3469,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/enzymedica-launches-phytosome-formulas-for-sleep-joint-support",
       "publishedAt": "2026-08-20T11:36:41.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -3351,7 +3519,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/age-related-changes-in-metabolism-that-contribute-to-inflammatory-microglia-in-the-brain",
       "author": "Reason",
       "publishedAt": "2026-08-20T10:22:12.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3404,7 +3572,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/a-review-of-the-present-state-of-data-for-metformin-as-a-geroprotective-drug",
       "author": "Reason",
       "publishedAt": "2026-08-20T10:11:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3557,7 +3725,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/20/aim-architecture-zara-flagship-shanghai",
       "author": "Christina Yao",
       "publishedAt": "2026-08-20T08:00:36.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3669,7 +3837,7 @@
       "originalUrl": "https://toybook.com/oink-games-souvenirs-from-tokyo-board-game-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-08-19T20:08:41.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Driven to Play",
@@ -3760,7 +3928,7 @@
       "originalUrl": "https://toybook.com/zigazoo-ashley-mady-news",
       "author": "Taylor Battle",
       "publishedAt": "2026-08-19T17:16:10.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -3892,7 +4060,7 @@
       "originalUrl": "https://longevity.technology/news/the-barriers-arent-clinical-theyre-structural",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-19T16:55:07.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Clinics",
@@ -4018,7 +4186,7 @@
       "originalUrl": "https://longevity.technology/news/utah-is-building-americas-longevity-capital",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-19T16:06:48.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -4157,7 +4325,7 @@
       "originalUrl": "https://longevity.technology/news/wave-life-sciences-targets-fat-loss-without-sacrificing-muscle",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-19T16:05:41.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -4251,7 +4419,7 @@
       "originalUrl": "https://toybook.com/skidos-mother-goose-club-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-08-19T15:41:03.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -4388,7 +4556,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/19/schaum-architects-restoration-donald-judd-artillery-sheds-texas",
       "author": "Ben Dreith",
       "publishedAt": "2026-08-19T15:00:58.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4491,7 +4659,7 @@
       "originalUrl": "https://toybook.com/goliath-expands-north-american-marketing-team",
       "author": "Katherine Hill",
       "publishedAt": "2026-08-19T13:00:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News",
@@ -4555,7 +4723,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/greater-vascular-health-in-mid-life-reduces-later-risk-of-dementia",
       "author": "Reason",
       "publishedAt": "2026-08-19T10:22:17.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -4608,7 +4776,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/xprize-healthspan-finalist-teams-announced",
       "author": "Reason",
       "publishedAt": "2026-08-19T10:11:51.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -4750,7 +4918,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/creatives-are-deeply-divided-over-the-new-instagram-logo-and-i-think-that-points-to-a-broader-issue",
       "author": "Tom May",
       "publishedAt": "2026-08-19T10:00:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -4801,7 +4969,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/haut-ai-grupo-boticario-expand-partnership-to-nearly-4k-stores",
       "publishedAt": "2026-08-19T09:46:41.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -4928,7 +5096,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/19/ikea-konstrunda-collection-collectible-design-art",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-08-19T08:00:54.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5108,7 +5276,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/when-bike-brand-brompton-needed-a-refresh-studio-blackburn-didnt-mess-aroundthey-headed-straight-to-the-factory-floor-",
       "author": "Tom May",
       "publishedAt": "2026-08-19T06:00:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -5228,7 +5396,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/19/lina-bo-bardi-exhibition-open-architecture-shanghai",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-08-19T05:00:43.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5373,7 +5541,7 @@
       "originalUrl": "https://toybook.com/spin-master-primal-hatch-megalodon-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-08-18T19:18:56.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Building & Exploring",
@@ -5508,7 +5676,7 @@
       "originalUrl": "https://toybook.com/spin-master-harry-potter-minecraft-collections-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-08-18T15:58:44.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -5623,7 +5791,7 @@
       "originalUrl": "https://longevity.technology/news/alzecures-12m-payday-fuels-new-brain-aging-therapy",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-18T15:10:45.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -5794,7 +5962,7 @@
       "originalUrl": "https://longevity.technology/news/can-ai-put-the-cell-back-together",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-18T13:00:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "AI/Digital",
@@ -5920,7 +6088,7 @@
       "originalUrl": "https://longevity.technology/news/longeveron-advances-in-101m-longevity-prize",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-18T12:45:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -6088,13 +6256,13 @@
       "originalUrl": "https://www.dezeen.com/2026/08/18/barbican-made-homeware",
       "author": "Lizzie Crook",
       "publishedAt": "2026-08-18T10:00:46.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Furniture",
         "all",
-        "Design",
         "Homeware",
+        "Design",
         "Made.com",
         "Barbican",
         "Textiles",
@@ -6201,7 +6369,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/18/europe-heatwave-simulator-blue-hood-games",
       "author": "Amy Peacock",
       "publishedAt": "2026-08-18T09:06:24.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6483,7 +6651,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/18/jia-curated-pavilions",
       "author": "Christina Yao",
       "publishedAt": "2026-08-18T08:00:10.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6689,7 +6857,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/18/the-devils-milk-furniture-rubber-shahar-livne",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-08-18T05:00:26.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -6861,7 +7029,7 @@
       "originalUrl": "https://longevity.technology/news/biological-age-clocks-face-a-regulatory-reckoning",
       "author": "Guest Contributor",
       "publishedAt": "2026-08-17T15:19:47.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -6992,7 +7160,7 @@
       "originalUrl": "https://longevity.technology/news/what-the-bodys-early-warning-system-is-really-telling-us",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-17T13:23:10.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -7110,7 +7278,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/17/new-colour-palette-by-raffaella-mangiarotti-lapalma-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-08-17T13:00:19.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -7255,7 +7423,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/17/kuba-wozniczka-studzienno-27",
       "author": "Jon Astbury",
       "publishedAt": "2026-08-17T10:30:08.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -7386,7 +7554,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/17/ferrari-luce-ev-auction-record",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-08-17T10:00:58.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "all",
@@ -7459,7 +7627,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/venus-healthcare-homes-joins-global-coalition-on-aging-for-sef26",
       "publishedAt": "2026-08-17T06:36:10.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -7512,7 +7680,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/insilico-introduces-biological-age-to-virtual-cell-research",
       "publishedAt": "2026-08-17T06:31:10.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -7569,7 +7737,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/viome-acquires-circulate-health-to-add-plasma-exchange-clinics",
       "publishedAt": "2026-08-17T05:31:09.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -7596,7 +7764,7 @@
       "id": "lifespan-io:565f48cd7b",
       "slug": "a-million-person-study-finds-a-protective-metabolic-565f48",
       "titleOriginal": "A Million-Person Study Finds a Protective Metabolic Gene",
-      "summaryOriginal": "A massive human genetics study identified rare folliculin-interacting protein 1 (FNIP1) mutations associated with favorable metabolism and much lower cardiometabolic disease risk. Experiments in […]",
+      "summaryOriginal": "A massive human genetics study identified rare folliculin-interacting protein 1 (FNIP1) mutations associated with favorable metabolism and much lower cardiometabolic disease risk. Experiments in human liver cells and mice suggest a therapeutic route [1]. Longevity […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7676,7 +7844,7 @@
       "originalUrl": "https://lifespan.io/a-million-person-study-finds-a-protective-metabolic-gene",
       "author": "Arkadi Mazin",
       "publishedAt": "2026-08-14T17:55:55.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News",
@@ -7690,9 +7858,9 @@
       },
       "translationStatus": "failed",
       "contentPolicy": "full",
-      "category": "body",
+      "category": "age",
       "trustLevel": 4,
-      "careScore": 0.7,
+      "careScore": 0.95,
       "curiosityScore": 0,
       "contentType": "research"
     },
@@ -7784,7 +7952,7 @@
       "originalUrl": "https://longevity.technology/news/telehealth-longevity-platform-among-xprize-healthspans-top-10",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-14T13:13:22.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Investment",
@@ -7887,7 +8055,7 @@
       "originalUrl": "https://www.creativeboom.com/news/instagram-reveals-its-first-brand-refresh-in-10-years-with-a-new-wordmark-and-three-typefaces",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-14T05:50:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News"
@@ -7907,7 +8075,7 @@
       "id": "lifespan-io:89416b4a91",
       "slug": "a-drug-combination-fights-both-senescence-and-cancer-89416b",
       "titleOriginal": "A Drug Combination Fights Both Senescence and Cancer",
-      "summaryOriginal": "In Aging, the Conboys and their team have described how a combination treatment kills both senescent and cancer cells and lengthens the […]",
+      "summaryOriginal": "In Aging, the Conboys and their team have described how a combination treatment kills both senescent and cancer cells and lengthens the lives of old mice. Of senescence and cancer Just as it does […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8037,7 +8205,7 @@
       "originalUrl": "https://lifespan.io/a-drug-combination-fights-both-senescence-and-cancer",
       "author": "Josh Conway",
       "publishedAt": "2026-08-13T20:53:53.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News",
@@ -8062,7 +8230,7 @@
       "id": "lifespan-io:1b01578c41",
       "slug": "forever-healthy-launches-the-evipedia-browser-extension-1b0157",
       "titleOriginal": "Forever Healthy Launches the Evipedia Browser Extension",
-      "summaryOriginal": "Staying informed about health and longevity interventions can be tedious and time-consuming. Often it involves manually decoding a supplement label with numerous compounds, reading a blog post about some therapy, or an […]",
+      "summaryOriginal": "Staying informed about health and longevity interventions can be tedious and time-consuming. Often it involves manually decoding a supplement label […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8106,7 +8274,7 @@
       "originalUrl": "https://lifespan.io/forever-healthy-launches-the-evipedia-browser-extension",
       "author": "Press release",
       "publishedAt": "2026-08-13T14:17:44.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -8251,7 +8419,7 @@
       "originalUrl": "https://lifespan.io/the-thymus-hormone-thymulin-reduces-inflammaging-in-mice",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-08-12T16:41:06.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News",
@@ -8405,7 +8573,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/death-metal-band-party-cannon-always-get-discussed-at-design-conferences-but-meeting-them-was-a-whole-thing-entirely",
       "author": "Tom May",
       "publishedAt": "2026-08-12T04:00:00.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -8425,7 +8593,7 @@
       "id": "lifespan-io:d3181c0b51",
       "slug": "why-affecting-aging-in-complex-organisms-is-so-d3181c",
       "titleOriginal": "Why Affecting Aging in Complex Organisms Is So Hard",
-      "summaryOriginal": "A new study proposes a theoretical framework that explains why the more complex an animal is, the harder it is to move the needle on its rate of aging […]",
+      "summaryOriginal": "A new study proposes a theoretical framework that explains why the more complex an animal is, the harder it is to move the needle on its rate of aging [1]. A […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8531,7 +8699,7 @@
       "originalUrl": "https://lifespan.io/why-affecting-aging-in-complex-organisms-is-so-hard",
       "author": "Arkadi Mazin",
       "publishedAt": "2026-08-11T16:17:07.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News",
@@ -8543,19 +8711,45 @@
       "image": {
         "url": "https://lifespan.io/wp-content/uploads/2026/08/Organism-complexity-262x187.png"
       },
-      "translationStatus": "failed",
+      "translationStatus": "done",
       "contentPolicy": "full",
       "category": "age",
       "trustLevel": 4,
       "careScore": 0.7,
       "curiosityScore": 0,
-      "contentType": "research"
+      "contentType": "research",
+      "titleKo": "복잡한 생물체에서 노화에 영향을 미치는 것이 왜 이렇게 어려운 이유",
+      "summaryKo": "새로운 연구는 동물이 복잡할수록 노화 속도를 조절하기 더 어려워지는 이유를 설명하는 이론적 틀을 제안한다 [1]. A […]",
+      "bodyKo": [
+        "새로운 연구는 동물이 복잡할수록 노화 속도를 조절하기 더 어려워지는 이유를 설명하는 이론적 틀을 제안한다 [1].",
+        "매우 복잡한 문제 노인과학에서 익숙한 수수께끼는 많은 롱제비티 관련 경로가 진화적으로 매우 보존되어 있지만, 이를 조작하면 벌레와 같은 단순 생물에서는 엄청난 수명 연장이 일어나지만, 포유류에서는 훨씬 작은 수명 증가가 가능하다는 점입니다. 예를 들어, daf-2 돌연변이는 선충 C. elegans의 수명을 대략 두 배로 늘릴 수 있지만[2], 특히 성공적인 롱제비티 약물로 여겨지는 라파마이신조차도 쥐에서는 훨씬 더 미미한 효과를 보인다 [2]. 쥐와 인간 사이에 추가적인 격차가 있는 것 같습니다.",
+        "이 겉보기에는 '수확체감 법칙'은 수십 년간 노인과학자들을 좌절시켰다. 루마니아와 독일 연구진이 이끄는 유럽 팀의 새로운 연구가 『Mechanisms of Aging and Development』에 발표되었으며, 이 현상을 설명할 수 있는 틀을 제안합니다.",
+        "저자들은 먼저 유기체 복잡성과 롱제비티 개입으로 인한 수명 연장 크기 사이에 광범위한 역상관계가 있다고 주장합니다. 벌레에서는 중요한 한 마디를 바꾸는 것만으로도 생리적 구조의 상당 부분이 재조직될 수 있습니다. 초파리에서는 동일한 경로가 여전히 중요하지만, 효과는 보통 더 작고 조건부에 따라 다릅니다.",
+        "포유류의 수명은 더더욱 연장하기 어렵습니다. 예를 들어, 쥐의 라파마이신은 수명을 약 10-25% 연장시키지만, 칼로리 제한은 상당하지만 변동성이 있는 효과를 냅니다. 다른 화합물들은 최대 수명을 비교적 크게 늘리지 않고도 건강이나 특정 노화 표현형('건강수명')을 개선하는 경우가 많습니다.",
+        "단순한 경로부터 거대한 네트워크까지, 논문의 나머지 부분은 이 관찰을 설명하려고 시도합니다. 첫째, 저자들에 따르면, 네트워크 복잡성이 증가할수록 개별 경로가 덜 우세하게 만든다. 생물학적 네트워크가 더 많은 교차 대화, 중복, 피드백을 획득함에 따라 한 구성 요소를 교란하는 것이 전체 시스템의 변화를 줄이게 합니다(개입 대상이 통제하는 전체 '노화 시스템'의 비율이 줄어듭니다).",
+        "예를 들어, 벌레에서는 인슐린/인슐린 유사 성장인자 신호전달 경로(IIS), mTOR, DAF-16/FOXO와 같은 경로들이 큰 영향을 미칩니다. 하나를 바꾸면 생물체 전체에 영향을 미칩니다. 파리에서는 이러한 경로가 미토콘드리아 대사, 생식 신호, 식이 입력, 스트레스 반응과 더 광범위하게 상호작용합니다. 그 결과, 예를 들어 TOR을 변경하는 효과는 훨씬 더 상황에 따라 달라집니다.",
+        "포유류에서는 이러한 경로들이 여러 조직에 분산된 더 큰 네트워크 내에 존재합니다. mTOR 억제는 저자들의 주요 예로, 유익한 효과를 낼 수 있지만, 상류 인슐린 신호전달의 보상적 변화를 유발할 수 있으며 조직마다 다른 결과를 초래할 수 있습니다. 즉, 포유류의 개입에 대한 반응은 부분적으로 그 개입에 대한 반응이며, 피드백과 병행 경로가 안정성을 유지하기 위해 작용합니다.",
+        "그 안정성은 실제로 유용하다: 튼튼하고 장수 생명체는 신호 단백질 하나가 조금만 변할 때마다 전체 대사 상태가 변해서는 안 된다. 하지만 노화를 목표로 한다면 동일한 견고함이 문제가 됩니다.",
+        "특수화된 조직과 약한 결합 다음으로, 저자들은 조직 특수화에 대해 논의합니다. 생물이 더 복잡해지면서 노화는 주로 세포 내재 현상이 아니게 됩니다. 대신 같은 경로가 조직마다 다른 기능을 가질 수 있습니다. mTOR을 억제하는 것은 한 장기에서는 유익할 수 있지만, 다른 장기에서는 수리나 대사에 방해가 될 수 있습니다. 더불어, 한 조직을 개선한다고 해서 전체 유기체가 반드시 젊어지는 것은 아닙니다. 최근 장기 특이적 노화에 대한 연구가 이 생각을 어느 정도 뒷받침합니다.",
+        "복잡성은 또한 '다음 약한 고리' 효과를 설명할 수 있는데, 이는 노화 관련 사망의 주요 원인 중 하나를 성공적으로 제거하더라도 다른 실패 모드가 제한적으로 작용하는 것입니다. 가장 잘 알려진 예는 암 사망률을 완전히 없애도 인간의 기대 수명이 약 3년만 연장된다는 계산입니다 [4].",
+        "더욱이 복잡성은 많은 효과가 긍정적일 수도, 나쁘기도 합니다(다면형성). 예를 들어, mTOR과 IIS와 같은 성장 경로는 세포 증식을 지원하지만, 지속적인 증식 능력은 암을 유발할 수도 있습니다. 이러한 경로를 억제하면 암과 기타 과기능 관련 손상을 줄이면서도 상처 치유, 면역 활동, 재생 능력을 동시에 저해할 수 있습니다.",
+        "마찬가지로 만성 면역 활성화는 염증과 조직 손상에 기여하지만, 면역을 과도하게 억제하는 것은 암과 급성 감염 등 노화 관련 사망의 주요 원인이라는 위험도 따릅니다. 증식이 매우 강한 줄기세포 풀을 유지하는 것은 조직 수리에 도움이 되지만, 과도하거나 제대로 조절되지 않으면 이형성과 암 위험을 증가시킵니다.",
+        "잠깐, 시스템이 완충 역할을 하고 있어요. 유기체는 성장, 번식, 체세포 유지 등에 넓게 할당할 수 있는 한정된 자원을 가지고 있어요. 저자들은 단순 유기체가 이 배분을 훨씬 더 극적으로 바꿀 수 있다고 주장합니다.",
+        "예를 들어, 먹이가 부족해지면 벌레는 성장과 번식을 크게 억제하고 유지 상태를 상향 조정할 수 있습니다. 식이 제한이나 관련 경로의 돌연변이로 인한 놀라운 수명 연장의 많은 부분이 이러한 근본적인 삶의 역사 전환을 의미할 수 있습니다. 파리는 어느 정도 이 능력을 유지하고 있습니다; 예를 들어, 아미노산 제한은 생식 투자를 줄이고 수명을 연장할 수 있습니다.",
+        "반면 포유류는 비싼 특수 장기와 조직, 엄격한 생리학적 의무를 가지고 있어, 한 생물학적 프로그램에서 자원의 상당 부분을 유지에만 집중할 수 없으며, 필수 기능을 방해하지 않고는 할 수 없습니다. 따라서 칼로리 제한은 포유류 생리학을 유지 상태로 전환시킬 수 있지만, 그 정도는 더 적습니다.",
+        "이 모든 논쟁은 궁극적으로 하나의 개념적 원리로 통합됩니다: 최대 수명 연장은 경로 지렛대를 시스템 버퍼링으로 나눈 값에 비례합니다. 복잡성이 증가할수록 경로 레버리는 감소하는데, 이는 노화 조절이 더 많은 경로, 조직, 생리 시스템에 분산되기 때문이며, 중복성, 피드백, 조직 상호작용 및 보상 메커니즘이 강화됨에 따라 시스템 완충이 증가합니다. 예측된 결과는 단일 개입에서 최대 가능한 효과가 감소하는 것입니다.",
+        "이 틀은 일부 관찰을 설명하지만, 대부분 이론적인 수준이다. 하지만 저자들이 옳다면, 의미 있는 인간 수명 연장은 단일 분자의 '마스터 스위치'를 찾는 것이 아니라 다중 표적, 다중 조직 개입이 필요할 가능성이 큽니다.",
+        "작은 부탁 하나 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻이기도 합니다. 크든 작든 모든 기여는 독립적이고 윤리적인 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 문학을❤️ 기증하겠습니다 [1] 피르스코베아누, D. F., 파파, M. C., 칼트바서, B., 헤르만, D. M., 브록마이어, U., 체르셀, A., ... 그리고 포파-바그너, A. (2026). 수명 연장의 생물학적 한계: 경로 지렛대에서 시스템 수준 완축으로의 전환에 대한 증거 . 노화와 발달의 메커니즘, 112231.",
+        "[2] 케니언, C., 창, J., 겐쉬, E., 러드너, A., 그리고 탭티앙, R. (1993). 야생형보다 두 배 더 오래 사는 C. elegans 돌연변이입니다. Nature, 366(6454), 461-464.",
+        "[3] 해리슨, D. E., 스트롱, R., 샤프, Z. D., 넬슨, J. F., 애슬, C. M., 플러키, K., ... & 밀러, R. A. (2009). 생애 후기에 먹인 라파마이신은 유전적으로 이질적인 쥐에서 수명을 연장합니다. Nature, 460(7253), 392-395.",
+        "[4] 야신, A. I., 우크라이나체바, S. V., 아쿠셰비치, I. V., 아르베프, K. G., 쿨민스키, A., 아쿠셰비치, L. (2009). 암과 노화 간의 상충관계: 다른 질병들이 어떤 역할을 하는가?: 실험 및 인구 집단 연구에서의 증거. 노화 및 발달 메커니즘, 130(1-2), 98-104."
+      ]
     },
     {
       "id": "lifespan-io:04e552322c",
       "slug": "a-new-target-against-high-blood-pressure-04e552",
       "titleOriginal": "A New Target Against High Blood Pressure",
-      "summaryOriginal": "Researchers have discovered why the protein AGGF1 has significant effects on blood pressure and published their findings in Aging Cell. Blood pressure is a condition of its own The authors begin […]",
+      "summaryOriginal": "Researchers have discovered why the protein AGGF1 has significant effects on blood pressure and published their findings in Aging Cell. Blood pressure is a […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8639,7 +8833,7 @@
       "originalUrl": "https://lifespan.io/a-new-target-against-high-blood-pressure",
       "author": "Josh Conway",
       "publishedAt": "2026-08-10T19:33:46.000Z",
-      "fetchedAt": "2026-08-23T13:48:49.933Z",
+      "fetchedAt": "2026-08-23T19:11:16.473Z",
       "language": "en",
       "keywords": [
         "News",
