@@ -77,6 +77,11 @@ const PAGES = [
   },
   { name: 'session-index', path: '/session', kind: 'index' },
   { name: 'thread-index', path: '/thread', kind: 'index' },
+  {
+    name: 'thread/thread-publisher-sketch',
+    path: '/thread/thread-publisher-sketch',
+    kind: 'index',
+  },
   { name: 'thread/related-but-unresolved', path: '/thread/related-but-unresolved', kind: 'index' },
 ]
 
