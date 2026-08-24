@@ -179,6 +179,10 @@ export function PlanStage({ items, from, to, children }: Props) {
  * 같은 상태를 읽는다 — 다시 만났을 때 «아까 그 표»로 알아보게 하려면 모양이
  * 달라서는 안 된다. 달라진 것은 표가 아니라 그 사이에 지나간 하루다.
  *
+ * 표의 아래 모서리에 열차 시각이 있다. 하루가 채워질수록 그 줄의 잉크가
+ * 짙어진다 — 떠다니는 시계를 따로 두지 않는 이유가 그것이다. 열차 시각은
+ * 화면 위에 얹힌 알림이 아니라 아침에 적은 계획의 마지막 줄이었다.
+ *
  * 한 줄을 붙잡을 수 있다.
  *
  * 붙잡고 있는 동안 그 줄만 아침의 잉크로 돌아온다. 문이 닫혔던 곳도, 내가
@@ -205,8 +209,23 @@ export function Plan() {
 
   if (!board) return null
 
+  /*
+   * 열차 시각이 얼마나 가까워졌는가.
+   *
+   * 스크롤 위치로 재지 않는다. 그날 시간이 다가온 것은 화면을 얼마나 내렸기
+   * 때문이 아니라 일정이 하나씩 끝났기 때문이고, 그래서 계획표에 적힌 줄의
+   * 수로 잰다. 네 단으로 끊어서 짙어지고 그 사이에는 아무 일도 없다 —
+   * 실제로는 한참 잊고 있다가 문득 한 번씩 생각났다.
+   *
+   * 크기도 자리도 변하지 않는다. 시간이 가까워질 때 글자가 커지면 그것은
+   * 시간이 아니라 경고가 된다. 제일 옅은 단에서도 종이 대비 6.85:1이라
+   * 처음부터 읽을 수 있다.
+   */
+  const noted = board.items.filter((item) => board.states[item]).length
+  const closeness = Math.min(3, Math.floor((noted / board.items.length) * 4))
+
   return (
-    <div className={styles.plan} data-attending={attending !== null}>
+    <div className={styles.plan} data-attending={attending !== null} data-closeness={closeness}>
       <p className={`mono ${styles.edge}`}>{board.from}</p>
 
       <div className={styles.track} onPointerLeave={() => setNear(null)}>
@@ -235,7 +254,7 @@ export function Plan() {
         </ol>
       </div>
 
-      <p className={`mono ${styles.edge}`}>{board.to}</p>
+      <p className={`mono ${styles.edge} ${styles.to}`}>{board.to}</p>
     </div>
   )
 }

@@ -148,3 +148,34 @@
     transition-duration: 100ms;
   }
 }
+
+/*
+ * 표의 아래 모서리 — 열차 시각.
+ *
+ * 하루가 채워질수록 짙어진다. 화면 어딘가에 시계를 띄워 두지 않는다.
+ * 이 지면의 다른 기록은 무엇도 판면 밖에 떠 있지 않고, 여기서만 그러면
+ * 그것은 이 하루의 형식이 아니라 다른 사이트의 부품이 된다.
+ *
+ * 열차 시각은 아침에 적은 계획의 마지막 줄이었다. 그러니 계획표에 있다.
+ */
+.plan[data-closeness='1'] .to {
+  color: #4a4a45;
+}
+
+.plan[data-closeness='2'] .to {
+  color: var(--color-text-secondary);
+}
+
+.plan[data-closeness='3'] .to {
+  color: var(--color-text);
+}
+
+.to {
+  transition: color var(--dur-fade) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .to {
+    transition-duration: 100ms;
+  }
+}

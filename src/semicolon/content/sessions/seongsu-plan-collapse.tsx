@@ -6,7 +6,6 @@ import { Ending } from '../../components/session/Ending'
 import { Grammar } from '../../components/session/Grammar'
 import { Move } from '../../components/session/Move'
 import { Passage } from '../../components/session/Passage'
-import { PersistentLabel } from '../../components/session/PersistentLabel'
 import { Place } from '../../components/session/Place'
 import { Plan, PlanStage } from '../../components/session/PlanStage'
 import { PlanRoute } from '../../components/session/PlanRoute'
@@ -522,300 +521,296 @@ export const seongsuPlanCollapse: Session = {
    * 잉크가 짙어지는 것. 여기 속하지 않는 움직임은 넣지 않았다.
    */
   body: (
-    <>
-      <PersistentLabel at="17:28" where="SEOUL" />
-
-      <PlanStage items={plan} from="10:00 CHECKOUT" to="17:28 SEOUL">
-        <Drowse level={2}>
-          <Scene air>
-            <Passage>{night}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage tone="loud">{sleepy}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{control}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{had}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{monday}</Passage>
-          </Scene>
-
-          {/* 첫 번째 휴무. 이름을 읽고, 이유를 읽고, 그 다음에 결과가 앉는다. */}
-          <Scene>
-            <Cue item="D MUSEUM" state="closed" reason="MONDAY" pace="sequential">
-              <Place
-                name="D MUSEUM"
-                address="서울 성동구 왕십리로 83-21"
-                district="SEONGSU"
-                date="2026.08.24"
-              />
-            </Cue>
-
-            <Passage>{off}</Passage>
-          </Scene>
-
-          {/* 무신사 구간에서 지면이 잠깐 안정된다. 앉아 있었던 시간만큼. */}
-          <Scene air>
-            <Cue item="MUSINSA" state="visited">
-              <Place name="MUSINSA MEGA STORE SEONGSU" address="서울 성동구 성수이로 62" />
-            </Cue>
-          </Scene>
-
-          <Scene width="bleed">
-            <Plate image={musinsaLunch} note="LUNCH" />
-
-            <Passage>{lunch}</Passage>
-          </Scene>
-
-          <Scene>
-            <Amount value="20,000" currency="KRW" />
-
-            <Passage>{tasted}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{seated}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{noticed}</Passage>
-          </Scene>
-
-          <Scene>
-            <Grammar words={musinsaGrammar} />
-
-            <Passage>{packaged}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{uvu}</Passage>
-          </Scene>
-
-          {/* 두 번째 휴무. 읽을 시간만 주고 바로 붙는다. */}
-          <Scene>
-            <Cue item="UVU" state="closed" reason="MONDAY" pace="quick">
-              <Place name="UVU SEONGSU FLAGSHIP" address="서울 성동구 둘레7길 15" />
-            </Cue>
-          </Scene>
-
-          <Scene air>
-            <Passage tone="loud">{shutting}</Passage>
-          </Scene>
-
-          <Scene pace="brisk">
-            <Passage>{next}</Passage>
-          </Scene>
-
-          <Scene width="bleed" pace="brisk">
-            <Plate image={humanmadeStore} />
-
-            <Cue item="HUMAN MADE" state="visited">
-              <Place name="HUMAN MADE OFFLINE STORE SEOUL" address="서울 성동구 성수이로7길 39" />
-            </Cue>
-          </Scene>
-
-          <Scene pace="brisk">
-            <Passage>{everywhere}</Passage>
-          </Scene>
-
-          {/*
-            여기서 계획 하나가 깨진다.
-            더커피로 가던 선의 끝점이 없어진다 — 문이 닫힌 것이 아니라
-            내가 그 끝에서 할 일을 이미 다른 데서 해버렸다.
-          */}
-          <Scene pace="brisk">
-            <Passage>{took}</Passage>
-
-            <PlanRoute stops={brokenCoffee} drops="THE COFFEE" />
-          </Scene>
-        </Drowse>
-
-        {/* 커피가 들어온 두 장면. 이 구간에서만 아무것도 어긋나지 않는다. */}
-        <Drowse level={1}>
-          <Scene air>
-            <Passage>{paid}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{bottle}</Passage>
-
-            <Grammar words={bottleGrammar} />
-
-            <Passage>{shared}</Passage>
-          </Scene>
-        </Drowse>
-
-        {/* 커피가 떨어진다. 여기서부터 보조 층이 기준선에서 벗어나기 시작한다. */}
-        <Drowse level={3}>
-          <Scene pace="brisk">
-            <Passage>{wearing}</Passage>
-          </Scene>
-
-          <Scene pace="brisk">
-            <Passage>{stuck}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage tone="loud">{asleep}</Passage>
-          </Scene>
-
-          <Scene pace="fast">
-            <Passage>{up}</Passage>
-          </Scene>
-
-          {/* 카시나. 멈추는 시간만큼만 서 있다가 옆으로 빠진다. */}
-          <Scene pace="rushed">
-            <Cue item="KASINA" state="passed">
-              <Place name="KASINA SEONGSU" address="서울 성동구 성수이로7길 41" />
-            </Cue>
-          </Scene>
-
-          <Scene>
-            <Passage>{toAder}</Passage>
-
-            <Cue item="ADERERROR SIGNIFICANT" state="visited">
-              <Place name="ADERERROR SIGNIFICANT SEONGSU" address="서울 성동구 연무장길 26 2F" />
-            </Cue>
-          </Scene>
-
-          <Scene>
-            <Passage>{branding}</Passage>
-          </Scene>
-
-          <Scene>
-            <Tension pairs={ader} />
-
-            <Passage>{product}</Passage>
-          </Scene>
-
-          {/* 뚝섬. 여백이 열리고 한 화면에 한 가지만 남는다. */}
-          <Scene air>
-            <Passage>{toward}</Passage>
-
-            <Move from="SEONGSU" to="TUKSEOM" />
-          </Scene>
-
-          <Scene air>
-            <Passage>{quieter}</Passage>
-          </Scene>
-
-          <Scene>
-            <Cue
-              item="THE COFFEE"
-              state="skipped"
-              from="VISIT"
-              because="COFFEE ALREADY TAKEN"
-              pace="quick"
-            >
-              <Place name="THE COFFEE SEONGSU" address="서울 성동구 서울숲2길 27" />
-            </Cue>
-
-            <Passage>{already}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{cats}</Passage>
-
-            {/* 너즐은 열려 있었다. 이름에는 아무 표시도 하지 않는다. */}
-            <Cue item="NUZZLE" state="turned-back">
-              <Place name="NUZZLE" address="서울 성동구 서울숲6길 14 4F" />
-            </Cue>
-          </Scene>
-
-          <Scene>
-            <Passage>{fine}</Passage>
-
-            <Detour out={4} back={4} note="no." />
-
-            <Passage>{nerve}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{walked}</Passage>
-
-            <PlanRoute stops={tukseom} />
-          </Scene>
-
-          {/* 세 번째 휴무. 이름을 읽기 전에 이미 알고 있다. */}
-          <Scene pace="rushed">
-            <Passage>{candidate}</Passage>
-
-            <Cue state="closed" reason="MONDAY" pace="foretold">
-              <Place
-                name="MERCEDES-BENZ STUDIO SEOUL"
-                address="서울 성동구 연무장길 73"
-                district="XYZ SEOUL"
-              />
-            </Cue>
-
-            <Passage>{again}</Passage>
-          </Scene>
-
-          {/* 아침의 표가 다시 선다. 그 사이에 하루가 전부 적혀 들어갔다. */}
-          <Scene pace="fast">
-            <Passage>{meant}</Passage>
-          </Scene>
-
-          <Scene pace="fast">
-            <PlanRoute stops={wholeDay} />
-
-            <Plan />
-
-            <Passage>{drifted}</Passage>
-          </Scene>
-        </Drowse>
-
-        {/* 마지막 자리. 계획선도 결과 표시도 없다. 문장만 남는다. */}
+    <PlanStage items={plan} from="10:00 CHECKOUT" to="17:28 SEOUL">
+      <Drowse level={2}>
         <Scene air>
-          <Passage>{last}</Passage>
+          <Passage>{night}</Passage>
+        </Scene>
 
-          <Cue item="POT RITUAL" state="visited">
-            <Place name="POT RITUAL SEONGSU" address="서울 성동구 연무장9길 14 1F" />
+        <Scene>
+          <Passage tone="loud">{sleepy}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{control}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{had}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{monday}</Passage>
+        </Scene>
+
+        {/* 첫 번째 휴무. 이름을 읽고, 이유를 읽고, 그 다음에 결과가 앉는다. */}
+        <Scene>
+          <Cue item="D MUSEUM" state="closed" reason="MONDAY" pace="sequential">
+            <Place
+              name="D MUSEUM"
+              address="서울 성동구 왕십리로 83-21"
+              district="SEONGSU"
+              date="2026.08.24"
+            />
+          </Cue>
+
+          <Passage>{off}</Passage>
+        </Scene>
+
+        {/* 무신사 구간에서 지면이 잠깐 안정된다. 앉아 있었던 시간만큼. */}
+        <Scene air>
+          <Cue item="MUSINSA" state="visited">
+            <Place name="MUSINSA MEGA STORE SEONGSU" address="서울 성동구 성수이로 62" />
           </Cue>
         </Scene>
 
         <Scene width="bleed">
-          <Plate image={potRitual} />
+          <Plate image={musinsaLunch} note="LUNCH" />
 
-          <Passage>{matcha}</Passage>
+          <Passage>{lunch}</Passage>
         </Scene>
 
-        <Quiet>
-          <Passage>{curiosity}</Passage>
-        </Quiet>
+        <Scene>
+          <Amount value="20,000" currency="KRW" />
+
+          <Passage>{tasted}</Passage>
+        </Scene>
 
         <Scene>
-          <Passage>{leaving}</Passage>
+          <Passage>{seated}</Passage>
+        </Scene>
 
-          <Cue state="short">
-            <Place name="ADERERROR SEONGSU SPACE" address="서울 성동구 성수이로 82" />
+        <Scene>
+          <Passage>{noticed}</Passage>
+        </Scene>
+
+        <Scene>
+          <Grammar words={musinsaGrammar} />
+
+          <Passage>{packaged}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{uvu}</Passage>
+        </Scene>
+
+        {/* 두 번째 휴무. 읽을 시간만 주고 바로 붙는다. */}
+        <Scene>
+          <Cue item="UVU" state="closed" reason="MONDAY" pace="quick">
+            <Place name="UVU SEONGSU FLAGSHIP" address="서울 성동구 둘레7길 15" />
+          </Cue>
+        </Scene>
+
+        <Scene air>
+          <Passage tone="loud">{shutting}</Passage>
+        </Scene>
+
+        <Scene pace="brisk">
+          <Passage>{next}</Passage>
+        </Scene>
+
+        <Scene width="bleed" pace="brisk">
+          <Plate image={humanmadeStore} />
+
+          <Cue item="HUMAN MADE" state="visited">
+            <Place name="HUMAN MADE OFFLINE STORE SEOUL" address="서울 성동구 성수이로7길 39" />
+          </Cue>
+        </Scene>
+
+        <Scene pace="brisk">
+          <Passage>{everywhere}</Passage>
+        </Scene>
+
+        {/*
+            여기서 계획 하나가 깨진다.
+            더커피로 가던 선의 끝점이 없어진다 — 문이 닫힌 것이 아니라
+            내가 그 끝에서 할 일을 이미 다른 데서 해버렸다.
+          */}
+        <Scene pace="brisk">
+          <Passage>{took}</Passage>
+
+          <PlanRoute stops={brokenCoffee} drops="THE COFFEE" />
+        </Scene>
+      </Drowse>
+
+      {/* 커피가 들어온 두 장면. 이 구간에서만 아무것도 어긋나지 않는다. */}
+      <Drowse level={1}>
+        <Scene air>
+          <Passage>{paid}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{bottle}</Passage>
+
+          <Grammar words={bottleGrammar} />
+
+          <Passage>{shared}</Passage>
+        </Scene>
+      </Drowse>
+
+      {/* 커피가 떨어진다. 여기서부터 보조 층이 기준선에서 벗어나기 시작한다. */}
+      <Drowse level={3}>
+        <Scene pace="brisk">
+          <Passage>{wearing}</Passage>
+        </Scene>
+
+        <Scene pace="brisk">
+          <Passage>{stuck}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage tone="loud">{asleep}</Passage>
+        </Scene>
+
+        <Scene pace="fast">
+          <Passage>{up}</Passage>
+        </Scene>
+
+        {/* 카시나. 멈추는 시간만큼만 서 있다가 옆으로 빠진다. */}
+        <Scene pace="rushed">
+          <Cue item="KASINA" state="passed">
+            <Place name="KASINA SEONGSU" address="서울 성동구 성수이로7길 41" />
+          </Cue>
+        </Scene>
+
+        <Scene>
+          <Passage>{toAder}</Passage>
+
+          <Cue item="ADERERROR SIGNIFICANT" state="visited">
+            <Place name="ADERERROR SIGNIFICANT SEONGSU" address="서울 성동구 연무장길 26 2F" />
+          </Cue>
+        </Scene>
+
+        <Scene>
+          <Passage>{branding}</Passage>
+        </Scene>
+
+        <Scene>
+          <Tension pairs={ader} />
+
+          <Passage>{product}</Passage>
+        </Scene>
+
+        {/* 뚝섬. 여백이 열리고 한 화면에 한 가지만 남는다. */}
+        <Scene air>
+          <Passage>{toward}</Passage>
+
+          <Move from="SEONGSU" to="TUKSEOM" />
+        </Scene>
+
+        <Scene air>
+          <Passage>{quieter}</Passage>
+        </Scene>
+
+        <Scene>
+          <Cue
+            item="THE COFFEE"
+            state="skipped"
+            from="VISIT"
+            because="COFFEE ALREADY TAKEN"
+            pace="quick"
+          >
+            <Place name="THE COFFEE SEONGSU" address="서울 성동구 서울숲2길 27" />
           </Cue>
 
-          <Passage>{train}</Passage>
-        </Scene>
-
-        <Scene air>
-          <Passage>{changed}</Passage>
+          <Passage>{already}</Passage>
         </Scene>
 
         <Scene>
-          <Passage>{one}</Passage>
+          <Passage>{cats}</Passage>
+
+          {/* 너즐은 열려 있었다. 이름에는 아무 표시도 하지 않는다. */}
+          <Cue item="NUZZLE" state="turned-back">
+            <Place name="NUZZLE" address="서울 성동구 서울숲6길 14 4F" />
+          </Cue>
         </Scene>
 
-        <Scene air>
-          <Passage tone="loud">{sleep}</Passage>
+        <Scene>
+          <Passage>{fine}</Passage>
+
+          <Detour out={4} back={4} note="no." />
+
+          <Passage>{nerve}</Passage>
         </Scene>
 
-        <Ending />
-      </PlanStage>
-    </>
+        <Scene>
+          <Passage>{walked}</Passage>
+
+          <PlanRoute stops={tukseom} />
+        </Scene>
+
+        {/* 세 번째 휴무. 이름을 읽기 전에 이미 알고 있다. */}
+        <Scene pace="rushed">
+          <Passage>{candidate}</Passage>
+
+          <Cue state="closed" reason="MONDAY" pace="foretold">
+            <Place
+              name="MERCEDES-BENZ STUDIO SEOUL"
+              address="서울 성동구 연무장길 73"
+              district="XYZ SEOUL"
+            />
+          </Cue>
+
+          <Passage>{again}</Passage>
+        </Scene>
+
+        {/* 아침의 표가 다시 선다. 그 사이에 하루가 전부 적혀 들어갔다. */}
+        <Scene pace="fast">
+          <Passage>{meant}</Passage>
+        </Scene>
+
+        <Scene pace="fast">
+          <PlanRoute stops={wholeDay} />
+
+          <Plan />
+
+          <Passage>{drifted}</Passage>
+        </Scene>
+      </Drowse>
+
+      {/* 마지막 자리. 계획선도 결과 표시도 없다. 문장만 남는다. */}
+      <Scene air>
+        <Passage>{last}</Passage>
+
+        <Cue item="POT RITUAL" state="visited">
+          <Place name="POT RITUAL SEONGSU" address="서울 성동구 연무장9길 14 1F" />
+        </Cue>
+      </Scene>
+
+      <Scene width="bleed">
+        <Plate image={potRitual} />
+
+        <Passage>{matcha}</Passage>
+      </Scene>
+
+      <Quiet>
+        <Passage>{curiosity}</Passage>
+      </Quiet>
+
+      <Scene>
+        <Passage>{leaving}</Passage>
+
+        <Cue state="short">
+          <Place name="ADERERROR SEONGSU SPACE" address="서울 성동구 성수이로 82" />
+        </Cue>
+
+        <Passage>{train}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage>{changed}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{one}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage tone="loud">{sleep}</Passage>
+      </Scene>
+
+      <Ending />
+    </PlanStage>
   ),
 
   /*
@@ -827,255 +822,251 @@ export const seongsuPlanCollapse: Session = {
    * 남는다. 그래서 장면을 합치고, 옆으로 지나가던 것은 아래로 지나가게 한다.
    */
   compact: (
-    <>
-      <PersistentLabel at="17:28" where="SEOUL" />
+    <PlanStage items={plan} from="10:00 CHECKOUT" to="17:28 SEOUL">
+      <Drowse level={2}>
+        <Scene>
+          <Passage>{night}</Passage>
 
-      <PlanStage items={plan} from="10:00 CHECKOUT" to="17:28 SEOUL">
-        <Drowse level={2}>
-          <Scene>
-            <Passage>{night}</Passage>
+          <Passage tone="loud">{sleepy}</Passage>
+        </Scene>
 
-            <Passage tone="loud">{sleepy}</Passage>
-          </Scene>
+        <Scene>
+          <Passage>{control}</Passage>
 
-          <Scene>
-            <Passage>{control}</Passage>
+          <Passage>{had}</Passage>
+        </Scene>
 
-            <Passage>{had}</Passage>
-          </Scene>
+        <Scene>
+          <Passage>{monday}</Passage>
 
-          <Scene>
-            <Passage>{monday}</Passage>
+          <Cue item="D MUSEUM" state="closed" reason="MONDAY" pace="sequential">
+            <Place
+              name="D MUSEUM"
+              address="서울 성동구 왕십리로 83-21"
+              district="SEONGSU"
+              date="2026.08.24"
+            />
+          </Cue>
 
-            <Cue item="D MUSEUM" state="closed" reason="MONDAY" pace="sequential">
-              <Place
-                name="D MUSEUM"
-                address="서울 성동구 왕십리로 83-21"
-                district="SEONGSU"
-                date="2026.08.24"
-              />
-            </Cue>
+          <Passage>{off}</Passage>
+        </Scene>
 
-            <Passage>{off}</Passage>
-          </Scene>
-
-          <Scene>
-            <Cue item="MUSINSA" state="visited">
-              <Place name="MUSINSA MEGA STORE SEONGSU" address="서울 성동구 성수이로 62" />
-            </Cue>
-          </Scene>
-
-          <Scene width="bleed">
-            <Plate image={musinsaLunch} note="LUNCH" />
-
-            <Passage>{lunch}</Passage>
-
-            <Amount value="20,000" currency="KRW" />
-
-            <Passage>{tasted}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{seated}</Passage>
-
-            <Passage>{noticed}</Passage>
-          </Scene>
-
-          <Scene>
-            <Grammar words={musinsaGrammar} />
-
-            <Passage>{packaged}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{uvu}</Passage>
-
-            <Cue item="UVU" state="closed" reason="MONDAY" pace="quick">
-              <Place name="UVU SEONGSU FLAGSHIP" address="서울 성동구 둘레7길 15" />
-            </Cue>
-          </Scene>
-
-          <Scene air>
-            <Passage tone="loud">{shutting}</Passage>
-          </Scene>
-
-          <Scene width="bleed" pace="brisk">
-            <Passage>{next}</Passage>
-
-            <Plate image={humanmadeStore} />
-
-            <Cue item="HUMAN MADE" state="visited">
-              <Place name="HUMAN MADE OFFLINE STORE SEOUL" address="서울 성동구 성수이로7길 39" />
-            </Cue>
-          </Scene>
-
-          <Scene pace="brisk">
-            <Passage>{everywhere}</Passage>
-
-            <Passage>{took}</Passage>
-
-            <PlanRoute stops={brokenCoffee} drops="THE COFFEE" />
-          </Scene>
-        </Drowse>
-
-        <Drowse level={1}>
-          <Scene air>
-            <Passage>{paid}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{bottle}</Passage>
-
-            <Grammar words={bottleGrammar} />
-
-            <Passage>{shared}</Passage>
-          </Scene>
-        </Drowse>
-
-        <Drowse level={3}>
-          <Scene pace="brisk">
-            <Passage>{wearing}</Passage>
-
-            <Passage>{stuck}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage tone="loud">{asleep}</Passage>
-          </Scene>
-
-          <Scene pace="fast">
-            <Passage>{up}</Passage>
-
-            <Cue item="KASINA" state="passed">
-              <Place name="KASINA SEONGSU" address="서울 성동구 성수이로7길 41" />
-            </Cue>
-          </Scene>
-
-          <Scene>
-            <Passage>{toAder}</Passage>
-
-            <Cue item="ADERERROR SIGNIFICANT" state="visited">
-              <Place name="ADERERROR SIGNIFICANT SEONGSU" address="서울 성동구 연무장길 26 2F" />
-            </Cue>
-
-            <Passage>{branding}</Passage>
-          </Scene>
-
-          <Scene>
-            <Tension pairs={ader} />
-
-            <Passage>{product}</Passage>
-          </Scene>
-
-          <Scene air>
-            <Passage>{toward}</Passage>
-
-            <Move from="SEONGSU" to="TUKSEOM" quiet />
-
-            <Passage>{quieter}</Passage>
-          </Scene>
-
-          <Scene>
-            <Cue
-              item="THE COFFEE"
-              state="skipped"
-              from="VISIT"
-              because="COFFEE ALREADY TAKEN"
-              pace="quick"
-            >
-              <Place name="THE COFFEE SEONGSU" address="서울 성동구 서울숲2길 27" />
-            </Cue>
-
-            <Passage>{already}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{cats}</Passage>
-
-            <Cue item="NUZZLE" state="turned-back">
-              <Place name="NUZZLE" address="서울 성동구 서울숲6길 14 4F" />
-            </Cue>
-
-            <Passage>{fine}</Passage>
-          </Scene>
-
-          <Scene>
-            <Detour out={4} back={4} note="no." />
-
-            <Passage>{nerve}</Passage>
-          </Scene>
-
-          <Scene>
-            <Passage>{walked}</Passage>
-
-            <PlanRoute stops={tukseom} />
-          </Scene>
-
-          <Scene pace="rushed">
-            <Passage>{candidate}</Passage>
-
-            <Cue state="closed" reason="MONDAY" pace="foretold">
-              <Place
-                name="MERCEDES-BENZ STUDIO SEOUL"
-                address="서울 성동구 연무장길 73"
-                district="XYZ SEOUL"
-              />
-            </Cue>
-
-            <Passage>{again}</Passage>
-          </Scene>
-
-          <Scene pace="fast">
-            <Passage>{meant}</Passage>
-
-            <PlanRoute stops={wholeDay} />
-
-            <Plan />
-
-            <Passage>{drifted}</Passage>
-          </Scene>
-        </Drowse>
-
-        <Scene air>
-          <Passage>{last}</Passage>
-
-          <Cue item="POT RITUAL" state="visited">
-            <Place name="POT RITUAL SEONGSU" address="서울 성동구 연무장9길 14 1F" />
+        <Scene>
+          <Cue item="MUSINSA" state="visited">
+            <Place name="MUSINSA MEGA STORE SEONGSU" address="서울 성동구 성수이로 62" />
           </Cue>
         </Scene>
 
         <Scene width="bleed">
-          <Plate image={potRitual} />
+          <Plate image={musinsaLunch} note="LUNCH" />
 
-          <Passage>{matcha}</Passage>
+          <Passage>{lunch}</Passage>
+
+          <Amount value="20,000" currency="KRW" />
+
+          <Passage>{tasted}</Passage>
         </Scene>
-
-        <Quiet>
-          <Passage>{curiosity}</Passage>
-        </Quiet>
 
         <Scene>
-          <Passage>{leaving}</Passage>
+          <Passage>{seated}</Passage>
 
-          <Cue state="short">
-            <Place name="ADERERROR SEONGSU SPACE" address="서울 성동구 성수이로 82" />
+          <Passage>{noticed}</Passage>
+        </Scene>
+
+        <Scene>
+          <Grammar words={musinsaGrammar} />
+
+          <Passage>{packaged}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{uvu}</Passage>
+
+          <Cue item="UVU" state="closed" reason="MONDAY" pace="quick">
+            <Place name="UVU SEONGSU FLAGSHIP" address="서울 성동구 둘레7길 15" />
+          </Cue>
+        </Scene>
+
+        <Scene air>
+          <Passage tone="loud">{shutting}</Passage>
+        </Scene>
+
+        <Scene width="bleed" pace="brisk">
+          <Passage>{next}</Passage>
+
+          <Plate image={humanmadeStore} />
+
+          <Cue item="HUMAN MADE" state="visited">
+            <Place name="HUMAN MADE OFFLINE STORE SEOUL" address="서울 성동구 성수이로7길 39" />
+          </Cue>
+        </Scene>
+
+        <Scene pace="brisk">
+          <Passage>{everywhere}</Passage>
+
+          <Passage>{took}</Passage>
+
+          <PlanRoute stops={brokenCoffee} drops="THE COFFEE" />
+        </Scene>
+      </Drowse>
+
+      <Drowse level={1}>
+        <Scene air>
+          <Passage>{paid}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{bottle}</Passage>
+
+          <Grammar words={bottleGrammar} />
+
+          <Passage>{shared}</Passage>
+        </Scene>
+      </Drowse>
+
+      <Drowse level={3}>
+        <Scene pace="brisk">
+          <Passage>{wearing}</Passage>
+
+          <Passage>{stuck}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage tone="loud">{asleep}</Passage>
+        </Scene>
+
+        <Scene pace="fast">
+          <Passage>{up}</Passage>
+
+          <Cue item="KASINA" state="passed">
+            <Place name="KASINA SEONGSU" address="서울 성동구 성수이로7길 41" />
+          </Cue>
+        </Scene>
+
+        <Scene>
+          <Passage>{toAder}</Passage>
+
+          <Cue item="ADERERROR SIGNIFICANT" state="visited">
+            <Place name="ADERERROR SIGNIFICANT SEONGSU" address="서울 성동구 연무장길 26 2F" />
           </Cue>
 
-          <Passage>{train}</Passage>
+          <Passage>{branding}</Passage>
+        </Scene>
+
+        <Scene>
+          <Tension pairs={ader} />
+
+          <Passage>{product}</Passage>
         </Scene>
 
         <Scene air>
-          <Passage>{changed}</Passage>
+          <Passage>{toward}</Passage>
 
-          <Passage>{one}</Passage>
+          <Move from="SEONGSU" to="TUKSEOM" quiet />
+
+          <Passage>{quieter}</Passage>
         </Scene>
 
-        <Scene air>
-          <Passage tone="loud">{sleep}</Passage>
+        <Scene>
+          <Cue
+            item="THE COFFEE"
+            state="skipped"
+            from="VISIT"
+            because="COFFEE ALREADY TAKEN"
+            pace="quick"
+          >
+            <Place name="THE COFFEE SEONGSU" address="서울 성동구 서울숲2길 27" />
+          </Cue>
+
+          <Passage>{already}</Passage>
         </Scene>
 
-        <Ending />
-      </PlanStage>
-    </>
+        <Scene>
+          <Passage>{cats}</Passage>
+
+          <Cue item="NUZZLE" state="turned-back">
+            <Place name="NUZZLE" address="서울 성동구 서울숲6길 14 4F" />
+          </Cue>
+
+          <Passage>{fine}</Passage>
+        </Scene>
+
+        <Scene>
+          <Detour out={4} back={4} note="no." />
+
+          <Passage>{nerve}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{walked}</Passage>
+
+          <PlanRoute stops={tukseom} />
+        </Scene>
+
+        <Scene pace="rushed">
+          <Passage>{candidate}</Passage>
+
+          <Cue state="closed" reason="MONDAY" pace="foretold">
+            <Place
+              name="MERCEDES-BENZ STUDIO SEOUL"
+              address="서울 성동구 연무장길 73"
+              district="XYZ SEOUL"
+            />
+          </Cue>
+
+          <Passage>{again}</Passage>
+        </Scene>
+
+        <Scene pace="fast">
+          <Passage>{meant}</Passage>
+
+          <PlanRoute stops={wholeDay} />
+
+          <Plan />
+
+          <Passage>{drifted}</Passage>
+        </Scene>
+      </Drowse>
+
+      <Scene air>
+        <Passage>{last}</Passage>
+
+        <Cue item="POT RITUAL" state="visited">
+          <Place name="POT RITUAL SEONGSU" address="서울 성동구 연무장9길 14 1F" />
+        </Cue>
+      </Scene>
+
+      <Scene width="bleed">
+        <Plate image={potRitual} />
+
+        <Passage>{matcha}</Passage>
+      </Scene>
+
+      <Quiet>
+        <Passage>{curiosity}</Passage>
+      </Quiet>
+
+      <Scene>
+        <Passage>{leaving}</Passage>
+
+        <Cue state="short">
+          <Place name="ADERERROR SEONGSU SPACE" address="서울 성동구 성수이로 82" />
+        </Cue>
+
+        <Passage>{train}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage>{changed}</Passage>
+
+        <Passage>{one}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage tone="loud">{sleep}</Passage>
+      </Scene>
+
+      <Ending />
+    </PlanStage>
   ),
 }
