@@ -1,0 +1,150 @@
+/*
+ * 아침의 계획표.
+ *
+ * 가운데 정렬하지 않는다. 이 지면의 다른 모든 글과 같은 왼쪽 기준선에서
+ * 시작한다 — 계획표를 가운데에 세우는 순간 그것이 문서가 아니라 표지가 된다.
+ */
+.plan {
+  display: grid;
+  row-gap: clamp(16px, 2.4vw, 26px);
+  padding-block: clamp(24px, 4vw, 48px);
+}
+
+.edge {
+  color: var(--color-text-muted);
+}
+
+/*
+ * 계획선 하나.
+ *
+ * 아침에는 선이 하나뿐이다. 갈라지지도 끊기지도 않았고, 위에서 아래로
+ * 곧게 내려간다. 하루가 지나간 뒤에 이 선이 어떻게 되는지는 아래의
+ * PlanRoute가 말한다.
+ */
+.track {
+  position: relative;
+  width: min(100%, 30rem);
+  padding-left: clamp(18px, 2.6vw, 28px);
+}
+
+.items {
+  display: grid;
+  list-style: none;
+}
+
+.track::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 0;
+  width: 1px;
+  background: var(--color-line-strong);
+  /* 졸릴수록 계획선이 흐려진다. 계획이 사라진 것은 아니고 내가 못 붙잡는 것이다. */
+  opacity: var(--drowse-line, 1);
+  transition: opacity var(--dur-base) var(--ease-out);
+  pointer-events: none;
+}
+
+.items > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: clamp(12px, 2vw, 24px);
+}
+
+/*
+ * 줄 이름.
+ *
+ * 버튼이지만 버튼으로 보이지 않는다. 테두리도 배경도 없고, 계획표 안에서
+ * 다른 줄과 똑같이 앉아 있는다. 이 표는 조작판이 아니라 아침에 적어 둔
+ * 메모이고, 붙잡을 수 있다는 사실은 붙잡아 본 사람만 알면 된다.
+ */
+.name {
+  justify-self: start;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: var(--tracking-meta);
+  text-align: left;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.28em;
+  cursor: pointer;
+  transition:
+    color var(--dur-base) var(--ease-out),
+    text-decoration-color var(--dur-base) var(--ease-out);
+}
+
+.name:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+}
+
+.state {
+  color: var(--color-text-muted);
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+/*
+ * ─────────────  하루가 적혀 들어간 뒤  ─────────────
+ *
+ * 줄을 지우지 않는다. 아침에 그 자리를 적은 것은 사실이고, 화면에서 없어지면
+ * 그 사실까지 없어진다. 잉크만 한 단계 물리고 자리는 그대로 둔다.
+ *
+ * 투명도로 물리지 않는 이유는 이 저장소의 다른 자리와 같다 — 흐린 잉크는
+ * 종이 대비 6.85:1이라 끝까지 읽히지만, 같은 정도로 투명해진 검정은 읽히지
+ * 않는다. 물러난 계획도 읽을 수 있어야 한다.
+ */
+.items > li[data-state='closed'] .name,
+.items > li[data-state='skipped'] .name,
+.items > li[data-state='passed'] .name {
+  color: var(--color-text-muted);
+}
+
+/* 문이 닫혔던 곳과 내가 이유를 없앤 곳에만 줄이 그어진다. */
+.items > li[data-state='closed'] .name,
+.items > li[data-state='skipped'] .name {
+  text-decoration-line: line-through;
+  text-decoration-color: var(--color-line-strong);
+}
+
+/*
+ * 앞까지 갔다가 돌아선 자리는 건드리지 않는다.
+ *
+ * 너즐은 휴무도 아니었고 내가 이유를 없앤 것도 아니었다. 거기서 일어난 일은
+ * 장소가 아니라 나에게 일어난 일이라, 장소 이름에 줄을 그으면 없던 죄가 생긴다.
+ */
+
+/*
+ * 한 줄을 붙잡고 있는 동안.
+ *
+ * 붙잡은 줄은 아침의 잉크로 돌아오고 줄도 풀린다. 나머지는 한 단계 물러난다.
+ * 두 줄을 동시에 붙잡을 수는 없다 — 그날도 한 번에 한 곳만 생각했다.
+ */
+.plan[data-attending='true'] .name,
+.plan[data-attending='true'] .state {
+  color: var(--color-text-muted);
+}
+
+.items > li[data-attending='true'] .name {
+  color: var(--color-text);
+  text-decoration-line: none;
+}
+
+.items > li[data-attending='true'] .state {
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track::before,
+  .name,
+  .state {
+    transition-duration: 100ms;
+  }
+}

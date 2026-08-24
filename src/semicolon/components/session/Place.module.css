@@ -14,13 +14,34 @@
   font-size: clamp(0.9375rem, 0.88rem + 0.3vw, 1.0625rem);
   font-weight: var(--weight-display);
   letter-spacing: 0.14em;
-  color: var(--color-text);
+  /*
+   * 잉크는 이 자리를 감싼 쪽이 정할 수 있다.
+   *
+   * 어떤 기록에서는 못 들어간 곳과 들어간 곳을 구분해야 한다. 그 판단은
+   * 주소가 아니라 그날의 상태에 속하므로 Place가 스스로 정하지 않는다.
+   * 아무도 정해 주지 않으면 그냥 제 잉크로 선다.
+   */
+  color: var(--place-ink, var(--color-text));
+  transition: color var(--dur-base) var(--ease-out);
 }
 
 .address,
 .where {
   font-size: var(--text-meta);
   color: var(--color-text-muted);
+}
+
+/*
+ * 끝내 열리지 않았거나 들어가지 않은 자리의 주소.
+ *
+ * 줄은 문단에 긋는다. 안쪽의 링크가 자기 밑줄을 지워도 위에서 내려온 줄은
+ * 그대로 그어진다 — 주소를 지운 것이 아니라 그 주소에 일어난 일을 적은
+ * 것이라서, 주소는 계속 읽히고 눌러서 지도로도 갈 수 있다.
+ */
+.address {
+  text-decoration-line: var(--place-strike, none);
+  text-decoration-color: var(--color-line-strong);
+  text-decoration-thickness: from-font;
 }
 
 /* 링크로 꾸미지 않는다. 주소는 주소로 보여야 한다. */

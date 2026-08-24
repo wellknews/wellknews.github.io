@@ -70,6 +70,11 @@ const PAGES = [
     path: '/session/pleasure-is-not-a-sin',
     kind: 'session',
   },
+  {
+    name: 'session/seongsu-plan-collapse',
+    path: '/session/seongsu-plan-collapse',
+    kind: 'session',
+  },
   { name: 'session-index', path: '/session', kind: 'index' },
   { name: 'thread-index', path: '/thread', kind: 'index' },
   { name: 'thread/related-but-unresolved', path: '/thread/related-but-unresolved', kind: 'index' },
@@ -294,6 +299,30 @@ const DEVICES = [
     target: '[class*="Bridge-module__bridge"]',
     read: () =>
       getComputedStyle(document.querySelector('[class*="Bridge-module__reach"]')).backgroundColor,
+    changed: (before, after) => before !== after,
+    hold: true,
+  },
+  {
+    kind: 'session',
+    label: '붙잡는 계획 한 줄',
+    target: '[class*="PlanStage-module__name"]',
+    watch: '[class*="PlanStage-module__track"]',
+    /* 붙잡은 줄이 아니라 나머지가 물러난다. 그래서 두 번째 줄의 잉크를 잰다. */
+    read: () =>
+      getComputedStyle(document.querySelectorAll('[class*="PlanStage-module__name"]')[1]).color,
+    changed: (before, after) => before !== after,
+  },
+  {
+    kind: 'session',
+    label: '눈에 준 힘',
+    /*
+     * 누르는 자리는 이 구간 안이면 어디든 되지만, 구간 자체는 화면 몇 개를
+     * 덮을 만큼 넓어서 그 한가운데를 짚으면 화면 밖이 된다. 그래서 안쪽의
+     * 작은 자리를 눌러 위로 올려 보낸다 — 사람이 하는 일도 그것이다.
+     */
+    target: '[class*="Cue-module__cue"]',
+    watch: '[class*="Cue-module__state"]',
+    read: () => getComputedStyle(document.querySelector('[class*="Cue-module__state"]')).color,
     changed: (before, after) => before !== after,
     hold: true,
   },

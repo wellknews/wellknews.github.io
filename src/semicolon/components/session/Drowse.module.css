@@ -1,0 +1,48 @@
+/*
+ * 졸음이 닿는 곳은 보조 층뿐이다.
+ *
+ * 여기서 내보내는 값을 읽는 것은 결과 표시와 조건과 계획선이고, 본문은
+ * 이 값들을 하나도 쓰지 않는다. 그래서 어느 단계에서도 문장은 그대로 읽힌다.
+ *
+ *   --drowse-drop  보조 정보가 기준선에서 내려가는 거리
+ *   --drowse-line  계획선의 농도
+ *   --drowse-ink   결과 표시의 잉크
+ */
+.drowse {
+  --drowse-drop: 0px;
+  --drowse-line: 1;
+  --drowse-ink: var(--color-text);
+}
+
+/* 깨어 있는 구간. 아무것도 어긋나지 않는다. */
+.drowse[data-level='1'] {
+  --drowse-drop: 0px;
+  --drowse-line: 1;
+  --drowse-ink: var(--color-text);
+}
+
+/* 졸린 구간. 결과 표시가 2px 내려앉고, 조건은 그보다 더 내려간다. */
+.drowse[data-level='2'] {
+  --drowse-drop: 2px;
+  --drowse-line: 0.78;
+  --drowse-ink: var(--color-text-muted);
+}
+
+/*
+ * 눈을 뜬 채로 자는 구간.
+ *
+ * 5px 내려앉고, 제일 바깥의 조건은 12px까지 벗어난다. 계획선은 절반쯤
+ * 옅어진다 — 계획이 없어진 것이 아니라 내가 못 붙잡고 있는 것이다.
+ */
+.drowse[data-level='3'] {
+  --drowse-drop: 5px;
+  --drowse-line: 0.5;
+  --drowse-ink: var(--color-text-muted);
+}
+
+/* 눈에 힘을 준 동안. 어긋나 있던 것이 제자리로 돌아온다. */
+.drowse[data-awake='true'] {
+  --drowse-drop: 0px;
+  --drowse-line: 1;
+  --drowse-ink: var(--color-text);
+}

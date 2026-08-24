@@ -1,0 +1,61 @@
+/*
+ * 격자.
+ *
+ * 낱말이 나란히 놓이는 것 자체가 이 장치의 내용이다. 세로로 늘어놓으면
+ * 목록이 되고, 목록은 순서를 주장한다. 한 판에 같이 놓여야 «한 공간 안에
+ * 동시에 있던 것»으로 읽힌다.
+ */
+.grammar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 28px) clamp(20px, 4vw, 56px);
+  width: min(100%, 34rem);
+  list-style: none;
+}
+
+.word {
+  color: var(--color-text);
+  letter-spacing: 0.24em;
+}
+
+/* 좁은 판면에서는 두 열. 세 열로 버티면 낱말이 줄바꿈된다. */
+@media (max-width: 599px) {
+  .grammar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .grammar {
+      view-timeline-name: --grammar;
+    }
+
+    /*
+     * 한 낱말씩 조금 늦게 도착한다.
+     *
+     * 간격을 더 벌리면 낱말이 하나씩 «등장»하는 연출이 되고, 그러면 읽는
+     * 사람이 여섯 번 기다리게 된다. 여기서 필요한 것은 여섯이 거의 동시에
+     * 앉되 완전히 동시는 아닌 정도다.
+     */
+    .word {
+      animation-name: grammar-settle;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: --grammar;
+      animation-range: entry calc(26% + var(--order) * 3%) entry calc(46% + var(--order) * 3%);
+    }
+  }
+}
+
+@keyframes grammar-settle {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
