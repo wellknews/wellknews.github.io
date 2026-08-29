@@ -17,7 +17,13 @@ type Props = {
 const TOUCHED = 0.04
 
 /**
- * 말 한 마디.
+ * 말 한 마디, 그리고 거기 딸려 오는 것.
+ *
+ * 한 사람이 한 번에 보낸 것을 통째로 하나의 자리에 둔다. 말풍선과 사진과
+ * 상태가 각각 다른 규칙으로 앉으면 페이지는 채팅이다가 도판이다가 다시
+ * 채팅이 되는데, 이 기록에서는 형태가 곧 내용이라 그 흔들림이 곧 내용의
+ * 흔들림이다. 여기서 정하는 것은 좌우와 폭 하나뿐이고, 안에 무엇이 들어오든
+ * 그것을 따른다.
  *
  * 나타나는 방식은 글자를 한 자씩 찍는 쪽이 아니다. 그렇게 하면 읽는 사람이
  * 기계의 속도를 기다리게 되고, 이미 끝난 대화가 지금 일어나는 척을 하게 된다.
@@ -57,24 +63,9 @@ function Message({ turn }: { turn: DirectMessageTurn }) {
           />
         </figure>
       ) : null}
+
+      {turn.interlude ? <Interlude kind={turn.interlude} /> : null}
     </article>
-  )
-}
-
-/**
- * 대화가 한 번 멈추는 자리.
- *
- * 사이에 끼워 넣은 상태 화면은 말이 아니므로 대화의 흐름에서 한 칸 물러나
- * 판면 가운데에 앉는다. 나타나는 방식은 말과 같게 두어, 이것도 스크롤을
- * 따라 도착한 무엇이지 처음부터 켜져 있던 계기판이 아니라는 것을 남긴다.
- */
-function Pause({ kind }: { kind: NonNullable<DirectMessageTurn['interlude']> }) {
-  const { ref, inView } = useInView<HTMLDivElement>({ amount: TOUCHED })
-
-  return (
-    <div ref={ref} className={styles.pause} data-arrived={inView}>
-      <Interlude kind={kind} arrived={inView} />
-    </div>
   )
 }
 
@@ -95,9 +86,8 @@ export function Conversation({ transcript }: Props) {
     <section className={styles.thread} aria-label="ME와 TAB이 나눈 대화">
       <ol className={styles.turns}>
         {transcript.map((turn) => (
-          <li key={turn.id} className={styles.turn}>
+          <li key={turn.id}>
             <Message turn={turn} />
-            {turn.interlude ? <Pause kind={turn.interlude} /> : null}
           </li>
         ))}
       </ol>

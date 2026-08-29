@@ -1,18 +1,26 @@
 /*
- * 대화 사이에 끼는 상태 화면.
+ * 말에 딸려 오는, 말이 아닌 것.
  *
- * 상자로 만들지 않는다. 색면으로 칠하거나 테두리를 두르면 «어느 상자에
- * 들어 있는가»가 구분이 되어 버리고, 이 판면에서 구획을 만드는 것은 여백이다.
- * 위아래에 획 하나씩만 두어 대화가 여기서 잠깐 끊긴다는 것만 남긴다.
+ * 위아래에 획을 긋고 판면 가운데에 세우면 다른 기록의 도판이 된다. 그 조판은
+ * 이 지면의 것이 아니다 — 여기서는 모든 것이 «누가 말했는가»에 매여 좌우로
+ * 앉는다. 그러니 이것도 보낸 사진과 같은 자리에, 같은 폭으로, 같은 선을 두르고
+ * 앉는다. 폭과 정렬은 이 안에서 정하지 않는다. 말이 정한 것을 그대로 받는다.
+ *
+ * 말과 구분되는 것은 글꼴이다. 말은 명조로 앉고 이것은 고정폭으로 앉는다.
+ * 사람이 한 말과 그때 사실이던 것의 차이가 그 한 겹이면 충분하다.
  */
-.card {
+.status {
   display: grid;
-  row-gap: clamp(18px, 2.4vw, 26px);
+  width: 100%;
+  row-gap: clamp(14px, 1.8vw, 20px);
   margin: 0;
-  padding-block: clamp(22px, 3vw, 32px);
-  border-top: 1px solid var(--color-line-strong);
-  border-bottom: 1px solid var(--color-line);
+  padding: clamp(16px, 2vw, 22px) clamp(17px, 2.2vw, 24px);
+  border: 1px solid var(--color-line);
   color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: var(--tracking-meta);
+  line-height: 1.4;
 }
 
 .label {
@@ -23,14 +31,14 @@
 
 .rows {
   display: grid;
-  row-gap: 10px;
+  row-gap: 9px;
   margin: 0;
 }
 
 .rows > div {
   display: grid;
-  grid-template-columns: minmax(0, 8em) auto;
-  column-gap: 20px;
+  grid-template-columns: minmax(0, 7.5em) auto;
+  column-gap: 18px;
 }
 
 .rows dt,
@@ -45,7 +53,7 @@
 /*
  * 켜져 있다는 표시.
  *
-  * 깜빡이지 않는다. 깜빡이는 점은 «지금 감시하고 있다»는 뜻이 되고, 여기서
+ * 깜빡이지 않는다. 깜빡이는 점은 «지금 감시하고 있다»는 뜻이 되고, 여기서
  * 말하려는 것은 감시가 아니라 그냥 켜져 있었다는 사실이다.
  */
 .on::before {
@@ -75,9 +83,9 @@
  */
 .branches {
   display: grid;
-  row-gap: 12px;
+  row-gap: 9px;
   margin: 0;
-  padding: 0 0 0 22px;
+  padding: 0 0 0 20px;
   border-left: 1px solid var(--color-line-strong);
   list-style: none;
 }
@@ -85,17 +93,17 @@
 .branches li {
   display: grid;
   position: relative;
-  grid-template-columns: minmax(0, 8em) auto;
+  grid-template-columns: minmax(0, 7.5em) auto;
   align-items: baseline;
-  column-gap: 20px;
+  column-gap: 18px;
 }
 
 /* 세로 획에서 이름 쪽으로 뻗는 짧은 눈금. */
 .branches li::before {
   position: absolute;
-  top: 0.62em;
-  left: -22px;
-  width: 14px;
+  top: 0.6em;
+  left: -20px;
+  width: 12px;
   height: 1px;
   background: var(--color-line-strong);
   content: '';
@@ -123,7 +131,7 @@
  * 브라우저로 나눠 쓴 것이므로, 둘의 관계는 «나란히 있음»이 전부다.
  */
 .branches li[data-state='twin'] + li[data-state='twin'] {
-  margin-top: -6px;
+  margin-top: -5px;
 }
 
 .branches li[data-state='unnamed'] b {
@@ -142,14 +150,9 @@
   font-weight: 400;
 }
 
-.named small {
-  font-size: 0.6875rem;
-  letter-spacing: 0.08em;
-}
-
 /* 빈 자리에서 이름 쪽으로 건너간 획. */
 .namedLine {
-  width: 46px;
+  width: 44px;
   height: 1px;
   background: var(--color-line-strong);
   transform-origin: left;
@@ -159,9 +162,9 @@
 
 .track {
   display: grid;
-  grid-template-columns: minmax(0, 10em) minmax(60px, 1fr) auto;
+  grid-template-columns: minmax(0, 9.5em) minmax(56px, 1fr) auto;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .track p {
@@ -212,15 +215,16 @@
  * 도착했을 때 한 번 일어나는 일.
  *
  * 선은 처음부터 다 그어져 있지 않고, 이 자리에 닿은 사람 앞에서 자란다.
- * 저절로 도는 애니메이션이 아니라 스크롤이 시작한 한 번짜리 동작이다.
+ * 저절로 도는 애니메이션이 아니라 스크롤이 시작한 한 번짜리 동작이고,
+ * 끝난 상태가 기본이라 움직임을 줄이기로 한 사람에게는 처음부터 그어져 있다.
  */
 @media (prefers-reduced-motion: no-preference) {
-  .card[data-arrived='false'] .now,
-  .card[data-arrived='false'] .namedLine {
+  .status[data-arrived='false'] .now,
+  .status[data-arrived='false'] .namedLine {
     transform: scaleX(0.34);
   }
 
-  .card[data-arrived='false'] .on::before {
+  .status[data-arrived='false'] .on::before {
     opacity: 0;
   }
 
@@ -234,19 +238,6 @@
   }
 }
 
-@media (max-width: 699px) {
-  .rows > div,
-  .branches li {
-    grid-template-columns: minmax(0, 7em) auto;
-    column-gap: 14px;
-  }
-
-  .track {
-    grid-template-columns: minmax(0, 8.5em) minmax(40px, 1fr) auto;
-    gap: 12px;
-  }
-}
-
 /*
  * 아주 좁은 판면(360px대).
  *
@@ -254,10 +245,16 @@
  * 말하지 못하면 이 장면은 아무 말도 하지 않는 것이므로, 이름을 위로 올리고
  * 선에 한 줄을 통째로 준다.
  */
-@media (max-width: 419px) {
+@media (max-width: 519px) {
+  .rows > div,
+  .branches li {
+    grid-template-columns: minmax(0, 6.5em) auto;
+    column-gap: 12px;
+  }
+
   .track {
     grid-template-columns: 1fr auto;
-    row-gap: 8px;
+    row-gap: 7px;
   }
 
   .track p {
