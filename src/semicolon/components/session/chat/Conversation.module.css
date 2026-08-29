@@ -1,0 +1,154 @@
+/*
+ * 대화의 판면.
+ *
+ * 이 기록에서 판면을 통째로 가져가는 이유는 좌우가 내용이기 때문이다. 본문
+ * 한 줄기로 접으면 누가 말했는지가 이름표로만 남고, 그 순간 이 글은 대화의
+ * 기록이 아니라 대화에 대한 요약이 된다.
+ */
+.thread {
+  /* 판면의 좌우 여백은 Scene의 shell이 이미 잡는다. 여기서는 폭만 좁힌다. */
+  width: min(100%, 940px);
+  margin-inline: auto;
+}
+
+.turns {
+  display: grid;
+  /* 말과 말 사이. 문단 사이보다 넓어야 «다음 사람»으로 읽힌다. */
+  row-gap: clamp(48px, 6vw, 82px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.turn {
+  display: grid;
+  row-gap: clamp(28px, 4vw, 48px);
+}
+
+.message {
+  display: grid;
+  width: min(74%, 620px);
+  row-gap: 10px;
+}
+
+.message[data-side='me'] {
+  justify-items: end;
+  justify-self: end;
+}
+
+.message[data-side='tab'] {
+  justify-items: start;
+  justify-self: start;
+}
+
+.speaker {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/*
+ * 말이 앉는 자리.
+ *
+ * 모서리를 굴리지 않고 꼬리를 달지 않는다. 굴리면 메신저의 스크린샷이 되고,
+ * 꼬리를 달면 만화가 된다. 여기서 좌우를 가르는 것은 위치와 아주 옅은 농도
+ * 차이뿐이고, 그 정도면 누가 말했는지는 이미 충분히 읽힌다.
+ */
+.bubble {
+  width: 100%;
+  padding: clamp(18px, 2.2vw, 26px) clamp(18px, 2.4vw, 28px);
+  border: 1px solid var(--color-line);
+  background: rgb(255 255 255 / 0.5);
+}
+
+/* 내 말은 종이에 한 번 눌린 자리처럼 둔다. 선 대신 농도로 구분한다. */
+.message[data-side='me'] .bubble {
+  border-color: transparent;
+  background: rgb(17 17 17 / 0.05);
+}
+
+.bubble p {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-body);
+  line-height: 1.8;
+}
+
+.bubble p + p {
+  margin-top: 1.1em;
+}
+
+/*
+ * DM으로 보낸 사진.
+ *
+ * 말풍선 안에 넣지 않고 바로 아래에 따로 놓는다. 실제로도 문장 다음에 온
+ * 별개의 전송이었고, 안에 넣으면 그 문장의 삽화가 되어 버린다.
+ */
+.attachment {
+  width: min(72%, 360px);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  line-height: 0;
+}
+
+.attachment img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 사이에 끼는 상태 화면은 어느 쪽 말도 아니므로 가운데에 선다. */
+.pause {
+  width: min(100%, 620px);
+  justify-self: center;
+  padding-block: clamp(20px, 3vw, 36px);
+}
+
+/*
+ * 도착하는 방식.
+ *
+ * 끝난 상태를 기본으로 둔다. 관찰자가 돌지 않는 환경에서도, 움직임을 줄이기로
+ * 한 사람에게도 문장은 처음부터 전부 읽힌다. 움직임은 그 위에 얹는 것이지
+ * 읽기의 조건이 아니다.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .message,
+  .pause {
+    transition:
+      opacity var(--dur-base) var(--ease-out),
+      transform var(--dur-base) var(--ease-out),
+      filter var(--dur-base) var(--ease-out);
+  }
+
+  .message[data-arrived='false'],
+  .pause[data-arrived='false'] {
+    /* 12px. 눈이 «움직였다»고 느끼기 직전까지만 내려 둔다. */
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(3px);
+  }
+}
+
+/*
+ * 작은 판면.
+ *
+ * 좁은 화면에서 74%는 말풍선이 아니라 실 한 줄이 된다. 폭을 크게 열되
+ * 좌우의 차이는 남긴다 — 여기서 지켜야 하는 것은 여백이 아니라 방향이다.
+ */
+@media (max-width: 699px) {
+  .message {
+    width: 92%;
+  }
+
+  .bubble {
+    padding: 16px 17px;
+  }
+
+  .bubble p {
+    line-height: 1.72;
+  }
+
+  .attachment {
+    width: min(82%, 280px);
+  }
+}

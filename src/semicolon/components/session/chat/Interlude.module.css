@@ -1,0 +1,266 @@
+/*
+ * 대화 사이에 끼는 상태 화면.
+ *
+ * 상자로 만들지 않는다. 색면으로 칠하거나 테두리를 두르면 «어느 상자에
+ * 들어 있는가»가 구분이 되어 버리고, 이 판면에서 구획을 만드는 것은 여백이다.
+ * 위아래에 획 하나씩만 두어 대화가 여기서 잠깐 끊긴다는 것만 남긴다.
+ */
+.card {
+  display: grid;
+  row-gap: clamp(18px, 2.4vw, 26px);
+  margin: 0;
+  padding-block: clamp(22px, 3vw, 32px);
+  border-top: 1px solid var(--color-line-strong);
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-text-muted);
+}
+
+.label {
+  color: var(--color-text);
+}
+
+/* ---------- HOME NODE ---------- */
+
+.rows {
+  display: grid;
+  row-gap: 10px;
+  margin: 0;
+}
+
+.rows > div {
+  display: grid;
+  grid-template-columns: minmax(0, 8em) auto;
+  column-gap: 20px;
+}
+
+.rows dt,
+.rows dd {
+  margin: 0;
+}
+
+.rows dd {
+  color: var(--color-text);
+}
+
+/*
+ * 켜져 있다는 표시.
+ *
+  * 깜빡이지 않는다. 깜빡이는 점은 «지금 감시하고 있다»는 뜻이 되고, 여기서
+ * 말하려는 것은 감시가 아니라 그냥 켜져 있었다는 사실이다.
+ */
+.on::before {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  content: '';
+  vertical-align: 0.12em;
+}
+
+/* ---------- COMMAND ---------- */
+
+.commander {
+  margin: 0;
+  color: var(--color-text);
+}
+
+/*
+ * 군단의 가지.
+ *
+ * 선을 문자로 그리지 않는다. ├ 같은 글자는 고정폭이 그것을 갖고 있을 때만
+ * 줄이 맞고, 없으면 다른 글꼴로 떨어져 나와 눈금이 어긋난다. 여기서 선은
+ * 글자가 아니라 획이다.
+ */
+.branches {
+  display: grid;
+  row-gap: 12px;
+  margin: 0;
+  padding: 0 0 0 22px;
+  border-left: 1px solid var(--color-line-strong);
+  list-style: none;
+}
+
+.branches li {
+  display: grid;
+  position: relative;
+  grid-template-columns: minmax(0, 8em) auto;
+  align-items: baseline;
+  column-gap: 20px;
+}
+
+/* 세로 획에서 이름 쪽으로 뻗는 짧은 눈금. */
+.branches li::before {
+  position: absolute;
+  top: 0.62em;
+  left: -22px;
+  width: 14px;
+  height: 1px;
+  background: var(--color-line-strong);
+  content: '';
+}
+
+.branches b {
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.branches small {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+}
+
+/* 먼저 퇴근한 쪽은 옅게 남는다. 명단에서 지우지는 않는다. */
+.branches li[data-state='off'] {
+  opacity: 0.45;
+}
+
+/*
+ * 쌍둥이.
+ *
+ * 두 줄이 붙어 있다는 것 말고 다른 표시를 하지 않는다. 같은 계정을 앱과
+ * 브라우저로 나눠 쓴 것이므로, 둘의 관계는 «나란히 있음»이 전부다.
+ */
+.branches li[data-state='twin'] + li[data-state='twin'] {
+  margin-top: -6px;
+}
+
+.branches li[data-state='unnamed'] b {
+  color: var(--color-text-muted);
+}
+
+.named {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+}
+
+.named b {
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.named small {
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+}
+
+/* 빈 자리에서 이름 쪽으로 건너간 획. */
+.namedLine {
+  width: 46px;
+  height: 1px;
+  background: var(--color-line-strong);
+  transform-origin: left;
+}
+
+/* ---------- OVERTAKE ---------- */
+
+.track {
+  display: grid;
+  grid-template-columns: minmax(0, 10em) minmax(60px, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.track p {
+  margin: 0;
+}
+
+/*
+ * 두 선.
+ *
+ * 눈금도 축도 없다. 그래프로 만들면 «몇 대 몇»을 읽으려 하게 되고, 그 순간
+ * 밝히지 않기로 한 숫자를 찾게 된다. 여기서 읽어야 하는 것은 길이 차이뿐이다.
+ */
+.past,
+.now {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: var(--color-line-strong);
+  transform-origin: left;
+}
+
+.past {
+  width: 62%;
+}
+
+.now {
+  width: 100%;
+}
+
+.past::after,
+.now::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-text);
+  content: '';
+  transform: translate(50%, -50%);
+}
+
+.count {
+  color: var(--color-text);
+}
+
+/*
+ * 도착했을 때 한 번 일어나는 일.
+ *
+ * 선은 처음부터 다 그어져 있지 않고, 이 자리에 닿은 사람 앞에서 자란다.
+ * 저절로 도는 애니메이션이 아니라 스크롤이 시작한 한 번짜리 동작이다.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .card[data-arrived='false'] .now,
+  .card[data-arrived='false'] .namedLine {
+    transform: scaleX(0.34);
+  }
+
+  .card[data-arrived='false'] .on::before {
+    opacity: 0;
+  }
+
+  .now,
+  .namedLine {
+    transition: transform var(--dur-slow) var(--ease-out);
+  }
+
+  .on::before {
+    transition: opacity var(--dur-slow) var(--ease-out) var(--dur-fast);
+  }
+}
+
+@media (max-width: 699px) {
+  .rows > div,
+  .branches li {
+    grid-template-columns: minmax(0, 7em) auto;
+    column-gap: 14px;
+  }
+
+  .track {
+    grid-template-columns: minmax(0, 8.5em) minmax(40px, 1fr) auto;
+    gap: 12px;
+  }
+}
+
+/*
+ * 아주 좁은 판면(360px대).
+ *
+ * 세 칸을 한 줄에 두면 가운데 선이 점 하나만 한 폭으로 남는다. 선이 길이를
+ * 말하지 못하면 이 장면은 아무 말도 하지 않는 것이므로, 이름을 위로 올리고
+ * 선에 한 줄을 통째로 준다.
+ */
+@media (max-width: 419px) {
+  .track {
+    grid-template-columns: 1fr auto;
+    row-gap: 8px;
+  }
+
+  .track p {
+    grid-column: 1 / -1;
+  }
+}

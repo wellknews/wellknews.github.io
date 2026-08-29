@@ -1,0 +1,73 @@
+/*
+ * 대화가 끝난 뒤의 자리.
+ *
+ * 마지막 말과 이 자리 사이를 크게 비운다. 붙여 놓으면 버튼이 그 말의 답으로
+ * 읽히지 않고 페이지의 꼬리에 달린 장치가 된다 — 실제로는 그 반대이고,
+ * 그 사실을 여백이 말한다.
+ */
+.panel {
+  display: grid;
+  row-gap: 14px;
+  width: min(100%, 620px);
+  margin-inline: auto;
+  padding-block: clamp(30px, 4.5vw, 52px);
+  border-top: 1px solid var(--color-line-strong);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.kicker {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.heading {
+  margin: 0 0 clamp(14px, 2vw, 22px);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: clamp(1.125rem, 1rem + 0.6vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/*
+ * 상태를 스스로 말하는 버튼.
+ *
+ * 누르면 «RENDERING 03 / 18»이 되고, 끝나면 «다시 저장»이 된다. 진행률
+ * 막대나 알림 창을 따로 두지 않는 이유는, 여기서 일어나는 일이 하나뿐이라
+ * 그것을 말할 자리도 하나면 되기 때문이다.
+ */
+.button {
+  width: 100%;
+  min-height: 60px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-text);
+  background: var(--color-text);
+  color: var(--color-bg);
+  cursor: pointer;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  transition:
+    background var(--dur-fast) ease,
+    color var(--dur-fast) ease;
+}
+
+.button:hover:not(:disabled),
+.button:focus-visible:not(:disabled) {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.button:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.note {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* 끝난 순간만 잉크가 붙는다. 이 페이지에서 색이 글자로 넘어오는 유일한 자리다. */
+.note[data-state='done'] {
+  color: var(--accent);
+}
