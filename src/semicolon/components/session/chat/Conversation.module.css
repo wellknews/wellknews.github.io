@@ -102,23 +102,48 @@
 /*
  * 도착하는 방식.
  *
- * 끝난 상태를 기본으로 둔다. 관찰자가 돌지 않는 환경에서도, 움직임을 줄이기로
- * 한 사람에게도 문장은 처음부터 전부 읽힌다. 움직임은 그 위에 얹는 것이지
- * 읽기의 조건이 아니다.
+ * 관찰자를 쓰지 않는다. 관찰자는 «보이기 시작했는가»를 한 번 묻고 끝나는데,
+ * 그 «한 번»이 언제인지는 말의 키에 따라 달라진다. 화면보다 큰 말은 아래쪽에
+ * 몇십 픽셀만 걸쳐도 발동해 버리고, 420ms짜리 페이드는 그 말이 아직 화면
+ * 밖에 있는 동안 끝난다. 애니메이션이 없는 것이 아니라 아무도 못 보는 자리에서
+ * 끝나 있었다.
+ *
+ * 그래서 시간이 아니라 스크롤에 묶는다. 진행도가 스크롤 위치 자체이므로
+ * 키가 크든 작든, 빨리 넘기든 천천히 읽든 도착은 언제나 화면 안에서 일어난다.
+ * 이 지면이 «연속으로 변하는 것은 타임라인»이라고 적어 둔 그 자리다.
+ *
+ * 끝난 상태가 기본이다. 타임라인을 모르는 브라우저에서도, 움직임을 줄이기로
+ * 한 사람에게도 문장은 처음부터 전부 읽힌다.
  */
-@media (prefers-reduced-motion: no-preference) {
-  .message {
-    transition:
-      opacity var(--dur-base) var(--ease-out),
-      transform var(--dur-base) var(--ease-out),
-      filter var(--dur-base) var(--ease-out);
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .message {
+      animation-name: message-in;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      /*
+       * 나타나기 시작하자마자 시작해서 판면 한가운데쯤에서 끝난다. entry로
+       * 시작을 잡고 cover로 끝을 잡는 이유는 둘의 기준이 다르기 때문이다 —
+       * entry는 말의 키로 재고 cover는 화면까지 같이 재므로, 섞어 두면 짧은
+       * 말과 긴 말이 같은 자리에서 도착한다.
+       */
+      animation-range: entry 15% cover 28%;
+    }
   }
+}
 
-  .message[data-arrived='false'] {
+@keyframes message-in {
+  from {
     /* 12px. 눈이 «움직였다»고 느끼기 직전까지만 내려 둔다. */
     opacity: 0;
     transform: translateY(12px);
     filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
   }
 }
 

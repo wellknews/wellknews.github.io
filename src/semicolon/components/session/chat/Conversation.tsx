@@ -1,4 +1,3 @@
-import { useInView } from '../../../motion/useInView'
 import type { DirectMessageTurn } from '../../../content/sessions/commander-at-home.transcript'
 import { Interlude } from './Interlude'
 import styles from './Conversation.module.css'
@@ -6,15 +5,6 @@ import styles from './Conversation.module.css'
 type Props = {
   transcript: readonly DirectMessageTurn[]
 }
-
-/*
- * 들어온 것으로 치는 비율.
- *
- * 기본값(0.5)을 쓰면 긴 말은 영영 나타나지 않는다. 화면보다 높은 문단은
- * 절반이 보이는 순간이 아예 오지 않기 때문이다. 여기서 물어야 하는 것은
- * «다 보이는가»가 아니라 «닿았는가»여서 기준을 아주 낮게 둔다.
- */
-const TOUCHED = 0.04
 
 /**
  * 말 한 마디, 그리고 거기 딸려 오는 것.
@@ -27,19 +17,14 @@ const TOUCHED = 0.04
  *
  * 나타나는 방식은 글자를 한 자씩 찍는 쪽이 아니다. 그렇게 하면 읽는 사람이
  * 기계의 속도를 기다리게 되고, 이미 끝난 대화가 지금 일어나는 척을 하게 된다.
- * 여기서 하는 일은 스크롤을 따라 한 덩어리가 조용히 자리를 잡는 것뿐이다.
+ * 여기서 하는 일은 스크롤을 따라 한 덩어리가 조용히 자리를 잡는 것뿐이고,
+ * 그 진행도는 시간이 아니라 스크롤 위치가 쥐고 있다(Conversation.module.css).
  */
 function Message({ turn }: { turn: DirectMessageTurn }) {
-  const { ref, inView } = useInView<HTMLElement>({ amount: TOUCHED })
   const mine = turn.speaker === 'me'
 
   return (
-    <article
-      ref={ref}
-      className={styles.message}
-      data-side={mine ? 'me' : 'tab'}
-      data-arrived={inView}
-    >
+    <article className={styles.message} data-side={mine ? 'me' : 'tab'}>
       <p className={`mono ${styles.speaker}`}>{mine ? 'ME' : 'TAB'}</p>
 
       <div className={styles.bubble}>

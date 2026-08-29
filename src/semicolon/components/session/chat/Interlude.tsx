@@ -1,14 +1,7 @@
-import { useInView } from '../../../motion/useInView'
 import type { DirectMessageTurn } from '../../../content/sessions/commander-at-home.transcript'
 import styles from './Interlude.module.css'
 
 type Kind = NonNullable<DirectMessageTurn['interlude']>
-
-/*
- * 들어온 것으로 치는 비율. 말과 같은 기준을 쓴다 — 이것도 말에 딸려 오는
- * 것이라, 말보다 늦게 도착하거나 다른 규칙으로 도착하면 안 된다.
- */
-const TOUCHED = 0.04
 
 /**
  * 본가에 몸이 있는 동안에도 집에서 돌아가던 것.
@@ -55,20 +48,27 @@ function Legion() {
     <>
       <p className={styles.commander}>ME</p>
 
-      <ul className={styles.branches}>
-        {LEGION.map((member) => (
-          <li key={member.name} data-state={member.state}>
-            <b>{member.name}</b>
-            <small>{member.note}</small>
-          </li>
-        ))}
+      {/*
+        획과 눈금은 목록 바깥에서 그린다. 목록 자체에 왼쪽 여백을 주면 그리지도
+        않는 기호의 자리를 비워 둔 목록이 되고, 가운데 맞춤 안에 들어가는 날
+        잉크 전체가 그 절반만큼 옆으로 밀린다.
+      */}
+      <div className={styles.tree}>
+        <ul className={styles.branches}>
+          {LEGION.map((member) => (
+            <li key={member.name} data-state={member.state}>
+              <b>{member.name}</b>
+              <small>{member.note}</small>
+            </li>
+          ))}
 
-        {/* 아직 이름이 없는 자리. 비어 있다는 것 자체가 이 장면의 내용이다. */}
-        <li data-state="unnamed">
-          <b aria-hidden="true">—</b>
-          <small>UNNAMED</small>
-        </li>
-      </ul>
+          {/* 아직 이름이 없는 자리. 비어 있다는 것 자체가 이 장면의 내용이다. */}
+          <li data-state="unnamed">
+            <b aria-hidden="true">—</b>
+            <small>UNNAMED</small>
+          </li>
+        </ul>
+      </div>
     </>
   )
 }
@@ -129,11 +129,10 @@ const KINDS = {
  * 셋 다 누가 말했는지에 매여 있고, 그래야 이 페이지가 끝까지 한 문법으로 읽힌다.
  */
 export function Interlude({ kind }: { kind: Kind }) {
-  const { ref, inView } = useInView<HTMLElement>({ amount: TOUCHED })
   const { label, body: Body, caption } = KINDS[kind]
 
   return (
-    <figure ref={ref} className={styles.status} data-arrived={inView}>
+    <figure className={styles.status}>
       <figcaption className={styles.label}>
         {label}
         {/* 무엇을 보여 주는 자리인지는 낭독에만 남긴다. 화면에서는 형태가 말한다. */}

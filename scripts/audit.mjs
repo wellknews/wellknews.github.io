@@ -75,6 +75,11 @@ const PAGES = [
     path: '/session/seongsu-plan-collapse',
     kind: 'session',
   },
+  {
+    name: 'session/commander-at-home',
+    path: '/session/commander-at-home',
+    kind: 'session',
+  },
   { name: 'session-index', path: '/session', kind: 'index' },
   { name: 'thread-index', path: '/thread', kind: 'index' },
   {
