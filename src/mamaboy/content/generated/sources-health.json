@@ -1,49 +1,49 @@
 {
   "lifespan-io": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
-    "articleCount": 4,
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
+    "articleCount": 3,
     "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "fight-aging": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
     "articleCount": 7,
     "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "toy-book": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
     "articleCount": 10,
     "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "longevity-technology": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
     "articleCount": 20,
     "lastFailure": "2026-08-29T12:18:53.113Z"
   },
   "hackaday": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
-    "articleCount": 1,
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
+    "articleCount": 2,
     "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "colossal": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
     "articleCount": 1,
     "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "creative-boom": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
     "articleCount": 6,
     "lastFailure": "2026-08-22T06:17:13.235Z"
   },
   "dezeen": {
     "failureCount": 0,
-    "lastSuccess": "2026-08-30T12:18:50.977Z",
+    "lastSuccess": "2026-08-30T18:18:47.774Z",
     "articleCount": 20,
     "lastFailure": "2026-08-22T06:17:13.235Z"
   }
