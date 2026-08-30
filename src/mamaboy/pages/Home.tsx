@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 
 import { CategorySection } from '../components/CategorySection'
 import { EditorialFeed } from '../components/EditorialFeed'
+import { FacingCheck } from '../components/FacingCheck'
 import { FloatingGel } from '../components/FloatingGel'
 import { PrototypeNote } from '../components/PrototypeNote'
 import { articles } from '../content/feed'
@@ -69,6 +70,8 @@ export function Home() {
 
   return (
     <div className={`page ${styles.page}`}>
+      <FacingCheck />
+
       <FloatingGel />
 
       <section className={`shell ${styles.masthead}`}>

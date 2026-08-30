@@ -1,0 +1,203 @@
+/*
+ * facing은 지면 위에 별도 카드로 올라가지 않는다.
+ * 아침의 첫 질문이므로 Cream Paper 자체에서 바로 시작하고, 선택된 상태에만
+ * 작은 Gel 신호가 생긴다. 버튼이 많아져도 첫인상은 계속 Cream + Ink여야 한다.
+ */
+.facing {
+  position: relative;
+  z-index: var(--z-content);
+  padding-block: clamp(28px, 4.4vw, 58px) clamp(34px, 5vw, 70px);
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(280px, 1.3fr);
+  align-items: end;
+  gap: clamp(20px, 4vw, 64px);
+  margin-bottom: clamp(24px, 3.8vw, 46px);
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: var(--accent-ink);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-editorial);
+  font-size: var(--text-page);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-feature);
+  line-height: 0.9;
+}
+
+.question {
+  max-width: 25em;
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-reading);
+  font-size: var(--text-lead);
+  font-weight: var(--weight-medium);
+  line-height: 1.38;
+  letter-spacing: var(--tracking-headline);
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+}
+
+/*
+ * 기본 상태는 종이다. Liquid Glass와 Orange Gel은 «선택»을 설명할 때만 쓴다.
+ * 모든 버튼을 색면으로 만들면 facing만 앱 UI처럼 튀므로, 깊이는 크기와 종이 농도로
+ * 먼저 구분한다.
+ */
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  appearance: none;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-reading);
+  line-height: 1;
+  cursor: pointer;
+  transform-origin: center;
+  transition:
+    transform var(--dur-touch) var(--ease-touch),
+    background-color var(--dur-micro) var(--ease-touch),
+    border-color var(--dur-micro) var(--ease-touch),
+    box-shadow var(--dur-touch) var(--ease-touch),
+    color var(--dur-micro) var(--ease-touch),
+    opacity var(--dur-touch) linear;
+}
+
+.chip[data-depth='0'] {
+  min-height: 52px;
+  padding-inline: 19px;
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+}
+
+.chip[data-depth='1'] {
+  min-height: 46px;
+  padding-inline: 16px;
+  border-color: var(--color-line);
+  background: var(--surface-clean);
+  font-size: var(--text-meta);
+  font-weight: var(--weight-medium);
+  animation: facing-child-in var(--dur-micro-slow) var(--ease-soft) both;
+}
+
+.chip[data-depth='2'] {
+  min-height: 44px;
+  padding-inline: 14px;
+  border-color: var(--color-line);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--text-label);
+  font-weight: var(--weight-medium);
+  animation: facing-child-in var(--dur-micro-slow) var(--ease-soft) both;
+}
+
+/*
+ * 선택 상태는 Ink가 맡고 Orange는 6px Gel 한 방울만 남긴다.
+ * 면 전체를 주황으로 칠하지 않아 선택이 늘어나도 Orange 비중이 폭증하지 않는다.
+ */
+.chip.active {
+  border-color: transparent;
+  background: var(--color-text);
+  box-shadow: var(--shadow-press);
+  color: var(--surface-clean);
+}
+
+.chip.active::before {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, var(--chrome-light), transparent 46%), var(--surface-gel);
+  transform: translateX(-50%);
+}
+
+.mark {
+  min-width: 0.8em;
+  font-family: var(--font-editorial);
+  font-weight: var(--weight-headline);
+  text-align: center;
+  opacity: 0.68;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 32px;
+  margin-top: 16px;
+  color: var(--color-text-muted);
+  font-size: var(--text-meta);
+}
+
+.clear {
+  appearance: none;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* 새 선택지는 튀어나오지 않고 지면 사이에 끼어든다. */
+@keyframes facing-child-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (hover: hover) {
+  .chip:not(.active):hover {
+    border-color: var(--color-text);
+    background: var(--surface-clean);
+    box-shadow: var(--shadow-rest);
+  }
+}
+
+@media (max-width: 700px) {
+  .heading {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .question {
+    max-width: 19em;
+  }
+
+  .board {
+    gap: 8px;
+  }
+
+  .chip[data-depth='0'] {
+    min-height: 48px;
+    padding-inline: 16px;
+  }
+}
