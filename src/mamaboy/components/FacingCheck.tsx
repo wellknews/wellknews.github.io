@@ -555,10 +555,13 @@ export function FacingCheck() {
 
           <p className={styles.summary}>{aiResult.summary}</p>
 
-          <ResultList title="CARE" items={aiResult.care} emphasis="primary" />
+          <ResultSkincareIngredients items={aiResult.ingredients} />
+
+          <ResultList title="TODAY ROUTINE" items={aiResult.care} emphasis="primary" />
+
+          <ResultNutrients items={aiResult.nutrients} />
 
           <div className={styles.resultNotes}>
-            <ResultIngredients items={aiResult.ingredients} />
             <ResultList title="LIFESTYLE" items={aiResult.lifestyle} />
             <ResultList title="AVOID" items={aiResult.avoid} />
             <ResultList title="WATCH" items={aiResult.watch} />
@@ -598,17 +601,72 @@ function ResultList({
   )
 }
 
-function ResultIngredients({ items }: { items: FacingAiResult['ingredients'] }) {
+function ResultSkincareIngredients({ items }: { items: FacingAiResult['ingredients'] }) {
   if (items.length === 0) return null
 
   return (
-    <section className={styles.resultSection}>
-      <h4>INGREDIENTS</h4>
-      <dl className={styles.ingredients}>
+    <section className={`${styles.resultSection} ${styles.shoppingSection}`}>
+      <div className={styles.sectionHeading}>
+        <h4>SKINCARE INGREDIENTS</h4>
+        <p className={styles.sectionHint}>제품명 말고, 마스크팩·세럼·크림 성분표에서 찾아봐.</p>
+      </div>
+      <dl className={styles.adviceList}>
         {items.map((item) => (
-          <div key={`${item.name}:${item.reason}`}>
-            <dt>{item.name}</dt>
-            <dd>{item.reason}</dd>
+          <div key={`${item.name}:${item.target}`} className={styles.adviceItem}>
+            <dt className={styles.adviceName}>
+              <span>{item.name}</span>
+              <span className={styles.adviceTarget}>{item.target}</span>
+            </dt>
+            <dd className={styles.adviceBody}>
+              <p className={styles.adviceEasy}>{item.easy}</p>
+              <p className={styles.adviceMeta}>
+                <strong>어디서</strong>
+                <span>{item.lookFor}</span>
+              </p>
+              <p className={styles.adviceMeta}>
+                <strong>주의</strong>
+                <span>{item.caution}</span>
+              </p>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )
+}
+
+function ResultNutrients({ items }: { items: FacingAiResult['nutrients'] }) {
+  if (items.length === 0) return null
+
+  return (
+    <section className={`${styles.resultSection} ${styles.nutrientSection}`}>
+      <div className={styles.sectionHeading}>
+        <h4>NUTRIENTS TO CHECK</h4>
+        <p className={styles.sectionHint}>
+          영양제 제품명이 아니라, 필요할 때 확인해볼 영양 성분이야.
+        </p>
+      </div>
+      <dl className={styles.adviceList}>
+        {items.map((item) => (
+          <div key={`${item.name}:${item.why}`} className={styles.adviceItem}>
+            <dt className={styles.adviceName}>
+              <span>{item.name}</span>
+            </dt>
+            <dd className={styles.adviceBody}>
+              <p className={styles.adviceEasy}>{item.easy}</p>
+              <p className={styles.adviceMeta}>
+                <strong>왜</strong>
+                <span>{item.why}</span>
+              </p>
+              <p className={styles.adviceMeta}>
+                <strong>확인</strong>
+                <span>{item.guidance}</span>
+              </p>
+              <p className={styles.adviceMeta}>
+                <strong>주의</strong>
+                <span>{item.caution}</span>
+              </p>
+            </dd>
           </div>
         ))}
       </dl>

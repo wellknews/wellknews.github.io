@@ -3,15 +3,27 @@ type FacingSignal = {
   labels: readonly string[]
 }
 
-type FacingIngredient = {
+type FacingSkincareIngredient = {
   name: string
-  reason: string
+  easy: string
+  target: string
+  lookFor: string
+  caution: string
+}
+
+type FacingNutrient = {
+  name: string
+  easy: string
+  why: string
+  guidance: string
+  caution: string
 }
 
 type FacingAiResult = {
   summary: string
   care: string[]
-  ingredients: FacingIngredient[]
+  ingredients: FacingSkincareIngredient[]
+  nutrients: FacingNutrient[]
   lifestyle: string[]
   avoid: string[]
   watch: string[]
@@ -30,9 +42,28 @@ const FACING_RESULT_SCHEMA = {
         type: 'object',
         properties: {
           name: { type: 'string' },
-          reason: { type: 'string' },
+          easy: { type: 'string' },
+          target: { type: 'string' },
+          lookFor: { type: 'string' },
+          caution: { type: 'string' },
         },
-        required: ['name', 'reason'],
+        required: ['name', 'easy', 'target', 'lookFor', 'caution'],
+        additionalProperties: false,
+      },
+    },
+    nutrients: {
+      type: 'array',
+      maxItems: 3,
+      items: {
+        type: 'object',
+        properties: {
+          name: { type: 'string' },
+          easy: { type: 'string' },
+          why: { type: 'string' },
+          guidance: { type: 'string' },
+          caution: { type: 'string' },
+        },
+        required: ['name', 'easy', 'why', 'guidance', 'caution'],
         additionalProperties: false,
       },
     },
@@ -41,21 +72,46 @@ const FACING_RESULT_SCHEMA = {
     watch: { type: 'array', items: { type: 'string' }, maxItems: 4 },
     getHelp: { type: ['string', 'null'] },
   },
-  required: ['summary', 'care', 'ingredients', 'lifestyle', 'avoid', 'watch', 'getHelp'],
+  required: [
+    'summary',
+    'care',
+    'ingredients',
+    'nutrients',
+    'lifestyle',
+    'avoid',
+    'watch',
+    'getHelp',
+  ],
   additionalProperties: false,
 } as const
 
 const FACING_SYSTEM_INSTRUCTIONS = [
-  '너는 Mamaboy의 Facing AI Morning Check를 돕는 에디토리얼 가이드다.',
+  '너는 Mamaboy의 Facing AI Morning Check를 돕는 성분 큐레이터이자 에디토리얼 가이드다.',
+  '핵심 목적은 사용자가 마스크팩·토너·세럼·크림·클렌저·샴푸 같은 제품을 살 때 브랜드가 아니라 성분표를 보고 고를 수 있게 돕는 것이다.',
+  '브랜드명, 제품명, 판매처, 링크는 추천하지 않는다. 제품군과 성분만 말한다.',
   '사용자가 오늘 아침 거울을 보고 직접 고른 관찰만 사실로 취급한다.',
   '선택하지 않은 증상, 원인, 질환, 생활습관, 사용 제품을 사실처럼 추가하지 않는다.',
   '진단하지 않는다. 가능한 원인은 가능성으로만 표현한다.',
-  '약물이나 보충제의 구체적인 복용량을 처방하지 않는다.',
+  '근거가 약하거나 선택 신호와 관련이 약한 성분은 억지로 채우지 않는다.',
+  '모공이 열린다·닫힌다 같은 부정확한 표현을 쓰지 않는다.',
+  '음식 재료를 화장품 성분처럼 억지로 추천하지 않는다. 일반적으로 화장품에서 쓰이며 역할이 비교적 잘 알려진 성분을 우선한다.',
+  'ingredients는 2~4개를 우선하되 정말 관련이 없으면 더 적게 제안해도 된다.',
+  'ingredients.name은 사용자가 실제 성분표나 검색창에서 찾을 수 있는 통용 성분명으로 쓴다.',
+  'ingredients.easy는 전문용어를 몰라도 바로 이해되는 아주 쉬운 한국어 한 문장으로 쓴다. 어려운 단어를 다른 어려운 단어로 설명하지 않는다.',
+  'ingredients.target은 사용자가 고른 관찰 중 어떤 것 때문에 이 성분을 보는지 짧게 연결한다.',
+  'ingredients.lookFor는 마스크팩·세럼·크림·토너·클렌저·샴푸 등 어떤 제품 형태의 성분표에서 찾아볼지 구체적으로 알려준다.',
+  'ingredients.caution은 같이 과하게 쓰면 자극될 수 있는 조합, 사용 빈도, 민감 부위 등 실용적인 주의점을 짧게 쓴다.',
+  'nutrients는 영양제 제품 추천이 아니라 확인해볼 영양 성분이다. 관련성이 약하면 빈 배열로 둔다.',
+  '거울 관찰만으로 영양 결핍이 있다고 단정하지 않는다. 철분·비타민D처럼 결핍 확인이 중요한 경우 검사나 식단 확인을 우선 안내한다.',
+  'nutrients.easy도 초등학생이 읽어도 이해할 쉬운 말로 쓴다.',
+  'nutrients.why는 왜 이 관찰과 관련해 확인할 가치가 있는지만 말하고 치료 효과를 약속하지 않는다.',
+  'nutrients.guidance는 음식·검사·전문가 상담 등 확인 방법을 우선하고 무조건 영양제를 먹으라고 하지 않는다.',
+  '약물이나 영양제의 구체적인 복용량을 처방하지 않는다.',
+  '"순한 제품을 써라", "피부를 쉬게 해라", "자극적인 것을 피하라", "주기적으로 확인하라" 같은 일반론만으로 항목을 채우지 않는다.',
+  'care는 오늘 실제로 할 수 있는 구체적인 루틴 2~4개로 쓴다.',
+  'lifestyle, avoid, watch는 선택 신호와 직접 연결되는 내용만 각각 최대 4개로 쓴다.',
   '눈 통증·시야 변화, 갑작스럽고 심한 탈모, 심한 피부 반응처럼 진료가 필요한 신호가 관련되면 관리 팁보다 진료 안내를 우선한다.',
-  '장황한 의학 설명보다 오늘 바로 실행할 수 있는 행동을 우선한다.',
   '한국어로 짧고 명확하게 쓴다.',
-  'care, lifestyle, avoid, watch는 각각 최대 4개만 제안한다.',
-  'ingredients는 최대 4개이며 일반적인 화장품·식품·영양 성분 중심으로 제안한다.',
   '관련 진료 위험 신호가 없으면 getHelp는 null이다.',
 ].join('\n')
 
@@ -68,7 +124,7 @@ function buildFacingObservationPrompt(signals: readonly FacingSignal[]): string 
     '[오늘의 Facing AI]',
     ...observations,
     '',
-    '이 관찰만 바탕으로 오늘 하루에 적용할 수 있는 스킨케어·두피·웰니스 가이드를 작성해.',
+    '이 관찰만 바탕으로 오늘 제품 성분표에서 찾아볼 스킨케어 성분과, 필요할 때만 확인할 영양 성분, 오늘 루틴을 작성해.',
   ].join('\n')
 }
 
@@ -89,14 +145,32 @@ function cleanTextArray(value: unknown, field: string): string[] {
   return value.map((item, index) => cleanText(item, `${field}[${index}]`, 220))
 }
 
-function cleanIngredients(value: unknown): FacingIngredient[] {
+function cleanIngredients(value: unknown): FacingSkincareIngredient[] {
   if (!Array.isArray(value)) throw new Error('ingredients가 배열이 아니야.')
-  if (value.length > MAX_LIST_ITEMS) throw new Error('ingredients 항목이 너무 많아.')
+  if (value.length > 4) throw new Error('ingredients 항목이 너무 많아.')
   return value.map((item, index) => {
     if (!isRecord(item)) throw new Error(`ingredients[${index}] 형식이 달라.`)
     return {
       name: cleanText(item.name, `ingredients[${index}].name`, 100),
-      reason: cleanText(item.reason, `ingredients[${index}].reason`, 220),
+      easy: cleanText(item.easy, `ingredients[${index}].easy`, 180),
+      target: cleanText(item.target, `ingredients[${index}].target`, 120),
+      lookFor: cleanText(item.lookFor, `ingredients[${index}].lookFor`, 180),
+      caution: cleanText(item.caution, `ingredients[${index}].caution`, 180),
+    }
+  })
+}
+
+function cleanNutrients(value: unknown): FacingNutrient[] {
+  if (!Array.isArray(value)) throw new Error('nutrients가 배열이 아니야.')
+  if (value.length > 3) throw new Error('nutrients 항목이 너무 많아.')
+  return value.map((item, index) => {
+    if (!isRecord(item)) throw new Error(`nutrients[${index}] 형식이 달라.`)
+    return {
+      name: cleanText(item.name, `nutrients[${index}].name`, 100),
+      easy: cleanText(item.easy, `nutrients[${index}].easy`, 180),
+      why: cleanText(item.why, `nutrients[${index}].why`, 200),
+      guidance: cleanText(item.guidance, `nutrients[${index}].guidance`, 220),
+      caution: cleanText(item.caution, `nutrients[${index}].caution`, 200),
     }
   })
 }
@@ -107,6 +181,7 @@ function validateFacingAiResult(value: unknown): FacingAiResult {
     summary: cleanText(value.summary, 'summary'),
     care: cleanTextArray(value.care, 'care'),
     ingredients: cleanIngredients(value.ingredients),
+    nutrients: cleanNutrients(value.nutrients),
     lifestyle: cleanTextArray(value.lifestyle, 'lifestyle'),
     avoid: cleanTextArray(value.avoid, 'avoid'),
     watch: cleanTextArray(value.watch, 'watch'),
@@ -230,7 +305,7 @@ async function runFacingAi(signals: readonly FacingSignal[], env: Env) {
       json_schema: FACING_RESULT_SCHEMA,
     },
     temperature: 0.25,
-    max_tokens: 900,
+    max_tokens: 1100,
   })
 
   if (!isRecord(payload) || !('response' in payload)) {

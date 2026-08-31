@@ -1,14 +1,26 @@
 import type { FacingProviderId, FacingSignal } from './facingPrompt'
 
-export type FacingIngredient = {
+export type FacingSkincareIngredient = {
   name: string
-  reason: string
+  easy: string
+  target: string
+  lookFor: string
+  caution: string
+}
+
+export type FacingNutrient = {
+  name: string
+  easy: string
+  why: string
+  guidance: string
+  caution: string
 }
 
 export type FacingAiResult = {
   summary: string
   care: string[]
-  ingredients: FacingIngredient[]
+  ingredients: FacingSkincareIngredient[]
+  nutrients: FacingNutrient[]
   lifestyle: string[]
   avoid: string[]
   watch: string[]
@@ -50,15 +62,48 @@ function cleanTextArray(value: unknown, field: string): string[] {
   return value.map((item, index) => cleanText(item, `${field}[${index}]`, 220))
 }
 
-function cleanIngredients(value: unknown): FacingIngredient[] {
+function cleanIngredients(value: unknown): FacingSkincareIngredient[] {
   if (!Array.isArray(value)) throw new Error('ingredients가 배열이 아니야.')
   if (value.length > MAX_LIST_ITEMS) throw new Error('ingredients 항목이 너무 많아.')
 
   return value.map((item, index) => {
     if (!isRecord(item)) throw new Error(`ingredients[${index}] 형식이 달라.`)
+    const name = cleanText(item.name, `ingredients[${index}].name`, 100)
+
+    /* v4.8 이전 저장 기록도 버리지 않는다. 예전 reason 한 줄을 새 화면에서 읽을 수 있게만 이관한다. */
+    if (typeof item.easy !== 'string' && typeof item.reason === 'string') {
+      return {
+        name,
+        easy: cleanText(item.reason, `ingredients[${index}].reason`, 220),
+        target: '이전 기록',
+        lookFor: '제품 성분표에서 이 이름을 확인해 봐.',
+        caution: '새 성분 큐레이터 기준 적용 전 결과야. 다시 물어보면 더 구체적으로 볼 수 있어.',
+      }
+    }
+
     return {
-      name: cleanText(item.name, `ingredients[${index}].name`, 100),
-      reason: cleanText(item.reason, `ingredients[${index}].reason`, 220),
+      name,
+      easy: cleanText(item.easy, `ingredients[${index}].easy`, 180),
+      target: cleanText(item.target, `ingredients[${index}].target`, 120),
+      lookFor: cleanText(item.lookFor, `ingredients[${index}].lookFor`, 180),
+      caution: cleanText(item.caution, `ingredients[${index}].caution`, 180),
+    }
+  })
+}
+
+function cleanNutrients(value: unknown): FacingNutrient[] {
+  if (value === undefined) return []
+  if (!Array.isArray(value)) throw new Error('nutrients가 배열이 아니야.')
+  if (value.length > MAX_LIST_ITEMS) throw new Error('nutrients 항목이 너무 많아.')
+
+  return value.map((item, index) => {
+    if (!isRecord(item)) throw new Error(`nutrients[${index}] 형식이 달라.`)
+    return {
+      name: cleanText(item.name, `nutrients[${index}].name`, 100),
+      easy: cleanText(item.easy, `nutrients[${index}].easy`, 180),
+      why: cleanText(item.why, `nutrients[${index}].why`, 200),
+      guidance: cleanText(item.guidance, `nutrients[${index}].guidance`, 220),
+      caution: cleanText(item.caution, `nutrients[${index}].caution`, 200),
     }
   })
 }
@@ -75,6 +120,7 @@ function validateResult(value: unknown): FacingAiResult {
     summary: cleanText(value.summary, 'summary'),
     care: cleanTextArray(value.care, 'care'),
     ingredients: cleanIngredients(value.ingredients),
+    nutrients: cleanNutrients(value.nutrients),
     lifestyle: cleanTextArray(value.lifestyle, 'lifestyle'),
     avoid: cleanTextArray(value.avoid, 'avoid'),
     watch: cleanTextArray(value.watch, 'watch'),
