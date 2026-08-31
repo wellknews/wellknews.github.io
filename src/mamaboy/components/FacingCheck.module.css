@@ -1,31 +1,55 @@
 /*
- * Facing AI는 지면 위에 별도 카드로 올라가지 않는다.
- * 아침의 첫 질문이므로 Cream Paper 자체에서 바로 시작하고, 선택된 상태에만
- * 작은 Gel 신호가 생긴다. 버튼이 많아져도 첫인상은 계속 Cream + Ink여야 한다.
+ * Facing AI v4.8 — Island
+ *
+ * Home의 editorial feed와 Facing AI의 상호작용을 시각적으로 분리한다.
+ * Cream Paper 위에 near-white object 하나만 띄우고, 선택 → 생각 중 → Morning Note가
+ * 같은 object 안에서 상태만 바뀌도록 만든다. Glass dashboard가 아니라 soft body / hard light.
  */
 .facing {
   position: relative;
   z-index: var(--z-content);
-  padding-block: clamp(28px, 4.4vw, 58px) clamp(34px, 5vw, 70px);
+  box-sizing: border-box;
+  width: min(760px, calc(100% - 32px));
+  margin: clamp(38px, 6vw, 82px) auto clamp(66px, 8vw, 112px);
+  padding: clamp(26px, 4.2vw, 44px);
+  overflow: clip;
+  border: 1px solid var(--color-line);
+  border-radius: clamp(28px, 4vw, 40px);
+  background: var(--surface-clean);
+  box-shadow: var(--shadow-content);
+  isolation: isolate;
+}
+
+/* Orange는 섬 전체를 칠하지 않고 작은 상태 신호 하나로만 쓴다. */
+.facing::before {
+  content: '';
+  position: absolute;
+  top: clamp(22px, 3vw, 30px);
+  right: clamp(22px, 3vw, 30px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 24%, var(--chrome-light), transparent 44%), var(--surface-gel);
+  box-shadow: var(--shadow-rest);
 }
 
 .heading {
   display: grid;
-  grid-template-columns: minmax(0, 0.7fr) minmax(280px, 1.3fr);
-  align-items: end;
-  gap: clamp(20px, 4vw, 64px);
-  margin-bottom: clamp(24px, 3.8vw, 46px);
+  gap: 13px;
+  margin-bottom: clamp(26px, 4vw, 38px);
+  padding-right: 28px;
 }
 
 .kicker {
-  margin: 0 0 8px;
+  margin: 0;
   color: var(--accent-ink);
 }
 
 .title {
   margin: 0;
   font-family: var(--font-editorial);
-  font-size: var(--text-page);
+  font-size: clamp(2.6rem, 7vw, 4.7rem);
   font-weight: var(--weight-display);
   letter-spacing: var(--tracking-feature);
   line-height: 0.9;
@@ -33,13 +57,13 @@
 }
 
 .question {
-  max-width: 25em;
-  margin: 0;
+  max-width: 24em;
+  margin: 4px 0 0;
   color: var(--color-text);
   font-family: var(--font-reading);
   font-size: var(--text-lead);
   font-weight: var(--weight-medium);
-  line-height: 1.38;
+  line-height: 1.42;
   letter-spacing: var(--tracking-headline);
 }
 
@@ -47,14 +71,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   min-height: 54px;
 }
 
 /*
- * 기본 상태는 종이다. Liquid Glass와 Orange Gel은 «선택»을 설명할 때만 쓴다.
- * 모든 버튼을 색면으로 만들면 Facing AI만 앱 UI처럼 튀므로, 깊이는 크기와 종이 농도로
- * 먼저 구분한다.
+ * Island 안의 기본 chip은 다시 Cream Paper가 된다.
+ * outer body와 chip material이 달라져, 별도 카드 없이도 조작 대상이 바로 읽힌다.
  */
 .chip {
   position: relative;
@@ -65,7 +88,7 @@
   appearance: none;
   border: 1px solid var(--color-line-strong);
   border-radius: var(--radius-pill);
-  background: transparent;
+  background: var(--surface-paper);
   color: var(--color-text);
   font-family: var(--font-reading);
   line-height: 1;
@@ -81,8 +104,8 @@
 }
 
 .chip[data-depth='0'] {
-  min-height: 52px;
-  padding-inline: 19px;
+  min-height: 50px;
+  padding-inline: 18px;
   font-size: var(--text-body);
   font-weight: var(--weight-medium);
 }
@@ -108,10 +131,6 @@
   animation: facing-child-in var(--dur-micro-slow) var(--ease-soft) both;
 }
 
-/*
- * 선택 상태는 Ink가 맡고 Orange는 6px Gel 한 방울만 남긴다.
- * 면 전체를 주황으로 칠하지 않아 선택이 늘어나도 Orange 비중이 폭증하지 않는다.
- */
 .chip.active {
   border-color: transparent;
   background: var(--color-text);
@@ -137,22 +156,24 @@
   font-family: var(--font-editorial);
   font-weight: var(--weight-headline);
   text-align: center;
-  opacity: 0.68;
+  opacity: 0.62;
 }
 
 .status {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
-  min-height: 32px;
-  margin-top: 16px;
+  min-height: 34px;
+  margin-top: 17px;
   color: var(--color-text-muted);
   font-size: var(--text-meta);
 }
 
 .clear {
   appearance: none;
-  padding: 4px 0;
+  min-height: 44px;
+  padding: 0;
   border: 0;
   background: transparent;
   color: var(--color-text);
@@ -163,25 +184,23 @@
 }
 
 /*
- * AI 기능이 커져도 지면은 «설정 패널»처럼 보이지 않는다.
- * 별도 카드 대신 얇은 종이를 한 겹 얹고, 기능명보다 사용자의 오늘 상태를 먼저 읽힌다.
+ * 선택 결과를 또 하나의 카드로 만들지 않는다.
+ * 같은 island 안에서 얇은 editorial rule 하나만 두고 다음 상태로 넘어간다.
  */
 .aiPanel {
-  margin-top: clamp(30px, 4.6vw, 58px);
-  padding-block: clamp(26px, 3.5vw, 42px);
+  margin-top: clamp(28px, 4vw, 40px);
+  padding-top: clamp(22px, 3vw, 30px);
   border-top: 1px solid var(--color-line);
 }
 
 .aiHeading {
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(260px, 1.25fr);
-  align-items: end;
-  gap: clamp(18px, 3vw, 48px);
+  gap: 9px;
 }
 
 .aiKicker,
 .resultKicker {
-  margin: 0 0 7px;
+  margin: 0;
   color: var(--accent-ink);
 }
 
@@ -192,22 +211,22 @@
   font-size: var(--text-standard);
   font-weight: var(--weight-display);
   letter-spacing: var(--tracking-headline);
-  line-height: 1;
+  line-height: 1.04;
 }
 
 .aiIntro {
   max-width: 34em;
-  margin: 0;
+  margin: 2px 0 0;
   color: var(--color-text-secondary);
-  font-size: var(--text-body);
-  line-height: 1.5;
+  font-size: var(--text-meta);
+  line-height: 1.55;
 }
 
 .signalList {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 18px;
-  margin: clamp(20px, 2.8vw, 30px) 0 0;
+  gap: 8px 16px;
+  margin: 19px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -216,7 +235,7 @@
   position: relative;
   padding-left: 14px;
   color: var(--color-text);
-  font-size: var(--text-body);
+  font-size: var(--text-meta);
   font-weight: var(--weight-medium);
   line-height: 1.45;
 }
@@ -238,30 +257,30 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
-  gap: clamp(18px, 4vw, 56px);
-  margin-top: clamp(24px, 3vw, 36px);
-  padding-top: 20px;
+  gap: 22px;
+  margin-top: 22px;
+  padding-top: 19px;
   border-top: 1px solid var(--color-line);
 }
 
 .nativeLabel {
-  margin: 0 0 7px;
+  margin: 0 0 6px;
   color: var(--color-text-muted);
 }
 
 .nativeHint {
-  max-width: 38em;
+  max-width: 35em;
   margin: 0;
   color: var(--color-text-secondary);
   font-size: var(--text-meta);
-  line-height: 1.55;
+  line-height: 1.52;
 }
 
 .nativeButton,
 .retryButton {
   appearance: none;
-  min-height: 46px;
-  padding-inline: 18px;
+  min-height: 48px;
+  padding-inline: 21px;
   border: 1px solid var(--color-text);
   border-radius: var(--radius-pill);
   background: var(--color-text);
@@ -284,23 +303,49 @@
   cursor: default;
 }
 
+/*
+ * Thinking은 spinner를 추가하지 않고 island가 잠시 호흡하는 장면으로 바꾼다.
+ * AI 설정 UI는 감추고 동일한 물체 안에서 기다리는 상태만 남긴다.
+ */
+.facing:has(.thinking) .question,
+.facing:has(.thinking) .board,
+.facing:has(.thinking) .status,
+.aiPanel:has(.thinking) .aiHeading,
+.aiPanel:has(.thinking) .signalList,
+.aiPanel:has(.thinking) .nativeFlow,
+.aiPanel:has(.thinking) .aiNotice {
+  display: none;
+}
+
+.facing:has(.thinking) .heading {
+  margin-bottom: 0;
+}
+
+.aiPanel:has(.thinking) {
+  display: grid;
+  place-items: center;
+  min-height: 148px;
+  padding-block: 34px 20px;
+}
+
 .thinking {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  min-height: 28px;
-  margin-top: 14px;
+  display: grid;
+  justify-items: center;
+  gap: 13px;
+  margin: 0;
   color: var(--color-text-muted);
   font-size: var(--text-meta);
+  line-height: 1.5;
+  text-align: center;
 }
 
 .thinkingDot {
-  width: 7px;
-  height: 7px;
-  flex: 0 0 auto;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 32% 28%, var(--chrome-light), transparent 46%), var(--surface-gel);
+    radial-gradient(circle at 30% 24%, var(--chrome-light), transparent 44%), var(--surface-gel);
+  box-shadow: var(--shadow-rest);
   animation: facing-thinking var(--dur-object) var(--ease-soft) infinite alternate;
 }
 
@@ -310,7 +355,7 @@
   align-items: center;
   gap: 18px;
   margin-top: 18px;
-  padding: 18px 0;
+  padding-top: 18px;
   border-top: 1px solid var(--color-line);
 }
 
@@ -331,13 +376,13 @@
 
 @keyframes facing-thinking {
   from {
-    opacity: 0.42;
-    transform: scale(0.78);
+    opacity: 0.38;
+    transform: translateY(3px) scale(0.78);
   }
 
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(-3px) scale(1.06);
   }
 }
 
@@ -351,13 +396,23 @@
 }
 
 /*
- * 결과는 여러 개의 카드가 아니라 하나의 morning brief다.
- * CARE만 본문처럼 크게 읽히고, 나머지는 편집 지면의 사이드 노트처럼 내려간다.
+ * Morning Note는 다른 카드가 아니라 같은 island의 마지막 상태다.
+ * 결과가 있으면 선택판을 접어 사용자의 시선이 위아래로 왕복하지 않게 한다.
  */
+.facing:has(.resultPanel) .question,
+.facing:has(.resultPanel) .board,
+.facing:has(.resultPanel) .status {
+  display: none;
+}
+
+.facing:has(.resultPanel) .heading {
+  margin-bottom: 24px;
+}
+
 .resultPanel {
   scroll-margin-top: calc(var(--header-h) + 20px);
-  margin-top: clamp(30px, 4.8vw, 62px);
-  padding-block: clamp(30px, 4.2vw, 56px);
+  margin: 0;
+  padding-top: 20px;
   border-top: 1px solid var(--color-line-strong);
 }
 
@@ -411,14 +466,14 @@
 }
 
 .summary {
-  max-width: 29em;
-  margin: clamp(26px, 4vw, 46px) 0 0;
+  max-width: 24em;
+  margin: clamp(28px, 4vw, 42px) 0 0;
   color: var(--color-text);
   font-family: var(--font-editorial);
-  font-size: var(--text-standard);
+  font-size: clamp(1.75rem, 4vw, 2.65rem);
   font-weight: var(--weight-headline);
   letter-spacing: var(--tracking-headline);
-  line-height: 1.34;
+  line-height: 1.28;
 }
 
 .resultSection {
@@ -427,8 +482,7 @@
 }
 
 .resultPrimary {
-  max-width: 52em;
-  margin-top: clamp(30px, 4vw, 48px);
+  margin-top: clamp(30px, 4vw, 44px);
   padding-block: 22px 28px;
   border-top-color: var(--color-line-strong);
 }
@@ -454,21 +508,20 @@
 
 .resultPrimary ul {
   gap: 12px;
-  max-width: 42em;
+  max-width: 38em;
   color: var(--color-text);
   font-size: var(--text-body);
-  line-height: 1.55;
+  line-height: 1.58;
 }
 
 .resultNotes {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: clamp(28px, 5vw, 72px);
+  column-gap: 30px;
   margin-top: 4px;
 }
 
 .resultSection.urgent {
-  max-width: 52em;
   margin-top: 16px;
   border-top-color: var(--accent-ink);
 }
@@ -505,7 +558,7 @@
 .moreConcerns {
   appearance: none;
   min-height: 44px;
-  padding-inline: 12px;
+  padding-inline: 10px;
   border: 0;
   background: transparent;
   color: var(--color-text-muted);
@@ -517,7 +570,7 @@
   cursor: pointer;
 }
 
-/* 새 선택지는 튀어나오지 않고 지면 사이에 끼어든다. */
+/* 새 선택지는 튀어나오지 않고 island 내부의 같은 흐름에 끼어든다. */
 @keyframes facing-child-in {
   from {
     opacity: 0;
@@ -536,23 +589,38 @@
     background: var(--surface-clean);
     box-shadow: var(--shadow-rest);
   }
+
+  .nativeButton:not(:disabled):hover,
+  .retryButton:hover {
+    box-shadow: var(--shadow-float);
+  }
 }
 
 @media (max-width: 700px) {
-  .heading,
-  .aiHeading,
-  .resultHeader,
-  .resultNotes {
-    grid-template-columns: 1fr;
+  .facing {
+    width: calc(100% - 20px);
+    margin-block: 26px 68px;
+    padding: 22px 18px 24px;
+    border-radius: 28px;
   }
 
-  .heading,
-  .aiHeading {
-    gap: 14px;
+  .facing::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .heading {
+    gap: 11px;
+    margin-bottom: 24px;
+    padding-right: 22px;
+  }
+
+  .title {
+    font-size: clamp(2.45rem, 13vw, 3.8rem);
   }
 
   .question {
-    max-width: 19em;
+    max-width: 18em;
   }
 
   .board {
@@ -561,12 +629,19 @@
 
   .chip[data-depth='0'] {
     min-height: 48px;
-    padding-inline: 16px;
+    padding-inline: 15px;
+  }
+
+  .aiHeading,
+  .resultHeader,
+  .resultNotes,
+  .nativeFlow,
+  .aiError {
+    grid-template-columns: 1fr;
   }
 
   .nativeFlow,
   .aiError {
-    grid-template-columns: 1fr;
     align-items: stretch;
   }
 
@@ -577,11 +652,12 @@
 
   .resultHeaderActions {
     justify-content: space-between;
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   .summary {
-    max-width: 20em;
+    max-width: 18em;
+    font-size: clamp(1.65rem, 8vw, 2.2rem);
   }
 
   .ingredients div {
