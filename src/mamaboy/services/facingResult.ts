@@ -1,5 +1,3 @@
-import type { FacingProviderId, FacingSignal } from './facingPrompt'
-
 export type FacingSkincareIngredient = {
   name: string
   easy: string
@@ -18,7 +16,7 @@ export type FacingNutrient = {
 
 export type FacingAiResult = {
   summary: string
-  care: string[]
+  routine: string[]
   ingredients: FacingSkincareIngredient[]
   nutrients: FacingNutrient[]
   lifestyle: string[]
@@ -27,19 +25,8 @@ export type FacingAiResult = {
   getHelp: string | null
 }
 
-export type FacingRecord = {
-  version: 1
-  date: string
-  savedAt: string
-  provider: FacingProviderId | null
-  signals: FacingSignal[]
-  result: FacingAiResult
-}
-
 export type FacingParseResult = { ok: true; result: FacingAiResult } | { ok: false; reason: string }
 
-const STORAGE_KEY = 'mamaboy:facing:history:v1'
-const MAX_HISTORY = 30
 const MAX_RESPONSE_LENGTH = 50_000
 const MAX_TEXT_LENGTH = 280
 const MAX_LIST_ITEMS = 6
@@ -118,7 +105,7 @@ function validateResult(value: unknown): FacingAiResult {
 
   return {
     summary: cleanText(value.summary, 'summary'),
-    care: cleanTextArray(value.care, 'care'),
+    routine: cleanTextArray(value.routine ?? value.care, 'routine'),
     ingredients: cleanIngredients(value.ingredients),
     nutrients: cleanNutrients(value.nutrients),
     lifestyle: cleanTextArray(value.lifestyle, 'lifestyle'),
@@ -126,6 +113,10 @@ function validateResult(value: unknown): FacingAiResult {
     watch: cleanTextArray(value.watch, 'watch'),
     getHelp: cleanGetHelp(value.getHelp),
   }
+}
+
+export function normalizeFacingAiResult(value: unknown): FacingAiResult {
+  return validateResult(value)
 }
 
 function jsonCandidate(raw: string): string {
@@ -154,95 +145,5 @@ export function parseFacingAiResponse(raw: string): FacingParseResult {
       ok: false,
       reason: error instanceof Error ? error.message : 'JSON 형식을 읽지 못했어.',
     }
-  }
-}
-
-function dateKey(date = new Date()): string {
-  const year = date.getFullYear()
-  const month = String(date.getMonth() + 1).padStart(2, '0')
-  const day = String(date.getDate()).padStart(2, '0')
-  return `${year}-${month}-${day}`
-}
-
-function readHistory(): FacingRecord[] {
-  if (typeof window === 'undefined') return []
-
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    if (!raw) return []
-    const parsed: unknown = JSON.parse(raw)
-    if (!Array.isArray(parsed)) return []
-
-    return parsed.flatMap((item): FacingRecord[] => {
-      if (!isRecord(item) || item.version !== 1) return []
-      if (typeof item.date !== 'string' || typeof item.savedAt !== 'string') return []
-      if (!Array.isArray(item.signals)) return []
-      if (
-        item.provider !== null &&
-        !['workers-ai', 'chatgpt', 'gemini', 'claude'].includes(String(item.provider))
-      ) {
-        return []
-      }
-
-      try {
-        const result = validateResult(item.result)
-        const signals = item.signals.flatMap((signal): FacingSignal[] => {
-          if (!isRecord(signal) || !Array.isArray(signal.ids) || !Array.isArray(signal.labels)) {
-            return []
-          }
-          if (!signal.ids.every((id) => typeof id === 'string')) return []
-          if (!signal.labels.every((label) => typeof label === 'string')) return []
-          return [{ ids: [...signal.ids] as string[], labels: [...signal.labels] as string[] }]
-        })
-        if (signals.length === 0) return []
-
-        return [
-          {
-            version: 1,
-            date: item.date,
-            savedAt: item.savedAt,
-            provider: item.provider as FacingProviderId | null,
-            signals,
-            result,
-          },
-        ]
-      } catch {
-        return []
-      }
-    })
-  } catch {
-    return []
-  }
-}
-
-export function loadTodayFacingRecord(): FacingRecord | null {
-  return readHistory().find((record) => record.date === dateKey()) ?? null
-}
-
-export function saveFacingRecord(
-  signals: readonly FacingSignal[],
-  result: FacingAiResult,
-  provider: FacingProviderId | null,
-): FacingRecord | null {
-  if (typeof window === 'undefined' || signals.length === 0) return null
-
-  const record: FacingRecord = {
-    version: 1,
-    date: dateKey(),
-    savedAt: new Date().toISOString(),
-    provider,
-    signals: signals.map((signal) => ({ ids: [...signal.ids], labels: [...signal.labels] })),
-    result,
-  }
-
-  try {
-    const history = readHistory().filter((item) => item.date !== record.date)
-    window.localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify([record, ...history].slice(0, MAX_HISTORY)),
-    )
-    return record
-  } catch {
-    return null
   }
 }

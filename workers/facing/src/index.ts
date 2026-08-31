@@ -21,7 +21,7 @@ type FacingNutrient = {
 
 type FacingAiResult = {
   summary: string
-  care: string[]
+  routine: string[]
   ingredients: FacingSkincareIngredient[]
   nutrients: FacingNutrient[]
   lifestyle: string[]
@@ -34,7 +34,7 @@ const FACING_RESULT_SCHEMA = {
   type: 'object',
   properties: {
     summary: { type: 'string' },
-    care: { type: 'array', items: { type: 'string' }, maxItems: 4 },
+    routine: { type: 'array', items: { type: 'string' }, maxItems: 4 },
     ingredients: {
       type: 'array',
       maxItems: 4,
@@ -74,7 +74,7 @@ const FACING_RESULT_SCHEMA = {
   },
   required: [
     'summary',
-    'care',
+    'routine',
     'ingredients',
     'nutrients',
     'lifestyle',
@@ -108,8 +108,14 @@ const FACING_SYSTEM_INSTRUCTIONS = [
   'nutrients.guidance는 음식·검사·전문가 상담 등 확인 방법을 우선하고 무조건 영양제를 먹으라고 하지 않는다.',
   '약물이나 영양제의 구체적인 복용량을 처방하지 않는다.',
   '"순한 제품을 써라", "피부를 쉬게 해라", "자극적인 것을 피하라", "주기적으로 확인하라" 같은 일반론만으로 항목을 채우지 않는다.',
-  'care는 오늘 실제로 할 수 있는 구체적인 루틴 2~4개로 쓴다.',
-  'lifestyle, avoid, watch는 선택 신호와 직접 연결되는 내용만 각각 최대 4개로 쓴다.',
+  'routine은 세안법, 씻는 물의 온도, 닦는 방식, 바르는 순서, 마스크팩·샴푸·두피 관리처럼 피부·모발에 직접 하는 행동만 2~4개 쓴다.',
+  '운동 뒤 땀이나 마찰 관리처럼 세안 행동과 직접 연결되는 내용은 routine에 넣고, 운동 자체의 빈도·수면·식사·수분 같은 생활 행동은 lifestyle에 넣는다.',
+  'lifestyle은 운동, 수면, 식사, 수분, 베개·수건·머리카락 접촉처럼 제품을 바르지 않는 생활 행동만 최대 3개 쓴다.',
+  'avoid는 오늘 하지 말아야 할 행동만 최대 3개 쓴다. routine이나 lifestyle에서 이미 말한 내용을 부정형으로 반복하지 않는다.',
+  'watch는 사용자가 앞으로 무엇을 어느 정도 기간 관찰할지 최대 3개만 쓴다. 다른 섹션의 행동 조언을 반복하지 않는다.',
+  'summary는 오늘의 우선순위를 한 문장으로만 요약하고 아래 routine·lifestyle 문장을 다시 쓰지 않는다.',
+  'summary, ingredients, nutrients, routine, lifestyle, avoid, watch 사이에서 같은 조언을 표현만 바꿔 반복하지 않는다.',
+  '한 조언이 여러 섹션에 걸치면 가장 구체적으로 맞는 섹션 한 곳에만 둔다.',
   '눈 통증·시야 변화, 갑작스럽고 심한 탈모, 심한 피부 반응처럼 진료가 필요한 신호가 관련되면 관리 팁보다 진료 안내를 우선한다.',
   '한국어로 짧고 명확하게 쓴다.',
   '관련 진료 위험 신호가 없으면 getHelp는 null이다.',
@@ -124,7 +130,7 @@ function buildFacingObservationPrompt(signals: readonly FacingSignal[]): string 
     '[오늘의 Facing AI]',
     ...observations,
     '',
-    '이 관찰만 바탕으로 오늘 제품 성분표에서 찾아볼 스킨케어 성분과, 필요할 때만 확인할 영양 성분, 오늘 루틴을 작성해.',
+    '이 관찰만 바탕으로 제품 성분표에서 찾아볼 스킨케어 성분, 필요할 때만 확인할 영양 성분, 구체적인 세안·스킨케어 루틴과 생활습관을 서로 겹치지 않게 작성해.',
   ].join('\n')
 }
 
@@ -179,7 +185,7 @@ function validateFacingAiResult(value: unknown): FacingAiResult {
   if (!isRecord(value)) throw new Error('최상위 값이 JSON 객체가 아니야.')
   return {
     summary: cleanText(value.summary, 'summary'),
-    care: cleanTextArray(value.care, 'care'),
+    routine: cleanTextArray(value.routine, 'routine'),
     ingredients: cleanIngredients(value.ingredients),
     nutrients: cleanNutrients(value.nutrients),
     lifestyle: cleanTextArray(value.lifestyle, 'lifestyle'),
@@ -305,7 +311,7 @@ async function runFacingAi(signals: readonly FacingSignal[], env: Env) {
       json_schema: FACING_RESULT_SCHEMA,
     },
     temperature: 0.25,
-    max_tokens: 1100,
+    max_tokens: 1200,
   })
 
   if (!isRecord(payload) || !('response' in payload)) {

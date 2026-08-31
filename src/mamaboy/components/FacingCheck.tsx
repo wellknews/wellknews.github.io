@@ -2,12 +2,10 @@ import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 
 import { FacingApiError, requestFacingAnalysis } from '../services/facingApi'
 import type { FacingSignal } from '../services/facingPrompt'
-import {
-  loadTodayFacingRecord,
-  saveFacingRecord,
-  type FacingAiResult,
-} from '../services/facingResult'
+import { loadTodayFacingRecord, saveFacingRecord } from '../services/facingMemory'
+import type { FacingAiResult } from '../services/facingResult'
 import styles from './FacingCheck.module.css'
+import { FacingMemory } from './FacingMemory'
 
 type FacingNode = {
   id: string
@@ -340,7 +338,7 @@ export function FacingCheck() {
 
     try {
       const response = await requestFacingAnalysis(signals)
-      const record = saveFacingRecord(signals, response.result, response.provider)
+      const record = await saveFacingRecord(signals, response.result, response.provider)
 
       setAiResult(response.result)
       setSavedAt(record?.savedAt ?? null)
@@ -557,7 +555,7 @@ export function FacingCheck() {
 
           <ResultSkincareIngredients items={aiResult.ingredients} />
 
-          <ResultList title="TODAY ROUTINE" items={aiResult.care} emphasis="primary" />
+          <ResultList title="TODAY ROUTINE" items={aiResult.routine} emphasis="primary" />
 
           <ResultNutrients items={aiResult.nutrients} />
 
@@ -570,6 +568,8 @@ export function FacingCheck() {
           {aiResult.getHelp && <ResultList title="GET HELP" items={[aiResult.getHelp]} urgent />}
         </section>
       )}
+
+      <FacingMemory />
     </section>
   )
 }
