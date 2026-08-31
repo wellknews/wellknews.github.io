@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "mamaboy-facing-ai",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-31",
+  "vars": {
+    "ALLOWED_ORIGINS": "https://wellknews.github.io,http://localhost:5173",
+  },
+  "ai": {
+    "binding": "AI",
+  },
+  "ratelimits": [
+    {
+      "name": "FACING_CLIENT_RATE_LIMITER",
+      "namespace_id": "47001",
+      "simple": {
+        "limit": 4,
+        "period": 60,
+      },
+    },
+  ],
+}

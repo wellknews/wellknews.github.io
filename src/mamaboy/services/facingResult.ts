@@ -95,9 +95,9 @@ function jsonCandidate(raw: string): string {
 
 export function parseFacingAiResponse(raw: string): FacingParseResult {
   const trimmed = raw.trim()
-  if (!trimmed) return { ok: false, reason: 'AI 답변이 비어 있어.' }
+  if (!trimmed) return { ok: false, reason: 'Facing AI 답변이 비어 있어.' }
   if (trimmed.length > MAX_RESPONSE_LENGTH) {
-    return { ok: false, reason: 'AI 답변이 너무 길어. 답변 전체가 아니라 결과 JSON만 복사해 줘.' }
+    return { ok: false, reason: 'Facing AI 답변이 너무 길어.' }
   }
 
   try {
@@ -133,7 +133,7 @@ function readHistory(): FacingRecord[] {
       if (!Array.isArray(item.signals)) return []
       if (
         item.provider !== null &&
-        !['chatgpt', 'gemini', 'claude'].includes(String(item.provider))
+        !['workers-ai', 'chatgpt', 'gemini', 'claude'].includes(String(item.provider))
       ) {
         return []
       }

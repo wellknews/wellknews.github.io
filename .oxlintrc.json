@@ -32,6 +32,12 @@
         "no-console": "off",
         "no-await-in-loop": "off"
       }
+    },
+    {
+      "files": ["workers/**"],
+      "rules": {
+        "no-console": "off"
+      }
     }
   ],
   "ignorePatterns": ["dist", "node_modules"]
