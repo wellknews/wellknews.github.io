@@ -28,7 +28,7 @@ function recordLabel(record: FacingRecord): string {
 export function FacingMemory() {
   const [records, setRecords] = useState<FacingRecord[]>([])
   const [loading, setLoading] = useState(true)
-  const [showHistory, setShowHistory] = useState(false)
+  const [expanded, setExpanded] = useState(false)
   const [notice, setNotice] = useState('')
 
   useEffect(() => {
@@ -88,82 +88,101 @@ export function FacingMemory() {
         <div>
           <p className={`label ${styles.kicker}`}>DAILY FACE MEMORY</p>
           <h3 id="facing-memory-title" className={styles.title}>
-            거울 기록
+            내 기록
           </h3>
         </div>
-        <p className={styles.privacy}>이 기록은 이 브라우저 안에만 저장돼. 서버에는 쌓이지 않아.</p>
+        <p className={styles.privacy}>이 브라우저 안에만 저장 · 서버 저장 없음</p>
       </header>
 
       {loading ? (
         <p className={styles.empty}>기록을 불러오는 중이야.</p>
       ) : records.length === 0 ? (
-        <p className={styles.empty}>첫 Morning Note가 생기면 여기부터 날짜별로 쌓여.</p>
+        <p className={styles.empty}>첫 Morning Note가 생기면 날짜별 기록이 여기 쌓여.</p>
       ) : (
         <>
-          <div className={styles.periods}>
-            <MemoryPeriod
-              label="7 DAYS"
-              days={summary.days7}
-              items={summary.top7.slice(0, 4)}
-              showTrend
-            />
-            <MemoryPeriod label="30 DAYS" days={summary.days30} items={summary.top30.slice(0, 5)} />
+          <div className={styles.snapshot}>
+            <p className={styles.countLine}>
+              <strong>{summary.totalDays}일</strong> 저장 · 최근 7일{' '}
+              <strong>{summary.days7}일</strong> 체크
+            </p>
+            {summary.top30.length > 0 && (
+              <ul className={styles.topSignals} aria-label="최근 30일 자주 고른 신호">
+                {summary.top30.slice(0, 4).map((item) => (
+                  <li key={item.label}>
+                    <span>{item.label}</span>
+                    <strong>{item.days30}회</strong>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <div className={styles.actions}>
             <button type="button" className={`pressable ${styles.export}`} onClick={exportWorkbook}>
-              Excel로 내보내기
+              Excel (.xlsx)
             </button>
             <button
               type="button"
               className={`pressable ${styles.historyToggle}`}
-              aria-expanded={showHistory}
-              onClick={() => setShowHistory((current) => !current)}
+              aria-expanded={expanded}
+              onClick={() => setExpanded((current) => !current)}
             >
-              {showHistory ? '지난 기록 접기' : `지난 기록 ${records.length}일`}
+              {expanded ? '기록 접기' : '기록 자세히'}
             </button>
           </div>
 
-          {showHistory && (
-            <div className={styles.history}>
-              <p className={styles.historyIntro}>
-                화면에는 핵심만 보여줘. 전체 루틴과 성분 기록은 Excel에 모두 들어가.
-              </p>
-              {records.slice(0, 30).map((record) => (
-                <article key={record.date} className={styles.record}>
-                  <div className={styles.recordTop}>
-                    <time dateTime={record.date}>{record.date}</time>
-                    <button
-                      type="button"
-                      className={`pressable ${styles.delete}`}
-                      onClick={() => void removeRecord(record)}
-                    >
-                      삭제
-                    </button>
-                  </div>
-                  <p className={styles.recordSignals}>{recordLabel(record)}</p>
-                  <p className={styles.recordSummary}>{record.result.summary}</p>
-                  {(record.result.ingredients.length > 0 || record.result.nutrients.length > 0) && (
-                    <p className={styles.recordIngredients}>
-                      {[...record.result.ingredients, ...record.result.nutrients]
-                        .map((item) => item.name)
-                        .join(' · ')}
-                    </p>
-                  )}
-                </article>
-              ))}
-              {records.length > 30 && (
+          {expanded && (
+            <div className={styles.expanded}>
+              <div className={styles.periods}>
+                <MemoryPeriod
+                  label="7 DAYS"
+                  days={summary.days7}
+                  items={summary.top7.slice(0, 4)}
+                  showTrend
+                />
+                <MemoryPeriod
+                  label="30 DAYS"
+                  days={summary.days30}
+                  items={summary.top30.slice(0, 5)}
+                />
+              </div>
+
+              <div className={styles.history}>
                 <p className={styles.historyIntro}>
-                  최근 30일만 화면에 표시했어. Excel에는 전체 기록이 들어가.
+                  화면에는 최근 30일 핵심만 보여줘. 전체 루틴과 성분 기록은 Excel에 모두 들어가.
                 </p>
-              )}
-              <button
-                type="button"
-                className={`pressable ${styles.clearAll}`}
-                onClick={() => void clearAll()}
-              >
-                전체 기록 삭제
-              </button>
+                {records.slice(0, 30).map((record) => (
+                  <article key={record.date} className={styles.record}>
+                    <div className={styles.recordTop}>
+                      <time dateTime={record.date}>{record.date}</time>
+                      <button
+                        type="button"
+                        className={`pressable ${styles.delete}`}
+                        onClick={() => void removeRecord(record)}
+                      >
+                        삭제
+                      </button>
+                    </div>
+                    <p className={styles.recordSignals}>{recordLabel(record)}</p>
+                    <p className={styles.recordSummary}>{record.result.summary}</p>
+                    {(record.result.ingredients.length > 0 ||
+                      record.result.nutrients.length > 0) && (
+                      <p className={styles.recordIngredients}>
+                        {[...record.result.ingredients, ...record.result.nutrients]
+                          .map((item) => item.name)
+                          .join(' · ')}
+                      </p>
+                    )}
+                  </article>
+                ))}
+                <button
+                  type="button"
+                  className={`pressable ${styles.clearAll}`}
+                  onClick={() => void clearAll()}
+                >
+                  전체 기록 삭제
+                </button>
+              </div>
             </div>
           )}
         </>

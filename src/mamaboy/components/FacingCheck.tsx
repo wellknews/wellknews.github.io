@@ -537,10 +537,10 @@ export function FacingCheck() {
           aria-labelledby="facing-result-title"
         >
           <header className={styles.resultHeader}>
-            <div>
+            <div className={styles.resultLead}>
               <p className={`label ${styles.resultKicker}`}>MORNING NOTE</p>
-              <h3 id="facing-result-title" className={styles.resultTitle}>
-                오늘은 이렇게 가자
+              <h3 id="facing-result-title" className={styles.summary}>
+                {aiResult.summary}
               </h3>
             </div>
             <div className={styles.resultHeaderActions}>
@@ -551,19 +551,30 @@ export function FacingCheck() {
             </div>
           </header>
 
-          <p className={styles.summary}>{aiResult.summary}</p>
+          <ul className={styles.resultSignals} aria-label="이번 Morning Note 기준">
+            {Array.from(
+              new Set(
+                signals.flatMap((signal) => {
+                  const label = signal.labels[0]
+                  return label ? [label] : []
+                }),
+              ),
+            ).map((label) => (
+              <li key={label}>{label}</li>
+            ))}
+          </ul>
 
           <ResultSkincareIngredients items={aiResult.ingredients} />
 
-          <ResultList title="TODAY ROUTINE" items={aiResult.routine} emphasis="primary" />
+          <ResultRoutine items={aiResult.routine} />
+
+          <div className={styles.quickNotes}>
+            <ResultCompactList kicker="LIFESTYLE" title="생활" items={aiResult.lifestyle} />
+            <ResultCompactList kicker="AVOID" title="피할 것" items={aiResult.avoid} />
+            <ResultCompactList kicker="WATCH" title="지켜볼 것" items={aiResult.watch} />
+          </div>
 
           <ResultNutrients items={aiResult.nutrients} />
-
-          <div className={styles.resultNotes}>
-            <ResultList title="LIFESTYLE" items={aiResult.lifestyle} />
-            <ResultList title="AVOID" items={aiResult.avoid} />
-            <ResultList title="WATCH" items={aiResult.watch} />
-          </div>
 
           {aiResult.getHelp && <ResultList title="GET HELP" items={[aiResult.getHelp]} urgent />}
         </section>
@@ -578,19 +589,65 @@ function ResultList({
   title,
   items,
   urgent = false,
-  emphasis = 'secondary',
 }: {
   title: string
   items: readonly string[]
   urgent?: boolean
-  emphasis?: 'primary' | 'secondary'
 }) {
   if (items.length === 0) return null
 
   return (
-    <section
-      className={`${styles.resultSection} ${emphasis === 'primary' ? styles.resultPrimary : ''} ${urgent ? styles.urgent : ''}`}
-    >
+    <section className={`${styles.resultSection} ${urgent ? styles.urgent : ''}`}>
+      <h4>{title}</h4>
+      <ul>
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+function ResultRoutine({ items }: { items: readonly string[] }) {
+  if (items.length === 0) return null
+
+  return (
+    <section className={`${styles.resultSection} ${styles.routineSection}`}>
+      <div className={styles.sectionHeading}>
+        <div>
+          <p className={`label ${styles.sectionEyebrow}`}>DO TODAY</p>
+          <h4>오늘 루틴</h4>
+        </div>
+        <p className={styles.sectionHint}>
+          세안·바르는 순서·마스크팩처럼 오늘 바로 할 것만 모았어.
+        </p>
+      </div>
+      <ol className={styles.routineList}>
+        {items.map((item, index) => (
+          <li key={item}>
+            <span className={styles.stepIndex}>{index + 1}</span>
+            <p>{item}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
+
+function ResultCompactList({
+  kicker,
+  title,
+  items,
+}: {
+  kicker: string
+  title: string
+  items: readonly string[]
+}) {
+  if (items.length === 0) return null
+
+  return (
+    <section className={styles.compactSection}>
+      <p className={`label ${styles.compactKicker}`}>{kicker}</p>
       <h4>{title}</h4>
       <ul>
         {items.map((item) => (
@@ -607,30 +664,41 @@ function ResultSkincareIngredients({ items }: { items: FacingAiResult['ingredien
   return (
     <section className={`${styles.resultSection} ${styles.shoppingSection}`}>
       <div className={styles.sectionHeading}>
-        <h4>SKINCARE INGREDIENTS</h4>
-        <p className={styles.sectionHint}>제품명 말고, 마스크팩·세럼·크림 성분표에서 찾아봐.</p>
+        <div>
+          <p className={`label ${styles.sectionEyebrow}`}>SHOP BY INGREDIENT</p>
+          <h4>성분표에서 먼저 볼 것</h4>
+        </div>
+        <p className={styles.sectionHint}>제품명보다 이 이름이 성분표에 있는지부터 확인해.</p>
       </div>
-      <dl className={styles.adviceList}>
-        {items.map((item) => (
-          <div key={`${item.name}:${item.target}`} className={styles.adviceItem}>
-            <dt className={styles.adviceName}>
-              <span>{item.name}</span>
-              <span className={styles.adviceTarget}>{item.target}</span>
-            </dt>
-            <dd className={styles.adviceBody}>
-              <p className={styles.adviceEasy}>{item.easy}</p>
-              <p className={styles.adviceMeta}>
-                <strong>어디서</strong>
-                <span>{item.lookFor}</span>
+      <ol className={styles.adviceList}>
+        {items.map((item, index) => (
+          <li key={`${item.name}:${item.target}`} className={styles.adviceItem}>
+            <div className={styles.adviceLead}>
+              <span className={styles.adviceIndex}>{String(index + 1).padStart(2, '0')}</span>
+              <div className={styles.adviceName}>
+                <strong>{item.name}</strong>
+                <span className={styles.adviceTarget}>{item.target}</span>
+              </div>
+            </div>
+            <div className={styles.adviceBody}>
+              <p className={styles.adviceEasy}>
+                <strong>쉽게 말하면</strong>
+                <span>{item.easy}</span>
               </p>
-              <p className={styles.adviceMeta}>
-                <strong>주의</strong>
-                <span>{item.caution}</span>
-              </p>
-            </dd>
-          </div>
+              <dl className={styles.adviceFacts}>
+                <div>
+                  <dt>찾아볼 제품</dt>
+                  <dd>{item.lookFor}</dd>
+                </div>
+                <div>
+                  <dt>주의</dt>
+                  <dd>{item.caution}</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
         ))}
-      </dl>
+      </ol>
     </section>
   )
 }
@@ -641,35 +709,46 @@ function ResultNutrients({ items }: { items: FacingAiResult['nutrients'] }) {
   return (
     <section className={`${styles.resultSection} ${styles.nutrientSection}`}>
       <div className={styles.sectionHeading}>
-        <h4>NUTRIENTS TO CHECK</h4>
+        <div>
+          <p className={`label ${styles.sectionEyebrow}`}>OPTIONAL CHECK</p>
+          <h4>영양 성분은 필요할 때만</h4>
+        </div>
         <p className={styles.sectionHint}>
-          영양제 제품명이 아니라, 필요할 때 확인해볼 영양 성분이야.
+          영양제를 사라는 뜻이 아니라, 결핍 여부를 확인할 후보야.
         </p>
       </div>
-      <dl className={styles.adviceList}>
-        {items.map((item) => (
-          <div key={`${item.name}:${item.why}`} className={styles.adviceItem}>
-            <dt className={styles.adviceName}>
-              <span>{item.name}</span>
-            </dt>
-            <dd className={styles.adviceBody}>
-              <p className={styles.adviceEasy}>{item.easy}</p>
-              <p className={styles.adviceMeta}>
-                <strong>왜</strong>
-                <span>{item.why}</span>
+      <ol className={`${styles.adviceList} ${styles.nutrientList}`}>
+        {items.map((item, index) => (
+          <li key={`${item.name}:${item.why}`} className={styles.adviceItem}>
+            <div className={styles.adviceLead}>
+              <span className={styles.adviceIndex}>{String(index + 1).padStart(2, '0')}</span>
+              <div className={styles.adviceName}>
+                <strong>{item.name}</strong>
+              </div>
+            </div>
+            <div className={styles.adviceBody}>
+              <p className={styles.adviceEasy}>
+                <strong>쉽게 말하면</strong>
+                <span>{item.easy}</span>
               </p>
-              <p className={styles.adviceMeta}>
-                <strong>확인</strong>
-                <span>{item.guidance}</span>
-              </p>
-              <p className={styles.adviceMeta}>
-                <strong>주의</strong>
-                <span>{item.caution}</span>
-              </p>
-            </dd>
-          </div>
+              <dl className={styles.adviceFacts}>
+                <div>
+                  <dt>왜 보나</dt>
+                  <dd>{item.why}</dd>
+                </div>
+                <div>
+                  <dt>확인 방법</dt>
+                  <dd>{item.guidance}</dd>
+                </div>
+                <div>
+                  <dt>주의</dt>
+                  <dd>{item.caution}</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
         ))}
-      </dl>
+      </ol>
     </section>
   )
 }

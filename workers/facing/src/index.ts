@@ -1,3 +1,5 @@
+import { stabilizeFacingAdvice } from './adviceGuard'
+
 type FacingSignal = {
   ids: readonly string[]
   labels: readonly string[]
@@ -116,6 +118,10 @@ const FACING_SYSTEM_INSTRUCTIONS = [
   'summary는 오늘의 우선순위를 한 문장으로만 요약하고 아래 routine·lifestyle 문장을 다시 쓰지 않는다.',
   'summary, ingredients, nutrients, routine, lifestyle, avoid, watch 사이에서 같은 조언을 표현만 바꿔 반복하지 않는다.',
   '한 조언이 여러 섹션에 걸치면 가장 구체적으로 맞는 섹션 한 곳에만 둔다.',
+  '한국어 설명 문장에는 spreads 같은 영어 동사를 섞지 않는다. BHA·AHA처럼 통용되는 성분 약칭만 예외다.',
+  '세안을 자주 하거나 횟수를 계속 늘리라고 권하지 않는다. 과세안보다 미지근한 물과 부드러운 세안을 우선한다.',
+  '선택 신호만으로 특정 음식이 원인이라고 단정하거나 막연하게 자극적인 음식을 피하라고 쓰지 않는다.',
+  '충분한 수분 섭취처럼 누구에게나 할 수 있는 일반 건강 조언을 피부 개선책처럼 칸 채우기에 쓰지 않는다.',
   '눈 통증·시야 변화, 갑작스럽고 심한 탈모, 심한 피부 반응처럼 진료가 필요한 신호가 관련되면 관리 팁보다 진료 안내를 우선한다.',
   '한국어로 짧고 명확하게 쓴다.',
   '관련 진료 위험 신호가 없으면 getHelp는 null이다.',
@@ -335,7 +341,7 @@ async function runFacingAi(signals: readonly FacingSignal[], env: Env) {
     }
   }
 
-  return validateFacingAiResult(parsed)
+  return stabilizeFacingAdvice(signals, validateFacingAiResult(parsed))
 }
 
 export default {
@@ -345,7 +351,13 @@ export default {
 
     if (url.pathname === '/health' && request.method === 'GET') {
       return json(
-        { ok: true, service: 'mamaboy-facing-ai', mode: 'workers-ai-free', model: FREE_MODEL },
+        {
+          ok: true,
+          service: 'mamaboy-facing-ai',
+          mode: 'workers-ai-free',
+          model: FREE_MODEL,
+          advice: 'guided-catalog-v1',
+        },
         200,
         origin,
       )
