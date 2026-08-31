@@ -60,6 +60,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Facing AI가 부르는 워커. 저장소의 .env에도 같은 값이 있지만, 배포되는
+          # 주소는 워크플로 안에서도 읽혀야 한다. 키가 아니라 공개 엔드포인트다.
+          VITE_FACING_API_URL: https://mamaboy-facing-ai.choi-sinho.workers.dev/facing
 
       - uses: actions/upload-pages-artifact@v3
         with:
