@@ -237,8 +237,23 @@ async function runFacingAi(signals: readonly FacingSignal[], env: Env) {
     throw new Error('Workers AI response did not contain response')
   }
 
+  /*
+   * 모델이 뱉은 글자를 읽는 자리다. 여기서 나는 SyntaxError를 그대로 올려보내면
+   * 바깥의 catch가 요청 본문이 깨진 것과 구분하지 못해, 선택은 멀쩡한 사람에게
+   * «다시 골라 줘»라고 답한다. 모델이 계약을 어긴 것은 사용자의 잘못이 아니므로
+   * 평범한 Error로 바꿔 ai-unavailable로 내려보낸다.
+   */
   const response = payload.response
-  const parsed = typeof response === 'string' ? JSON.parse(response) : response
+  let parsed: unknown = response
+
+  if (typeof response === 'string') {
+    try {
+      parsed = JSON.parse(response)
+    } catch {
+      throw new Error('Workers AI response was not valid JSON')
+    }
+  }
+
   return validateFacingAiResult(parsed)
 }
 
