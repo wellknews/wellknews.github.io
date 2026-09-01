@@ -1,7 +1,906 @@
 {
-  "generatedAt": "2026-09-01T06:31:03.722Z",
+  "generatedAt": "2026-09-01T12:30:35.985Z",
   "prototype": false,
   "articles": [
+    {
+      "id": "dezeen:4d3f4fedda",
+      "slug": "dyson-s-first-toothbrush-uses-a-camera-to-4d3f4f",
+      "titleOriginal": "Dyson's first toothbrush \"uses a camera to floss while you brush\"",
+      "summaryOriginal": "Technology company Dyson has launched the CameraJet electric toothbrush, which includes a mouthwash jet that is directed by a camera to remove plaque between teeth. Named the Dyson CameraJet, the electric toothbrush is Dyson's first dental hygiene product. According to the brand it combines brushing, flossing and mouth-washing into one device. Described as an \"entirely new The post Dyson's first t",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Technology company Dyson has launched the CameraJet electric toothbrush, which includes a mouthwash jet that is directed by a camera to remove plaque between teeth."
+        },
+        {
+          "kind": "text",
+          "text": "Named the Dyson CameraJet, the electric toothbrush is Dyson 's first dental hygiene product."
+        },
+        {
+          "kind": "text",
+          "text": "According to the brand it combines brushing, flossing and mouth-washing into one device."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_col_29-scaled.jpg",
+          "alt": "Dyson unveils its first toothbrush that \"uses a camera to floss while you brush\""
+        },
+        {
+          "kind": "text",
+          "text": "Dyson unveiled the Dyson CameraJet electric toothbrush Described as an \"entirely new way to clean your teeth\", along with an oscillating brush head, the device \"uses a camera to floss while you brush\"."
+        },
+        {
+          "kind": "text",
+          "text": "Set near the brush head, a 100,000-pixel macro-lens camera tracks the teeth to find gaps, which are sprayed with mouthwash."
+        },
+        {
+          "kind": "text",
+          "text": "According to the brand, this replaces the need to floss and the device was created in response to reports that 9 out of 10 people don't floss regularly enough."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_col_9.jpg",
+          "alt": "Dyson CameraJet electric toothbrush"
+        },
+        {
+          "kind": "text",
+          "text": "James Dyson believes it can replace flossing \"Flossing is an awkward and time-consuming chore,\" said Dyson founder James Dyson."
+        },
+        {
+          "kind": "text",
+          "text": "\"Few of us do it even though we know we should. Dyson engineers and scientists have spent well over a decade understanding oral care regimes and how nasties build up in the mouth. Our research has shown that people consistently miss the areas where plaque forms: the gaps between teeth.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_col_41.jpg",
+          "alt": "Dyson CameraJet electric toothbrush"
+        },
+        {
+          "kind": "text",
+          "text": "The Dyson CameraJet uses a camera to spray mouthwash at the gaps between teeth In response to the low levels of flossing, Dyson created an alternative method of removing plaque that utilises the camera-directed mouthwash."
+        },
+        {
+          "kind": "text",
+          "text": "The system was trained using 470,000 dental images to recognise gaps between teeth. Using an artificial intelligence-powered algorithm, it takes 28 images per second to track the teeth and predict gaps."
+        },
+        {
+          "kind": "text",
+          "text": "Read: Dyson aims to \"disrupt\" with launch of first headphones \"We wanted to solve three fundamental problems: how to see those gaps, remove plaque, how to improve cleaning performance while brushing,\" said Dyson."
+        },
+        {
+          "kind": "text",
+          "text": "\"By combining a camera, machine learning, precision fluid dynamics, advanced brushing technologies, connectivity and WiFi, Dyson CameraJet introduces an entirely new way to keep your mouth healthy.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_col_0.jpg",
+          "alt": "Mouth-wash spraying toothbrush"
+        },
+        {
+          "kind": "text",
+          "text": "Mouthwash is sprayed as you brush The mouthwash, which is dispensed in a conical spray, is contained in a transparent, 12.5 millilitre tank near the top of the toothbrush."
+        },
+        {
+          "kind": "text",
+          "text": "According to the brand, this holder utilises a pump to be kept under pressure, which gives it an \"anti-gravity\" capability that allows the toothbrush to continue to spray when held upside down."
+        },
+        {
+          "kind": "text",
+          "text": "The tank is refilled in three seconds from a dedicated docking station."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_col_11.jpg",
+          "alt": "Dyson toothpaste and mouthwash"
+        },
+        {
+          "kind": "text",
+          "text": "Dyson has also created its own toothpaste Along with the device, the brand developed its own toothpaste and mouthwash for use with the Dyson CameraJet."
+        },
+        {
+          "kind": "text",
+          "text": "Available in Ginger Mint and Spearmint, the toothpaste was designed to be non-foaming so that it doesn't block the camera."
+        },
+        {
+          "kind": "text",
+          "text": "Dyson, which is best known for its innovative vacuum cleaners, also previously released its first headphones ."
+        },
+        {
+          "kind": "text",
+          "text": "The post Dyson's first toothbrush \"uses a camera to floss while you brush\" appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/01/dyson-camerajet-first-toothbrush-floss",
+      "author": "Tom Ravenscroft",
+      "publishedAt": "2026-09-01T10:30:02.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Design",
+        "Dyson",
+        "Toothbrushes"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_sq_9-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "다이슨의 첫 칫솔은 \"양치하는 동안 카메라로 치실을 사용한다\"",
+      "summaryKo": "기술 회사 다이슨은 카메라가 지시하는 가글 제트를 포함해 카메라 전동 칫솔을 출시했습니다. 이 칫솔은 카메라가 지시하는 가글 제트를 통해 치아 사이의 플라그를 제거합니다. 다이슨 카메라젯이라는 이름의 이 전동 칫솔은 다이슨의 첫 치아 위생 제품입니다. 브랜드에 따르면 이 제품은 양치, 치실 사용, 구강 세척을 하나의 기기로 결합한 제품입니다. \"완전히 새로운 제품\"으로 묘사됩니다. 다이슨의 첫 번째 T",
+      "bodyKo": [
+        "기술 회사 다이슨은 카메라가 지시하는 가글 제트를 통해 치아 사이의 플라그를 제거하는 가글 제트를 포함한 전동 칫솔을 출시했습니다.",
+        "다이슨 카메라젯이라는 이름의 이 전동 칫솔은 다이슨의 첫 번째 치아 위생 제품입니다.",
+        "브랜드에 따르면 양치, 치실, 구강 세척을 하나의 기기로 결합한 제품이라고 합니다.",
+        "다이슨은 다이슨 카메라젯 전기 칫솔을 공개했습니다. \"완전히 새로운 치아 청소 방법\"으로 설명되었으며, 진동하는 칫솔 헤드와 함께 \"양치할 때 카메라를 이용해 치실을 사용한다\"고 합니다.",
+        "칫솔 머리 근처에 설치된 10만 픽셀 매크로 렌즈 카메라가 치아를 추적해 틈을 찾아내고, 가글을 뿌립니다.",
+        "브랜드에 따르면, 이 장치는 치실 사용을 대체하며, 10명 중 9명이 치실을 충분히 규칙적으로 사용하지 않는다는 보고에 대응해 만들어졌습니다.",
+        "제임스 다이슨은 이것이 치실 사용을 대체할 수 있다고 믿고 있습니다. \"치실은 어색하고 시간이 많이 드는 작업입니다,\"라고 다이슨 창립자 제임스 다이슨은 말했습니다.",
+        "\"우리가 해야 한다는 걸 알면서도 그렇게 하는 사람은 거의 없습니다. 다이슨 엔지니어와 과학자들은 10년 넘게 구강 관리 체계와 입안에 악이 쌓이는 과정을 이해해 왔습니다. 우리 연구에 따르면 사람들은 플라그가 형성되는 부위, 즉 치아 사이의 틈을 지속적으로 놓치고 있습니다.\"",
+        "다이슨 카메라젯은 카메라를 이용해 치아 사이 틈에 구강청결제를 뿌립니다. 치실 사용량이 낮다는 점에 대응하여, 다이슨은 카메라 지시하는 가글을 활용한 플라크 제거 대체 방법을 개발했습니다.",
+        "이 시스템은 47만 장의 치아 이미지를 사용해 치아 사이의 틈을 인식하도록 훈련되었습니다. 인공지능 기반 알고리즘을 사용해 초당 28장의 이미지를 사용해 치아를 추적하고 틈을 예측합니다.",
+        "읽어보세요: 다이슨, 첫 헤드폰 출시로 '혁신'을 목표로 합니다. \"우리는 세 가지 근본적인 문제를 해결하고자 했습니다: 틈을 어떻게 보는지, 플라그를 제거하는 방법, 그리고 양치할 때 청소 성능을 향상시키는 방법,\" 다이슨은 말했습니다.",
+        "\"카메라, 머신러닝, 정밀 유체역학, 첨단 양치 기술, 연결성, WiFi를 결합하여 다이슨 카메라젯은 입 건강을 유지하는 완전히 새로운 방법을 선보입니다.\"",
+        "가글은 양치할 때 분사됩니다. 가글은 원뿔형 스프레이 형태로 분사되며, 칫솔 상단 근처에 투명한 12.5밀리리터 탱크에 담겨 있습니다.",
+        "브랜드에 따르면, 이 홀더는 압력을 유지하는 펌프를 사용해 '반중력' 기능을 제공하여 칫솔을 거꾸로 들었을 때도 계속 분사할 수 있게 합니다.",
+        "탱크는 전용 도킹 스테이션에서 3초 만에 보충됩니다.",
+        "다이슨은 자체 치약도 개발했으며, 이 기기와 함께 다이슨 카메라젯과 함께 사용할 치약과 구강청결제도 개발했습니다.",
+        "진저 민트와 스피어민트 버전으로 제공되며, 카메라를 가리지 않도록 거품이 없도록 설계되었습니다.",
+        "혁신적인 진공청소기로 가장 잘 알려진 다이슨은 이전에 첫 헤드폰도 출시했습니다.",
+        "이 글은 Dyson의 첫 칫솔이 \"양치질하는 동안 카메라로 치실을 사용한다\"는 글이 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "fight-aging:56e3722879",
+      "slug": "nrf2-downregulation-in-oligodendrocytes-as-a-contributing-cause-56e372",
+      "titleOriginal": "NRF2 Downregulation in Oligodendrocytes as a Contributing Cause of Cognitive Decline in Mice",
+      "summaryOriginal": "Oligodendrocytes resident in the brain are responsible for maintaining the insulating myelin sheaths around axons that are required for the effective transmission of electrical impulses between neurons. Loss of myelin integrity is the cause of a number of debilitating conditions, but also occurs to some degree with aging. It has been an open question as to how large a contribution this makes to ag",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Oligodendrocytes resident in the brain are responsible for maintaining the insulating myelin sheaths around axons that are required for the effective transmission of electrical impulses between neurons . Loss of myelin integrity is the cause of a number of debilitating conditions, but also occurs to some degree with aging . It has been an open question as to how large a contribution this makes to age-related cognitive decline. Researchers here provide evidence for age-related changes in oligodendrocyte behavior and myelin structures to be more complicated than the simple concept of reduced remyelination and loss of myelin integrity, and to correlate with meaningful differences in the trajectory of cognitive decline in mice."
+        },
+        {
+          "kind": "text",
+          "text": "The underlying mechanisms driving cognitive decline in aging remain unclear. Learning in humans in youth and adulthood is associated with increased central nervous system (CNS) myelin, the insulating membrane produced by oligodendrocytes that surrounds neuronal axons to facilitate rapid electrical impulse conduction and provide metabolic support. Furthermore, it is now well established that, in mice, learning requires an increase in oligodendrocytes through de novo generation. Cognitive impairment in aged mice and non-human primates is associated with reduced oligodendrocytes and myelin; however, the white matter pathologies driving human cognitive decline remain unclear. Indeed, although magnetic resonance imaging studies associate white matter abnormalities with cognitive decline in aged humans, the underpinning oligodendrocyte and myelin changes are unknown."
+        },
+        {
+          "kind": "text",
+          "text": "Here we uncover a role for oligodendrocytes in explaining the variance of cognitive decline with aging. By investigating neuropathological and transcriptomic changes in human white matter associated with individual rates of cognitive decline in aging, we find that worse cognitive trajectories unexpectedly associate with smaller myelinated axon size, thicker myelin and more oligodendrocytes with downregulation of NRF2 . Aged oligodendrocyte-specific NRF2-knockout mice showed attenuated cognitive improvement over time and mirrored the white matter pathology of human cognitive decline in aging. These findings place the oligodendrocyte as a contributor to cognitive decline and highlight the NRF2 pathway as a therapeutic target to preserve cognition in human aging."
+        },
+        {
+          "kind": "text",
+          "text": "Link: https://doi.org/10.1038/s41591-026-04608-y"
+        }
+      ],
+      "sourceName": "Fight Aging!",
+      "sourceUrl": "https://www.fightaging.org/",
+      "originalUrl": "https://www.fightaging.org/archives/2026/09/nrf2-downregulation-in-oligodendrocytes-as-a-contributing-cause-of-cognitive-decline-in-mice",
+      "author": "Reason",
+      "publishedAt": "2026-09-01T10:22:57.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
+      "language": "en",
+      "keywords": [
+        "Daily News"
+      ],
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 3,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "opinion",
+      "titleKo": "쥐에서 인지 저하의 원인으로서 희소돌기세포의 NRF2 하향 조절",
+      "summaryKo": "뇌에 거주하는 올리고덴드로사이트는 신경 간 전기 신호 전달에 필요한 축삭 주변의 절연 미엘린 외피를 유지하는 역할을 합니다. 미엘린 무결성 상실은 여러 쇠약한 질환의 원인이지만, 노화와 어느 정도 함께 발생합니다. 이것이 농업에 얼마나 큰 기여를 하는지는 아직 미지수입니다",
+      "bodyKo": [
+        "뇌에 거주하는 올리고덴드로사이트는 축삭 주변의 절연 미엘린 외피를 유지하는 역할을 하며, 이는 뉴런 간 전기 신호 전달에 필요한 역할을 합니다. 미엘린 무결성 상실은 여러 쇠약한 질환의 원인이지만, 노화와 어느 정도 관련이 있습니다. 이것이 연령 관련 인지 저하에 얼마나 큰 기여를 하는지는 미지수입니다. 연구자들은 올리고덴드로사이트의 행동과 미엘린 구조의 연령 관련 변화가 단순한 재수초화 감소와 미엘린 완전성 상실이라는 개념보다 더 복잡하며, 쥐의 인지 저하 경로에 의미 있는 차이가 있음을 보여줍니다.",
+        "노화 시 인지 저하를 유발하는 근본 메커니즘은 아직 명확하지 않습니다. 청소년기와 성인기의 인간 학습은 중추신경계(CNS) 미엘린 증가와 관련이 있습니다. 미엘린은 올리고돌기교세포가 신경 축삭을 감싸 빠른 전기 전달을 촉진하고 대사 지원을 제공하는 절연막입니다. 더불어, 쥐에서 학습을 위해서는 신생 생성을 통해 올리고덴드로사이트의 증가가 필요하다는 점이 잘 입증되었습니다. 노년 마우스와 비인간 영장류에서 인지 장애는 올리고덴드로사이트와 미엘린 감소와 관련이 있습니다; 그러나 인간 인지 저하를 유발하는 백질 병리에 대해서는 아직 명확하지 않습니다. 실제로 자기공명영상 연구에서는 백질 이상이 노인의 인지 저하와 연관되어 있지만, 그 근본 원인은 알려지지 않았습니다.",
+        "여기서 우리는 노화에 따른 인지 저하의 변동을 설명하는 데 있어 올리고덴드로사이트의 역할을 밝혀냅니다. 노화 인지적 저하 속도와 관련된 인간 백질의 신경병리학적 및 전사체 변화를 조사함으로써, 더 나쁜 인지 경로는 예상치 못하게 더 작은 수초 축삭 크기, 더 두꺼운 미엘린, 더 많은 올리고덴드로사이트와 NRF2 하향 조절과 연관되어 있음을 발견했습니다. 노령 올리고덴드로사이트에 특이적인 NRF2 노크아웃 쥐는 시간이 지남에 따라 인지 개선이 약해졌으며, 이는 노화 중 인간 인지 저하의 백질 병리와 유사합니다. 이 발견들은 올리고덴드로사이트가 인지 저하에 기여하는 원인임을 보여주며, NRF2 경로가 인간 노화 시 인지 보존을 위한 치료 표적임을 강조합니다.",
+        "링크: https://doi.org/10.1038/s41591-026-04608-y"
+      ]
+    },
+    {
+      "id": "fight-aging:190fecff4b",
+      "slug": "amyloid-seeding-as-a-basis-for-a-blood-190fec",
+      "titleOriginal": "Amyloid-β Seeding as a Basis for a Blood Test for Alzheimer's Disease",
+      "summaryOriginal": "Blood tests to assess Alzheimer's disease risk and progression exist, for example based on the presence of circulating varieties of tau protein, but there is a great deal of room for improvement. Researchers here provide evidence for an approach to the measurement of very small amounts of misfolded amyloid-β in blood to work reasonably well in patients. The amyloid cascade hypothesis continues to ",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Blood tests to assess Alzheimer's disease risk and progression exist, for example based on the presence of circulating varieties of tau protein , but there is a great deal of room for improvement. Researchers here provide evidence for an approach to the measurement of very small amounts of misfolded amyloid-β in blood to work reasonably well in patients. The amyloid cascade hypothesis continues to steer much of the field of research and development for Alzheimer's disease; misfolded amyloid-β spreads slowly in the brain over years, and eventually causes sufficient dysfunction to promote a subsequent disease stage characterized by a feedback loop between chronic inflammation and tau aggregation . Tracking this growth in misfolded amyloid-β make sense as an approach to assessing risk and progression of the early stages of Alzheimer's disease."
+        },
+        {
+          "kind": "text",
+          "text": "A hallmark of Alzheimer's disease (AD) pathophysiology is the misfolding and aggregation of β-amyloid (Aβ) protein in the brain, which results in tau pathology , neuroinflammation , synaptic loss, neurodegeneration , and cognitive decline. The misfolded Aβ aggregates, or \"seeds\", range from small, soluble oligomers to large, insoluble fibrils that have a rich β-sheet secondary structure and are generally stable. Because of its specific structure, Aβ seeds corrupt natively folded Aβ and promote the aggregation and formation of pathogenic assemblies, which is a process similar to prion -like aggregation. Such a process follows a secondary nucleation mechanism in which new aggregates generate at a rate dependent on the concentration of existing seeds."
+        },
+        {
+          "kind": "text",
+          "text": "Based on this seeding nucleation mechanism, protein misfolding cyclic amplification (PMCA) has been developed to amplify trace amounts of misfolded proteins to a detectable level in biological samples. It uses repeated cycles of incubation and amplification for seed multiplication. However, the application of these techniques to AD diagnosis is relatively limited. In the present study, we detected plasma Aβ aggregation seeding activity using a real-time sonication -based PMCA method. A total of 549 participants were recruited between December 2020 and May 2024. Plasma Aβ aggregation seeding activity was measured using a real-time sonication-based protein misfolding cyclic amplification assay. The diagnostic performance of plasma Aβ aggregation seeding activity as a biomarker was assessed."
+        },
+        {
+          "kind": "text",
+          "text": "In the validation stage, plasma Aβ aggregation seeding activity exhibited high diagnostic accuracy with optimal cutoff values of 42.91 for distinguishing AD from cognitively unimpaired ( area under the curve [AUC] = 0.93), 42.02 for AD from non-AD dementia , and 43.24 for mild cognitive impairment due to AD from non-AD dementia. Plasma Aβ seeding activity significantly correlated with cognitive functions ( Mini-Mental State Examination [MMSE] scores: rs = -0.68; Clinical Dementia Rating [CDR] scores: rs = 0.71)."
+        },
+        {
+          "kind": "text",
+          "text": "These findings indicate that plasma Aβ aggregation seeding activity could serve as a promising minimally invasive biomarker for identifying both AD and MCI due to AD. This biomarker potentially facilitates early detection and differential diagnosis of AD at different clinical stages."
+        },
+        {
+          "kind": "text",
+          "text": "Link: https://doi.org/10.1097/CM9.0000000000004142"
+        }
+      ],
+      "sourceName": "Fight Aging!",
+      "sourceUrl": "https://www.fightaging.org/",
+      "originalUrl": "https://www.fightaging.org/archives/2026/09/amyloid-%ce%b2-seeding-as-a-basis-for-a-blood-test-for-alzheimers-disease",
+      "author": "Reason",
+      "publishedAt": "2026-09-01T10:11:23.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
+      "language": "en",
+      "keywords": [
+        "Daily News"
+      ],
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "body",
+      "trustLevel": 3,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "research",
+      "titleKo": "알츠하이머병 혈액 검사의 기초로서의 아밀로이드 β 씨앗 투여",
+      "summaryKo": "예를 들어, 순환하는 타우 단백질 변종의 존재를 기반으로 알츠하이머병 위험과 진행을 평가하는 혈액 검사가 존재하지만, 개선 여지가 많습니다. 연구자들은 혈액 내 아주 소량의 잘못 접힌 아밀로이드-β를 환자에게 합리적으로 잘 측정하는 접근법을 제시합니다. 아밀로이드 연쇄 가설은 계속됩니다",
+      "bodyKo": [
+        "예를 들어, 순환하는 타우 단백질 품종의 존재를 기반으로 알츠하이머병 위험과 진행을 평가하는 혈액 검사가 존재하지만, 개선의 여지가 많습니다. 연구자들은 혈액 내 아주 소량의 잘못 접힌 아밀로이드-β을 측정하는 방법이 환자에서 합리적으로 잘 작동한다는 증거를 제시합니다. 아밀로이드 연쇄 가설은 알츠하이머병 연구 개발 분야의 많은 부분을 계속 이끌고 있습니다; 잘못 접힌 아밀로이드-β은 수년에 걸쳐 뇌에서 천천히 퍼지며, 결국 만성 염증과 타우 응집 간의 피드백 고리가 특징인 후속 질환 단계를 촉진할 충분한 기능 장애를 일으킵니다. 잘못 접힌 아밀로이드-β의 성장을 추적하는 것은 알츠하이머병 초기 단계의 위험과 진행 평가에 있어 타당합니다.",
+        "알츠하이머병(AD) 병태생리의 특징 중 하나는 뇌에서 β-아밀로이드(Aβ) 단백질의 잘못 접히고 응집하는 현상으로, 이는 타우 병리, 신경염증, 시냅스 손실, 신경퇴행, 인지 저하를 초래합니다. 잘못 접힌 Aβ 응집체, 즉 '씨앗'은 작고 수용성 있는 올리고머부터 풍부한 β 시트 2차 구조를 가진 크고 불용성 섬유까지 다양합니다. 특이한 구조 때문에 Aβ 씨앗은 자연적으로 접힌 Aβ를 손상시키고, 병원성 조립체의 응집과 형성을 촉진하는데, 이는 프리온 유사 응집과 유사한 과정입니다. 이러한 과정은 기존 씨앗의 농도에 따라 새로운 응집체가 생성되는 2차 핵 생성 메커니즘을 따릅니다.",
+        "이 시딩 핵생성 메커니즘을 바탕으로, 단백질 오접힘 고리적 증폭(PMCA)이 생물학적 샘플 내에서 미량의 잘못 접힌 단백질을 검출 가능한 수준으로 증폭하는 데 개발되었습니다. 이 기술은 씨앗 증식을 위해 반복적인 배양 및 증폭 과정을 사용합니다. 그러나 이러한 기법을 AD 진단에 적용하는 것은 비교적 제한적입니다. 본 연구에서는 실시간 초음파 기반 PMCA 방법을 사용하여 혈장 Aβ 응집 시딩 활성을 검출하였습니다. 2020년 12월부터 2024년 5월까지 총 549명의 참가자가 모집되었습니다. 실시간 초음파 기반 단백질 오포름 순환 증폭 분석법을 사용하여 혈장 Aβ 응집 시딩 활성을 측정하였습니다. 생체지표로서 혈장 Aβ 응집 시딩 활동의 진단 성능을 평가하였습니다.",
+        "검증 단계에서 혈장 Aβ 집집 시딩 활동은 높은 진단 정확도를 보였으며, AD 환자와 인지적 장애 면적(곡선 아래 면적[AUC] = 0.93)을 구분하는 데 42.91, 비AD 치매로 인한 AD 42.02, 비AD 치매로 인한 경도 인지 장애 43.24의 최적 컷오프 값을 보였습니다. 혈장 Aβ 시딩 활동은 인지 기능과 유의하게 상관관계가 있었습니다(미니 정신상태 검사(MMSE) 점수: rs = -0.68; 임상 치매 등급[CDR] 점수: rs = 0.71).",
+        "이 결과는 혈장 Aβ 응집 시딩 활동이 AD와 MCI를 모두 식별하는 데 유망한 최소 침습 바이오마커가 될 수 있음을 시사합니다. 이 바이오마커는 임상적 단계별로 AD의 조기 발견과 감별 진단을 촉진할 수 있습니다.",
+        "링크: https://doi.org/10.1097/CM9.0000000000004142"
+      ]
+    },
+    {
+      "id": "dezeen:fb4b6cac1f",
+      "slug": "manchester-city-and-puma-unveil-ai-designed-kit-fb4b6c",
+      "titleOriginal": "Manchester City and Puma unveil AI-designed kit",
+      "summaryOriginal": "Sportswear brand Puma has launched a kit for English football team Manchester City that was designed by a fan using an AI generator. The shirt was designed using Puma's AI Creator, which is described as a \"custom generative AI tool that turns written prompts into kit designs within seconds\". It will be worn as the team's The post Manchester City and Puma unveil AI-designed kit appeared first on De",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Sportswear brand Puma has launched a kit for English football team Manchester City that was designed by a fan using an AI generator."
+        },
+        {
+          "kind": "text",
+          "text": "The shirt was designed using Puma's AI Creator, which is described as a \"custom generative AI tool that turns written prompts into kit designs within seconds\"."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/manchester-city-ai-kit-puma_dezeen_2364_col_8.jpg",
+          "alt": "Manchester City AI kit by Puma"
+        },
+        {
+          "kind": "text",
+          "text": "Puma revealed an AI kit for Manchester City It will be worn as the team's third kit this season, marking the first time a fan-generated AI kit has been used by a professional football team."
+        },
+        {
+          "kind": "text",
+          "text": "\"For the first time in professional football, fans were given the power to design a kit using AI with the winning fan-created design set to be worn on pitch this season,\" said Manchester City."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/manchester-city-ai-kit-puma_dezeen_2364_col_7.jpg",
+          "alt": "Manchester City AI kit by Puma"
+        },
+        {
+          "kind": "text",
+          "text": "The shirt will be the team's third kit The white kit, which was created using the AI tool by a fan called Elliot, has a simple design."
+        },
+        {
+          "kind": "text",
+          "text": "It features a central two-tone sash that is half sky blue and half navy blue. There are blue accents on the shirt's sides, while the words AI creator are written inside the collar."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/manchester-city-ai-kit-puma_dezeen_2364_col_9.jpg",
+          "alt": "White kit with blue stripe"
+        },
+        {
+          "kind": "text",
+          "text": "The kit has a two-toned central stripe It was chosen following a competition to design a shirt for the club using the AI tool. Powered by Google Cloud, the tool quickly generates kits based on text prompts."
+        },
+        {
+          "kind": "text",
+          "text": "Elliot's design was selected from a shortlist of 10 following a fan vote, with more than 180,000 submissions made to the competition overall."
+        },
+        {
+          "kind": "text",
+          "text": "Read: Manchester City unveils rain-covered kit \"as a tribute to the famous Mancunian weather\" \"Puma AI Creator represents a genuinely new way of thinking about how football kits are made and who gets to shape them,\" said Puma vice president teamsport Dominique Gathier."
+        },
+        {
+          "kind": "text",
+          "text": "\"The volume of entries we received speaks to the strength of the Manchester City fanbase, and the design that came through reflects that,\" he continued."
+        },
+        {
+          "kind": "text",
+          "text": "\"This is a project that sits at the intersection of technology, football, and community and we are proud to have been able to bring it to life.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/manchester-city-ai-kit-puma_dezeen_2364_col_13.jpg",
+          "alt": "Kit designed with Puma"
+        },
+        {
+          "kind": "text",
+          "text": "The words AI Creator were written inside the collar Although the kit was generated with the help of AI, some commenters online have drawn comparisons between the shirt and a kit worn by Chelsea in the early 2000s ."
+        },
+        {
+          "kind": "text",
+          "text": "The club's 2003 away shirt also has a white background with a dual-toned blue shirt down its centre."
+        },
+        {
+          "kind": "text",
+          "text": "Last year Manchester City's third kit was covered in rain as a \"tribute to the famous Mancunian weather\" ."
+        },
+        {
+          "kind": "text",
+          "text": "The post Manchester City and Puma unveil AI-designed kit appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/01/manchester-city-ai-kit-puma",
+      "author": "Tom Ravenscroft",
+      "publishedAt": "2026-09-01T09:30:36.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Design",
+        "Football",
+        "Football kits"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/08/manchester-city-ai-kit-puma_dezeen_2364_sq_5-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "맨체스터 시티와 퓨마, AI 설계 유니폼 공개",
+      "summaryKo": "스포츠웨어 브랜드 푸마는 팬이 AI 생성기를 사용해 디자인한 영국 축구팀 맨체스터 시티용 유니폼을 출시했습니다. 이 셔츠는 퓨마의 AI 크리에이터를 사용해 디자인되었으며, \"작성된 프롬프트를 몇 초 만에 유니폼 디자인으로 변환하는 맞춤형 생성형 AI 도구\"로 설명됩니다. 이 셔츠는 팀의 것으로 착용될 예정입니다. 맨체스터 시티와 퓨마가 AI 디자인 키트를 공개하는 게시물은 De에 처음 게재되었습니다",
+      "bodyKo": [
+        "스포츠웨어 브랜드 푸마는 한 팬이 AI 생성기를 사용해 디자인한 잉글랜드 축구팀 맨체스터 시티용 유니폼을 출시했습니다.",
+        "이 티셔츠는 Puma의 AI Creator를 사용해 디자인되었으며, \"작성된 프롬프트를 몇 초 만에 키트 디자인으로 변환하는 맞춤형 생성형 AI 도구\"로 설명됩니다.",
+        "푸마는 맨체스터 시티용 AI 키트를 공개했습니다. 이번 시즌 팀의 세 번째 유니폼으로 착용되며, 프로 축구팀에서 팬이 생성한 AI 키트가 처음 사용된 사례입니다.",
+        "맨체스터 시티는 \"프로 축구 역사상 처음으로, 팬들이 AI를 활용해 유니폼을 디자인할 수 있는 권한을 부여받았으며, 이 우승 팬 디자인은 이번 시즌 경기장에서 착용될 예정이다\"라고 말했다.",
+        "이 셔츠는 팀의 세 번째 유니폼이 될 것입니다. 흰색 유니폼은 팬 엘리엇이 AI 도구를 사용해 만든 단순한 디자인입니다.",
+        "중앙에는 하늘색과 네이비 블루가 반은 섞인 투톤 띠가 있습니다. 셔츠 옆면에는 파란색 포인트가 있고, 칼라 안쪽에는 'AI 창조자'라는 문구가 적혀 있습니다.",
+        "이 유니폼은 중앙에 두 가지 색상의 줄무늬가 있습니다. AI 도구를 사용해 클럽 셔츠를 디자인하는 대회 결과로 선정되었습니다. 구글 클라우드를 기반으로 한 이 도구는 텍스트 프롬프트를 기반으로 빠르게 키트를 생성합니다.",
+        "엘리엇의 디자인은 팬 투표를 거쳐 10개 후보 중에서 선정되었으며, 전체 대회에는 18만 개 이상의 작품이 제출되었습니다.",
+        "읽어보세요: 맨체스터 시티, 비에 젖은 유니폼을 공개하며 \"유명한 맨체스터 날씨에 대한 헌사\" \"푸마 AI 크리에이터는 축구 유니폼이 어떻게 만들어지고, 누가 그것을 다룰 수 있는지에 대해 진정으로 새로운 사고방식을 제시합니다,\"라고 푸마 팀스포츠 부사장 도미니크 가티에가 말했습니다.",
+        "\"우리가 받은 응모품의 양은 맨체스터 시티 팬층의 강함을 보여주며, 들어온 디자인도 이를 반영한다\"고 그는 덧붙였다.",
+        "\"이 프로젝트는 기술, 축구, 그리고 커뮤니티가 만나는 지점에 위치해 있으며, 우리는 이를 실현할 수 있어 자랑스럽게 생각합니다.\"",
+        "칼라 안에는 'AI 크리에이터'라는 문구가 적혀 있었다. 비록 이 유니폼은 AI의 도움으로 생성되었지만, 일부 온라인 댓글러들은 이 셔츠를 2000년대 초 첼시가 입었던 유니폼과 비교하기도 했다.",
+        "클럽의 2003년 원정 셔츠도 흰색 배경에 중앙에 이중 색상의 파란색 셔츠가 있습니다.",
+        "지난해 맨체스터 시티의 세 번째 유니폼은 \"유명한 맨체스터 날씨에 대한 헌사\"로 비에 젖었다.",
+        "맨체스터 시티와 퓨마가 AI 설계 유니폼을 공개했다는 글은 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:934dd1e478",
+      "slug": "eight-architecture-and-design-events-in-september-from-934dd1",
+      "titleOriginal": "Eight architecture and design events in September from Dezeen Events Guide",
+      "summaryOriginal": "Lake Como Design Festival, London Design Festival, Detroit Month of Design and Tallinn Design Festival are among the architecture and design events featured in Dezeen Events Guide this September. Other events taking place during the month include Habitare, Frieze Seoul, Downtown Design Riyadh and Maison&Objet. Detroit Month of Design 1 to 30 September, USA Detroit The post Eight architecture and d",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Lake Como Design Festival , London Design Festival , Detroit Month of Design and Tallinn Design Festival are among the architecture and design events featured in Dezeen Events Guide this September."
+        },
+        {
+          "kind": "text",
+          "text": "Other events taking place during the month include Habitare , Frieze Seoul , Downtown Design Riyadh and Maison&Objet ."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2025/09/detroit-design-and-art-warehouse-2025_dezeen_2364_hero.jpg",
+          "alt": "Justin Bailey"
+        },
+        {
+          "kind": "text",
+          "text": "Detroit Month of Design takes place in September each year. Photo is by Tom Carter Detroit Month of Design 1 to 30 September, USA"
+        },
+        {
+          "kind": "text",
+          "text": "Detroit Month of Design celebrates its 16th edition, hosting exhibitions , workshops, talks , open studios, tours and product launches."
+        },
+        {
+          "kind": "text",
+          "text": "The events span a range of disciplines, including graphic , fashion , industrial and product design , as well as architecture , technology , mobility and sustainability ."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/06/Frieze-Seoul-2026_dezeen_2364_col_1.jpg",
+          "alt": "Photo of someone at Frieze Seoul"
+        },
+        {
+          "kind": "text",
+          "text": "Frieze Seoul returns to COEX. Photo is by WeCap Studio, courtesy of Frieze Seoul Frieze Seoul 2 to 5 September, South Korea"
+        },
+        {
+          "kind": "text",
+          "text": "The 2026 edition of Frieze Seoul takes place at COEX, presented in partnership with art fair Kiaf Seoul."
+        },
+        {
+          "kind": "text",
+          "text": "The event's fifth iteration showcases work from over 125 global galleries across three categories: Focus, Material Practice and Spotlight."
+        },
+        {
+          "kind": "text",
+          "text": "Alongside the fair , the event features talks, an awards programme, film screenings and live performances."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2025/12/Habitare-2026_dezeen_2364_col_0.jpg",
+          "alt": "Photo of exhibition at Habitare"
+        },
+        {
+          "kind": "text",
+          "text": "Habitare runs during Helsinki Design Week. Photo courtesy of Habitare Habitare 2 to 6 September, Finland"
+        },
+        {
+          "kind": "text",
+          "text": "Habitare is an annual design fair that takes place during Helsinki Design Week , spotlighting furniture , lighting and accessories."
+        },
+        {
+          "kind": "text",
+          "text": "This year, the fair and talks series explores the theme Plot Twists, championing unexpected, unconventional and experimental design choices."
+        },
+        {
+          "kind": "text",
+          "text": "The fair takes place at Messukeskus Helsinki."
+        },
+        {
+          "kind": "text",
+          "text": "Maison&Objet September 10 to 14 September, France"
+        },
+        {
+          "kind": "text",
+          "text": "Trade show Maison&Objet hosts its second event of the year during the 2026 iteration of Paris Design Week , located at the Paris Nord Villepinte Exhibition Centre."
+        },
+        {
+          "kind": "text",
+          "text": "The showcase presents products across six categories: Decor and Design, Fine Craft, Fragrance and Wellness, Fashion and Accessories, Gift and Play, Maison&Objet in the City, and Cook and Share."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2025/09/lake-como-design-festival-2025_dezeen_2364_col_1-copy.jpg",
+          "alt": "Table made from marble fragments and stainless steel brackets on an outdoor gravel area"
+        },
+        {
+          "kind": "text",
+          "text": "Photo is by Alice Laycock Lake Como Design Festival 12 to 20 September, Italy"
+        },
+        {
+          "kind": "text",
+          "text": "Border is the theme for the latest edition of Lake Como Design Festival , addressing how creative, geographical and social boundaries impact design."
+        },
+        {
+          "kind": "text",
+          "text": "The nine-day festival enters its eighth edition, with exhibitions, installations , talks and pop-up shops taking place at venues such as Villa del Grumello and Villa Saporiti."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/06/London-Design-Festival-2026-Dezeen-guide_dezeen_2364_col_0.jpg",
+          "alt": "Illustration of London"
+        },
+        {
+          "kind": "text",
+          "text": "Dezeen has launched its annual guide to London Design Festival. Illustration is by Ross Becker London Design Festival 12 to 20 September, UK"
+        },
+        {
+          "kind": "text",
+          "text": "2026 marks the 24th iteration of London's annual design festival , which launches a range of events across 11 participating districts."
+        },
+        {
+          "kind": "text",
+          "text": "The programme includes fairs, exhibitions, installations, parties, talks, workshops, tours and open showrooms and studios."
+        },
+        {
+          "kind": "text",
+          "text": "Dezeen has launched the 2026 edition of its guide to the festival , accompanied by an interactive map ."
+        },
+        {
+          "kind": "text",
+          "text": "Downtown Design Riyadh 15 to 18 September, Saudi Arabia"
+        },
+        {
+          "kind": "text",
+          "text": "Design fair Downtown Design hosts its second edition in Riyadh , Saudi Arabia , usually located in Dubai during its design festival."
+        },
+        {
+          "kind": "text",
+          "text": "Organised by the Architecture and Design Commission of the Ministry of Culture, the four-day event features projects by regional and global designers."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/04/Tallinn-Design-Festival-2026_dezeen_2364_col_1.jpg",
+          "alt": "Photo of a fashion show"
+        },
+        {
+          "kind": "text",
+          "text": "Photo is by Kaie Kiil Tallinn Design Festival 28 September to 4 October, Estonia"
+        },
+        {
+          "kind": "text",
+          "text": "Almost 100 events are taking place in Tallinn during its 21st design festival, each addressing the theme Future of Product Design, which focuses on sustainable production and inclusive pieces."
+        },
+        {
+          "kind": "text",
+          "text": "Programme highlights include the Estonian Design Awards (BRUNO) exhibition and gala, the International Design Conference and the Design Street market."
+        },
+        {
+          "kind": "text",
+          "text": "Dezeen Events Guide is our guide to the best architecture and design events taking place across the world each year. The guide is updated weekly and includes virtual events, conferences, trade fairs, major exhibitions and design weeks."
+        },
+        {
+          "kind": "text",
+          "text": "Inclusion in the guide is free for basic listings, with events selected at Dezeen's discretion. Organisers can get standard, enhanced or featured listings for their events, including images, additional text and links, by paying a modest fee."
+        },
+        {
+          "kind": "text",
+          "text": "In addition, events can ensure inclusion by partnering with Dezeen. For more details on inclusion in Dezeen Events Guide and media partnerships with Dezeen, email eventsguide@dezeen.com ."
+        },
+        {
+          "kind": "text",
+          "text": "The post Eight architecture and design events in September from Dezeen Events Guide appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/01/eight-architecture-design-events-september-dezeen-events-guide-2026",
+      "author": "Sophie Chapman",
+      "publishedAt": "2026-09-01T07:00:56.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Architecture",
+        "Design",
+        "Events",
+        "Architecture and design events",
+        "Dezeen Events Guide"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/08/LDF-2026_dezeen_2364_col_0-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "Dezeen Events Guide 제공, 9월에 열리는 8개의 건축 및 디자인 행사",
+      "summaryKo": "레이크 코모 디자인 페스티벌, 런던 디자인 페스티벌, 디트로이트 디자인 월드, 탈린 디자인 페스티벌 등이 이번 9월 Dezeen Events Guide에 소개되는 건축 및 디자인 행사들입니다. 이 달 동안 열리는 다른 행사로는 Habitare, Frieze Seoul, Downtown Design Riyadh, Maison&Objet가 있습니다. 디트로이트 디자인 월드 9월 1일부터 30일까지, 미국 디트로이트 포스트 에이트 아키텍처와 d",
+      "bodyKo": [
+        "레이크 코모 디자인 페스티벌, 런던 디자인 페스티벌, 디트로이트 디자인 먼스 오브 디자인, 탈린 디자인 페스티벌 등이 이번 9월 Dezeen Events Guide에 소개되는 건축 및 디자인 행사들입니다.",
+        "이 달 동안 열리는 다른 행사로는 Habitare, Frieze Seoul, Downtown Design Riyadh, Maison&Objet 등이 있습니다.",
+        "디트로이트 디자인의 달은 매년 9월에 열립니다. 사진은 톰 카터가 촬영했습니다. 디트로이트 디자인의 달 9월 1일부터 30일까지, 미국입니다.",
+        "디트로이트 디자인의 달은 16번째 행사를 기념하며, 전시회, 워크숍, 강연, 오픈 스튜디오, 투어, 제품 출시 등이 개최됩니다.",
+        "이 행사들은 그래픽, 패션, 산업 및 제품 디자인뿐만 아니라 건축, 기술, 모빌리티, 지속 가능성 등 다양한 분야를 아우릅니다.",
+        "프리즈 서울이 COEX로 돌아왔습니다. 사진은 WeCap Studio에서 제공했으며, 프리즈 서울 프리즈 서울 9월 2일부터 5일까지 대한민국",
+        "2026년 프리즈 서울은 코엑스(COEX)에서 열리며, 아트 페어 키아프 서울과 협력하여 개최됩니다.",
+        "다섯 번째 행사는 집중, 재료 실천, 스포트라이트 세 부문에서 125개 이상의 글로벌 갤러리의 작품을 선보입니다.",
+        "박람회와 함께 강연, 시상식, 영화 상영, 라이브 공연도 진행됩니다.",
+        "Habitare는 헬싱키 디자인 위크 기간 동안 운영됩니다. 사진 제공: Habitare Habitare, 핀란드 9월 2일부터 6일까지.",
+        "해비타레는 헬싱키 디자인 위크 기간 동안 열리는 연례 디자인 박람회로, 가구, 조명, 액세서리를 조명합니다.",
+        "올해 페어와 토크 시리즈는 '플롯 트위스트'라는 주제를 탐구하며, 예상치 못하고 비전통적이며 실험적인 디자인 선택을 지지합니다.",
+        "박람회는 헬싱키 메슈케스쿠스에서 열립니다.",
+        "메종 & 오베 9월 10일부터 14일까지 프랑스",
+        "무역 박람회 메종&오베는 2026년 파리 디자인 위크 기간 동안 파리 노르 빌팽트 전시장에서 두 번째 행사를 개최합니다.",
+        "이 쇼케이스는 데코 및 디자인, 파인 크래프트, 향수 및 웰니스, 패션 및 액세서리, 선물과 놀이, 도시의 메종 & 오브제, 그리고 쿡 앤 쉐어의 6개 카테고리에 걸쳐 제품을 선보입니다.",
+        "사진은 9월 12일부터 20일까지 이탈리아에서 열린 Alice Laycock Lake Como 디자인 페스티벌에서 촬영했습니다.",
+        "'국경'은 최근 레이크 코모 디자인 페스티벌의 주제로, 창의적, 지리적, 사회적 경계가 디자인에 어떤 영향을 미치는지를 다룹니다.",
+        "9일간의 이 축제는 여덟 번째 에디션에 접어들었으며, 빌라 델 그루멜로와 빌라 사포리티 같은 장소에서 전시, 설치, 강연, 팝업 숍이 열립니다.",
+        "Dezeen은 연례 런던 디자인 페스티벌 가이드를 시작했습니다. 일러스트는 Ross Becker가 그린 것으로, 런던 디자인 페스티벌은 9월 12일부터 20일까지 영국에서 진행됩니다.",
+        "2026년은 런던 연례 디자인 페스티벌의 24번째 개최로, 11개 참여 구역에서 다양한 이벤트를 시작합니다.",
+        "이 프로그램에는 박람회, 전시회, 설치미술, 파티, 강연, 워크숍, 투어, 오픈 쇼룸과 스튜디오 등이 포함됩니다.",
+        "Dezeen은 2026년 페스티벌 가이드를 출시했으며, 인터랙티브 지도도 함께 제공되었습니다.",
+        "다운타운 디자인 리야드 9월 15일부터 18일까지 사우디아라비아",
+        "디자인 페어 다운타운 디자인은 디자인 페스티벌 기간 동안 보통 두바이에서 열리는 사우디아라비아 리야드에서 두 번째 에디션을 개최합니다.",
+        "문화부 건축디자인위원회가 주최하는 4일간의 행사는 지역 및 글로벌 디자이너들의 프로젝트를 선보입니다.",
+        "사진은 Kaie Kiil 탈린 디자인 페스티벌 9월 28일부터 10월 4일까지 에스토니아에서 촬영되었습니다.",
+        "탈린에서는 21회 디자인 축제 기간 동안 거의 100개의 행사가 개최되며, 각각 지속 가능한 생산과 포용적인 작품에 중점을 둔 '제품 디자인의 미래'라는 주제를 다룹니다.",
+        "주요 프로그램 중에는 에스토니아 디자인 어워드(BRUNO) 전시회 및 갈라, 국제 디자인 컨퍼런스, 디자인 스트리트 마켓이 포함됩니다.",
+        "Dezeen 이벤트 가이드는 매년 전 세계에서 열리는 최고의 건축 및 디자인 행사를 안내하는 가이드입니다. 이 가이드는 매주 업데이트되며 가상 행사, 컨퍼런스, 무역 박람회, 주요 전시회, 디자인 주간을 포함합니다.",
+        "가이드에 기본 목록 포함은 무료이며, 행사는 Dezeen의 재량에 따라 선택됩니다. 주최 측은 적은 비용을 지불하면 이미지, 추가 텍스트, 링크 등 표준, 강화 또는 추천 목록을 받을 수 있습니다.",
+        "또한, 행사는 Dezeen과의 협력을 통해 포함을 보장할 수 있습니다. Dezeen 이벤트 가이드 포함 및 Dezeen과의 미디어 파트너십에 관한 자세한 내용은 eventsguide@dezeen.com 이메일을 보내주세요.",
+        "Dezeen 이벤트 가이드의 '9월에 열리는 8개의 건축 및 디자인 이벤트'라는 글은 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:78554ed779",
+      "slug": "balearic-islands-model-for-social-housing-wins-obel-78554e",
+      "titleOriginal": "Balearic Islands' model for social housing wins Obel Award 2026",
+      "summaryOriginal": "Social housing in Spain's Balearic Islands has won this year's Obel Award for demonstrating that public administration can be \"a genuine engine for change\". Carried out by the Balearic Social Housing Institute (IBAVI), the Balearic social housing model involved addressing housing shortages with a more sustainable approach to procuring, designing and building public housing. We The post Balearic Is",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Social housing in Spain 's Balearic Islands has won this year's Obel Award for demonstrating that public administration can be \"a genuine engine for change\"."
+        },
+        {
+          "kind": "text",
+          "text": "Carried out by the Balearic Social Housing Institute (IBAVI), the Balearic social housing model involved addressing housing shortages with a more sustainable approach to procuring, designing and building public housing."
+        },
+        {
+          "kind": "text",
+          "text": "We investigated the housing programme as part of our Social Housing Revival series."
+        },
+        {
+          "kind": "text",
+          "text": "It is the eighth winner of the Obel Award , which celebrates architectural contributions to people and the planet."
+        },
+        {
+          "kind": "text",
+          "text": "This year's theme was Systems' Hack, which required entrants to consider how existing structures can be adapted when they are no longer fit for purpose."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/balearic-islands-social-housing-model-obel-award-2026_dezeen_2364_col_0-scaled.jpg",
+          "alt": "Social housing in the Balearic Islands"
+        },
+        {
+          "kind": "text",
+          "text": "The Balearic social housing model has won this year's Obel Award. Photo of Ses Veles by Jose Hevia \"What makes the Balearic social housing model remarkable is how innovative architecture can be found not just in design and material choice but also in procurement, policy and process,\" said jury chair and MVRDV founding partner Nathalie de Vries."
+        },
+        {
+          "kind": "text",
+          "text": "\"Public housing shortages are not unique to the Balearic Islands; the same structural pressure is playing out in cities and regions across the world,\" she continued."
+        },
+        {
+          "kind": "text",
+          "text": "\"What this model offers is a framework wherein public institutions can adapt to their own context along with proof that public administration itself can become a genuine engine for change.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/balearic-islands-social-housing-model-obel-award-2026_dezeen_2364_sq_1.jpg",
+          "alt": "Social housing in the Balearic Islands"
+        },
+        {
+          "kind": "text",
+          "text": "It was praised for driving environmental, social and economic change. Photo of Salvador Espriu 39 by Jesús Granada Between 2019 and 2023, the Balearic Islands in Spain transformed the administration of its social housing, spearheaded by economist Cris Ballester Parets and architect Carles Oliver Barceló, who both worked for IBAVI."
+        },
+        {
+          "kind": "text",
+          "text": "The housing overhaul involved developing a model for the commission, procurement, design, build and inhabiting of public housing that prioritised local materials, circular construction principles and climate-responsive design."
+        },
+        {
+          "kind": "text",
+          "text": "It sought to quickly increase public housing without sacrificing quality, amidst a housing shortage and a limited supply of public rental housing in the Balearic Islands."
+        },
+        {
+          "kind": "text",
+          "text": "Read: Four projects by RA Architecture Prize winner Cris Ballester Parets The Obel Award praised the Balearic social housing model as an example of how public institutions can drive environmental, social and economic change."
+        },
+        {
+          "kind": "text",
+          "text": "\"It's significance lies not in a particular building, material or architectural language, but in the way it connects public policy, architectural experimentation, environmental responsibility, local productive capacity, and dignified housing delivery as parts of one system,\" read the jury citation."
+        },
+        {
+          "kind": "text",
+          "text": "\"The jury sees the Balearic social housing model as a powerful example of how systems can be transformed from within. By using public administration itself as a space for experimentation, the model demonstrates how public procurement, investment and management can become tools for systemic change.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/balearic-islands-social-housing-model-obel-award-2026_dezeen_2364_col_2-scaled.jpg",
+          "alt": "Social housing in the Balearic Islands"
+        },
+        {
+          "kind": "text",
+          "text": "The social housing model was led by Cris Ballester Parets and Carles Oliver Barceló. Photo of Lope de Vega 3 by Adria Goula According to the Obel Award, Ballester Parets and Oliver Barceló will use part of the prize fund to work on spreading the international reach of their Balearic social housing model."
+        },
+        {
+          "kind": "text",
+          "text": "Oliver Barceló renounced his personal share of the prize fund, which will instead go towards emergency housing initiatives in the Balearic Islands, and IBAVI also renounced the award and the prize."
+        },
+        {
+          "kind": "text",
+          "text": "Alongside announcing the Balearic social housing model as this year's winner, the Obel Award said it will launch a second award cycle, granting a prize to another initiative designed to the Systems' Hack theme in spring 2027."
+        },
+        {
+          "kind": "text",
+          "text": "Previous winners of the award include non-profit organisation HouseEurope!, which won for its contribution to promoting a more sustainable construction industry across Europe , and a \"visionary\" coastal defence system in New York City by landscape studio Scape."
+        },
+        {
+          "kind": "text",
+          "text": "The top photo of Pere Matutes 72 is by Jesús Granada"
+        },
+        {
+          "kind": "text",
+          "text": "The post Balearic Islands' model for social housing wins Obel Award 2026 appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/01/obel-award-2026-balearic-islands-social-housing",
+      "author": "Amy Peacock",
+      "publishedAt": "2026-09-01T06:00:42.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Architecture",
+        "News",
+        "Architecture and design awards",
+        "Housing",
+        "Social housing",
+        "Obel Award"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/08/balearic-islands-social-housing-model-obel-award-2026_dezeen_2364_sq_0-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "발레아레스 제도의 사회주택 모델, 2026년 오벨상 수상",
+      "summaryKo": "스페인 발레아레스 제도의 사회주택은 공공 행정이 \"진정한 변화의 엔진\"이 될 수 있음을 입증한 공로로 올해 오벨상을 수상했습니다. 발레아레스 사회주택연구소(IBAVI)가 수행한 발레아레스 사회주택 모델은 공공주택 조달, 설계, 건설에 있어 보다 지속 가능한 접근법으로 주택 부족을 해결했습니다. 우리는 발레아릭 이후",
+      "bodyKo": [
+        "스페인 발레아레스 제도의 사회주택은 공공 행정이 \"진정한 변화의 엔진\"이 될 수 있음을 입증한 공로로 올해 오벨상을 수상했습니다.",
+        "발레아레스 사회주택연구소(IBAVI)가 수행한 발레아레스 사회주택 모델은 공공주택을 조달, 설계, 건설하는 보다 지속 가능한 접근법으로 주택 부족을 해결하는 것을 포함했습니다.",
+        "우리는 사회주택 부흥 시리즈의 일환으로 주택 프로그램을 조사했습니다.",
+        "이 작품은 건축이 사람과 지구에 기여한 것을 기념하는 오벨상의 여덟 번째 수상작입니다.",
+        "올해 주제는 '시스템 핵(Systems' Hack)'으로, 참가자들이 기존 구조가 더 이상 목적에 맞지 않을 때 어떻게 적응할 수 있을지 고민하도록 요구했습니다.",
+        "발레아레스 사회주택 모델은 올해 오벨상을 수상했습니다. 호세 에비아가 촬영한 세스 벨레스 사진 \"발레아레스 사회주택 모델이 특별한 이유는 혁신적인 건축이 디자인과 재료 선택뿐 아니라 조달, 정책, 과정 전반에 걸쳐 발견된다는 점입니다.\"라고 심사위원장이자 MVRDV 창립 파트너인 나탈리 드 브리스는 말했습니다.",
+        "\"공공주택 부족은 발레아레스 제도에만 국한된 문제가 아닙니다; 전 세계 도시와 지역에서 동일한 구조적 압력이 나타나고 있습니다,\"라고 그녀는 덧붙였습니다.",
+        "\"이 모델은 공공 기관이 자체 맥락에 적응할 수 있는 틀과 공공 행정 자체가 진정한 변화의 원동력이 될 수 있다는 증거를 제공합니다.\"",
+        "환경적, 사회적, 경제적 변화를 이끈 점에서 찬사를 받았습니다. 헤수스 그라나다가 촬영한 살바도르 에스프리우 39세 사진 2019년부터 2023년 사이, 스페인 발레아레스 제도는 IBAVI에서 근무한 경제학자 크리스 발레스터 파레츠와 건축가 카를레스 올리버 바르셀로가 주도한 사회주택 행정을 혁신했습니다.",
+        "주택 전면 개혁은 지역 재료, 순환 건축 원칙, 기후 반응 설계를 우선시하는 공공 주택의 위원회, 조달, 설계, 시공 및 거주 모델을 개발하는 것을 포함했습니다.",
+        "발레아레스 제도의 주택 부족과 제한된 공공 임대 주택 공급 상황 속에서, 질을 희생하지 않고 신속히 공공 주택을 늘리고자 했습니다.",
+        "읽기: RA 건축상 수상자 크리스 발레스터 파레츠의 네 가지 프로젝트 오벨상은 발레아레스 사회 주택 모델을 공공 기관이 환경적, 사회적, 경제적 변화를 이끌 수 있는 사례로 칭찬했습니다.",
+        "\"그 의미는 특정 건물, 재료, 건축 언어에 있는 것이 아니라, 공공 정책, 건축 실험, 환경 책임, 지역 생산 능력, 존엄한 주택 제공을 하나의 시스템의 일부로 연결하는 방식에 있다\"고 배심원단은 적었다.",
+        "\"심사위원단은 발레아레스 사회주택 모델을 내부에서 시스템이 어떻게 변화할 수 있는지 보여주는 강력한 사례로 보고 있습니다. 공공 행정 자체를 실험의 공간으로 활용함으로써, 이 모델은 공공 조달, 투자, 관리가 체계적 변화를 위한 도구가 될 수 있음을 보여줍니다.\"",
+        "사회주택 모델은 크리스 발레스테르 파레츠와 카를레스 올리버 바르셀로가 주도했습니다. 아드리아 굴라의 로페 데 베가 3세 사진 오벨상에 따르면, 발레스터 파레츠와 올리버 바르셀로는 상금 일부를 발레아레스 사회주택 모델의 국제적 영향력 확산에 활용할 예정입니다.",
+        "올리버 바르셀로는 상금 중 개인 지분을 포기했으며, 이 상금은 발레아레스 제도의 긴급 주택 사업에 사용될 예정이며, IBAVI도 상과 상을 포기했다.",
+        "올해 수상자로 발레아레스 사회주택 모델을 발표하는 것과 함께, 오벨상은 2027년 봄에 Systems' Hack 테마에 맞춘 또 다른 이니셔티브에 상을 수여하는 두 번째 시상 주기를 시작할 것이라고 밝혔습니다.",
+        "이전 수상자로는 유럽 전역의 지속 가능한 건설 산업을 촉진한 공로로 수상한 비영리 단체 하우스유럽!(HouseEurope!)과 조경 스튜디오 스케이프(Scape)가 설계한 뉴욕시의 '비전적인' 해안 방어 시스템이 있습니다.",
+        "페레 마투테스 72의 맨 위 사진은 헤수스 그라나다가 촬영했습니다",
+        "발레아레스 제도의 사회주택 모델이 2026년 오벨상 수상이라는 글은 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:ef16a4a094",
+      "slug": "kengo-kuma-awarded-andr-e-putman-lifetime-achievement-ef16a4",
+      "titleOriginal": "Kengo Kuma awarded Andrée Putman Lifetime Achievement Award by CDA",
+      "summaryOriginal": "Japanese architect Kengo Kuma has been named the recipient of the Andrée Putman Lifetime Achievement Award for 2027 by the Créateurs Design Association & Awards. Kuma, who is founder of his eponymous studio Kengo Kuma & Associates, was chosen for his demonstration of \"how architecture can restore the relationship between people and the natural world\". The post Kengo Kuma awarded Andrée Putman Life",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Japanese architect Kengo Kuma has been named the recipient of the Andrée Putman Lifetime Achievement Award for 2027 by the Créateurs Design Association & Awards ."
+        },
+        {
+          "kind": "text",
+          "text": "Kuma, who is founder of his eponymous studio Kengo Kuma & Associates , was chosen for his demonstration of \"how architecture can restore the relationship between people and the natural world\"."
+        },
+        {
+          "kind": "text",
+          "text": "The annual award was established by the Créateurs Design Association & Awards (CDA) to recognise careers that have had an enduring impact on the built environment, and is the award body's highest honour."
+        },
+        {
+          "kind": "text",
+          "text": "It was launched by the CDA to commemorate the legacy of French designer Andrée Putman ."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2021/07/japan-national-stadium-kengo-kuma-architecture-tokyo_dezeen_2364_hero.jpg",
+          "alt": "The wooden exterior of Japan National Stadium"
+        },
+        {
+          "kind": "text",
+          "text": "Kuma has won the Andrée Putman Lifetime Achievement Award for 2027. Photo by Japan Sport Council Winners of the annual award are determined by members of the CDA rather than through submissions, with Kuma recognised for his role in connecting people with nature, according to CDA co-founder Yuri Xavier."
+        },
+        {
+          "kind": "text",
+          "text": "\"For more than three decades, Kengo Kuma has asked how architecture can restore the relationship between people and the natural world, and he has answered on every continent,\" Xavier said."
+        },
+        {
+          "kind": "text",
+          "text": "\"Our members chose to honour not a single building but the entirety of that pursuit, in the spirit of dialogue between tradition and modernity that Andrée Putman herself embodied.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/kengo-kuma-cda-v-a-dundee_dezeen_2364_col_0.jpg",
+          "alt": "V&A Dundee"
+        },
+        {
+          "kind": "text",
+          "text": "The award will be presented at the CDA ceremony in Paris. Photo by Ross Fraser McLean Notable recent projects by the architect's studio include the Japan National Stadium in Tokyo and the V&A Dundee in Scotland."
+        },
+        {
+          "kind": "text",
+          "text": "Kuma said he is \"honoured\" to receive recognition of his life's work."
+        },
+        {
+          "kind": "text",
+          "text": "\"In my design practice, I consider myself a long-distance runner,\" he said. \"I believe the most important thing is to keep running over the long term with a single goal in mind: achieving harmony between humans and nature.\""
+        },
+        {
+          "kind": "text",
+          "text": "\"More than anything, I am honoured that the Lifetime Achievement Award recognises the entirety of everything I do,\" he continued."
+        },
+        {
+          "kind": "text",
+          "text": "The award will be presented at the CDA ceremony at the Shangri-La Paris on 16th January 2027. Awards across fifteen categories are also set to be announced at the event."
+        },
+        {
+          "kind": "text",
+          "text": "Previous recipients of the annual Andrée Putman Lifetime Achievement Award include Norman Foster, Tadao Ando, and Christian de Portzamparc."
+        },
+        {
+          "kind": "text",
+          "text": "The main image is courtesy of Designhouse."
+        },
+        {
+          "kind": "text",
+          "text": "The post Kengo Kuma awarded Andrée Putman Lifetime Achievement Award by CDA appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/01/kengo-kuma-andree-putman-lifetime-achievement-award-cda",
+      "author": "Starr Charles",
+      "publishedAt": "2026-09-01T04:00:35.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Architecture",
+        "News",
+        "Kengo Kuma",
+        "Créateurs Design Association & Awards"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/08/kengo-kuma-portrait-sq_dezeen_2364_col_0-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "켄고 쿠마는 CDA로부터 안드레 푸트만 평생 공로상을 수여했습니다",
+      "summaryKo": "일본 건축가 쿠마 켄고가 2027년 크레아퇴르 디자인 협회 및 상에서 안드레 푸트만 평생공로상을 수상했습니다. 자신의 이름을 딴 스튜디오인 켄고 쿠마 & 어소시에이츠의 창립자인 쿠마는 \"건축이 사람과 자연 세계의 관계를 회복하는 방법\"을 시연한 공로로 선정되었습니다. 켄고 쿠마가 안드레 푸트먼에게 라이프를 수여한 이후",
+      "bodyKo": [
+        "일본 건축가 쿠마 켄고가 크레아퇴르 디자인 협회 및 시상식에서 2027년 안드레 푸트만 평생 공로상을 수상했습니다.",
+        "자신의 이름을 딴 스튜디오인 켄고 쿠마 & 어소시에이츠의 창립자인 쿠마는 \"건축이 사람과 자연 세계의 관계를 어떻게 회복할 수 있는가\"를 시연한 공연으로 선정되었습니다.",
+        "이 연례 상은 크레아퇴르 디자인 협회 및 상(CDA)에서 건축 환경에 지속적인 영향을 끼친 경력을 인정하기 위해 제정되었으며, 이 상의 최고 영예입니다.",
+        "이 작품은 프랑스 디자이너 앙드레 푸트만의 유산을 기념하기 위해 CDA에 의해 시작되었습니다.",
+        "쿠마는 2027년 안드레 푸트만 평생공로상을 수상했습니다. 일본 스포츠 위원회 사진 수상자는 제출이 아닌 CDA 회원들이 선정하며, CDA 공동 창립자 유리 자비에에 따르면 쿠마는 사람과 자연을 연결하는 데 기여한 공로로 인정받았습니다.",
+        "\"30년 넘게 켄고 쿠마는 건축이 사람과 자연 세계의 관계를 어떻게 회복할 수 있는지 질문해 왔으며, 그는 모든 대륙에서 답해왔다,\"고 자비에르는 말했다.",
+        "\"우리 회원들은 단 하나의 건물이 아니라 그 추구의 전체를 기리기로 선택했으며, 이는 안드레 푸트만 자신이 구현한 전통과 현대성 사이의 대화 정신에 따른 것입니다.\"",
+        "이 상은 파리에서 열리는 CDA 시상식에서 수여될 예정입니다. 사진 제공: 로스 프레이저 맥린 건축가 스튜디오의 최근 주요 프로젝트로는 도쿄의 일본 국립경기장과 스코틀랜드의 V&A 던디가 있습니다.",
+        "쿠마는 자신의 평생 업적에 대한 인정을 받게 되어 \"영광스럽다\"고 말했다.",
+        "\"제 디자인 작업에서 저는 스스로를 장거리 달리기라고 생각합니다,\"라고 그는 말했습니다. \"가장 중요한 것은 인간과 자연의 조화를 이루는 단 하나의 목표를 가지고 장기적으로 계속 달리는 것이라고 믿습니다.\"",
+        "\"무엇보다도, 평생 공로상이 제가 하는 모든 일을 인정한다는 점이 영광입니다,\"라고 그는 덧붙였습니다.",
+        "이 상은 2027년 1월 16일 샹그릴라 파리에서 열리는 CDA 시상식에서 수여될 예정입니다. 15개 부문에 걸친 상도 행사에서 발표될 예정입니다.",
+        "연례 안드레 푸트만 평생 공로상 수상자로는 노먼 포스터, 안도 타다오, 크리스티안 드 포르잠파르크 등이 있습니다.",
+        "메인 이미지는 Designhouse에서 제공했습니다.",
+        "이 글은 켄고 쿠마가 CDA로부터 안드레 푸트먼에게 평생 공로상을 수여했다는 글이 Dezeen에 처음 게재되었습니다."
+      ]
+    },
     {
       "id": "hackaday:4d2ba4ec49",
       "slug": "building-an-energy-harvesting-business-card-4d2ba4",
@@ -26,7 +925,7 @@
       "originalUrl": "https://hackaday.com/2026/08/31/building-an-energy-harvesting-business-card",
       "author": "Zoe Skyforest",
       "publishedAt": "2026-08-31T20:00:22.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Misc Hacks",
@@ -131,7 +1030,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/marka27-ni-de-aqui-ni-de-alla-portraits",
       "author": "Grace Ebert",
       "publishedAt": "2026-08-31T18:28:51.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -207,7 +1106,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/what-can-be-learned-about-aging-clocks-from-existing-clinical-trial-data-for-longevity-interventions",
       "author": "Reason",
       "publishedAt": "2026-08-31T18:12:46.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -280,7 +1179,7 @@
       "originalUrl": "https://toybook.com/mattel-adds-three-executives-to-push-brands-beyond-the-toy-aisle",
       "author": "Toy Book Newsroom",
       "publishedAt": "2026-08-31T17:47:08.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -372,7 +1271,7 @@
       "originalUrl": "https://toybook.com/brandmania-licensing-international-germany-bring-licensing-awards-back-to-munich",
       "author": "The Licensing Book Newsroom",
       "publishedAt": "2026-08-31T17:43:28.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -464,7 +1363,7 @@
       "originalUrl": "https://toybook.com/welcome-to-finds-a-new-home-at-asmodee",
       "author": "Toy Book Newsroom",
       "publishedAt": "2026-08-31T17:28:34.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -560,7 +1459,7 @@
       "originalUrl": "https://toybook.com/barbie-goes-cyber-chic-with-yoon-ahn-for-mattel-creations",
       "author": "James Zahn",
       "publishedAt": "2026-08-31T16:43:47.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -591,65 +1490,6 @@
         "바비 x 윤 앰부시 인형은 9월 4일부터 매텔 크리에이션즈를 통해 독점적으로 구매할 수 있습니다.",
         "관련 기사: 핫휠즈, 말루마, 슈퍼카 블론디, 레반도프스키를 첫 번째 '클래스 오브 레전드'로 선정",
         "\"바비가 Mattel Creations의 윤안과 함께 사이버 시크로 변하다\"는 글은 The Toy Book에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "hackaday:5bf871c470",
-      "slug": "usb-c-adapted-for-legacy-sprinkler-systems-5bf871",
-      "titleOriginal": "USB-C Adapted for Legacy Sprinkler Systems",
-      "summaryOriginal": "In the modern world USB has become a truly universal connector, with its inclusion on almost every major piece of consumer electronics. It has even expanded well beyond things that …read more",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "In the modern world USB has become a truly universal connector, with its inclusion on almost every major piece of consumer electronics. It has even expanded well beyond things that we’d think of as consumer electronics, like the solenoids on automatic sprinkler systems ."
-        },
-        {
-          "kind": "text",
-          "text": "This project comes to us from [Ray Wang] at opensprinkler.org who has been working on various ways of controlling the old sprinkler standards, which generally rely on a 24 VAC power supply to drive solenoids. This tests uses the power available from USB-PD and closely examines four methods of energizing the solenoids: unipolar PWM, dual voltage, synthesizing an AC wave from a DC supply, and producing a bipolar square wave. The bipolar square wave had some interesting results, being able to get pretty close to the behavior of a true sine wave while minimizing the dedrmand on power electronics."
-        },
-        {
-          "kind": "text",
-          "text": "For those working on old sprinkler systems, or many other antiquated systems that still rely on 24 VAC, this project shows that USB can deliver a surprising amount of power in unique ways, and the fact that it’s near-ubiquitous and affordable makes it that much easier to adapt into situations it was never really designed for."
-        },
-        {
-          "kind": "text",
-          "text": "These old sprinkler systems have other ways of working on modern systems as well, like this one which replaces the AC source for a DC one , but with a few caveats."
-        }
-      ],
-      "sourceName": "Hackaday",
-      "sourceUrl": "https://hackaday.com/",
-      "originalUrl": "https://hackaday.com/2026/08/31/usb-c-adapted-for-legacy-sprinkler-systems",
-      "author": "Bryan Cockfield",
-      "publishedAt": "2026-08-31T15:30:16.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "home hacks",
-        "24v ac",
-        "DC to AC",
-        "sine wave",
-        "solenoid",
-        "sprinkler",
-        "usb",
-        "USB-PD"
-      ],
-      "image": {
-        "url": "https://hackaday.com/wp-content/uploads/2026/08/usb-sprinkler-main.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "기존 스프링클러 시스템에 적용된 USB-C",
-      "summaryKo": "현대 사회에서 USB는 거의 모든 주요 소비자 전자제품에 포함되는 진정한 범용 커넥터가 되었습니다. 심지어 ... 더 읽기",
-      "bodyKo": [
-        "현대 사회에서 USB는 거의 모든 주요 소비자 전자제품에 포함되는 진정한 범용 커넥터가 되었습니다. 심지어 자동 스프링클러 시스템의 솔레노이드 같은 소비자 전자제품으로 생각하는 것보다 훨씬 더 확장되었습니다.",
-        "이 프로젝트는 opensprinkler.org 의 [Ray Wang]로부터 제안받았는데, 그는 일반적으로 24VAC 전원 공급 장치에 의존해 솔레노이드를 구동하는 기존 스프링클러 표준을 제어하는 다양한 방법을 연구해왔습니다. 이 테스트는 USB-PD에서 공급되는 전력을 사용하며, 솔레노이드에 전원을 공급하는 네 가지 방법을 면밀히 검토합니다: 단극성 PWM, 이중 전압, DC 전원에서 교류파 합성, 그리고 양극성 사각파 생성입니다. 양극성 정각파는 진짜 사인파의 거동에 꽤 근접하면서도 전력 전자장치의 데드만드를 최소화하는 흥미로운 결과를 냈습니다.",
-        "오래된 스프링클러 시스템이나 여전히 24VAC에 의존하는 구식 시스템을 다루는 분들에게 이 프로젝트는 USB가 독특한 방식으로 놀라운 전력을 공급할 수 있음을 보여주며, 거의 어디서나 보편적이고 저렴하다는 점이 USB가 원래 설계되지 않은 상황에 적응하기 쉽게 만듭니다.",
-        "이 오래된 스프링클러 시스템도 현대 시스템에서 작동하는 다른 방식이 있는데, 예를 들어 AC 전원 대신 DC 시스템을 사용하는 방식이 있지만 몇 가지 주의사항이 있습니다."
       ]
     },
     {
@@ -792,7 +1632,7 @@
       "originalUrl": "https://toybook.com/monster-high-american-girl-frankie-stein-doll-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-08-31T15:19:37.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -888,7 +1728,7 @@
       "originalUrl": "https://toybook.com/pudgy-penguins-collector-park-news",
       "author": "Taylor Battle",
       "publishedAt": "2026-08-31T14:46:44.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "First Look",
@@ -986,7 +1826,7 @@
       "originalUrl": "https://toybook.com/michaels-gets-crafty-with-hobbyween-for-halloween",
       "author": "James Zahn",
       "publishedAt": "2026-08-31T14:19:23.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -1102,7 +1942,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/isaiah-lee-paintings",
       "author": "Grace Ebert",
       "publishedAt": "2026-08-31T14:11:17.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -1182,7 +2022,7 @@
       "originalUrl": "https://toybook.com/burger-king-dragon-ball-super-meals-launch",
       "author": "Ashley Pelletier",
       "publishedAt": "2026-08-31T13:00:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -1248,7 +2088,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/bacterial-lipoic-acid-protein-ligase-a-improves-mammalian-mitochondrial-function-and-health",
       "author": "Reason",
       "publishedAt": "2026-08-31T10:22:42.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1298,7 +2138,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/mistranslation-mutations-in-flies-surprisingly-extend-life",
       "author": "Reason",
       "publishedAt": "2026-08-31T10:11:46.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1469,12 +2309,12 @@
       "originalUrl": "https://www.dezeen.com/2026/08/31/dezeens-favourite-furniture-lighting-august-roundup",
       "author": "Jane Englefield",
       "publishedAt": "2026-08-31T09:00:29.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Furniture",
-        "Lighting",
         "all",
+        "Lighting",
         "Design",
         "Roundups"
       ],
@@ -1577,7 +2417,7 @@
       "originalUrl": "https://toybook.com/hamleys-dresses-teddy-bears-in-savile-row-style-for-266th-birthday",
       "author": "Toy Book Newsroom",
       "publishedAt": "2026-08-31T01:48:10.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -1663,7 +2503,7 @@
       "originalUrl": "https://toybook.com/boti-brings-mintos-viral-character-crew-to-the-toy-aisle",
       "author": "James Zahn",
       "publishedAt": "2026-08-31T01:13:25.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -1947,7 +2787,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/fight-aging-newsletter-august-31st-2026",
       "author": "Reason",
       "publishedAt": "2026-08-30T11:19:59.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Newsletters"
@@ -2120,7 +2960,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/30/split-mass-residence-k-thengono-design-studio-indonesia",
       "author": "Amy Peacock",
       "publishedAt": "2026-08-30T10:00:17.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2257,14 +3097,14 @@
       "originalUrl": "https://www.dezeen.com/2026/08/30/foster-partners-norton-motorcycles-showroom",
       "author": "Alyn Griffiths",
       "publishedAt": "2026-08-30T05:00:26.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
-        "Showrooms",
         "Foster + Partners",
-        "Vehicles"
+        "Vehicles",
+        "Showrooms"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/foster-and-partners-norton-motorcycles-showroom-sq-411x411.jpg"
@@ -2558,16 +3398,16 @@
       "sourceName": "Dezeen",
       "sourceUrl": "https://www.dezeen.com/",
       "originalUrl": "https://www.dezeen.com/2026/08/29/art-nouveau-style-racecourse-cafe-hong-kong-design-institute-schoolshows",
-      "author": "Sophie Chapman",
+      "author": "Dezeen staff",
       "publishedAt": "2026-08-29T18:00:48.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
         "School Shows",
-        "Student projects",
         "Graduates",
-        "Hong Kong Design Institute"
+        "Hong Kong Design Institute",
+        "Student projects"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/Hong-Kong-Design-Institute-Dezeen_dezeen_2364_col_0-411x411.jpg"
@@ -2757,7 +3597,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/29/willow-point-lakefront-house-michigan-lauri-design-studio",
       "author": "Dan Howarth",
       "publishedAt": "2026-08-29T17:00:33.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2962,7 +3802,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/lighting-furniture-accessories-seating-australian-brands-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-08-28T18:00:11.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -3139,16 +3979,16 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/a24-leroy-street-studio-cherry-lane-theatre-west-village",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-08-28T17:55:54.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
         "Interiors",
+        "Leroy Street Studio",
+        "West Village",
         "USA",
         "Theatres",
-        "New York City",
-        "Leroy Street Studio",
-        "West Village"
+        "New York City"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/1_cherry-lane-theatre-new-york-city-leroy-street-studio_dezeen_2364_sq4-411x411.jpg"
@@ -3305,16 +4145,16 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/craighill-swingtop-lighter",
       "author": "Ben Dreith",
       "publishedAt": "2026-08-28T14:00:21.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
-        "Homeware",
         "Design",
-        "Homeware design",
-        "Brooklyn",
+        "Homeware",
         "Product design",
-        "USA"
+        "USA",
+        "Homeware design",
+        "Brooklyn"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/craighill-lighter-_dezeen_2364_sq-411x411.jpg"
@@ -3428,7 +4268,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/exa-tech-facade-tiles-exagres-dezeen-showroom",
       "author": "Rima Sabina Aouf",
       "publishedAt": "2026-08-28T13:00:26.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3496,7 +4336,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/senolytic-treatments-clear-harmful-senescent-microglia-from-the-aging-brain",
       "author": "Reason",
       "publishedAt": "2026-08-28T10:22:49.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3597,7 +4437,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/longchamp-heatherwick-architectural-collection",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-08-28T09:00:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3729,17 +4569,17 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/sabine-marcelis-iittala-glassware-unda",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-08-28T05:00:53.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
-        "Lighting",
         "all",
+        "Lighting",
         "Products",
         "Design",
-        "Vases",
-        "Glassware",
+        "Highlights",
         "Iittala",
-        "Sabine Marcelis"
+        "Sabine Marcelis",
+        "Vases"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/sabine-marcelis-iittala-unda_dezeen_2364_col_3-411x411.jpg"
@@ -3867,7 +4707,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/entries-open-for-the-brick-in-architecture-awards-2026",
       "author": "Dezeen staff",
       "publishedAt": "2026-08-28T04:00:38.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3998,7 +4838,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/handmade-utopia-david-jacob-kramer-michael-schmelling-architecture-california-book",
       "author": "Kate Mothes",
       "publishedAt": "2026-08-27T14:49:19.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Books",
@@ -4250,7 +5090,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/what-gta-6s-trailers-tell-us-about-vice-city-lucia-and-the-biggest-creative-launch-of-the-decade",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-27T12:00:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -4309,109 +5149,6 @@
         "그럼 레오니다에서 보자. 내 말 믿어줘... 크리에이티브 붐은 11월 19일에 잊혀질 거야. 아, 그 주에는 콘텐츠가 있을 거야; 단지 내가 끼어들지 않을 뿐이야. 나는 오션 드라이브 근처 어딘가에서 발목 태그와 나쁜 아이디어를 가지고 있을 거야, 루시아와 제이슨의 관계가 줄거리를 통과했는지 알아볼 거야. 록스타가 정말 진전을 이루었는지. 이봐, 또 컨트롤러를 내려놓게 될지도 몰라.",
         "어쨌든 저는 출시를 기대하고 있습니다. 왜냐하면 2013년 이후 게임 분야에서 가장 야심찬 아트 부서가 무엇을 해왔는지 볼 수 있는 기회이기 때문입니다.",
         "지도는 레드 데드 리뎀션 2의 세 배 크기라고 합니다. 보라색 튜튜에 요정 날개를 달린 치와와가 있습니다. 진심으로, 인생에서 더 필요한 게 뭐가 있겠어요? 이번 주는 쉬는 거예요. 그럴 거예요."
-      ]
-    },
-    {
-      "id": "fight-aging:5b69d7d7d6",
-      "slug": "stiffness-of-the-extracellular-matrix-may-drive-some-5b69d7",
-      "titleOriginal": "Stiffness of the Extracellular Matrix May Drive Some Age-Related Changes in Gene Expression",
-      "summaryOriginal": "Properties of the extracellular matrix that supports cells change with age. Increased stiffness is common in many tissues as a result of chemical cross-linking and other changes. Researchers here report on a proof of concept in vitro study in which increased stiffness of the local matrix is shown to promote gene expression changes in cells characteristic of aging. Reducing the stiffness reverses t",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Properties of the extracellular matrix that supports cells change with age. Increased stiffness is common in many tissues as a result of chemical cross-linking and other changes. Researchers here report on a proof of concept in vitro study in which increased stiffness of the local matrix is shown to promote gene expression changes in cells characteristic of aging. Reducing the stiffness reverses those changes. So one might argue that ways to repair the extracellular matrix in living tissues could rejuvenate cell behavior and tissue function to some degree."
-        },
-        {
-          "kind": "text",
-          "text": "While the development of ever more sophisticated artificial extracellular matrix materials is a notable part of the field of tissue engineering , efforts to modify the natural extracellular matrix in living tissues are not well funded, and little progress has been made in those areas in which benefits are thought likely, such as finding ways to remove age-related accumulation of cross-links . Indeed, many aspects of the chemistry of the aged extracellular matrix are not well understood, and it is far from clear as to which of the many possible approaches will yield the most useful results if successful."
-        },
-        {
-          "kind": "text",
-          "text": "Aging involves the accumulation of molecular alterations within cells and the extracellular matrix, resulting in cellular senescence and declining physiological functions. This study investigates the correlation between the biophysical environment and cellular aging, specifically examining how mechanical and biochemical cues affect cellular senescence and tissue degeneration. Cells were cultured on acrylamide hydrogels of different stiffnesses (4 and 19 kPa), and their mechanical properties were characterized by measuring Young's modulus via compression tests. Cell proliferation , morphology, gene and protein expression, and autophagy activity were assessed using multiple assays and imaging techniques."
-        },
-        {
-          "kind": "text",
-          "text": "Cells cultured on stiff hydrogels exhibited elongated morphologies, whereas cells on soft hydrogels formed spherical clusters. Notably, longevity-associated genes were upregulated in cells cultured on softer substrates . Reversibility experiments demonstrated that the aging phenotype could be reversed by modulating mechanical culture conditions, with softer environments enhancing autophagic activity. In summary, hydrogel stiffness significantly impacts aging-related cellular behavior. These findings suggest biomechanical cues as a promising strategy to promote cellular rejuvenation and combat aging."
-        },
-        {
-          "kind": "text",
-          "text": "Link: https://doi.org/10.3390/cells15151380"
-        }
-      ],
-      "sourceName": "Fight Aging!",
-      "sourceUrl": "https://www.fightaging.org/",
-      "originalUrl": "https://www.fightaging.org/archives/2026/08/stiffness-of-the-extracellular-matrix-may-drive-some-age-related-changes-in-gene-expression",
-      "author": "Reason",
-      "publishedAt": "2026-08-27T10:22:40.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "Daily News"
-      ],
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 3,
-      "careScore": 0.7,
-      "curiosityScore": 0,
-      "contentType": "research",
-      "titleKo": "세포외 기질의 경직성은 연령 관련 유전자 발현 변화를 유발할 수 있습니다",
-      "summaryKo": "세포를 지지하는 세포외 기질의 특성은 나이가 들면서 변합니다. 화학적 가교 및 기타 변화로 인해 많은 조직에서 강성 증가가 흔합니다. 연구자들은 국소 기질의 강성이 증가하면 노화와 특징적인 세포 내 유전자 발현 변화를 촉진한다는 시험관 내 개념 증명 연구를 보고합니다. 강성을 감소시키면 t가 역전됩니다",
-      "bodyKo": [
-        "세포를 지지하는 세포외 기질의 특성은 나이가 들면서 변합니다. 화학적 가교 및 기타 변화로 인해 많은 조직에서 강성이 증가하는 것이 흔합니다. 연구자들은 시험관 내 개념 증명 연구에서 국부 기질의 강성이 증가하면 노화와 특징적인 세포에서 유전자 발현 변화가 촉진된다고 보고합니다. 강성을 줄이면 이러한 변화가 되돌립니다. 따라서 살아있는 조직에서 세포외기질을 수리하는 방법이 세포 행동과 조직 기능을 어느 정도 회복시킬 수 있다고 주장할 수도 있습니다.",
-        "점점 더 정교해지는 인공 세포외기질 재료의 개발은 조직공학 분야에서 중요한 부분이지만, 살아있는 조직에서 자연 세포외기질을 수정하려는 노력은 자금이 부족하며, 나이에 따른 가교 결합 축적을 제거하는 방법 등 이점이 예상되는 분야에서는 거의 진전이 없습니다. 실제로 노화된 세포외 기질의 화학적 측면이 잘 이해되지 않았으며, 성공 시 어떤 방법이 가장 유용한 결과를 낼지에 대해서는 명확하지 않습니다.",
-        "노화는 세포와 세포외 기질 내에서 분자 변형이 축적되어 세포 노화세포와 생리적 기능 저하를 초래하는 과정을 포함합니다. 본 연구는 생물물리학적 환경과 세포 노화 간의 상관관계를 조사하며, 특히 기계적 및 생화학적 신호가 세포 노화세포와 조직 퇴행에 미치는 영향을 조사합니다. 세포는 4 kPa 및 19 kPa 강성도의 아크릴아마이드 하이드로겔에서 배양되었으며, 기계적 특성은 압축 시험을 통해 Young의 계수를 측정하여 특성화하였습니다. Cell 증식, 형태학, 유전자 및 단백질 발현, 자가포식 활성을 여러 검사 및 영상 기법을 통해 평가하였습니다.",
-        "단단한 하이드로겔 위에서 배양된 세포는 길쭉한 형태를 보인 반면, 부드러운 하이드로겔 세포는 구형 군집을 형성했습니다. 특히, 부드러운 기질에서 배양된 세포에서는 롱제비티 관련 유전자가 상향 조절되었습니다. 가역성 실험은 기계적 배양 조건을 조절함으로써 노화 표현형을 되돌릴 수 있음을 보여주었으며, 부드러운 환경이 자가포식 활동을 촉진합니다. 요약하자면, 하이드로겔의 강성은 노화 관련 세포 행동에 큰 영향을 미칩니다. 이러한 발견은 생체역학적 신호가 세포 재생을 촉진하고 노화를 막는 유망한 전략임을 시사합니다.",
-        "링크: https://doi.org/10.3390/cells15151380"
-      ]
-    },
-    {
-      "id": "fight-aging:4d6ac68b08",
-      "slug": "a-systems-view-of-the-gut-microbiome-in-4d6ac6",
-      "titleOriginal": "A Systems View of the Gut Microbiome in Aging",
-      "summaryOriginal": "The composition of the gut microbiome, the population size of each bacterial species, changes with age. Microbes that provoke inflammation increase in number, while microbes producing a range of metabolites necessary for tissue function diminish in number. Animal studies have demonstrated that restoring a youthful composition of the gut microbiome in old animals, such as via fecal microbiota trans",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "The composition of the gut microbiome , the population size of each bacterial species, changes with age. Microbes that provoke inflammation increase in number, while microbes producing a range of metabolites necessary for tissue function diminish in number. Animal studies have demonstrated that restoring a youthful composition of the gut microbiome in old animals, such as via fecal microbiota transplantation from young donors, improves health and extends life . Here researchers take a systems view of the role of the gut microbiome in degenerative aging. Nothing changes in isolation, all tissues in the body interact with one another, and that includes the commensal microbial populations we live with."
-        },
-        {
-          "kind": "text",
-          "text": "Symbiotic relationships are the basis of biological complexity. It can be traced back from ancient mitochondrial acquisition to modern host-microbiota interactions. In this review, we explore aging and disease susceptibility through the lens of a diet-microbiota-host gene triad, a dynamic symbiotic network in which dietary inputs, the gut microbiota, and the host genome co-regulate physiological equilibrium. The symbiotic triad evolved as nutrition was outsourced, with dietary and microbial components internalized by the host. Dietary components modulate microbial composition and metabolic activity. In contrast, microbial fermentation of nutrients produces short-chain fatty acids , vitamins, bile acids , and neuroactive compounds, which, in turn, influence host gene expression , immune responses, barrier integrity , nutrient preferences, and health."
-        },
-        {
-          "kind": "text",
-          "text": "Host genes have also co-evolved as critical modulators of this triad, encoding nutrient sensors , immune effectors, and proteins that maintain microbial balance and prevent dysbiosis . Polymorphisms in key metabolic and immune genes fine-tune responses to dietary and microbial adaptations, building resilience across different contexts. As organisms age, this triadic equilibrium destabilizes, leading to reduced microbial diversity, compromised barrier integrity and function, and chronic inflammation that accelerates age-related pathologies. Therefore, understanding dietary, microbial, and genetic interdependencies and viewing aging and disease from this perspective offers a blueprint for developing personalized nutrition- and microbiome-targeted therapies to combat age-associated diseases and promote health and longevity."
-        },
-        {
-          "kind": "text",
-          "text": "Link: https://doi.org/10.3389/frmbi.2026.1872481"
-        }
-      ],
-      "sourceName": "Fight Aging!",
-      "sourceUrl": "https://www.fightaging.org/",
-      "originalUrl": "https://www.fightaging.org/archives/2026/08/a-systems-view-of-the-gut-microbiome-in-aging",
-      "author": "Reason",
-      "publishedAt": "2026-08-27T10:11:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "Daily News"
-      ],
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 3,
-      "careScore": 0.7,
-      "curiosityScore": 0,
-      "contentType": "research",
-      "titleKo": "노화 속 장내 마이크로바이옴에 대한 시스템 관점",
-      "summaryKo": "장내 마이크로바이옴의 구성, 즉 각 박테리아 종의 개체 수는 나이에 따라 변합니다. 염증을 유발하는 미생물의 수는 증가하는 반면, 조직 기능에 필요한 다양한 대사산물을 생산하는 미생물은 감소합니다. 동물 연구에서는 노령동물의 장내 마이크로바이옴 구성을 복원하는 것이 분변 마이크로바이옴과 같은 것으로 나타났습니다",
-      "bodyKo": [
-        "장내 마이크로바이옴의 구성, 즉 각 박테리아 종의 개체 수는 나이에 따라 변합니다. 염증을 유발하는 미생물의 수는 증가하는 반면, 조직 기능에 필요한 다양한 대사산물을 생산하는 미생물의 수는 감소합니다. 동물 연구들은 젊은 기증자로부터 대변 미생물 이식과 같이 노령동물의 장내 마이크로바이옴 구성을 젊게 복원하는 것이 건강을 개선하고 수명을 연장한다는 것을 입증했습니다. 여기서 연구자들은 퇴행성 노화에서 장 마이크로바이옴의 역할을 체계적으로 바라봅니다. 고립 상태에서는 아무런 변화가 없으며, 신체의 모든 조직은 서로 상호작용하며, 여기에는 우리가 함께 사는 공생 미생물 집단도 포함됩니다.",
-        "공생 관계는 생물학적 복잡성의 기초입니다. 이는 고대 미토콘드리아 획득에서 현대의 숙주-미생물군 상호작용까지 거슬러 올라갑니다. 본 리뷰에서는 식이-미생물군-숙주 유전자 삼위기의 관점에서 노화와 질병 감수성을 탐구합니다. 이 삼위일체는 식이 투입, 장내 미생물군, 숙주 게놈이 생리적 균형을 함께 조절하는 역동적인 공생 네트워크입니다. 공생 삼위일체는 영양이 외주화되면서 진화했으며, 식이 및 미생물 성분이 숙주에 의해 내화되었습니다. 식이 성분은 미생물 구성과 대사 활동을 조절합니다. 반면, 미생물 발효는 영양소의 단쇄 지방산, 비타민, 담즙산, 신경활성 화합물을 생성하며, 이는 숙주 유전자 발현, 면역 반응, 장벽 완전성, 영양 선호도, 건강에 영향을 미칩니다.",
-        "숙주 유전자는 이 삼위일체의 핵심 조절자로 공동 진화하여 영양 센서, 면역 효과자, 미생물 균형을 유지하고 불균형을 예방하는 단백질을 암호화합니다. 주요 대사 및 면역 유전자의 다형성은 식이 및 미생물 적응에 대한 반응을 미세 조정하여 다양한 맥락에서 회복력을 구축합니다. 유기체가 노화됨에 따라 이 삼위원 평형은 불안정해지고, 미생물 다양성 감소, 장벽 무결성 및 기능 저하, 노화 관련 병리를 가속화하는 만성 염증으로 이어집니다. 따라서 식이, 미생물, 유전적 상호의존성을 이해하고 노화와 질병을 이 관점에서 바라보는 것은 연령 관련 질환과 건강 및 롱제비티을 증진하기 위한 맞춤형 영양 및 마이크로바이옴 표적 치료법 개발의 청사진을 제공합니다.",
-        "링크: https://doi.org/10.3389/frmbi.2026.1872481"
       ]
     },
     {
@@ -4513,7 +5250,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/27/yayoi-kusama-dies-aged-97",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-08-27T10:00:12.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4629,7 +5366,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/27/dezeen-events-guide-london-design-week-2026",
       "author": "Sophie Chapman",
       "publishedAt": "2026-08-27T08:45:25.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4838,16 +5575,16 @@
       "originalUrl": "https://www.dezeen.com/2026/08/27/studio-three-sixty-sauna-theatre-edinburgh-fringe-festival",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-08-27T08:00:20.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "all",
         "Architecture",
-        "Saunas",
         "UK",
         "Scotland",
         "Theatres",
-        "Edinburgh"
+        "Edinburgh",
+        "Saunas"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/sauna-theatre-edinburgh-fringe-studio-three-sixty_dezeen_2364_sq_0-411x411.jpg"
@@ -4896,179 +5633,10 @@
       ]
     },
     {
-      "id": "dezeen:a75519f8b4",
-      "slug": "aethos-london-shoreditch-designed-using-an-east-meets-a75519",
-      "titleOriginal": "Aethos London Shoreditch designed using an \"East meets East\" approach",
-      "summaryOriginal": "Boutique hotel brand Aethos has opened its first London outpost with interiors designed by Astet Studio in a Ron Arad Associates building that was formerly home to Nobu Hotel Shoreditch. Created by Astet Studio, the interiors of Aethos London Shoreditch were designed to blend the industrial design language of the original building with a softer Japanese-inspired The post Aethos London Shoreditch d",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Boutique hotel brand Aethos has opened its first London outpost with interiors designed by Astet Studio in a Ron Arad Associates building that was formerly home to Nobu Hotel Shoreditch."
-        },
-        {
-          "kind": "text",
-          "text": "Created by Astet Studio , the interiors of Aethos London Shoreditch were designed to blend the industrial design language of the original building with a softer Japanese-inspired material palette."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/aethos-hotel-london-astet-studio_dezeen_2364_col_0.jpg",
-          "alt": "Lobby area at Aethos Shoreditch"
-        },
-        {
-          "kind": "text",
-          "text": "Astet Studio used earthy tones to introduced warmth into the industrial setting \"When we first approached the project, we saw an opportunity to explore what we call East meets East,\" Astet Studio co-founder Oscar Engroba told Dezeen."
-        },
-        {
-          "kind": "text",
-          "text": "\"Rather than recreating Shoreditch's industrial past, we wanted to bring its existing character into conversation with the precision and craftsmanship of Japanese design traditions.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/aethos-hotel-london-astet-studio_dezeen_2364_col_11-scaled.jpg",
-          "alt": "Breakfast area at Aethos Shoreditch"
-        },
-        {
-          "kind": "text",
-          "text": "Textured fabrics were used to absorb rather than reflect light in the breakfast room The Barcelona -based interiors studio was inspired by the Japanese concept of Utsuroi for the project, explaining to Dezeen that its employment meant \"the architecture stays constant while the experience quietly evolves\"."
-        },
-        {
-          "kind": "text",
-          "text": "Astet Studio used the Japanese concept of Utsuroi to evolve the hotel's lobby, bar, gym, members' lounge and Mitsu restaurant ."
-        },
-        {
-          "kind": "text",
-          "text": "The 164-room hotel, originally built in 2017, is defined by its striking industrial facade, featuring cantilevered balconies framed in glass, steel, and concrete."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/aethos-hotel-london-astet-studio_dezeen_2364_col_4.jpg",
-          "alt": "Industrial building in Shoreditch, east London"
-        },
-        {
-          "kind": "text",
-          "text": "Aethos London Shoreditch is housed in a building designed by Ron Arad Associates Guests enter through this layered concrete facade into an open lobby characterised by earthy browns and muted natural tones, which was designed to introduce warmth into the industrial setting."
-        },
-        {
-          "kind": "text",
-          "text": "\"We wanted guests to feel welcome and connected to the rhythm of Shoreditch, while still offering moments of calm,\" said Engroba."
-        },
-        {
-          "kind": "text",
-          "text": "\"The colour palette draws from the Japanese Shin-Bijutsukai movement, using natural materials, planting and filtered light to soften the architecture without diminishing its character.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/aethos-hotel-london-astet-studio_dezeen_2364_col_2-scaled.jpg",
-          "alt": "Seating area at Aethos Shoreditch"
-        },
-        {
-          "kind": "text",
-          "text": "Aethos London Shoreditch fuses East London's industrial design language with \"the craftsmanship of Japanese design traditions\" Contemporary, low-height seating was used throughout the space, while a series of large, textured rugs zone the space to create areas of relaxation."
-        },
-        {
-          "kind": "text",
-          "text": "Vintage decorative pieces and furniture were used intentionally throughout the lobby alongside works by local artists and designers to connect the interior to its east London roots."
-        },
-        {
-          "kind": "text",
-          "text": "Astet Studio brings warmth and tactility to the industrial spaces by using bespoke wood panelling across the lobby area, breakfast rooms and bedrooms."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/aethos-hotel-london-astet-studio_dezeen_2364_col_9-scaled.jpg",
-          "alt": "Timber bookcase and seating at Aethos Shoreditch"
-        },
-        {
-          "kind": "text",
-          "text": "The timber detailing across the interiors of Aethos draws inspiration from traditional Japanese carpentry \"The palette combines hand-finished timber, textured ceramics, woven fabrics and predominantly matte finishes,\" Engroba explained."
-        },
-        {
-          "kind": "text",
-          "text": "\"By favouring materials that absorb rather than reflect light, the interiors develop subtle changes throughout the day, giving the spaces a quieter, more tactile quality.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/aethos-hotel-london-astet-studio_dezeen_2364_col_12.jpg",
-          "alt": "Contemporary bedroom in Aethos Shoreditch"
-        },
-        {
-          "kind": "text",
-          "text": "Astet Studio designed the bedrooms to have a more refined and pared-back colour palette In the bedrooms, the studio shifted the material palette to be simpler and more refined, featuring muted tones of grey, burnt orange, and blackened wood."
-        },
-        {
-          "kind": "text",
-          "text": "\"In the bedrooms, the focus moves towards comfort, tactility and a quieter sensory experience,\" said Engroba. \"Materials become softer, lighting more controlled and the overall atmosphere more intimate, creating a retreat within the city.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/aethos-hotel-london-astet-studio_dezeen_2364_col_8.jpg",
-          "alt": "Seating area in a hotel suite"
-        },
-        {
-          "kind": "text",
-          "text": "Aethos London Shoreditch features 164 hotel rooms plus a restaurant and private members bar Other Japanese-style interiors recently featured on Dezeen include Mitsu restaurant in London and Genso restaurant by Joyce Wang Studio in Tokyo ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Aethos London Shoreditch designed using an \"East meets East\" approach appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/08/27/aethos-hotel-shoreditch-london-astet-studio",
-      "author": "Clara Finnigan",
-      "publishedAt": "2026-08-27T05:00:09.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Interiors",
-        "Highlights",
-        "London",
-        "Japan",
-        "UK",
-        "England",
-        "Hotels"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/08/sq-aethos-hotel-london-astet-studio_dezeen_2364_col_0-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "에토스 런던 쇼디치는 '동양과 동양' 접근법으로 설계되었습니다",
-      "summaryKo": "부티크 호텔 브랜드 Aethos가 론 아라드 어소시에이츠(Ron Arad Associates) 건물에 아스텟 스튜디오가 디자인한 인테리어로 런던 첫 지점을 열었는데, 이 건물은 이전에 노부 호텔 쇼디치(Nobu Hotel Shoreditch)가 있던 건물입니다. 아스텟 스튜디오가 만든 에테소스 런던 쇼디치의 인테리어는 원래 건물의 산업 디자인 언어와 부드러운 일본풍 스타일을 조화롭게 조화시키도록 설계되었습니다. 에에토스 런던 쇼디치 d",
-      "bodyKo": [
-        "부티크 호텔 브랜드 에토스가 론 아라드 어소시에이츠(Ron Arad Associates) 건물에 아스테트 스튜디오가 디자인한 인테리어로 런던 첫 지점을 열었는데, 이 건물은 이전에 노부 호텔 쇼디치(Nobu Hotel Shoreditch)가 있던 곳입니다.",
-        "아스테트 스튜디오가 제작한 에토스 런던 쇼디치의 내부는 원래 건물의 산업 디자인 언어와 부드러운 일본풍 소재 팔레트를 조화롭게 조화시키도록 설계되었습니다.",
-        "Astet Studio는 인더스트리얼한 분위기에 따뜻함을 더하기 위해 흙빛 톤을 사용했습니다. \"처음 이 프로젝트에 접근했을 때, 우리는 동양과 동양이 만나는 것을 탐구할 기회를 보았습니다,\"라고 Astet Studio 공동 창립자 Oscar Engroba는 Dezeen에 말했습니다.",
-        "\"쇼디치의 산업 과거를 재현하기보다는, 기존 특성을 일본 디자인 전통의 정밀함과 장인정신과 대화 속에 끌어들이고자 했습니다.\"",
-        "질감 있는 천은 아침 식사실에서 빛을 반사하는 대신 흡수하는 데 사용되었습니다. 바르셀로나에 본사를 둔 인테리어 스튜디오는 이 프로젝트에서 일본의 우츠로이 개념에서 영감을 받았으며, Dezeen에게 이 디자인을 사용함으로써 \"건축은 일정하게 유지되지만 경험은 조용히 진화한다\"고 설명했습니다.",
-        "아스테트 스튜디오는 일본의 우츠로이 개념을 활용해 호텔의 로비, 바, 체육관, 회원 라운지, 미츠 레스토랑을 발전시켰습니다.",
-        "2017년에 처음 지어진 164객실 규모의 이 호텔은 유리, 강철, 콘크리트로 프레임된 캔틸레버 발코니가 특징인 인상적인 산업 외관으로 특징지어집니다.",
-        "에토스 런던 쇼디치는 론 아라드 어소시에이츠가 설계한 건물에 자리 잡고 있습니다. 손님들은 이 층층이 쌓인 콘크리트 외관을 통해 들어서면 흙빛 갈색과 차분한 자연색이 어우러진 개방형 로비에 들어가며, 산업 환경에 따뜻함을 더하기 위해 설계되었습니다.",
-        "\"우리는 손님들이 쇼디치의 리듬에 환영받고 연결된다고 느끼면서도 평온한 순간들을 제공하길 원했습니다,\"라고 엥그로바는 말했습니다.",
-        "\"색상 팔레트는 일본의 신미술회(Shin-Bijutsukai) 운동에서 영감을 받아 자연 재료, 식재, 필터링된 빛을 사용해 건축물의 개성을 훼손하지 않으면서도 부드럽게 만듭니다.\"",
-        "Aethos London Shoreditch는 이스트 런던의 산업 디자인 언어와 '일본 디자인 전통의 장인정신'을 융합합니다. 현대적이고 낮은 높이의 좌석이 공간 전반에 사용되었고, 크고 질감 있는 러그들이 공간을 구분하여 휴식 공간을 만듭니다.",
-        "로비 곳곳에는 지역 예술가와 디자이너들의 작품과 함께 빈티지 장식과 가구가 의도적으로 사용되어 내부를 동런던 뿌리와 연결시켰습니다.",
-        "Astet Studio는 로비, 아침 식사실, 침실 곳곳에 맞춤형 목재 패널링을 사용해 산업 공간에 따뜻함과 촉감을 더합니다.",
-        "에토스 내부의 목재 디테일은 전통 일본 목공에서 영감을 받았습니다. \"팔레트는 수작업으로 마감된 목재, 질감 있는 도자기, 직조된 직물, 그리고 주로 무광 마감이 결합되어 있습니다,\"라고 엥그로바는 설명했습니다.",
-        "\"빛을 반사하기보다는 흡수하는 재료를 선호함으로써, 내부는 하루 종일 미묘한 변화를 만들어 공간에 더 조용하고 촉감 있는 특성을 부여한다.\"",
-        "아스테트 스튜디오는 침실을 보다 세련되고 절제된 색상 팔레트로 디자인했습니다. 침실에서는 소재 팔레트를 더 단순하고 세련되게 바꾸어 회색, 번트 오렌지, 검게 처리된 나무 톤을 사용했습니다.",
-        "\"침실에서는 편안함, 촉감, 그리고 조용한 감각 경험에 초점이 맞춰진다\"고 엥그로바가 말했다. \"소재는 부드러워지고, 조명은 더 통제되며, 전체적인 분위기는 더 친밀해져서 도시 안의 휴식처를 만들어낸다.\"",
-        "에토스 런던 쇼디치에는 164개의 호텔 객실과 레스토랑, 그리고 프라이빗 멤버 바가 있습니다. 최근 Dezeen에서 소개된 일본식 인테리어로는 런던의 미츠 레스토랑과 도쿄의 조이스 왕 스튜디오가 있는 겐소 레스토랑이 있습니다.",
-        "\"동양과 동양이 만나는 접근법으로 설계된 Aethos London Shoreditch\"라는 글은 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
       "id": "lifespan-io:d2b8c8131e",
       "slug": "short-intense-exercise-elicits-beneficial-metabolic-changes-d2b8c8",
       "titleOriginal": "Short, Intense Exercise Elicits Beneficial Metabolic Changes",
-      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated with […]",
+      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -5157,7 +5725,7 @@
       "originalUrl": "https://lifespan.io/short-intense-exercise-elicits-beneficial-metabolic-changes",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-08-26T16:43:46.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Exercise",
@@ -5176,7 +5744,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "짧고 강도 높은 운동은 유익한 대사 변화를 유도합니다",
-      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수준에 더 큰 변화를 일으켰고, [...]",
+      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 순환 단백질과 대사산물 수치에 더 큰 변화를 보였습니다 [...]",
       "bodyKo": [
         "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1].",
         "짧고 강도 높은 운동 vs 길고 중간 정도의 운동은 건강에 긍정적인 영향을 미칠 수 있는 잘 알려진 생활 습관 요인입니다. 운동은 다양한 세포에서 분비되고 몸 안에서 순환하는 인자들을 통해 여러 세포, 조직, 장기에 이익을 줍니다 [2]. 하지만 투자 대비 가장 큰 운동 유형은 여전히 논쟁 중입니다. 마찬가지로, 운동 효과를 매개하는 순환 요인들도 아직 완전히 정의되지 않았습니다.",
@@ -5320,7 +5888,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/bob-neville-on-berghaus-manchester-culture-and-the-british-brand-everyone-thinks-is-german",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-26T11:00:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -5359,846 +5927,6 @@
         "60년과 새로운 장의 시작, 오늘은 멋진 대칭을 가졌습니다. 리본을 자르는 사람은 피터 로키였는데, 뉴캐슬 그 가게에서 60년이 지난 공동 창립자이며, 영국 등반계에서 가장 유명한 인물 중 한 명이자 수십 년간 버그하우스 이야기의 일부인 크리스 보닝턴 경과 함께했습니다. 모험가이자 브랜드 홍보대사인 에드 잭슨도 그 자리에 있었습니다. 맨체스터의 한 쇼핑센터에서, 이슬비가 내리는 수요일 아침, 가위를 들고 60년간의 신뢰를 쌓아왔습니다.",
         "저와 [Gloaming](https://www.gloaming.uk/)의 모건 바필드, 그리고 디지털 크리에이터 [제시 알렉산드라](https://www.instagram.com/jessealexandra/)와 함께요. 다시 제 옷장으로 돌아가게 되네요. 오늘 아침에 들어왔을 때 Berghaus는 북부 레이버들과 열성적인 오아시스 팬들을 위한 곳이라고 생각했어요. 대부분 남성들이요. JD 스포츠 브랜드였지만 오래전에 잊혀진 줄 알았죠. 대신 제가 발견한 것은 마음과 영혼이 있는 브랜드였어요. 인상적인 여성 컬렉션도 있었고요. 저는 그걸 응원하며 떠났어요.",
         "한 가게가 모든 것을 바꾼다고 가장하지는 않을 것이다. 하지만 뉴발란스를 다시 멋지게 만든 사람이 말하듯, 자랑스러워할 것이 많고, 60년이 지난 지금도 이 이야기는 마침내 전할 곳이 생겼다."
-      ]
-    },
-    {
-      "id": "dezeen:bdf4368d8e",
-      "slug": "xbox-teams-up-with-ikea-for-debut-gaming-bdf436",
-      "titleOriginal": "Xbox teams up with IKEA for debut gaming furniture collection",
-      "summaryOriginal": "Designers from IKEA and Xbox were paired up to create the products in this furniture collection, including a stool that looks and tilts like a giant thumbstick. Unveiled today at the Gamescom fair in Cologne, the nine-piece YXSTABY range is Xbox's debut foray into gaming furniture, designed to blend easily into the home when it's The post Xbox teams up with IKEA for debut gaming furniture collecti",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Designers from IKEA and Xbox were paired up to create the products in this furniture collection, including a stool that looks and tilts like a giant thumbstick."
-        },
-        {
-          "kind": "text",
-          "text": "Unveiled today at the Gamescom fair in Cologne, the nine-piece YXSTABY range is Xbox 's debut foray into gaming furniture, designed to blend easily into the home when it's out of action."
-        },
-        {
-          "kind": "text",
-          "text": "\"We set out to make furniture people really want in their home, not furniture they accept because it is what you need to game,\" said IKEA product design developer Philip Dilé."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_3.jpg",
-          "alt": "Thumbstick stool from YXSTABY collection by IKEA and Xbox"
-        },
-        {
-          "kind": "text",
-          "text": "The YXSTABY collection (top image) includes a stool shaped like the Xbox thumbstick (above) Each of the pieces in the collection was designed by a team made up of one IKEA designer and one Xbox designer, uniting their gaming and furniture design expertise."
-        },
-        {
-          "kind": "text",
-          "text": "The standout product is a stool modelled on the distinctive thumbsticks found on Xbox controllers."
-        },
-        {
-          "kind": "text",
-          "text": "\"We were looking at which objects people actually have around them when they play, and the thumbstick kept looking like a small stool to us,\" IKEA designer David Wahl told Dezeen."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_4.jpg",
-          "alt": "X-box d-pad shaped cushion in green"
-        },
-        {
-          "kind": "text",
-          "text": "The shape of the controller's D-pad is translated into a cushion Adapted from original 3D models of the device, the stool features a curved base that allows it to tilt in all directions much like the real thumbstick, allowing users to lean into the action."
-        },
-        {
-          "kind": "text",
-          "text": "The seat even has the same grippy tessellated edges, now serving to hold the sitter rather than their thumbs in place."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/b-ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_0.jpg",
-          "alt": "Xbox D-pad shaped display bowl"
-        },
-        {
-          "kind": "text",
-          "text": "There's also a platter that looks like the sunken cross-shaped D-pad \"The challenge wasn't creating a giant thumbstick; the challenge was creating a great stool that still felt like a thumbstick,\" Xbox design director Elliot Hsu explained."
-        },
-        {
-          "kind": "text",
-          "text": "\"We went back to the controller's original design files and spent a lot of time refining the proportions, texture, seating curve and stability. We wanted people to recognize it instantly while still feeling comfortable and functional in a living room.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_7.jpg",
-          "alt": "White IKEA TV stand"
-        },
-        {
-          "kind": "text",
-          "text": "IKEA has made its first attempt at creating a TV stand since 2012 Other pieces that play on some of Xbox's recognisable design elements include a shiny stainless-steel platter and a cushion in the company's signature shade of green, both shaped to look like the controller's sunken cross-shaped D-pad."
-        },
-        {
-          "kind": "text",
-          "text": "Clever storage is another theme that runs through the collection, often set on casters or equipped with handles so it can easily be moved around the home and turn any room into a game station."
-        },
-        {
-          "kind": "text",
-          "text": "Read: IKEA unveils inflatable chair that \"challenges traditional gaming design\" Most notably, there's IKEA's first go at creating a TV stand since a failed attempt in 2012."
-        },
-        {
-          "kind": "text",
-          "text": "Set on casters, it can be rolled wherever it is needed, while opting for a square over a tubular metal frame keeps it from looking too much like office furniture, explained IKEA designer Lukas Bazle."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_6.jpg",
-          "alt": "Rear view of white IKEA TV stand"
-        },
-        {
-          "kind": "text",
-          "text": "Compartments at the back can be used to store gear \"Our focus here was to make a TV stand that's really safe, sturdy and affordable, and that looks good in a lot of different homes,\" he said."
-        },
-        {
-          "kind": "text",
-          "text": "\"Doing a product like that at IKEA is sometimes harder than you'd think. We test our furniture very intensely, and with a TV and castors involved, a lot of things can go wrong.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_8.jpg",
-          "alt": "Lounge chair from from YXSTABY collection by IKEA and Xbox"
-        },
-        {
-          "kind": "text",
-          "text": "The lounge chair was designed to suit active and relaxed sitting There's also a wooden toolbox for holding various gaming gear and paraphernalia, which doubles as a laptop stand, as well as a rolling side table with integrated charging stations and a lounge chair with hidden storage pockets below the seat."
-        },
-        {
-          "kind": "text",
-          "text": "Its bouncy, cantilevered design was conceived to support both active and leisurely play."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_9.jpg",
-          "alt": "Hidden pockets under gaming chair from YXSTABY collection by IKEA and Xbox"
-        },
-        {
-          "kind": "text",
-          "text": "A hidden pocket under the seat can be used to store gear \"I hadn't thought at all about people playing in different modes,\" Bazle said."
-        },
-        {
-          "kind": "text",
-          "text": "\"You sit forward when the game needs your full attention, and then there are games you play to relax, where you're sunk into the chair, and it's a completely different way of sitting. The lounge chair had to handle both.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_0.jpg",
-          "alt": "Rolling side table from YXSTABY collection by IKEA and Xbox"
-        },
-        {
-          "kind": "text",
-          "text": "There's also a moveable side table that doubles as a charging station The pieces are rendered in timber and muted neutrals of black, white and grey, with splashes of green guiding the eye to the integrated storage."
-        },
-        {
-          "kind": "text",
-          "text": "IKEA has gone full-force on gaming furniture in recent years, with previous launches including an inflatable gaming chair and a range of high-tech desks and chairs with Republic of Gamers ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Xbox teams up with IKEA for debut gaming furniture collection appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/08/26/xbox-ikea-gaming-furniture-yxstaby",
-      "author": "Jennifer Hahn",
-      "publishedAt": "2026-08-26T10:00:18.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "Furniture",
-        "all",
-        "Design",
-        "IKEA",
-        "Gaming",
-        "Xbox"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/08/ikea-xbox-yxstaby-gaming-furniture_dezeen_2364_col_3-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.95,
-      "contentType": "news",
-      "titleKo": "Xbox가 IKEA와 협력하여 데뷔 게이밍 가구 컬렉션을 선보입니다",
-      "summaryKo": "IKEA와 Xbox의 디자이너들이 이 가구 컬렉션의 제품을 만들기 위해 짝을 이루었는데, 거대한 엄지손가락 막대처럼 생기고 기울어지는 의자도 포함되어 있습니다. 오늘 쾰른에서 열린 게임스컴 박람회에서 공개된 9피스 YXSTABY 라인은 Xbox가 게임 가구에 처음 도전하는 작품으로, Xbox가 IKEA와 협력해 데뷔 게이밍 가구 컬렉션을 선보일 때 집에 자연스럽게 녹아들도록 설계되었습니다",
-      "bodyKo": [
-        "IKEA와 Xbox의 디자이너들이 이 가구 컬렉션의 제품을 만들기 위해 짝을 이루었는데, 거대한 엄지손가락 막대처럼 생기고 기울어지는 의자도 포함되어 있습니다.",
-        "오늘 쾰른에서 열린 게임스컴 박람회에서 공개된 9피스 YXSTABY 시리즈는 Xbox가 게임 가구에 처음 도전한 제품으로, 사용하지 않을 때도 가정과 쉽게 어우러지도록 설계되었습니다.",
-        "\"우리는 사람들이 집에 정말 갖고 싶어 하는 가구를 만들고자 했습니다. 게임에 필요한 가구를 받아들이는 것이 아니라요,\" 이케아 제품 디자인 개발자 필립 딜레가 말했습니다.",
-        "YXSTABY 컬렉션(상단 이미지)에는 Xbox 엄지스틱 모양의 의자가 포함되어 있습니다(위 사진). 컬렉션의 각 작품은 IKEA 디자이너 한 명과 Xbox 디자이너 한 명으로 구성된 팀이 디자인했으며, 이들의 게임 및 가구 디자인 전문성을 결합했습니다.",
-        "가장 돋보이는 제품은 Xbox 컨트롤러에 있는 독특한 엄지 스틱을 모델로 한 의자입니다.",
-        "\"우리는 사람들이 실제로 게임을 할 때 어떤 물건을 가지고 있는지 살펴보았는데, 엄지 스틱이 우리에게는 작은 의자처럼 보였어요,\"라고 IKEA 디자이너 데이비드 월은 Dezeen에 말했습니다.",
-        "컨트롤러의 D패드 모양이 쿠션으로 변환되었습니다. 기기의 원래 3D 모델을 차용한 이 의자는 실제 엄지 스틱처럼 모든 방향으로 기울어질 수 있는 곡선 베이스를 갖추고 있어 사용자가 액션에 몸을 기울일 수 있습니다.",
-        "좌석은 같은 미끄러지기 테셀레이션 가장자리를 가지고 있어, 이제는 앉는 사람의 엄지손가락이 아니라 고정되는 역할을 한다.",
-        "또한 가라앉은 십자가 모양의 D패드처럼 생긴 플래터도 있습니다. \"도전 과제는 거대한 엄지 스틱을 만드는 것이 아니라; \"도전 과제는 여전히 엄지스틱처럼 느껴지면서도 훌륭한 의자를 만드는 것이었습니다.\"라고 Xbox 디자인 디렉터 엘리엇 쉬우가 설명했습니다.",
-        "\"우리는 컨트롤러의 원래 설계 파일로 돌아가 비율, 질감, 좌석 곡선, 안정성을 다듬는 데 많은 시간을 들였습니다. 사람들이 즉시 알아볼 수 있으면서도 거실에서 편안하고 기능적으로 느끼길 원했습니다.\"",
-        "IKEA는 2012년 이후 처음으로 TV 스탠드를 제작하려 시도했습니다. Xbox의 특징적인 디자인 요소들을 활용한 다른 요소로는 반짝이는 스테인리스 스틸 플래터와 회사 특유의 녹색 쿠션이 있으며, 모두 컨트롤러의 가라앉은 십자형 D패드 모양으로 디자인되었습니다.",
-        "영리한 수납 공간도 컬렉션 전반에 걸쳐 있는 또 다른 테마로, 종종 캐스터에 설치하거나 손잡이가 달려 있어 집 안에서 쉽게 옮길 수 있고 어떤 방이든 게임 스테이션으로 바꿀 수 있습니다.",
-        "읽어보세요: IKEA가 \"전통적인 게임 디자인에 도전하는 인플레이터블 의자\" 공개 무엇보다도, 2012년 실패한 이후 처음으로 TV 스탠드를 제작하는 시도가 있습니다.",
-        "캐스터에 고정되어 필요한 곳 어디든 말 수 있으며, 튜브형 금속 프레임 대신 정사각형 프레임을 선택하면 사무용 가구처럼 보이지 않게 된다고 IKEA 디자이너 루카스 배즐은 설명했습니다.",
-        "뒤쪽 칸은 장비 보관용으로 사용할 수 있습니다. \"저희의 목표는 정말 안전하고 견고하며 합리적인 가격이면서도 다양한 가정에서 보기 좋은 TV 스탠드를 만드는 것이었습니다.\"라고 그는 말했습니다.",
-        "\"이케아에서 그런 제품을 만드는 건 생각보다 더 어려울 때가 있어요. 우리는 가구를 매우 강도 높게 테스트하고, TV와 캐스터가 있으면 많은 문제가 생길 수 있습니다.\"",
-        "라운지 체어는 활동적이고 편안한 앉기 스타일에 맞게 설계되었습니다. 다양한 게임 장비와 용품을 보관할 수 있는 나무 공구함이 노트북 스탠드로도 사용되며, 충전 스테이션이 통합된 롤링 사이드 테이블과 좌석 아래에 숨겨진 수납 포켓이 있는 라운지 체어도 있습니다.",
-        "탄력 있는 캔틸레버 디자인은 활동적이면서도 여유로운 놀이를 지원하도록 고안되었습니다.",
-        "좌석 아래 숨겨진 주머니는 장비를 보관하는 데 사용할 수 있다. \"사람들이 다양한 모드로 플레이하는 것에 대해 전혀 생각해본 적이 없었다\"고 배즐은 말했다.",
-        "\"게임에 온전히 집중해야 할 때는 앞으로 앉고, 또 어떤 게임은 의자에 푹 파묻혀 휴식을 취하는 거야. 완전히 다른 앉는 방식이지. 라운지 의자가 둘 다 감당해야 했어.\"",
-        "이동식 사이드 테이블도 있어 충전소 역할도 겸합니다. 작품들은 나무와 검정, 흰색, 회색의 차분한 중립색으로 마감되어 있으며, 녹색 점들이 시선을 통합 저장 공간으로 이끕니다.",
-        "IKEA는 최근 몇 년간 게임 가구에 본격적으로 투자해 왔으며, 이전 출시로는 인플레이터블 게이밍 의자와 Republic of Gamers와 함께 하이테크 책상 및 의자 라인업이 포함되어 있습니다.",
-        "Xbox가 IKEA와 협력하여 데뷔 게이밍 가구 컬렉션을 선보인다는 소식은 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "dezeen:a34e900b49",
-      "slug": "latest-dell-workstations-close-gap-between-design-concept-a34e90",
-      "titleOriginal": "Latest Dell workstations close gap between \"design concept and client-ready presentation\"",
-      "summaryOriginal": "Promotion: US technology company Dell has incorporated Nvidia GPUs and AI-assisted visualisation technologies into its workstation portfolio to support its latest real-time design studio. According to Dell, advances in graphics processing unit (GPU) rendering and AI-assisted visualisation technologies are helping to close the gap between initial design concepts and final client-ready presentations",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Promotion: US technology company Dell has incorporated Nvidia GPUs and AI -assisted visualisation technologies into its workstation portfolio to support its latest real-time design studio."
-        },
-        {
-          "kind": "text",
-          "text": "According to Dell , advances in graphics processing unit (GPU) rendering and AI-assisted visualisation technologies are helping to close the gap between initial design concepts and final client-ready presentations."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/06/chaos-ai-visualisation-real-time-dell-nvidia_dezeen_2364_col_19.jpg",
-          "alt": "Dell workstations with Nvidia technology"
-        },
-        {
-          "kind": "text",
-          "text": "Dell has incorporated Nvidia technologies into its workstation portfolio The company noted that real-time workflows are changing the way design studios work, enabling teams to create photorealistic images and explore multiple options interactively."
-        },
-        {
-          "kind": "text",
-          "text": "It also allows studios to test ideas and design iterations as 3D models are updated."
-        },
-        {
-          "kind": "text",
-          "text": "Dell also suggested that \"visualisation is becoming part of the design thinking itself\". This marks a shift from it being a specialist output at the presentation stage to being a tool for concept development and decision-making during the design process."
-        },
-        {
-          "kind": "text",
-          "text": "\"The role of the visualisation specialist has been democratised to the role of the actual designer,\" Dell AECO alliances and solutions director Ken Flannigan told Dezeen."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/06/chaos-ai-visualisation-real-time-dell-nvidia_dezeen_2364_col_3.jpg",
-          "alt": "Dell workstations with Nvidia technology"
-        },
-        {
-          "kind": "text",
-          "text": "The workstations combine Nvidia GPUs and AI-assisted visualisation technologies To support these workflows, the Dell Pro Max and Dell Pro Precision workstations are equipped with the latest Blackwell generation of Nvidia RTX PRO GPUs."
-        },
-        {
-          "kind": "text",
-          "text": "These professional GPUs combine traditional ray-tracing hardware (RT Cores) with AI-processing capabilities (Tensor Cores)."
-        },
-        {
-          "kind": "text",
-          "text": "The Dell Pro Max and Dell Pro Precision workstations support Nvidia's Deep Learning Super Sampling (DLSS) – an AI-assisted technology using pre-trained models to upscale images rendered at a lower resolution, generate additional frames, and improve ray-traced image quality."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/06/chaos-ai-visualisation-real-time-dell-nvidia_dezeen_2364_col_2.jpg",
-          "alt": "Dell workstations with Nvidia technology"
-        },
-        {
-          "kind": "text",
-          "text": "Nvidia DLSS uses AI to upscale images rendered at lower resolutions According to Flannigan, this represents a change from relying primarily on increasingly powerful hardware towards combining GPU performance with AI-assisted processing."
-        },
-        {
-          "kind": "text",
-          "text": "\"Now it's not just power – it's power plus these pre-trained AI intelligent models that are allowing you to work faster,\" Flannigan said."
-        },
-        {
-          "kind": "text",
-          "text": "\"It's not that the GPU got faster, but that the intelligence behind the GPU got better,\" he added."
-        },
-        {
-          "kind": "text",
-          "text": "Flannigan noted that these advances may also improve energy efficiency by reducing power consumption and heat generation."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/06/chaos-ai-visualisation-real-time-dell-nvidia_dezeen_2364_col_17.jpg",
-          "alt": "Dell workstations with Nvidia technology"
-        },
-        {
-          "kind": "text",
-          "text": "Dell suggested these advances could improve performance and energy efficiency By processing visualisations and AI workloads locally on workstations instead of cloud-based services, Dell also suggested that studios can benefit from quicker workflows while maintaining more control over their design data."
-        },
-        {
-          "kind": "text",
-          "text": "Dell argued that while cloud-based services are important for storage and collaboration, local compute can be more predictable in terms of operational costs, as well as for intellectual property protection and data governance requirements."
-        },
-        {
-          "kind": "text",
-          "text": "\"Bringing it locally means that you're buying compute, not renting compute,\" added Flannigan."
-        },
-        {
-          "kind": "text",
-          "text": "He noted this can benefit architecture firms working with sensitive project information and client data, which cannot always be processed through centralised cloud services."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/06/chaos-ai-visualisation-real-time-dell-nvidia_dezeen_2364_col_5.jpg",
-          "alt": "Dell workstations with Nvidia technology"
-        },
-        {
-          "kind": "text",
-          "text": "Dell stated the importance of local computing in AI-driven design workflows Looking to the future, Flannigan noted that local computing will become increasingly important as design firms begin training AI tools on their own data."
-        },
-        {
-          "kind": "text",
-          "text": "\"If we're all training visualisation and design aesthetics on a centralised data source, everything in the future designed by AI will eventually look exactly the same,\" stated Flannigan."
-        },
-        {
-          "kind": "text",
-          "text": "\"So it's really important for designers to own their AI-trained design aesthetic,\" he added."
-        },
-        {
-          "kind": "text",
-          "text": "To find out more about the Dell Pro Precision portfolio equipped with Nvidia technologies, visit its website here ."
-        },
-        {
-          "kind": "text",
-          "text": "This article was written by Dezeen as part of a partnership with Dell Technologies . Find out more about Dezeen partnership content here ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Latest Dell workstations close gap between \"design concept and client-ready presentation\" appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/08/26/dell-workstations-ai-visualisation-real-time-design",
-      "author": "Dezeen staff",
-      "publishedAt": "2026-08-26T04:00:40.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Promotions",
-        "Renderings",
-        "Artificial intelligence (AI)",
-        "Visualisation"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/08/DELL_dezeen_2364_col_0-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "최신 Dell 워크스테이션이 \"디자인 개념과 클라이언트 준비 프레젠테이션\" 사이의 간극을 메우다",
-      "summaryKo": "홍보: 미국 기술 기업 델은 최신 실시간 디자인 스튜디오를 지원하기 위해 엔비디아 GPU와 AI 지원 시각화 기술을 워크스테이션 포트폴리오에 통합했습니다. 델에 따르면, 그래픽 처리 장치(GPU) 렌더링과 AI 지원 시각화 기술의 발전이 초기 디자인 개념과 최종 클라이언트 준비 프레젠테이션 간의 격차를 줄이는 데 기여하고 있습니다",
-      "bodyKo": [
-        "홍보: 미국 기술 기업 델이 최신 실시간 디자인 스튜디오를 지원하기 위해 엔비디아 GPU와 AI 지원 시각화 기술을 워크스테이션 포트폴리오에 통합했습니다.",
-        "델에 따르면, 그래픽 처리 장치(GPU) 렌더링과 AI 지원 시각화 기술의 발전이 초기 디자인 개념과 최종 클라이언트 준비 프레젠테이션 사이의 간극을 줄이는 데 도움을 주고 있습니다.",
-        "델은 엔비디아 기술을 워크스테이션 포트폴리오에 통합했습니다. 실시간 워크플로우가 디자인 스튜디오의 작업 방식을 변화시키고 있으며, 팀들이 포토리얼리스틱한 이미지를 만들고 다양한 옵션을 인터랙티브하게 탐색할 수 있게 하고 있다고 밝혔습니다.",
-        "또한 스튜디오가 3D 모델이 업데이트되는 동안 아이디어를 테스트하고 디자인 반복을 시도할 수 있게 해줍니다.",
-        "델은 또한 \"시각화가 디자인 사고 자체의 일부가 되고 있다\"고 제안했습니다. 이는 시각화가 프레젠테이션 단계의 전문적인 산출물에서 디자인 과정 내 개념 개발과 의사결정을 위한 도구로의 전환을 의미합니다.",
-        "델 AECO 제휴 및 솔루션 디렉터 켄 플래니건은 Dezeen에 \"시각화 전문가의 역할이 실제 디자이너의 역할로 민주화되었습니다.\"라고 말했습니다.",
-        "이 워크스테이션들은 Nvidia GPU와 AI 지원 시각화 기술을 결합합니다. 이러한 워크플로우를 지원하기 위해 Dell Pro Max와 Dell Pro Precision 워크스테이션은 최신 Blackwell 세대의 Nvidia RTX PRO GPU를 탑재하고 있습니다.",
-        "이 전문 GPU들은 전통적인 레이 트레이싱 하드웨어(RT 코어)와 AI 처리 능력(텐서 코어)을 결합합니다.",
-        "Dell Pro Max와 Dell Pro Precision 워크스테이션은 Nvidia의 딥러닝 슈퍼 샘플링(DLSS)을 지원합니다. DLSS는 사전 학습된 모델을 활용해 낮은 해상도로 렌더링된 이미지를 업스케일링하고, 추가 프레임을 생성하며, 레이트레이싱 이미지 품질을 향상시키는 AI 지원 기술입니다.",
-        "Nvidia DLSS는 낮은 해상도로 렌더링된 이미지를 업스케일링하기 위해 AI를 사용합니다. 플래니건에 따르면, 이는 점점 더 강력한 하드웨어에 의존하던 것에서 GPU 성능과 AI 보조 처리를 결합하는 방향으로 전환한 것입니다.",
-        "\"이제는 단순한 전력이 아니라, 전력과 사전 학습된 AI 지능형 모델들이 더해져 더 빠르게 일할 수 있게 해준다\"고 플래니건은 말했다.",
-        "\"GPU가 더 빨라진 것이 아니라 GPU 뒤에 숨겨진 지능이 향상되었다\"고 덧붙였다.",
-        "플래니건은 이러한 발전이 전력 소비와 열 발생을 줄여 에너지 효율도 향상시킬 수 있다고 언급했습니다.",
-        "델은 이러한 발전이 성능과 에너지 효율성을 향상시킬 수 있다고 제안했습니다. 클라우드 기반 서비스가 아닌 워크스테이션에서 시각화와 AI 작업을 로컬로 처리함으로써, 스튜디오가 디자인 데이터에 대한 더 많은 통제권을 유지하면서도 더 빠른 워크플로우의 혜택을 누릴 수 있다고 제안했습니다.",
-        "델은 클라우드 기반 서비스가 저장과 협업에 중요하지만, 로컬 컴퓨트는 운영 비용뿐만 아니라 지적 재산권 보호 및 데이터 거버넌스 요구사항 측면에서 더 예측 가능하다고 주장했습니다.",
-        "\"로컬에서 가져온다는 것은 컴퓨트를 구매하는 것이지, 컴퓨트를 임대하는 것이 아니라는 뜻입니다.\"라고 플래니건이 덧붙였습니다.",
-        "그는 이것이 민감한 프로젝트 정보와 고객 데이터를 다루는 건축 회사에 도움이 될 수 있다고 언급했으며, 이는 항상 중앙화된 클라우드 서비스를 통해 처리될 수 없는 부분입니다.",
-        "델은 AI 기반 설계 워크플로우에서 로컬 컴퓨팅의 중요성을 강조했습니다. 플래니건은 미래를 바라보며, 설계 회사들이 자체 데이터로 AI 도구를 학습시키기 시작하면서 로컬 컴퓨팅의 중요성이 점점 커질 것이라고 언급했습니다.",
-        "\"만약 우리가 모두 중앙 데이터 소스에서 시각화와 디자인 미학을 훈련한다면, 앞으로 AI가 설계한 모든 것은 결국 똑같이 보일 것입니다.\"라고 플래니건은 말했습니다.",
-        "\"그래서 디자이너들이 AI로 학습된 디자인 미학을 소유하는 것이 정말 중요하다\"고 그는 덧붙였다.",
-        "엔비디아 기술이 탑재된 Dell Pro Precision 포트폴리오에 대해 더 알고 싶다면 웹사이트를 방문해 주세요.",
-        "이 기사는 Dezeen이 Dell Technologies와의 파트너십의 일환으로 작성했습니다. Dezeen과의 파트너십 콘텐츠에 대해 더 알아보려면 여기를 클릭하세요.",
-        "\"최신 Dell 워크스테이션, \"디자인 개념과 클라이언트 준비 프레젠테이션\" 사이의 간극 해소\"라는 글은 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "dezeen:4ac3609582",
-      "slug": "lighting-made-from-chinese-medicine-waste-among-projects-4ac360",
-      "titleOriginal": "Lighting made from Chinese medicine waste among projects from Politecnico di Milano",
-      "summaryOriginal": "Dezeen School Shows: a light made from organic waste from traditional Chinese medicine is among the projects by students at Politecnico di Milano. Also featured is a modular mycelium habitat for sparrows, and materials made from salmon bones, skin and scales sourced from Japanese restaurants. Politecnico di Milano Institution: Politecnico di Milano, Design Department – Poli.Design The post Lightin",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Dezeen School Shows: a light made from organic waste from traditional Chinese medicine is among the projects by students at Politecnico di Milano ."
-        },
-        {
-          "kind": "text",
-          "text": "Also featured is a modular mycelium habitat for sparrows, and materials made from salmon bones, skin and scales sourced from Japanese restaurants."
-        },
-        {
-          "kind": "text",
-          "text": "Politecnico di Milano Institution: Politecnico di Milano, Design Department – Poli.Design Course: Materials Design for Transition Tutors: Valentina Rognoli, Sofia Soledad Duarte Poblete, Chengjun Li, Ziqian Yu, Malu Luecking and Francesco Cianfano, with the support of the Madetrans research group"
-        },
-        {
-          "kind": "text",
-          "text": "\"Materials Design for Transition (Madetrans) is a research group based at the Department of Design of Politecnico di Milano."
-        },
-        {
-          "kind": "text",
-          "text": "\"Founded in 2015 around the DIY-materials approach and led by Valentina Rognoli, the group investigates materials design as a central design practice, positioning its work at the intersection of sustainability, ecology, biodesign and regeneration."
-        },
-        {
-          "kind": "text",
-          "text": "\"Its activities are also supported by the Biodesign Lab (B.Lab), the first laboratory dedicated to biodesign within the department of design."
-        },
-        {
-          "kind": "text",
-          "text": "\"Through materials-driven and material-centred approaches, Madetrans develops theoretical frameworks, educational methods and hands-on experiments that foster new cultures of materiality."
-        },
-        {
-          "kind": "text",
-          "text": "\"The group encourages designers to move beyond exclusively human-centred perspectives towards more-than-human and multispecies approaches, recognising ecosystems, living organisms and their interdependencies as active participants in design processes."
-        },
-        {
-          "kind": "text",
-          "text": "\"Its interdisciplinary team brings together industrial and product designers, design engineers and fashion-system specialists, contributing diverse perspectives on material intelligence and its role in sustainable and regenerative futures."
-        },
-        {
-          "kind": "text",
-          "text": "\"This selection presents ten student projects developed across courses in materials-driven design and biodesign. Through experimentation, speculation and applied proposals, they embody Madetrans' vision of materials design for transition and highlight an emerging field rooted in interdisciplinary collaboration, ecological thinking, biodesign and nature-driven innovation for broader systemic impact.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Politecnico-di-Milano-Dezeen-School-Show_dezeen_2364_col_4.jpg",
-          "alt": "Reclaym by Anastasia Prozorova, Ivanna Harulia, Giulia Fabro and Marta Figueiredo"
-        },
-        {
-          "kind": "text",
-          "text": "Reclaym by Anastasia Prozorova, Ivanna Harulia, Giulia Fabro and Marta Figueiredo"
-        },
-        {
-          "kind": "text",
-          "text": "\"Reclaym transforms discarded brick waste into a versatile material that combines structural resilience with tactile and aesthetic expression."
-        },
-        {
-          "kind": "text",
-          "text": "\"Reclaimed bricks are pulverised into fine powder and mixed with different binders and aggregates to explore new formulations, textures and sensory qualities."
-        },
-        {
-          "kind": "text",
-          "text": "\"The resulting samples retain the strength and memory of the original material while appearing unexpectedly soft, light or fragile."
-        },
-        {
-          "kind": "text",
-          "text": "\"By inviting touch and challenging visual assumptions, the project reframes construction waste as a medium for creativity rather than merely a sustainable substitute."
-        },
-        {
-          "kind": "text",
-          "text": "\"Reclaym demonstrates how reclaimed brick can bridge functionality, material experience and artistic experimentation in contemporary design and architecture.\""
-        },
-        {
-          "kind": "text",
-          "text": "Students: Anastasia Prozorova, Ivanna Harulia, Giulia Fabro and Marta Figueiredo Course: Towards Regenerative Materials Driven Futures: Biodesign and Nature-Inspired Solutions Tutors: Valentina Rognoli, Sofia Soledad Duarte Poblete, Malu Luecking and Francesco Cianfano"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Politecnico-di-Milano-Dezeen-School-Show_dezeen_2364_col_1.jpg",
-          "alt": "Mycelli by Golab Aminialiabadi, Rocco Carraro, Brigitte Guarneri, Keren Karsa, Shyam KS and Elena Pellegrini"
-        },
-        {
-          "kind": "text",
-          "text": "Mycelli by Golab Aminialiabadi, Rocco Carraro, Brigitte Guarneri, Keren Karsa, Shyam KS and Elena Pellegrini"
-        },
-        {
-          "kind": "text",
-          "text": "\"Mycelli explores mycelium as a responsive living material and a temporary interface for urban regeneration."
-        },
-        {
-          "kind": "text",
-          "text": "\"Developed through observation, experimentation and material-led decision-making, the project embraces growth, unpredictability and multispecies interaction rather than imposing predetermined forms."
-        },
-        {
-          "kind": "text",
-          "text": "\"It proposes a modular mycelium habitat integrated into architectural facades to support declining Italian sparrow populations in Milan."
-        },
-        {
-          "kind": "text",
-          "text": "\"Designed for a six-month lifespan, the structure provides nesting space before gradually decomposing, after which its fibrous material can be reused by birds."
-        },
-        {
-          "kind": "text",
-          "text": "\"By combining thermal, acoustic and electromagnetic performance with ecological function, Mycelli reframes architecture as a temporary mediator within regenerative urban ecosystems and multispecies coexistence.\""
-        },
-        {
-          "kind": "text",
-          "text": "Students: Golab Aminialiabadi, Rocco Carraro, Brigitte Guarneri, Keren Karsa, Shyam KS and Elena Pellegrin Course: Towards Regenerative Materials Driven Futures: Biodesign and Nature-Inspired Solutions Tutors: Valentina Rognoli, Sofia Soledad Duarte Poblete, Malu Luecking and Francesco Cianfano"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Politecnico-di-Milano-Dezeen-School-Show_dezeen_2364_col_8.jpg",
-          "alt": "Whynut by Nicole Dalle Molle, Giulia Luppi, Selma Wittermann and Mrunal Deshpande"
-        },
-        {
-          "kind": "text",
-          "text": "Whynut by Nicole Dalle Molle, Giulia Luppi, Selma Wittermann and Mrunal Deshpande"
-        },
-        {
-          "kind": "text",
-          "text": "\"This project investigates nutshell waste as a resource for circular material systems."
-        },
-        {
-          "kind": "text",
-          "text": "\"Through material characterisation and iterative experimentation, different formulations and processing methods were tested to assess structural, tactile and aesthetic qualities."
-        },
-        {
-          "kind": "text",
-          "text": "\"The resulting composite showed rigidity, texture and surface characteristics comparable to wood-based materials, suggesting applications as a decorative finish."
-        },
-        {
-          "kind": "text",
-          "text": "\"Beyond material development, the project proposes a regenerative system linking food production, waste collection, processing and furniture restoration."
-        },
-        {
-          "kind": "text",
-          "text": "\"Rather than creating new objects, it upcycles existing furniture by replacing worn components with nutshell-based surfaces, preserving embedded value while reducing virgin material use, extending product lifespans and minimising further waste.\""
-        },
-        {
-          "kind": "text",
-          "text": "Students: Nicole Dalle Molle, Giulia Luppi, Selma Wittermann and Mrunal Deshpande Course: Materials x Transition in the Master of Design for Sustainability and Regeneration Tutors: Sofia Soledad Duarte Poblete and Valentina Rognoli"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Politecnico-di-Milano-Dezeen-School-Show_dezeen_2364_col_2.jpg",
-          "alt": "Orma by Ines Ravagani, Gülsüm Koç, Carloalberto Dusi and Mete Sümeli"
-        },
-        {
-          "kind": "text",
-          "text": "Orma by Ines Ravagnani, Gülsüm Koç, Carloalberto Dusi and Mete Sürmeli"
-        },
-        {
-          "kind": "text",
-          "text": "\"Orma reimagines pine needles, an abundant by-product of agriculture and timber production, as a valuable material resource."
-        },
-        {
-          "kind": "text",
-          "text": "\"Through a materials-driven design process combining experimentation, material characterisation, research and documentation, the team developed a biocomposite whose properties ranged from leather-like flexibility to rubber-like resilience."
-        },
-        {
-          "kind": "text",
-          "text": "\"These qualities led to the design of a bio-based, biodegradable footwear outsole that addresses the microplastic pollution generated by conventional soles."
-        },
-        {
-          "kind": "text",
-          "text": "\"Rather than leaving persistent traces, Orma is conceived to return safely to natural cycles after use."
-        },
-        {
-          "kind": "text",
-          "text": "\"The project demonstrates how overlooked waste streams can inspire material innovation while connecting circularity, performance and responsible product design in practice.\""
-        },
-        {
-          "kind": "text",
-          "text": "Students: Ines Ravagnani, Gülsüm Koç, Carloalberto Dusi and Mete Sürmeli Course: Materials x Transition in the Master of Design for Sustainability and Regeneration Tutors: Sofia Soledad Duarte Poblete and Valentina Rognoli"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Politecnico-di-Milano-Dezeen-School-Show_dezeen_2364_col_7.jpg",
-          "alt": "Trice by Josephine Plaum, Juliette Desertot, Matilde Reviglio and Nicola Sbrudolini"
-        },
-        {
-          "kind": "text",
-          "text": "Trice by Josephine Plaum, Juliette Desertot, Matilde Reviglio and Nicola Sdrubolini"
-        },
-        {
-          "kind": "text",
-          "text": "\"Trice transforms rice-production by-products, including husk, bran, starch, fibre and broken grains, into 100 per cent compostable biomaterials without external binders."
-        },
-        {
-          "kind": "text",
-          "text": "\"By combining the structural strength of rice husk with the binding properties of bran, the project develops materials that can be produced locally across rice-growing regions worldwide."
-        },
-        {
-          "kind": "text",
-          "text": "\"Its prototypes demonstrate versatility, from rigid packaging components such as boxes and edge protectors to flexible bioplastic films for sealing."
-        },
-        {
-          "kind": "text",
-          "text": "\"By redirecting residues that are often burned or underused, Trice closes loops within the rice value chain, reduces pollution and creates economic value while allowing materials to return safely to soil.\""
-        },
-        {
-          "kind": "text",
-          "text": "Students: Josephine Plaum, Juliette Desertot, Matilde Reviglio and Nicola Sdrubolini Course: Materials x Transition in the Master of Design for Sustainability and Regeneration Tutors: Sofia Soledad Duarte Poblete and Valentina Rognoli"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Politecnico-di-Milano-Dezeen-School-Show_dezeen_2364_col_6.jpg",
-          "alt": "Scravita by Chuyue Zhang, Junshuo Cui, Keyan Wu, Mingsheng Li, Kevin Yang, Yifei Li, Yuwei Ma, Jinghui Zhou and Chencheng Liu"
-        },
-        {
-          "kind": "text",
-          "text": "Scravita by Chuyue Zhang, Junshuo Cui, Keyan Wu, Mingsheng Li, Kevin Yang, Yifei Li, Yuwei Ma, Jinghui Zhou and Chencheng Liu"
-        },
-        {
-          "kind": "text",
-          "text": "\"Scravita transforms salmon bones, skin and scales collected from local Japanese restaurants into a family of regenerative materials and a final lighting application."
-        },
-        {
-          "kind": "text",
-          "text": "\"Through cleaning, enzymatic treatment, grinding, gelatin extraction and thermal modification, the project explores the structural, translucent and fluorescent qualities of seafood by-products."
-        },
-        {
-          "kind": "text",
-          "text": "\"Material experiments combine salmon bone powder, skin-derived gelatin and heat-treated scales with natural binders to achieve different levels of hardness, flexibility and transparency."
-        },
-        {
-          "kind": "text",
-          "text": "\"The resulting Salmorph lamp integrates these materials into a softly glowing cube, where fluorescent scales animate the surface under light."
-        },
-        {
-          "kind": "text",
-          "text": "\"Scravita reframes seafood waste as a resource for circular, sensory and materially expressive product design.\""
-        },
-        {
-          "kind": "text",
-          "text": "Students: Chuyue Zhang, Junshuo Cui, Keyan Wu, Mingsheng Li, Kevin Yang, Yifei Li, Yuwei Ma, Jinghui Zhou and Chencheng Liu Course: Materials for Product Design and Innovation Tutors: Valentina Rognoli, Zhang Yu, Chengjun Li and Ziqian Yu"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Politecnico-di-Milano-Dezeen-School-Show_dezeen_2364_col_0.jpg",
-          "alt": "LumiStudio by Hu Yi, JiahaoHuang, Yumeng Li, Jiaxin Guo, Yanting Gao, Hanyu Wang, Wanming Feng, Youyou Li, Xindi Yang and Wenjun Ma"
-        },
-        {
-          "kind": "text",
-          "text": "LumiStudio by Hu Yi, JiahaoHuang, Yumeng Li, Jiaxin Guo, Yanting Gao, Hanyu Wang, Wanming Feng, Youyou Li, Xindi Yang and Wenjun Ma"
-        },
-        {
-          "kind": "text",
-          "text": "\"LumiStudio transforms discarded flower tea residues collected from teahouses, restaurants and tea-processing sources in Xi'an into a series of translucent decorative materials."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/08/25/lighting-organic-medicine-waste-among-projects-politecnico-di-milano-schoolshows",
-      "author": "Dezeen staff",
-      "publishedAt": "2026-08-25T15:00:02.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "School Shows",
-        "Student projects",
-        "Graduates",
-        "Politecnico di Milano"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/08/Lighting-made-from-organic-medicine-waste-among-projects-from-Politecnico-di-Milano_dezeen_2364_col_1-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0.25,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "밀라노 공과대학 프로젝트에서 중국 의약 폐기물로 만든 조명",
-      "summaryKo": "데진 학교 쇼: 전통 중의학 유기물 폐기물로 만든 조명이 밀라노 공과대학 학생들의 프로젝트 중 하나입니다. 또한 참새를 위한 모듈식 균사체 서식지와 일본 식당에서 조달한 연어 뼈, 가죽, 비늘로 만든 재료도 전시되어 있습니다. 밀라노 공과대학 기관: 밀라노 공과대학 디자인학과 – Poli.Design 라이트인 이후",
-      "bodyKo": [
-        "Dezeen 학교 쇼: 전통 중국 의학에서 나온 유기물 폐기물로 만든 조명은 밀라노 공과대학 학생들의 프로젝트 중 하나입니다.",
-        "또한 참새를 위한 모듈식 균사체 서식지와 일본 식당에서 구입한 연어 뼈, 가죽, 비늘로 만든 재료도 전시되어 있습니다.",
-        "밀라노 공과대학 기관: 밀라노 공과대학 디자인학과 – Poli.Design 과정: 전환 재료 디자인 튜터: 발렌티나 로그놀리, 소피아 솔레다드 두아르테 포블레테, 청준 리, 지첸 유, 말루 루킹, 프란체스코 치안파노, 마데트랜스 연구 그룹의 지원을 받아",
-        "\"Material Design for Transition(Madetrans)은 밀라노 공과대학 디자인학과에 기반을 둔 연구 그룹입니다.",
-        "\"2015년 DIY 소재 접근법을 중심으로 설립되었으며, 발렌티나 로그놀리가 이끄는 이 그룹은 재료 디자인을 중심 디자인 실천으로 탐구하며, 지속 가능성, 생태학, 바이오디자인, 재생의 교차점에 자리 잡고 있습니다.",
-        "\"이 연구소의 활동은 디자인 학과 내 최초의 바이오디자인 전용 연구소인 바이오디자인 랩(B.Lab)의 지원도 받고 있습니다.",
-        "\"재료 중심적이고 재료 중심의 접근법을 통해 Madetrans는 이론적 틀, 교육 방법, 그리고 새로운 물질성 문화를 촉진하는 실습 실험을 개발합니다.",
-        "\"이 그룹은 디자이너들이 인간 중심의 관점을 넘어 인간을 넘어 다종 접근법으로 나아가도록 권장하며, 생태계, 생명체 및 이들의 상호의존성을 디자인 과정의 적극적 참여자로 인식합니다.",
-        "\"이 단체의 학제간 팀은 산업 및 제품 디자이너, 디자인 엔지니어, 패션 시스템 전문가들을 한데 모아 물질 지능과 지속 가능하고 재생적인 미래에서의 역할에 대한 다양한 관점을 제공합니다.",
-        "\"이번 선정은 재료 중심 디자인과 바이오디자인 과정에서 개발된 10개의 학생 프로젝트를 소개합니다. 실험, 추측, 응용 제안을 통해 Madetrans의 전환 재료 설계 비전을 구현하며, 학제 간 협력, 생태학적 사고, 바이오디자인, 자연 주도 혁신에 뿌리를 둔 신흥 분야를 강조하여 더 넓은 체계적 영향을 실현합니다.\"",
-        "아나스타샤 프로조로바, 이반나 하룰리아, 줄리아 파브로, 마르타 피게이레도의 리클레이임",
-        "\"Reclaym은 버려진 벽돌 폐기물을 구조적 탄력성과 촉각적이고 미적 표현을 결합한 다재다능한 소재로 변환합니다.",
-        "\"재생된 벽돌은 미세 분말로 분쇄되어 다양한 결합제와 골재와 혼합되어 새로운 조형, 질감, 감각적 특성을 탐구합니다.",
-        "\"결과물은 원본 재료의 강도와 기억을 유지하면서도 예상치 못하게 부드럽고 가볍거나 연약해 보입니다.",
-        "\"촉감을 초대하고 시각적 가정에 도전함으로써, 이 프로젝트는 건설 폐기물을 단순한 지속 가능한 대체물이 아닌 창의성의 매개체로 재구성합니다.",
-        "\"Reclaym은 재생 벽돌이 현대 디자인과 건축에서 기능성, 재료적 경험, 예술적 실험을 어떻게 연결하는지를 보여줍니다.\"",
-        "학생: 아나스타샤 프로조로바, 이반나 하룰리아, 줄리아 파브로, 마르타 피게이레도 강좌: 재생 소재 중심 미래를 향하여: 바이오디자인과 Nature 영감을 받은 솔루션 튜터: 발렌티나 로그놀리, 소피아 솔레다드 두아르테 포블레테, 말루 루킹, 프란체스코 치안파노",
-        "미첼리: 골랍 아미니알리아바디, 로코 카라로, 브리짓 과르네리, 케렌 카르사, 샴 KS, 엘레나 펠레그리니",
-        "\"Mycelli는 균사체를 반응하는 생명체이자 도시 재생을 위한 임시 인터페이스로 탐구합니다.",
-        "\"관찰, 실험, 재료 주도 의사결정을 통해 개발된 이 프로젝트는 미리 정해진 형태를 강요하기보다는 성장, 예측 불가능성, 다종 간 상호작용을 포용합니다.",
-        "\"이 연구는 밀라노에서 감소하는 이탈리아참새 개체수를 지원하기 위해 건축 외관에 모듈식 균사체 서식지를 제안합니다.",
-        "\"6개월 수명을 위해 설계된 이 구조물은 점차 부패하기 전 둥지 공간을 제공하며, 그 후에는 섬유질 재료가 새들에게 재사용될 수 있습니다.",
-        "\"열, 음향, 전자기 성능과 생태 기능을 결합함으로써, 마이첼리는 건축을 재생 도시 생태계와 다종 공존 속의 임시 매개자로 재구성한다.\"",
-        "학생: 고랍 아미니알리아바디, 로코 카라로, 브리짓 과르네리, 케렌 카르사, 샴 KS, 엘레나 펠레그린 과정: 재생 소재 중심 미래를 향하여: 바이오디자인과 Nature 영감을 받은 솔루션 튜터: 발렌티나 로그놀리, 소피아 솔레다드 두아르테 포블레테, 말루 루킹, 프란체스코 치안파노",
-        "니콜 달레 몰레, 줄리아 루피, 셀마 비터만, 므루날 데슈판데 작 와이누트",
-        "\"이 프로젝트는 원형 재료 시스템의 자원으로서 견과껍질 폐기물을 조사합니다.",
-        "\"재료 특성 분석과 반복적인 실험을 통해 다양한 조형과 가공 방법을 시험하여 구조적, 촉각적, 미적 특성을 평가했습니다.",
-        "\"결과물은 목재 기반 재료와 견줄 만한 강성, 질감, 표면 특성을 보여 장식용 마감재로 활용될 가능성을 시사합니다.",
-        "\"재료 개발을 넘어, 이 프로젝트는 식품 생산, 폐기물 수거, 가공, 가구 복원을 연결하는 재생 시스템을 제안합니다.",
-        "\"새로운 물건을 만드는 대신, 기존 가구를 너트쉘 기반 표면으로 교체하여 내재 가치를 유지하면서 원재료 사용을 줄이고, 제품 수명을 연장하며, 추가 낭비를 최소화합니다.\"",
-        "학생: 니콜 달레 몰레, 줄리아 루피, 셀마 비터만, 므루날 데슈판데 과정: 지속가능성과 재생을 위한 디자인 석사 과정의 재료 x 전환 튜터: 소피아 솔레다드 두아르테 포블레테, 발렌티나 로그놀리",
-        "이네스 라바냐니, 굴쥐움 코치, 카를로알베르토 두시, 메테 쥐르멜리의 오르마",
-        "\"오르마는 농업과 목재 생산의 풍부한 부산물인 소나무 바늘을 귀중한 물질 자원으로 재구상합니다.",
-        "\"실험, 재료 특성 분석, 연구, 문서화를 결합한 재료 중심 설계 과정을 통해, 팀은 가죽 같은 유연성부터 고무와 같은 탄력성까지 다양한 특성을 가진 바이오컴포지트를 개발했습니다.",
-        "\"이러한 특성들은 기존 밑창이 발생하는 미세플라스틱 오염을 해결하는 바이오 기반, 생분해성 신발 아웃솔 설계로 이어졌습니다.",
-        "\"오르마는 지속적인 흔적을 남기기보다는, 사용 후 자연 주기로 안전하게 돌아가도록 설계되었습니다.",
-        "\"이 프로젝트는 간과된 폐기물이 물질 혁신을 촉진하는 동시에 순환성, 성능, 책임 있는 제품 설계를 실제로 연결할 수 있음을 보여줍니다.\"",
-        "학생: 이네스 라바냐니, 굴숨 코치, 카를로알베르토 두시, 메테 쉬르멜리 과정: 지속가능성 및 재생을 위한 디자인 석사 과정의 재료 x 전환 튜터: 소피아 솔레다드 두아르테 포블레테, 발렌티나 로그놀리",
-        "조세핀 플라움, 줄리엣 데저토, 마틸데 레빌리오, 니콜라 스드루볼리니의 트라이스",
-        "\"트라이스는 껍질, 겨, 전분, 섬유, 부서진 곡물 등 쌀 생산 부산물을 외부 결합제 없이 100% 퇴비화 가능한 생체재료로 변환합니다.",
-        "\"쌀껍질의 구조적 강도와 겨의 결합 특성을 결합함으로써, 이 프로젝트는 전 세계 쌀 재배 지역 전역에서 생산할 수 있는 재료를 개발합니다.",
-        "\"시제품은 박스와 엣지 프로텍터와 같은 단단한 포장 부품부터 밀봉용 유연한 바이오플라스틱 필름까지 다재다능함을 보여줍니다.",
-        "\"트라이스는 자주 소각되거나 사용되지 않는 잔여물을 우회함으로써 쌀 가치 사슬 내 고리를 닫고 오염을 줄이며 경제적 가치를 창출하는 동시에 자재가 안전하게 토양으로 돌아갈 수 있게 합니다.\"",
-        "학생: 조세핀 플라움, 줄리엣 데저토, 마틸데 레빌리오, 니콜라 스드루볼리니 과정: 지속가능성과 재생을 위한 디자인 석사 과정의 재료 x 전환 튜터: 소피아 솔레다드 두아르테 포블레테, 발렌티나 로그놀리",
-        "츠위에 장, 쥔우 쥔오, 우 젰옌, 리밍셩, 양 케빈, 이페이 리, 마위웨이, 저우징후이, 류첸청 등의 『스크라비타』",
-        "\"스크라비타는 지역 일본 식당에서 수집한 연어 뼈, 가죽, 비늘을 재생 소재 가족과 최종 조명 적용으로 변형시킵니다.",
-        "\"세척, 효소 처리, 분쇄, 젤라틴 추출 및 열변형을 통해 이 프로젝트는 해산물 부산물의 구조적, 반투명성, 형광성 특성을 탐구합니다.",
-        "\"재료 실험은 연어 뼈 가루, 피부에서 유래한 젤라틴, 열처리된 비늘과 천연 결합제를 결합하여 다양한 경도, 유연성, 투명도를 달성합니다.",
-        "\"결과물인 살모르프 램프는 이 재료들을 부드럽게 빛나는 큐브로 통합하며, 형광 비늘이 빛 아래에서 표면에 생명을 불어넣습니다.",
-        "\"스크라비타는 해산물 폐기물을 순환적이고 감각적이며 물질적으로 표현적인 제품 디자인의 자원으로 재구성한다.\"",
-        "학생: 장추위에, 쥔슈오 추이, 우 젰안, 리밍셩, 양 케빈, 이페이 리, 마위웨이, 저우징후이, 리천청 과정: 제품 설계 및 혁신 재료 튜터: 발렌티나 로그놀리, 장 위, 청준 리, 지첸 위",
-        "루미스튜디오: 후이, 자하오황, 위멍 리, 자신 궈, 옌팅 가오, 한위 왕, 완밍 펑, 유유 리, 신디 양, 마 원준",
-        "\"루미스튜디오는 시안의 찻집, 식당, 차 가공 공장에서 수집한 폐기된 꽃차 잔여물을 반투명 장식 재료로 변환합니다."
-      ]
-    },
-    {
-      "id": "dezeen:5c2a603b59",
-      "slug": "simon-weckert-creates-digital-camouflage-shirt-to-avoid-5c2a60",
-      "titleOriginal": "Simon Weckert creates Digital Camouflage shirt to avoid AI video surveillance",
-      "summaryOriginal": "Designer Simon Weckert has created a colourful camouflage shirt that cannot be detected using AI video systems. Developed in response to a pilot project to use artificial intelligence (AI) video surveillance at Berlin's Kottbusser Tor, which starts this month, the shirt was designed to stop the user being recognised as a person. Named Digital Camouflage, The post Simon Weckert creates Digital Camo",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Designer Simon Weckert has created a colourful camouflage shirt that cannot be detected using AI video systems."
-        },
-        {
-          "kind": "text",
-          "text": "Developed in response to a pilot project to use artificial intelligence (AI) video surveillance at Berlin's Kottbusser Tor , which starts this month, the shirt was designed to stop the user being recognised as a person."
-        },
-        {
-          "kind": "text",
-          "text": "Named Digital Camouflage, the shirt aims to confuse the AI-powered object-detection system by subverting what the system recognises as a person."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/digital-camouflage-shirt-ai-video-surveillance-simon-weckert_dezeen_2364_col_6-scaled.jpg",
-          "alt": "Digital Camouflage shirt"
-        },
-        {
-          "kind": "text",
-          "text": "Simon Weckert designed the Digital Camouflage shirt \"AI systems are made of multiple layers and never learned what a human is – they learned what humans statistically look like in millions of training images,\" said Weckert ."
-        },
-        {
-          "kind": "text",
-          "text": "\"In the early layers it's edges, contrasts and texture gradients; deeper in the network it's part-like patterns: the head-and-shoulders silhouette, the proportions of limbs against a torso, the continuity of a body's outline against the background,\" he continued."
-        },
-        {
-          "kind": "text",
-          "text": "\"A 'person', for the machine, is a bundle of visual statistics – and that is exactly its weakness.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/digital-camouflage-shirt-ai-video-surveillance-simon-weckert_dezeen_2364_col_12-scaled.jpg",
-          "alt": "AI camouflage shirt"
-        },
-        {
-          "kind": "text",
-          "text": "The shirt was designed to hide the user from AI-powered video cameras The shirt uses a combination of bright colours and patterns to confuse the AI systems so that it doesn't recognise what it is seeing as a person."
-        },
-        {
-          "kind": "text",
-          "text": "\"Both [colour and pattern], and neither alone – it's their interplay, optimised against the machine rather than the human eye,\" said Weckert."
-        },
-        {
-          "kind": "text",
-          "text": "Read: Cap_able blocks facial recognition software with knitted clothing \"The saturated colour transitions fire strongly in the network's early layers, while the overlapping shapes break the continuity of the body's outline, so the detector can no longer bind the parts into one figure,\" he continued."
-        },
-        {
-          "kind": "text",
-          "text": "\"The pattern essentially shouts over the quiet statistical whisper that says 'person'. To a human it reads as an almost hypnotic textile; to the AI model it reads as nothing at all.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/digital-camouflage-shirt-ai-video-surveillance-simon-weckert_dezeen_2364_col_1-scaled.jpg",
-          "alt": "Colourful patterned shirt"
-        },
-        {
-          "kind": "text",
-          "text": "It has a colourful pattern Weckert developed the pattern on the shirt using AI. He tested iterations using an AI version of trial and error known as an \"adversarial loop\"."
-        },
-        {
-          "kind": "text",
-          "text": "\"The pattern was developed in an adversarial loop with the detection system itself: generate a candidate, show it to the detector, measure how confidently it still finds the person, adjust, repeat – until the confidence collapses,\" said Weckert."
-        },
-        {
-          "kind": "text",
-          "text": "\"This was necessary because a machine's blind spots are not intuitive to humans; you cannot design against machine perception by eye, only the machine can tell you what it fails to see. There's a poetic symmetry in that: the same class of AI that watches the square also taught the shirt how to hide.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/digital-camouflage-shirt-ai-video-surveillance-simon-weckert_dezeen_2364_col_7.jpg",
-          "alt": "AI video surveillance defense shirt"
-        },
-        {
-          "kind": "text",
-          "text": "The shirt was developed using AI Weckert tested the shirt using Yolo , an open-source, real-time AI object detection system."
-        },
-        {
-          "kind": "text",
-          "text": "Another piece of clothing that was tested using Yolo was a piece of knitwear that protects the wearer's biometric data without the need to cover their face ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Simon Weckert creates Digital Camouflage shirt to avoid AI video surveillance appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/08/25/digital-camouflage-shirt-ai-video-surveillance-simon-weckert",
-      "author": "Tom Ravenscroft",
-      "publishedAt": "2026-08-25T10:00:41.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Design",
-        "Highlights",
-        "Clothing",
-        "Artificial intelligence (AI)"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/08/digital-camouflage-shirt-ai-video-surveillance-simon-weckert_dezeen_2364_sq_6-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "사이먼 베커트, AI 비디오 감시를 피하기 위한 디지털 위장 셔츠를 제작하다",
-      "summaryKo": "디자이너 사이먼 베커트는 AI 비디오 시스템으로는 탐지할 수 없는 다채로운 위장 셔츠를 만들었습니다. 이번 달부터 시작되는 베를린 코트부서 토르에서 인공지능(AI) 영상 감시를 활용하는 시범 프로젝트에 대응해 개발된 이 셔츠는 사용자가 사람으로 인식되지 않도록 설계되었습니다. 디지털 위장이라는 이름의 게시물, 사이먼 베커트가 디지털 위장을 만드는 글",
-      "bodyKo": [
-        "디자이너 사이먼 베커트는 AI 비디오 시스템으로는 탐지할 수 없는 다채로운 위장 셔츠를 만들었습니다.",
-        "이번 달부터 시작되는 베를린 코트부서 토르에서 인공지능(AI) 비디오 감시 시범 프로젝트에 대응해 개발된 이 티셔츠는 사용자가 사람으로 인식되지 않도록 설계되었습니다.",
-        "디지털 위장(Digital Camouflage)이라는 이름의 이 셔츠는 AI가 인물로 인식하는 것을 전복시켜 AI 기반 물체 감지 시스템을 혼란스럽게 하는 것을 목표로 한다.",
-        "사이먼 베커트는 디지털 위장(Digital Camouflage) 티셔츠를 디자인했습니다. \"AI 시스템은 여러 층으로 이루어져 있으며, 인간이 무엇인지 배우지 못했습니다. 수백만 개의 훈련 이미지에서 통계적으로 인간이 어떻게 생겼는지 배웠습니다.\"라고 웨커트는 말했습니다.",
-        "\"초반 레이어에서는 가장자리, 대비, 질감 그라데이션이 드러나고; 네트워크 깊숙이 보면 부분 모양의 패턴들이 있어: 머리와 어깨 모양의 실루엣, 몸통과 사지의 비율, 배경과 맞닿은 몸체의 연속성,\" 그가 계속 말했다.",
-        "\"기계에게 '사람'은 시각적 통계의 집합체이며, 바로 그것이 기계의 약점이다.\"",
-        "이 셔츠는 AI 기반 비디오 카메라로부터 사용자를 숨기기 위해 디자인되었습니다. 밝은 색상과 패턴을 조합해 AI 시스템이 자신이 보고 있는 것을 사람으로 인식하지 못하게 만듭니다.",
-        "\"[색상과 패턴] 둘 다, 그리고 둘 다 혼자가 아니라, 이들의 상호작용이 기계에 최적화되어 있다\"고 베커트는 말했다.",
-        "읽기: Cap_able 니트 의류로 얼굴 인식 소프트웨어를 차단하다 \"채도가 높은 색상 전환이 네트워크의 초기 층에서 강하게 발화되고, 겹치는 형태들이 신체 윤곽의 연속성을 깨뜨려 탐지기가 더 이상 부품들을 하나의 형체로 묶을 수 없다\"고 그는 덧붙였다.",
-        "\"패턴은 '사람'이라는 조용한 통계적 속삭임을 압도하는 형태입니다. 인간에게는 거의 최면에 걸린 듯한 직물로 보인다; AI 모델에게는 아무것도 아닌 것처럼 읽히는 것 같아.\"",
-        "화려한 패턴이 있는데, Weckert가 AI를 사용해 디자인한 디자인입니다. 그는 '대립 루프'로 알려진 AI 버전의 시행착오를 사용해 반복 테스트를 진행했습니다.",
-        "\"패턴은 탐지 시스템 자체와 대립적인 루프 속에서 개발되었습니다: 후보자를 생성하고, 탐지기에 보여주고, 탐지기가 여전히 사람을 얼마나 확신 있게 찾는지 측정하고, 조정하고, 반복하여 신뢰도가 무너질 때까지 반복하는 과정입니다,\"라고 웨커트는 말했습니다.",
-        "\"이것은 기계의 맹점이 인간에게 직관적이지 않기 때문에 필요했다; 눈으로 기계 인식에 맞서 설계할 수는 없으며, 오직 기계만이 자신이 못하는 것을 알려줄 수 있습니다. 그 안에는 시적인 대칭성이 있다: 광장을 지켜보는 같은 AI 클래스가 셔츠에게 숨는 법도 가르쳤다.\"",
-        "이 셔츠는 AI를 사용해 개발되었으며, Weckert는 오픈소스 실시간 AI 객체 탐지 시스템인 Yolo를 사용해 테스트했습니다.",
-        "Yolo를 사용해 테스트한 또 다른 의류는 얼굴을 가리지 않고도 착용자의 생체 정보를 보호하는 니트웨어였습니다.",
-        "사이먼 웨커트가 AI 영상 감시를 피하기 위해 디지털 위장 셔츠를 제작했다는 글이 Dezeen에 처음 게재되었습니다."
       ]
     },
     {
@@ -6246,7 +5974,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/maynards-bassetts-goes-up-a-level-with-a-dangerous-lift-takeover",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-25T07:00:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -6532,7 +6260,7 @@
       "originalUrl": "https://www.creativeboom.com/resources/the-best-new-typefaces-for-august-2026",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-24T08:00:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "Resources"
@@ -6586,177 +6314,178 @@
       ]
     },
     {
-      "id": "creative-boom:4b34a3cb02",
-      "slug": "creatives-are-deeply-divided-over-the-new-instagram-4b34a3",
-      "titleOriginal": "Creatives are deeply divided over the new Instagram logo, and I think that points to a broader issue",
-      "summaryOriginal": "The new Instagram logo hasn't just raised a huge debate amongst creatives. It's also exposed a deeper divide over what design, in general, needs to do. I've been paying attention to Instagram since th...",
+      "id": "lifespan-io:b3f58ddae4",
+      "slug": "how-old-fat-cells-trigger-inflammation-and-raise-b3f58d",
+      "titleOriginal": "How Old Fat Cells Trigger Inflammation and Raise Risks",
+      "summaryOriginal": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people. Too much of a regulator […]",
       "bodyOriginal": [
         {
           "kind": "text",
-          "text": "The new Instagram logo hasn't just raised a huge debate amongst creatives. It's also exposed a deeper divide over what design, in general, needs to do."
+          "text": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people."
         },
         {
           "kind": "text",
-          "text": "I've been paying attention to Instagram since the very start. In the early 2010s, the audience was mostly designers and developers. In fact, I personally knew the person with the most followers on Instagram: the Bath-based web designer Mike Kus, who posted his photography there as a side project. As I recall, his numbers were only overtaken when Justin Bieber joined in 2011. That's how big a cultural shift Instagram went through: from niche community to worldwide juggernaut in a matter of months."
-        },
-        {
-          "kind": "text",
-          "text": "That wasn't the first big shift, though. In fact, when I chatted with founder Kevin Systrom at a conference around that time, he told me how Instagram had actually started as a mobile check-in app for lovers of fine whiskey. They figured people would want to post photos of their drinks; it proved to be a popular feature, and the whole thing kind of spiralled out from there."
-        },
-        {
-          "kind": "text",
-          "text": "My point? Nothing about Instagram has ever been set in stone. And so for me, watching the reaction to the platform's logo refresh by global creative studio Koto this week has been somewhat eye-raising. But scratch the surface, and actually I think there's something deeper going on here."
-        },
-        {
-          "kind": "text",
-          "text": "What's the problem? Let's start with the basics. The new design, a mix of handwritten and geometric text, is a long way from the clear, ultra-legible sans-serifs that have dominated tech design since around 2012. In one sense, that's good because, by gosh, have we all got bored with that one-size-fits-all style."
+          "text": "Too much of a regulator leads to dysregulation"
         },
         {
           "kind": "image",
-          "url": "https://media.creativeboom.com/ac35093e-d153-4230-bc76-339cbefda884/conversions/8e60a0f354ba730a5d9aaef7068bd9fe2a438816-medium.webp",
-          "alt": "Blurred motion shot of person running through overgrown brick tunnel with Instagram logo overlaid in white text"
+          "url": "https://lifespan.io/wp-content/uploads/2025/05/Inflammation.jpg",
+          "alt": "Inflammation"
+        },
+        {
+          "kind": "text",
+          "text": "Chronic Inflammation Chronic inflammation refers to a persistent, low-grade buzz of immune activity that settles into the body without the drama of an infection or obvious injury. In the world of aging, this slow, smoldering fire is often called inflammaging, a term coined by Claudio Franceschi to capture the systemic, hard-to-detect inflammation that creeps in with advancing years. Read More"
+        },
+        {
+          "kind": "text",
+          "text": "This paper introduces itself with a standard explanation of the relationship between senescence and inflammaging, including the contributions of the senescence-associated secretory phenotype (SASP) that senescent cells emit. The authors state the need for a clear understanding of the “molecular mediators” involved, focusing specifically on the contributions of fat (adipose) tissue, which has been identified in previous work as a crucial link [1]."
+        },
+        {
+          "kind": "text",
+          "text": "Adipose tissue is not just energy storage; it is an endocrine organ all its own that regulates metabolism [2], and the aging of this tissue pushes it towards dysregulation and inflammation [3]. This includes SASP emissions, which senescent adipose tissue creates in sufficient quantities to stimulate systemic inflammation [4]. This paper makes it clear that aging fatty tissues are a cause, rather than just a consequence, of other aspects of aging [5]."
+        },
+        {
+          "kind": "text",
+          "text": "The related molecule on which this paper focuses is ANGPTL8, a metabolic regulator that itself is upregulated when insulin is administered [6]. However, this team has previously pinpointed it as being related to multiple serious metabolic issues, such as diabetes-related kidney disease (nepropathy) [7]. Other teams have corroborated such findings, finding it to be related to diabetic atherosclerosis [8] and a higher risk of future heart attacks in existing cardiovascular disease patients [9]. Additionally, higher circulating ANGPTL8 levels have been found to be associated with all-cause mortality in diabetic patients [10]."
+        },
+        {
+          "kind": "text",
+          "text": "A significant predictor As the first part of this paper, the researchers built their own biomarker-based clock, MBA8-Clock using data from the China Cardiometabolic Disease and Cancer Cohort, which recruited nearly ten thousand people. Comparing five separate algorithms, the team found that a multilayer perceptron-based framework was the best way to utilize this clock, as it gave estimated ages with an error rate of approximately five years."
+        },
+        {
+          "kind": "text",
+          "text": "This clock contained many basic measurements of metabolic health, including ANGPTL8. The researchers found that circulating ANGPTL8 values of approximately 250 nanograms per liter of serum were associated with the lowest biological age estimations. At values higher than that, particularly in people with four times as much or more, biological age was likely to be estimated markedly higher. Removing ANGPTL8 from the clock notably diminished its predictive abilities. The researchers hold that “circulating ANGPTL8 represents a consistent, biologically meaningful contributor to age prediction across individuals.”"
+        },
+        {
+          "kind": "text",
+          "text": "The next step was to create another clock, AIMR-Model, this one based on all-cause mortality over a ten-year period. The researchers used five algorithmic analyses, and this time they discovered that an extreme gradient-based framework yielded the most accurate results. Once more, ANGPTL8 was found to be a significant contributor; people who had been found to have higher ANGPTL8 levels were significantly more likely to have died within 10 years of that initial assessment. Further analysis revealed that “ANGPTL8 may amplify age-related clinical vulnerability rather than acting solely as an isolated risk marker,” as it was consistently found to occur alongside high blood pressure and other well-known risk factors for age-related disease."
+        },
+        {
+          "kind": "text",
+          "text": "Mice without ANGPTL8 live longer The researchers then turned to mice. As in humans, ANGPTL8 naturally increases in mice with age: 4-month-old (young) wild-type mice have significantly less of it than their 22-month-old (old) counterparts. As expected, the source was found to be the adipose tissue rather than the liver or any other organs; while hepatocytes did somewhat increase their production of the protein, that was localized rather than systemic."
+        },
+        {
+          "kind": "text",
+          "text": "In addition, the researchers created a group of mice that do not express the murine gene Angptl8 . Compared to their wild-type counterparts, the old Angptl8 -less mice performed considerably better on various physical tests at older ages. They had less fat mass, less senescence in their fat, and reductions in circulating SASP factors. They were also able to hang onto a rotarod longer, performed better on a treadmill, engaged in more exploratory behavior, and had more gastrocnemius muscle mass along with more fast-twitch fibers. Finally, and perhaps most importantly, these mice also lived longer."
         },
         {
           "kind": "image",
-          "url": "https://media.creativeboom.com/245eca85-844a-4ff5-9470-ee73e80596b9/conversions/74851fc913b1c009e74b01dc4c9bf3499e2e3382-medium.webp",
-          "alt": "Typeface design sheet showing various ligatures and letter combinations featuring \"st\", \"ag\", \"gr\" and \"gra\" in white serif letterforms on a dark background with reference codes"
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/f5ed3401-e473-436b-8df1-91017c3c2683/conversions/dd430c5bb447b85d1ec305da1ff3b43703ef8fd4-medium.webp",
-          "alt": "Instagram home feed displayed on a smartphone showing stories and a post from user zoeschneidler"
+          "url": "https://lifespan.io/wp-content/uploads/2026/08/Survival-curve-ANGPTL8.png",
+          "alt": "Survival curve ANGPTL8"
         },
         {
           "kind": "text",
-          "text": "But just going against the grain doesn't automatically win people over to your side. And brand designer Sophie O'Connor speaks for many when she says: \"The whole thing just feels off to me, like two typefaces arguing with each other. The 'r' feels like a z and doesn't flow as true cursive would.\""
+          "text": "The specific pathway involved in the relationship between ANGPTL8 and senescence was identified. This protein was found to bind to AKT2 on the molecular level, affecting the fundamental AKT/mTOR/S6K pathway, and this finding was confirmed in mice; mice with Angptl8 turned off have significantly decreased activity of AKT, mTOR, and S6K. Deriving fat precursor cells (preadipocytes) from older mice confirmed these findings, and experiments using cells with Angptl8 overexpression found that AKT is indeed necessary for ANGPTL8 to contribute to cellular senescence."
         },
         {
           "kind": "text",
-          "text": "Graphic designer Anna van der Feltz agrees. \"The z was the first thing I saw,\" she says. \"I love the typeface, but the r just doesn't sit right. I can't believe they didn't see 'instagzam' when they were designing it, so maybe that's the result they wanted!\""
+          "text": "These researchers are of the clear opinion that they have hit upon a significant target, stating that “from a translational standpoint, the dual identity of ANGPTL8 as both a circulating biomarker and a functional effector of aging is particularly compelling.” However, this paper did not test any potential method of removing circulating ANGPTL8 from the bloodstreams of wild-type animals. If such a drug can be developed and proven to work in a human clinical trial, it may be possible to grant additional healthspan and lifespan to older people suffering from metabolic issues."
         },
         {
           "kind": "text",
-          "text": "Brand and visual identity designer Larry Chikara had a similar reaction. \"This hybrid sans serif/cursive typeface is kinda weird,\" he says. \"They probably looked at the wordmark in isolation and thought it too generic or lacked personality, 'so, let's add some cursive flourishes!' I would have liked to see a clean break with the past, and move away from any cursive elements completely.\""
+          "text": "We would like to ask you a small favor. We are a non-profit foundation , and unlike some other organizations, we have no shareholders and no products to sell you. All our news and educational content is free for everyone to read, but it does mean that we rely on the help of people like you. Every contribution, no matter if it’s big or small, supports independent ethical journalism and sustains our future. Yes I will donate❤️"
         },
         {
           "kind": "text",
-          "text": "Even without such a visceral reaction to the aesthetics, there's a broader principle at stake. As designer Berenice Howard-Smith says: \"As a designer and a nerd when it comes to typefaces, I don't mind it, but there's an accessibility issue that it could impact many, so it's not very thoughtful or inclusive. Which kind of feels very Meta.\""
+          "text": "Literature [1] Hotamisligil, G. S. (2017). Inflammation, metaflammation and immunometabolic disorders. Nature , 542 (7640), 177-185."
         },
         {
           "kind": "text",
-          "text": "Does it need to be legible? Some, though, take issue with the fact that the Instagram logo needs to be legible. As senior lecturer Graham Jones says: \"In the context of the word, what else could it be? No one is really gonna say 'What's Instagzam?!' unless they've been living under a rock for the last decade. We don't read one letter at a time.\""
+          "text": "[2] Ou, M. Y., Zhang, H., Tan, P. C., Zhou, S. B., & Li, Q. F. (2022). Adipose tissue aging: mechanisms and therapeutic implications. Cell death & disease , 13 (4), 300."
         },
         {
           "kind": "text",
-          "text": "I can see his point: when you see the full word, your brain fills it in. While illegible lettering may be a no-no when it comes to longer text passages, a logo might be considered a special case. Consider, after all, how many brands simply use a symbol rather than a wordmark. No one complains, for instance, that Airbnb's weird squiggle is an accessibility problem."
+          "text": "[3] Tchkonia, T., Morbeck, D. E., Von Zglinicki, T., Van Deursen, J., Lustgarten, J., Scrable, H., … & Kirkland, J. L. (2010). Fat tissue, aging, and cellular senescence. Aging cell , 9 (5), 667-684."
         },
         {
           "kind": "text",
-          "text": "This, of course, raises an uncomfortable question. Are we saying that you have to be as big as Instagram to mess with accessibility? Is that one rule for them, and one for the rest of us? Tricky stuff."
+          "text": "[4] Dahlquist, K. J., & Camell, C. D. (2022). Aging leukocytes and the inflammatory microenvironment of the adipose tissue. Diabetes , 71 (1), 23-30."
         },
         {
           "kind": "text",
-          "text": "A broader system Here's something else worth thinking about. One thing that can frustrate designers, or indeed any creative, is when their work is judged out of context. And, interestingly, several designers in our community warmed to the refresh once they saw it not as a standalone logo, but as part of the entire new system."
+          "text": "[5] Franceschi, C., Garagnani, P., Vitale, G., Capri, M., & Salvioli, S. (2017). Inflammaging and ‘Garb-aging’. Trends in Endocrinology & Metabolism , 28 (3), 199-212."
         },
         {
           "kind": "text",
-          "text": "Because, in case you didn't know, Instagram hasn't just changed its wordmark; it's also brought in new typefaces (Instagram Pen and Instagram Mono), updated its sans-serifs, given new life to its motion and layout system, and overall given all its content more breathing room. And that, believes Jaxanna M., aka Studio Jax, is the context in which the logo should really be considered."
+          "text": "[6] Abu-Farha, M., Ghosh, A., Al-Khairi, I., Madiraju, S. M., Abubaker, J., & Prentki, M. (2020). The multi-faces of Angptl8 in health and disease: Novel functions beyond lipoprotein lipase modulation. Progress in lipid research , 80 , 101067."
         },
         {
           "kind": "text",
-          "text": "\"The design team made a strategic creative choice with the 'r' by making use of the negative space between the 'g' and 'r' to complete the 'r' subtly,\" she begins. \"It's a nuanced way of approaching the script with elements from sans-serif. When you frame the wordmark update within that broader photographic and creative ecosystem—where things like viewfinders, framing, and analogue-inspired lighting leaks dictate the visual language—the meticulous choice behind those letterforms and negative space makes even more sense.\""
+          "text": "[7] Pan, L., He, Y., Xiang, Y., Mao, B., Meng, X., Guo, Y., … & Yu, X. (2025). Angiopoietin-like protein 8 mediates inflammation and fibrosis of tubular cells in diabetic kidney disease progression by interacting with Akt2. Metabolism , 156418."
         },
         {
           "kind": "text",
-          "text": "In other words, the logo isn't trying to stand alone: it's part of an ecosystem. In that context, the 'r' isn't just a weird letter choice: it's part of a bigger idea about blending handwritten personality with geometric clarity. And you need to see everything together to really appreciate that."
+          "text": "[8] Ye, H., Zhu, Q., Zong, Q., Luo, S., Ji, Z., Zhang, R., & Zou, H. (2026). Elevated ANGPTL8 (Angiopoietin‐Like Protein 8) Levels as a Novel Predictor of Atherosclerosis in Type 2 Diabetes: Beyond Lipid Metabolism. Journal of the American Heart Association , 15 (3), e044806."
         },
         {
           "kind": "text",
-          "text": "Praise for the logo Perhaps that's why, despite so many designers publicly decrying the new logo, an equal number seem to be praising it. Art director Alastair McCarley is among them. \"I love it,\" he enthuses. \"It cleverly nods to the heritage while harmonising with the gradient icon. I see this as smart, joined-up thinking.\""
+          "text": "[9] Morinaga, J., Kashiwabara, K., Torigoe, D., Okadome, Y., Aizawa, K., Uemura, K., … & Oike, Y. (2023). Plasma ANGPTL8 levels and risk for secondary cardiovascular events in Japanese patients with stable coronary artery disease receiving statin therapy. Arteriosclerosis, thrombosis, and vascular biology , 43 (8), 1549-1559."
         },
         {
           "kind": "text",
-          "text": "Michael Guerin, senior partner at Lippincott, also sees the new design as an improvement. \"Instagram didn't necessarily need a new wordmark because there was something wrong with the old one,\" he says. \"This feels more like a purposeful evolution: using the visual identity to reinforce the broader shift towards a creator-first platform. I think the design handles that balance well."
-        },
-        {
-          "kind": "text",
-          "text": "\"It retains the personal gesture and character of the script, while feeling more contemporary and anchoring the identity to a broader notion of creativity,\" he adds. \"When you have the level of brand equity Instagram does, evolution needs to be thoughtful and purposeful, and this feels appropriately measured.\""
-        },
-        {
-          "kind": "text",
-          "text": "In fact, he's surprised the redesign is as subtle as it is. \"The design team's willingness to keep script at all—rather than going full sans-serif like every other tech brand—was actually a risk,\" he argues. \"It would have been easier to strip away all personality. Instead, they doubled down on it, just made it cleaner.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/d6387a15-03ec-4a02-ab19-293c54c4926e/conversions/f37413fa648cf76acae79810881d51d664d17d44-medium.webp",
-          "alt": "Detail of the new Instagram logo redesign by Koto showing the stylised lowercase 'g' and 'r' letterforms alongside typographic variations"
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/7fbdd47e-9497-4896-b014-59b9686a9c84/conversions/50672086b208145639b0de1c3a532020d812c474-medium.webp",
-          "alt": "Large Instagram logo billboard on an urban building featuring the new wordmark design and tagline \"We don't send we share"
-        },
-        {
-          "kind": "text",
-          "text": "Conclusion As I said earlier, the 'Instagzam' debate isn't really about that one letter. It's not even about balancing legibility and personality. It's about whether brand equity means you can play by different rules, and whether you should judge a logo in isolation or as part of a broader system."
-        },
-        {
-          "kind": "text",
-          "text": "All these things matter. How to weigh them is another issue. That judgment call is the kind of decision that designers have to make on a daily basis, and the fact that there's no \"right answer\" is both a good and a bad thing. But ultimately, it's the job. And so the fact that the creative community is deeply divided on this is arguably not a bad thing at all. More a sign that we're all, you know, doing the job."
+          "text": "[10] Zou, H., Xu, Y., Chen, X., Yin, P., Li, D., Li, W., … & Yu, X. (2020). Predictive values of ANGPTL8 on risk of all-cause mortality in diabetic patients: results from the REACTION Study. Cardiovascular Diabetology , 19 (1), 121."
         }
       ],
-      "sourceName": "Creative Boom",
-      "sourceUrl": "https://www.creativeboom.com/",
-      "originalUrl": "https://www.creativeboom.com/insight/creatives-are-deeply-divided-over-the-new-instagram-logo-and-i-think-that-points-to-a-broader-issue",
-      "author": "Tom May",
-      "publishedAt": "2026-08-19T10:00:00.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "sourceName": "Lifespan.io",
+      "sourceUrl": "https://www.lifespan.io/",
+      "originalUrl": "https://lifespan.io/how-old-fat-cells-trigger-inflammation-and-raise-risks",
+      "author": "Josh Conway",
+      "publishedAt": "2026-08-20T22:15:04.000Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
-        "Insight"
+        "News",
+        "Cellular Senescence",
+        "Diabetes",
+        "Metabolic Syndrome",
+        "Metabolism",
+        "mTOR",
+        "White Adipose Tissue"
       ],
       "image": {
-        "url": "https://media.creativeboom.com/ac35093e-d153-4230-bc76-339cbefda884/conversions/8e60a0f354ba730a5d9aaef7068bd9fe2a438816-medium.webp"
+        "url": "https://lifespan.io/wp-content/uploads/2026/08/Fat-cells-262x187.jpg"
       },
       "translationStatus": "done",
       "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "opinion",
-      "titleKo": "창작자들은 새로운 인스타그램 로고에 대해 깊이 분열되어 있으며, 이는 더 넓은 문제를 시사한다고 생각합니다",
-      "summaryKo": "새로운 인스타그램 로고는 단순히 창작자들 사이에서 큰 논쟁을 불러일으켰을 뿐만 아니라, 디자인이 전반적으로 해야 할 일에 대한 더 깊은 분열을 드러냈습니다. 저는 인스타그램을 주목해왔어요...",
+      "category": "age",
+      "trustLevel": 4,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "research",
+      "titleKo": "오래된 지방 세포가 염증을 유발하고 위험을 높이는 방법",
+      "summaryKo": "코호트 연구와 마우스 모델을 활용해 노화된 지방 세포가 생성하는 순환 인자 ANGPTL8이 쥐와 사람의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다. 과도한 조절 요인은 [...]",
       "bodyKo": [
-        "새로운 인스타그램 로고는 단순히 창작자들 사이에서 큰 논쟁을 불러일으켰을 뿐만 아니라, 디자인이 전반적으로 해야 할 일에 대한 더 깊은 분열을 드러냈습니다.",
-        "저는 인스타그램을 처음부터 주목해왔습니다. 2010년대 초반에는 주로 디자이너와 개발자들이 청중이었습니다. 사실 저는 인스타그램에서 가장 많은 팔로워를 가진 사람을 개인적으로 알고 있었습니다: 배스에 기반을 둔 웹 디자이너 마이크 쿠스로, 그는 부업으로 자신의 사진을 그곳에 올렸습니다. 기억하기로는, 그의 인원은 2011년 저스틴 비버가 합류하면서 비로소 넘어갔습니다. 인스타그램이 얼마나 큰 문화적 변화를 겪었는지를 보여주는 겁니다: 몇 달 만에 틈새 커뮤니티에서 전 세계적인 거대한 존재로 성장했습니다.",
-        "하지만 그것이 첫 번째 큰 변화는 아니었습니다. 사실, 그 무렵 한 컨퍼런스에서 창립자 케빈 시스트롬과 대화했을 때, 그는 인스타그램이 사실 고급 위스키 애호가들을 위한 모바일 체크인 앱으로 시작되었다고 말했습니다. 사람들이 자신의 음료 사진을 올리고 싶어 할 거라고 생각했죠; 그 기능이 인기를 끌었고, 그 이후로 모든 것이 점점 악화되었습니다.",
-        "내 요점은? 인스타그램에 대해 확정된 것은 없다. 그래서 이번 주 글로벌 크리에이티브 스튜디오 코토가 플랫폼 로고를 리프레시한 반응을 보면서 다소 놀라웠다. 하지만 겉을 살펴보면, 사실 더 깊은 무언가가 있다고 생각한다.",
-        "문제가 뭔가요? 기본부터 시작해 봅시다. 손글씨와 기하학적 텍스트가 혼합된 새로운 디자인은 2012년경부터 기술 디자인을 지배해온 명확하고 매우 읽기 쉬운 산세리프체와는 거리가 멉니다. 어떤 면에서는 좋은 일입니다. 왜냐하면 우리 모두 그 획일적인 스타일에 지루해졌기 때문입니다.",
-        "하지만 단순히 흐름을 거스르는 것만으로 사람들이 자동으로 내 편으로 돌아오는 것은 아닙니다. 브랜드 디자이너 소피 오코너는 이렇게 말합니다: \"전체적으로 어색하게 느껴져요, 마치 두 서체가 서로 논쟁하는 것 같아요. 'r'은 z처럼 느껴지고, 진정한 필기체처럼 흐르지 않아요.\"",
-        "그래픽 디자이너 안나 반 더 펠츠도 동의합니다. \"z가 제일 먼저 본 것이었어요,\" 그녀가 말합니다. \"서체는 정말 마음에 들지만, r은 뭔가 어울리지 않아요. 디자인할 때 'instagzam'을 못 봤다는 게 믿기지 않아요, 아마 그게 그들이 원했던 결과였던 것 같아요!\"",
-        "브랜드 및 비주얼 아이덴티티 디자이너 래리 치카라도 비슷한 반응을 보였습니다. \"이 하이브리드 산세리프체/필기체 서체는 좀 이상해요,\" 그가 말합니다. \"아마도 단어 표시를 따로 보고 너무 일반적이거나 개성이 부족하다고 생각했을 거예요. '그러니까, 필기체 장식을 좀 추가해보자!' 과거와 완전히 단절하고 필기체 요소를 완전히 없애는 모습을 보고 싶었어요.\"",
-        "미학에 대한 직관적인 반응이 없더라도, 더 넓은 원칙이 걸려 있습니다. 디자이너 베레니스 하워드-스미스는 이렇게 말합니다: \"디자이너이자 서체에 관심 있는 덕후로서 저는 그게 싫지 않지만, 접근성 문제로 인해 많은 사람들에게 영향을 미칠 수 있어서 사려 깊거나 포용적이지 않습니다. 그게 오히려 매우 메타적인 느낌입니다.\"",
-        "읽기 쉬워야 할까요? 하지만 인스타그램 로고가 읽기 쉬워야 한다는 점에 이의를 제기하는 사람들도 있습니다. 수석 강사 그레이엄 존스가 말하길: \"단어의 맥락에서 그게 뭐가 될 수 있겠습니까? 지난 10년간 바위 밑에 살지 않는 이상 'Instagzam이 뭐야?!'라고 말할 사람은 없습니다. 우리는 한 글자씩 읽지 않습니다.\"",
-        "그의 말도 이해가 됩니다: 전체 단어를 보면 뇌가 그 단어를 채웁니다. 긴 텍스트 구절에서는 읽기 어려운 글씨가 금기될 수 있지만, 로고는 특별한 경우로 간주될 수 있습니다. 결국, 많은 브랜드가 워드마크 대신 기호를 사용하는 것을 생각해 보십시오. 예를 들어, 에어비앤비의 이상한 구불구불한 글씨가 접근성 문제라고 불평하는 사람은 없습니다.",
-        "물론 이것은 불편한 질문을 제기합니다. 우리가 인스타그램만큼 커야 접근성을 망칠 수 있다는 말인가요? 그게 그들에게만 해당되는 규칙이고, 우리 모두에게도 해당되는 건가요? 까다로운 문제죠.",
-        "더 넓은 시스템 여기 또 한 가지 생각해볼 만한 점이 있습니다. 디자이너들, 혹은 모든 창작자들이 답답하게 만드는 한 가지는, 자신의 작품이 맥락에서 벗어나 평가받을 때입니다. 흥미롭게도, 우리 커뮤니티의 여러 디자이너들은 이 리프레시를 독립적인 로고가 아니라 새로운 시스템의 일부로 인식하자 마음을 열었습니다.",
-        "모르셨다면, 인스타그램은 단순히 워드마크만 바꾼 것이 아니라; 새로운 서체(인스타그램 펜과 인스타그램 모노)를 도입했고, 산세리프를 업데이트했으며, 모션과 레이아웃 시스템에 새로운 생명을 불어넣었고, 전반적으로 모든 콘텐츠에 더 많은 공간을 부여했습니다. 그리고 Jaxanna M., 즉 Studio Jax는 이것이 로고가 진정으로 고려되어야 할 맥락이라고 믿습니다.",
-        "\"디자인팀은 'r'을 전략적으로 창의적으로 선택했는데, 'g'와 'r' 사이의 음의 공간 공간을 활용해 'r'를 은근하게 완성하는 방식이었습니다.\"라고 그녀는 시작합니다. \"이것은 산세리프체 요소를 활용해 스크립트에 접근하는 미묘한 접근법입니다. 워드마크 업데이트를 더 넓은 사진과 창의적 생태계 안에서 틀 짓는데—뷰파인더, 프레이밍, 아날로그에서 영감을 받은 조명 누출 등이 시각적 언어를 결정하는 곳에서—그 글자 형태와 음의 공간 뒤에 숨겨진 세심한 선택이 더욱 이해가 됩니다.\"",
-        "다시 말해, 로고는 독립적으로 서려는 것이 아니라 생태계의 일부입니다. 그런 맥락에서 'r'은 단순한 글자 선택이 아니라, 손글씨 개성과 기하학적 명확성을 결합하는 더 큰 아이디어의 일부입니다. 그리고 그것을 진정으로 이해하려면 모든 것을 함께 봐야 합니다.",
-        "로고에 대한 찬사 아마도 그래서 많은 디자이너들이 공개적으로 새 로고를 비난했음에도 불구하고, 동등한 수의 사람들이 칭찬하는 것 같다. 아트 디렉터 알래스테어 맥칼리도 그 중 한 명이다. \"정말 마음에 들어요,\" 그가 열정적으로 말한다. \"유산을 영리하게 암시하면서도 그라데이션 아이콘과 조화를 이루고 있어요. 저는 이것이 똑똑하고 통합된 사고라고 봅니다.\"",
-        "Lippincott의 수석 파트너인 마이클 게린도 이번 디자인을 개선점으로 보고 있습니다. \"인스타그램은 기존 워드마크에 문제가 있었기 때문에 꼭 새로운 워드마크가 필요하지 않았어요,\"라고 그는 말합니다. \"이것은 의도적인 진화처럼 느껴집니다: 시각적 정체성을 활용해 크리에이터 우선 플랫폼으로의 광범위한 전환을 강화하는 것이죠. 디자인이 그 균형을 잘 다루고 있다고 생각합니다.",
-        "\"이 작품은 대본의 개인적인 제스처와 개성을 유지하면서도 더 현대적이고 더 넓은 창의성의 개념에 정체성을 고정시킨다\"고 덧붙인다. \"인스타그램이 가진 브랜드 자산 수준을 갖추면 진화는 신중하고 목적이 있어야 하며, 이는 적절히 측정된 느낌이다.\"",
-        "사실, 그는 이 재설계가 이렇게 미묘하다는 사실에 놀랐다. \"디자인 팀이 다른 모든 기술 브랜드처럼 완전한 산세리프체를 택하지 않고 대본을 유지하려는 의지가 오히려 위험이었다고 그는 주장한다. \"개성을 모두 없애는 게 더 쉬웠을 텐데. 대신 그들은 더 강하게 밀어붙여서 더 깔끔하게 만들었어.\"",
-        "결론 앞서 말했듯이, '인스타잠' 논쟁은 그 한 글자 때문이 아닙니다. 가독성과 개성의 균형을 맞추는 문제도 아닙니다. 브랜드 가치가 다른 규칙을 적용할 수 있는지, 로고를 단독으로 판단해야 하는지, 아니면 더 넓은 시스템의 일부로 평가해야 하는지에 관한 것입니다.",
-        "이 모든 것들이 중요합니다. 그것들을 어떻게 평가할지는 또 다른 문제입니다. 그 판단은 디자이너들이 매일 내려야 하는 결정이며, '정답'이 없다는 사실은 좋은 점이자 나쁜 점입니다. 하지만 결국 그것은 일입니다. 그래서 창작 커뮤니티가 이 문제에 대해 깊이 분열되어 있다는 사실은 전혀 나쁜 일이 아니라고 할 수 있습니다. 오히려 우리 모두가 일을 하고 있다는 신호입니다."
+        "코호트 연구와 마우스 모델을 활용해 노화 지방 세포가 생성하는 순환 인자 ANGPTL8가 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다.",
+        "조절 요인이 너무 많으면 조절 장애가 생깁니다",
+        "만성 염증 만성 염증은 감염이나 명백한 부상의 극적인 문제 없이 몸에 자리 잡는 지속적이고 저강도의 면역 활동 윙윙거림을 의미합니다. 노화 세계에서 이 느리고 타오르는 불꽃은 흔히 염증이라고 불리는데, 이는 클라우디오 프란체스키가 나이가 들면서 서서히 나타나는 전신적이고 감지하기 어려운 염증을 표현하기 위해 만든 용어입니다. 더 읽기",
+        "이 논문은 노화세포와 염증 사이의 관계에 대한 표준적인 설명과 함께 노화 세포가 방출하는 노화세포 관련 분비 표현형(SASP)의 기여를 소개합니다. 저자들은 관련 \"분자 매개체\"에 대한 명확한 이해가 필요하며, 특히 이전 연구에서 중요한 연관성으로 확인된 지방(지방) 조직에 초점을 맞춥니다 [1].",
+        "지방 조직은 단순한 에너지 저장이 아닙니다; 지방 조직은 신진대사를 조절하는 독자적인 내분비 기관이며[2], 이 조직의 노화는 이를 조절 장애와 염증으로 유도합니다 [3]. 여기에는 노화 지방 조직이 충분한 양을 생성하여 전신 염증을 유발하는 SASP가 포함됩니다 [4]. 이 논문은 노화가 노화의 다른 측면의 결과가 아니라 원인임을 분명히 합니다 [5].",
+        "이 논문이 집중하는 관련 분자는 ANGPTL8로, 인슐린 투여 시 대사 조절제로 상향 조절됩니다 [6]. 하지만 이 연구팀은 이전에 당뇨병 관련 신장 질환(네프로병증)과 같은 여러 심각한 대사 문제와 관련이 있다고 밝혀낸 바 있습니다 [7]. 다른 연구팀도 이러한 발견을 확인하며, 당뇨병성 동맥경화와 관련 있다고 확인했습니다 [8] 기존 심혈관 질환 환자의 미래 심장마비 위험 증가[9]. 또한, 순환 ANGPTL8 수치가 당뇨병 환자의 모든 원인 사망과 연관되어 있음도 밝혀졌습니다 [10].",
+        "중요한 예측 변수 이 논문의 첫 부분에서 연구진은 중국의 심대사질환 및 암 코호트 데이터를 활용해 자체 바이오마커 기반 시계인 MBA8-Clock을 만들었으며, 이 코호트는 약 1만 명을 모집했습니다. 다섯 개의 별도 알고리즘을 비교한 결과, 연구팀은 다층 퍼셉트론 기반 프레임워크가 이 시계를 활용하는 가장 좋은 방법임을 발견했습니다. 이는 약 5년의 오류율로 추정 연령을 제공했습니다.",
+        "이 시계에는 ANGPTL8 등 대사 건강의 기본 측정값이 많이 포함되어 있었습니다. 연구진은 혈청당 약 250나노그램의 순환 ANGPTL8 생물학적 나이 추정치와 연관되어 있음을 발견했습니다. 특히 4배 이상 많은 사람들의 경우 그보다 높은 수치에서는 생물학적 나이 현저히 더 높게 추정될 가능성이 높았습니다. 시계에서 ANGPTL8을 제거하면 예측 능력이 현저히 저하되었습니다. 연구진은 \"순환 ANGPTL8이 개인 간 연령 예측에 일관되고 생물학적으로 의미 있는 기여를 한다\"고 주장합니다.",
+        "다음 단계는 10년간의 모든 원인 사망률을 기반으로 한 또 다른 시계인 AIMR 모델을 만드는 것이었습니다. 연구진은 다섯 가지 알고리즘 분석을 사용했고, 이번에는 극단적인 구배 기반 프레임워크가 가장 정확한 결과를 내는 것을 발견했습니다. 다시 한 번, ANGPTL8가 중요한 원인으로 밝혀졌습니다; ANGPTL8 수치가 높다고 밝혀진 사람들은 초기 평가 후 10년 이내에 사망할 가능성이 훨씬 높았습니다. 추가 분석 결과, \"ANGPTL8 고립된 위험 지표로만 작용하기보다는 연령 관련 임상 취약성을 증폭시킬 수 있다\"는 사실이 밝혀졌습니다. 이는 고혈압 및 연령 관련 질환의 잘 알려진 위험 요인들과 함께 일관되게 나타나기 때문입니다.",
+        "ANGPTL8이 없는 쥐는 더 오래 살기 연구진은 이후 쥐에 대해 연구를 돌렸다. 인간과 마찬가지로, ANGPTL8 생병 쥐는 나이가 들수록 자연스럽게 증가한다: 4개월 된 야생형 쥐는 22개월 된 개체들보다 지방 농도가 현저히 적다. 예상대로 그 원인은 간이나 다른 장기가 아닌 지방 조직임이 밝혀졌다; 간세포가 단백질 생산을 다소 증가시켰지만, 이는 전신이 아니라 국소적인 것이었다.",
+        "또한, 연구진은 쥐 유전자 Angptl8을 발현하지 않는 쥐 그룹을 만들었습니다. 야생형 마우스와 비교했을 때, 오래된 Angptl8 없는 마우스는 고령 시 다양한 신체 검사에서 훨씬 더 좋은 성과를 보였습니다. 이들은 지방량이 적고, 지방의 노화세포가 적으며, 순환하는 SASP 인자가 감소했습니다. 또한 로타로드를 더 오래 유지할 수 있었고, 러닝머신에서 더 좋은 성과를 냈으며, 더 많은 탐색 행동을 보였고, 복근 근육량과 빠른 근육 섬유도 더 많았습니다. 마지막으로, 아마도 가장 중요한 점은, 이 쥐들이 더 오래 살았다는 것입니다.",
+        "ANGPTL8와 노화세포 사이의 관계에 관여하는 특정 경로가 밝혀졌다. 이 단백질은 분자 수준에서 AKT2에 결합하여 기본적인 AKT/mTOR/S6K 경로에 영향을 미치는 것으로 밝혀졌으며, 이 발견은 쥐에서도 확인되었다; Angptl8이 꺼진 마우스는 AKT, mTOR, S6K의 활성이 유의미하게 감소했다. 노년 마우스에서 지방 전구세포(전지방 세포)를 얻은 결과가 이 결과를 확인했으며, Angptl8 과발현 세포를 이용한 실험에서는 AKT가 ANGPTL8가 세포 노화세포에 기여하는 데 실제로 필요하다는 것을 발견했다.",
+        "이 연구자들은 \"중개 관점에서 ANGPTL8가 순환 바이오마커이자 노화의 기능적 효과자라는 이중 정체성이 특히 설득력 있다\"고 밝히며 중요한 목표를 달성했다고 명확히 생각합니다. 하지만 이 논문은 야생형 동물의 혈류에서 순환 ANGPTL8을 제거하는 잠재적 방법을 시험하지 않았습니다. 만약 이러한 약물이 개발되어 인간 임상시험에서 효과가 입증된다면, 대사 문제를 겪는 노인들에게 추가 건강수명과 수명을 부여할 수 있을 것입니다.",
+        "작은 부탁을 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻입니다. 크고 작음에 상관없이 모든 기부는 독립적이고 윤리적인 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 기부하겠습니다❤️",
+        "문헌 [1] 호타미슬리길, G. S. (2017). 염증, 대화성 발화(metaflamation) 및 면역대사 장애. Nature, 542 (7640), 177-185.",
+        "[2] Ou, M. Y., Zhang, H., Tan, P. C., Zhou, S. B., Li, Q. F. (2022). 지방 조직 노화: 기전 및 치료적 함의. Cell death and disease, 13 (4), 300.",
+        "[3] 치코니아, T., 모르벡, D. E., 폰 즈글리니츠키, T., 반 듀르센, J., 러스트가르텐, J., 스크레이블, H., ... & 커클랜드, J. L. (2010). 지방 조직, 노화 및 세포 노화세포. 노화 세포, 9 (5), 667-684.",
+        "[4] 달퀴스트, K. J., & 카멜, C. D. (2022). 노화 백혈구와 지방 조직의 염증성 미세환경. 당뇨병, 71 (1), 23-30.",
+        "[5] 프란체스키, C., 가라냐니, P., 비탈레, G., 카프리, M., 살비올리, S. (2017). 염증 유발과 '쓰레기 노화'. 내분비학 및 대사 동향, 28 (3), 199-212.",
+        "[6] 아부-파르하, M., 고쉬, A., 알-카이리, I., 마디라주, S. M., 아부바커, J., & 프렌트키, M. (2020). 건강과 질병에서 Angptl8의 다면성: 지단백질 리파아제 조절을 넘어선 새로운 기능. 지질 연구 진전, 80, 101067.",
+        "[7] 판, L., 허, Y., 샹, Y., 마오, B., 멍, X., 궈, Y., ... & 유, X. (2025). 혈관생성계유사 단백질 8은 Akt2와 상호작용하여 당뇨병 신장 질환 진행에서 세뇨관 세포의 염증과 섬유화를 매개한다. 대사, 156418.",
+        "[8] 예, H., 주, Q., 종, Q., 루오, S., 지, Z., 장, R., & 조우, H. (2026). 제2형 당뇨병에서 죽상동맥경화의 새로운 예측인자로서의 ANGPTL8(피지오포이틴 유사 단백질 8) 상승: 지질 대사를 넘어서. 미국 심장 협회 저널, 15 (3), e044806.",
+        "[9] 모리나가, J., 카시와바라, K., 토리고에, D., 오카도메, Y., 아이자와, K., 우에무라, K., ... & 오이케, Y. (2023). 안정 관상동맥질환 환자 중 스타틴 치료를 받는 일본 환자의 혈장 ANGPTL8 수준과 2차 심혈관 사건 위험. 동맥경화, 혈전증 및 혈관생물학, 43권 8호, 1549-1559.",
+        "[10] Zou, H., Xu, Y., Chen, X., Yin, P., Li, D., Li, W., ... & Yu, X. (2020). 당뇨병 환자의 전원인 사망 위험에 대한 ANGPTL8 예측 가치: REACTION 연구 결과. 심혈관 당뇨병학, 19 (1), 121."
       ]
     },
     {
       "id": "lifespan-io:565f48cd7b",
       "slug": "a-million-person-study-finds-a-protective-metabolic-565f48",
       "titleOriginal": "A Million-Person Study Finds a Protective Metabolic Gene",
-      "summaryOriginal": "A massive human genetics study identified rare folliculin-interacting protein 1 (FNIP1) mutations associated with favorable metabolism and much lower cardiometabolic disease risk. Experiments in human liver cells and mice suggest a therapeutic route [1]. Longevity hidden […]",
+      "summaryOriginal": "A massive human genetics study identified rare folliculin-interacting protein 1 (FNIP1) mutations associated with favorable metabolism and much lower cardiometabolic disease risk. Experiments in human liver cells and mice suggest a therapeutic route […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -6836,7 +6565,7 @@
       "originalUrl": "https://lifespan.io/a-million-person-study-finds-a-protective-metabolic-gene",
       "author": "Arkadi Mazin",
       "publishedAt": "2026-08-14T17:55:55.000Z",
-      "fetchedAt": "2026-09-01T06:31:03.722Z",
+      "fetchedAt": "2026-09-01T12:30:35.985Z",
       "language": "en",
       "keywords": [
         "News",
@@ -6850,13 +6579,13 @@
       },
       "translationStatus": "done",
       "contentPolicy": "full",
-      "category": "age",
+      "category": "body",
       "trustLevel": 4,
-      "careScore": 0.95,
+      "careScore": 0.7,
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "백만 명 연구에서 보호 대사 유전자가 발견되었습니다",
-      "summaryKo": "대규모 인간 유전학 연구에서 희귀 난포 상호작용 단백질 1(FNIP1) 돌연변이가 나타나 유리한 대사와 훨씬 낮은 심장대사 질환 위험과 관련이 있음을 확인했습니다. 인간 간 세포와 쥐를 대상으로 한 실험은 치료 경로를 시사합니다 [1]. 롱제비티 숨겨진 [...]",
+      "summaryKo": "대규모 인간 유전학 연구는 희귀 난포 상호작용 단백질 1(FNIP1) 돌연변이를 확인했으며, 이는 유리한 대사와 훨씬 낮은 심장대사 질환 위험을 지녔습니다. 인간 간 세포와 쥐를 대상으로 한 실험은 치료 경로가 [...]",
       "bodyKo": [
         "대규모 인간 유전학 연구에서 희귀 난포 상호작용 단백질 1(FNIP1) 돌연변이가 발견되었으며, 이는 유리한 대사와 훨씬 낮은 심장대사 질환 위험을 동반했습니다. 인간 간 세포와 마우스를 대상으로 한 실험은 치료 경로를 시사합니다 [1].",
         "유전체에 숨겨진 롱제비티 수십 년간 노인 연구자들은 인간 유전학이 진정한 '롱제비티 유전자'를 발견할 수 있기를 기대해 왔으며, 이 유전자의 활동이 변화되어 훨씬 더 건강하거나 긴 수명을 만들어 명백한 치료 표적을 제공할 수 있다고 기대해왔다. 그러나 일부 단순한 생물과 달리, 인간의 노화는 다유전자(다유전자)에 크게 영향을 받는 것으로 보이며, 대부분은 비교적 작은 영향을 미친다. 치매와 강하게 연관된 APOE 유전자와 FOXO3는 예외로 간주될 수 있지만, 후자의 효과는 그리 강하지 않다.",
