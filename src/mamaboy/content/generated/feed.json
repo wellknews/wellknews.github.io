@@ -1,7 +1,94 @@
 {
-  "generatedAt": "2026-09-02T00:33:11.360Z",
+  "generatedAt": "2026-09-02T06:34:45.607Z",
   "prototype": false,
   "articles": [
+    {
+      "id": "creative-boom:9727d61694",
+      "slug": "the-royal-college-of-art-is-bringing-communication-9727d6",
+      "titleOriginal": "The Royal College of Art is bringing communication and design together in one school, and that's big news",
+      "summaryOriginal": "The esteemed university has decided the two disciplines need no longer be strangers. And the timing could hardly be better. Remember the old days, when everyone sat in their little silos, and never th...",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "The esteemed university has decided the two disciplines need no longer be strangers. And the timing could hardly be better."
+        },
+        {
+          "kind": "text",
+          "text": "Remember the old days, when everyone sat in their little silos, and never the twain should meet? When a graphic designer wasn't allowed near strategy, and the strategists commented on visual designs at their peril? Well, whether you thought those were the \"good old days\" or not, they're definitely gone now."
+        },
+        {
+          "kind": "text",
+          "text": "Today, it doesn't matter whether your title is graphic designer, product designer, motion designer or whatever: essentially you're expected to do a bit of everything, at the drop of a hat, because that's what the industry demands."
+        },
+        {
+          "kind": "text",
+          "text": "The world of academia can be slow to catch up with developments like this. But the world's top-ranked art and design university, London's Royal College of Art, is clearly paying attention because it's just announced the establishment of a new School of Communication & Design."
+        },
+        {
+          "kind": "text",
+          "text": "This is a big move for the 107-year-old institution, as it brings together communication and design disciplines for the first time within a single, unified academic entity. The new school will sit alongside the existing School of Architecture and School of Arts & Humanities, giving the university a new, three-school structure."
+        },
+        {
+          "kind": "image",
+          "url": "https://media.creativeboom.com/17988637-025e-492f-b529-a79552bf2b92/conversions/e92ef096d764343b362a44cfb93aaf371389925a-medium.webp",
+          "alt": "Royal College of Art's Battersea campus building with distinctive stacked brick tiers and large windows, with buses passing on the street below"
+        },
+        {
+          "kind": "text",
+          "text": "And it's not just about a neater organisational chart. The RCA is making clear that the future of the creative industries is an interdisciplinary one, and is acting accordingly."
+        },
+        {
+          "kind": "text",
+          "text": "In the new setup, Animation gets closer to Fashion, Visual Communication to Innovation Design Engineering, and Digital Direction to Textiles. These used to be courses that had nothing to do with each other. Now they're increasingly interconnected, and the RCA is promising more opportunities for collaboration, shared learning and cross-school engagement."
+        },
+        {
+          "kind": "text",
+          "text": "Collaboration and shared learning In the words of Professor Kerry Curtis, dean of the School of Communication & Design: \"Bringing together a dynamic community of creative disciplines creates new opportunities for collaboration, experimentation and innovation at a time when the world needs creative thinking more than ever. As technologies like AI continue to transform how we communicate, design and make, our role is not just to respond to change, but to shape it."
+        },
+        {
+          "kind": "text",
+          "text": "\"By combining material intelligence, together with critical and creative practice, we're equipping our students to become the artists, designers and leaders who will define the future of communication and design: creating work that is not only imaginative, but inclusive with real impact on society.\""
+        },
+        {
+          "kind": "text",
+          "text": "Programmes which will be delivered from the new School of Communication & Design will be: Animation (MA), Communication (MFA/PGR), Creative Education (MEd), Design (PGR), Design Futures (MDes), Design Products (MA), Digital Direction (MA), Fashion (MA), Information Experience Design (MA), Innovation Design Engineering MA/MSc, Textiles (MA), and Visual Communication (MA)."
+        }
+      ],
+      "sourceName": "Creative Boom",
+      "sourceUrl": "https://www.creativeboom.com/",
+      "originalUrl": "https://www.creativeboom.com/news/the-royal-college-of-art-is-bringing-communication-and-design-together-in-one-school-and-thats-big-news",
+      "author": "Tom May",
+      "publishedAt": "2026-09-02T05:45:00.000Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
+      "language": "en",
+      "keywords": [
+        "News"
+      ],
+      "image": {
+        "url": "https://media.creativeboom.com/17988637-025e-492f-b529-a79552bf2b92/conversions/e92ef096d764343b362a44cfb93aaf371389925a-medium.webp"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "로열 칼리지 오브 아트는 커뮤니케이션과 디자인을 하나의 학교로 통합하고 있으며, 이는 큰 뉴스입니다",
+      "summaryKo": "명망 있는 대학은 두 학문 분야가 더 이상 낯설 필요가 없다고 결정했다. 그리고 타이밍도 더할 나위 없이 좋다. 옛날을 기억하라, 모두가 작은 사일로에 앉아 있었고, 결코...",
+      "bodyKo": [
+        "이 명망 있는 대학은 두 학문이 더 이상 낯설 사람이 될 필요가 없다고 결정했습니다. 그리고 시기도 더할 나위 없이 좋았습니다.",
+        "예전, 모두가 각자 작은 사일로에 앉아 둘이 만나지 말던 시절을 기억하시나요? 그래픽 디자이너가 전략 근처에 접근할 수 없었고, 전략가들이 시각적 디자인에 대해 언급하던 시절을 기억하시나요? 그때가 '좋은 옛 시절'이라고 생각했든 아니든, 이제는 확실히 사라졌습니다.",
+        "오늘날에는 그래픽 디자이너, 제품 디자이너, 모션 디자이너 등 어떤 직함이든 상관없습니다. 본질적으로 업계가 요구하는 대로 모든 것을 조금씩 해내야 합니다.",
+        "학계는 이런 발전에 따라잡는 데 시간이 걸릴 수 있습니다. 하지만 세계 최고 수준의 예술 및 디자인 대학인 런던 왕립 예술대학은 분명히 주목하고 있습니다. 왜냐하면 최근 새로운 커뮤니케이션 및 디자인 스쿨 설립을 발표했기 때문입니다.",
+        "이는 107년 역사의 기관인 이 기관에 있어 큰 변화로, 커뮤니케이션과 디자인 학문 분야를 처음으로 하나의 통합된 학술 기관 내에 통합하는 것입니다. 새 학교는 기존 건축학부와 예술 및 인문학부와 함께 자리 잡아 대학에 새로운 3개 학부 구조를 부여합니다.",
+        "그리고 단순히 더 정돈된 조직도에 관한 것이 아닙니다. RCA는 창조 산업의 미래가 학제간 것임을 분명히 하고 있으며, 이에 맞게 행동하고 있습니다.",
+        "새로운 체계에서 애니메이션은 패션에, 시각 커뮤니케이션은 혁신 디자인 엔지니어링으로, 디지털 디렉션은 섬유에 더 가까워졌습니다. 이 과정들은 과거에는 서로 아무런 관련이 없었습니다. 이제는 점점 더 상호 연결되고 있으며, RCA는 더 많은 협업, 공동 학습, 학교 간 참여 기회를 약속하고 있습니다.",
+        "협업과 공동 학습 커뮤니케이션 및 디자인 스쿨 학장 케리 커티스 교수의 말에 따르면: \"창의적 학문 분야를 모으는 역동적인 커뮤니티는 세계가 창의적 사고를 그 어느 때보다 필요로 하는 시기에 협력, 실험, 혁신의 새로운 기회를 창출합니다. AI와 같은 기술이 우리의 소통, 디자인, 제작 방식을 계속 변화시키는 가운데, 우리의 역할은 단순히 변화에 반응하는 것이 아니라 변화를 형성하는 것입니다.",
+        "\"물질적 지능과 비판적이고 창의적인 실천을 결합함으로써, 우리는 학생들이 소통과 디자인의 미래를 정의할 예술가, 디자이너, 리더가 되도록 준비시키고 있습니다: 상상력뿐만 아니라 사회에 실질적인 영향을 미치는 포용적인 작품을 창조하는 것입니다.\"",
+        "새로운 커뮤니케이션 및 디자인 스쿨에서 개설될 프로그램은 다음과 같습니다: 애니메이션(MA), 커뮤니케이션(MFA/PGR), 창의적 교육(MEd), 디자인(PGR), 디자인 미래(MDes), 디자인 프로덕츠(MA), 디지털 디렉션(MA), 패션(MA), 정보 경험 디자인(MA), 혁신 디자인 공학 MA/MSc, 섬유(MA), 시각 커뮤니케이션(MA)."
+      ]
+    },
     {
       "id": "toy-book:f499a0c9ca",
       "slug": "hank-green-leslie-morgan-launch-steam-content-platform-f499a0",
@@ -62,7 +149,7 @@
       "originalUrl": "https://toybook.com/hank-green-clockwisetv-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-01T21:09:11.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -351,7 +438,7 @@
       "originalUrl": "https://toybook.com/sept-hot-for-27",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-01T20:50:03.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -452,7 +539,7 @@
       "originalUrl": "https://hackaday.com/2026/09/01/how-gold-plastic-syndrome-is-killing-toys-and-game-consoles",
       "author": "Maya Posch",
       "publishedAt": "2026-09-01T20:00:11.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Repair Hacks",
@@ -592,7 +679,7 @@
       "originalUrl": "https://toybook.com/25-years-of-brattitude-bratz-celebrates-a-major-milestone",
       "author": "Nicole Savas",
       "publishedAt": "2026-09-01T19:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -781,7 +868,7 @@
       "originalUrl": "https://toybook.com/the-policy-of-play",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-01T18:30:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -876,7 +963,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/immune-system-signatures-correlate-with-the-near-term-risk-of-developing-atherosclerosis",
       "author": "Reason",
       "publishedAt": "2026-09-01T18:03:38.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -970,7 +1057,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/mystone-pietra-di-sicilia-tiles-marazzi-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-01T18:00:11.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1146,7 +1233,7 @@
       "originalUrl": "https://toybook.com/harry-potter-25th-anniversary-feature",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-01T18:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -1450,7 +1537,7 @@
       "originalUrl": "https://toybook.com/the-transformers-the-movie-at-40",
       "author": "James Zahn",
       "publishedAt": "2026-09-01T17:51:16.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -1642,7 +1729,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/world-unfolding-book-human-knowledge-history-the-huntington",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-01T17:11:54.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Books",
@@ -1688,7 +1775,7 @@
       "id": "lifespan-io:591dca2c3c",
       "slug": "rejuvenation-roundup-august-2026-591dca",
       "titleOriginal": "Rejuvenation Roundup August 2026",
-      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become the CEOs of Their Own Health: Wei-Wu He is […]",
+      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -1857,7 +1944,7 @@
       "originalUrl": "https://lifespan.io/rejuvenation-roundup-august-2026",
       "author": "Editorial",
       "publishedAt": "2026-09-01T16:52:55.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "News",
@@ -1874,7 +1961,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "리유버네이션 라운드업 2026년 8월",
-      "summaryKo": "노화를 제대로 풀어내려면 때로는 개인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다. 인터뷰 웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다: 웨이우 허는 [...]",
+      "summaryKo": "노화를 제대로 풀려야 할 때는 개인적인 차원에서 다양한 균형 요소들을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다. 인터뷰 웨이우 [...]",
       "bodyKo": [
         "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다.",
         "웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다 : 웨이우 허는 과학자와 사업가가 결합된 독특한 인물로, 현재 회사는 정밀 의료를 활용해 사람들의 수명을 연장하는 데 집중하고 있습니다.",
@@ -1987,7 +2074,7 @@
       "originalUrl": "https://toybook.com/la-card-show-dodger-stadium-2026-news",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-01T16:35:22.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "News",
@@ -2130,7 +2217,7 @@
       "originalUrl": "https://toybook.com/from-the-editor-flying-high-again",
       "author": "James Zahn",
       "publishedAt": "2026-09-01T16:16:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "From the Editor",
@@ -2239,7 +2326,7 @@
       "originalUrl": "https://toybook.com/the-toy-book-2026-fall-toy-licensing-preview-issue",
       "author": "James Zahn",
       "publishedAt": "2026-09-01T16:15:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Magazine",
@@ -2404,7 +2491,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/mvrdv-woma-colourful-residential-miami",
       "author": "Ben Dreith",
       "publishedAt": "2026-09-01T15:00:19.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2713,7 +2800,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/theatre-emotional-arc-performance-george-washington-university-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-01T15:00:04.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2893,7 +2980,7 @@
       "originalUrl": "https://longevity.technology/news/who-decides-what-counts-as-longevity-medicine",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-01T15:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Clinics",
@@ -3055,7 +3142,7 @@
       "originalUrl": "https://toybook.com/mcdonalds-spongebob-one-piece-happy-meal-toys-news",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-01T14:40:59.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Collectibles",
@@ -3160,7 +3247,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/pangea-blue-marble-antolini-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-01T13:00:58.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3311,7 +3398,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/dyson-camerajet-first-toothbrush-floss",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-01T10:30:02.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3381,7 +3468,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/nrf2-downregulation-in-oligodendrocytes-as-a-contributing-cause-of-cognitive-decline-in-mice",
       "author": "Reason",
       "publishedAt": "2026-09-01T10:22:57.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3438,7 +3525,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/amyloid-%ce%b2-seeding-as-a-basis-for-a-blood-test-for-alzheimers-disease",
       "author": "Reason",
       "publishedAt": "2026-09-01T10:11:23.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3578,7 +3665,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/manchester-city-ai-kit-puma",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-01T09:30:36.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3795,7 +3882,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/eight-architecture-design-events-september-dezeen-events-guide-2026",
       "author": "Sophie Chapman",
       "publishedAt": "2026-09-01T07:00:56.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3960,7 +4047,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/obel-award-2026-balearic-islands-social-housing",
       "author": "Amy Peacock",
       "publishedAt": "2026-09-01T06:00:42.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4088,7 +4175,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/kengo-kuma-andree-putman-lifetime-achievement-award-cda",
       "author": "Starr Charles",
       "publishedAt": "2026-09-01T04:00:35.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4205,7 +4292,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/marka27-ni-de-aqui-ni-de-alla-portraits",
       "author": "Grace Ebert",
       "publishedAt": "2026-08-31T18:28:51.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -4281,7 +4368,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/what-can-be-learned-about-aging-clocks-from-existing-clinical-trial-data-for-longevity-interventions",
       "author": "Reason",
       "publishedAt": "2026-08-31T18:12:46.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -4385,7 +4472,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/isaiah-lee-paintings",
       "author": "Grace Ebert",
       "publishedAt": "2026-08-31T14:11:17.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -4449,7 +4536,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/bacterial-lipoic-acid-protein-ligase-a-improves-mammalian-mitochondrial-function-and-health",
       "author": "Reason",
       "publishedAt": "2026-08-31T10:22:42.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -4499,7 +4586,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/mistranslation-mutations-in-flies-surprisingly-extend-life",
       "author": "Reason",
       "publishedAt": "2026-08-31T10:11:46.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -4670,7 +4757,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/31/dezeens-favourite-furniture-lighting-august-roundup",
       "author": "Jane Englefield",
       "publishedAt": "2026-08-31T09:00:29.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -4973,7 +5060,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/fight-aging-newsletter-august-31st-2026",
       "author": "Reason",
       "publishedAt": "2026-08-30T11:19:59.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Newsletters"
@@ -5146,7 +5233,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/30/split-mass-residence-k-thengono-design-studio-indonesia",
       "author": "Amy Peacock",
       "publishedAt": "2026-08-30T10:00:17.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5283,7 +5370,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/30/foster-partners-norton-motorcycles-showroom",
       "author": "Alyn Griffiths",
       "publishedAt": "2026-08-30T05:00:26.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5586,7 +5673,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/29/art-nouveau-style-racecourse-cafe-hong-kong-design-institute-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-08-29T18:00:48.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5783,7 +5870,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/29/willow-point-lakefront-house-michigan-lauri-design-studio",
       "author": "Dan Howarth",
       "publishedAt": "2026-08-29T17:00:33.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5988,7 +6075,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/lighting-furniture-accessories-seating-australian-brands-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-08-28T18:00:11.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -6165,7 +6252,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/a24-leroy-street-studio-cherry-lane-theatre-west-village",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-08-28T17:55:54.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6288,7 +6375,7 @@
       "originalUrl": "https://longevity.technology/news/astronautx-turns-sleep-into-new-dementia-target",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-28T15:30:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -6449,7 +6536,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/craighill-swingtop-lighter",
       "author": "Ben Dreith",
       "publishedAt": "2026-08-28T14:00:21.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6572,7 +6659,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/exa-tech-facade-tiles-exagres-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-08-28T13:00:26.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6640,7 +6727,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/senolytic-treatments-clear-harmful-senescent-microglia-from-the-aging-brain",
       "author": "Reason",
       "publishedAt": "2026-08-28T10:22:49.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -6741,7 +6828,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/longchamp-heatherwick-architectural-collection",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-08-28T09:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6873,7 +6960,7 @@
       "originalUrl": "https://www.dezeen.com/2026/08/28/sabine-marcelis-iittala-glassware-unda",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-08-28T05:00:53.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Lighting",
@@ -7007,7 +7094,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/handmade-utopia-david-jacob-kramer-michael-schmelling-architecture-california-book",
       "author": "Kate Mothes",
       "publishedAt": "2026-08-27T14:49:19.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Books",
@@ -7259,7 +7346,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/what-gta-6s-trailers-tell-us-about-vice-city-lucia-and-the-biggest-creative-launch-of-the-decade",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-27T12:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -7324,7 +7411,7 @@
       "id": "lifespan-io:d2b8c8131e",
       "slug": "short-intense-exercise-elicits-beneficial-metabolic-changes-d2b8c8",
       "titleOriginal": "Short, Intense Exercise Elicits Beneficial Metabolic Changes",
-      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated with cardiometabolic health benefits [1]. Short and intense vs. […]",
+      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7413,7 +7500,7 @@
       "originalUrl": "https://lifespan.io/short-intense-exercise-elicits-beneficial-metabolic-changes",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-08-26T16:43:46.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Exercise",
@@ -7432,7 +7519,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "짧고 강도 높은 운동은 유익한 대사 변화를 유도합니다",
-      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1]. 짧고 강도 높은 운동과 [...]",
+      "summaryKo": "새로운 연구에서는 고강도 전력 질주-인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 순환 단백질과 대사물 수치에 더 큰 변화를 가져왔습니다 [...]",
       "bodyKo": [
         "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1].",
         "짧고 강도 높은 운동 vs 길고 중간 정도의 운동은 건강에 긍정적인 영향을 미칠 수 있는 잘 알려진 생활 습관 요인입니다. 운동은 다양한 세포에서 분비되고 몸 안에서 순환하는 인자들을 통해 여러 세포, 조직, 장기에 이익을 줍니다 [2]. 하지만 투자 대비 가장 큰 운동 유형은 여전히 논쟁 중입니다. 마찬가지로, 운동 효과를 매개하는 순환 요인들도 아직 완전히 정의되지 않았습니다.",
@@ -7547,7 +7634,7 @@
       "originalUrl": "https://longevity.technology/news/new-survey-reveals-what-americans-really-want-from-longevity",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-26T14:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -7629,7 +7716,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/anavex-outlines-progress-in-alzheimers-rare-disease-studies-with-cash-runway-into-2028",
       "publishedAt": "2026-08-26T12:41:12.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -7774,7 +7861,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/bob-neville-on-berghaus-manchester-culture-and-the-british-brand-everyone-thinks-is-german",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-26T11:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -7911,7 +7998,7 @@
       "originalUrl": "https://longevity.technology/news/building-a-health-system-that-puts-prevention-first",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-26T09:30:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -8062,7 +8149,7 @@
       "originalUrl": "https://longevity.technology/news/scientists-create-muscle-that-exercises-itself",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-26T09:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -8206,7 +8293,7 @@
       "originalUrl": "https://longevity.technology/news/mount-sinais-1m-xprize-bet-reset-immune-system-slow-aging",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-25T16:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -8298,7 +8385,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/maynards-bassetts-goes-up-a-level-with-a-dangerous-lift-takeover",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-25T07:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -8393,7 +8480,7 @@
       "originalUrl": "https://longevity.technology/news/quest-humanity-bring-biological-age-test-to-2000-us-locations",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-24T12:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -8691,7 +8778,7 @@
       "originalUrl": "https://www.creativeboom.com/resources/the-best-new-typefaces-for-august-2026",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-24T08:00:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Resources"
@@ -8912,7 +8999,7 @@
       "originalUrl": "https://longevity.technology/news/can-we-prime-skin-to-regenerate-better",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-21T16:49:00.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -9033,7 +9120,7 @@
       "originalUrl": "https://longevity.technology/news/whole-body-mri-is-leaving-the-biohacker-bubble",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-21T16:40:52.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -9163,7 +9250,7 @@
       "originalUrl": "https://longevity.technology/news/the-longevity-trap",
       "author": "Guest Contributor",
       "publishedAt": "2026-08-20T16:53:41.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -9307,7 +9394,7 @@
       "originalUrl": "https://longevity.technology/news/enveda-makes-exercise-pill-that-skips-the-treadmill",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-20T16:49:12.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -9389,7 +9476,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/biograph-launches-comprehensive-womens-health-program-for-preventive-care",
       "publishedAt": "2026-08-20T11:56:41.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -9455,7 +9542,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/longevity-brand-wonderfeel-named-fastest-growing-biotech-in-america",
       "publishedAt": "2026-08-20T11:51:41.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -9514,7 +9601,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/enzymedica-launches-phytosome-formulas-for-sleep-joint-support",
       "publishedAt": "2026-08-20T11:36:41.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -9632,7 +9719,7 @@
       "originalUrl": "https://longevity.technology/news/the-barriers-arent-clinical-theyre-structural",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-19T16:55:07.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Clinics",
@@ -9758,7 +9845,7 @@
       "originalUrl": "https://longevity.technology/news/utah-is-building-americas-longevity-capital",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-19T16:06:48.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -9897,7 +9984,7 @@
       "originalUrl": "https://longevity.technology/news/wave-life-sciences-targets-fat-loss-without-sacrificing-muscle",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-19T16:05:41.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -9978,7 +10065,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/haut-ai-grupo-boticario-expand-partnership-to-nearly-4k-stores",
       "publishedAt": "2026-08-19T09:46:41.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -10077,7 +10164,7 @@
       "originalUrl": "https://longevity.technology/news/alzecures-12m-payday-fuels-new-brain-aging-therapy",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-18T15:10:45.000Z",
-      "fetchedAt": "2026-09-02T00:33:11.360Z",
+      "fetchedAt": "2026-09-02T06:34:45.607Z",
       "language": "en",
       "keywords": [
         "Biotech",
