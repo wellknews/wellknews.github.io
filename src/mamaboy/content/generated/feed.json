@@ -1,7 +1,555 @@
 {
-  "generatedAt": "2026-09-03T18:28:06.335Z",
+  "generatedAt": "2026-09-04T00:39:02.068Z",
   "prototype": false,
   "articles": [
+    {
+      "id": "hackaday:0a19396e6c",
+      "slug": "a-split-keyboard-designed-for-human-hands-0a1939",
+      "titleOriginal": "A Split Keyboard Designed for Human Hands",
+      "summaryOriginal": "A surprising number of things we use in everyday life retain most of their design cues from their 19th century ancestors. The bicycle retains the same basic design as it …read more",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "A surprising number of things we use in everyday life retain most of their design cues from their 19th century ancestors. The bicycle retains the same basic design as it had in 1890, as does the sewing machine, the toilet, the car, and of course, the keyboard and the QWERTY layout from old typewriters. But we aren’t doomed to have our technology perpetually living in the past. [Paul] wanted a keyboard designed around human hands, rather than being designed around a machine, so he built this unique split keyboard ."
+        },
+        {
+          "kind": "text",
+          "text": "The design of this specific keyboard went through around 50 iterations before he was comfortable with it. Other design goals here were for it to be portable, and the split nature of this certainly makes it more compact as does the use of low-profile switches. Each finger’s column is angled and spaced based on the needs of that finger, with the ring finger keys sitting higher and the index finger columns angled inward. Each thumb has access to three keys, one of which is the spacebar and the other two layer keys, which is what enables this design to get down to only 36 total keys."
+        },
+        {
+          "kind": "text",
+          "text": "When thinking about it for any length of time, the modern keyboard’s design holdovers from the 1800s are fairly wasteful compared to this split, ergonomic version. Especially when looking at the spacebar, which ties up both thumbs and only performs a single task, there’s a lot of opportunity for modern designs to be more efficient, more portable, and easier on one’s body. Feel free to take this to the extreme and use all three dimensions , as long as you aren’t particularly concerned with portability."
+        }
+      ],
+      "sourceName": "Hackaday",
+      "sourceUrl": "https://hackaday.com/",
+      "originalUrl": "https://hackaday.com/2026/09/03/a-split-keyboard-designed-for-human-hands",
+      "author": "Bryan Cockfield",
+      "publishedAt": "2026-09-03T20:00:53.000Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
+      "language": "en",
+      "keywords": [
+        "Peripherals Hacks",
+        "3d printed",
+        "design",
+        "ergonomic",
+        "keyboard",
+        "low-profile",
+        "split"
+      ],
+      "image": {
+        "url": "https://hackaday.com/wp-content/uploads/2026/09/cogito-keyboard-main.png"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "인간 손을 위해 설계된 분할 키보드",
+      "summaryKo": "우리가 일상생활에서 사용하는 많은 것들이 19세기 조상들의 디자인 요소를 대부분 유지하고 있습니다. 자전거는 기본적으로 동일한 디자인을 유지하고 있습니다... 더 읽기",
+      "bodyKo": [
+        "우리가 일상생활에서 사용하는 많은 것들이 19세기 조상들의 디자인 요소를 대부분 그대로 유지하고 있습니다. 자전거는 1890년과 같은 기본 디자인을 유지하고 있으며, 재봉틀, 변기, 자동차, 그리고 물론 옛 타자기의 키보드와 QWERTY 레이아웃도 마찬가지입니다. 하지만 우리는 기술이 영원히 과거에 머물러 있는 운명은 아닙니다. [폴]은 기계가 아니라 인간의 손을 중심으로 설계된 키보드를 원했기에, 이 독특한 분할 키보드를 만들었습니다.",
+        "이 특정 키보드의 디자인은 그가 익숙해지기까지 약 50번의 반복을 거쳤다. 다른 디자인 목표는 휴대성을 높이는 것이었으며, 분할 구조 덕분에 더 컴팩트해지고 저프로파일 스위치의 사용도 마찬가지다. 각 손가락의 칼럼은 그 손가락의 필요에 따라 각도와 간격이 조정되어 있으며, 약지 키는 더 높이, 검지 칼럼은 안쪽으로 기울어져 있다. 각 엄지는 세 개의 키를 사용할 수 있는데, 그중 하나는 스페이스바, 나머지 두 개의 레이어 키는 이 설계가 총 36개의 키로 줄일 수 있게 한다.",
+        "어느 정도 생각해보면, 1800년대 현대 키보드의 디자인 유산은 이 분할 인체공학적 버전에 비해 꽤 낭비적입니다. 특히 스페이스바를 보면, 두 엄지손가락을 묶고 단일 작업만 하는 경우가 많아 현대 디자인이 더 효율적이고 휴대성이 뛰어나며 몸에 부담이 적을 수 있는 많은 기회가 있습니다. 휴대성에 크게 신경 쓰지 않는다면 이 점을 극한으로 끌어내어 3차원 모두를 활용해도 좋습니다."
+      ]
+    },
+    {
+      "id": "lifespan-io:d176156141",
+      "slug": "the-last-generation-to-die-interview-with-tim-d17615",
+      "titleOriginal": "The Last Generation to Die: Interview With Tim Maupin",
+      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation technologies arrive and who gets left behind. […]",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die , a near-future film about what happens when the first true rejuvenation technologies arrive and who gets left behind. The project has now reached the top 65 of the Future Vision XPrize , a global contest seeking optimistic visions of humanity’s future. We talked to him about the personal stakes behind the story, the challenge of creating future positive stories, and why the film’s central dilemma feels increasingly urgent."
+        },
+        {
+          "kind": "text",
+          "text": "Thanks for joining us, Tim. So, the exciting news is that one of your films was nominated for the Future Vision XPrize. The brief for the contest is to create a 3-minute sci-fi trailer depicting an optimistic, abundant future for humanity. The grand prize winner gets $2.6M+ to turn their vision into a feature film, plus over $1M in prizes for runners-up. Can you tell us a little bit about that, Tim? Yes, it’s a longevity-focused film that I’ve been working on for quite a while called The Last Generation to Die . It is in the top 65 of over 2500 entries in the X Prize Future Vision contest, which is definitely exciting news."
+        },
+        {
+          "kind": "text",
+          "text": "That’s great, I remember watching the preview some years ago, and I always thought it was a really interesting idea, so I’m really glad to see that it has been nominated. Making it into the top 65 films is a real achievement, so what happens next? The next step is they choose the top ten, and then that goes down to the top five. The top five get to go to the moonshots event, which is a pretty big deal. The judges are Neil deGrasse Tyson, Mira Lane, Neil Stevenson, and Rod Roddenberry. So, there are some important names involved with this. From there you pitch live, and they show the trailers, and then they actually choose the winner live that night in the room."
+        },
+        {
+          "kind": "text",
+          "text": "It’s a really important event, so fingers crossed, and we’ll see where it goes from there. I think the top ten also get invited to the event too, so even getting into the top ten would be pretty great as well."
+        },
+        {
+          "kind": "text",
+          "text": "Sounds good, so can you tell us a little more about the film itself? I made it as a short film a few years ago that was played at some film festivals. I’d always envisioned it as a feature, but I really got back into that process after my father passed away in 2019. That was when I went back to the script, and, in some ways, I became a lot more able to write it, because I was living the material in a way that I hadn’t before. After that, it became a lot more real and still is. My mom is also aging, and I’m seeing that very directly, so it’s a very personal and real film."
+        },
+        {
+          "kind": "text",
+          "text": "It’s set in the near future where a female scientist named Lily is at the forefront of a new technology that’s going to slow and even reverse aging. Her father Oliver has a major heart issue, and she’s able to get him on the trial for this technology as a last-ditch effort to save him. And it works and I mean it works really well, he actually starts de-aging and gets much healthier at the same time."
+        },
+        {
+          "kind": "text",
+          "text": "During the film, Lily’s mother falls ill with a rare neurodegenerative disease. But, she doesn’t fit the inclusion criteria of the trial, and they are too afraid to risk trying the technology on her, so her mother’s health ends up failing while her father’s health actually improves because his age is reversing."
+        },
+        {
+          "kind": "text",
+          "text": "So, you have this interesting dynamic between her parents as the film goes on. From a longevity standpoint, I think it is a great thought experiment to consider what would happen in terms of our current form of aging and what could happen with some kind of new rejuvenation technology. I hope that it pulls on the heartstrings of folks in a very direct way as events play out like that."
+        },
+        {
+          "kind": "text",
+          "text": "Then, there’s a whole extra plot that covers how some people in the company are trying to maximize profits with this technology, and she’s fighting that as well. Ultimately, I’d say it’s a bittersweet film, it’s very positive in one way but also very real and nuanced in another."
+        },
+        {
+          "kind": "text",
+          "text": "From my perspective, I think setting a film at the gulf between these two worlds, situations like this will happen. There’ll be a point where some people unfortunately don’t make it and some people get age-reversal technologies. I just think that’s a great point to set the film because it’s got inherent conflict from that standpoint, and you get to see those two dynamics in one spot in time."
+        },
+        {
+          "kind": "text",
+          "text": "That’s basically what the film’s about. I hope by seeing that it encourages people to want to bring this technology on faster and do what they can to support it."
+        },
+        {
+          "kind": "text",
+          "text": "That’s a good synopsis. I saw the original trailer, and I always thought it was an intriguing idea. So glad to see it’s reached this stage, and, obviously, I’ve got my fingers crossed that it makes the top five because it’s exploring some very important near-future possibilities. The dynamic in the film between the parent who qualifies for the trial and the one who doesn’t feels especially timely. With the first biomedical repair therapies now entering human trials, questions about access and how we regulate multi-disease approaches are becoming real rather than theoretical. So, let’s talk about how the film originally got started. I understand that it has roots with our organization, Lifespan.io, as it was called back then when the film started. Can you tell us a little bit about how that came about and how it helped to get the film underway? Yes, absolutely. I started working for Lifespan.io around the same time that I got back into the film, which was great timing because I was surrounded by folks who are working on the same goal and seeing the actual reporting on the research helped to inform the film. So, being involved with Lifespan.io at the time was informative for the film but also energizing on a personal level."
+        },
+        {
+          "kind": "text",
+          "text": "Not only that, but Keith Comito and Oliver Medvedik from Lifespan.io actually served as advisors for the film too. Lifespan.io also helped get the film off the ground by acting as a fiscal sponsor in those early days."
+        },
+        {
+          "kind": "text",
+          "text": "Talking about actually keeping the film going and getting it to where it is, specifically, let’s talk about the jellyfish connection. Can you tell us a little bit about jellyfish and how it has helped you to get the film to where it is? Jellyfish is a related organization to Lifespan in some ways and includes Keith Comito. The idea behind it was to build a community of filmmakers and artists focused on longevity-related film and media. Films that were a little bit more of the positive future side of things. The goal for the past couple of years has been to try to support that community and find ways to help fund these projects. Funding for films, especially independent films, is always challenging, and so the Jellyfish DAO was started as a crypto model."
+        },
+        {
+          "kind": "text",
+          "text": "But, we are looking at ways to expand that beyond just crypto funding and looking for unique and innovative funding models that might help to grow and support longevity-related films. It’s also a good test case for decentralized science to do things that public funding probably wouldn’t support."
+        },
+        {
+          "kind": "text",
+          "text": "To speak more broadly about the concept of the prize itself, all the films in the competition appear to have a future-positive focus, this is the opposite of what a lot of films set in the future have, which instead often have dystopian storylines. What are your thoughts on that? The dystopian versus positive storytelling is always an interesting thing to consider, and I agree that dystopian tales do have their place. I think it’s a good simulation, as it were, to imagine how things could go."
+        },
+        {
+          "kind": "text",
+          "text": "But, I strongly agree with the premise of the contest. We do have a lot of dystopian tales, arguably too many, and I think it’s time to balance things in the other direction a bit. Because some might argue that we are living in a bit of a dark time right now and I think we do need to be projecting positive visions to counter that. It’s also very clear that movies and culture do actually shape how things happen to a certain degree in the future."
+        },
+        {
+          "kind": "text",
+          "text": "So, I think by continuing to project positive things, we’re continuing to push forward towards a better future. Even if it may seem like it’s just a movie, I honestly believe that it filters through people’s psyche and does actually change how things can go. I’m honestly very grateful that they’ve put this contest out because I think it’s a much needed counterbalance."
+        },
+        {
+          "kind": "text",
+          "text": "But, I will admit it’s not easy to make future positive films. Dystopian films are easier to write and make because there’s a clear villain and there’s more obvious conflict. It is a challenge to come up with something that still has conflict, still engages people, but ultimately ends in a positive place. It’s been really interesting to see the other creators in the contest try to figure that out as well."
+        },
+        {
+          "kind": "text",
+          "text": "I definitely think it’s a worthy challenge and something worth pushing for. Future positive framing is also important for the biomedical repair field too, because the field does have a tendency to overpromise and underdeliver, which has given it a somewhat tarnished image. There’s a lot of misinformation, hype, and also misunderstanding about what the field is really doing – treating age-related diseases by treating the reasons we age and get sick in the first place. Do you think films like this can probably help with that image? I think so, and I would say that my film takes a fairly nuanced approach that isn’t as grandiose as immortality or anything like that. It’s taking a more realistic look at some of the more commonly overlooked things about the field. Concepts that make a ton of sense, like if you target aging, you’re simultaneously combating many diseases at once. A film like this can put that in a way that makes sense in a story fashion where it’s not just didactic information that you’re sort of preaching to people."
+        },
+        {
+          "kind": "text",
+          "text": "So yes, I would agree, and there’s also other narratives like the concern that only the billionaires are going to get this tech, which I’m not saying isn’t worth thinking about as a potential risk, but it’s also pushing towards the idea that this really should be for everyone as a counterpoint and that’s actually possible if we decide to make it so. So, I think having the vision to move in a positive direction is important, especially in a movie form."
+        },
+        {
+          "kind": "text",
+          "text": "What sort of impact do you think the film might have if it gets nominated in the top five? Great question! If it reaches that point, from what I’ve heard, being in the top five gives you more exposure, because you’re on the stage and Range Media Partners and others are right there. So I think it would stand a good chance of getting a lot more attention and potentially some funding."
+        },
+        {
+          "kind": "text",
+          "text": "The other thing to mention is that we have an amazing cast. We have Ed Harris, Lily Rabe and Mamoudou Athie on board now. That’s quite something for an independent film, it’s an achievement to have such great actors interested and I think they could also help to potentially speed that up."
+        },
+        {
+          "kind": "text",
+          "text": "Ideally, we’d be moving a lot closer to getting it into production if we got into the top five. The ideal production window would be next year in spring or summer. So, being in the top five in the contest would absolutely help speed that up."
+        },
+        {
+          "kind": "text",
+          "text": "Wow, that’s quite an upgrade from the original trailer I watched a few years ago, then. Where can people watch the contest version? People can watch The Last Generation to Die contest video over at the FutureVision XPrize and also vote for it and any of the other films in the contest. They have a pretty cool voting platform where it’s not just a social media-based contest. They give you two trailers, and you vote for one and you cycle through. It’s a little cooler than what you usually see for these things, so I would encourage people to go check those out and vote."
+        },
+        {
+          "kind": "text",
+          "text": "Jellyfish has another film in there called Senti. I would encourage everyone to go take a look at the films there and support this prize because I think we need more of it, and it sounds like they’re gonna continue to do it."
+        },
+        {
+          "kind": "text",
+          "text": "That sounds great. Do we know exactly when they’ll announce the finalists? I think next week, we will find out the top 10, so it’s very soon. Then I think the top five may come the week after that. So within the next two weeks, we’ll probably find out the top five."
+        },
+        {
+          "kind": "text",
+          "text": "Thank you for taking the time to speak with us today, Tim, and we wish you the best of luck with your film. As The Last Generation to Die makes clear, the arrival of the first biomedical repair therapies in human trials brings questions of access and equity into sharp focus. Ensuring these technologies benefit society broadly, rather than becoming another driver of inequality, is not only a moral issue but an economic one, something we explore in more detail in our recent white paper – Why Democratizing Rejuvenation Is an Economic Imperative . We would like to ask you a small favor. We are a non-profit foundation , and unlike some other organizations, we have no shareholders and no products to sell you. All our news and educational content is free for everyone to read, but it does mean that we rely on the help of people like you. Every contribution, no matter if it’s big or small, supports independent ethical journalism and sustains our future. Yes I will donate❤️"
+        }
+      ],
+      "sourceName": "Lifespan.io",
+      "sourceUrl": "https://www.lifespan.io/",
+      "originalUrl": "https://lifespan.io/the-last-generation-to-die-interview-with-tim-maupin",
+      "author": "Steve Hill",
+      "publishedAt": "2026-09-03T20:00:48.000Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
+      "language": "en",
+      "keywords": [
+        "Advocacy",
+        "Interviews",
+        "News",
+        "Films"
+      ],
+      "image": {
+        "url": "https://lifespan.io/wp-content/uploads/2026/09/Last-Generation-to-Die-262x187.png"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 4,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "research",
+      "titleKo": "마지막 세대가 죽음: 팀 모핀과의 인터뷰",
+      "summaryKo": "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 『라스트 제너레이션 투 다이』를 수년간 개발해 왔습니다. […]",
+      "bodyKo": [
+        "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해 왔습니다. 이 프로젝트는 현재 인류 미래에 대한 낙관적인 비전을 모색하는 글로벌 대회인 미래 비전 XP라이즈의 상위 65위에 진입했습니다. 우리는 그와 이야기의 개인적 이해관계, 긍정적인 미래 이야기를 만드는 도전, 그리고 영화의 중심 딜레마가 점점 더 긴급하게 느껴지는 이유에 대해 이야기를 나누었습니다.",
+        "함께해 주셔서 감사합니다, 팀. 흥미로운 소식은 당신의 영화 중 하나가 미래 비전 XPrize에 후보로 올랐다는 것입니다. 대회의 과제는 인류의 낙관적이고 풍요로운 미래를 묘사한 3분 분량의 SF 예고편을 만드는 것입니다. 대상은 자신의 비전을 장편 영화로 만드는 데 260만 달러+를 받으며, 준우승자에게는 100만 달러 이상의 상금이 주어집니다. 팀, 그 부분에 대해 조금 이야기해 주실 수 있나요? 네, 이 영화는 제가 꽤 오랫동안 작업해온 롱제비티에 초점을 맞춘 영화 '라스트 제너레이션 투 다이'입니다. X 프라이즈 미래 비전 콘테스트에서 2500개 이상의 출품작 중 상위 65위 안에 들었는데, 정말 흥미로운 소식입니다.",
+        "좋네요, 몇 년 전에 예고편을 봤을 때 정말 흥미로운 아이디어라고 생각했는데, 후보에 오른 걸 보니 정말 기쁩니다. 상위 65편에 들었다는 건 정말 대단한 성과입니다. 그럼 다음에는 어떻게 될까요? 다음 단계는 상위 10개를 선정하는 것이고, 그 다음 상위 5개로 내려갑니다. 상위 5개는 문샷 이벤트에 참가하는데, 이건 꽤 큰 의미가 있죠. 심사위원은 닐 드그래스 타이슨, 미라 레인, 닐 스티븐슨, 그리고 로드 로덴베리입니다. 그래서 이 프로젝트에는 중요한 이름들이 많이 참여합니다. 그 후 라이브로 피치하고, 예고편을 상영하며, 그날 밤 현장에서 실제로 우승자를 선정합니다.",
+        "정말 중요한 행사니까 행운을 빌고, 앞으로 어떻게 될지 지켜봐야겠어요. 상위 10명도 초대받을 거라 상위 10명 안에 들면 정말 좋을 것 같아요.",
+        "좋아요, 그럼 영화 자체에 대해 좀 더 이야기해 주실 수 있나요? 몇 년 전에 단편 영화로 만들어서 몇몇 영화제에서 상영했어요. 항상 장편 영화로 상상했지만, 2019년에 아버지가 돌아가신 후에 다시 그 과정에 다시 뛰어들었어요. 그때 다시 대본으로 돌아갔고, 어떤 면에서는 이전과는 다르게 작품을 직접 경험하게 되어 훨씬 더 쓸 수 있게 되었어요. 그 후로 훨씬 더 현실감 있게 다가왔고, 지금도 그렇습니다. 어머니도 나이가 들어가고 계시고, 그 모습을 직접 느끼고 있어서 매우 개인적이고 진짜 같은 영화입니다.",
+        "이야기는 가까운 미래를 배경으로 하며, 릴리라는 여성 과학자가 노화를 늦추고 심지어 되돌릴 새로운 기술의 최전선에 서 있습니다. 그녀의 아버지 올리버는 심각한 심장 문제를 가지고 있었고, 그녀는 그를 이 기술로 재판에 참여시켜 마지막 수단으로 그를 구할 수 있게 합니다. 그리고 그 방법은 정말 효과가 있어요, 정말 잘 작동해서, 그는 실제로 젊어지기 시작하고 동시에 훨씬 건강해집니다.",
+        "영화 도중 릴리의 어머니는 희귀 신경퇴행성 질환에 걸립니다. 하지만 그녀는 임상시험의 포함 기준에 부합하지 않고, 의료진은 그녀에게 기술을 시도하는 것을 두려워해 어머니의 건강이 악화되고, 아버지의 나이가 역전되어 건강이 오히려 호전됩니다.",
+        "그래서 영화가 진행될수록 그녀의 부모님 사이에 흥미로운 역학 관계가 나타납니다. 롱제비티 관점에서, 현재의 노화 방식과 새로운 재생 기술이 도입되면 어떤 일이 일어날지 생각해보는 훌륭한 사고 실험이라고 생각합니다. 사건이 전개될 때 사람들의 마음을 아주 직접적으로 울려 퍼지길 바랍니다.",
+        "그리고 회사 내 일부 사람들이 이 기술로 이익을 극대화하려 한다는 추가 플롯이 있는데, 그녀도 그것에 맞서 싸우고 있어요. 결국 이 영화는 씁쓸하면서도 달콤한 작품이라고 할 수 있어요. 한편으로는 매우 긍정적이면서도 또 다른 면에서는 매우 현실적이고 미묘한 면이 있죠.",
+        "제 관점에서는, 이 두 세계의 간극을 배경으로 영화를 설정하면 이런 상황이 일어날 수밖에 없다고 생각합니다. 어떤 사람들은 안타깝게도 살아남지 못하고, 어떤 사람들은 나이 되돌리는 기술을 얻게 될 것입니다. 그 지점을 설정하는 것이 정말 좋다고 생각합니다. 왜냐하면 그 관점에서 본질적으로 갈등이 있고, 두 가지 역학이 한 지점에서 동시에 볼 수 있기 때문입니다.",
+        "그게 바로 이 영화의 주제입니다. 이 영화가 이 기술을 더 빨리 도입하고 지원하려는 사람들을 격려하길 바랍니다.",
+        "좋은 시놉시스네요. 원작 예고편을 봤는데, 항상 흥미로운 아이디어라고 생각했어요. 이 단계에 도달해 정말 기쁘고, 당연히 이 영화가 상위 5위 안에 들길 바라고 있어요. 왜냐하면 매우 중요한 가까운 미래 가능성을 탐구하고 있기 때문이죠. 임상시험에 참여할 자격이 되는 부모와 그렇지 않은 부모 사이의 영화 내 역학 관계가 특히 시의적절하게 느껴집니다. 최초의 생의학 수리 치료가 이제 인간 임상시험에 들어가면서, 접근성과 다중 질환 접근법을 어떻게 규제해야 하는지에 대한 질문이 이론적인 문제가 아니라 현실이 되고 있습니다. 그럼 이 영화가 처음 어떻게 시작되었는지 이야기해 봅시다. 이 영화가 시작될 당시 우리 단체인 Lifespan.io 에서 시작된 것으로 알고 있습니다. 그게 어떻게 시작되었고, 영화 제작에 어떻게 도움이 되었는지 조금 말씀해 주실 수 있나요? 네, 물론입니다. 저는 영화에 다시 참여하기 시작한 시기와 거의 동시에 Lifespan.io 에서 일하기 시작했는데, 같은 목표를 가진 사람들이 주변에 있었고 실제 연구 보도를 보는 것이 영화에 큰 도움이 되었기 때문에 정말 좋은 타이밍이었습니다. 그래서 당시 Lifespan.io 에 참여한 것은 영화에 유익했을 뿐만 아니라 개인적으로도 활력을 불어넣었습니다.",
+        "게다가 Lifespan.io 의 키스 코미토와 올리버 메드베딕도 영화의 자문 역할을 했습니다. Lifespan.io 초기 시절 재정 후원자로서 영화 제작을 도왔습니다.",
+        "영화를 계속 진행하고 지금의 모습으로 이끌 수 있도록 하는 것에 대해 이야기하자면, 구체적으로는 해파리와의 연결고리에 대해 이야기해 보겠습니다. 해파리에 대해 조금 이야기해 주시고, 그것이 영화를 지금의 위치에 올리는 데 어떻게 도움이 되었는지 말씀해 주실 수 있나요? 젤리피시는 어떤 면에서는 라이프스팬과 관련된 단체이며, 키스 코미토도 포함되어 있습니다. 그 아이디어는 롱제비티 관련 영화와 미디어에 집중하는 영화 제작자와 예술가 커뮤니티를 구축하는 것이었습니다. 긍정적인 미래의 측면을 보여주는 영화들입니다. 지난 몇 년간의 목표는 그 커뮤니티를 지원하고 이 프로젝트들을 지원하는 방법을 찾는 것이었습니다. 특히 독립 영화에 대한 자금 조달은 항상 도전적이기 때문에, 젤리피시 DAO는 암호화폐 모델로 시작되었습니다.",
+        "하지만 우리는 암호화폐 자금 조달을 넘어 독특하고 혁신적인 자금 조달 모델을 모색 중이며, 롱제비티 관련 영화를 성장시키고 지원할 수 있는 모델을 찾고 있습니다. 또한 분산형 과학이 공공 자금으로는 지원하지 못할 일을 할 수 있는 좋은 시험 사례이기도 합니다.",
+        "상의 개념에 대해 좀 더 넓게 말하자면, 경쟁 작품들은 모두 미래 긍정적 초점을 가진 것 같아요. 이는 많은 미래를 배경으로 한 영화들이 주로 디스토피아 스토리라인을 가진 것과 정반대입니다. 이에 대해 어떻게 생각하시나요? 디스토피아와 긍정적인 스토리텔링은 항상 흥미로운 주제이며, 디스토피아 이야기에도 나름의 자리가 있다는 데 동의합니다. 일종의 시뮬레이션이라 할 수 있죠, 상황이 어떻게 흘러갈 수 있을지 상상하는 데 좋다고 생각합니다.",
+        "하지만 저는 이 대회의 전제에는 강하게 동의합니다. 우리는 디스토피아적 이야기가 많고, 어쩌면 너무 많다고 할 수 있습니다. 이제는 반대 방향으로 균형을 맞춰야 할 때라고 생각합니다. 어떤 사람들은 지금 우리가 다소 어두운 시기에 살고 있다고 주장할 수도 있고, 저는 그에 맞서 긍정적인 비전을 투영해야 한다고 생각합니다. 또한 영화와 문화가 미래에 일어나는 방식을 어느 정도 형성한다는 점도 분명합니다.",
+        "그래서 긍정적인 이미지를 계속 내보함으로써 우리는 더 나은 미래를 향해 나아가고 있다고 생각해요. 비록 단순한 영화처럼 보일지라도, 저는 이 작품이 사람들의 심리를 스쳐 실제로 변화를 준다고 믿어요. 솔직히 이 콘테스트를 개최한 것에 정말 감사해요. 왜냐하면 이게 꼭 필요한 균형 잡기 역할을 한다고 생각하거든요.",
+        "하지만 앞으로 긍정적인 영화를 만드는 것은 쉽지 않다는 것을 인정합니다. 디스토피아 영화는 명확한 악당과 더 명확한 갈등이 있기 때문에 쓰고 만들기 쉽습니다. 갈등이 있고, 사람들을 사로잡으면서도 궁극적으로 긍정적인 결말로 끝나는 무언가를 만드는 것은 도전입니다. 콘테스트에 참가한 다른 창작자들이 그것을 찾으려 노력하는 모습을 보는 것도 정말 흥미로웠습니다.",
+        "저는 분명히 이것이 가치 있는 도전이며 추진할 가치가 있다고 생각합니다. 미래에 긍정적인 프레이밍을 갖는 것도 생의학 수리 분야에도 중요합니다. 이 분야는 과대평가하고 기대에 미치지 못하는 경향이 있어 이미지가 다소 훼손되었습니다. 이 분야가 실제로 무엇을 하고 있는지, 즉 우리가 노화하고 병에 걸리는 근본적인 원인을 치료하는 것에 대해 많은 잘못된 정보, 과장, 그리고 오해가 있습니다. 이런 영화들이 그런 이미지를 개선하는 데 도움이 될 수 있다고 생각하시나요? 저는 그렇다고 생각합니다. 제 영화는 불멸처럼 거창하지는 않은 꽤 미묘한 접근법을 취하고 있다고 생각합니다. 이 분야에서 흔히 간과되는 부분들을 좀 더 현실적으로 바라보고 있습니다. 노화를 목표로 한다면 동시에 여러 질병과 싸우는 것이라는 점에서 매우 타당한 개념들입니다. 이런 영화는 단순히 설교적인 정보를 주는 것이 아니라, 이야기 전개로 그 점을 이해할 수 있게 전달할 수 있습니다.",
+        "그래서 네, 저도 동의합니다. 그리고 이 기술을 억만장자만이 가질 것이라는 우려 같은 다른 이야기들도 있는데, 이것이 잠재적 위험으로 생각하지 않는다는 뜻은 아니지만, 동시에 이것이 모두를 위한 것이어야 한다는 반대 의견을 추진하고 있으며, 우리가 그렇게 만들기로 결정한다면 실제로 가능하다는 생각을 밀어붙이고 있습니다. 그래서 저는 긍정적인 방향으로 나아가려는 비전이 중요하다고 생각합니다, 특히 영화 형식에서는 더욱 그렇습니다.",
+        "만약 영화가 상위 5위 안에 들면 어떤 영향력을 가질 수 있다고 생각하나요? 좋은 질문이에요! 그 지점에 오르면, 제가 들은 바로는 상위 5위 안에 들면 더 많은 노출을 얻을 수 있다고 하더군요. 무대에 서서 Range Media Partners 등 여러 회사가 바로 그 자리에 있기 때문이죠. 그래서 훨씬 더 많은 관심을 받고 잠재적으로 자금도 받을 가능성이 높다고 생각합니다.",
+        "또 한 가지 언급할 점은 놀라운 출연진이 있다는 것입니다. 에드 해리스, 릴리 라베, 마무두 아티가 합류했습니다. 독립 영화로서는 정말 대단한 성과이며, 훌륭한 배우들이 관심을 갖게 된 것은 큰 성과이며, 그들이 그 속도를 높일 수도 있다고 생각합니다.",
+        "이상적으로는, 우리가 상위 5위 안에 들면 양산에 훨씬 더 가까워질 수 있을 거예요. 이상적인 생산 창은 내년 봄이나 여름이 될 거예요. 그래서 콘테스트에서 상위 5위 안에 드는 것이 분명히 그 속도를 높이는 데 도움이 될 거예요.",
+        "와, 몇 년 전에 본 원래 예고편보다 훨씬 업그레이드된 것 같네요. 공모전 버전은 어디서 볼 수 있나요? 사람들은 FutureVision XPrize에서 The Last Generation to Die 공모전 영상을 볼 수 있고, 이 영상과 대회에 참가한 다른 영화들에 투표할 수도 있습니다. 그들은 단순한 소셜 미디어 기반 대회가 아닌 꽤 멋진 투표 플랫폼을 가지고 있습니다. 두 개의 예고편을 주고, 한 장에 투표해서 순환하는 방식입니다. 이런 것들에서 보통 보는 것보다 조금 더 멋지니까, 꼭 가서 투표해 보시길 권합니다.",
+        "젤리피시에는 '센티'라는 또 다른 영화가 있습니다. 모두가 그곳의 영화를 꼭 보시고 이 상을 응원해 보시길 권합니다. 우리는 더 많은 영화가 필요하다고 생각하고, 앞으로도 계속 그렇게 할 것 같습니다.",
+        "정말 좋네요. 정확히 언제 최종 후보가 발표될지 알고 있나요? 다음 주쯤이면 톱 10이 발표될 것 같아요, 아주 빨리요. 그리고 그 다음 주에 톱 다섯 명이 나올 수도 있어요. 그래서 앞으로 2주 안에 아마 톱 5가 발표될 거예요.",
+        "오늘 시간 내어 인터뷰해 주셔서 감사합니다, 팀, 그리고 당신의 영화에 행운이 함께하길 바랍니다. 《마지막 세대 투 다이》가 분명히 보여주듯, 인간 임상시험에서 최초의 생의학 수리 치료법이 도입되면서 접근성과 형평성에 관한 문제가 뚜렷하게 떠오릅니다. 이러한 기술들이 사회 전반에 이익이 되도록 보장하는 것은 단순한 도덕적 문제가 아니라 경제적 문제이며, 우리는 최근 백서 '왜 민주화하는 젊음이 경제적 필연인가'에서 더 자세히 탐구했습니다. 작은 부탁을 드리고 싶습니다. 우리는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻입니다. 크든 작든 모든 기부는 독립적이고 윤리적인 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 기부❤️하겠습니다"
+      ]
+    },
+    {
+      "id": "toy-book:68cceab2ea",
+      "slug": "build-a-bear-foundation-hosts-fundraiser-for-national-68ccea",
+      "titleOriginal": "Build-A-Bear Foundation Hosts Fundraiser for National Teddy Bear Day",
+      "summaryOriginal": "The Foundation will donate stuffed bears to children’s hospitals. The post Build-A-Bear Foundation Hosts Fundraiser for National Teddy Bear Day appeared first on The Toy Book .",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Build-A-Bear honors National Teddy Bear Day with a fundraiser in support of the Build-A-Bear Foundation ."
+        },
+        {
+          "kind": "text",
+          "text": "Starting Sept. 9, at Build-A-Bear Workshops across the U.S., guests can donate via the pin pad at checkout. Guests can also give online. The Foundation will donate a teddy bear to a children’s hospital for every dollar donated through Sept. 16."
+        },
+        {
+          "kind": "text",
+          "text": "“Teddy bears are timeless because they stand for comfort, friendship and imagination,” says Kim Utlaut, Chief Brand Officer at the Build-A-Bear Workshop. “At Build-A-Bear, we see every day how a furry friend can become part of a family tradition, a milestone memory, or a simple reminder that someone cares. National Teddy Bear Day is really about celebrating the simple joy of a hug and the special connections our guests create through the Build-A-Bear make-your-own experience.”"
+        },
+        {
+          "kind": "text",
+          "text": "The retailer will offer a two-for-$25 Lil’ Cub special at stores and online Sep. 9, National Teddy Bear Day, offering customers a discount on two stuffed cub bears."
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/ChuckECheese_ASDC1.png"
+        },
+        {
+          "kind": "text",
+          "text": "RELATED Chuck E. Cheese Launches Fundraiser Supporting American Society for Deaf Children"
+        },
+        {
+          "kind": "text",
+          "text": "Learn more about Build-A-Bear’s National Teddy Bear Day fundraiser at buildabear.com ."
+        },
+        {
+          "kind": "text",
+          "text": "The post Build-A-Bear Foundation Hosts Fundraiser for National Teddy Bear Day appeared first on The Toy Book ."
+        }
+      ],
+      "sourceName": "The Toy Book",
+      "sourceUrl": "https://toybook.com/",
+      "originalUrl": "https://toybook.com/build-a-bear-national-teddy-bear-day-news",
+      "author": "Cassandra Schilling",
+      "publishedAt": "2026-09-03T19:39:19.000Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
+      "language": "en",
+      "keywords": [
+        "Cute, Cuddly, & Collectible",
+        "News",
+        "Product Launches",
+        "best affordable toys",
+        "build a bear",
+        "build a bear foundation",
+        "cutest plush",
+        "Kim Utlaut"
+      ],
+      "image": {
+        "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/BUILDABEAR_NATLTEDDYDAY26.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "play",
+      "trustLevel": 2,
+      "careScore": 0,
+      "curiosityScore": 0.95,
+      "contentType": "news",
+      "titleKo": "빌드어베어 재단, 전국 테디베어의 날 모금 행사 개최",
+      "summaryKo": "재단은 어린이 병원에 봉제 곰인형을 기부할 예정입니다. \"빌드어베어 재단, 전국 테디베어의 날 모금 행사를 주최하다\"는 글이 The Toy Book에 처음 게재되었습니다.",
+      "bodyKo": [
+        "빌드어베어는 빌드어베어재단을 지원하는 기금 모금 행사로 전국 테디베어의 날을 기념합니다.",
+        "9월 9일부터 미국 전역의 Build-A-Bear 워크숍에서 손님들은 계산대 시 핀 패드를 통해 기부할 수 있습니다. 손님들은 온라인으로도 기부할 수 있습니다. 재단은 9월 16일까지 기부된 금액마다 어린이 병원에 곰인형을 기부할 예정입니다.",
+        "\"테디 베어는 편안함, 우정, 상상력을 상징하기 때문에 시대를 초월합니다,\"라고 Build-A-Bear 워크숍의 최고 브랜드 책임자 킴 우틀라우트가 말합니다. \"Build-A-Bear에서는 매일 털복숭이 친구가 가족 전통의 일부가 되거나, 중요한 추억이 되거나, 누군가가 누군가를 아끼고 있다는 단순한 상기가 될 수 있음을 봅니다. 전국 테디 베어의 날은 포옹의 단순한 기쁨과 Build-A-Bear 직접 만드는 경험을 통해 손님들이 만들어내는 특별한 연결을 기념하는 자리입니다.\"",
+        "이 소매업체는 9월 9일 전국 테디베어의 날에 매장과 온라인에서 25달러짜리 리틀 큐브 스페셜을 2개에 제공하며, 고객들에게 인형 큐브 베어 두 개를 할인해 줍니다.",
+        "관련 기사: 척 E. 치즈, 미국 청각장애 아동 협회 지원 모금 행사 시작",
+        "빌드어베어의 전국 테디베어 데이 모금 행사에 대해 더 알아보려면 buildabear.com 에서 확인하세요.",
+        "\"빌드어베어 재단, 전국 테디베어의 날 모금 행사를 주최하다\"는 글이 The Toy Book에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:e460b4aa2f",
+      "slug": "this-device-slows-citi-bikes-in-rent-burdened-e460b4",
+      "titleOriginal": "This device slows Citi Bikes in \"rent-burdened\" New York blocks",
+      "summaryOriginal": "New York artist Justin Blinder has created a device that slows the city's paid-share bikes as they pass through parts of the city that are under \"greater housing pressure\". For the Ground Truth project, Blinder combined his backgrounds in data and design as well as his experience as a bike messenger to create a 3D-printed The post This device slows Citi Bikes in \"rent-burdened\" New York blocks app",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "New York artist Justin Blinder has created a device that slows the city's paid-share bikes as they pass through parts of the city that are under \"greater housing pressure\"."
+        },
+        {
+          "kind": "text",
+          "text": "For the Ground Truth project, Blinder combined his backgrounds in data and design as well as his experience as a bike messenger to create a 3D-printed device that manipulates the brakes of a Citi Bike."
+        },
+        {
+          "kind": "text",
+          "text": "The device slows it down in areas where rent burden, the percentage of a household's income spent on rent and utilities, is high."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_col_1.jpg",
+          "alt": "Ground Truth by Justin Blinder"
+        },
+        {
+          "kind": "text",
+          "text": "Justin Blinder has created a machine that physically responds to housing affordability in New York City \"The city stopped feeling like a map and started to feel like the sequence of really radically different conditions that I was encountering,\" Blinder told Dezeen."
+        },
+        {
+          "kind": "text",
+          "text": "This led the artist to ask, \"what if affordability wasn't something you mapped onto the city, but became part of the terrain you actually had to move through?\""
+        },
+        {
+          "kind": "text",
+          "text": "The project seeks to physicalize housing data."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_col_6.jpg",
+          "alt": "CitiBike breaks"
+        },
+        {
+          "kind": "text",
+          "text": "It clamps on to the front fork of a CitiBike \"It's very hard to understand visually what affordability looks like with all of the complex policies embedded in the built environment,\" Blinder said."
+        },
+        {
+          "kind": "text",
+          "text": "\"That idea was very much present in these preconceptions I had while I was biking throughout the city delivering food, especially with what affordable housing often ends up looking like, how people who are rent burdened are depicted, or people who live in NYCHA housing are represented in rent burden datasets.\""
+        },
+        {
+          "kind": "text",
+          "text": "Blinder primarily used data from the American Community Survey for the project, combining the median share of income spent on rent and the percentage of renter households spending at least half of their income on housing, according to his website dedicated to the project ."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_col_3.jpg",
+          "alt": "Ground Truth by Justin Blinder"
+        },
+        {
+          "kind": "text",
+          "text": "A tiny arm applies resistance when bikers are in areas with higher rent burden His research and data models are stored in the device, which in turn \"applies tension\" to the front brakes as a biker passes through the city."
+        },
+        {
+          "kind": "text",
+          "text": "\"In areas with greater housing pressure, it applies more resistance; in more affordable areas, it releases that tension,\" reads a project description."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_col_5.jpg",
+          "alt": "CitiBike breaks"
+        },
+        {
+          "kind": "text",
+          "text": "The project is meant to broaden the user's understanding of affordability data The small, grey machine clamps onto the front fork of a CitiBike. Blinder said he worked with an industrial designer on its creation and designed it to be installed with minimal effort."
+        },
+        {
+          "kind": "text",
+          "text": "A tiny screen displays the local rent burden percentile as riders pass through the area, and a QR code that leads to the project website."
+        },
+        {
+          "kind": "text",
+          "text": "Read: Riksbyggen creates Sweden's smallest apartments to \"make the housing crisis tangible\" Building it was \"maybe the easiest part of the project\", according to Blinder. The artist says it consists of four main parts – a tiny computer called an ESP32S3, an SD card with Blinder's dataset, a GPS system and a servo motor with a tiny arm attached to it that reaches out to control the brakes."
+        },
+        {
+          "kind": "text",
+          "text": "According to the artist, the data is highly localised and can change even between blocks. Blinder also noted that Citi Bike docks themselves can illustrate differences in the city based on where they are available."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_col_7.jpg",
+          "alt": "CitiBike breaks"
+        },
+        {
+          "kind": "text",
+          "text": "Blinder hopes to convert the project into an open-source resource \"Urban infrastructure isn't just experienced functionally – it's also experienced symbolically as a set of different social signals about who places are for, who it's being redesigned for, and what kind of changes are coming in the future, and so the same bike lane or city bike dock can signify access or safety to one person, but also displacement to someone else.\""
+        },
+        {
+          "kind": "text",
+          "text": "Blinder said that, for safety reasons, the device is not fixed to any public bikes. Instead, he's organised group tours where volunteers can experience the project with the help of sponsor Idle Hands, a Brooklyn-based incubator."
+        },
+        {
+          "kind": "text",
+          "text": "He said he hopes to eventually transform the project into an open-source resource, where others can create their own Ground Truth device."
+        },
+        {
+          "kind": "text",
+          "text": "\"A lot of my projects try to take traditional representations and problematize them, make them a bit less stable, and to take the data off the screen and really put it back in contact with the streets, our bodies, and a lot of the assumptions we have about places and the built environment,\" said Blinder."
+        },
+        {
+          "kind": "text",
+          "text": "Conceptual tools for bringing awareness to affordability were also recently used in Sweden with tiny housing units by Developer Riksbyggen and creative agency BBDO ."
+        },
+        {
+          "kind": "text",
+          "text": "Earlier this year, an ADU initiative was rolled out by New York mayor Zohran Mamdani in light of ongoing affordability issues in the city,"
+        },
+        {
+          "kind": "text",
+          "text": "The photography is courtesy of Justin Blinder."
+        },
+        {
+          "kind": "text",
+          "text": "The post This device slows Citi Bikes in \"rent-burdened\" New York blocks appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/03/justin-blinder-citibike-ground-truth-new-york-city-housing",
+      "author": "Ellen Eberhardt",
+      "publishedAt": "2026-09-03T18:35:53.000Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Technology",
+        "USA",
+        "Housing",
+        "New York City",
+        "Electric bikes",
+        "Bike sharing"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_sq-1-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "이 장치는 뉴욕의 '임대료가 부담스러운' 블록에서 시티 바이크의 속도를 늦춥니다",
+      "summaryKo": "뉴욕 아티스트 저스틴 블라인더는 '주택 압박이 심한' 지역을 통과하는 도시의 유료 공유 자전거를 감속시키는 장치를 만들었습니다. Ground Truth 프로젝트를 위해 블라인더는 데이터와 디자인 배경, 그리고 자전거 메신저 경험을 결합해 3D 프린팅 모델을 만들었습니다. 이 장치는 '임대료가 부담스러운' 뉴욕 블록 앱에서 시티 바이크의 속도를 감당합니다",
+      "bodyKo": [
+        "뉴욕 예술가 저스틴 블라인더는 도시의 유료 공유 자전거가 \"주택 압박이 심한\" 지역을 지날 때 속도를 줄이는 장치를 만들었습니다.",
+        "Ground Truth 프로젝트를 위해 블라인더는 데이터와 디자인 배경, 그리고 자전거 메신저로서의 경험을 결합해 시티 바이크의 브레이크를 조작하는 3D 프린팅 장치를 만들었습니다.",
+        "이 장치는 임대료 부담, 즉 가구가 임대료와 공과금에 지출하는 비율이 높은 지역에서는 그 속도를 늦춥니다.",
+        "저스틴 블라인더는 뉴욕시의 주택 가격 부담에 물리적으로 반응하는 기계를 만들었습니다. \"도시는 지도처럼 느껴지지 않고, 제가 마주하던 정말 급격히 다른 조건들의 연속처럼 느껴지기 시작했습니다.\"라고 블라인더는 Dezeen과의 인터뷰에서 말했습니다.",
+        "이로 인해 예술가는 \"만약 저렴함이 도시에 그려진 것이 아니라, 실제로 이동해야 하는 지형의 일부가 된다면 어떨까?\"라고 물었습니다.",
+        "이 프로젝트는 주택 데이터를 물리적으로 구현하는 것을 목표로 합니다.",
+        "이 차량은 시티바이크의 앞 포크에 고정됩니다. 블라인더는 \"복잡한 정책들이 건축 환경에 내재되어 있어 저렴함이 시각적으로 어떤 모습인지 이해하기가 매우 어렵습니다.\"라고 말했습니다.",
+        "\"그 생각은 제가 도시를 자전거로 돌아다니며 음식을 배달할 때 가졌던 선입견 속에 깊이 존재했습니다. 특히 저렴한 주택이 어떻게 보일지, 임대료 부담을 느끼는 사람들이 어떻게 묘사되는지, 또는 NYCHA 주택에 거주하는 사람들이 임대료 부담 데이터셋에서 어떻게 표현되는지 등을 고려하면 더욱 그렇습니다.\"",
+        "블라인더는 주로 미국 커뮤니티 조사(American Community Survey) 데이터를 사용했으며, 임대료에 지출된 소득의 중간 비중과 임차인 가구가 소득의 절반 이상을 주택에 지출하는 비율을 합산했다고 그의 프로젝트 전용 웹사이트에 밝혔습니다.",
+        "작은 팔이 자전거 이용자가 임대료가 높은 지역에 있을 때 저항을 가합니다. 그의 연구와 데이터 모델은 이 장치에 저장되어, 자전거 이용자가 도시를 지날 때 앞 브레이크에 '장력을 가합니다'.",
+        "\"주택 압력이 큰 지역에서는 저항이 더 강해진다; 더 저렴한 지역에서는 그 긴장을 해소한다\"고 프로젝트 설명은 적혀 있다.",
+        "이 프로젝트는 사용자의 저렴한 가격 데이터에 대한 이해를 넓히기 위한 것입니다. 작고 회색인 기계가 시티바이크의 앞 포크에 고정됩니다. 블라인더는 산업 디자이너와 함께 이 기계를 제작했고, 최소한의 노력으로 설치할 수 있도록 설계했다고 말했습니다.",
+        "작은 화면에는 승객이 지나갈 때 발생하는 지역 임대료 부담 백분위수와 프로젝트 웹사이트로 연결되는 QR 코드가 표시됩니다.",
+        "읽어보세요: Riksbyggen, 스웨덴에서 가장 작은 아파트를 만들어 \"주택 위기를 실체화하기 위함\" 블라인더에 따르면 이 건물은 \"아마도 프로젝트에서 가장 쉬운 부분\"이었다고 합니다. 작가는 이 건물이 네 가지 주요 부분으로 구성되어 있다고 말합니다 – ESP32S3이라 불리는 작은 컴퓨터, 블라인더의 데이터셋이 담긴 SD 카드, GPS 시스템, 그리고 브레이크를 제어하는 작은 팔이 달린 서보 모터입니다.",
+        "작가에 따르면, 데이터는 매우 지역적으로 위치해 있어 블록 간에도 달라질 수 있다고 합니다. 블라인더는 또한 시티 바이크 부두 자체가 위치에 따라 도시 내 차이를 보여줄 수 있다고 언급했습니다.",
+        "블라인더는 이 프로젝트를 오픈소스 자료로 전환하기를 희망합니다. \"도시 인프라는 단순히 기능적으로 경험되는 것이 아니라, 장소가 누구를 위한 것인지, 누구를 위해 재설계되고 있는지, 앞으로 어떤 변화가 올지에 대한 다양한 사회적 신호의 집합으로도 상징적으로 경험됩니다. 그래서 같은 자전거 도로나 도시 자전거 부두가 한 사람에게는 접근이나 안전을 의미할 수 있지만, 다른 사람에게는 이동을 의미할 수 있습니다.\"",
+        "블라인더는 안전상의 이유로 이 장치가 공공 자전거에 고정되어 있지 않다고 말했다. 대신 그는 브루클린에 기반을 둔 후원사인 Idle Hands의 도움을 받아 자원봉사자들이 프로젝트를 체험할 수 있는 단체 투어를 조직했다.",
+        "그는 궁극적으로 이 프로젝트를 오픈 소스 자료로 전환하여 다른 이들이 자신만의 Ground Truth 장치를 만들 수 있기를 희망한다고 말했습니다.",
+        "\"제 많은 프로젝트는 전통적인 표현을 문제 삼고, 조금 덜 안정적으로 만들며, 화면에서 데이터를 떼어내어 거리, 우리의 몸, 그리고 장소와 건축 환경에 대한 많은 가정과 다시 연결시키려 합니다,\"라고 블라인더는 말했습니다.",
+        "최근 스웨덴에서는 개발업체 Riksbyggen과 크리에이티브 에이전시 BBDO가 작은 주택 단위를 통해 저렴한 가격에 대한 인식을 높이기 위한 개념적 도구들이 사용되었습니다.",
+        "올해 초, 뉴욕 시장 조란 맘다니는 도시의 지속적인 경제적 부담 문제를 고려해 ADU 이니셔티브를 도입했습니다.",
+        "사진은 저스틴 블라인더가 제공했습니다.",
+        "이 장치는 \"임대료가 부담스러운\" 뉴욕 블록에서 시티 바이크를 느리게 한다\"는 글이 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "fight-aging:957f8f7ec7",
+      "slug": "senescent-microglia-secrete-dlk1-which-causes-dysfunction-in-957f8f",
+      "titleOriginal": "Senescent Microglia Secrete DLK1, Which Causes Dysfunction in the Aging Brain",
+      "summaryOriginal": "Senescent cells accumulate with age in tissues throughout the body, disrupting tissue structure and function with inflammatory secretions. The growing burden of senescent cells is an important contributing cause of degenerative aging. A cell becomes senescent in response to damage induced by some form of stress, or more often when a somatic cell reaches the Hayflick limit on cellular replication. ",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Senescent cells accumulate with age in tissues throughout the body, disrupting tissue structure and function with inflammatory secretions . The growing burden of senescent cells is an important contributing cause of degenerative aging. A cell becomes senescent in response to damage induced by some form of stress, or more often when a somatic cell reaches the Hayflick limit on cellular replication . In youth senescent cells are efficiently cleared by the immune system, but immune system aging allows senescent cells to linger and grow in number. Immune cells themselves are prone to reaching the Hayflick limit and entering replicative senescence because they respond to a variety of issues with greater replication to multiply their efforts."
+        },
+        {
+          "kind": "text",
+          "text": "Research into neurodegenerative conditions and the state of the aging brain has increasingly focused on maladaptive behavior on the part of microglia , innate immune cells resident in the central nervous system that are analogous to macrophages elsewhere in the body. Microglia do not just attack pathogens and malfunctioning cells, but also participate in normal tissue maintenance and aid in maintenance of neural circuits. When microglia become too inflammatory , whether or not this includes entering a senescent state, the brain suffers. Inflammatory microglia appear to be an important component of neurodegenerative conditions and age-related deterioration in cognitive function. As today's open access paper shows, senescent microglia are clearly harmful in specific ways."
+        },
+        {
+          "kind": "text",
+          "text": "Senescent microglia with shortened telomeres secrete soluble DLK1 to induce aging-associated hypomyelination and neuronal dysfunction"
+        },
+        {
+          "kind": "text",
+          "text": "Critical shortening of telomeres by the end replication problem induces cell-cycle arrest and causes the cell to enter replicative senescence. Glial cells in the brain (e.g., microglia, astrocytes , and oligodendrocytes ) retain proliferative capabilities after development and become more proliferative in response to damage to the central nervous system (CNS) and other stressors. Thus, glial cells are under heavy replicative stress, and telomere shortening is detected in the white matter , whereas telomere length in the gray matter remains relatively unchanged."
+        },
+        {
+          "kind": "text",
+          "text": "Glial senescence has been suggested to transform the brain from normal aging to pathological aging and to drive the buildup and spread of AD pathologies. Microglia are the resident macrophages in the CNS responsible for immune surveillance and innate immune responses to damage and pathogenic species. Microglia are susceptible to increased replicative stress associated with the reactivation of the proliferative program in response to neurodegenerative pathologies, including tauopathy and amyloid beta (Aβ) accumulation."
+        },
+        {
+          "kind": "text",
+          "text": "Here, we report direct evidence that senescent microglia exert detrimental influences on other cell types through an altered secretion profile. We investigated the brains of telomere-shortened mice and observed lipofuscinosis , hypomyelination , microglial atrophy, and cognitive deficits. Single-nucleus RNA sequencing (snRNA-seq) revealed accelerated glial aging and elevated microglial senescence pathways. In a senescence model of human induced pluripotent stem cell (iPSC) -derived microglia, delta-like non-canonical Notch ligand 1 (DLK1) was identified as a novel senescence-associated ligand . Soluble DLK1 (sDLK1) was increased in the cerebrospinal fluid of telomere-shortened and naturally aged mice, and this increase was eliminated by microglial depletion."
+        },
+        {
+          "kind": "text",
+          "text": "In vivo elevation of sDLK1 caused hypomyelination and blocked oligodendrocyte lineage progression, and these effects demonstrate the detrimental nature of excessive sDLK1. In human iPSC systems, sDLK1 impaired oligodendrocyte maturation and altered calcium signaling in excitatory neurons . These findings identify microglial senescence as a core consequence of telomere shortening and reveal sDLK1 as a microglia-derived senescence ligand that drives oligodendrocyte and neuronal dysfunction in aging."
+        }
+      ],
+      "sourceName": "Fight Aging!",
+      "sourceUrl": "https://www.fightaging.org/",
+      "originalUrl": "https://www.fightaging.org/archives/2026/09/senescent-microglia-secrete-dlk1-which-causes-dysfunction-in-the-aging-brain",
+      "author": "Reason",
+      "publishedAt": "2026-09-03T18:16:33.000Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
+      "language": "en",
+      "keywords": [
+        "Medicine, Biotech, Research"
+      ],
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 3,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "opinion",
+      "titleKo": "노화 미세아교세포는 DLK1을 분비하여 노화 뇌의 기능 장애를 일으킵니다",
+      "summaryKo": "노화 세포는 나이가 들면서 몸 전체의 조직에 축적되어 염증성 분비물로 조직 구조와 기능을 방해합니다. 노화 세포의 증가하는 부담은 퇴행성 노화의 중요한 원인 중 하나입니다. 세포는 어떤 형태의 스트레스로 인한 손상에 반응하거나, 더 흔히 체세포가 세포 복제의 하이플릭 한계에 도달했을 때 노화됩니다.",
+      "bodyKo": [
+        "노화 세포는 나이가 들면서 몸 곳곳의 조직에 축적되어 염증성 분비물로 조직 구조와 기능을 방해합니다. 노화 세포의 증가하는 부담은 퇴행성 노화의 중요한 원인입니다. 세포는 어떤 형태의 스트레스로 인한 손상에 반응하거나, 더 흔히 체세포가 세포 복제의 헤이플릭 한계에 도달할 때 노화됩니다. 청소년기에는 노화 세포가 면역 체계에 의해 효율적으로 제거되지만, 면역계 노화로 인해 노화 세포가 오래 머물며 수가 증가할 수 있습니다. 면역 세포 자체도 다양한 문제에 더 많은 복제로 반응하여 노력을 증식시키기 때문에 하이플릭 한계에 도달해 복제 노화세포에 들어가기 쉽습니다.",
+        "신경퇴행성 질환과 노화 뇌 상태에 대한 연구는 점점 중추신경계에 거주하는 선천적 면역 세포인 미세아교세포의 부적응적 행동에 초점을 맞추고 있습니다. 미세아교세포는 신체 내 다른 곳의 대식세포와 유사합니다. 미세아교세포는 병원체와 기능 장애 세포를 공격하는 것뿐만 아니라, 정상 조직 유지와 신경 회로 유지에도 참여합니다. 미세아교세포가 너무 염증적이 되면, 노화 상태에 들어가든 아니든 뇌가 고통받습니다. 염증성 미세아교세포는 신경퇴행성 질환과 노화 관련 인지 기능 저하의 중요한 구성 요소로 보입니다. 오늘 공개된 논문에서 보듯, 노화 미세아교세포는 특정 방식으로 명백히 해롭습니다.",
+        "텔로미어가 짧아진 노화 미세아세포는 용해성 DLK1을 분비하여 노화 관련 저수초화 및 신경 기능 장애를 유발합니다",
+        "최종 복제 문제로 인한 텔로미어의 임계적 단축은 세포 주기 정지를 유도하고 세포를 복제성 노화세포로 이끕니다. 뇌의 교세포(예: 미세교세포, 성상교세포, 희소돌기세포)는 발달 후에도 증식 능력을 유지하며, 중추신경계(CNS) 및 기타 스트레스 요인 손상에 반응하여 증식성이 증가합니다. 따라서 교세포는 강한 복제 스트레스를 받으며, 백질에서 텔로미어 단축이 감지되는 반면, 회백질의 텔로미어 길이는 비교적 변하지 않습니다.",
+        "교세포 노화세포는 뇌를 정상 노화에서 병리적 노화로 전환시키고, AD(알츠병) 병리의 축적과 확산을 촉진하는 것으로 제안되었습니다. 미세아교세포는 중추신경계에 위치한 상주 대식세포로, 면역 감시와 손상 및 병원성 종에 대한 선천적 면역 반응을 담당합니다. 미세아교세포는 타우오병증과 아밀로이드 베타(Aβ) 축적을 포함한 신경퇴행성 병리에 반응하여 증식 프로그램의 재활성화와 관련된 복제 스트레스 증가에 취약합니다.",
+        "본서에서는 노화 미세아교세포가 변화된 분비 프로필을 통해 다른 세포 유형에 해로운 영향을 미친다는 직접적인 증거를 보고합니다. 텔로미어 단축 생쥐의 뇌를 조사하여 지방 장화증, 저수초화, 미세아교세포 위축, 인지 기능 결손을 관찰하였습니다. 단핵 RNA 시퀀싱(snRNA-seq)은 교세포 노화 가속화와 미세아교세포 노화세포 경로 상승을 밝혀냈습니다. 인간 유도 다능 줄기세포(iPSC) 유래 미세아교세포의 노화세포 모델에서, 델타 유사 비정식 노치 리간드 1(DLK1)이 새로운 노화세포 관련 리간드로 확인되었습니다. 용해성 DLK1(sDLK1)은 텔로미어로 단축되고 자연적으로 나이가 든 쥐의 뇌척수액에서 증가했으며, 이 증가는 미세아교세포 고갈로 제거되었습니다.",
+        "생체 내 sDLK1 증가는 저수초화를 유발하고 올리고덴드로사이트의 계통 진행을 차단했으며, 이러한 효과는 과도한 sDLK1의 해로운 특성을 보여줍니다. 인간 iPSC 시스템에서 sDLK1은 올리고덴드로사이트의 성숙을 저해하고 흥분성 뉴런의 칼슘 신호를 변화시킵니다. 이 발견들은 미세아노화세포가 텔텔로미어 단축의 핵심 결과임을 확인하고, sDLK1이 미세아질에서 유래한 노화세포 리간드로서 올리고덴드로사이트와 노화 시 신경 기능 장애를 유발한다는 사실을 밝혀냅니다."
+      ]
+    },
     {
       "id": "toy-book:5696c29a33",
       "slug": "ethical-supply-chain-program-heat-stress-5696c2",
@@ -92,7 +640,7 @@
       "originalUrl": "https://toybook.com/tb-september-2026-compliance",
       "author": "Guest Author",
       "publishedAt": "2026-09-03T18:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Compliance & Regulations",
@@ -323,7 +871,7 @@
       "originalUrl": "https://toybook.com/goliath-sanrio-suite-spaces-line-launch",
       "author": "Samantha Connell",
       "publishedAt": "2026-09-03T17:05:13.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "News",
@@ -539,7 +1087,7 @@
       "originalUrl": "https://toybook.com/stern-pinball-fallout-hands-on",
       "author": "James Zahn",
       "publishedAt": "2026-09-03T17:02:49.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -786,7 +1334,7 @@
       "originalUrl": "https://toybook.com/emotional-support-nfl-footballs-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-03T16:59:51.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -944,7 +1492,7 @@
       "originalUrl": "https://toybook.com/video-games-september-3",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-03T16:58:42.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -1063,7 +1611,7 @@
       "originalUrl": "https://longevity.technology/news/veradermics-builds-820m-war-chest-for-oral-hair-loss-pill",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-03T16:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -1154,7 +1702,7 @@
       "originalUrl": "https://toybook.com/crunchyroll-brand-licensing-europe-2026",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-03T15:20:23.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Brand Licensing Europe",
@@ -1224,7 +1772,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/lifespanningrx-launches-peptide-explorer-for-clinician-guided-reviews",
       "publishedAt": "2026-09-03T14:41:14.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -1282,7 +1830,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/minicircle-named-xprize-healthspan-finalist",
       "publishedAt": "2026-09-03T14:36:14.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -1375,7 +1923,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/imagina-abstract-tiles-casalgrande-padana-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T13:00:22.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -1665,7 +2213,7 @@
       "originalUrl": "https://toybook.com/fast-and-furious-25th-anniversary-feature",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-03T13:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -1752,7 +2300,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/genome-sequencing-of-bat-species-in-search-of-causes-of-longevity",
       "author": "Reason",
       "publishedAt": "2026-09-03T10:22:31.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -2036,7 +2584,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/london-design-festival-2026-highlights",
       "author": "Gabriella Wong",
       "publishedAt": "2026-09-03T10:15:08.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2134,7 +2682,7 @@
         },
         {
           "kind": "text",
-          "text": "Dezeen has contacted Zara regarding the accusation, but the brand declined to comment."
+          "text": "Dezeen has contacted Zara Home regarding the accusation, but the brand declined to comment."
         },
         {
           "kind": "text",
@@ -2203,17 +2751,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/emeco-sues-zara-home-20-06-chair-norman-foster",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-03T09:45:43.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Furniture",
         "all",
         "Design",
         "News",
-        "Norman Foster",
+        "Chairs",
         "Copyright",
-        "Zara",
-        "Chairs"
+        "Emeco",
+        "Norman Foster"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/emeco-sues-zara-home-20-06-chair-norman-foster_dezeen_2364_sq_0-411x411.jpg"
@@ -2232,7 +2780,7 @@
         "Emeco는 올해 초 독일 함부르크 지방법원에 소송을 제기했으며, 스페인 브랜드 Zara Home이 20-06 컬렉션의 외관과 보호 디자인 언어를 불법적으로 복제했다고 주장했습니다.",
         "가구 브랜드는 자라 홈의 스테인리스 스틸 구조 의자와 스테인리스 스틸 바 스툴이 20-06 의자와 20-06 스툴의 디자인을 침해한다고 주장합니다.",
         "\"우리는 원본 디자인과 창작 및 제조 공정의 완전성을 보호하는 데 전념하고 있습니다,\"라고 Emeco 회장 그렉 부흐바인더가 말했습니다.",
-        "Dezeen은 이 혐의와 관련해 Zara에 연락했으나, 브랜드는 언급을 거부했습니다.",
+        "Dezeen은 이 혐의와 관련해 Zara Home에 연락했으나, 브랜드는 논평을 거부했다.",
         "소송, 생산 중단 요구와 손해배상",
         "2006년에 출시된 에메코 부품은 포스터 + 파트너스의 창립자 포스터가 1944년 미국 해군을 위해 개발된 브랜드의 1006 네이비 체어의 현대적 버전으로 디자인했습니다.",
         "노먼 포스터(위)는 Emeco를 위해 20-06 체어를 디자인했습니다. Emeco와 Zara 홈 제품 모두 앞쪽 다리 위로 곡선형으로 곡선을 이루는 금속 마감의 의자와 의자를 포함하고 있습니다.",
@@ -2323,7 +2871,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/strut-table-pouf-yagmur-koylu-yet-design-studio-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T09:30:31.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -2461,7 +3009,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/poor-collectives-debut-rug-collection-borrows-shapes-from-londons-trellick-tower",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-03T08:00:51.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2677,7 +3225,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/bin-wu-design-language-timeless-east",
       "author": "Christina Yao",
       "publishedAt": "2026-09-03T05:00:16.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2860,7 +3408,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/laiout-ai-floor-plan-generator-jll-design",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T04:00:19.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2963,7 +3511,7 @@
       "originalUrl": "https://toybook.com/baby-safety-alliance-baby-safety-month-news",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-02T19:36:54.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "News",
@@ -3031,7 +3579,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/senescent-cells-in-metabolic-disorders",
       "author": "Reason",
       "publishedAt": "2026-09-02T18:22:53.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -3168,7 +3716,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/five-bathroom-products-villeroy-boch-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-02T18:00:49.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -3214,7 +3762,7 @@
       "id": "lifespan-io:8cb78c75c6",
       "slug": "invested-in-her-campaign-extends-fundraising-deadline-8cb78c",
       "titleOriginal": "Invested in Her Campaign Extends Fundraising Deadline",
-      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October 1, 2026, as they work toward a $250,000 fundraising target to support early-stage research into ovarian […]",
+      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -3258,7 +3806,7 @@
       "originalUrl": "https://lifespan.io/invested-in-her-campaign-extends-fundraising-deadline",
       "author": "Press release",
       "publishedAt": "2026-09-02T17:55:38.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -3275,7 +3823,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "그녀의 캠페인에 투자하다 모금 마감 연장",
-      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 '투자된 그녀' 캠페인의 마감일을 2026년 10월 1일로 연장하며, 난소 [...] 초기 단계 연구를 지원하기 위한 25만 달러 모금 목표를 향해 노력하고 있습니다 [...]",
+      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학 재단은 'Invested in Her 캠페인'의 마감일을 [...]로 연장하고 있습니다.",
       "bodyKo": [
         "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인'의 마감일을 2026년 10월 1일로 연장하며, 난소 노화와 폐경에 관한 초기 연구 지원을 위한 25만 달러 모금 목표를 향해 나아가고 있습니다.",
         "수억 명의 여성이 남성보다 더 오래 살지만 건강이 좋지 않은 상태로 더 오랜 시간을 보냅니다. 이 격차를 유발하는 생물학적 원인은 난소 노화와 폐경기 전환에 뿌리를 두고 있으며, 이 분야는 의학에서 가장 자금이 부족한 분야 중 하나입니다. Invested IN Her 프로젝트는 엄마, 딸, 전 세계 여성들을 위해 그 격차를 해소하는 과학 연구를 위해 25만 달러를 모금하고 있습니다.",
@@ -3476,7 +4024,7 @@
       "originalUrl": "https://toybook.com/disguise-2026-halloween-costumes-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-02T17:05:23.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -3520,127 +4068,6 @@
         "관련 기사: 매텔, 최초의 몬스터 하이 X 아메리칸 걸 인형 선보임",
         "더 알고 싶다면 Disguise의 2026년 전체 카탈로그를 disguise.com 에서 확인하세요.",
         "소닉 더 헤지혹이 디스가이즈의 2026년 할로윈 코스튬 라인업에 빠르게 등장하다 이 글은 The Toy Book에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "toy-book:18e56adc13",
-      "slug": "funmax-x-disney-the-mouse-as-a-masterpiece-18e56a",
-      "titleOriginal": "FunMax x Disney: The Mouse As a Masterpiece",
-      "summaryOriginal": "A lifetime in the making, Mickey's silhouette serves as the foundation for a new line of premium vinyl collectibles. The post FunMax x Disney: The Mouse As a Masterpiece appeared first on The Toy Book .",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "From Disney Parks and animated films to toys, apparel, and home goods, the unmistakable silhouette of Mickey Mouse is everywhere. Next month, collectors and kids-at-heart can celebrate the icon through FunMax’s Shorts collection, a line of premium vinyl figures that leans into that famous form."
-        },
-        {
-          "kind": "text",
-          "text": "Following a soft launch in Mexico more than a decade ago, FunMax previewed the line’s wide release at Comic-Con International: San Diego ( SDCC ) in July. Social-friendly moments, including a large-scale, inflatable replica of Mickey and a jumbo golden figure, greeted fans at the show. At the Herrerabox booth, collectors could spin a wheel for a chance to take home a rare golden figure."
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/08/sept_funmax3.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "This golden Mickey was on display at SDCC. | Source: FunMax"
-        },
-        {
-          "kind": "text",
-          "text": "The collaboration between FunMax, Disney, and artist Herrerabox (Francisco Herrera) is the result of lifelong fandom: the motto for Shorts is “By Fans, For Fans!” Herrera, who designed the full collection, first visited Disneyland at the age of 6. “Understanding the legacy and vision of [Walt Disney] … defined my professional path and molded me into a multidisciplinary artist,” he explains."
-        },
-        {
-          "kind": "text",
-          "text": "“Consumers can feel when something is created with a genuine passion,” FunMax CEO Carlos Klarmann says. “This collection comes from a true Disney fan, artist, and collector whose vision is deeply connected to the Disney legacy.” For FunMax, an artist with a clear vision was paramount to connecting with fans. “The opportunity to partner with that creative vision and bring it to a global audience was very exciting for us,” Klarmann adds."
-        },
-        {
-          "kind": "text",
-          "text": "Herrera, whose favorite characters are Spider-Man and Aladdin’s Genie, grew up in the 1980s; his childhood was further shaped by popular toys of the decade, including Star Wars, Marvel, Gremlins, Ghostbusters, ThunderCats, and He-Man. He confirms enthusiastically that his “house is still full” of those toys today."
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/08/sept_funmax2.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "Shorts — Series 1 hits retail this fall. | Source: FunMax"
-        },
-        {
-          "kind": "text",
-          "text": "The legacy of his childhood and the influence of Disney and Mickey Mouse are evident in the Shorts collection, which evokes classic 2D animation while paying homage to modern characters, like Coco ’s Miguel, Minnie Mouse, the Cheshire Cat, Tigger, and Jack Skellington. Shorts aligns the artist’s many passions, too. “I have always considered myself a restless artist across various forms of expression,” Herrera shares. “Shorts brings all my passions together into a single product, using Mickey Mouse, the world’s most iconic figure, as a canvas for infinite artistic expression.”"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/08/ToyIndustry_AdobeStock.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "RELATED Circana: U.S. Toy Industry Delivers Strong Sales Growth in First Half of 2026"
-        },
-        {
-          "kind": "text",
-          "text": "The line launches at mass retail in October, with a fan-focused activation planned for New York Comic Con ( NYCC ), Oct. 8-11. Next year, the line expands to include mystery boxes and new characters. “As the collection continues to grow, we see tremendous opportunities to explore additional Disney worlds and bring even more of these beloved stories to fans around the world,” Klarmann says."
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/REVISED_TB_SEPT_DUALCOVERS.jpg",
-          "alt": "The Toy Book | 2026 Fall Toy & Licensing Preview Issue"
-        },
-        {
-          "kind": "text",
-          "text": "A version of this feature appears in The Toy Book ‘s 2026 Fall Toy & Licensing Preview Issue . Read the full issue here!"
-        },
-        {
-          "kind": "text",
-          "text": "Want The Toy Book delivered straight to your desk? Subscribe today and get seven big issues a year — packed with the stories, trends, and insights that keep you on the #pulseofplay."
-        },
-        {
-          "kind": "text",
-          "text": "The post FunMax x Disney: The Mouse As a Masterpiece appeared first on The Toy Book ."
-        }
-      ],
-      "sourceName": "The Toy Book",
-      "sourceUrl": "https://toybook.com/",
-      "originalUrl": "https://toybook.com/the-mouse-as-a-masterpiece",
-      "author": "Katherine Hill",
-      "publishedAt": "2026-09-02T16:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
-      "language": "en",
-      "keywords": [
-        "Collectibles",
-        "Consumer Products & Lifestyle",
-        "Features",
-        "Magazine",
-        "News",
-        "Product Launches",
-        "The Licensing Book",
-        "You're Never Too Old to Play (Kidults)"
-      ],
-      "image": {
-        "url": "https://toybook.com/wp-content/uploads/sites/4/2026/08/sept_funmax1.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "play",
-      "trustLevel": 2,
-      "careScore": 0,
-      "curiosityScore": 0.95,
-      "contentType": "news",
-      "titleKo": "펀맥스 x 디즈니: 걸작으로서의 쥐",
-      "summaryKo": "평생을 거쳐 만들어진 미키의 실루엣은 새로운 프리미엄 비닐 수집품 라인의 기반이 되었습니다. \"FunMax x Disney: 걸작으로서의 쥐\"라는 글은 The Toy Book에 처음 게재되었습니다.",
-      "bodyKo": [
-        "디즈니 파크와 애니메이션 영화부터 장난감, 의류, 가정용품까지, 미키 마우스의 독특한 실루엣이 어디에나 있습니다. 다음 달에는 수집가와 아이들이 FunMax의 프리미엄 비닐 피규어 라인인 FunMax의 쇼츠 컬렉션을 통해 이 아이콘을 축하할 수 있습니다. 이 컬렉션은 유명한 형태에 충실한 프리미엄 비닐 피규어 라인입니다.",
-        "10여 년 전 멕시코에서 소소한 출시를 마친 후, FunMax는 7월 코믹콘 인터내셔널: 샌디에이고(SDCC)에서 이 라인의 광범위한 출시를 미리 선보였습니다. 대형 팽창식 미키 복제품과 점보 골든 피규어 등 소셜 친화적인 순간들이 쇼에서 팬들을 맞이했습니다. 헤레라박스 부스에서는 수집가들이 희귀한 골든 피규어를 집으로 가져갈 기회를 위해 휠을 돌릴 수 있었습니다.",
-        "이 황금 미키는 SDCC에서 전시되었습니다. | 출처: FunMax",
-        "FunMax, 디즈니, 그리고 아티스트 헤레라박스(프란시스코 에레라)의 협업은 평생 팬덤의 결과물입니다. 쇼츠의 모토는 \"팬들에 의해, 팬들을 위해!\"입니다. 전체 컬렉션을 디자인한 에레라는 6살 때 처음으로 디즈니랜드를 방문했습니다. \"[월트 디즈니]의 유산과 비전을 이해하는 것은 ... 제 전문 경로를 정의했고 다학제 예술가로 성장시켰습니다,\"라고 그는 설명합니다.",
-        "\"소비자들은 진정한 열정으로 무언가가 만들어졌다는 것을 느낄 수 있습니다,\"라고 FunMax CEO 카를로스 클라만은 말합니다. \"이 컬렉션은 진정한 디즈니 팬이자 아티스트, 수집가로서 디즈니 유산과 깊이 연결된 비전을 가진 사람으로부터 나왔습니다.\" FunMax에게 명확한 비전을 가진 아티스트는 팬들과 소통하는 데 가장 중요했습니다. \"그 창의적인 비전과 협력하여 전 세계 관객에게 선보이는 기회는 매우 흥미로웠습니다,\"라고 클라만은 덧붙였습니다.",
-        "스파이더맨과 알라딘의 지니를 가장 좋아하는 캐릭터인 에레라는 1980년대에 자랐습니다; 그의 어린 시절은 스타워즈, 마블, 그렘린, 고스트버스터즈, 썬더캣, 히맨 등 그 시대의 인기 장난감들에 의해 더욱 형성되었습니다. 그는 오늘날에도 자신의 \"집이 여전히 그 장난감들로 가득 차 있다\"고 열정적으로 인정합니다.",
-        "단편 — 시리즈 1은 이번 가을에 소매점에 출시됩니다. | 출처: FunMax",
-        "그의 어린 시절의 유산과 디즈니, 미키 마우스의 영향은 Shorts 컬렉션에서 분명히 드러나는데, 이 컬렉션은 고전 2D 애니메이션을 떠올리게 하면서도 코코의 미구엘, 미니 마우스, 체셔 고양이, 티거, 잭 스켈링턴 같은 현대 캐릭터들에 경의를 표합니다. 쇼츠는 아티스트의 다양한 열정을 하나로 연결시켜 줍니다. \"저는 항상 다양한 표현 형태에서 끊임없이 활동하는 예술가라고 생각해왔습니다,\" 헤레라는 공유합니다. \"쇼츠는 세계에서 가장 상징적인 인물인 미키 마우스를 하나의 작품으로 모아 무한한 예술적 표현의 캔버스로 사용합니다.\"",
-        "관련 Circana: 미국 장난감 산업, 2026년 상반기 강력한 매출 성장",
-        "이 라인은 10월에 대중 소매점에서 출시되며, 10월 8일부터 11일까지 열리는 뉴욕 코믹콘(NYCC)에서 팬 중심 이벤트가 계획되어 있습니다. 내년에는 미스터리 박스와 새로운 캐릭터들도 라인업으로 확장됩니다. \"컬렉션이 계속 성장함에 따라 우리는 더 많은 디즈니 월드를 탐험하고 전 세계 팬들에게 이 사랑받는 이야기들을 더 많이 전할 엄청난 기회를 보고 있습니다,\"라고 클라만은 말합니다.",
-        "이 특집의 한 버전은 The Toy Book의 2026년 가을 장난감 및 라이선스 미리보기호에 실렸습니다. 전체 호는 여기에서 읽으실 수 있습니다!",
-        "The Toy Book을 바로 책상으로 받아보고 싶으신가요? 지금 구독하시면 연간 7권의 주요 호를 받아보세요 — #pulseofplay 속에 머무를 수 있는 이야기, 트렌드, 인사이트가 가득합니다.",
-        "이 글은 The Toy Book에 처음 게재되었습니다."
       ]
     },
     {
@@ -3711,7 +4138,7 @@
       "originalUrl": "https://longevity.technology/news/ai-hunts-new-uses-for-phase-3-metabolic-drug",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-02T15:40:53.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "AI/Digital",
@@ -4012,7 +4439,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/ten-designs-london-design-festival-new-designers-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-02T15:00:56.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4154,7 +4581,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/stripes-storage-jehs-laub-schonbuch-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-02T13:00:59.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Sideboards",
@@ -4272,17 +4699,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/range-rover-electric-car",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-09-02T10:45:37.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
         "Technology",
         "News",
-        "Land Rover",
         "Cars",
         "Transport",
-        "Electric cars"
+        "Electric cars",
+        "Land Rover"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/sq-range-rover-electric_dezeen_2364_col_0-411x411.jpg"
@@ -4340,7 +4767,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/an-adiponectin-receptor-agonist-promotes-muscle-growth-in-rats",
       "author": "Reason",
       "publishedAt": "2026-09-02T10:20:03.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -4440,7 +4867,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/danshuis-mad-rotterdam-dance-centre",
       "author": "Amy Peacock",
       "publishedAt": "2026-09-02T10:15:37.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4563,7 +4990,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/old-oak-common-hs2-station-wilkinsoneyre-construction",
       "author": "Starr Charles",
       "publishedAt": "2026-09-02T10:00:10.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4674,7 +5101,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/terramater-tiles-marazzi-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-02T09:30:54.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4784,7 +5211,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/tamagochi-ring",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-09-02T09:00:35.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4910,7 +5337,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/kelly-wearstler-fashion-collection-hm",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-02T08:00:19.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5005,7 +5432,7 @@
       "originalUrl": "https://www.creativeboom.com/news/the-royal-college-of-art-is-bringing-communication-and-design-together-in-one-school-and-thats-big-news",
       "author": "Tom May",
       "publishedAt": "2026-09-02T05:45:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "News"
@@ -5217,7 +5644,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/piercy-company-apartment-21",
       "author": "Amy Frearson",
       "publishedAt": "2026-09-02T05:00:22.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5314,7 +5741,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/immune-system-signatures-correlate-with-the-near-term-risk-of-developing-atherosclerosis",
       "author": "Reason",
       "publishedAt": "2026-09-01T18:03:38.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -5408,7 +5835,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/mystone-pietra-di-sicilia-tiles-marazzi-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-01T18:00:11.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5564,7 +5991,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/world-unfolding-book-human-knowledge-history-the-huntington",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-01T17:11:54.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Books",
@@ -5610,7 +6037,7 @@
       "id": "lifespan-io:591dca2c3c",
       "slug": "rejuvenation-roundup-august-2026-591dca",
       "titleOriginal": "Rejuvenation Roundup August 2026",
-      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become the CEOs of Their Own Health: Wei-Wu He is an unusual […]",
+      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become the CEOs of Their Own Health: Wei-Wu […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -5779,7 +6206,7 @@
       "originalUrl": "https://lifespan.io/rejuvenation-roundup-august-2026",
       "author": "Editorial",
       "publishedAt": "2026-09-01T16:52:55.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "News",
@@ -5796,7 +6223,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "리유버네이션 라운드업 2026년 8월",
-      "summaryKo": "노화를 제대로 풀어내려면 때로는 개인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용은 다음과 같습니다. 인터뷰 웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다: 웨이우 허는 독특한 [...]",
+      "summaryKo": "노화를 제대로 풀려야 한다는 것은 때로는 개인적인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용은 다음과 같습니다. 인터뷰 웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다: 웨이우 [...]",
       "bodyKo": [
         "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다.",
         "웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다 : 웨이우 허는 과학자와 사업가가 결합된 독특한 인물로, 현재 회사는 정밀 의료를 활용해 사람들의 수명을 연장하는 데 집중하고 있습니다.",
@@ -5958,7 +6385,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/01/mvrdv-woma-colourful-residential-miami",
       "author": "Ben Dreith",
       "publishedAt": "2026-09-01T15:00:19.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6006,341 +6433,6 @@
         "로테르담 고향 도시에서 스튜디오는 최근 '신세계의 경이로움'이라는 초록 식물로 덮인 둥근 부풀어 오른 권 모음 디자인으로 큰 반향을 일으켰습니다.",
         "이 그림은 우리베 슈바르츠코프가 제공했습니다.",
         "MVRDV는 다채로운 마이애미 건물 디자인에서 \"인간적 규모를 우선시하다\"는 글이 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "dezeen:6ff2f69a3e",
-      "slug": "theatre-designed-to-mirror-emotional-arc-of-performance-6ff2f6",
-      "titleOriginal": "Theatre designed to mirror \"emotional arc of performance\" among projects by George Washington University",
-      "summaryOriginal": "Dezeen School Shows: a performing arts space for students influenced by the physical and emotional arc of performance itself is among the latest projects by George Washington University. Also featured is a communal housing project designed for families, and a hair salon that serves as a therapeutic environment for African American women. George Washington University The post Theatre designed to mi",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Dezeen School Shows: a performing arts space for students influenced by the physical and emotional arc of performance itself is among the latest projects by George Washington University ."
-        },
-        {
-          "kind": "text",
-          "text": "Also featured is a communal housing project designed for families, and a hair salon that serves as a therapeutic environment for African American women."
-        },
-        {
-          "kind": "text",
-          "text": "George Washington University Institution: George Washington University School: Corcoran School of the Arts and Design Course: Capstone Studio Tutors: Douglas Crawford and Melina Misri"
-        },
-        {
-          "kind": "text",
-          "text": "\"The Interior Architecture BFA programme at George Washington University's Corcoran School of the Arts and Design in Washington, DC, prepares emerging designers to shape thoughtful, engaging and responsive environments."
-        },
-        {
-          "kind": "text",
-          "text": "\"At the heart of Washington, DC's only CIDA-accredited programme is a rigorous studio sequence that develops conceptual thinking, technical knowledge, visual communication and an understanding of material, light and human experience."
-        },
-        {
-          "kind": "text",
-          "text": "\"Situated within an interdisciplinary arts school and major research university, students draw on Washington as an extended classroom while engaging with practising designers, alumni and professional partners."
-        },
-        {
-          "kind": "text",
-          "text": "\"The programme fosters experimentation, collaboration and a strong studio culture, equipping graduates to contribute to the profession with curiosity, confidence and purpose.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_1.jpg",
-          "alt": "Render of hair salon"
-        },
-        {
-          "kind": "text",
-          "text": "\"Hairitage is a hair salon and game cafe located in Shaw, DC, designed to unite the community through gameplay, culture and connection."
-        },
-        {
-          "kind": "text",
-          "text": "\"The salon provides African American women a therapeutic environment where they can relax, express themselves and build meaningful relationships."
-        },
-        {
-          "kind": "text",
-          "text": "\"The concept explores translating Shaw's vibrant personality into an immersive interior experience of dynamic contrast, using intersection, resulting in ultimate connectivity among visitors and creating a third place."
-        },
-        {
-          "kind": "text",
-          "text": "\"Reflecting the lively character of the neighbourhood, the contrasting forms draw on Black cultural influences, including the geometric patterns and organic curves reflective of nature found in African textiles.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Brianna Cole Course: Capstone Studio Tutor: Melina Misri Email: Briannacole2704[at]gmail.com"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_2.jpg",
-          "alt": "Architectural render of restaurant experience"
-        },
-        {
-          "kind": "text",
-          "text": "\"This project reimagines the omakase restaurant as an immersive overnight experience built around the life and practice of the chef."
-        },
-        {
-          "kind": "text",
-          "text": "\"Pairing an intimate dining ritual with an on-site chef's residence, the design dissolves the boundary between making and hosting, treating hospitality as something continuous rather than episodic."
-        },
-        {
-          "kind": "text",
-          "text": "\"Guests move through a sequenced series of spaces: a sake bar, omakase dining room, tea room and soak, each extending the experience beyond the meal itself."
-        },
-        {
-          "kind": "text",
-          "text": "\"Drawn from the logic of origami, the architecture translates folded geometry and material continuity into a spatial language that guides movement and perception, framing dining as an act of trust and shared ritual.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Fiona Sekerke Course: Capstone Studio Tutor: Douglas Crawford Email: fionasekerke[at]gmail.com"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_3.jpg",
-          "alt": "Render of restaurant"
-        },
-        {
-          "kind": "text",
-          "text": "The Silk Road: A Fine Dining Chinese Culinary Experience by Justin Liang"
-        },
-        {
-          "kind": "text",
-          "text": "\"Chinese cuisine has long been embedded in American culture, yet its history is often perceived as just quick take-out and overlooked entirely. This project set out to change that narrative."
-        },
-        {
-          "kind": "text",
-          "text": "\"By combining upscale dining with culinary education, the design creates a space where guests can enjoy and learn the stories behind this rich culinary tradition."
-        },
-        {
-          "kind": "text",
-          "text": "\"Inspired by the Silk Road, the concept of flowing expansion guided every design decision, where movement and space branch outward from a single origin, much like history itself."
-        },
-        {
-          "kind": "text",
-          "text": "\"The result is a culinary hot kitchen, learning kitchen and upscale dining space that honours its origins.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Justin Liang Course: Capstone Studio Tutor: Douglas Crawford Email: Justinliang109[at]gmail.com"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_4.jpg",
-          "alt": "Render of community housing space"
-        },
-        {
-          "kind": "text",
-          "text": "\"A communal housing project designed for families, this space reimagines the idea of a 'village' as an integrated support system."
-        },
-        {
-          "kind": "text",
-          "text": "\"Family dynamics are evolving, with traditional single-family households becoming difficult to manage and financially unattainable. This project responds by applying the communal housing model to family life."
-        },
-        {
-          "kind": "text",
-          "text": "\"At the core of the design, a central stair links residents through a continuous thread of movement and interaction."
-        },
-        {
-          "kind": "text",
-          "text": "\"Communal spaces extend from this core, intentionally positioned to encourage spontaneous encounters and integrate community into everyday routines."
-        },
-        {
-          "kind": "text",
-          "text": "\"Breaking down physical and social barriers, this design cultivates a community centred on collective support and shared experience.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Madeleine Keiser Course: Capstone Studio Tutor: Melina Misri Email: madbyrd[at]gmail.com"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_5.jpg",
-          "alt": "Render of bar area with sofas"
-        },
-        {
-          "kind": "text",
-          "text": "\"Verenne is an urban winery in Georgetown, Washington, DC, shaped by the concept of human erosion, where time, use and ritual leave a visible imprint on space."
-        },
-        {
-          "kind": "text",
-          "text": "\"It avoids direct references to traditional wineries, instead creating an atmosphere rooted in material authenticity and quiet transformation."
-        },
-        {
-          "kind": "text",
-          "text": "\"The front lounge along M Street supports a more social energy, while the Cady's Alley entry leads to a quieter sequence of tasting spaces."
-        },
-        {
-          "kind": "text",
-          "text": "\"Movement is less about circulation and more about choosing a tone of experience. Low, warm lighting and deeply textured surfaces place focus on presence, allowing the environment to be defined by the people within it.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Madison Nikic Course: Capstone Studio Tutor: Douglas Crawford Email: mgnikic[at]gmail.com"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_6.jpg",
-          "alt": "Render of bookstore cafe"
-        },
-        {
-          "kind": "text",
-          "text": "Aroma – a Bookstore Cafe by Natalie Sagnerova"
-        },
-        {
-          "kind": "text",
-          "text": "\"Aroma is a bookstore cafe located in the historic Georgetown neighbourhood of Washington, DC."
-        },
-        {
-          "kind": "text",
-          "text": "\"Bookstores and cafes have evolved beyond retail environments into 'third places' that foster community, productivity and connection throughout the day."
-        },
-        {
-          "kind": "text",
-          "text": "\"Aroma merges these experiences into a cohesive spatial storytelling."
-        },
-        {
-          "kind": "text",
-          "text": "\"The design is inspired by the transformation of coffee – from whole beans to crushed to finely ground – each stage releasing a distinct intensity of aroma."
-        },
-        {
-          "kind": "text",
-          "text": "\"This process becomes a metaphor for the building's atmosphere: the ground floor is rich and dense with sensory activity, while each ascending level gradually softens, creating a lighter, more diffuse experience of space, scent and interaction.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Natalie Sagnerova Course: Capstone Studio Tutor: Melina Misri Email: natalie.sagnerova[at]icloud.com"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_7.jpg",
-          "alt": "Render of Danish-inspired workplace"
-        },
-        {
-          "kind": "text",
-          "text": "Hygge Kontor: A Danish Style Workplace by Sophie Fridland"
-        },
-        {
-          "kind": "text",
-          "text": "\"Hygge Kontor transforms a Washington, DC-based architecture firm into a Danish-inspired workplace rooted in arbejdsglæde (happiness at work) and hygge (cosy contentment)."
-        },
-        {
-          "kind": "text",
-          "text": "\"Zoned areas balance open collaboration with focused quiet zones, while a public-facing cafe, lounge areas, sauna and cold plunge foster genuine connection and real conversation."
-        },
-        {
-          "kind": "text",
-          "text": "\"Nature-inspired greens, browns, pinks and blues, layered with warm textures, soft lighting, and slatted wood create acoustic comfort and visual warmth."
-        },
-        {
-          "kind": "text",
-          "text": "\"In a post-Covid world shaped by hybrid and remote work, the value of in-person connection has never been greater, especially for industries like design.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Sophie Fridland Course: Capstone Studio Tutor: Douglas Crawford Email: sefridland[at]gmail.com"
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/George-Washington-University_dezeen_2364_col_8.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "\"A space for isolated communities to peruse and share their food and wares. The non-white communities in the surrounding area reside in their own enclaves."
-        },
-        {
-          "kind": "text",
-          "text": "\"While the project does not argue to break communities apart, it seeks to be a space where people can come together to interact with others who differ from them."
-        },
-        {
-          "kind": "text",
-          "text": "\"As the movement between people with different points of view comes together, so is the importance of the use of areas designated for transition to facilitate connection."
-        },
-        {
-          "kind": "text",
-          "text": "\"The word 'flux' can be used to mean a transition, but can also be used to mean a bond.\""
-        },
-        {
-          "kind": "text",
-          "text": "Student: Thanh Dan Do Course: Capstone Studio Tutor: Melina Misri Email: tddreq[at]gmail.com"
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/01/theatre-emotional-arc-performance-george-washington-university-schoolshows",
-      "author": "Dezeen staff",
-      "publishedAt": "2026-09-01T15:00:04.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "School Shows",
-        "Student projects",
-        "Graduates",
-        "Corcoran School of the Arts and Design"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/08/Performing-Art-Centre_dezeen_2364_col_0-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "조지 워싱턴 대학교 프로젝트들 중 '감정적 공연의 곡선'을 반영하도록 설계된 연극",
-      "summaryKo": "디진 스쿨 쇼즈: 공연의 신체적·감정적 궤적에 영향을 받는 학생들을 위한 공연 예술 공간으로, 조지 워싱턴 대학교의 최신 프로젝트 중 하나입니다. 또한 가족을 위한 공동 주택 프로젝트와 아프리카계 미국인 여성들을 위한 치료 환경 역할을 하는 미용실도 포함되어 있습니다. 조지 워싱턴 대학교 이 포스트 시어터는 mi를 위해 설계되었습니다",
-      "bodyKo": [
-        "Dezeen School Shows: 공연의 신체적·감정적 궤적에 영향을 받는 학생들을 위한 공연 예술 공간으로, 조지 워싱턴 대학교의 최신 프로젝트 중 하나입니다.",
-        "또한 가족을 위한 공동 주택 프로젝트와 아프리카계 미국인 여성들을 위한 치료 환경 역할을 하는 미용실도 소개되어 있습니다.",
-        "조지 워싱턴 대학교 기관: 조지 워싱턴 대학교 스쿨: 코코란 예술 및 디자인 학교 과정: 캡스톤 스튜디오 튜터: 더글라스 크로포드와 멜리나 미스리",
-        "\"워싱턴 DC에 위치한 조지 워싱턴 대학교 코코란 예술디자인대학의 인테리어 건축 BFA 프로그램은 신진 디자이너들이 사려 깊고 흥미로우며 반응적인 환경을 형성할 수 있도록 준비시킵니다.",
-        "\"워싱턴 DC의 핵심에는 CIDA 인증을 받은 유일한 프로그램이 엄격한 스튜디오 시퀀스로, 개념적 사고, 기술 지식, 시각적 전달, 그리고 물질, 빛, 인간 경험에 대한 이해를 발전시킵니다.",
-        "\"학제간 예술 학교이자 주요 연구 대학 내에 위치한 이곳에서 학생들은 워싱턴을 확장된 교실로 활용하면서 현직 디자이너, 동문, 전문 파트너들과 교류합니다.",
-        "\"이 프로그램은 실험, 협업, 그리고 강한 스튜디오 문화를 촉진하여 졸업생들이 호기심과 자신감, 목적 의식을 가지고 직업에 기여할 수 있도록 돕습니다.\"",
-        "\"헤어리티지는 워싱턴 DC의 쇼에 위치한 미용실이자 게임 카페로, 게임플레이, 문화, 연결을 통해 커뮤니티를 하나로 묶기 위해 설계되었습니다.",
-        "\"이 살롱은 아프리카계 미국인 여성들에게 휴식을 취하고 자신을 표현하며 의미 있는 관계를 구축할 수 있는 치료 환경을 제공합니다.",
-        "\"이 개념은 쇼의 생기 넘치는 개성을 교차점을 활용해 역동적인 대비가 있는 몰입형 실내 경험으로 전환하는 것을 탐구하며, 이는 방문객들 간의 궁극적인 연결성을 이루고 제3의 공간을 창조하는 것입니다.",
-        "\"동네의 활기찬 특성을 반영하듯, 대조적인 형태들은 아프리카 직물에서 발견되는 기하학적 패턴과 자연을 반영하는 유기적 곡선을 포함한 흑인 문화적 영향을 받았습니다.\"",
-        "학생: 브리아나 콜 강좌: 캡스톤 스튜디오 튜터: 멜리나 미스리 이메일: Briannacole2704[at]gmail.com",
-        "\"이 프로젝트는 오마카세 레스토랑을 셰프의 삶과 실천을 중심으로 한 몰입형 하룻밤 경험으로 재구상합니다.",
-        "\"친밀한 식사 의식과 현장 셰프 거주지를 결합한 디자인은 제작과 호스팅의 경계를 허물고, 환대를 일단적인 것이 아닌 연속적인 것으로 다룹니다.",
-        "\"손님들은 사케 바, 오마카세 식당, 티룸, 소크 등 순차적인 공간을 거쳐 식사 자체를 넘어 경험을 확장합니다.",
-        "\"종이접기의 논리에서 영감을 받은 이 건축은 접힌 기하학과 물질적 연속성을 공간적 언어로 번역하여 움직임과 인식을 이끌며, 식사를 신뢰와 공유된 의식의 행위로 규정한다.\"",
-        "학생: 피오나 세커케 과정: 캡스톤 스튜디오 튜터: 더글라스 크로포드 이메일: fionasekerke[at]gmail.com",
-        "실크로드: 저스틴 리앙의 고급 중국 요리 경험",
-        "\"중국 요리는 오랫동안 미국 문화에 뿌리내려 왔지만, 그 역사는 종종 빠른 테이크아웃으로 인식되고 완전히 간과됩니다. 이 프로젝트는 그 이야기를 바꾸고자 했습니다.",
-        "\"고급 식사와 요리 교육을 결합함으로써, 손님들이 이 풍부한 요리 전통의 이야기를 즐기고 배울 수 있는 공간을 만듭니다.",
-        "\"실크로드에서 영감을 받은 흐름 확장의 개념은 모든 디자인 결정을 이끌었으며, 이동과 공간이 하나의 기원에서 갈라져 나가는 역사 자체와 같습니다.",
-        "\"그 결과는 그 기원을 존중하는 요리 핫 키친, 학습용 주방, 고급 식사 공간입니다.\"",
-        "학생: 저스틴 리앙 강좌: 캡스톤 스튜디오 튜터: 더글라스 크로포드 이메일: Justinliang109[at]gmail.com",
-        "\"가족을 위해 설계된 공동 주택 프로젝트로, 이 공간은 '마을'이라는 개념을 통합된 지원 시스템으로 재구상합니다.",
-        "\"가족 관계는 변화하고 있으며, 전통적인 단독 가구는 관리가 어렵고 경제적으로 달성하기 어려워지고 있습니다. 이 프로젝트는 공동 주택 모델을 가족 생활에 적용함으로써 대응합니다.",
-        "\"디자인의 핵심에는 중앙 계단이 주민들을 끊임없는 움직임과 상호작용의 실로 연결합니다.",
-        "\"공동체 공간은 이 핵심에서 시작되며, 즉흥적인 만남을 장려하고 공동체를 일상에 통합하도록 의도적으로 배치되어 있습니다.",
-        "\"물리적 및 사회적 장벽을 허물며, 이 디자인은 집단적 지지와 공유된 경험을 중심으로 한 공동체를 조성합니다.\"",
-        "학생: 마들렌 카이저 강좌: 캡스톤 스튜디오 튜터: 멜리나 미스리 이메일: madbyrd[at]gmail.com",
-        "\"베렌은 워싱턴 DC 조지타운에 위치한 도시 와이너리로, 인간의 침식이라는 개념에 의해 형성되었으며, 시간, 사용, 의식이 공간에 가시적인 흔적을 남깁니다.",
-        "\"전통적인 와이너리에 대한 직접적인 언급을 피하고, 대신 물질적 진정성과 조용한 변화에 뿌리를 둔 분위기를 만듭니다.",
-        "\"M 스트리트를 따라 있는 프론트 라운지는 더 사회적인 분위기를 제공하며, 케이디스 앨리 입구는 조용한 시음 공간의 연속으로 이어집니다.",
-        "\"움직임은 순환보다는 경험의 톤을 선택하는 데 더 가깝습니다. 낮고 따뜻한 조명과 깊은 질감의 표면은 존재감에 집중하게 하며, 그 안에 있는 사람들에 의해 환경을 정의하게 합니다.\"",
-        "학생: 매디슨 니킥 강좌: 캡스톤 스튜디오 튜터: 더글라스 크로포드 이메일: mgnikic[at]gmail.com",
-        "아로마 – 나탈리 사그네로바의 서점 카페",
-        "\"아로마는 워싱턴 DC의 역사적인 조지타운 지역에 위치한 서점 카페입니다.",
-        "\"서점과 카페는 소매 환경을 넘어 하루 종일 커뮤니티, 생산성, 연결을 촉진하는 '제3의 장소'로 진화했습니다.",
-        "\"아로마는 이러한 경험을 하나의 응집력 있는 공간적 스토리텔링으로 융합합니다.",
-        "\"디자인은 커피의 변형에서 영감을 받았다 – 통 원두에서 으깬 커피, 그리고 곱게 분쇄된 커피로, 각 단계마다 뚜렷한 향의 강도가 발산된다.",
-        "\"이 과정은 건물 분위기의 은유가 됩니다: 1층은 감각 활동으로 풍부하고 밀도가 높으며, 각 층은 점차 부드러워져 공간, 향기, 상호작용이 더 가볍고 확산된 경험을 만듭니다.\"",
-        "학생: 나탈리 사그네로바 강좌: 캡스톤 스튜디오 튜터: 멜리나 미스리 이메일: natalie.sagnerova[at]icloud.com",
-        "소피 프리들랜드의 『���게 콘토르: 덴마크식 직장",
-        "\"휘게 콘토르는 워싱턴 DC에 기반을 둔 건축 사무소를 덴마크에서 영감을 받은 직장으로 탈바꿈시켰으며, 이는 arbejdsglæde(일터에서의 행복)와 hygge(아늑한 만족감)에 뿌리를 두고 있습니다.",
-        "\"구역 구역은 개방적인 협업과 집중된 조용한 구역의 균형을 이루며, 공중을 향한 카페, 라운지 공간, 사우나, 냉수조는 진정한 연결과 진정한 대화를 촉진합니다.",
-        "\"Nature에서 영감을 받은 녹색, 갈색, 분홍, 파란색이 따뜻한 질감, 부드러운 조명, 그리고 나무판 나무로 겹쳐져 음향적 편안함과 시각적 따뜻함을 만들어냅니다.",
-        "\"하이브리드와 원격 근무가 형성된 포스트 코로나 시대에, 특히 디자인과 같은 산업에서 대면 연결의 가치는 그 어느 때보다 커졌습니다.\"",
-        "학생: 소피 프리들랜드 과정: 캡스톤 스튜디오 튜터: 더글라스 크로포드 이메일: sefridland[at]gmail.com",
-        "\"고립된 공동체들이 음식과 물품을 구경하고 나눌 수 있는 공간입니다. 주변 지역의 비백인 공동체들은 각자 거주하는 거주지에 있습니다.",
-        "\"이 프로젝트는 공동체를 분열시키려는 주장은 아니지만, 사람들이 자신과 다른 이들과 상호작용할 수 있는 공간이 되고자 합니다.",
-        "\"서로 다른 관점을 가진 사람들 간의 이동이 모이면서 연결을 촉진하기 위해 지정된 전환 구역의 중요성도 커지고 있습니다.",
-        "\"'플럭스'라는 단어는 전이(transition)를 의미할 수도 있지만, 유대(bond)를 의미할 수도 있습니다.\"",
-        "학생: 탄 단 도 과정: 캡스톤 스튜디오 튜터: 멜리나 미스리 이메일: tddreq[at]gmail.com"
       ]
     },
     {
@@ -6447,7 +6539,7 @@
       "originalUrl": "https://longevity.technology/news/who-decides-what-counts-as-longevity-medicine",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-01T15:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Clinics",
@@ -6525,7 +6617,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/nrf2-downregulation-in-oligodendrocytes-as-a-contributing-cause-of-cognitive-decline-in-mice",
       "author": "Reason",
       "publishedAt": "2026-09-01T10:22:57.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -6582,7 +6674,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/amyloid-%ce%b2-seeding-as-a-basis-for-a-blood-test-for-alzheimers-disease",
       "author": "Reason",
       "publishedAt": "2026-09-01T10:11:23.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -6683,7 +6775,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/08/marka27-ni-de-aqui-ni-de-alla-portraits",
       "author": "Grace Ebert",
       "publishedAt": "2026-08-31T18:28:51.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -6759,7 +6851,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/08/what-can-be-learned-about-aging-clocks-from-existing-clinical-trial-data-for-longevity-interventions",
       "author": "Reason",
       "publishedAt": "2026-08-31T18:12:46.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -6781,172 +6873,6 @@
         "노화 바이오마커는 연구자들이 10년에 걸친 임상시험 없이도 노화 개입의 영향을 신속히 모니터링할 수 있게 해줄 수 있습니다. 하지만 후생유전학적 시계와 같은 노화 바이오마커를 대리 평가 지표로 사용하기 전에는, 노화를 표적으로 하는 중재에 대한 반응성을 검증해야 합니다. 여기서는 51개의 공공 및 민간 종단 중재 연구를 통합한 TranslAGE를 큐레이션하며, 각 연구별로 16개의 주요 후생유전학적 시계와 94개의 DNA 메틸화(DNAm) 바이오마커를 계산하여 각 시계에서 관찰된 변화를 설명할 수 있습니다.",
         "이 데이터베이스를 사용하여 다양한 중재와 DNAm 바이오마커 전반에 걸친 반응성 패턴을 발견합니다. 예를 들어, 사망률이나 노화 속도를 예측하도록 훈련된 시계는 모든 중재에서 가장 강한 반응을 보이며 서로 일관된 결과를 보입니다; 약리학적 및 생활습관 중재는 DNAm 바이오마커로부터 가장 강한 반응을 이끌어냅니다; 연구 집단의 특성과 연구 기간은 DNAm 바이오마커가 중재에 반응하는 데 중요한 요인입니다. 더불어, 다중 하위 점수를 가진 시계(즉, '설명 가능한 시계')는 단일 점수 시계보다 중재의 반응성에 대한 특이성과 더 큰 메커니즘적 통찰을 제공합니다.",
         "이 발견들은 여러 검사, 연구 기간, 연구 집단 및 표본 크기를 최소화하기 위해 중재 선택과 특정 DNAm 바이오마커 하위 집합 선택을 안내함으로써 향후 임상시험 설계에 도움을 줄 수 있으며, 궁극적으로는 대체 노화 평가 지표로 사용할 수 있는 DNAm 바이오마커를 발견하는 데 기여할 수 있습니다."
-      ]
-    },
-    {
-      "id": "colossal:550c143556",
-      "slug": "contradiction-and-the-unknown-permeate-isaiah-lee-s-550c14",
-      "titleOriginal": "Contradiction and the Unknown Permeate Isaiah Lee’s Imaginative Dollhouse Paintings",
-      "summaryOriginal": "For Chicago artist Isaiah Lee, a dollhouse becomes the site of uncanny imaginations. Do stories and artists like this matter to you? Become a Colossal Member today and support independent arts publishing for as little as $7 per month. The article Contradiction and the Unknown Permeate Isaiah Lee’s Imaginative Dollhouse Paintings appeared first on Colossal .",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "With a teal roof and gabled windows, a colonial-style dollhouse is at the center of Isaiah Lee ’s practice. In his current body of work, the Chicago artist renders childhood toys that transition from objects of play and nostalgia into uncanny, animate entities. Set in the scaled-down rooms and landscape around the miniature home, Lee’s scenes channel the wonder and theatrics of the adolescent imagination, while confronting the ways these early experiences permeate one’s life."
-        },
-        {
-          "kind": "text",
-          "text": "Born into a fundamentalist Christian family in Missouri, the artist grapples with the contradictions within the teachings of his upbringing, alongside the lived reality of being a Black man in the U.S. In “Shepherd I,” a tiny green astronaut evokes Moses as he leads livestock through the house, while an enormous skull and concealed man loom in the shadows. The vast differences in scale within a single scene gesture toward the outsized impact of some encounters and how our memories have the capability of exaggerating the scope."
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-3.jpg",
-          "alt": "a painting by Isaiah Lee of a green army toy leading livestock through a doll house with a large skull nearby. a man hides beneath the stairs"
-        },
-        {
-          "kind": "text",
-          "text": "Narrative ripples throughout Lee’s paintings, with “Romeo and Juliet” and “Juliet” capturing two different points of view of the same scene. The artist’s ability to shift perspectives is a compelling world-building technique and, like his heavy use of shadow, positions each composition as an illuminated nook amid a vast network of the unknown. “They arrive at a moment when it feels necessary to return to childhood as a way of uncovering who we are and what good we are still capable of bringing forth,” he adds."
-        },
-        {
-          "kind": "text",
-          "text": "Darkness pervades many of the pieces, not necessarily in a sinister way but instead to suggest the omnipresence of the unknown and a sense of underlying fear. He writes that “faith cannot simply be abandoned but must be understood as an inheritance wrought into the body and the imagination.”"
-        },
-        {
-          "kind": "text",
-          "text": "Lee is preparing for a solo exhibition this fall at crosswalk in Chicago. Titled A Thief in the Night , the show nods to the Biblical notion that people need to repent in order to be “right with the Lord.” “For many, this warning creates a persistent sense of unease, fostering the belief that no amount of faithfulness is truly enough,” the artist says. “Life becomes a race against time, a race that cannot be won.”"
-        },
-        {
-          "kind": "text",
-          "text": "If you’re in Chicago, you can see some of Lee’s works through November 1 in an exhibition celebrating the city’s emerging artists at Hyde Park Art Center , and A Thief in the Night opens on October 16. Find more on Instagram ."
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-5.jpg",
-          "alt": "a wide painting by Isaiah Lee of a dollhouse scene surrounded by a melange of toys and a red textile with small feet sticking out"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-9.jpg",
-          "alt": "a painting by Isaiah Lee of a person seated on the floor with a cat and gun nearby"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-8.jpg",
-          "alt": "a painting by Isaiah Lee of a woman standing in an open doorway to a meadow with a small window in the clouds"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-7.jpg",
-          "alt": "a painting by Isaiah Lee of a child in a paper crown looking out a window while a green army man stands behind and a large skull looms in the corner"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-4.jpg",
-          "alt": "a painting by Isaiah Lee of a dollhouse, with a figure slumped over the porch. a boy hides between two pieces of cardboard in the background"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-2.jpg",
-          "alt": "a painting by isaiah lee of a figure standing in an open doorway making a gesture to reveal his shadow"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-1.jpg",
-          "alt": "a drawing by Isaiah Lee of a toy lego figure standing guard while a toy astronaut appears in an open doorway. a large head lies in the foreground"
-        },
-        {
-          "kind": "text",
-          "text": "“Courage” Do stories and artists like this matter to you? Become a Colossal Member today and support independent arts publishing for as little as $7 per month. The article Contradiction and the Unknown Permeate Isaiah Lee’s Imaginative Dollhouse Paintings appeared first on Colossal ."
-        }
-      ],
-      "sourceName": "Colossal",
-      "sourceUrl": "https://www.thisiscolossal.com/",
-      "originalUrl": "https://www.thisiscolossal.com/2026/08/isaiah-lee-paintings",
-      "author": "Grace Ebert",
-      "publishedAt": "2026-08-31T14:11:17.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
-      "language": "en",
-      "keywords": [
-        "Art",
-        "childhood",
-        "drawing",
-        "Isaiah Lee",
-        "painting",
-        "toys"
-      ],
-      "image": {
-        "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/08/lee-6.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "play",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "모순과 미지가 아이사야 리의 상상력 넘치는 돌하우스 그림들에 스며들어 있다",
-      "summaryKo": "시카고 예술가 아이제아 리에게 인형의 집은 기이한 상상력의 장소가 됩니다. 이런 이야기와 예술가들이 당신에게 중요한가요? 오늘 콜로설 멤버가 되어 월 7달러 만에 독립 예술 출판을 지원하세요. '모순과 미지의 침투' 아이제야 리의 상상력 넘치는 인형의 집 그림은 Colossal에 처음 게재되었습니다.",
-      "bodyKo": [
-        "청록색 지붕과 박공 창문을 가진 식민지 스타일의 인형의 집은 아이제아 리의 작업의 중심에 있다. 현재 시카고 예술가는 놀이와 향수의 대상에서 기묘하고 생명력 있는 존재로 전환되는 어린 시절 장난감들을 그려낸다. 미니어처 주택 주변의 축소된 방과 풍경을 배경으로 한 리의 장면들은 청소년의 상상력의 경이로움과 연극성을 전달하면서도, 이러한 초기 경험들이 삶에 어떻게 스며들고 있는지 직면한다.",
-        "미주리의 근본주의 기독교 가정에서 태어난 이 예술가는 자신의 성장 배경 가르침 내의 모순과 미국에서 흑인 남성으로서 살아가는 현실과 씨름한다. \"Shepherd I\"에서 작은 초록색 우주비행사가 모세를 연상시키며 가축을 집 안에서 이끌고, 거대한 해골과 숨겨진 남자가 그림자 속에 우뚝 서 있다. 한 장면 내 엄청난 규모 차이는 어떤 만남의 과도한 임팩트와 우리의 기억이 그 범위를 과장할 수 있음을 시사한다.",
-        "\"로미오와 줄리엣\"과 \"줄리엣\"은 같은 장면의 서로 다른 시점을 포착하며 이의 그림 전반에 걸쳐 서사가 흐른다. 작가의 시점을 바꾸는 능력은 매력적인 세계관 구축 기법이며, 그림자 사용과 마찬가지로 각 구성을 광대한 미지의 네트워크 속 조명된 공간으로 자리매김한다. \"이 작품들은 우리가 누구인지, 그리고 우리가 여전히 어떤 선을 만들어낼 수 있는지 발견하기 위해 어린 시절로 돌아가야 할 필요성을 느끼는 순간에 도착한다\"고 덧붙인다.",
-        "어둠은 많은 작품에 스며들어 있는데, 반드시 음산한 방식이라기보다는 미지의 모든 것이 만연하고 근본적인 두려움을 암시하기 위함이다. 그는 \"신앙은 단순히 버릴 수 없으며, 몸과 상상력에 새겨진 유산으로 이해되어야 한다\"고 쓴다.",
-        "리는 이번 가을 시카고 횡단보도에서 개인전을 준비 중이다. '밤의 도둑'이라는 제목의 이 전시는 사람들이 '주님과 함께하기 위해 회개해야 한다'는 성경적 개념에 경의를 표한다. \"많은 이들에게 이 경고는 지속적인 불안감을 불러일으키며, 아무리 충실해도 진정으로 충분하지 않다는 믿음을 키운다,\"고 작가는 말한다. \"인생은 시간과의 싸움이 되고, 이길 수 없는 싸움이 된다.\"",
-        "시카고에 계시다면, 하이드 파크 아트 센터에서 열리는 신진 예술가들을 기념하는 전시에서 11월 1일까지 리의 작품을 볼 수 있으며, 『밤의 도둑』은 10월 16일에 개막합니다. 더 많은 내용은 인스타그램에서 확인하세요.",
-        "\"용기\" 이런 이야기와 예술가들이 당신에게 중요한가요? 오늘 콜로설 멤버가 되어 월 7달러 이하로 독립 예술 출판을 지원하세요. 이 기사는 '모순과 미지의 영향: 아이제아 리의 상상력 넘치는 돌하우스 그림들'이 Colossal에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "fight-aging:5127cda282",
-      "slug": "bacterial-lipoic-acid-protein-ligase-a-improves-mammalian-5127cd",
-      "titleOriginal": "Bacterial Lipoic Acid Protein Ligase A Improves Mammalian Mitochondrial Function and Health",
-      "summaryOriginal": "Here, researchers report on their investigation of gene therapy to introduce a bacterial enzyme, lipoic acid protein ligase A (LplA), into mammals in order to improve mitochondrial metabolism. LplA undertakes lipoylation of proteins, attaching lipoic acid to the protein, and does so somewhat more efficiently than the analogous enzymes in mammals. Lipoylation is known to be involved in the regulati",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Here, researchers report on their investigation of gene therapy to introduce a bacterial enzyme , lipoic acid protein ligase A (LplA) , into mammals in order to improve mitochondrial metabolism. LplA undertakes lipoylation of proteins, attaching lipoic acid to the protein, and does so somewhat more efficiently than the analogous enzymes in mammals. Lipoylation is known to be involved in the regulation of metabolism , and is largely researched in the context of conditions exhibiting lipoylation deficiency. Here, however, the focus is on enhancement of metabolism in healthy individuals over the course of aging. This is interesting work, but at the present time it would be very hard to convince investors to fund and regulators to approve the introduction of a bacterial protein into humans as a basis for therapy; there is a strong assumption that a negative immune reaction would result, and a consequently high bar set for proof that it doesn't."
-        },
-        {
-          "kind": "text",
-          "text": "As primary energy producers, mitochondria generate adenosine 5′-triphosphate (ATP) through efficient oxidative phosphorylation , but this process inevitably produces reactive oxygen species (ROS) , which act as crucial signaling mediators at physiological levels yet become drivers of cellular aging and functional decline when accumulated excessively. Thus, an essential challenge involves maintaining an optimal balance between energy production and ROS management to achieve truly efficient and clean energy metabolism . This biochemical context raises the core question of whether interventions can be developed that enhance energy metabolism while simultaneously minimizing oxidative damage, thereby combining the benefits of both vitality and longevity."
-        },
-        {
-          "kind": "text",
-          "text": "Lipoylation is an essential posttranslational modification that directly influence the enzyme activity, and its substrates including enzymes serve as strategic metabolic gatekeepers. In higher eukaryotes , lipoylation is sequentially coordinated by multiple enzymes, whereas in Escherichia coli , a single enzyme, LplA, is sufficient to complete the entire process with remarkable efficiency. Our recent studies demonstrated that this bacterial enzyme not only rescues lipoylation deficiencies but also functions as a metabolic enhancer that significantly boosts energy production."
-        },
-        {
-          "kind": "text",
-          "text": "We conducted cross-species expression studies in Caenorhabditis elegans and mouse models and comprehensive physiological assessments across their life stages. The results demonstrate that this enzymatic intervention effectively enhances lipoylation and energy metabolism while lowering ROS level. The favorable metabolic state translates to broad physiological benefits, including enhanced motility and stress resistance in early life, and delayed age-related decline with extended health span when intervention begins later in life."
-        },
-        {
-          "kind": "text",
-          "text": "Link: https://doi.org/10.1126/sciadv.aef3262"
-        }
-      ],
-      "sourceName": "Fight Aging!",
-      "sourceUrl": "https://www.fightaging.org/",
-      "originalUrl": "https://www.fightaging.org/archives/2026/08/bacterial-lipoic-acid-protein-ligase-a-improves-mammalian-mitochondrial-function-and-health",
-      "author": "Reason",
-      "publishedAt": "2026-08-31T10:22:42.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
-      "language": "en",
-      "keywords": [
-        "Daily News"
-      ],
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "body",
-      "trustLevel": 3,
-      "careScore": 0.7,
-      "curiosityScore": 0,
-      "contentType": "research",
-      "titleKo": "박테리아 지산(Bacterial Lipoic Acid) 단백질 리가아제 A는 포유류 미토콘드리아 기능과 건강을 개선합니다",
-      "summaryKo": "여기서 연구자들은 미토콘드리아 대사를 개선하기 위해 포유류에 박테리아 효소인 리포산(lipoic acid) 리가아제 A(LplA)를 도입하는 유전자 치료 연구를 보고합니다. LplA는 단백질의 리포일화를 수행하며 리포산을 단백질에 결합시키며, 포유류의 유사 효소보다 다소 더 효율적으로 수행합니다. 리포일화는 규제체에 관여하는 것으로 알려져 있습니다",
-      "bodyKo": [
-        "여기서 연구자들은 미토콘드리아 대사를 개선하기 위해 포유류에 박테리아 효소인 리포산(lipoic acid) 리가아제 A(LplA)를 도입하는 유전자 치료 연구를 보고합니다. LplA는 단백질의 리포일화를 수행하며, 지방산을 단백질에 결합시키며, 포유류의 유사 효소보다 다소 더 효율적으로 수행합니다. 리포일화는 대사 조절에 관여하는 것으로 알려져 있으며, 주로 리포일화 결핍 상태를 고려하는 맥락에서 연구되고 있습니다. 하지만 여기서는 건강한 개인의 노화 과정에서 대사 향상에 초점을 맞추고 있습니다. 이 연구는 흥미롭지만, 현재로서는 투자자와 규제 당국을 설득해 박테리아 단백질을 인간에 치료의 기초로 도입하는 것을 승인하도록 하는 것은 매우 어렵습니다; 부정적인 면역 반응이 발생할 것이라는 강한 가정이 있으며, 따라서 그렇지 않다는 증거에 대한 높은 기준이 설정되어 있습니다.",
-        "주요 에너지 생산자로서 미토콘드리아는 효율적인 산화 인산화를 통해 아데노신 5′-삼인산(ATP)을 생성하지만, 이 과정은 생리적 수준에서 중요한 신호 매개 역할을 하지만 과도하게 축적되면 세포 노화와 기능 저하를 유발하는 활성 산소종(ROS)을 생성합니다. 따라서 에너지 생산과 ROS 관리 간의 최적의 균형을 유지하여 진정으로 효율적이고 깨끗한 에너지 대사를 달성하는 것이 필수적인 과제입니다. 이러한 생화학적 맥락은 에너지 대사를 촉진하면서도 산화 손상을 최소화하는 개입이 가능한지에 대한 핵심 질문을 제기합니다. 이는 활력과 롱제비티의 이점을 결합할 수 있습니다.",
-        "리포일화는 효소 활성에 직접적인 영향을 미치는 필수적인 번역 후 변형이며, 효소를 포함한 기질은 전략적 대사 문지기 역할을 합니다. 고등 진핵생물에서는 여러 효소에 의해 순차적으로 리포일화가 조정되는 반면, 대장균에서는 단일 효소인 LplA만으로도 놀라운 효율로 전체 과정을 완료할 수 있습니다. 최근 연구들은 이 박테리아 효소가 리포일화 결핍을 보완할 뿐만 아니라 에너지 생산을 크게 증진시키는 대사 증진제 역할도 한다는 것을 입증했습니다.",
-        "우리는 Caenorhabditis elegans와 마우스 모델에서 종간 발현 연구를 수행하고, 생애 단계 전반에 걸친 포괄적인 생리학적 평가를 수행했습니다. 결과는 이 효소 개입이 리포일화와 에너지 대사를 효과적으로 향상시키면서 ROS 수준을 낮춘다는 것을 보여줍니다. 이 긍정적인 대사 상태는 초기 생애의 운동성과 스트레스 저항력 향상, 그리고 중재 시점의 건강 수명 연장 등 광범위한 생리학적 이점으로 이어집니다.",
-        "링크: https://doi.org/10.1126/sciadv.aef3262"
       ]
     },
     {
@@ -7025,7 +6951,7 @@
       "originalUrl": "https://longevity.technology/news/astronautx-turns-sleep-into-new-dementia-target",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-28T15:30:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -7283,7 +7209,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/what-gta-6s-trailers-tell-us-about-vice-city-lucia-and-the-biggest-creative-launch-of-the-decade",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-27T12:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -7348,7 +7274,7 @@
       "id": "lifespan-io:d2b8c8131e",
       "slug": "short-intense-exercise-elicits-beneficial-metabolic-changes-d2b8c8",
       "titleOriginal": "Short, Intense Exercise Elicits Beneficial Metabolic Changes",
-      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated with cardiometabolic health benefits [1]. Short and intense […]",
+      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated with cardiometabolic health benefits [1]. Short and intense vs. long and […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7437,7 +7363,7 @@
       "originalUrl": "https://lifespan.io/short-intense-exercise-elicits-beneficial-metabolic-changes",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-08-26T16:43:46.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Exercise",
@@ -7456,7 +7382,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "짧고 강도 높은 운동은 유익한 대사 변화를 유도합니다",
-      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수준에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1]. 짧고 강도 높은 [...]",
+      "summaryKo": "새로운 연구에서는 고강도 전력 질주-인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1]. 짧고 강도 높은 운동 vs. 긴 운동과 [...]",
       "bodyKo": [
         "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1].",
         "짧고 강도 높은 운동 vs 길고 중간 정도의 운동은 건강에 긍정적인 영향을 미칠 수 있는 잘 알려진 생활 습관 요인입니다. 운동은 다양한 세포에서 분비되고 몸 안에서 순환하는 인자들을 통해 여러 세포, 조직, 장기에 이익을 줍니다 [2]. 하지만 투자 대비 가장 큰 운동 유형은 여전히 논쟁 중입니다. 마찬가지로, 운동 효과를 매개하는 순환 요인들도 아직 완전히 정의되지 않았습니다.",
@@ -7571,7 +7497,7 @@
       "originalUrl": "https://longevity.technology/news/new-survey-reveals-what-americans-really-want-from-longevity",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-26T14:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -7653,7 +7579,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/anavex-outlines-progress-in-alzheimers-rare-disease-studies-with-cash-runway-into-2028",
       "publishedAt": "2026-08-26T12:41:12.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -7798,7 +7724,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/bob-neville-on-berghaus-manchester-culture-and-the-british-brand-everyone-thinks-is-german",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-26T11:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -7935,7 +7861,7 @@
       "originalUrl": "https://longevity.technology/news/building-a-health-system-that-puts-prevention-first",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-26T09:30:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -8086,7 +8012,7 @@
       "originalUrl": "https://longevity.technology/news/scientists-create-muscle-that-exercises-itself",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-26T09:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -8230,7 +8156,7 @@
       "originalUrl": "https://longevity.technology/news/mount-sinais-1m-xprize-bet-reset-immune-system-slow-aging",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-25T16:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -8345,7 +8271,7 @@
       "originalUrl": "https://longevity.technology/news/quest-humanity-bring-biological-age-test-to-2000-us-locations",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-24T12:00:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -8552,7 +8478,7 @@
       "originalUrl": "https://longevity.technology/news/can-we-prime-skin-to-regenerate-better",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-21T16:49:00.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -8673,7 +8599,7 @@
       "originalUrl": "https://longevity.technology/news/whole-body-mri-is-leaving-the-biohacker-bubble",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-21T16:40:52.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -8715,7 +8641,7 @@
       "id": "lifespan-io:b3f58ddae4",
       "slug": "how-old-fat-cells-trigger-inflammation-and-raise-b3f58d",
       "titleOriginal": "How Old Fat Cells Trigger Inflammation and Raise Risks",
-      "summaryOriginal": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people. Too much of […]",
+      "summaryOriginal": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people. Too much of a regulator leads to […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8829,7 +8755,7 @@
       "originalUrl": "https://lifespan.io/how-old-fat-cells-trigger-inflammation-and-raise-risks",
       "author": "Josh Conway",
       "publishedAt": "2026-08-20T22:15:04.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "News",
@@ -8851,7 +8777,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "오래된 지방 세포가 염증을 유발하고 위험을 높이는 방법",
-      "summaryKo": "코호트 연구와 마우스 모델을 활용해 노화된 지방 세포에서 생성되는 순환 인자 ANGPTL8가 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다. 과도한 [...]",
+      "summaryKo": "코호트 연구와 마우스 모델을 활용해 노쇠한 지방 세포가 생성하는 순환 인자 ANGPTL8이 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다. 조절 요인이 너무 많으면 [...]",
       "bodyKo": [
         "코호트 연구와 마우스 모델을 활용해 노화 지방 세포가 생성하는 순환 인자 ANGPTL8가 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다.",
         "조절 요인이 너무 많으면 조절 장애가 생깁니다",
@@ -8971,7 +8897,7 @@
       "originalUrl": "https://longevity.technology/news/the-longevity-trap",
       "author": "Guest Contributor",
       "publishedAt": "2026-08-20T16:53:41.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -9115,7 +9041,7 @@
       "originalUrl": "https://longevity.technology/news/enveda-makes-exercise-pill-that-skips-the-treadmill",
       "author": "Kyle Umipig",
       "publishedAt": "2026-08-20T16:49:12.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -9197,7 +9123,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/biograph-launches-comprehensive-womens-health-program-for-preventive-care",
       "publishedAt": "2026-08-20T11:56:41.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -9263,7 +9189,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/longevity-brand-wonderfeel-named-fastest-growing-biotech-in-america",
       "publishedAt": "2026-08-20T11:51:41.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -9322,7 +9248,7 @@
       "sourceUrl": "https://longevity.technology/",
       "originalUrl": "https://longevity.technology/news/enzymedica-launches-phytosome-formulas-for-sleep-joint-support",
       "publishedAt": "2026-08-20T11:36:41.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "LT Wire"
@@ -9440,7 +9366,7 @@
       "originalUrl": "https://longevity.technology/news/the-barriers-arent-clinical-theyre-structural",
       "author": "Eleanor Garth",
       "publishedAt": "2026-08-19T16:55:07.000Z",
-      "fetchedAt": "2026-09-03T18:28:06.335Z",
+      "fetchedAt": "2026-09-04T00:39:02.068Z",
       "language": "en",
       "keywords": [
         "Clinics",
