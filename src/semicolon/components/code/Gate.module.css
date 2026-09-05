@@ -12,20 +12,30 @@
 
 .checks {
   display: grid;
+  /*
+   * 칸을 여기서 정한다. 세 줄이 이 격자를 나눠 써야 한다.
+   *
+   * 아래의 각 줄이 자기 격자를 따로 가지고 있었다. 형제 격자는 칸을 공유하지
+   * 않으므로 이름 칸의 폭이 줄마다 달라졌고, 선이 세 개의 서로 다른 자리에서
+   * 출발했다(넓은 판면 39px 편차). 마지막 줄의 선이 짧다는 것이 이 장치의
+   * 전부인데, 출발점이 다르면 짧고 긴 것을 견줄 수가 없다.
+   */
+  grid-template-columns: auto minmax(40px, 1fr) auto;
   row-gap: clamp(14px, 2vw, 22px);
 }
 
 /*
  * 한 줄 = 이름 · 선 · 그 검사가 센 것.
  *
- * 이름 칸은 격자가 정한다. 한 장치 안의 모든 줄이 같은 폭을 나눠 쓰므로
- * 선은 늘 같은 자리에서 출발하고, 그래야 마지막 줄의 선이 짧다는 사실이
- * 보인다. 그 짧음이 이 장치의 전부다.
+ * 이름 칸은 장치가 정한다. subgrid로 바깥의 칸을 그대로 물려받으므로 모든
+ * 줄이 같은 폭을 나눠 쓰고, 선은 늘 같은 자리에서 출발한다. 그래야 마지막
+ * 줄의 선이 짧다는 사실이 보인다. 그 짧음이 이 장치의 전부다.
  */
 .pass,
 .miss {
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: auto minmax(40px, 1fr) auto;
+  grid-template-columns: subgrid;
   align-items: center;
   column-gap: clamp(12px, 2vw, 24px);
   row-gap: 6px;
@@ -151,8 +161,8 @@
  * 짧다는 사실은 그대로다.
  */
 @media (max-width: 599px) {
-  .pass,
-  .miss {
+  /* 칸을 정하는 곳이 한 군데이므로 좁은 판면의 배치도 여기서 바꾼다. */
+  .checks {
     grid-template-columns: minmax(40px, 1fr) auto;
   }
 

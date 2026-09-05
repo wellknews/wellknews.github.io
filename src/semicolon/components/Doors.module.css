@@ -40,27 +40,49 @@
  * 있던 기하를 이어 주는 것뿐이고, 그래서 이 선에는 배울 것이 없다 — 셋이
  * 한 자리에서 나왔다는 사실이 보이면 그것으로 끝이다.
  *
- * 첫 문의 위쪽과 마지막 문의 아래쪽은 비운다. 줄기는 기호에서 시작해서
- * 기호에서 끝나야 한다. 판면 끝까지 뻗으면 그것은 갈라져 나온 자리가 아니라
- * 화면을 가르는 선이 된다.
+ * 줄기는 기호에서 긋는다. 문에서 긋지 않는다.
+ *
+ * 처음에는 문의 위아래를 잇고 첫 문은 절반부터, 마지막 문은 절반까지만
+ * 긋게 해 두었다. 그것은 «기호가 문의 한가운데에 있다»는 가정이었고, 좁은
+ * 판면에서 문이 두 줄이 되는 순간 그 가정이 깨졌다 — 기호는 첫 줄에 붙어
+ * 있는데 줄기는 두 줄의 한가운데에서 시작해서, 세 기호 중 어느 것에도 닿지
+ * 않는 선이 31px씩 어긋난 채 배포되어 있었다.
+ *
+ * 가정을 고치는 대신 가정을 없앤다. 줄기가 닿아야 하는 것은 기호이므로
+ * 기호에서 위아래로 뻗는다. 어디에 앉든, 몇 줄이 되든, 끝은 늘 기호다.
+ * 넘치는 부분은 문이 잘라 준다(.item의 overflow: hidden).
  */
-.item::after {
+.mark::before,
+.mark::after {
   content: '';
   position: absolute;
-  left: var(--stem);
-  top: 0;
-  bottom: 0;
+  /* 기호의 첫 세로획과 같은 x. 그 획이 이미 줄기의 한 토막이다. */
+  left: 0;
   width: 1px;
   background: var(--color-line-strong);
   pointer-events: none;
 }
 
-.item:first-child::after {
-  top: 50%;
+/* 기호에서 위로 */
+.mark::before {
+  bottom: 50%;
+  top: -100vh;
 }
 
-.item:last-child::after {
-  bottom: 50%;
+/* 기호에서 아래로 */
+.mark::after {
+  top: 50%;
+  bottom: -100vh;
+}
+
+/*
+ * 첫 기호의 위와 마지막 기호의 아래는 비운다. 줄기는 기호에서 시작해서
+ * 기호에서 끝나야 한다. 판면 끝까지 뻗으면 그것은 갈라져 나온 자리가 아니라
+ * 화면을 가르는 선이 된다.
+ */
+.item:first-child .mark::before,
+.item:last-child .mark::after {
+  display: none;
 }
 
 /*
@@ -129,6 +151,7 @@
  * 그 절반 자리에 있어야 줄기의 양 끝이 기호에 정확히 닿는다.
  */
 .mark {
+  position: relative;
   display: flex;
   align-items: center;
   align-self: center;
@@ -227,14 +250,6 @@
     row-gap: 10px;
     padding-inline: var(--stem);
     padding-block: clamp(18px, 5vw, 26px);
-  }
-
-  /*
-   * 문이 두 줄이 되어도 기호는 문 전체의 가운데에 남는다.
-   * 위로 붙으면 줄기의 끝이 기호를 지나쳐 허공에서 멈춘다.
-   */
-  .mark {
-    grid-row: 1 / -1;
   }
 
   .latest {
