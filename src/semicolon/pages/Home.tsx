@@ -1,128 +1,81 @@
-import type { ReactNode } from 'react'
-
-import { CodeList } from '../components/CodeList'
+import { Doors, type Door } from '../components/Doors'
 import { Hero } from '../components/Hero'
-import { KindMark, type Kind } from '../components/KindMark'
 import { Seam } from '../components/Seam'
-import { SessionList } from '../components/SessionList'
-import { ThreadList } from '../components/ThreadList'
 import { codes } from '../content/code'
 import { semicolon } from '../content/site'
 import { sessions } from '../content/sessions'
 import { threads } from '../content/threads'
-import { useTouchReveal } from '../motion/useTouchReveal'
-import { Link, path } from '../router'
-import styles from './Home.module.css'
+import { path } from '../router'
 
 /**
- * 첫 화면에 걸어 둘 분량 — 세 자리 모두 가장 최근 한 편씩.
+ * 홈은 목록이 아니라 문이다.
  *
- * 홈은 목록이 아니라 문이다. 여기에 여러 편을 펼치면 홈이 곧 목록이 되고,
- * 그러면 SESSION과 THREAD와 CODE라는 자리가 따로 있을 이유가 없어진다.
+ * 오랫동안 그렇게 적어 두고 실제로는 아니었다. 게시판마다 한 구간을 두고 그
+ * 구간이 최신 글을 통째로 펼쳤으니, 홈은 문 옆에 방을 열어 둔 모양이었다.
+ * 자리가 둘일 때는 견딜 만했다. 셋이 되자 두 가지가 한꺼번에 무너졌다.
  *
- * 세션은 한동안 세 편까지 걸어 두고 있었는데, 기록이 두 편이 되자 홈에 전부
- * 나와 버려서 «/;/session에 가도 새로운 것이 없는» 상태가 됐다. 목록으로 가는
- * 문 옆에 그 목록을 통째로 펼쳐 두면 문이 문처럼 보이지 않는다.
+ *   · ';'가 둘이 되면서 이음매가 기호가 아니라 구분선이 되었다. 세미콜론은
+ *     두 개의 절을 잇는 기호이고, 화면에 하나뿐일 때만 그 일을 한다.
+ *     반복되는 기호는 뜻을 잃는다.
+ *   · 전문이 그대로 나오는 THREAD 뒤에 무언가를 두면 그것은 사실상 없는
+ *     자리가 된다. 순서를 바꿔 가며 막아 봤지만, 자리가 하나 더 늘면 또
+ *     막아야 하는 종류의 문제였다.
  *
- * 그래서 셋에 같은 규칙을 쓴다. 홈에는 가장 최근 것 하나씩만 있고, 나머지는
- * 각자의 주소에 있다.
- */
-const HOME_SESSIONS = 1
-const HOME_THREADS = 1
-const HOME_CODES = 1
-
-type BlockProps = {
-  id: string
-  kind: Kind
-  label: string
-  to: string
-  children: ReactNode
-}
-
-/**
- * 기호, 개념 이름, 그 주소를 하나의 행으로 묶는다.
+ * 그래서 구간을 없앴다. 지금 이 페이지에 있는 것은 셋뿐이다 — 이 공간이
+ * 무엇인지 말하는 선, 하나뿐인 이음매, 그리고 세 개의 문.
  *
- * 무엇을 다루는 자리인지 설명하는 문장은 여기 두지 않는다. 세 기호가 한
- * 화면에 차례로 놓이고, 다가가면 하나는 벽에 부딪혀 멈추고 하나는 판을 넘어
- * 흘러 나가고 하나는 눈금 사이를 건너뛴다. 그 차이가 곧 정의다. 문장이 필요한
- * 사람은 주소를 눌러 그 개념의 페이지로 가면 된다.
- *
- * 이름 쪽을 링크로 만들지 않는 이유는 같은 목적지로 가는 문을 한 줄에 두 개
- * 두지 않기 위해서다. 문은 경로가 적힌 자리 하나뿐이다.
- */
-function Block({ id, kind, label, to, children }: BlockProps) {
-  const touch = useTouchReveal()
-
-  return (
-    <section className={styles.block} data-kind={kind} aria-labelledby={id}>
-      <div className="shell">
-        <div
-          className={`kindGate ${styles.head}`}
-          data-touched={touch.active}
-          onPointerDown={touch.onPointerDown}
-        >
-          <KindMark kind={kind} />
-
-          <h2 className={`mono ${styles.label}`} id={id}>
-            {label}
-          </h2>
-
-          <Link to={to} className={`mono ${styles.more}`}>
-            {to} <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-
-        {children}
-      </div>
-    </section>
-  )
-}
-
-/**
- * 세 자리, 두 개의 이음매.
- *
- * 순서는 SESSION · CODE · THREAD다. 끝이 있는 것 둘을 먼저 놓고, 끝나지 않은
- * 것을 마지막에 둔다. 그러면 이 페이지 자체가 세미콜론처럼 끝난다 —
- * 마지막 블록이 닫히지 않은 채로 아래로 이어진다.
- *
- * 실용적인 이유도 같은 쪽을 가리킨다. THREAD는 목록에서도 전문이 그대로
- * 보이므로(ThreadList) 블록 하나가 화면 여러 개만큼 길어질 수 있다. 그 뒤에
- * 무언가를 두면 그것은 사실상 없는 자리가 된다. 긴 것을 마지막에 두는 것은
- * 배치의 문제가 아니라 «있는가 없는가»의 문제다.
- *
- * 두 개의 세미콜론이 셋을 잇는다. 하나였을 때보다 이쪽이 이 공간의 이름에
- * 더 맞다 — 세미콜론은 끝내지 않고 잇는 기호이고, 이을 것이 많을수록 자주 온다.
+ * 이음매가 다시 하나가 된다. 히어로가 끝나고 이 공간의 안쪽이 시작하는
+ * 자리이고, 끝났지만 끝나지 않은 자리라서 마침표가 아니라 세미콜론이 온다.
+ * 두 개의 절을 잇는 기호가 정확히 두 절 사이에 하나 있다.
  */
 export function Home() {
+  const [session] = sessions
+  const [code] = codes
+  const [thread] = threads
+
+  /*
+   * 문마다 그 자리에 가장 최근에 놓인 것 한 줄.
+   *
+   * 스레드는 제목이 없어도 되는 글이라 날짜만 있을 수 있다. 없는 제목을
+   * 슬러그나 첫 문장으로 지어내지 않는다 — 제목을 붙이지 않은 것도 그 글이
+   * 고른 형식이다.
+   */
+  const doors: readonly Door[] = [
+    {
+      kind: 'session',
+      label: semicolon.session.label,
+      to: path.sessionIndex,
+      ...(session?.meta?.date ? { latest: { date: session.meta.date, title: session.title } } : {}),
+      empty: semicolon.session.empty,
+    },
+    {
+      kind: 'code',
+      label: semicolon.code.label,
+      to: path.codeIndex,
+      ...(code?.meta?.date ? { latest: { date: code.meta.date, title: code.title } } : {}),
+      empty: semicolon.code.empty,
+    },
+    {
+      kind: 'thread',
+      label: semicolon.thread.label,
+      to: path.threadIndex,
+      ...(thread ? { latest: { date: thread.date, title: thread.title } } : {}),
+      empty: semicolon.thread.empty,
+    },
+  ]
+
   return (
     <>
       <Hero />
 
-      <Block
-        id="home-session"
-        kind="session"
-        label={semicolon.session.label}
-        to={path.sessionIndex}
-      >
-        <SessionList sessions={sessions.slice(0, HOME_SESSIONS)} empty={semicolon.session.empty} />
-      </Block>
-
-      {/* 한쪽이 끝나고 다른 쪽이 시작하는 자리. 마침표가 아니라 세미콜론이 온다. */}
+      {/* 히어로가 끝나고 이 공간의 안쪽이 시작하는 자리. 이 페이지의 유일한 이음매다. */}
       <div className="shell">
         <Seam />
       </div>
 
-      <Block id="home-code" kind="code" label={semicolon.code.label} to={path.codeIndex}>
-        <CodeList codes={codes.slice(0, HOME_CODES)} empty={semicolon.code.empty} />
-      </Block>
-
       <div className="shell">
-        <Seam />
+        <Doors doors={doors} />
       </div>
-
-      <Block id="home-thread" kind="thread" label={semicolon.thread.label} to={path.threadIndex}>
-        <ThreadList threads={threads.slice(0, HOME_THREADS)} empty={semicolon.thread.empty} />
-      </Block>
     </>
   )
 }

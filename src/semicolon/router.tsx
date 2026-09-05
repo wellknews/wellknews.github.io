@@ -1,4 +1,4 @@
-import { useEffect, useState, type MouseEvent, type ReactNode } from 'react'
+import { useEffect, useState, type MouseEvent, type PointerEvent, type ReactNode } from 'react'
 
 /**
  * 이 공간의 뿌리. 주소창에 그대로 노출되는 문자열이기도 하다.
@@ -140,6 +140,16 @@ type LinkProps = {
   /** 현재 위치를 가리키는 링크인지. 메뉴에서 쓴다. */
   current?: boolean | 'page' | 'location' | undefined
   'aria-label'?: string | undefined
+  /**
+   * 손가락으로 찍었을 때의 반응(useTouchReveal).
+   *
+   * 링크 자체가 기호를 깨우는 자리일 때 필요하다. 홈의 블록 머리가 그렇다 —
+   * 행 전체가 문이고, 그 문에 다가가면 기호가 제 뜻을 연기한다. 반응하는
+   * 자리와 눌리는 자리를 따로 두면 손을 올렸을 때 살아나는 것과 눌러서
+   * 가는 것이 달라지고, 그것은 고장으로 읽힌다.
+   */
+  'data-touched'?: boolean | undefined
+  onPointerDown?: ((event: PointerEvent<Element>) => void) | undefined
 }
 
 /**
