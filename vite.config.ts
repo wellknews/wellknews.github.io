@@ -79,6 +79,7 @@ export default defineConfig({
         semicolon: entry('./;/index.html'),
         mamaboy: entry('./mamaboy/index.html'),
         ekata: entry('./ekata/index.html'),
+        ekataPolicy: entry('./ekata/policy/index.html'),
       },
       output: {
         /*
