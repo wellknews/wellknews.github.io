@@ -61,15 +61,28 @@ jobs:
               continue
             fi
 
-            # GitHub은 본문을 CRLF로 돌려준다. 줄 끝만 다른 것을 «다르다»고
-            # 보면 실행할 때마다 고치게 되므로 비교 전에 맞춘다.
-            gh release view "$tag" --json body --jq .body | sed 's/\r$//' > /tmp/current-body.md
+            # 비교하기 전에 «뜻이 같은데 바이트가 다른» 두 가지를 없앤다.
+            #
+            #   · GitHub은 본문을 CRLF로 돌려준다.
+            #   · 끝의 빈 줄 개수가 파일과 응답에서 다르다. 파일로 받아
+            #     cmp로 견주었더니 끝 개행 하나 때문에 매번 «다르다»가 나왔고,
+            #     돌릴 때마다 릴리즈를 고쳐 쓰고 있었다. $(...)는 끝의 개행을
+            #     전부 떼므로 양쪽을 같은 방식으로 다듬어 문자열로 견준다.
             current_title="$(gh release view "$tag" --json name --jq .name)"
+            current_body="$(gh release view "$tag" --json body --jq .body | sed 's/\r$//')"
+            want_body="$(cat "$file")"
 
-            if [ "$current_title" = "$title" ] && cmp -s /tmp/current-body.md "$file"; then
+            if [ "$current_title" = "$title" ] && [ "$current_body" = "$want_body" ]; then
               echo "$tag — up to date"
               continue
             fi
+
+            # 무엇이 달라서 고치는지 남긴다. 이유 없이 매번 고치고 있으면
+            # 그 사실이 로그에 보여야 한다.
+            [ "$current_title" = "$title" ] || \
+              echo "$tag — title differs: [$current_title] -> [$title]"
+            [ "$current_body" = "$want_body" ] || \
+              echo "$tag — body differs: ${#current_body} -> ${#want_body} chars"
 
             gh release edit "$tag" --title "$title" --notes-file "$file"
             echo "$tag — synced to $file"
