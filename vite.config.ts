@@ -61,11 +61,12 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       /*
-       * 문서를 세 개 만든다.
+       * 프로젝트별 문서를 만든다.
        *
        *   /          WELLKNEWS — 입구
        *   /;         SEMICOLON — 입구에서 갈라져 나온 첫 번째 가지
        *   /mamaboy   MAMABOY   — 두 번째 가지
+       *   /ekata     EKATA     — 실종아동 찾기 캠페인 지원
        *
        * 라우터로 한 앱 안에서 갈라놓지 않는 이유는 세 공간이 색·타이포·모션·폰트까지
        * 공유하는 것이 없기 때문이다. 문서를 나누면 방문자는 자기가 보는 쪽의 자산만
@@ -77,6 +78,7 @@ export default defineConfig({
         main: entry('index.html'),
         semicolon: entry('./;/index.html'),
         mamaboy: entry('./mamaboy/index.html'),
+        ekata: entry('./ekata/index.html'),
       },
       output: {
         /*

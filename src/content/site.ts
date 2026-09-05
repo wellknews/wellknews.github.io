@@ -108,6 +108,11 @@ export const site = {
     label: 'ELSEWHERE',
     items: [
       {
+        name: 'EKATA',
+        path: '/ekata/',
+        summary: '관심이, 돌아오는 길이 되도록.',
+      },
+      {
         name: 'SEMICOLON',
         path: '/;',
         summary: 'A pause inside a busy life.',
