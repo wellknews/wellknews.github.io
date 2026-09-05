@@ -1,0 +1,168 @@
+/*
+ * 장치의 폭.
+ *
+ * 본문(34em)보다 조금 넓고 판면(1240px)보다 훨씬 좁다. 도구는 문장보다
+ * 넓어야 «읽는 것이 아니라 보는 것»이 되고, 판면 전체를 쓰면 이름과 값이
+ * 화면 양 끝으로 갈라져 한 항목으로 읽히지 않는다. 그 사이가 여기다.
+ */
+.prompt {
+  max-width: min(100%, 38em);
+  padding-block: clamp(32px, 5vw, 64px);
+}
+
+/*
+ * 창이 서 있던 자리.
+ *
+ * 창을 전부 치워도 이 높이는 그대로다. 높이가 줄어들면 «지우니까 짧아졌다»는
+ * 다른 이야기가 되는데, 실제로 일어난 일은 있던 자리가 비었을 뿐이다.
+ */
+.stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(220px, 34svh, 320px);
+}
+
+/*
+ * 가려던 자리.
+ *
+ * 창 뒤에 숨어 있지 않다. 처음부터 화면에 있고, 창은 그 위에 얹혀 있을 뿐이다.
+ * 그것이 이 세 커밋의 전제였다 — 답이 정해져 있다는 것은 도착지가 이미
+ * 정해져 있다는 뜻이다.
+ */
+.behind {
+  grid-area: 1 / 1;
+  display: grid;
+  /*
+   * 이름을 한가운데 두지 않는다. 창이 정확히 그 자리를 덮기 때문이다.
+   * 위 모서리에 붙여 두면 창이 세 장 쌓여 있는 동안에도 «어디로 가는
+   * 길이었는지»가 계속 보이고, 그것이 이 장치의 전제다 — 도착지는
+   * 물음 뒤에 숨어 있던 것이 아니라 처음부터 화면에 있었다.
+   */
+  place-items: start;
+  /* 창보다 높아야 위 모서리가 비고, 그 빈 자리에 이름이 앉는다. */
+  align-self: stretch;
+  width: min(100%, 460px);
+  padding: clamp(20px, 3vw, 28px);
+  border: 1px solid var(--color-line);
+}
+
+/*
+ * 도착지의 이름.
+ *
+ * 고정폭 자리에 앉지만 자간은 본문의 것을 쓴다. .mono의 0.14em은 라틴
+ * 대문자와 숫자를 읽히게 하는 값이고, 같은 자간을 한글에 주면 낱글자가
+ * 흩어진다. MetaLine이 값마다 하고 있는 판단과 같은 것이다.
+ */
+.place {
+  font-family: var(--font-serif);
+  font-size: var(--text-meta);
+  letter-spacing: normal;
+  color: var(--color-text-muted);
+}
+
+/* 도착지만 남았을 때. 잉크가 한 단계 진해지는 것 말고는 아무 일도 없다. */
+.stage[data-cleared='true'] .behind {
+  border-color: var(--color-line-strong);
+}
+
+.stage[data-cleared='true'] .place {
+  color: var(--color-text);
+}
+
+.behind,
+.place {
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+/* ---------- 쌓인 창 ---------- */
+
+.pile {
+  grid-area: 1 / 1;
+  display: grid;
+  width: min(100%, 340px);
+}
+
+/*
+ * 창 하나.
+ *
+ * 종이 색으로 채운다. 반투명하게 만들면 뒤의 글자와 겹쳐 둘 다 못 읽게 되고,
+ * 그러면 «가려던 자리가 이미 있다»는 사실이 오히려 흐려진다. 창은 창답게
+ * 불투명해야 하고, 도착지는 그 둘레로 보이면 된다.
+ */
+.dialog {
+  grid-area: 1 / 1;
+  display: grid;
+  row-gap: clamp(16px, 2.4vw, 24px);
+  padding: clamp(20px, 3vw, 28px);
+  background: var(--color-bg);
+  border: 1px solid var(--color-line-strong);
+  /* 뒤로 갈수록 물러나 앉는다. 몇 장이 더 있는지가 이 어긋남으로 보인다. */
+  translate: calc(var(--depth, 0) * 10px) calc(var(--depth, 0) * 12px);
+  z-index: calc(10 - var(--depth, 0));
+}
+
+/* 뒤의 창은 잉크가 옅다. 아직 제 차례가 아니라는 뜻이다. */
+.dialog:not([data-top='true']) {
+  border-color: var(--color-line);
+}
+
+.ask {
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: var(--color-text);
+  text-wrap: pretty;
+}
+
+/*
+ * 하나뿐인 답.
+ *
+ * 버튼을 오른쪽 끝에 둔다. 고를 것이 없는데도 고르는 자리가 있다는 사실이
+ * 그 정렬에서 나온다 — 옆에 아무것도 없는 «확인» 버튼의 모양이다.
+ */
+.answer {
+  justify-self: end;
+  font-family: var(--font-serif);
+  font-size: var(--text-meta);
+  letter-spacing: normal;
+  min-height: 44px;
+  padding-inline: clamp(14px, 2vw, 20px);
+  color: var(--color-text);
+  border: 1px solid var(--color-line-strong);
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .answer:hover {
+    background: var(--color-text);
+    color: var(--color-bg);
+  }
+}
+
+.answer:active {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+@media (max-width: 599px) {
+  .stage {
+    min-height: 260px;
+  }
+
+  .behind {
+    width: 100%;
+  }
+
+  .pile {
+    width: min(100%, 280px);
+  }
+
+  /* 어긋남을 줄인다. 좁은 판면에서는 10px씩만 밀려도 창이 판면 밖으로 나간다. */
+  .dialog {
+    translate: calc(var(--depth, 0) * 6px) calc(var(--depth, 0) * 8px);
+  }
+}

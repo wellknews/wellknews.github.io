@@ -15,6 +15,8 @@ export type Route =
   | { kind: 'session'; slug: string }
   | { kind: 'thread-index' }
   | { kind: 'thread'; slug: string }
+  | { kind: 'code-index' }
+  | { kind: 'code'; slug: string }
   | { kind: 'not-found' }
 
 /** pushState는 popstate를 발생시키지 않으므로 직접 알린다. */
@@ -51,6 +53,7 @@ export function parse(pathname: string): Route {
 
   if (head === 'session') return slug ? { kind: 'session', slug } : { kind: 'session-index' }
   if (head === 'thread') return slug ? { kind: 'thread', slug } : { kind: 'thread-index' }
+  if (head === 'code') return slug ? { kind: 'code', slug } : { kind: 'code-index' }
 
   return { kind: 'not-found' }
 }
@@ -62,6 +65,8 @@ export const path = {
   session: (slug: string) => `${BASE}/session/${slug}`,
   threadIndex: `${BASE}/thread`,
   thread: (slug: string) => `${BASE}/thread/${slug}`,
+  codeIndex: `${BASE}/code`,
+  code: (slug: string) => `${BASE}/code/${slug}`,
 }
 
 /**

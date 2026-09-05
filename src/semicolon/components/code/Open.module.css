@@ -1,0 +1,99 @@
+/*
+ * 장치의 폭.
+ *
+ * 본문(34em)보다 조금 넓고 판면(1240px)보다 훨씬 좁다. 도구는 문장보다
+ * 넓어야 «읽는 것이 아니라 보는 것»이 되고, 판면 전체를 쓰면 이름과 값이
+ * 화면 양 끝으로 갈라져 한 항목으로 읽히지 않는다. 그 사이가 여기다.
+ */
+.open {
+  display: grid;
+  row-gap: clamp(20px, 3vw, 32px);
+  max-width: min(100%, 38em);
+  padding-block: clamp(32px, 5vw, 64px);
+}
+
+/*
+ * 한 항목.
+ *
+ *   ──· · ·   재료함 저장 디바운스
+ *             빠르게 편집하는 동안에만 드러난다
+ *
+ * 왼쪽 칸은 Delta에서 숫자가 앉던 자리다. 두 장치가 같은 판면에 놓이면
+ * 한쪽에는 값이 있고 한쪽에는 없다는 것이 세로선에서 바로 읽힌다.
+ */
+.item {
+  display: grid;
+  grid-template-columns: clamp(56px, 9vw, 96px) minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: clamp(14px, 2.4vw, 28px);
+  row-gap: 6px;
+}
+
+/*
+ * 값이 앉았을 칸.
+ *
+ * '—'를 찍지 않는다. 그 기호는 «없음»이라는 값이고, 여기 있는 것은 값의
+ * 부재다. 시작하다 마는 선과 그 뒤의 점 세 개 — 아직 닫히지 않았다는 뜻으로
+ * 이 공간이 이미 쓰고 있는 모양을 그대로 쓴다.
+ */
+.blank {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+  /* 글자의 기준선에 맞춰 앉는다. 위로 떠 있으면 값이 아니라 장식이 된다. */
+  translate: 0 -0.35em;
+}
+
+.stub {
+  width: clamp(14px, 3vw, 24px);
+  height: 1px;
+  background: var(--color-line-strong);
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dots span {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+}
+
+.dots span:nth-child(2) {
+  opacity: 0.55;
+}
+
+.dots span:nth-child(3) {
+  opacity: 0.25;
+}
+
+.what {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: var(--text-body);
+  color: var(--color-text);
+}
+
+.why {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: var(--measure);
+  color: var(--color-text-muted);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+@media (max-width: 599px) {
+  .item {
+    grid-template-columns: clamp(44px, 14vw, 64px) minmax(0, 1fr);
+    column-gap: 12px;
+  }
+}

@@ -1,18 +1,25 @@
 /*
- * 두 개념을 색면으로 구분하지 않는다. 색은 이제 판면 전체에 깔린 재료이고,
+ * 세 개념을 색면으로 구분하지 않는다. 색은 이제 판면 전체에 깔린 재료이고,
  * 구획은 여백과 그 안에서 일어나는 일이 만든다. 배경을 칠해 나누는 순간
- * 두 개념의 차이는 '어느 상자에 들어 있는가'가 되어 버린다.
+ * 세 개념의 차이는 '어느 상자에 들어 있는가'가 되어 버린다.
  */
 .block {
   padding-block: var(--space-section);
 }
 
-/* 이음매가 두 블록 사이에 들어서므로 맞닿는 여백을 한 번 줄인다. */
-.block[data-kind='session'] {
+/*
+ * 이음매가 블록 사이에 들어서므로 맞닿는 여백을 한 번 줄인다.
+ *
+ * 자리가 셋이 되면서 «세션은 아래쪽, 스레드는 위쪽»처럼 종류마다 적던 규칙이
+ * 성립하지 않게 됐다. 가운데 블록은 위아래 양쪽에 이음매가 있고, 자리가 하나
+ * 더 늘면 그 규칙을 또 고쳐야 한다. 그래서 종류가 아니라 순서로 적는다 —
+ * 첫 블록은 아래만, 마지막 블록은 위만, 사이의 블록은 양쪽을 줄인다.
+ */
+.block:not(:last-of-type) {
   padding-bottom: var(--space-block);
 }
 
-.block[data-kind='thread'] {
+.block:not(:first-of-type) {
   padding-top: var(--space-block);
 }
 
@@ -24,33 +31,13 @@
 }
 
 /*
- * 경계에 부딪혀 멈추는 점, 판을 넘어 흘러 나가는 점.
+ * 기호가 어떻게 반응하는지는 global.css의 .kindGate가 갖는다.
  *
- * 손가락에는 hover가 없으므로 찍었을 때도 같은 일이 일어나게 한다
- * (data-touched). 모바일에서 이 차이를 못 보면 두 개념은 이름만 다른 것이 된다.
+ * 경계에 부딪혀 멈추는 점, 판을 넘어 흘러 나가는 점, 눈금 사이를 건너뛰는 점 —
+ * 목록 머리(PageHead)에서도 똑같은 일이 일어나므로 숫자를 두 곳에 적어 두지
+ * 않는다. 세 기호가 나란히 놓이는 유일한 화면이 여기라, 여기서 어긋나면
+ * 세 개념의 차이 자체가 어긋난다.
  */
-.head[data-touched='true'] :global(.kindRunner) {
-  opacity: 1;
-  /* 오른쪽 벽에 닿아 멈춘다. 벽과 겹치지 않도록 한 칸 앞에서 선다. */
-  transform: translateX(58px);
-}
-
-.head[data-touched='true'] :global(.kindTrail) {
-  transform: translateX(8px);
-  opacity: 0.35;
-}
-
-@media (hover: hover) {
-  .head:hover :global(.kindRunner) {
-    opacity: 1;
-    transform: translateX(58px);
-  }
-
-  .head:hover :global(.kindTrail) {
-    transform: translateX(8px);
-    opacity: 0.35;
-  }
-}
 
 .label {
   font-size: var(--text-meta);

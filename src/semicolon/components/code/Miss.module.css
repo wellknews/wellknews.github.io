@@ -1,0 +1,134 @@
+/*
+ * 장치의 폭.
+ *
+ * 본문(34em)보다 조금 넓고 판면(1240px)보다 훨씬 좁다. 도구는 문장보다
+ * 넓어야 «읽는 것이 아니라 보는 것»이 되고, 판면 전체를 쓰면 이름과 값이
+ * 화면 양 끝으로 갈라져 한 항목으로 읽히지 않는다. 그 사이가 여기다.
+ */
+.miss {
+  max-width: min(100%, 38em);
+  padding-block: clamp(32px, 5vw, 64px);
+}
+
+.aimed {
+  display: grid;
+  row-gap: clamp(10px, 1.4vw, 16px);
+}
+
+/*
+ * 누를 수 있는 한 항목.
+ *
+ * 버튼처럼 보이게 만들지 않는다. 테두리도 배경도 없고, 문장이 그대로
+ * 문장으로 앉아 있다. 눌러 보면 무언가 일어난다는 것은 눌러 본 사람이
+ * 알게 되고, 안 눌러 본 사람은 줄이 그어진 목록을 그대로 읽으면 된다 —
+ * 어느 쪽도 잃는 정보가 없다.
+ */
+.shot {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: clamp(14px, 2.4vw, 32px);
+  row-gap: 4px;
+  width: 100%;
+  min-height: 44px;
+  text-align: left;
+  font: inherit;
+}
+
+.at {
+  position: relative;
+  width: fit-content;
+  font-size: var(--text-lead);
+  line-height: 1.35;
+  letter-spacing: var(--tracking-title);
+  color: var(--color-text);
+}
+
+/*
+ * 빗나갔다는 표시.
+ *
+ * text-decoration: line-through를 쓰지 않는다. 그 줄은 «지웠다»는 뜻이고
+ * 여기서 일어난 일은 지운 것이 아니라 겨눴다가 빗나간 것이다. 획을 따로
+ * 그으면 물러나게 만들 수도 있다 — 그것이 이 장치의 전부다.
+ */
+.strike {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.62em;
+  height: 1px;
+  background: var(--color-text);
+  transform-origin: left;
+  transition: scale var(--dur-base) var(--ease-out);
+}
+
+/* 쥐고 있는 동안 줄이 물러난다. 확인하기 전의 목록이 그대로 나온다. */
+.shot:active .strike,
+.shot:focus-visible .strike {
+  scale: 0 1;
+}
+
+.why {
+  color: var(--color-text-muted);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+/*
+ * 목록 밖의 한 항목.
+ *
+ * 위쪽 여백이 이 장치에서 가장 큰 정보다. 목록에 붙여 놓으면 «세 번째 후보»가
+ * 되고, 그러면 이 기록의 이야기가 통째로 달라진다. 떨어져 있어야 목록에
+ * 없었다는 뜻이 된다.
+ */
+.found {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: clamp(14px, 2.4vw, 32px);
+  row-gap: 4px;
+  margin-top: clamp(48px, 8vw, 104px);
+  padding-left: var(--margin-col);
+}
+
+.found .at::after {
+  /* 겨눈 적이 없으므로 그을 줄도 없다. 밑줄 하나가 그 자리를 대신한다. */
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/*
+ * 작은 판면.
+ *
+ * 이름과 이유를 위아래로 놓는다. 좁은 폭에서 두 칸을 유지하면 이유가
+ * 한 줄에 세 글자씩 흐르고, 그러면 문장이 아니라 세로 띠가 된다.
+ * 목록 밖의 항목이 더 아래에 있다는 사실은 그대로 남는다.
+ */
+@media (max-width: 899px) {
+  .found {
+    padding-left: clamp(20px, 6vw, 48px);
+  }
+}
+
+@media (max-width: 599px) {
+  .shot,
+  .found {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .at {
+    font-size: var(--text-lead);
+  }
+
+  .found {
+    margin-top: 56px;
+    padding-left: 20px;
+    border-left: 1px solid var(--color-line);
+  }
+}

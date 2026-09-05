@@ -3,9 +3,12 @@ import { useEffect, useRef } from 'react'
 import { Field } from './components/Field'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { findCode } from './content/code'
 import { semicolon } from './content/site'
 import { findSession } from './content/sessions'
 import { findThread } from './content/threads'
+import { CodeEntry } from './pages/CodeEntry'
+import { CodeIndex } from './pages/CodeIndex'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { SessionEntry } from './pages/SessionEntry'
@@ -26,6 +29,10 @@ function render(route: Route) {
       return <ThreadIndex />
     case 'thread':
       return <ThreadEntry slug={route.slug} />
+    case 'code-index':
+      return <CodeIndex />
+    case 'code':
+      return <CodeEntry slug={route.slug} />
     case 'not-found':
       return <NotFound />
   }
@@ -42,6 +49,8 @@ function titleOf(route: Route): string {
       return semicolon.session.label + suffix
     case 'thread-index':
       return semicolon.thread.label + suffix
+    case 'code-index':
+      return semicolon.code.label + suffix
     case 'session': {
       const session = findSession(route.slug)
       return session ? session.title + suffix : semicolon.notFound.title + suffix
@@ -50,6 +59,10 @@ function titleOf(route: Route): string {
       const thread = findThread(route.slug)
       if (!thread) return semicolon.notFound.title + suffix
       return (thread.title ?? thread.date) + suffix
+    }
+    case 'code': {
+      const code = findCode(route.slug)
+      return code ? code.title + suffix : semicolon.notFound.title + suffix
     }
     case 'not-found':
       return semicolon.notFound.title + suffix
