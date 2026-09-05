@@ -81,6 +81,11 @@
  * 위쪽 여백이 이 장치에서 가장 큰 정보다. 목록에 붙여 놓으면 «세 번째 후보»가
  * 되고, 그러면 이 기록의 이야기가 통째로 달라진다. 떨어져 있어야 목록에
  * 없었다는 뜻이 된다.
+ *
+ * 여기에 accent 색 밑줄을 그어 두었었다. 이 공간에서 색이 글자로 넘어오는
+ * 자리는 둘뿐이다 — 글이 끝났다는 표시와, 지금 있는 자리를 알리는 밑줄.
+ * 세 번째 자리를 만든 데다, 그 색은 «이쪽이 정답»이라는 평가였다. 여백과
+ * «줄이 그어져 있지 않다»는 사실만으로 이미 다 말한다.
  */
 .found {
   display: grid;
@@ -90,17 +95,6 @@
   row-gap: 4px;
   margin-top: clamp(48px, 8vw, 104px);
   padding-left: var(--margin-col);
-}
-
-.found .at::after {
-  /* 겨눈 적이 없으므로 그을 줄도 없다. 밑줄 하나가 그 자리를 대신한다. */
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
-  height: 1px;
-  background: var(--accent);
 }
 
 /*

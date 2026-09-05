@@ -52,13 +52,16 @@
 }
 
 /*
- * 더한 줄과 지운 줄의 비율.
+ * 이 기록의 표지.
  *
- * 이것이 코드 기록의 표지다. 사진이 없는 자리에 놓이지만 사진의 대역이
- * 아니다 — 사진은 분위기를 만들고 이 막대는 사실을 만든다. 이번 변경이
- * 크게 더한 쪽이었는지 크게 지운 쪽이었는지가 한눈에 온다.
+ * 사진이 없는 자리에 놓이지만 사진의 대역이 아니다. 사진은 분위기를 만들고
+ * 이 막대는 사실을 만든다 — 이번 변경이 크게 더한 쪽이었는지 크게 지운
+ * 쪽이었는지, 그리고 몇 걸음에 나눠 갔는지.
+ *
+ * CODE의 기호와 같은 그림이다. 닫혀 있고, 안이 나뉘어 있다.
  */
 .bar {
+  position: relative;
   display: flex;
   flex: 1 1 clamp(120px, 22vw, 280px);
   min-width: 96px;
@@ -77,18 +80,33 @@
   background: var(--ink-removed);
 }
 
+/*
+ * 커밋의 눈금.
+ *
+ * 막대를 나눠 칠하지 않고 위에서 잘라 낸다. 칸마다 색을 주면 «이 커밋은
+ * 더했고 저 커밋은 지웠다»로 읽히는데, 그것은 이 값이 아는 사실이 아니다.
+ * 비율은 아래에서 정확하게 칠해지고, 눈금은 그 위를 지나갈 뿐이다.
+ *
+ * 종이색으로 자른다. 선을 하나 더 얹는 것이 아니라 막대를 덜어 내는 것이라,
+ * 이 장치에 쓰이는 잉크는 여전히 두 색뿐이다.
+ */
+.ticks {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent calc(100% / var(--cuts) - 1px),
+    var(--color-bg) calc(100% / var(--cuts) - 1px),
+    var(--color-bg) calc(100% / var(--cuts))
+  );
+}
+
 /* 숫자에는 색을 얹지 않는다. 부호가 이미 어느 쪽인지 말한다. */
 .lines {
   display: flex;
   gap: clamp(10px, 1.4vw, 16px);
   color: var(--color-text);
-  white-space: nowrap;
-}
-
-.counts {
-  display: flex;
-  gap: clamp(10px, 1.4vw, 16px);
-  color: var(--color-text-muted);
   white-space: nowrap;
 }
 

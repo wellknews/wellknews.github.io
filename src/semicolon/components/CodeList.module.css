@@ -4,15 +4,18 @@
 }
 
 /*
- * CODE는 경계를 가진 변경이다. 그래서 색도 경계를 가지되, 세션과는 다르게 온다.
+ * CODE는 경계를 가진 변경이다. 그래서 색도 경계 안에 고인다.
  *
- * 세션의 색은 미끄러져 들어와 영역에 맞춰 앉는다. 여기서는 네 번에 나눠
- * 뛰어 들어온다 — 커밋과 커밋 사이의 상태가 저장소에 존재한 적이 없듯,
- * 이 색에도 중간이 없다. 두 목록의 차이는 사실상 `steps(4, end)` 한 줄이고,
- * 세 개념의 차이를 문장이 아니라 규칙으로 적어 두는 이 사이트의 방식이다.
+ * 세션과 다른 점은 벽의 수다. 세션은 오른쪽 벽 하나에 부딪혀 멈추고,
+ * 여기는 양쪽에 벽이 있다 — 코드의 변경에는 시작한 해시와 도착한 해시가
+ * 있고 어느 쪽도 열려 있지 않다. 구조가 뜻을 말하고, 그것이 THREAD와의
+ * 차이가 `overflow: hidden` 한 줄인 것과 같은 방식이다.
  *
- * 양쪽 끝에 벽이 있다. 코드의 변경에는 시작한 해시와 도착한 해시가 있고,
- * 어느 쪽도 열려 있지 않다. 세션이 오른쪽 벽 하나만 세우는 것과 다른 점이다.
+ * 한동안 이 색이 네 번에 나눠 뛰어 들어오게 해 두었다(steps). 커밋에 중간이
+ * 없다는 뜻이었는데, 색은 이 공간에서 정보가 아니라 재료다. 재료에 뜻을
+ * 실으면 그 뜻은 어디에도 도착하지 않고 화면만 덜컥거린다. 계단은 커밋을
+ * 대신해 서 있는 점 하나에만 남긴다(KindMark의 .kindStep) — 규칙 하나를
+ * 한 자리에서만 써야 그 자리가 무슨 말을 하는지 보인다.
  */
 .item {
   position: relative;
@@ -32,8 +35,8 @@
   opacity: 0;
   transform: scale(1.3);
   transition:
-    opacity var(--dur-base) steps(4, end),
-    transform var(--dur-slow) steps(4, end);
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
 }
 
 /* 두 끝. 시작한 자리와 도착한 자리이고, 다가갔을 때만 드러난다. */
@@ -44,7 +47,7 @@
   pointer-events: none;
   border-inline: 1px solid var(--color-line-strong);
   opacity: 0;
-  transition: opacity var(--dur-base) steps(4, end);
+  transition: opacity var(--dur-base) var(--ease-out);
 }
 
 .item:focus-within::before,
@@ -119,7 +122,7 @@
   align-self: center;
   color: var(--color-text-muted);
   transition:
-    transform var(--dur-base) steps(4, end),
+    transform var(--dur-base) var(--ease-out),
     color var(--dur-base) var(--ease-out);
 }
 
@@ -180,7 +183,7 @@
     display: none;
   }
 
-  /* 뛰어 들어오는 색도, 양 끝의 벽도 좁은 화면에서는 구획만 늘린다. */
+  /* 고이는 색도, 양 끝의 벽도 좁은 화면에서는 구획만 늘린다. */
   .item::before,
   .item::after {
     display: none;

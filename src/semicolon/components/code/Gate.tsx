@@ -51,18 +51,14 @@ export function Gate({ passed, absent, fell }: Props) {
 
         {/*
           관문이 없는 자리.
-          이름은 있고 검사는 없다. 선이 시작하다 말고, 그 뒤로 점 세 개가 남는다.
+
+          이름만 있고 그 옆은 비어 있다. 짧은 선도 점도 그리지 않는다 —
+          없는 것을 그리는 순간 그것은 «없음»이라는 이름의 무언가가 되고,
+          여기서 말해야 하는 것은 정말로 아무것도 없다는 쪽이다. 위의 세 줄이
+          끝까지 가는 선을 갖고 있어서, 이 줄의 빈 자리는 그 자체로 읽힌다.
         */}
-        <li className={styles.miss} style={{ '--order': passed.length } as CSSProperties}>
+        <li className={styles.miss}>
           <p className={`${styles.name} ${styles.thing}`}>{absent}</p>
-          <span className={styles.stub} aria-hidden="true">
-            <span className={styles.stubRule} />
-            <span className={styles.dots}>
-              <span />
-              <span />
-              <span />
-            </span>
-          </span>
         </li>
       </ul>
 

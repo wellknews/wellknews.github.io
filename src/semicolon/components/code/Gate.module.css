@@ -56,6 +56,17 @@
 }
 
 /*
+ * 관문이 없는 자리.
+ *
+ * 위의 검사들과 한 칸 떨어져 앉는다. 이 여백이 예전에 짧은 선과 점 셋이
+ * 하던 일을 대신한다 — 저 위는 검사이고 여기는 검사가 아니라는 것.
+ * 기호를 하나 그리는 것보다 자리를 한 번 띄우는 편이 적게 그리고 더 정확하다.
+ */
+.miss {
+  margin-top: clamp(14px, 2vw, 22px);
+}
+
+/*
  * 관문이 없는 자리의 이름.
  *
  * 잉크가 옅다 — 검사받은 적이 없다. 글자도 다르다. 위의 셋은 터미널에 그대로
@@ -73,62 +84,21 @@
 }
 
 /*
- * 시작하다 마는 선.
- *
- * 이 공간에서 «끝나지 않은 것»은 늘 이 모양이었다 — 짧아진 선과 그 뒤의
- * 점 세 개(THREAD의 기호). 여기서는 뜻이 하나 뒤집힌다. 스레드에서 그것은
- * 아직 이어지는 중이라는 뜻이었고, 여기서는 여기를 지키는 것이 아무것도
- * 없다는 뜻이다. 같은 모양이 자리에 따라 다른 말을 하는 것이고, 그 사실
- * 자체가 이 기록이 하려는 이야기이기도 하다.
- */
-.stub {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-}
-
-.stubRule {
-  flex: 0 0 auto;
-  width: clamp(18px, 4vw, 34px);
-  height: 1px;
-  background: var(--color-line);
-  transform-origin: left;
-}
-
-.dots {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.dots span {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: var(--color-text-muted);
-}
-
-.dots span:nth-child(2) {
-  opacity: 0.55;
-}
-
-.dots span:nth-child(3) {
-  opacity: 0.25;
-}
-
-/*
  * 관문 바깥에서 무너진 것들.
  *
  * 검사 목록 안에 넣지 않는다. 이것들은 검사에 걸린 적이 없어서 그 목록의
  * 항목이 될 자격이 없고, 목록 밖으로 밀어 두는 편이 그 사실을 그대로 말한다.
+ *
+ * 세로선은 중립이다. 지운 줄의 색(--ink-removed)을 여기 쓸 뻔했는데, 그러면
+ * 한 페이지 안에서 같은 색이 «지워진 줄»과 «죽은 자리» 두 가지를 뜻하게 된다.
+ * 색은 diffstat 막대에서만 뜻을 갖는다.
  */
 .fell {
   margin-top: clamp(20px, 3vw, 32px);
   padding-left: clamp(18px, 4vw, 34px);
   color: var(--color-text-secondary);
   font-size: var(--text-body);
-  border-left: 1px solid var(--ink-removed);
+  border-left: 1px solid var(--color-line-strong);
 }
 
 /*
@@ -154,8 +124,7 @@
       view-timeline-name: --gate;
     }
 
-    .rule,
-    .stubRule {
+    .rule {
       animation: gate-draw linear both;
       animation-timeline: --gate;
       /* 줄마다 조금씩 늦게 그어진다. 순서가 보여야 «차례로»가 된다. */
@@ -191,8 +160,7 @@
     grid-column: 1 / -1;
   }
 
-  .rule,
-  .stub {
+  .rule {
     grid-column: 1;
   }
 

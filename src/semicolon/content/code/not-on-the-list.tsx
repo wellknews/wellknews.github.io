@@ -26,6 +26,13 @@ import type { Code } from '../types'
  * 못 쟀거나 하지 않은 것은 글 끝에 몰아 두지 않고 잰 것과 같은 판면에 둔다.
  * 성과 뒤에 붙는 각주가 되면 아무도 읽지 않는다.
  *
+ * 부제를 두지 않는다.
+ *
+ * «PERFORMANCE PASS · 2026-09»라고 적어 두었었는데, 바로 아래 메타데이터가
+ * 이미 2026-09-05와 PERFORMANCE를 적고 있었다. 한 화면에 같은 문자열이 두 번
+ * 나오면 둘 중 하나는 장식이다. 부제는 commander-at-home처럼 메타가 말하지
+ * 못하는 것이 있을 때만 둔다.
+ *
  * 지운 창 셋에 대하여.
  *
  * Prompt에 적힌 물음은 앱에 있던 문구를 그대로 옮긴 것이 아니다. 세 창의
@@ -36,11 +43,10 @@ import type { Code } from '../types'
 export const notOnTheList: Code = {
   slug: 'not-on-the-list',
   title: '무거웠던 것은 목록에 없었다',
-  subtitle: 'PERFORMANCE PASS · 2026-09',
 
   repo: 'rwkor',
   revision: { from: '8cd8123', to: '7d5e68d' },
-  diff: { commits: 16, files: 27, added: 1456, removed: 334 },
+  diff: { commits: 16, added: 1456, removed: 334 },
 
   meta: {
     date: '2026-09-05',

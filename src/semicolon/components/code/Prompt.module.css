@@ -29,22 +29,21 @@
  * 창 뒤에 숨어 있지 않다. 처음부터 화면에 있고, 창은 그 위에 얹혀 있을 뿐이다.
  * 그것이 이 세 커밋의 전제였다 — 답이 정해져 있다는 것은 도착지가 이미
  * 정해져 있다는 뜻이다.
+ *
+ * 테두리를 두르지 않는다. 여기에 상자를 치면 도착지도 하나의 UI가 되고,
+ * 그러면 화면에 상자가 둘이 되어 «창을 치우면 무엇이 남는가»가 흐려진다.
+ * 이 장치에서 상자는 물음이다. 상자가 없는 것이 진짜 자리다.
+ *
+ * 이름은 위 모서리에 붙는다. 한가운데 두면 창이 정확히 그 자리를 덮어,
+ * 어디로 가는 길이었는지가 창을 다 치울 때까지 보이지 않는다.
  */
 .behind {
   grid-area: 1 / 1;
   display: grid;
-  /*
-   * 이름을 한가운데 두지 않는다. 창이 정확히 그 자리를 덮기 때문이다.
-   * 위 모서리에 붙여 두면 창이 세 장 쌓여 있는 동안에도 «어디로 가는
-   * 길이었는지»가 계속 보이고, 그것이 이 장치의 전제다 — 도착지는
-   * 물음 뒤에 숨어 있던 것이 아니라 처음부터 화면에 있었다.
-   */
   place-items: start;
-  /* 창보다 높아야 위 모서리가 비고, 그 빈 자리에 이름이 앉는다. */
   align-self: stretch;
   width: min(100%, 460px);
-  padding: clamp(20px, 3vw, 28px);
-  border: 1px solid var(--color-line);
+  padding: clamp(20px, 3vw, 28px) 0;
 }
 
 /*
@@ -62,19 +61,12 @@
 }
 
 /* 도착지만 남았을 때. 잉크가 한 단계 진해지는 것 말고는 아무 일도 없다. */
-.stage[data-cleared='true'] .behind {
-  border-color: var(--color-line-strong);
-}
-
 .stage[data-cleared='true'] .place {
   color: var(--color-text);
 }
 
-.behind,
 .place {
-  transition:
-    border-color var(--dur-base) var(--ease-out),
-    color var(--dur-base) var(--ease-out);
+  transition: color var(--dur-base) var(--ease-out);
 }
 
 /* ---------- 쌓인 창 ---------- */

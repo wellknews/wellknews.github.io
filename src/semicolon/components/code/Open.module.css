@@ -30,48 +30,21 @@
 }
 
 /*
- * 값이 앉았을 칸.
+ * 값이 앉았을 자리.
  *
  * '—'를 찍지 않는다. 그 기호는 «없음»이라는 값이고, 여기 있는 것은 값의
- * 부재다. 시작하다 마는 선과 그 뒤의 점 세 개 — 아직 닫히지 않았다는 뜻으로
- * 이 공간이 이미 쓰고 있는 모양을 그대로 쓴다.
+ * 부재다. 남는 것은 값이 놓였을 밑줄 하나뿐이다 — 기호가 아니라 자리라서,
+ * 무엇을 뜻하는지 배울 필요가 없다. 빈칸은 어디서나 빈칸으로 읽힌다.
  */
 .blank {
   grid-column: 1;
   grid-row: 1;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  justify-content: flex-end;
-  /* 글자의 기준선에 맞춰 앉는다. 위로 떠 있으면 값이 아니라 장식이 된다. */
-  translate: 0 -0.35em;
-}
-
-.stub {
-  width: clamp(14px, 3vw, 24px);
+  justify-self: end;
+  width: clamp(20px, 4vw, 34px);
   height: 1px;
   background: var(--color-line-strong);
-}
-
-.dots {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.dots span {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: var(--color-text-muted);
-}
-
-.dots span:nth-child(2) {
-  opacity: 0.55;
-}
-
-.dots span:nth-child(3) {
-  opacity: 0.25;
+  /* 글자의 기준선에 맞춰 앉는다. 위로 떠 있으면 자리가 아니라 장식이 된다. */
+  translate: 0 -0.32em;
 }
 
 .what {

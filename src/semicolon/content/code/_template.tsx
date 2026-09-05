@@ -43,7 +43,7 @@ export const template: Code = {
 
   /** git이 말해 주는 그대로. 지어내지 않는다. */
   revision: { from: '0000000', to: '1111111' },
-  diff: { commits: 1, files: 1, added: 1, removed: 1 },
+  diff: { commits: 1, added: 1, removed: 1 },
 
   meta: {
     date: '2026-01-01',
