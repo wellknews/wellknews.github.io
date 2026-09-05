@@ -1,7 +1,6 @@
 import { Bridge } from '../../components/session/Bridge'
 import { Choice } from '../../components/session/Choice'
 import { Drift } from '../../components/session/Drift'
-import { Ending } from '../../components/session/Ending'
 import { Later } from '../../components/session/Later'
 import { Move } from '../../components/session/Move'
 import { Nightfall } from '../../components/session/Nightfall'
@@ -770,10 +769,6 @@ export const pleasureIsNotASin: Session = {
       <Scene air>
         <Passage tone="loud">{noMore}</Passage>
       </Scene>
-
-      <Scene>
-        <Ending />
-      </Scene>
     </>
   ),
 
@@ -936,10 +931,6 @@ export const pleasureIsNotASin: Session = {
 
       <Scene air>
         <Passage tone="loud">{noMore}</Passage>
-      </Scene>
-
-      <Scene>
-        <Ending />
       </Scene>
     </>
   ),

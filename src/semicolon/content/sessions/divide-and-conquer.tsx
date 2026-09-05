@@ -1,7 +1,6 @@
 import { Axis } from '../../components/session/Axis'
 import { Breakdown } from '../../components/session/Breakdown'
 import { Course } from '../../components/session/Course'
-import { Ending } from '../../components/session/Ending'
 import { Later } from '../../components/session/Later'
 import { Move } from '../../components/session/Move'
 import { Passage } from '../../components/session/Passage'
@@ -580,10 +579,6 @@ export const divideAndConquer: Session = {
       <Scene air>
         <Passage tone="loud">{closing}</Passage>
       </Scene>
-
-      <Scene>
-        <Ending />
-      </Scene>
     </>
   ),
 
@@ -751,10 +746,6 @@ export const divideAndConquer: Session = {
 
       <Scene air>
         <Passage tone="loud">{closing}</Passage>
-      </Scene>
-
-      <Scene>
-        <Ending />
       </Scene>
     </>
   ),

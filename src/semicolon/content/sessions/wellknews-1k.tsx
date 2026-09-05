@@ -2,7 +2,6 @@ import { Amount } from '../../components/session/Amount'
 import { Becoming } from '../../components/session/Becoming'
 import { Candidates } from '../../components/session/Candidates'
 import { Counter } from '../../components/session/Counter'
-import { Ending } from '../../components/session/Ending'
 import { Faces } from '../../components/session/Faces'
 import { Later } from '../../components/session/Later'
 import { Materialize } from '../../components/session/Materialize'
@@ -166,31 +165,25 @@ export const wellknews1k: Session = {
       <Scene air>
         <Passage>{opening}</Passage>
       </Scene>
-
       <Scene>
         <Counter />
       </Scene>
-
       <Scene air>
         <Passage tone="loud">{decision}</Passage>
       </Scene>
-
       <Scene>
         <Candidates options={candidates} chosen="T-SHIRT" />
 
         <Passage>{soonest}</Passage>
       </Scene>
-
       <Scene>
         <Quotes quotes={conversation} />
       </Scene>
-
       <Scene>
         <Amount value="22,000" currency="KRW" />
 
         <Passage tone="loud">{easily}</Passage>
       </Scene>
-
       {/*
         표지에서 흐릿하게만 보던 그 이미지가 여기서 처음 온전히 나온다.
         앞뒤를 직접 돌려보는 동안, 이것이 아직 화면 안의 것이라는 사실이 남는다.
@@ -198,22 +191,18 @@ export const wellknews1k: Session = {
       <Scene width="bleed" air>
         <Faces front={mockupFront} back={mockupBack} />
       </Scene>
-
       {/* 이 기록의 핵심. 스크롤한 만큼 이미지가 물건이 된다. */}
       <Scene width="bleed" air>
         <Becoming from={mockupFront} to={packaged} />
       </Scene>
-
       <Scene>
         <Passage tone="loud">{arrived}</Passage>
       </Scene>
-
       <Scene>
         <Span from="ORDER" to="ARRIVED" />
 
         <Passage>{withinWeek}</Passage>
       </Scene>
-
       {/*
         이 기록에서 가장 큰 사진.
         여기서는 인터랙션을 오히려 줄인다 — 손을 대는 대신 그냥 보게 한다.
@@ -221,19 +210,15 @@ export const wellknews1k: Session = {
       <Scene width="bleed" air>
         <Materialize image={worn} rest={1} />
       </Scene>
-
       <Scene>
         <Passage>{inHand}</Passage>
       </Scene>
-
       <Scene>
         <Passage>{quality}</Passage>
       </Scene>
-
       <Scene>
         <Passage>{rights}</Passage>
       </Scene>
-
       {/*
         여기서부터 색이 빠진다.
         이 문단에 연출을 얹으면 값싸진다. 더하는 대신 뺀다.
@@ -241,15 +226,12 @@ export const wellknews1k: Session = {
       <Quiet>
         <Passage>{reflection}</Passage>
       </Quiet>
-
       <Scene air>
         <Passage>{learned}</Passage>
       </Scene>
-
       <Scene>
         <Passage>{next}</Passage>
       </Scene>
-
       <Scene air>
         <Passage tone="loud">{keepMaking}</Passage>
 
@@ -258,11 +240,7 @@ export const wellknews1k: Session = {
           <p className="mono">10,000 ?</p>
         </Later>
       </Scene>
-
-      {/* 끝났지만 끝난 것이 아니라는 말을, 마지막 기호가 대신한다. */}
-      <Scene>
-        <Ending />
-      </Scene>
+      {/* 끝났지만 끝난 것이 아니라는 말을, 마지막 기호가 대신한다. */}{' '}
     </>
   ),
 
@@ -350,10 +328,6 @@ export const wellknews1k: Session = {
         <Later>
           <p className="mono">10,000 ?</p>
         </Later>
-      </Scene>
-
-      <Scene>
-        <Ending />
       </Scene>
     </>
   ),

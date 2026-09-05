@@ -1,7 +1,6 @@
 import { Amount } from '../../components/session/Amount'
 import { Condition } from '../../components/session/Condition'
 import { Detour } from '../../components/session/Detour'
-import { Ending } from '../../components/session/Ending'
 import { Later } from '../../components/session/Later'
 import { Locker } from '../../components/session/Locker'
 import { Move } from '../../components/session/Move'
@@ -885,10 +884,6 @@ export const onlyMyself: Session = {
       <Scene>
         <Passage tone="loud">{closing}</Passage>
       </Scene>
-
-      <Scene>
-        <Ending />
-      </Scene>
     </>
   ),
 
@@ -1153,10 +1148,6 @@ export const onlyMyself: Session = {
 
       <Scene>
         <Passage tone="loud">{closing}</Passage>
-      </Scene>
-
-      <Scene>
-        <Ending />
       </Scene>
     </>
   ),

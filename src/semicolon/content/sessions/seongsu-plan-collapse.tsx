@@ -2,7 +2,6 @@ import { Amount } from '../../components/session/Amount'
 import { Cue } from '../../components/session/Cue'
 import { Detour } from '../../components/session/Detour'
 import { Drowse } from '../../components/session/Drowse'
-import { Ending } from '../../components/session/Ending'
 import { Grammar } from '../../components/session/Grammar'
 import { Move } from '../../components/session/Move'
 import { Passage } from '../../components/session/Passage'
@@ -808,8 +807,6 @@ export const seongsuPlanCollapse: Session = {
       <Scene air>
         <Passage tone="loud">{sleep}</Passage>
       </Scene>
-
-      <Ending />
     </PlanStage>
   ),
 
@@ -1065,8 +1062,6 @@ export const seongsuPlanCollapse: Session = {
       <Scene air>
         <Passage tone="loud">{sleep}</Passage>
       </Scene>
-
-      <Ending />
     </PlanStage>
   ),
 }
