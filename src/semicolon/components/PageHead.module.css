@@ -19,6 +19,9 @@
  *
  * 만질 수 있는 폭을 확보하되 선 자체는 그대로 둔다. 크게 그리면 그래픽이 되고,
  * 그래픽이 되는 순간 '무슨 일이 일어나는지 보라'는 신호가 사라진다.
+ *
+ * 반응 규칙은 global.css의 .kindGate가 갖는다 — 홈의 블록 머리와 같은 일을
+ * 하므로 두 곳에 같은 숫자를 적어 두지 않는다.
  */
 .figure {
   display: flex;
@@ -55,26 +58,39 @@
   margin-left: auto;
 }
 
-/* 손가락에는 hover가 없으므로 찍었을 때도 같은 일이 일어난다. */
-.figure[data-touched='true'] :global(.kindRunner) {
-  opacity: 1;
-  /* 오른쪽 벽에 닿아 멈춘다. 벽과 겹치지 않도록 한 칸 앞에서 선다. */
-  transform: translateX(58px);
+/*
+ * 코드는 한 칸 들여쓴다.
+ *
+ * 여백 칼럼(--margin-col)만큼이다. 이 사이트에서 그 칸은 늘 날짜와
+ * 메타데이터가 앉던 자리 — 본문이 시작되기 전의 자리다. 코드도 거기서
+ * 시작한다. 왼쪽 끝도 오른쪽 끝도 아닌 세 번째 자리이면서, 들여쓰기가
+ * 무엇인지 아는 사람에게는 한 번 더 읽히는 자리다.
+ *
+ * 여백 칼럼이 사라지는 폭(≤899px)에서는 --margin-col이 0이 되므로 자연히
+ * 왼쪽 끝으로 돌아온다. 좁은 지면에서 들여쓰기까지 지키면 판면만 좁아진다.
+ */
+.head[data-kind='code'] {
+  padding-left: var(--margin-col);
 }
 
-.figure[data-touched='true'] :global(.kindTrail) {
-  transform: translateX(8px);
-  opacity: 0.35;
-}
-
-@media (hover: hover) {
-  .figure:hover :global(.kindRunner) {
-    opacity: 1;
-    transform: translateX(58px);
+/*
+ * 좁은 판면에서 코드의 자리를 대신 표시한다.
+ *
+ * 들여쓸 칸이 없어졌다고 해서 세 개념이 전부 같은 축에 앉아 버리면, 세
+ * 페이지를 오간 사람이 «셋이 다른 자리에 있다»는 사실을 잃는다. 경로 앞에
+ * 짧은 선을 하나 놓아 이 페이지가 왼쪽 끝에서 시작하지 않는다는 것만 남긴다.
+ */
+@media (max-width: 899px) {
+  .head[data-kind='code'] .path {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
-  .figure:hover :global(.kindTrail) {
-    transform: translateX(8px);
-    opacity: 0.35;
+  .head[data-kind='code'] .path::before {
+    content: '';
+    width: clamp(16px, 5vw, 32px);
+    height: 1px;
+    background: var(--color-line-strong);
   }
 }

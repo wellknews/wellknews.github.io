@@ -15,6 +15,9 @@
  *   2. 죽은 장치    만질 수 있게 만들어 둔 것이 마우스와 손가락 양쪽에
  *                   실제로 반응하는지. 한쪽만 되면 그 사람에게는 없는 기능이다.
  *                   좁은 화면의 반응을 통째로 없앤 채 배포된 적이 있다.
+ *                   SESSION·THREAD·CODE의 기호도 여기서 본다. 셋의 차이는
+ *                   모양이 아니라 «어떻게 움직이는가»에 있어서, 안 움직이면
+ *                   세 개념은 이름 세 개로 줄어든다.
  *   3. 사라진 문장  좁은 판면이 넓은 판면의 문장과 이미지를 그대로 가지고
  *                   있는지. 배치가 달라지는 것은 되고, 내용이 줄어드는 것은
  *                   안 된다. 손으로 세어 확인하던 것을 여기로 옮겼다.
@@ -80,8 +83,10 @@ const PAGES = [
     path: '/session/commander-at-home',
     kind: 'session',
   },
+  { name: 'code/not-on-the-list', path: '/code/not-on-the-list', kind: 'code' },
   { name: 'session-index', path: '/session', kind: 'index' },
   { name: 'thread-index', path: '/thread', kind: 'index' },
+  { name: 'code-index', path: '/code', kind: 'index' },
   {
     name: 'thread/thread-publisher-sketch',
     path: '/thread/thread-publisher-sketch',
@@ -336,6 +341,71 @@ const DEVICES = [
     changed: (before, after) => before !== after,
     hold: true,
   },
+  /*
+   * 세 개념의 기호.
+   *
+   * 이것을 검사하는 이유는 이 셋이 이 사이트에서 가장 «설명 없이» 일하는
+   * 장치이기 때문이다. 움직이지 않으면 세 개념의 차이는 이름 세 개로 줄고,
+   * 그러면 목록 머리에 남는 것은 큰 글자뿐이다.
+   *
+   * 목록 머리(PageHead)에서 잰다. 홈에도 같은 기호가 셋 다 있지만 거기서는
+   * 한 화면에 나란히 있어 서로를 가리키고, 여기서는 하나뿐이라 그 하나가
+   * 실제로 움직이는지가 그대로 드러난다.
+   */
+  /*
+   * 세 페이지가 같은 kind('index')를 쓰므로 기호로 대상을 좁힌다. :has()가
+   * 없으면 세션의 목록에서 스레드의 점을 찾다가 검사 자체가 죽는다.
+   */
+  {
+    kind: 'index',
+    label: '벽에 부딪히는 점',
+    target: '[class*="PageHead-module__figure"]:has(.kindRunner)',
+    read: () => {
+      const dot = document.querySelector('.kindRunner')
+      return dot ? getComputedStyle(dot).transform : null
+    },
+    changed: (before, after) => before !== after && after !== 'none',
+  },
+  {
+    kind: 'index',
+    label: '흘러 나가는 점들',
+    target: '[class*="PageHead-module__figure"]:has(.kindTrail)',
+    read: () => {
+      const dot = document.querySelector('.kindTrail')
+      return dot ? getComputedStyle(dot).transform : null
+    },
+    changed: (before, after) => before !== after && after !== 'none',
+  },
+  {
+    kind: 'index',
+    label: '눈금을 건너뛰는 점',
+    target: '[class*="PageHead-module__figure"]:has(.kindStep)',
+    read: () => {
+      const dot = document.querySelector('.kindStep')
+      return dot ? getComputedStyle(dot).transform : null
+    },
+    changed: (before, after) => before !== after && after !== 'none',
+  },
+
+  {
+    kind: 'code',
+    label: '빗나간 진단',
+    target: '[class*="Miss-module__shot"]',
+    read: () => getComputedStyle(document.querySelector('[class*="Miss-module__strike"]')).scale,
+    changed: (before, after) => before !== after,
+    /* 쥐고 있는 동안에만 줄이 물러난다. 놓으면 돌아오므로 쥔 채로 재야 한다. */
+    hold: true,
+  },
+  {
+    kind: 'code',
+    label: '답이 하나뿐인 물음',
+    target: '[class*="Prompt-module__answer"]',
+    watch: '[class*="Prompt-module__stage"]',
+    read: () => document.querySelectorAll('[class*="Prompt-module__dialog"]').length,
+    changed: (before, after) => Number(after) < Number(before),
+    click: true,
+  },
+
   {
     kind: 'session',
     label: '붙잡는 51%',

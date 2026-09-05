@@ -7,7 +7,7 @@ type Props = {
 }
 
 /**
- * 왼쪽에 ';' 하나, 오른쪽에 두 개의 개념.
+ * 왼쪽에 ';' 하나, 오른쪽에 세 개의 개념.
  *
  * 지금 있는 자리의 경로는 여기 적지 않는다. 각 페이지가 자기 머리에서 이미
  * 같은 주소를 크게 적고 있어서, 헤더에까지 두면 한 화면에 같은 문자열이
@@ -20,12 +20,14 @@ type Props = {
  * 콘텐츠가 아니라 구조를 설명하게 되고, 이 공간은 설명으로 이해시키지 않는다.
  * 복수형(SESSIONS)을 쓰지 않는 것도 같은 이유다 — 게시판 이름이 아니라
  * 이 공간이 무엇을 다루는지에 대한 선언이다.
+ *
+ * 순서는 홈과 같다 — 끝이 있는 것 둘을 먼저, 끝나지 않은 것을 마지막에.
+ * 헤더에서만 다른 차례로 적으면 두 화면이 서로 다른 사이트 구조를 말하게 된다.
  */
 export function Header({ route }: Props) {
-  const sessionCurrent =
-    route.kind === 'session-index' ? 'page' : route.kind === 'session' ? 'location' : undefined
-  const threadCurrent =
-    route.kind === 'thread-index' ? 'page' : route.kind === 'thread' ? 'location' : undefined
+  /** 목록에 있으면 'page', 그 아래의 글 한 편에 있으면 'location'. */
+  const at = (index: Route['kind'], entry: Route['kind']) =>
+    route.kind === index ? 'page' : route.kind === entry ? 'location' : undefined
 
   return (
     <header className={styles.header}>
@@ -47,11 +49,27 @@ export function Header({ route }: Props) {
         </Link>
 
         <nav className={styles.nav} aria-label="주요 메뉴">
-          <Link to={path.sessionIndex} className={`mono ${styles.link}`} current={sessionCurrent}>
+          <Link
+            to={path.sessionIndex}
+            className={`mono ${styles.link}`}
+            current={at('session-index', 'session')}
+          >
             {semicolon.session.label}
           </Link>
 
-          <Link to={path.threadIndex} className={`mono ${styles.link}`} current={threadCurrent}>
+          <Link
+            to={path.codeIndex}
+            className={`mono ${styles.link}`}
+            current={at('code-index', 'code')}
+          >
+            {semicolon.code.label}
+          </Link>
+
+          <Link
+            to={path.threadIndex}
+            className={`mono ${styles.link}`}
+            current={at('thread-index', 'thread')}
+          >
             {semicolon.thread.label}
           </Link>
         </nav>

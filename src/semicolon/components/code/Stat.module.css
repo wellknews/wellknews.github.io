@@ -1,0 +1,137 @@
+.stat {
+  display: grid;
+  row-gap: clamp(10px, 1.4vw, 16px);
+  color: var(--color-text-muted);
+}
+
+/* ---------- 어디에서 어디까지 ---------- */
+
+.range {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.4vw, 16px);
+  flex-wrap: wrap;
+}
+
+/* 저장소 이름만 사람이 지은 것이다. 나머지는 기계가 세어 준 값이라 색이 다르다. */
+.repo {
+  color: var(--color-text);
+}
+
+.from,
+.to {
+  color: var(--color-text-muted);
+}
+
+/* 도착한 자리. 지금 저장소에 서 있는 곳이므로 이쪽에만 잉크가 있다. */
+.to {
+  color: var(--color-text);
+}
+
+/*
+ * 두 해시 사이.
+ *
+ * 화살표를 그리지 않는다. 선 하나면 «사이»라는 뜻이 서고, 화살표를 붙이는
+ * 순간 방향을 두 번 말하게 된다 — 왼쪽에서 오른쪽으로 읽는다는 사실이
+ * 이미 방향이다.
+ */
+.span {
+  flex: 0 0 auto;
+  width: clamp(24px, 5vw, 56px);
+  height: 1px;
+  background: var(--color-line-strong);
+}
+
+/* ---------- 크기 ---------- */
+
+.figures {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.8vw, 22px);
+  flex-wrap: wrap;
+}
+
+/*
+ * 더한 줄과 지운 줄의 비율.
+ *
+ * 이것이 코드 기록의 표지다. 사진이 없는 자리에 놓이지만 사진의 대역이
+ * 아니다 — 사진은 분위기를 만들고 이 막대는 사실을 만든다. 이번 변경이
+ * 크게 더한 쪽이었는지 크게 지운 쪽이었는지가 한눈에 온다.
+ */
+.bar {
+  display: flex;
+  flex: 1 1 clamp(120px, 22vw, 280px);
+  min-width: 96px;
+  max-width: 340px;
+  height: 4px;
+  overflow: hidden;
+}
+
+.added {
+  flex: var(--added, 0.5);
+  background: var(--ink-added);
+}
+
+.removed {
+  flex: calc(1 - var(--added, 0.5));
+  background: var(--ink-removed);
+}
+
+/* 숫자에는 색을 얹지 않는다. 부호가 이미 어느 쪽인지 말한다. */
+.lines {
+  display: flex;
+  gap: clamp(10px, 1.4vw, 16px);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.counts {
+  display: flex;
+  gap: clamp(10px, 1.4vw, 16px);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/*
+ * 목록의 한 행.
+ *
+ * 여기서는 이 값이 정보가 아니라 표지다. 크기를 한 단계 줄이고 막대만
+ * 또렷하게 남긴다 — 무엇이 얼마나 움직였는지는 들어가서 읽으면 된다.
+ */
+.stat[data-variant='row'] {
+  row-gap: 8px;
+}
+
+.stat[data-variant='row'] .bar {
+  height: 3px;
+  flex-basis: clamp(80px, 14vw, 180px);
+  max-width: 200px;
+}
+
+/*
+ * 다 자란 상태가 기본이다.
+ *
+ * 스크롤 타임라인이 없거나 움직임을 줄이기로 한 화면에서도 비율은 그대로
+ * 읽힌다. 자라나는 것은 연출이고, 비율은 사실이다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .stat[data-variant='head'] .bar {
+      view-timeline-name: --stat-bar;
+      animation: stat-grow linear both;
+      animation-timeline: --stat-bar;
+      animation-range: entry 30% entry 80%;
+      transform-origin: left;
+    }
+  }
+}
+
+@keyframes stat-grow {
+  from {
+    scale: 0 1;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}

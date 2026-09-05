@@ -1,0 +1,202 @@
+/*
+ * 장치의 폭.
+ *
+ * 본문(34em)보다 조금 넓고 판면(1240px)보다 훨씬 좁다. 도구는 문장보다
+ * 넓어야 «읽는 것이 아니라 보는 것»이 되고, 판면 전체를 쓰면 이름과 값이
+ * 화면 양 끝으로 갈라져 한 항목으로 읽히지 않는다. 그 사이가 여기다.
+ */
+.gate {
+  max-width: min(100%, 38em);
+  padding-block: clamp(32px, 5vw, 64px);
+}
+
+.checks {
+  display: grid;
+  row-gap: clamp(14px, 2vw, 22px);
+}
+
+/*
+ * 한 줄 = 이름 · 선 · 그 검사가 센 것.
+ *
+ * 이름 칸은 격자가 정한다. 한 장치 안의 모든 줄이 같은 폭을 나눠 쓰므로
+ * 선은 늘 같은 자리에서 출발하고, 그래야 마지막 줄의 선이 짧다는 사실이
+ * 보인다. 그 짧음이 이 장치의 전부다.
+ */
+.pass,
+.miss {
+  display: grid;
+  grid-template-columns: auto minmax(40px, 1fr) auto;
+  align-items: center;
+  column-gap: clamp(12px, 2vw, 24px);
+  row-gap: 6px;
+}
+
+.name {
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+/*
+ * 그 검사가 세어 준 것. 사람이 붙인 주석이므로 본문의 글자 체계를 따른다.
+ * 옆의 이름들과 달리 명령이 아니다.
+ */
+.note {
+  justify-self: end;
+  font-size: var(--text-meta);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* 끝까지 닿는 선. 이 검사는 실제로 무언가를 막아 준다. */
+.rule {
+  height: 1px;
+  background: var(--color-line-strong);
+  transform-origin: left;
+}
+
+/*
+ * 관문이 없는 자리의 이름.
+ *
+ * 잉크가 옅다 — 검사받은 적이 없다. 글자도 다르다. 위의 셋은 터미널에 그대로
+ * 칠 수 있는 명령이라 고정폭이고, 이것은 명령이 아니라 그냥 일어나는 일이다.
+ * 자리마다 다른 이름을 부르는 것이 아니라, 종류가 다른 것을 다른 글자로 적는다.
+ */
+.miss .name {
+  color: var(--color-text-muted);
+}
+
+.thing {
+  font-family: var(--font-serif);
+  font-size: var(--text-meta);
+  letter-spacing: normal;
+}
+
+/*
+ * 시작하다 마는 선.
+ *
+ * 이 공간에서 «끝나지 않은 것»은 늘 이 모양이었다 — 짧아진 선과 그 뒤의
+ * 점 세 개(THREAD의 기호). 여기서는 뜻이 하나 뒤집힌다. 스레드에서 그것은
+ * 아직 이어지는 중이라는 뜻이었고, 여기서는 여기를 지키는 것이 아무것도
+ * 없다는 뜻이다. 같은 모양이 자리에 따라 다른 말을 하는 것이고, 그 사실
+ * 자체가 이 기록이 하려는 이야기이기도 하다.
+ */
+.stub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.stubRule {
+  flex: 0 0 auto;
+  width: clamp(18px, 4vw, 34px);
+  height: 1px;
+  background: var(--color-line);
+  transform-origin: left;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dots span {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+}
+
+.dots span:nth-child(2) {
+  opacity: 0.55;
+}
+
+.dots span:nth-child(3) {
+  opacity: 0.25;
+}
+
+/*
+ * 관문 바깥에서 무너진 것들.
+ *
+ * 검사 목록 안에 넣지 않는다. 이것들은 검사에 걸린 적이 없어서 그 목록의
+ * 항목이 될 자격이 없고, 목록 밖으로 밀어 두는 편이 그 사실을 그대로 말한다.
+ */
+.fell {
+  margin-top: clamp(20px, 3vw, 32px);
+  padding-left: clamp(18px, 4vw, 34px);
+  color: var(--color-text-secondary);
+  font-size: var(--text-body);
+  border-left: 1px solid var(--ink-removed);
+}
+
+/*
+ * 여백은 바깥 칸이 갖고 목록 자체는 들여쓰지 않는다.
+ *
+ * 기호를 그리지 않는 목록에 들여쓰기를 남기면 «없는 기호의 자리»가 되고,
+ * npm run audit이 그것을 잡는다. 규칙의 이유는 그 검사에 적혀 있다.
+ */
+.fell ul {
+  display: grid;
+  row-gap: 6px;
+}
+
+/*
+ * 선이 위에서부터 차례로 그어진다.
+ *
+ * 기본은 다 그어진 상태다. 마지막 줄의 선은 어느 화면에서도 짧다 — 그것은
+ * 연출이 아니라 사실이라서, 움직임을 줄이기로 한 사람에게도 똑같이 짧다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .checks {
+      view-timeline-name: --gate;
+    }
+
+    .rule,
+    .stubRule {
+      animation: gate-draw linear both;
+      animation-timeline: --gate;
+      /* 줄마다 조금씩 늦게 그어진다. 순서가 보여야 «차례로»가 된다. */
+      animation-range: entry calc(30% + var(--order, 0) * 8%) entry calc(58% + var(--order, 0) * 8%);
+    }
+  }
+}
+
+@keyframes gate-draw {
+  from {
+    scale: 0 1;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}
+
+/*
+ * 작은 판면.
+ *
+ * 세 칸을 한 줄에 두면 이름과 숫자가 각각 두 글자씩 남는다. 이름을 위에,
+ * 선과 센 값을 아래에 놓는다. 줄어드는 것은 배치이고, 마지막 줄의 선이
+ * 짧다는 사실은 그대로다.
+ */
+@media (max-width: 599px) {
+  .pass,
+  .miss {
+    grid-template-columns: minmax(40px, 1fr) auto;
+  }
+
+  .name {
+    grid-column: 1 / -1;
+  }
+
+  .rule,
+  .stub {
+    grid-column: 1;
+  }
+
+  .note {
+    grid-column: 2;
+  }
+}
