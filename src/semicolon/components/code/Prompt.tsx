@@ -40,7 +40,7 @@ export function Prompt({ asks, behind }: Props) {
   const left = asks.slice(cleared)
 
   return (
-    <div className={`device ${styles.prompt}`}>
+    <div className={styles.prompt}>
       <div className={styles.stage} data-cleared={cleared >= asks.length}>
         {/* 물음 뒤에 처음부터 있던 자리. 창을 지워도 여기는 달라지지 않는다. */}
         <div className={styles.behind}>

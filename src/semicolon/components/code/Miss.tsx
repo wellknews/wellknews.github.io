@@ -31,7 +31,7 @@ type Props = {
  */
 export function Miss({ aimed, found }: Props) {
   return (
-    <div className={`device ${styles.miss}`}>
+    <div className={styles.miss}>
       <ul className={styles.aimed} role="list">
         {aimed.map((item) => (
           <li key={item.at}>

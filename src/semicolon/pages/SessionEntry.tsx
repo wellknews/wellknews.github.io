@@ -1,6 +1,7 @@
 import { BackLink } from '../components/BackLink'
 import { MetaLine } from '../components/MetaLine'
 import { Prose } from '../components/Prose'
+import { Materialize } from '../components/session/Materialize'
 import { Opening } from '../components/session/Opening'
 import { findSession } from '../content/sessions'
 import { useViewport } from '../layout/useViewport'
@@ -39,7 +40,22 @@ export function SessionEntry({ slug }: Props) {
 
     return (
       <article className={styles.stage}>
-        <Opening session={session} path={path.session(session.slug)} />
+        <Opening
+          path={path.session(session.slug)}
+          title={session.title}
+          subtitle={session.subtitle}
+          meta={session.meta}
+          {...(session.cover
+            ? {
+                figure: (
+                  <Materialize
+                    image={session.cover}
+                    {...(session.cover.focus ? { focus: session.cover.focus } : {})}
+                  />
+                ),
+              }
+            : {})}
+        />
 
         {arrangement}
 

@@ -1,79 +1,20 @@
-.head {
-  padding-block: clamp(40px, 6vw, 88px) var(--space-block);
-}
-
-.path {
-  display: flex;
-  align-items: center;
-  gap: clamp(14px, 2vw, 24px);
-  color: var(--color-text-muted);
-}
-
-.path > span:first-child {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.title {
-  margin-top: clamp(20px, 3vw, 40px);
-  max-width: 18ch;
-  font-size: var(--text-title);
-  font-weight: var(--weight-display);
-  line-height: 1.02;
-  letter-spacing: var(--tracking-title);
-  text-wrap: balance;
-}
-
-.subtitle {
-  margin-top: clamp(16px, 2vw, 26px);
-  max-width: var(--measure);
-  color: var(--color-text-secondary);
-  font-size: var(--text-lead);
-  line-height: 1.4;
-  text-wrap: pretty;
+/*
+ * 판면을 통째로 쓰는 기록.
+ *
+ * 안쪽의 각 장면이 자기 여백을 직접 정하므로 여기서는 바깥 폭만 열어 준다.
+ * 끝의 기호와 돌아가는 링크만 평소의 판면 안에 앉는다.
+ */
+.stage {
+  display: block;
+  padding-bottom: var(--space-section);
 }
 
 /*
- * 이 글이 다루는 범위.
+ * 글이 끝났다는 표시.
  *
- * 제목과 본문 사이에 선 하나를 두고 앉는다. 그 선이 «여기까지가 사실이고
- * 여기서부터가 이야기»라는 경계다. 코드 기록에서 그 둘을 섞지 않는 것이
- * 이 자리의 유일한 일이다.
+ * 장면들이 각자 여백을 갖고 있으므로 여기서는 위쪽 여백을 따로 더하지 않는다.
+ * 마지막 장면의 침묵이 이미 그 자리다.
  */
-.stat {
-  margin-top: clamp(28px, 4vw, 44px);
-  padding-top: clamp(20px, 3vw, 32px);
-  border-top: 1px solid var(--color-line);
-}
-
-.body {
-  display: grid;
-  grid-template-columns: var(--margin-col) minmax(0, 1fr);
-  column-gap: clamp(20px, 3vw, 48px);
-  padding-top: clamp(32px, 4vw, 56px);
-}
-
-.aside {
-  /* 메타데이터의 첫 줄을 본문 첫 줄 높이에 맞춘다. */
-  padding-top: 0.5em;
-}
-
-.meta {
-  flex-direction: column;
-  gap: 4px;
-}
-
-@media (max-width: 899px) {
-  .body {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: 18px;
-  }
-
-  .aside {
-    padding-top: 0;
-  }
-
-  .meta {
-    flex-direction: row;
-  }
+.end {
+  margin-top: 0;
 }

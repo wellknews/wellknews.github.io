@@ -35,7 +35,7 @@ type Props = {
  */
 export function Gate({ passed, absent, fell }: Props) {
   return (
-    <div className={`device ${styles.gate}`}>
+    <div className={styles.gate}>
       <ul className={styles.checks} role="list">
         {passed.map((check, index) => (
           <li

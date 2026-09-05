@@ -46,7 +46,7 @@ function format(value: number, fraction: number): string {
  */
 export function Delta({ rows }: Props) {
   return (
-    <ul className={`device ${styles.delta}`} role="list">
+    <ul className={styles.delta} role="list">
       {rows.map((row) => {
         const fraction = row.fraction ?? 0
         const span = Math.max(row.before, row.after)

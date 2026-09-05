@@ -30,7 +30,7 @@ type Props = {
  */
 export function Open({ items }: Props) {
   return (
-    <ul className={`device ${styles.open}`} role="list">
+    <ul className={styles.open} role="list">
       {items.map((item) => (
         <li key={item.what} className={styles.item}>
           {/* 값이 앉았을 자리. 비어 있는 것이 이 장치의 내용이다. */}
