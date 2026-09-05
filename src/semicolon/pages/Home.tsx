@@ -1,6 +1,5 @@
 import { Doors, type Door } from '../components/Doors'
 import { Hero } from '../components/Hero'
-import { Seam } from '../components/Seam'
 import { codes } from '../content/code'
 import { semicolon } from '../content/site'
 import { sessions } from '../content/sessions'
@@ -21,12 +20,18 @@ import { path } from '../router'
  *     자리가 된다. 순서를 바꿔 가며 막아 봤지만, 자리가 하나 더 늘면 또
  *     막아야 하는 종류의 문제였다.
  *
- * 그래서 구간을 없앴다. 지금 이 페이지에 있는 것은 셋뿐이다 — 이 공간이
- * 무엇인지 말하는 선, 하나뿐인 이음매, 그리고 세 개의 문.
+ * 그래서 구간을 없앴다. 지금 이 페이지에 있는 것은 둘뿐이다 — 이 공간이
+ * 무엇인지 말하는 선, 그리고 세 개의 문.
  *
- * 이음매가 다시 하나가 된다. 히어로가 끝나고 이 공간의 안쪽이 시작하는
- * 자리이고, 끝났지만 끝나지 않은 자리라서 마침표가 아니라 세미콜론이 온다.
- * 두 개의 절을 잇는 기호가 정확히 두 절 사이에 하나 있다.
+ * 이음매도 없앴다. 구간이 셋일 때 ';'가 둘이 되는 것이 문제라고 보고 하나로
+ * 줄였는데, 하나로 줄여도 그 자리가 틀렸다. 히어로 한가운데에 이미 ';'가
+ * 있고, 그 바로 아래에 또 하나를 놓으면 한 화면 안에 같은 기호가 두 번
+ * 나온다. 게다가 이음매는 두 개의 절 사이에 서는 기호인데 위쪽에는 이을
+ * 글이 없다 — 선과 기호뿐이다. 이을 것이 없는 자리에 놓인 이음매는
+ * 이음매가 아니라 장식이다.
+ *
+ * 이 페이지의 세미콜론은 히어로 안의 그것 하나뿐이다. 이 공간에서 가장 강한
+ * 기호를 한 화면에 두 번 쓰지 않는 것이, 그 기호를 지키는 유일한 방법이다.
  */
 export function Home() {
   const [session] = sessions
@@ -67,11 +72,6 @@ export function Home() {
   return (
     <>
       <Hero />
-
-      {/* 히어로가 끝나고 이 공간의 안쪽이 시작하는 자리. 이 페이지의 유일한 이음매다. */}
-      <div className="shell">
-        <Seam />
-      </div>
 
       <div className="shell">
         <Doors doors={doors} />
