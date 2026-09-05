@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useCampaignMotion } from './useCampaignMotion'
 
 const officialUrl = 'https://www.safe182.go.kr/'
 const campaignUrl = 'https://wellknews.github.io/ekata/'
@@ -25,6 +26,7 @@ function Publisher({ linked = false }: { linked?: boolean }) {
 }
 
 export default function App() {
+  const root = useCampaignMotion()
   const [copyStatus, setCopyStatus] = useState('')
   const [showAddress, setShowAddress] = useState(false)
 
@@ -40,7 +42,8 @@ export default function App() {
   }
 
   return (
-    <>
+    <div ref={root} className="ekata-page">
+      <div className="reading-line" aria-hidden="true" />
       <a className="skip-link" href="#main">
         본문으로 이동
       </a>
@@ -69,7 +72,7 @@ export default function App() {
 
       <main id="main" className="page-width">
         <section className="campaign-spread" aria-labelledby="campaign-title">
-          <figure className="campaign-figure">
+          <figure className="campaign-figure" data-reveal>
             <div className="story-sheet" aria-label="에카타 캠페인 안내 포스터">
               <div className="sheet-top">
                 <span>EKATA</span>
@@ -103,7 +106,7 @@ export default function App() {
           </figure>
 
           <div className="campaign-desk">
-            <div className="desk-heading">
+            <div className="desk-heading" data-reveal>
               <p className="kicker">
                 <span /> 실종아동 찾기
               </p>
@@ -119,7 +122,7 @@ export default function App() {
                 기억나는 단서를 전해주세요.
               </p>
             </div>
-            <div className="information-note">
+            <div className="information-note" data-reveal>
               <span className="note-label">캠페인 소식</span>
               <h2>첫 번째 소식을 준비하고 있습니다.</h2>
               <p>
@@ -145,14 +148,14 @@ export default function App() {
         </section>
 
         <section className="report-strip" id="report" aria-labelledby="report-title">
-          <div className="report-heading">
+          <div className="report-heading" data-reveal>
             <span className="kicker">제보 안내</span>
             <h2 id="report-title">
               떠오르는 기억이 <br />
               있다면.
             </h2>
           </div>
-          <div className="report-content">
+          <div className="report-content" data-reveal>
             <p>
               목격한 시간과 장소, 기억나는 특징을
               <br className="desktop-break" /> 공식 창구로 직접 전해주세요.
@@ -183,7 +186,7 @@ export default function App() {
         </section>
 
         <section className="colophon" aria-labelledby="name-title">
-          <div className="name-note">
+          <div className="name-note" data-reveal>
             <span className="kicker">이름에 담은 마음</span>
             <h2 id="name-title">에카타.</h2>
             <p>
@@ -192,14 +195,15 @@ export default function App() {
               돌아오기를 기다리는 마음에 함께합니다.
             </p>
           </div>
-          <div className="publication-note">
+          <div className="publication-note" data-reveal>
             <p>웰뉴스의 실종아동 찾기 캠페인을 지원합니다.</p>
             <a className="text-link" href={instagramUrl} target="_blank" rel="noreferrer">
               웰뉴스 Instagram <Arrow diagonal />
               <span className="sr-only"> (새 창)</span>
             </a>
             <button className="text-link" type="button" onClick={() => void copyAddress()}>
-              에카타 주소 복사 <span aria-hidden="true">＋</span>
+              에카타 주소 복사{' '}
+              <span aria-hidden="true">{copyStatus && !showAddress ? '✓' : '＋'}</span>
             </button>
             <output className="copy-status">{copyStatus}</output>
             {showAddress && (
@@ -231,6 +235,6 @@ export default function App() {
           위로 <span aria-hidden="true">↑</span>
         </a>
       </footer>
-    </>
+    </div>
   )
 }
