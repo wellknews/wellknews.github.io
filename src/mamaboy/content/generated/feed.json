@@ -1,7 +1,289 @@
 {
-  "generatedAt": "2026-09-05T06:27:43.469Z",
+  "generatedAt": "2026-09-05T12:27:18.883Z",
   "prototype": false,
   "articles": [
+    {
+      "id": "dezeen:38ca9323ff",
+      "slug": "five-anti-ai-designs-that-give-an-element-38ca93",
+      "titleOriginal": "Five anti-AI designs that give an element of control back to humans",
+      "summaryOriginal": "With artificial intelligence encroaching on more and more aspects of daily life, there is a rising trend of fatigue and cynicism around the technology. Here, we round up five designs that push back on the AI boom. Artificial intelligence (AI) has sparked headlines around the world for its controversial use in mass video surveillance, data The post Five anti-AI designs that give an element of contr",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "With artificial intelligence encroaching on more and more aspects of daily life, there is a rising trend of fatigue and cynicism around the technology . Here, we round up five designs that push back on the AI boom."
+        },
+        {
+          "kind": "text",
+          "text": "Artificial intelligence (AI) has sparked headlines around the world for its controversial use in mass video surveillance, data scraping and deepfake scams. In response, designers are coming up with innovative ways to protect people from some of the more sinister sides of AI."
+        },
+        {
+          "kind": "text",
+          "text": "While some of the designs may have been developed to encourage conversation around uses of AI, the increasing advancement of the technology might make them highly sought-after designs in the near future."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/digital-camouflage-shirt-ai-video-surveillance-simon-weckert_dezeen_2364_sq_6.jpg",
+          "alt": "Digital Camouflage shirt by Simon Weckert"
+        },
+        {
+          "kind": "text",
+          "text": "Photo by Simon Weckert Digital Camouflage by Simon Weckert"
+        },
+        {
+          "kind": "text",
+          "text": "Designer Simon Weckert created a colourful patterned shirt that acts as camouflage against AI video systems by subverting what they recognise as a person."
+        },
+        {
+          "kind": "text",
+          "text": "The Digital Camouflage shirt was developed in response to a pilot project to use AI video surveillance at Berlin's Kottbusser Tor station, providing a way for its wearer to be undetectable. Its bold patterns were developed using an AI trial-and-error workflow known as an \"adversarial loop\"."
+        },
+        {
+          "kind": "text",
+          "text": "\"This was necessary because a machine's blind spots are not intuitive to humans; you cannot design against machine perception by eye, only the machine can tell you what it fails to see,\" said Weckert."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/quartz-ring-ai_dezeen_2364_col_0.jpg",
+          "alt": "Quartz AI ring"
+        },
+        {
+          "kind": "text",
+          "text": "Quartz is a concept for a ring that acts as a human identity verification method, developed by design studios Modem and Retinaa to counteract scammers using AI deepfakes to impersonate people."
+        },
+        {
+          "kind": "text",
+          "text": "In the design, two people bring their Quartz rings to touch in a handshake, establishing an encrypted bond that proves their identity when they later interact online or over the phone."
+        },
+        {
+          "kind": "text",
+          "text": "The Quartz concept incorporates technologies that exist today – finger-vein biometrics to identify the wearer, near-field communication to create a connection between rings, and cryptography to later confirm both parties' identities during remote interactions – but would need to be miniaturised and power-optimised to fit into a wearable ring."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/decoy-font-mixfont_dezeen_2364_col_0.jpg",
+          "alt": "Decoy Font by Mixfont"
+        },
+        {
+          "kind": "text",
+          "text": "Optical illusion is at play in Decoy Font, which displays two overlapping messages readable by humans, while AI chatbots and large language models such as ChatGPT can only read one."
+        },
+        {
+          "kind": "text",
+          "text": "The font was designed by the company Mixfont for people who want to avoid having their data scraped and as a conversation starter concerning issues of AI and public trust."
+        },
+        {
+          "kind": "text",
+          "text": "\"It started as an exploration of how AI and typography intersect, but it was also meant to raise awareness of the growing reach and capabilities of AI,\" Mixfont founder Eric Lu told Dezeen. \"I think the reaction to the font shows that there are many folks who feel strong AI fatigue, and want a way to defend themselves against the presence of AI in their lives.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2023/02/Cap_able_dezeen_2364_col_4-scaled.jpg",
+          "alt": "Manifesto Collection by Cap_able"
+        },
+        {
+          "kind": "text",
+          "text": "Created by Italian fashion start-up Cap_able, Manifesto Collection is a series of knitted clothes adorned in colourful patterns designed to deceive facial recognition software in real-time."
+        },
+        {
+          "kind": "text",
+          "text": "Tested using the YOLO object detection system, people wearing Manifesto Collection jumpers, t-shirts, trousers and dresses were either undetectable by the AI software or identified as animals whose patterns feature on the clothing, such as dogs, zebras, or giraffes."
+        },
+        {
+          "kind": "text",
+          "text": "\"In a world where data is the new oil, Cap_able addresses the issue of privacy, opening the discussion on the importance of protecting against the misuse of biometric recognition cameras: a problem if neglected, could freeze the rights of the individual, including freedom of expression, association and free movement in public spaces,\" Cap_able co-founder Rachele Didero told Dezeen."
+        },
+        {
+          "kind": "text",
+          "text": "Find out more about Manifesto Collection ›"
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2019/07/incognito-noma-studio-design_dezeen_2364_sq-1.jpg",
+          "alt": "Noma Studio Incognito mask"
+        },
+        {
+          "kind": "text",
+          "text": "Another wearable item designed in protest of facial recognition technology is Incognito, a mask designed by Polish designer Ewa Nowak to make the wearer's face unrecognisable to cameras and AI systems, as well as an aesthetic piece of facial jewellery."
+        },
+        {
+          "kind": "text",
+          "text": "Comprising geometric brass shapes fixed to a long wire moulded to the contours of the face, Nowak created the mask in an effort to reclaim the anonymity that they feel has been lost to face-detecting cameras installed in public spaces."
+        },
+        {
+          "kind": "text",
+          "text": "\"Cameras are able to recognise our age, mood, or sex and precisely match us to the database – the concept of disappearing in the crowd ceases to exist,\" said Nowak. \"This has a huge value in the form of increased security and detection of dangerous units. On the other hand, in which direction will the surveillance of society develop?\""
+        },
+        {
+          "kind": "text",
+          "text": "The post Five anti-AI designs that give an element of control back to humans appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/05/anti-ai-designs-roundup",
+      "author": "Amy Peacock",
+      "publishedAt": "2026-09-05T09:00:01.000Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Design",
+        "Technology",
+        "Roundups",
+        "Artificial intelligence (AI)"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/decoy-font-mixfont_dezeen_2364_col_0-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.95,
+      "contentType": "news",
+      "titleKo": "인간에게 통제권을 되돌려주는 다섯 가지 반AI 설계",
+      "summaryKo": "인공지능이 일상생활의 더 많은 측면에 침투함에 따라, 이 기술에 대한 피로감과 냉소주의가 점점 커지고 있습니다. 여기서는 AI 붐에 맞서는 다섯 가지 설계를 정리합니다. 인공지능(AI)은 대규모 비디오 감시에서의 논란 사용으로 전 세계적으로 헤드라인을 불러일으켰습니다. 게시물: 다섯 가지 반AI 설계가 한몫하는",
+      "bodyKo": [
+        "인공지능이 일상생활의 점점 더 많은 측면에 침투함에 따라, 이 기술에 대한 피로감과 냉소주의가 점점 커지고 있습니다. 여기서는 AI 급증에 맞서는 다섯 가지 디자인을 정리합니다.",
+        "인공지능(AI)은 대규모 영상 감시, 데이터 스크래핑, 딥페이크 사기 등에서 논란이 된 사용으로 전 세계적으로 화제가 되고 있습니다. 이에 대응해 디자이너들은 AI의 더 음악한 면들로부터 사람들을 보호하기 위한 혁신적인 방법을 고안하고 있습니다.",
+        "일부 디자인은 AI 활용에 대한 대화를 촉진하기 위해 개발되었을 수 있지만, 기술의 발전이 점점 더 커지면서 가까운 미래에 매우 인기 있는 디자인이 될 수도 있습니다.",
+        "사진: 사이먼 웨커트 디지털 위장: 사이먼 웨커트",
+        "디자이너 사이먼 베커트는 AI 비디오 시스템을 차단해 인격체를 전복시켜 화려한 패턴의 셔츠를 만들었습니다.",
+        "디지털 위장 셔츠는 베를린 코트부서 토르 역에서 AI 비디오 감시를 활용하는 시범 프로젝트에 대응하여 개발되었으며, 착용자를 탐지하지 않는 방법을 제공했습니다. 대담한 패턴은 '적대적 루프'로 알려진 AI 시행착오 워크플로우를 통해 개발되었습니다.",
+        "\"이것은 기계의 맹점은 인간에게 직관적이지 않기 때문에 필요했다; 눈으로는 기계의 인식에 맞서 설계할 수 없고, 오직 기계만이 자신이 못하는 것을 알려줄 수 있다,\"고 베커트는 말했다.",
+        "쿼츠는 디자인 스튜디오 모뎀과 레티나가 개발한 인간 신원 확인 수단으로, AI 딥페이크를 이용해 사람을 사칭하는 사기꾼들을 막기 위해 개발한 반지 개념입니다.",
+        "디자인에서는 두 사람이 쿼츠 반지를 손으로 잡아 악수하며, 이후 온라인이나 전화로 상호작용할 때 신원을 증명하는 암호화된 유대감을 형성합니다.",
+        "쿼츠 개념은 착용자를 식별하는 손가락 정맥 생체 인식, 반지 간 연결을 만드는 근거리 통신, 원격 상호작용 중 양측 신원을 확인하는 암호화 등 오늘날 존재하는 기술을 통합하지만, 착용 가능한 반지에 맞추려면 소형화되고 전력 최적화가 필요합니다.",
+        "착시 현상이 Decoy Font에 작용하는데, 이는 두 개의 겹치는 메시지를 인간이 읽을 수 있는 반면, AI 챗봇과 ChatGPT 같은 대형 언어 모델은 한 메시지만 읽을 수 있습니다.",
+        "이 글꼴은 데이터 스크래핑을 피하고 AI와 대중 신뢰 문제에 관한 대화의 시작점으로 Mixfont 회사가 디자인했습니다.",
+        "\"AI와 타이포그래피가 어떻게 교차하는지를 탐구하는 자리에서 시작되었지만, AI의 확장되는 영향력과 역량에 대한 인식을 높이기 위한 목적이기도 했습니다,\"라고 Mixfont 창립자 에릭 루는 Dezeen에 말했습니다. \"이 폰트에 대한 반응은 많은 사람들이 강한 AI 피로감을 느끼고 있으며, AI의 존재에 맞서 자신을 방어할 방법을 찾고 있음을 보여준다고 생각합니다.\"",
+        "이탈리아 패션 스타트업 Cap_able가 만든 매니페스토 컬렉션은 얼굴 인식 소프트웨어를 실시간으로 속이기 위해 다채로운 패턴으로 장식된 니트 의류 시리즈입니다.",
+        "YOLO 객체 감지 시스템을 사용해 테스트한 결과, Manifesto Collection 점퍼, 티셔츠, 바지, 원피스를 입은 사람들은 AI 소프트웨어에 감지되지 않거나, 개, 얼룩말, 기린 등 옷에 무늬가 있는 동물로 식별되었습니다.",
+        "\"데이터가 새로운 석유가 된 세상에서, Cap_able 프라이버시 문제를 다루며, 생체 인식 카메라의 오용으로부터 보호하는 것의 중요성에 대한 논의를 촉진합니다. 이 문제는 방치되면 표현의 자유, 결사의 자유, 공공장소에서의 자유 이동 등 개인의 권리를 동결시킬 수 있습니다.\"라고 Cap_able 공동 창립자 라첼레 디데로가 Dezeen에 말했습니다.",
+        "선언문 컬렉션에 대해 더 알아보세요 ›",
+        "얼굴 인식 기술에 항의하며 디자인된 또 다른 웨어러블 아이템은 폴란드 디자이너 에와 노박이 디자인한 마스크인 인코그니토(Incognito)로, 착용자의 얼굴을 카메라와 AI 시스템에 인식할 수 없게 만드는 것과 미적인 얼굴 장신구 작품입니다.",
+        "얼굴 윤곽에 맞게 긴 철사에 고정된 기하학적 황동 모양으로 구성된 이 가면은, 노박은 공공장소에 설치된 얼굴 감지 카메라로 인해 잃어버린 익명성을 되찾기 위해 이 가면을 만들었다.",
+        "\"카메라는 우리의 나이, 기분, 성별을 인식하고 데이터베이스와 정확히 일치시킬 수 있다 – 군중 속에서 사라지는 개념은 사라진다,\"고 노박은 말했다. \"이는 보안 강화와 위험 유닛 탐지 측면에서 큰 가치를 지닌다. 반면, 사회 감시는 어떤 방향으로 발전할까?\"",
+        "\"인간에게 통제권을 되돌려주는 다섯 가지 반AI 설계\"라는 글은 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:4d179e101d",
+      "slug": "this-week-dyson-unveiled-its-first-electric-toothbrush-4d179e",
+      "titleOriginal": "This week Dyson unveiled its first electric toothbrush",
+      "summaryOriginal": "This week on Dezeen, technology brand Dyson launched its first toothbrush, which includes a mouthwash spray designed to replace flossing. Named Dyson CameraJet, the electric toothbrush combines brushing, flossing and mouth-washing into one device. It includes a mouthwash jet that is directed by a camera to remove plaque between teeth. Speaking to Dezeen in an interview The post This week Dyson unv",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "This week on Dezeen , technology brand Dyson launched its first toothbrush , which includes a mouthwash spray designed to replace flossing."
+        },
+        {
+          "kind": "text",
+          "text": "Named Dyson CameraJet, the electric toothbrush combines brushing, flossing and mouth-washing into one device. It includes a mouthwash jet that is directed by a camera to remove plaque between teeth."
+        },
+        {
+          "kind": "text",
+          "text": "Speaking to Dezeen in an interview about the product , Dyson's Niamh Turney said that the toothbrush aims to update \"a cleaning routine that has remained largely unchanged for decades\"."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/mad-lucas-museum-finals_dezeen_2364_hero2.jpg",
+          "alt": "Lucas Museum by MAD finals"
+        },
+        {
+          "kind": "text",
+          "text": "The Lucas Museum of Narrative Art was revealed this week In Los Angeles, the long-awaited Lucas Museum of Narrative Art was revealed this week , ahead of its opening later this month."
+        },
+        {
+          "kind": "text",
+          "text": "Designed by architecture studios MAD and Stantec, the museum, which is set to open on 22 September, has a spaceship-like form and is covered in 1,200 curved panels."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/burning-man-round-up_2dezeen_2364_col_1-1704x1704-1.jpg",
+          "alt": "Burning Man installation"
+        },
+        {
+          "kind": "text",
+          "text": "We looked back at Burning Man highlights Also in the USA, we took a look at some architecture highlights from Burning Man as the event kicked off its 40th-anniversary event in Nevada this week."
+        },
+        {
+          "kind": "text",
+          "text": "The roundup of previous installations included a giant inflatable orb designed by BIG founder Bjarke Ingels and colleague Jakob Lange, as well as a shrine by Chicago architect Antwane Lee (pictured)."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/kelly-wearstler-hm-home-fashion_dezeen_2364_col_hero.jpg",
+          "alt": "Kelly Wearstler wearing own collection"
+        },
+        {
+          "kind": "text",
+          "text": "H&M launched a clothing collection by Kelly Wearstler In design, fashion brand H&M launched a clothing line created by interior designer Kelly Wearstler ."
+        },
+        {
+          "kind": "text",
+          "text": "The eight-piece collection, which H&M described as \"relaxed and refined – unmistakably Kelly\", follows Wearstler's H&M Home furniture collection that was unveiled in Milan ."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/split-mass-residence-k-thengono-design-studio-indonesia_dezeen_2364_hero_0.jpg",
+          "alt": "Split Mass Residence in Indonesia by K-Thengono Design Studio"
+        },
+        {
+          "kind": "text",
+          "text": "A house topped with sloped roofs was one of this week's most read stories The most popular projects on Dezeen this week include a house in Indonesia topped with sloping green roofs , a Czech home with a long, slanted facade and the first Goop restaurant by Gwyneth Paltrow and Michael Hsu ."
+        },
+        {
+          "kind": "text",
+          "text": "This week on Dezeen is our regular roundup of the week's top news stories. Subscribe to our newsletters to be sure you don't miss anything."
+        },
+        {
+          "kind": "text",
+          "text": "The post This week Dyson unveiled its first electric toothbrush appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/05/dyson-first-electric-toothbrush-this-week",
+      "author": "Tom Ravenscroft",
+      "publishedAt": "2026-09-05T05:00:27.000Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Design",
+        "This week on Dezeen",
+        "Dyson",
+        "Toothbrushes"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-22floss_dezeen_2364_col_41-1704x1278-1-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "이번 주 다이슨은 첫 전기 칫솔을 공개했습니다",
+      "summaryKo": "이번 주 Dezeen에서는 기술 브랜드 다이슨이 첫 칫솔을 출시했으며, 치실 사용을 대체할 수 있는 구강청결제 스프레이를 포함하고 있습니다. 다이슨 카메라젯이라는 이름의 이 전동 칫솔은 양치, 치실 사용, 구강 세척을 하나의 장치에 결합한 제품입니다. 이 칫솔에는 카메라가 치아 사이의 플라그를 제거하는 가글 제트가 포함되어 있습니다. Dezeen과의 인터뷰 이번 주 다이슨 연구는",
+      "bodyKo": [
+        "이번 주 Dezeen에서는 기술 브랜드 다이슨이 치실 대신 고안된 구강청결제 스프레이를 포함한 첫 칫솔을 출시했습니다.",
+        "다이슨 카메라젯이라는 이름의 이 전동 칫솔은 양치, 치실, 구강 세척을 하나의 장치로 결합한 것입니다. 이 칫솔에는 카메라가 치아 사이의 플라그를 제거하는 가글 제트가 포함되어 있습니다.",
+        "제품에 대해 Dezeen과의 인터뷰에서 다이슨의 니암 터니는 이 칫솔이 \"수십 년간 거의 변하지 않은 세척 루틴을 업데이트하는 것\"을 목표로 한다고 말했습니다.",
+        "루카스 내러티브 아트 박물관이 이번 주에 공개되었습니다. 로스앤젤레스에서는 오랫동안 기다려온 루카스 내러티브 아트 미술관이 이번 주에 공개되었으며, 이달 말 개관을 앞두고 있습니다.",
+        "건축 스튜디오 MAD와 Stantec이 설계한 이 박물관은 9월 22일 개관할 예정이며, 우주선 같은 형태로 1,200개의 곡선 패널로 덮여 있다.",
+        "우리는 버닝맨의 하이라이트를 되돌아보았습니다. 미국에서도 이번 주 네바다에서 40주년 행사를 시작하며 버닝맨의 건축 하이라이트들을 살펴보았습니다.",
+        "이전 설치물들을 정리한 후에는 BIG 창립자 비아르케 잉겔스와 동료 야콥 랭이 설계한 거대한 팽창식 구체와 시카고 건축가 앤트웨인 리(사진)가 만든 성소가 포함되어 있습니다.",
+        "H&M은 켈리 웨어슬러의 의류 컬렉션을 출시했습니다. 디자인 분야에서는 패션 브랜드 H&M이 인테리어 디자이너 켈리 웨어슬러가 만든 의류 라인을 출시했습니다.",
+        "H&M은 \"편안하고 세련된, 분명히 켈리의 스타일\"이라고 묘사한 이 8피스 컬렉션은 밀라노에서 공개된 웨어슬러의 H&M 홈 가구 컬렉션에 이어 선보입니다.",
+        "경사진 지붕이 얹힌 집은 이번 주 가장 많이 읽힌 이야기 중 하나였습니다. 이번 주 Dezeen에서 가장 인기 있는 프로젝트로는 인도네시아의 경사진 녹색 지붕 지붕 주택, 길고 경사진 외관을 가진 체코 주택, 그리고 Gwyneth Paltrow와 Michael Hsu가 만든 최초의 Goop 레스토랑이 있습니다.",
+        "이번 주 Dezeen에서는 이번 주 주요 뉴스 스토리를 정기 정리해 드립니다. 뉴스레터를 구독해 놓치지 않도록 하세요.",
+        "이번 주 다이슨이 첫 전동 칫솔을 공개했다는 글은 Dezeen에 처음 게재되었습니다."
+      ]
+    },
     {
       "id": "toy-book:6bbd660cf7",
       "slug": "the-human-touch-6bbd66",
@@ -171,7 +453,7 @@
       "originalUrl": "https://toybook.com/designer-artist-feature",
       "author": "Ashley Pelletier",
       "publishedAt": "2026-09-05T02:00:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -317,7 +599,7 @@
       "originalUrl": "https://toybook.com/five-below-says-its-americas-greatest-little-toy-store-strategy-is-taking-shape",
       "author": "James Zahn",
       "publishedAt": "2026-09-05T00:02:48.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Financial",
@@ -464,16 +746,16 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/surrane-design-hommali-west-village-new-york",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-09-04T17:00:46.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
         "Interiors",
         "Exclusives",
-        "West Village",
         "USA",
         "Restaurants",
-        "New York City"
+        "New York City",
+        "West Village"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/hommali-new-york-city-surrane-design_dezeen_2364_sqex-411x411.jpg"
@@ -545,7 +827,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/how-blackwing-pencils-are-made-video",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-04T16:30:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Design",
@@ -642,7 +924,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/imagina-floral-tiles-casalgrande-padana-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-04T13:00:13.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
@@ -799,7 +1081,7 @@
       "originalUrl": "https://toybook.com/unboxing-the-magic-behind-a-decade-of-lol-surprise",
       "author": "Nicole Savas",
       "publishedAt": "2026-09-04T13:00:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Backstory",
@@ -896,7 +1178,7 @@
       "originalUrl": "https://toybook.com/sesame-street-grover-launch",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-04T13:00:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -964,7 +1246,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/offspring-of-centenarians-exhibit-reduced-mortality-and-risk-of-age-related-disease",
       "author": "Reason",
       "publishedAt": "2026-09-04T10:03:40.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1116,17 +1398,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/masa-cafe-studio-cadena-medellin-wooden-columns",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-04T10:00:35.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
         "Interiors",
         "Exclusives",
+        "Wood",
+        "Cafes",
         "Colombia",
         "Studio Cadena",
-        "Medellín",
-        "Wood",
-        "Cafes"
+        "Medellín"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_sq-new-411x411.jpg"
@@ -1293,7 +1575,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/dyson-toothbrush-camerajet-interview",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-04T09:00:22.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1439,7 +1721,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/fitbit-luffu-link-ai-powered-wristband-health-family",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-04T08:00:45.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1596,7 +1878,7 @@
       "originalUrl": "https://toybook.com/the-toy-book-august-2026-power-rankings",
       "author": "James Zahn",
       "publishedAt": "2026-09-04T05:08:42.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "News",
@@ -1746,7 +2028,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/ryno-london-rooftop-terrace-integrated-terracing-system",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-04T04:00:44.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1789,7 +2071,7 @@
       "id": "lifespan-io:d176156141",
       "slug": "the-last-generation-to-die-interview-with-tim-d17615",
       "titleOriginal": "The Last Generation to Die: Interview With Tim Maupin",
-      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation technologies arrive and who gets left behind. […]",
+      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -1909,7 +2191,7 @@
       "originalUrl": "https://lifespan.io/the-last-generation-to-die-interview-with-tim-maupin",
       "author": "Steve Hill",
       "publishedAt": "2026-09-03T20:00:48.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Advocacy",
@@ -1928,7 +2210,7 @@
       "curiosityScore": 0.7,
       "contentType": "research",
       "titleKo": "마지막 세대가 죽음: 팀 모핀과의 인터뷰",
-      "summaryKo": "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 『라스트 제너레이션 투 다이』를 수년간 개발해 왔습니다. […]",
+      "summaryKo": "영화감독 팀 모핀은 첫 진정한 재생이 [...]에 이르렀을 때 벌어지는 이야기를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해왔습니다.",
       "bodyKo": [
         "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해 왔습니다. 이 프로젝트는 현재 인류 미래에 대한 낙관적인 비전을 모색하는 글로벌 대회인 미래 비전 XP라이즈의 상위 65위에 진입했습니다. 우리는 그와 이야기의 개인적 이해관계, 긍정적인 미래 이야기를 만드는 도전, 그리고 영화의 중심 딜레마가 점점 더 긴급하게 느껴지는 이유에 대해 이야기를 나누었습니다.",
         "함께해 주셔서 감사합니다, 팀. 흥미로운 소식은 당신의 영화 중 하나가 미래 비전 XPrize에 후보로 올랐다는 것입니다. 대회의 과제는 인류의 낙관적이고 풍요로운 미래를 묘사한 3분 분량의 SF 예고편을 만드는 것입니다. 대상은 자신의 비전을 장편 영화로 만드는 데 260만 달러+를 받으며, 준우승자에게는 100만 달러 이상의 상금이 주어집니다. 팀, 그 부분에 대해 조금 이야기해 주실 수 있나요? 네, 이 영화는 제가 꽤 오랫동안 작업해온 롱제비티에 초점을 맞춘 영화 '라스트 제너레이션 투 다이'입니다. X 프라이즈 미래 비전 콘테스트에서 2500개 이상의 출품작 중 상위 65위 안에 들었는데, 정말 흥미로운 소식입니다.",
@@ -2004,7 +2286,7 @@
       "originalUrl": "https://toybook.com/build-a-bear-national-teddy-bear-day-news",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-03T19:39:19.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Cute, Cuddly, & Collectible",
@@ -2167,16 +2449,16 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/justin-blinder-citibike-ground-truth-new-york-city-housing",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-09-03T18:35:53.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
         "Technology",
+        "Electric bikes",
+        "Bike sharing",
         "USA",
         "Housing",
-        "New York City",
-        "Electric bikes",
-        "Bike sharing"
+        "New York City"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_sq-1-411x411.jpg"
@@ -2256,7 +2538,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/senescent-microglia-secrete-dlk1-which-causes-dysfunction-in-the-aging-brain",
       "author": "Reason",
       "publishedAt": "2026-09-03T18:16:33.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -2370,7 +2652,7 @@
       "originalUrl": "https://toybook.com/tb-september-2026-compliance",
       "author": "Guest Author",
       "publishedAt": "2026-09-03T18:00:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Compliance & Regulations",
@@ -2601,7 +2883,7 @@
       "originalUrl": "https://toybook.com/goliath-sanrio-suite-spaces-line-launch",
       "author": "Samantha Connell",
       "publishedAt": "2026-09-03T17:05:13.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "News",
@@ -2817,7 +3099,7 @@
       "originalUrl": "https://toybook.com/stern-pinball-fallout-hands-on",
       "author": "James Zahn",
       "publishedAt": "2026-09-03T17:02:49.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -3064,7 +3346,7 @@
       "originalUrl": "https://toybook.com/emotional-support-nfl-footballs-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-03T16:59:51.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -3180,7 +3462,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/imagina-abstract-tiles-casalgrande-padana-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T13:00:22.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -3246,7 +3528,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/genome-sequencing-of-bat-species-in-search-of-causes-of-longevity",
       "author": "Reason",
       "publishedAt": "2026-09-03T10:22:31.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3530,15 +3812,15 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/london-design-festival-2026-highlights",
       "author": "Gabriella Wong",
       "publishedAt": "2026-09-03T10:15:08.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
-        "London",
-        "London Design Festival",
         "UK",
-        "Architecture and design events"
+        "Architecture and design events",
+        "London",
+        "London Design Festival"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/london-design-festival-2026-highlights_dezeen_2364_col_13-411x411.jpg"
@@ -3697,7 +3979,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/emeco-sues-zara-home-20-06-chair-norman-foster",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-03T09:45:43.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -3817,7 +4099,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/strut-table-pouf-yagmur-koylu-yet-design-studio-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T09:30:31.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -3955,17 +4237,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/poor-collectives-debut-rug-collection-borrows-shapes-from-londons-trellick-tower",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-03T08:00:51.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
         "Products",
-        "Homeware",
         "Design",
-        "Ernö Goldfinger",
-        "POOR Collective",
+        "Homeware",
         "London",
-        "London Design Festival"
+        "London Design Festival",
+        "Product design",
+        "Wool"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/power-evergreen-rug-poor-collective-flatweave-london-design-festival-sq-411x411.jpg"
@@ -4171,7 +4453,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/bin-wu-design-language-timeless-east",
       "author": "Christina Yao",
       "publishedAt": "2026-09-03T05:00:16.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4354,7 +4636,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/laiout-ai-floor-plan-generator-jll-design",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T04:00:19.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4437,7 +4719,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/senescent-cells-in-metabolic-disorders",
       "author": "Reason",
       "publishedAt": "2026-09-02T18:22:53.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -4574,7 +4856,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/five-bathroom-products-villeroy-boch-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-02T18:00:49.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -4620,7 +4902,7 @@
       "id": "lifespan-io:8cb78c75c6",
       "slug": "invested-in-her-campaign-extends-fundraising-deadline-8cb78c",
       "titleOriginal": "Invested in Her Campaign Extends Fundraising Deadline",
-      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October 1, 2026, as they work toward a $250,000 fundraising target to support early-stage research into […]",
+      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October 1, 2026, as they work toward a […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -4664,7 +4946,7 @@
       "originalUrl": "https://lifespan.io/invested-in-her-campaign-extends-fundraising-deadline",
       "author": "Press release",
       "publishedAt": "2026-09-02T17:55:38.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -4681,7 +4963,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "그녀의 캠페인에 투자하다 모금 마감 연장",
-      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 초기 연구 지원을 위한 25만 달러 모금 목표를 향해 2026년 10월 1일까지 마감일을 연장하고 있습니다.",
+      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인'의 마감일을 2026년 10월 1일로 연장하며 [...]",
       "bodyKo": [
         "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인'의 마감일을 2026년 10월 1일로 연장하며, 난소 노화와 폐경에 관한 초기 연구 지원을 위한 25만 달러 모금 목표를 향해 나아가고 있습니다.",
         "수억 명의 여성이 남성보다 더 오래 살지만 건강이 좋지 않은 상태로 더 오랜 시간을 보냅니다. 이 격차를 유발하는 생물학적 원인은 난소 노화와 폐경기 전환에 뿌리를 두고 있으며, 이 분야는 의학에서 가장 자금이 부족한 분야 중 하나입니다. Invested IN Her 프로젝트는 엄마, 딸, 전 세계 여성들을 위해 그 격차를 해소하는 과학 연구를 위해 25만 달러를 모금하고 있습니다.",
@@ -4954,14 +5236,14 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/ten-designs-london-design-festival-new-designers-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-02T15:00:56.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
         "School Shows",
+        "New Designers",
         "Student projects",
-        "Graduates",
-        "New Designers"
+        "Graduates"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/New-Designers_dezeen_2364_col_4-411x411.jpg"
@@ -5096,7 +5378,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/stripes-storage-jehs-laub-schonbuch-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-02T13:00:59.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Sideboards",
@@ -5214,17 +5496,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/02/range-rover-electric-car",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-09-02T10:45:37.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
         "Technology",
         "News",
+        "Land Rover",
         "Cars",
         "Transport",
-        "Electric cars",
-        "Land Rover"
+        "Electric cars"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/sq-range-rover-electric_dezeen_2364_col_0-411x411.jpg"
@@ -5282,7 +5564,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/an-adiponectin-receptor-agonist-promotes-muscle-growth-in-rats",
       "author": "Reason",
       "publishedAt": "2026-09-02T10:20:03.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -5301,249 +5583,6 @@
         "골격근 위축은 노화와 만성 질환의 특징이지만, 효과적인 약물치료는 아직 제공되지 않습니다. 아디포넥틴은 AdipoR1과 AdipoR2 수용체를 통한 신호전달을 통해 골격근 대사, 재생 및 산화 능력을 조절하지만, 아디포넥틴의 치료적 사용은 크기가 크고 복잡한 다량체 구조로 인해 제한적입니다. 따라서 소분자 AdipoR 작용제는 매력적인 치료 전략을 나타냅니다.",
         "본서에서는 이전에 기술된 골생성성 식물알렉신과 그 수용성 나트륨염(Med)의 이중 AdipoR1/R2 작용제로서 발견 및 약리학적 특성 분석을 보고하며, 골격근위축의 설치류 모델 내 시험관 내 및 설치류 모델에서의 효능을 입증하였습니다. Med는 근형성 분화를 촉진했으며, 이는 MyoD, myogenin, MyHC의 발현 증가로 입증되었습니다. 또한 Med는 지방산 산화를 증가시켜 산화 능력을 향상시켰으며, Med치료 세포는 산화성 섬유 마커가 상승했습니다.",
         "경구 투여는 두 쥐 모델에서 근육 위축을 유의미하게 완화시켰으며, 근육 형태 개선, 아트로젠 억제, 근생성 지표 증가, 근육 아디포넥틴 발현 및 그에 따른 신호 전달 증가로 입증되었습니다. 약물은 그립 강도, 와이어 매달기, 로타로드 수행, 비신경성 사지의 발가락 벌림 능력 등 근육 기능을 현저히 개선했습니다."
-      ]
-    },
-    {
-      "id": "dezeen:e4ffb5423b",
-      "slug": "mad-unveils-rippled-glass-extension-in-updated-design-e4ffb5",
-      "titleOriginal": "MAD unveils rippled glass extension in updated design for Rotterdam's Danshuis",
-      "summaryOriginal": "Architecture studio MAD has revealed updated designs for the Danshuis dance centre in Rotterdam, the Netherlands, which will feature a billowing glass extension to an art deco warehouse. Situated in Rotterdam's docklands area, MAD announced plans to transform the existing Provimi warehouse in 2023. The latest visuals of the design show plans for a curving glass The post MAD unveils rippled glass e",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Architecture studio MAD has revealed updated designs for the Danshuis dance centre in Rotterdam , the Netherlands, which will feature a billowing glass extension to an art deco warehouse."
-        },
-        {
-          "kind": "text",
-          "text": "Situated in Rotterdam's docklands area, MAD announced plans to transform the existing Provimi warehouse in 2023 . The latest visuals of the design show plans for a curving glass facade added to the end of the building, which was originally built in 1923."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/danshuis-mad-rotterdam-dance-centre_dezeen_2364_col_4-scaled.jpg",
-          "alt": "Render of the Danshuis dance centre in Rotterdam by MAD"
-        },
-        {
-          "kind": "text",
-          "text": "MAD has unveiled its plan to add a billowing glass extension to an art deco warehouse to form Danshuis Informed by the flowing fabric of a dancer's skirt, the rippling glazing will enclose the dance centre's foyer, which will contain a spiral staircase connecting the building's four storeys."
-        },
-        {
-          "kind": "text",
-          "text": "Elsewhere in Danshuis will be dance studios, a gym, exhibition space, cafe, performance spaces, a public hall, and outdoor terraces overlooking the river."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/danshuis-mad-rotterdam-dance-centre_dezeen_2364_col_2-scaled.jpg",
-          "alt": "Render of the Danshuis dance centre in Rotterdam by MAD"
-        },
-        {
-          "kind": "text",
-          "text": "The extension will form the dance centre's foyer \"A pleated glass facade ripples like a dancer's skirt floating in the wind, forming the new four-story foyer of Danshuis Rotterdam,\" said MAD founder Ma Yansong."
-        },
-        {
-          "kind": "text",
-          "text": "\"Its transparent surface captures drifting clouds, shifting light, and the surrounding landscape, while people meet and move through the space,\" he continued."
-        },
-        {
-          "kind": "text",
-          "text": "\"As the boundaries between inside and outside dissolve, people move not only through the building, but through the changing sky, light, and nature.\""
-        },
-        {
-          "kind": "text",
-          "text": "Read: MAD crowns Fenix museum in Rotterdam with \"living room for people\" According to MAD, Danshuis will be the largest centre dedicated to the production and development of dance in Europe, designed to provide facilities for all dance styles at both professional and amateur levels."
-        },
-        {
-          "kind": "text",
-          "text": "It is set to open in 2030 along the River Maas, near MAD's recently completed Fenix Museum of Migration (Fenix), which was also built in a converted warehouse. The construction of Danshuis and Fenix is funded by the foundation Droom en Daad ."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/danshuis-mad-rotterdam-dance-centre_dezeen_2364_col_3.jpg",
-          "alt": "Render of a dance centre in Rotterdam by MAD"
-        },
-        {
-          "kind": "text",
-          "text": "The building is expected to open in 2030 \"Movement goes beyond architecture, becoming part of the character of the district,\" said Yansong."
-        },
-        {
-          "kind": "text",
-          "text": "\"The beauty of human movement and the moments of dance will resonate with Fenix, creating a continuous dialogue between the two.\""
-        },
-        {
-          "kind": "text",
-          "text": "Projects recently completed by MAD include a spiralling science museum in Haikou and a cluster of bulbous galleries topping a museum in Shenzhen ."
-        },
-        {
-          "kind": "text",
-          "text": "The post MAD unveils rippled glass extension in updated design for Rotterdam's Danshuis appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/02/danshuis-mad-rotterdam-dance-centre",
-      "author": "Amy Peacock",
-      "publishedAt": "2026-09-02T10:15:37.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Architecture",
-        "News",
-        "Cultural buildings",
-        "Performance venues",
-        "Dance studios",
-        "Adaptive reuse",
-        "MAD"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/09/danshuis-mad-rotterdam-dance-centre_dezeen_2364_sq_0-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "MAD가 로테르담 Danshuis의 최신 디자인으로 물결 유리 확장 장식을 공개했습니다",
-      "summaryKo": "건축 스튜디오 MAD는 네덜란드 로테르담에 위치한 Danshuis 댄스 센터의 최신 디자인을 공개했으며, 이 센터에는 아르데코 창고에 부풀어 오르는 유리 확장부가 특징입니다. 로테르담 도크랜즈 지역에 위치한 MAD는 2023년에 기존 프로비미 창고를 변신할 계획을 발표했습니다. 최신 디자인 비주얼은 곡선 유리 설계를 보여줍니다. MAD가 물결 모양 유리 e e를 공개했습니다",
-      "bodyKo": [
-        "건축 스튜디오 MAD는 네덜란드 로테르담에 위치한 Danshuis 댄스 센터의 최신 디자인을 공개했으며, 이 센터에는 아르데코 창고에 부풀어 오르는 유리 확장 공간이 특징입니다.",
-        "로테르담의 도크랜즈 지역에 위치한 MAD는 2023년에 기존 프로비미 창고를 개조할 계획을 발표했습니다. 최신 디자인 시각 자료는 1923년에 지어진 건물 끝에 곡선 유리 외관을 추가하려는 계획을 보여줍니다.",
-        "MAD는 아르데코 창고에 부풀어 오르는 유리 확장 공간을 추가해 Danshuis를 만드는 계획을 공개했습니다. 무용수 치마의 흐르는 천에서 영감을 받은 이 물결치는 유리는 댄스 센터의 로비를 둘러싸며, 건물의 4층을 연결하는 나선형 계단이 포함될 것입니다.",
-        "단스하우스의 다른 곳에는 무용 스튜디오, 체육관, 전시 공간, 카페, 공연 공간, 공공 홀, 강을 내려다보는 야외 테라스가 들어설 예정입니다.",
-        "이 확장 공사는 댄스 센터의 로비를 형성할 것입니다. \"주름진 유리 외관이 바람에 떠다니는 무용수 치마처럼 물결치며, 댄스하우스 로테르담의 새로운 4층 로비를 형성합니다.\"라고 MAD 창립자 마 옌송은 말했습니다.",
-        "\"투명한 표면은 떠다니는 구름, 변화하는 빛, 주변 풍경을 포착하며, 사람들이 만나 공간을 이동하는 모습을 담고 있다\"고 그는 덧붙였다.",
-        "\"내부와 외부의 경계가 사라지면서, 사람들은 건물뿐 아니라 변화하는 하늘, 빛, 자연 속을 통과합니다.\"",
-        "읽어보세요: MAD가 로테르담 페닉스 박물관에 \"사람들을 위한 거실\"로 장식하다MAD에 따르면, Danshuis는 유럽에서 가장 큰 무용 제작 및 발전 센터가 될 것이며, 전문 및 아마추어 수준 모두에서 모든 무용 스타일을 위한 시설을 제공할 예정입니다.",
-        "이 박물관은 2030년에 마스 강을 따라 개장할 예정이며, MAD의 최근 완공된 페닉스 이주 박물관(Fenix Museum of Migration) 근처에 위치해 있습니다. 이 박물관 역시 창고를 개조한 곳입니다. Danshuis와 Fenix의 건설은 Droom en Daad 재단의 자금 지원을 받고 있습니다.",
-        "이 건물은 2030년에 개장할 예정이며, \"움직임은 건축을 넘어 지구의 특성의 일부가 된다\"고 옌송은 말했다.",
-        "\"인간의 움직임의 아름다움과 춤의 순간들이 페닉스에게 울려 퍼지며, 두 사람 사이에 끊임없는 대화를 만들어낼 것이다.\"",
-        "MAD가 최근 완료한 프로젝트로는 하이커우의 나선형 과학 박물관과 선전의 박물관 꼭대기에 군립된 둥근 갤러리들이 있습니다.",
-        "이 글은 MAD, 로테르담 댄스하우스의 업데이트 디자인으로 물결 유리 확장 공개를 공개했다는 글이 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "dezeen:0f550f8569",
-      "slug": "construction-photos-reveal-progress-on-giant-hs2-station-0f550f",
-      "titleOriginal": "Construction photos reveal progress on giant HS2 station by WilkinsonEyre",
-      "summaryOriginal": "Images have been released of the Old Oak Common station in west London, which is currently under construction as part of the high-speed rail network HS2. The design, led by architecture studio WilkinsonEyre and engineering firm WSP, includes six platforms for the HS2 line running between London and central Birmingham, along with eight conventional platforms. The post Construction photos reveal pro",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Images have been released of the Old Oak Common station in west London , which is currently under construction as part of the high-speed rail network HS2 ."
-        },
-        {
-          "kind": "text",
-          "text": "The design, led by architecture studio WilkinsonEyre and engineering firm WSP , includes six platforms for the HS2 line running between London and central Birmingham, along with eight conventional platforms."
-        },
-        {
-          "kind": "text",
-          "text": "Latest images of the station reveal its expansive two-storey concrete structure, which contains the high-speed platforms within an 850-metre station box 20 metres below ground."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/construction-photos-old-oak-common-hs2-station-wilkinsoneyre_dezeen_2364_col_6.jpg",
-          "alt": "Construction photo of Old Oak Common station"
-        },
-        {
-          "kind": "text",
-          "text": "Construction images reveal Old Oak Common's two-storey concrete structure The Old Oak Common station forms part of the first phase of HS2, which will connect central London with the West Midlands."
-        },
-        {
-          "kind": "text",
-          "text": "Once complete, it will be one of the largest transport interchanges in the country and the largest subsurface station ever built in the UK."
-        },
-        {
-          "kind": "text",
-          "text": "Renders of the design by WilkinsonEyre showed the station's spacious interior crowned with a large vaulted roof, which will feature integrated solar panels and openings for daylight and ventilation."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/construction-photos-old-oak-common-hs2-station-wilkinsoneyre_dezeen_2364_col_4.jpg",
-          "alt": "Old Oak Common station under construction in London"
-        },
-        {
-          "kind": "text",
-          "text": "Its six HS2 platforms and eight conventional platforms have now been installed Framing the central concourse are large concrete columns set to support the station's roof. A neighbouring public park is also yet to be completed on the site."
-        },
-        {
-          "kind": "text",
-          "text": "\"The architecture draws inspiration from the site's industrial heritage and is characterised by a spectacular vaulted roof,\" the studio said when the design was revealed."
-        },
-        {
-          "kind": "text",
-          "text": "\"The vaults are integrated with an array of roof lights, providing excellent levels of natural light across the platforms and the means for natural ventilation.\""
-        },
-        {
-          "kind": "text",
-          "text": "Read: UK's longest railway bridge reaches completion for HS2 All 14 platforms have now been built within the station."
-        },
-        {
-          "kind": "text",
-          "text": "Passenger trains along the route are expected to open between 2036 and 2039."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/construction-photos-old-oak-common-hs2-station-wilkinsoneyre_dezeen_2364_col_5.jpg",
-          "alt": "Render of HS2 terminal in London"
-        },
-        {
-          "kind": "text",
-          "text": "The station's large vaulted roof is yet to be completed The HS2 project has been highly controversial as a result of its associated environmental impacts, and ballooning costs and delays. Updated figures revealed in May estimate the cost to now range between £87 and £102 billion."
-        },
-        {
-          "kind": "text",
-          "text": "Last year, the 3.4-kilometre-long Colne Valley viaduct designed by Grimshaw for the HS2 reached completion , becoming the UK's longest railway bridge."
-        },
-        {
-          "kind": "text",
-          "text": "The post Construction photos reveal progress on giant HS2 station by WilkinsonEyre appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/02/old-oak-common-hs2-station-wilkinsoneyre-construction",
-      "author": "Starr Charles",
-      "publishedAt": "2026-09-02T10:00:10.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Architecture",
-        "News",
-        "London",
-        "Railway stations",
-        "WilkinsonEyre",
-        "WSP",
-        "High Speed Two (HS2)"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/09/construction-photos-old-oak-common-hs2-station-wilkinsoneyre-sq_dezeen_2364_col_0-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "WilkinsonEyre가 촬영한 거대한 HS2 역 건설 진행 상황 사진이 드러납니다",
-      "summaryKo": "현재 고속철도망 HS2의 일부로 건설 중인 서런던의 올드 오크 커먼 역의 사진이 공개되었습니다. 건축 스튜디오 윌킨슨에어와 엔지니어링 회사 WSP가 주도한 이 설계에는 런던과 버밍엄 중심부를 잇는 HS2 노선용 6개의 승강장과 8개의 일반 승강장이 포함되어 있습니다. 공사 후 사진들은",
-      "bodyKo": [
-        "현재 고속철도망 HS2의 일부로 건설 중인 서런던의 올드 오크 커먼 역의 이미지가 공개되었습니다.",
-        "건축 스튜디오 윌킨슨 아이어와 엔지니어링 회사 WSP가 주도한 이 설계에는 런던과 버밍엄 중심부를 잇는 HS2 노선용 6개 승강장과 8개의 일반 승강장이 포함되어 있습니다.",
-        "최신 사진에서는 지하 20미터 지점에 위치한 850미터 길이의 역 박스 내에 고속 승강장이 포함된 넓은 2층 콘크리트 구조물이 드러납니다.",
-        "건설 사진은 올드 오크 커먼의 2층 콘크리트 구조물을 보여줍니다. 올드 오크 커먼 역은 런던 중심부와 웨스트 미들랜즈를 연결할 HS2 1단계 구간의 일부입니다.",
-        "완공되면 이 역은 영국에서 가장 큰 교통 환승소 중 하나이자 영국에서 지어진 지하역으로도 가장 큰 규모가 될 것입니다.",
-        "윌킨슨에어(WilkinsonEyre)의 설계 렌더링에는 넓은 실내 공간이 대형 볼트형 지붕으로 장식되어 있으며, 통합 태양광 패널과 자연광 및 환기 개구부가 설치될 예정입니다.",
-        "현재 6개의 HS2 승강장과 8개의 일반 승강장이 설치되었습니다. 중앙 복합 구조에는 역 지붕을 지지할 대형 콘크리트 기둥이 배치되어 있습니다. 인접한 공원도 아직 완공되지 않았습니다.",
-        "\"이 건축 양식은 부지의 산업 유산에서 영감을 받았으며, 장관을 이루는 아치형 지붕이 특징입니다,\"라고 스튜디오는 설계가 공개되었을 때 밝혔습니다.",
-        "\"볼트는 다양한 지붕 조명과 통합되어 플랫폼 전체에 우수한 자연광을 제공하고 자연 환기를 위한 수단을 제공합니다.\"",
-        "읽어보세요: 영국에서 가장 긴 철도 다리, HS2 완공 현재 역 내에 14개 모든 승강장이 건설되었습니다.",
-        "노선을 따라 열차가 2036년에서 2039년 사이에 개통될 예정입니다.",
-        "역의 대형 아치형 지붕은 아직 완공되지 않았습니다. HS2 프로젝트는 환경 영향과 비용 급증, 지연으로 인해 큰 논란이 되고 있습니다. 5월에 공개된 최신 수치에 따르면 현재 비용은 870억에서 1,020억 파운드 사이로 추정됩니다.",
-        "작년에는 그림쇼가 설계한 3.4킬로미터 길이의 콜른 밸리 고가교가 완공되어 영국에서 가장 긴 철도 교량이 되었습니다.",
-        "WilkinsonEyre가 작성한 '건설 사진 공개 거대한 HS2 정거장 진행 상황'은 Dezeen에 처음 게재되었습니다."
       ]
     },
     {
@@ -5603,7 +5642,7 @@
       "originalUrl": "https://www.creativeboom.com/news/the-royal-college-of-art-is-bringing-communication-and-design-together-in-one-school-and-thats-big-news",
       "author": "Tom May",
       "publishedAt": "2026-09-02T05:45:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "News"
@@ -5673,7 +5712,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/immune-system-signatures-correlate-with-the-near-term-risk-of-developing-atherosclerosis",
       "author": "Reason",
       "publishedAt": "2026-09-01T18:03:38.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -5701,7 +5740,7 @@
       "id": "lifespan-io:591dca2c3c",
       "slug": "rejuvenation-roundup-august-2026-591dca",
       "titleOriginal": "Rejuvenation Roundup August 2026",
-      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become […]",
+      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -5870,7 +5909,7 @@
       "originalUrl": "https://lifespan.io/rejuvenation-roundup-august-2026",
       "author": "Editorial",
       "publishedAt": "2026-09-01T16:52:55.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "News",
@@ -5887,7 +5926,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "리유버네이션 라운드업 2026년 8월",
-      "summaryKo": "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용은 다음과 같습니다. 인터뷰 웨이우허: 사람들은 [...]",
+      "summaryKo": "노화를 제대로 풀어내려면 때로는 개인적인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용은 다음과 같습니다. 인터뷰 웨이-우허: [...]",
       "bodyKo": [
         "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다.",
         "웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다 : 웨이우 허는 과학자와 사업가가 결합된 독특한 인물로, 현재 회사는 정밀 의료를 활용해 사람들의 수명을 연장하는 데 집중하고 있습니다.",
@@ -6136,7 +6175,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/what-gta-6s-trailers-tell-us-about-vice-city-lucia-and-the-biggest-creative-launch-of-the-decade",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-27T12:00:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -6201,7 +6240,7 @@
       "id": "lifespan-io:d2b8c8131e",
       "slug": "short-intense-exercise-elicits-beneficial-metabolic-changes-d2b8c8",
       "titleOriginal": "Short, Intense Exercise Elicits Beneficial Metabolic Changes",
-      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated with cardiometabolic health benefits [1]. […]",
+      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -6290,7 +6329,7 @@
       "originalUrl": "https://lifespan.io/short-intense-exercise-elicits-beneficial-metabolic-changes",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-08-26T16:43:46.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Exercise",
@@ -6309,7 +6348,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "짧고 강도 높은 운동은 유익한 대사 변화를 유도합니다",
-      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1]. […]",
+      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 단백질을 자극하는 [...]",
       "bodyKo": [
         "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1].",
         "짧고 강도 높은 운동 vs 길고 중간 정도의 운동은 건강에 긍정적인 영향을 미칠 수 있는 잘 알려진 생활 습관 요인입니다. 운동은 다양한 세포에서 분비되고 몸 안에서 순환하는 인자들을 통해 여러 세포, 조직, 장기에 이익을 줍니다 [2]. 하지만 투자 대비 가장 큰 운동 유형은 여전히 논쟁 중입니다. 마찬가지로, 운동 효과를 매개하는 순환 요인들도 아직 완전히 정의되지 않았습니다.",
@@ -6453,7 +6492,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/bob-neville-on-berghaus-manchester-culture-and-the-british-brand-everyone-thinks-is-german",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-26T11:00:00.000Z",
-      "fetchedAt": "2026-09-05T06:27:43.469Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -6492,6 +6531,174 @@
         "60년과 새로운 장의 시작, 오늘은 멋진 대칭을 가졌습니다. 리본을 자르는 사람은 피터 로키였는데, 뉴캐슬 그 가게에서 60년이 지난 공동 창립자이며, 영국 등반계에서 가장 유명한 인물 중 한 명이자 수십 년간 버그하우스 이야기의 일부인 크리스 보닝턴 경과 함께했습니다. 모험가이자 브랜드 홍보대사인 에드 잭슨도 그 자리에 있었습니다. 맨체스터의 한 쇼핑센터에서, 이슬비가 내리는 수요일 아침, 가위를 들고 60년간의 신뢰를 쌓아왔습니다.",
         "저와 [Gloaming](https://www.gloaming.uk/)의 모건 바필드, 그리고 디지털 크리에이터 [제시 알렉산드라](https://www.instagram.com/jessealexandra/)와 함께요. 다시 제 옷장으로 돌아가게 되네요. 오늘 아침에 들어왔을 때 Berghaus는 북부 레이버들과 열성적인 오아시스 팬들을 위한 곳이라고 생각했어요. 대부분 남성들이요. JD 스포츠 브랜드였지만 오래전에 잊혀진 줄 알았죠. 대신 제가 발견한 것은 마음과 영혼이 있는 브랜드였어요. 인상적인 여성 컬렉션도 있었고요. 저는 그걸 응원하며 떠났어요.",
         "한 가게가 모든 것을 바꾼다고 가장하지는 않을 것이다. 하지만 뉴발란스를 다시 멋지게 만든 사람이 말하듯, 자랑스러워할 것이 많고, 60년이 지난 지금도 이 이야기는 마침내 전할 곳이 생겼다."
+      ]
+    },
+    {
+      "id": "lifespan-io:b3f58ddae4",
+      "slug": "how-old-fat-cells-trigger-inflammation-and-raise-b3f58d",
+      "titleOriginal": "How Old Fat Cells Trigger Inflammation and Raise Risks",
+      "summaryOriginal": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people. Too much […]",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people."
+        },
+        {
+          "kind": "text",
+          "text": "Too much of a regulator leads to dysregulation"
+        },
+        {
+          "kind": "image",
+          "url": "https://lifespan.io/wp-content/uploads/2025/05/Inflammation.jpg",
+          "alt": "Inflammation"
+        },
+        {
+          "kind": "text",
+          "text": "Chronic Inflammation Chronic inflammation refers to a persistent, low-grade buzz of immune activity that settles into the body without the drama of an infection or obvious injury. In the world of aging, this slow, smoldering fire is often called inflammaging, a term coined by Claudio Franceschi to capture the systemic, hard-to-detect inflammation that creeps in with advancing years. Read More"
+        },
+        {
+          "kind": "text",
+          "text": "This paper introduces itself with a standard explanation of the relationship between senescence and inflammaging, including the contributions of the senescence-associated secretory phenotype (SASP) that senescent cells emit. The authors state the need for a clear understanding of the “molecular mediators” involved, focusing specifically on the contributions of fat (adipose) tissue, which has been identified in previous work as a crucial link [1]."
+        },
+        {
+          "kind": "text",
+          "text": "Adipose tissue is not just energy storage; it is an endocrine organ all its own that regulates metabolism [2], and the aging of this tissue pushes it towards dysregulation and inflammation [3]. This includes SASP emissions, which senescent adipose tissue creates in sufficient quantities to stimulate systemic inflammation [4]. This paper makes it clear that aging fatty tissues are a cause, rather than just a consequence, of other aspects of aging [5]."
+        },
+        {
+          "kind": "text",
+          "text": "The related molecule on which this paper focuses is ANGPTL8, a metabolic regulator that itself is upregulated when insulin is administered [6]. However, this team has previously pinpointed it as being related to multiple serious metabolic issues, such as diabetes-related kidney disease (nepropathy) [7]. Other teams have corroborated such findings, finding it to be related to diabetic atherosclerosis [8] and a higher risk of future heart attacks in existing cardiovascular disease patients [9]. Additionally, higher circulating ANGPTL8 levels have been found to be associated with all-cause mortality in diabetic patients [10]."
+        },
+        {
+          "kind": "text",
+          "text": "A significant predictor As the first part of this paper, the researchers built their own biomarker-based clock, MBA8-Clock using data from the China Cardiometabolic Disease and Cancer Cohort, which recruited nearly ten thousand people. Comparing five separate algorithms, the team found that a multilayer perceptron-based framework was the best way to utilize this clock, as it gave estimated ages with an error rate of approximately five years."
+        },
+        {
+          "kind": "text",
+          "text": "This clock contained many basic measurements of metabolic health, including ANGPTL8. The researchers found that circulating ANGPTL8 values of approximately 250 nanograms per liter of serum were associated with the lowest biological age estimations. At values higher than that, particularly in people with four times as much or more, biological age was likely to be estimated markedly higher. Removing ANGPTL8 from the clock notably diminished its predictive abilities. The researchers hold that “circulating ANGPTL8 represents a consistent, biologically meaningful contributor to age prediction across individuals.”"
+        },
+        {
+          "kind": "text",
+          "text": "The next step was to create another clock, AIMR-Model, this one based on all-cause mortality over a ten-year period. The researchers used five algorithmic analyses, and this time they discovered that an extreme gradient-based framework yielded the most accurate results. Once more, ANGPTL8 was found to be a significant contributor; people who had been found to have higher ANGPTL8 levels were significantly more likely to have died within 10 years of that initial assessment. Further analysis revealed that “ANGPTL8 may amplify age-related clinical vulnerability rather than acting solely as an isolated risk marker,” as it was consistently found to occur alongside high blood pressure and other well-known risk factors for age-related disease."
+        },
+        {
+          "kind": "text",
+          "text": "Mice without ANGPTL8 live longer The researchers then turned to mice. As in humans, ANGPTL8 naturally increases in mice with age: 4-month-old (young) wild-type mice have significantly less of it than their 22-month-old (old) counterparts. As expected, the source was found to be the adipose tissue rather than the liver or any other organs; while hepatocytes did somewhat increase their production of the protein, that was localized rather than systemic."
+        },
+        {
+          "kind": "text",
+          "text": "In addition, the researchers created a group of mice that do not express the murine gene Angptl8 . Compared to their wild-type counterparts, the old Angptl8 -less mice performed considerably better on various physical tests at older ages. They had less fat mass, less senescence in their fat, and reductions in circulating SASP factors. They were also able to hang onto a rotarod longer, performed better on a treadmill, engaged in more exploratory behavior, and had more gastrocnemius muscle mass along with more fast-twitch fibers. Finally, and perhaps most importantly, these mice also lived longer."
+        },
+        {
+          "kind": "image",
+          "url": "https://lifespan.io/wp-content/uploads/2026/08/Survival-curve-ANGPTL8.png",
+          "alt": "Survival curve ANGPTL8"
+        },
+        {
+          "kind": "text",
+          "text": "The specific pathway involved in the relationship between ANGPTL8 and senescence was identified. This protein was found to bind to AKT2 on the molecular level, affecting the fundamental AKT/mTOR/S6K pathway, and this finding was confirmed in mice; mice with Angptl8 turned off have significantly decreased activity of AKT, mTOR, and S6K. Deriving fat precursor cells (preadipocytes) from older mice confirmed these findings, and experiments using cells with Angptl8 overexpression found that AKT is indeed necessary for ANGPTL8 to contribute to cellular senescence."
+        },
+        {
+          "kind": "text",
+          "text": "These researchers are of the clear opinion that they have hit upon a significant target, stating that “from a translational standpoint, the dual identity of ANGPTL8 as both a circulating biomarker and a functional effector of aging is particularly compelling.” However, this paper did not test any potential method of removing circulating ANGPTL8 from the bloodstreams of wild-type animals. If such a drug can be developed and proven to work in a human clinical trial, it may be possible to grant additional healthspan and lifespan to older people suffering from metabolic issues."
+        },
+        {
+          "kind": "text",
+          "text": "We would like to ask you a small favor. We are a non-profit foundation , and unlike some other organizations, we have no shareholders and no products to sell you. All our news and educational content is free for everyone to read, but it does mean that we rely on the help of people like you. Every contribution, no matter if it’s big or small, supports independent ethical journalism and sustains our future. Yes I will donate❤️"
+        },
+        {
+          "kind": "text",
+          "text": "Literature [1] Hotamisligil, G. S. (2017). Inflammation, metaflammation and immunometabolic disorders. Nature , 542 (7640), 177-185."
+        },
+        {
+          "kind": "text",
+          "text": "[2] Ou, M. Y., Zhang, H., Tan, P. C., Zhou, S. B., & Li, Q. F. (2022). Adipose tissue aging: mechanisms and therapeutic implications. Cell death & disease , 13 (4), 300."
+        },
+        {
+          "kind": "text",
+          "text": "[3] Tchkonia, T., Morbeck, D. E., Von Zglinicki, T., Van Deursen, J., Lustgarten, J., Scrable, H., … & Kirkland, J. L. (2010). Fat tissue, aging, and cellular senescence. Aging cell , 9 (5), 667-684."
+        },
+        {
+          "kind": "text",
+          "text": "[4] Dahlquist, K. J., & Camell, C. D. (2022). Aging leukocytes and the inflammatory microenvironment of the adipose tissue. Diabetes , 71 (1), 23-30."
+        },
+        {
+          "kind": "text",
+          "text": "[5] Franceschi, C., Garagnani, P., Vitale, G., Capri, M., & Salvioli, S. (2017). Inflammaging and ‘Garb-aging’. Trends in Endocrinology & Metabolism , 28 (3), 199-212."
+        },
+        {
+          "kind": "text",
+          "text": "[6] Abu-Farha, M., Ghosh, A., Al-Khairi, I., Madiraju, S. M., Abubaker, J., & Prentki, M. (2020). The multi-faces of Angptl8 in health and disease: Novel functions beyond lipoprotein lipase modulation. Progress in lipid research , 80 , 101067."
+        },
+        {
+          "kind": "text",
+          "text": "[7] Pan, L., He, Y., Xiang, Y., Mao, B., Meng, X., Guo, Y., … & Yu, X. (2025). Angiopoietin-like protein 8 mediates inflammation and fibrosis of tubular cells in diabetic kidney disease progression by interacting with Akt2. Metabolism , 156418."
+        },
+        {
+          "kind": "text",
+          "text": "[8] Ye, H., Zhu, Q., Zong, Q., Luo, S., Ji, Z., Zhang, R., & Zou, H. (2026). Elevated ANGPTL8 (Angiopoietin‐Like Protein 8) Levels as a Novel Predictor of Atherosclerosis in Type 2 Diabetes: Beyond Lipid Metabolism. Journal of the American Heart Association , 15 (3), e044806."
+        },
+        {
+          "kind": "text",
+          "text": "[9] Morinaga, J., Kashiwabara, K., Torigoe, D., Okadome, Y., Aizawa, K., Uemura, K., … & Oike, Y. (2023). Plasma ANGPTL8 levels and risk for secondary cardiovascular events in Japanese patients with stable coronary artery disease receiving statin therapy. Arteriosclerosis, thrombosis, and vascular biology , 43 (8), 1549-1559."
+        },
+        {
+          "kind": "text",
+          "text": "[10] Zou, H., Xu, Y., Chen, X., Yin, P., Li, D., Li, W., … & Yu, X. (2020). Predictive values of ANGPTL8 on risk of all-cause mortality in diabetic patients: results from the REACTION Study. Cardiovascular Diabetology , 19 (1), 121."
+        }
+      ],
+      "sourceName": "Lifespan.io",
+      "sourceUrl": "https://www.lifespan.io/",
+      "originalUrl": "https://lifespan.io/how-old-fat-cells-trigger-inflammation-and-raise-risks",
+      "author": "Josh Conway",
+      "publishedAt": "2026-08-20T22:15:04.000Z",
+      "fetchedAt": "2026-09-05T12:27:18.883Z",
+      "language": "en",
+      "keywords": [
+        "News",
+        "Cellular Senescence",
+        "Diabetes",
+        "Metabolic Syndrome",
+        "Metabolism",
+        "mTOR",
+        "White Adipose Tissue"
+      ],
+      "image": {
+        "url": "https://lifespan.io/wp-content/uploads/2026/08/Fat-cells-262x187.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 4,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "research",
+      "titleKo": "오래된 지방 세포가 염증을 유발하고 위험을 높이는 방법",
+      "summaryKo": "코호트 연구와 마우스 모델을 활용해 연구자들은 노화된 지방 세포가 생성하는 순환 인자 ANGPTL8가 쥐와 인간의 노화 관련 질병과 사망률과 관련이 있음을 발견했습니다. 너무 많은 [...]",
+      "bodyKo": [
+        "코호트 연구와 마우스 모델을 활용해 노화 지방 세포가 생성하는 순환 인자 ANGPTL8가 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다.",
+        "조절 요인이 너무 많으면 조절 장애가 생깁니다",
+        "만성 염증 만성 염증은 감염이나 명백한 부상의 극적인 문제 없이 몸에 자리 잡는 지속적이고 저강도의 면역 활동 윙윙거림을 의미합니다. 노화 세계에서 이 느리고 타오르는 불꽃은 흔히 염증이라고 불리는데, 이는 클라우디오 프란체스키가 나이가 들면서 서서히 나타나는 전신적이고 감지하기 어려운 염증을 표현하기 위해 만든 용어입니다. 더 읽기",
+        "이 논문은 노화세포와 염증 사이의 관계에 대한 표준적인 설명과 함께 노화 세포가 방출하는 노화세포 관련 분비 표현형(SASP)의 기여를 소개합니다. 저자들은 관련 \"분자 매개체\"에 대한 명확한 이해가 필요하며, 특히 이전 연구에서 중요한 연관성으로 확인된 지방(지방) 조직에 초점을 맞춥니다 [1].",
+        "지방 조직은 단순한 에너지 저장이 아닙니다; 지방 조직은 신진대사를 조절하는 독자적인 내분비 기관이며[2], 이 조직의 노화는 이를 조절 장애와 염증으로 유도합니다 [3]. 여기에는 노화 지방 조직이 충분한 양을 생성하여 전신 염증을 유발하는 SASP가 포함됩니다 [4]. 이 논문은 노화가 노화의 다른 측면의 결과가 아니라 원인임을 분명히 합니다 [5].",
+        "이 논문이 집중하는 관련 분자는 ANGPTL8로, 인슐린 투여 시 대사 조절제로 상향 조절됩니다 [6]. 하지만 이 연구팀은 이전에 당뇨병 관련 신장 질환(네프로병증)과 같은 여러 심각한 대사 문제와 관련이 있다고 밝혀낸 바 있습니다 [7]. 다른 연구팀도 이러한 발견을 확인하며, 당뇨병성 동맥경화와 관련 있다고 확인했습니다 [8] 기존 심혈관 질환 환자의 미래 심장마비 위험 증가[9]. 또한, 순환 ANGPTL8 수치가 당뇨병 환자의 모든 원인 사망과 연관되어 있음도 밝혀졌습니다 [10].",
+        "중요한 예측 변수 이 논문의 첫 부분에서 연구진은 중국의 심대사질환 및 암 코호트 데이터를 활용해 자체 바이오마커 기반 시계인 MBA8-Clock을 만들었으며, 이 코호트는 약 1만 명을 모집했습니다. 다섯 개의 별도 알고리즘을 비교한 결과, 연구팀은 다층 퍼셉트론 기반 프레임워크가 이 시계를 활용하는 가장 좋은 방법임을 발견했습니다. 이는 약 5년의 오류율로 추정 연령을 제공했습니다.",
+        "이 시계에는 ANGPTL8 등 대사 건강의 기본 측정값이 많이 포함되어 있었습니다. 연구진은 혈청당 약 250나노그램의 순환 ANGPTL8 생물학적 나이 추정치와 연관되어 있음을 발견했습니다. 특히 4배 이상 많은 사람들의 경우 그보다 높은 수치에서는 생물학적 나이 현저히 더 높게 추정될 가능성이 높았습니다. 시계에서 ANGPTL8을 제거하면 예측 능력이 현저히 저하되었습니다. 연구진은 \"순환 ANGPTL8이 개인 간 연령 예측에 일관되고 생물학적으로 의미 있는 기여를 한다\"고 주장합니다.",
+        "다음 단계는 10년간의 모든 원인 사망률을 기반으로 한 또 다른 시계인 AIMR 모델을 만드는 것이었습니다. 연구진은 다섯 가지 알고리즘 분석을 사용했고, 이번에는 극단적인 구배 기반 프레임워크가 가장 정확한 결과를 내는 것을 발견했습니다. 다시 한 번, ANGPTL8가 중요한 원인으로 밝혀졌습니다; ANGPTL8 수치가 높다고 밝혀진 사람들은 초기 평가 후 10년 이내에 사망할 가능성이 훨씬 높았습니다. 추가 분석 결과, \"ANGPTL8 고립된 위험 지표로만 작용하기보다는 연령 관련 임상 취약성을 증폭시킬 수 있다\"는 사실이 밝혀졌습니다. 이는 고혈압 및 연령 관련 질환의 잘 알려진 위험 요인들과 함께 일관되게 나타나기 때문입니다.",
+        "ANGPTL8이 없는 쥐는 더 오래 살기 연구진은 이후 쥐에 대해 연구를 돌렸다. 인간과 마찬가지로, ANGPTL8 생병 쥐는 나이가 들수록 자연스럽게 증가한다: 4개월 된 야생형 쥐는 22개월 된 개체들보다 지방 농도가 현저히 적다. 예상대로 그 원인은 간이나 다른 장기가 아닌 지방 조직임이 밝혀졌다; 간세포가 단백질 생산을 다소 증가시켰지만, 이는 전신이 아니라 국소적인 것이었다.",
+        "또한, 연구진은 쥐 유전자 Angptl8을 발현하지 않는 쥐 그룹을 만들었습니다. 야생형 마우스와 비교했을 때, 오래된 Angptl8 없는 마우스는 고령 시 다양한 신체 검사에서 훨씬 더 좋은 성과를 보였습니다. 이들은 지방량이 적고, 지방의 노화세포가 적으며, 순환하는 SASP 인자가 감소했습니다. 또한 로타로드를 더 오래 유지할 수 있었고, 러닝머신에서 더 좋은 성과를 냈으며, 더 많은 탐색 행동을 보였고, 복근 근육량과 빠른 근육 섬유도 더 많았습니다. 마지막으로, 아마도 가장 중요한 점은, 이 쥐들이 더 오래 살았다는 것입니다.",
+        "ANGPTL8와 노화세포 사이의 관계에 관여하는 특정 경로가 밝혀졌다. 이 단백질은 분자 수준에서 AKT2에 결합하여 기본적인 AKT/mTOR/S6K 경로에 영향을 미치는 것으로 밝혀졌으며, 이 발견은 쥐에서도 확인되었다; Angptl8이 꺼진 마우스는 AKT, mTOR, S6K의 활성이 유의미하게 감소했다. 노년 마우스에서 지방 전구세포(전지방 세포)를 얻은 결과가 이 결과를 확인했으며, Angptl8 과발현 세포를 이용한 실험에서는 AKT가 ANGPTL8가 세포 노화세포에 기여하는 데 실제로 필요하다는 것을 발견했다.",
+        "이 연구자들은 \"중개 관점에서 ANGPTL8가 순환 바이오마커이자 노화의 기능적 효과자라는 이중 정체성이 특히 설득력 있다\"고 밝히며 중요한 목표를 달성했다고 명확히 생각합니다. 하지만 이 논문은 야생형 동물의 혈류에서 순환 ANGPTL8을 제거하는 잠재적 방법을 시험하지 않았습니다. 만약 이러한 약물이 개발되어 인간 임상시험에서 효과가 입증된다면, 대사 문제를 겪는 노인들에게 추가 건강수명과 수명을 부여할 수 있을 것입니다.",
+        "작은 부탁을 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻입니다. 크고 작음에 상관없이 모든 기부는 독립적이고 윤리적인 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 기부하겠습니다❤️",
+        "문헌 [1] 호타미슬리길, G. S. (2017). 염증, 대화성 발화(metaflamation) 및 면역대사 장애. Nature, 542 (7640), 177-185.",
+        "[2] Ou, M. Y., Zhang, H., Tan, P. C., Zhou, S. B., Li, Q. F. (2022). 지방 조직 노화: 기전 및 치료적 함의. Cell death and disease, 13 (4), 300.",
+        "[3] 치코니아, T., 모르벡, D. E., 폰 즈글리니츠키, T., 반 듀르센, J., 러스트가르텐, J., 스크레이블, H., ... & 커클랜드, J. L. (2010). 지방 조직, 노화 및 세포 노화세포. 노화 세포, 9 (5), 667-684.",
+        "[4] 달퀴스트, K. J., & 카멜, C. D. (2022). 노화 백혈구와 지방 조직의 염증성 미세환경. 당뇨병, 71 (1), 23-30.",
+        "[5] 프란체스키, C., 가라냐니, P., 비탈레, G., 카프리, M., 살비올리, S. (2017). 염증 유발과 '쓰레기 노화'. 내분비학 및 대사 동향, 28 (3), 199-212.",
+        "[6] 아부-파르하, M., 고쉬, A., 알-카이리, I., 마디라주, S. M., 아부바커, J., & 프렌트키, M. (2020). 건강과 질병에서 Angptl8의 다면성: 지단백질 리파아제 조절을 넘어선 새로운 기능. 지질 연구 진전, 80, 101067.",
+        "[7] 판, L., 허, Y., 샹, Y., 마오, B., 멍, X., 궈, Y., ... & 유, X. (2025). 혈관생성계유사 단백질 8은 Akt2와 상호작용하여 당뇨병 신장 질환 진행에서 세뇨관 세포의 염증과 섬유화를 매개한다. 대사, 156418.",
+        "[8] 예, H., 주, Q., 종, Q., 루오, S., 지, Z., 장, R., & 조우, H. (2026). 제2형 당뇨병에서 죽상동맥경화의 새로운 예측인자로서의 ANGPTL8(피지오포이틴 유사 단백질 8) 상승: 지질 대사를 넘어서. 미국 심장 협회 저널, 15 (3), e044806.",
+        "[9] 모리나가, J., 카시와바라, K., 토리고에, D., 오카도메, Y., 아이자와, K., 우에무라, K., ... & 오이케, Y. (2023). 안정 관상동맥질환 환자 중 스타틴 치료를 받는 일본 환자의 혈장 ANGPTL8 수준과 2차 심혈관 사건 위험. 동맥경화, 혈전증 및 혈관생물학, 43권 8호, 1549-1559.",
+        "[10] Zou, H., Xu, Y., Chen, X., Yin, P., Li, D., Li, W., ... & Yu, X. (2020). 당뇨병 환자의 전원인 사망 위험에 대한 ANGPTL8 예측 가치: REACTION 연구 결과. 심혈관 당뇨병학, 19 (1), 121."
       ]
     }
   ]
