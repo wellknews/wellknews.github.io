@@ -23,3 +23,9 @@
   letter-spacing: 0.02em;
   color: var(--color-text-muted);
 }
+
+/* 돌아가는 길. 링크 자신은 여백을 갖지 않으므로 여기서 띄운다. */
+.back {
+  margin-top: var(--space-block);
+  padding-top: clamp(12px, 2vw, 24px);
+}

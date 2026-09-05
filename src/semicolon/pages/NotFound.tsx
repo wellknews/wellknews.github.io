@@ -24,7 +24,9 @@ export function NotFound() {
         </h1>
       </div>
 
-      <BackLink to={path.home} label={BASE} />
+      <div className={styles.back}>
+        <BackLink to={path.home} label={BASE} />
+      </div>
     </div>
   )
 }

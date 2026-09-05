@@ -1,4 +1,4 @@
-import { BackLink } from '../components/BackLink'
+import { Closing } from '../components/Closing'
 import { MetaLine } from '../components/MetaLine'
 import { Prose } from '../components/Prose'
 import { Materialize } from '../components/session/Materialize'
@@ -60,7 +60,7 @@ export function SessionEntry({ slug }: Props) {
         {arrangement}
 
         <div className="shell">
-          <BackLink to={path.sessionIndex} label={path.sessionIndex} />
+          <Closing to={path.sessionIndex} label={path.sessionIndex} />
         </div>
       </article>
     )
@@ -86,16 +86,11 @@ export function SessionEntry({ slug }: Props) {
 
           <div>
             <Prose>{session.body}</Prose>
-
-            {/* 여기서 문장이 잠시 멈춘다는 표시 */}
-            <span className="endmark" aria-hidden="true">
-              ;
-            </span>
           </div>
         </div>
       </article>
 
-      <BackLink to={path.sessionIndex} label={path.sessionIndex} />
+      <Closing to={path.sessionIndex} label={path.sessionIndex} />
     </div>
   )
 }

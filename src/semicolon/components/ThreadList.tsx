@@ -22,7 +22,7 @@ export function ThreadList({ threads, empty }: Props) {
   return (
     <div className={styles.list}>
       {threads.map((thread) => (
-        <ThreadItem key={thread.slug} thread={thread} level={2} linked />
+        <ThreadItem key={thread.slug} thread={thread} level={2} linked endmark />
       ))}
     </div>
   )

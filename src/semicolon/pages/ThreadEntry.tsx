@@ -1,4 +1,4 @@
-import { BackLink } from '../components/BackLink'
+import { Closing } from '../components/Closing'
 import { ThreadItem } from '../components/ThreadItem'
 import { findThread } from '../content/threads'
 import { path } from '../router'
@@ -17,9 +17,9 @@ export function ThreadEntry({ slug }: Props) {
   return (
     <div className={`shell page ${styles.wrap}`}>
       {/* 이미 이 글의 주소에 있으므로 날짜를 다시 링크로 걸지 않는다. */}
-      <ThreadItem thread={thread} level={1} linked={false} />
+      <ThreadItem thread={thread} level={1} linked={false} endmark={false} />
 
-      <BackLink to={path.threadIndex} label={path.threadIndex} />
+      <Closing to={path.threadIndex} label={path.threadIndex} />
     </div>
   )
 }

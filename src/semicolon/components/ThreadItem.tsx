@@ -9,6 +9,14 @@ type Props = {
   level: 1 | 2
   /** 날짜를 그 글의 주소로 걸지. 이미 그 주소에 있는 페이지에서는 걸지 않는다. */
   linked: boolean
+  /**
+   * 글 끝의 ';'를 이 글이 직접 찍을지.
+   *
+   * 목록에서는 글마다 자기 끝을 찍어야 한 편이 어디서 끝났는지 보인다.
+   * 한 편만 있는 페이지에서는 그 글의 끝이 곧 페이지의 끝이라, 기호는
+   * 아래의 매듭 한 줄(Closing)이 대신 찍는다. 둘 다 찍으면 ';'가 두 번 나온다.
+   */
+  endmark: boolean
 }
 
 /**
@@ -23,7 +31,7 @@ type Props = {
  * 이름을 붙여야 할 만큼 정리되지 않은 것도 그대로 남긴다.
  * 대신 날짜는 늘 있고, 그 날짜가 이 글의 주소다.
  */
-export function ThreadItem({ thread, level, linked }: Props) {
+export function ThreadItem({ thread, level, linked, endmark }: Props) {
   const Heading = level === 1 ? 'h1' : 'h2'
   const to = path.thread(thread.slug)
   const accessibleTitle = `${thread.date} — ${thread.title ?? thread.slug}`
@@ -53,9 +61,11 @@ export function ThreadItem({ thread, level, linked }: Props) {
         <Prose>{thread.body}</Prose>
 
         {/* 여기서 문장이 잠시 멈춘다는 표시 */}
-        <span className="endmark" aria-hidden="true">
-          ;
-        </span>
+        {endmark ? (
+          <span className="endmark" aria-hidden="true">
+            ;
+          </span>
+        ) : null}
       </div>
     </article>
   )

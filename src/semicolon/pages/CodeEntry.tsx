@@ -1,4 +1,4 @@
-import { BackLink } from '../components/BackLink'
+import { Closing } from '../components/Closing'
 import { Stat } from '../components/code/Stat'
 import { Opening } from '../components/session/Opening'
 import { findCode } from '../content/code'
@@ -49,12 +49,7 @@ export function CodeEntry({ slug }: Props) {
       {arrangement}
 
       <div className="shell">
-        {/* 여기서 문장이 잠시 멈춘다는 표시 */}
-        <span className={`endmark ${styles.end}`} aria-hidden="true">
-          ;
-        </span>
-
-        <BackLink to={path.codeIndex} label={path.codeIndex} />
+        <Closing to={path.codeIndex} label={path.codeIndex} />
       </div>
     </article>
   )

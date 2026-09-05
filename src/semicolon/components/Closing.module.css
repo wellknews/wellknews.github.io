@@ -1,0 +1,18 @@
+/*
+ * 매듭 한 줄.
+ *
+ * 두 끝에 하나씩 놓는다. 가운데를 비우는 것이 이 줄이 하는 일의 절반이다 —
+ * 붙여 놓으면 «기호와 링크»가 되고, 벌려 놓으면 «글의 끝과 나가는 문»이 된다.
+ */
+.closing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 48px);
+  margin-top: clamp(28px, 3.5vw, 44px);
+}
+
+/* 위쪽 여백은 줄이 갖는다. 기호는 줄 안에서 제 자리만 지킨다. */
+.mark {
+  margin-top: 0;
+}
