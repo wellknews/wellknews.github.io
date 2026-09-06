@@ -70,9 +70,6 @@ export function PolicyPage() {
           </a>
         </div>
       </section>
-      <a className="primary-link" href="/ekata/">
-        캠페인으로 돌아가기 →
-      </a>
     </article>
   )
 }

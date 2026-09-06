@@ -4,6 +4,7 @@ export function EkataFooter() {
       <span>
         EKATA <span className="footer-separator">/</span> WELLKNEWS
       </span>
+      <a href="/ekata/why/">WHY</a>
       <a href="https://www.instagram.com/wellknews/" target="_blank" rel="noreferrer">
         Instagram<span className="sr-only"> (새 창)</span>
       </a>

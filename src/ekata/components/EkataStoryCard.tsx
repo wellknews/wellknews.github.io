@@ -39,6 +39,7 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
   const features =
     [item.height, item.weight, item.physicalFeatures].filter(Boolean).join(' · ') || '정보 없음'
   const length = features.length + (item.clothing?.length ?? 0) + (item.missingArea?.length ?? 0)
+  const density = length > 170 ? ' story-card--compact' : length > 100 ? ' story-card--dense' : ''
   // No truncation, AI summary or hidden overflow. Very large records need editorial review.
   if (overflow || length > 430 || item.name.length > 16) {
     return (
@@ -51,7 +52,7 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
   return (
     <article
       ref={canvas}
-      className={'story-card' + (length > 180 ? ' story-card--dense' : '')}
+      className={'story-card' + density}
       aria-label={
         sample ? '개발용 예시 Story · 실제 인물이 아닙니다' : item.name + ' 실종 정보 Story'
       }
