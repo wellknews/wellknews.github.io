@@ -104,6 +104,7 @@ const PAGES = [
     kind: 'index',
   },
   { name: 'thread/related-but-unresolved', path: '/thread/related-but-unresolved', kind: 'index' },
+  { name: 'thread/three-stage-lifting', path: '/thread/three-stage-lifting', kind: 'index' },
 ]
 
 const failures = []
