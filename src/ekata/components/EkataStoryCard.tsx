@@ -1,13 +1,21 @@
 import { useEffect, useRef, useState } from 'react'
 import type { MissingChildCase } from '../types/missingChild'
-import { caseDate, currentCase, verificationTime } from '../lib/caseAdapter'
+import { currentCase, verificationTime } from '../lib/caseAdapter'
 
 // Values are measured against the single 1080 × 1920 composition.
 // CSS scales this exact composition with container units, including its safe zones.
 export const STORY_CANVAS = { width: 1080, height: 1920 } as const
 
+// The stamp sits where a WELLKNEWS card puts its issue date, so it has to read as a
+// date first. The single trailing word is what stops it from being read as one.
+function missingStamp(value?: string): string {
+  const parts = value?.split('-')
+  return parts?.length === 3 ? parts.join('. ') + '. 실종' : '실종일 정보 없음'
+}
+
 export function EkataStoryCard({ record }: { record: MissingChildCase }) {
   const [failedPhoto, setFailedPhoto] = useState<string>()
+  const [failedWordmark, setFailedWordmark] = useState(false)
   const [overflow, setOverflow] = useState(false)
   const canvas = useRef<HTMLElement>(null)
   useEffect(() => {
@@ -16,7 +24,9 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
     let disposed = false
     const check = () => {
       if (disposed) return
-      const rows = element.querySelectorAll<HTMLElement>('.story-content > *')
+      // The grid itself is measured too. Rows size to their own content now, so a
+      // card that runs out of page spills the grid, not any single row.
+      const rows = element.querySelectorAll<HTMLElement>('.story-content, .story-content > *')
       if (
         [...rows].some(
           (row) => row.scrollHeight > row.clientHeight + 1 || row.scrollWidth > row.clientWidth + 1,
@@ -39,7 +49,19 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
   const features =
     [item.height, item.weight, item.physicalFeatures].filter(Boolean).join(' · ') || '정보 없음'
   const length = features.length + (item.clothing?.length ?? 0) + (item.missingArea?.length ?? 0)
-  const density = length > 170 ? ' story-card--compact' : length > 100 ? ' story-card--dense' : ''
+  // The photograph gives up its room first, so type only steps down when even a
+  // floor-sized picture would not leave the words enough page.
+  const density = length > 240 ? ' story-card--compact' : length > 150 ? ' story-card--dense' : ''
+  // The name is the headline, and a headline is sized to fit its own line, not to
+  // whatever else the card happens to carry.
+  const naming =
+    item.name.length > 9
+      ? ' story-card--name-xs'
+      : item.name.length > 6
+        ? ' story-card--name-s'
+        : item.name.length > 4
+          ? ' story-card--name-m'
+          : ''
   // No truncation, AI summary or hidden overflow. Very large records need editorial review.
   if (overflow || length > 430 || item.name.length > 16) {
     return (
@@ -52,16 +74,27 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
   return (
     <article
       ref={canvas}
-      className={'story-card' + density}
+      className={'story-card' + density + naming}
       aria-label={
         sample ? '개발용 예시 Story · 실제 인물이 아닙니다' : item.name + ' 실종 정보 Story'
       }
       data-story-canvas="1080x1920"
     >
+      {/* WELLKNEWS prints its cards on a faint paper grain. Reproduced here, not imported:
+          the app's texture is a 2.3MB bitmap and this is a preview, not the export. */}
+      <div className="story-grain" aria-hidden="true" />
       <div className="story-content">
         <header className="story-header">
-          <span>EKATA / WELLKNEWS</span>
-          <strong>함께 찾습니다</strong>
+          {/* Same label grammar as every WELLKNEWS card: a red rule, then English caps
+              opened up with tracking. The desk is what changes, never the form. */}
+          <span className="story-desk">MISSING</span>
+          {/* The campaign's mark, diagonally opposite the desk rule — the two flags at
+              either end of a shared masthead. The lit square is the only campaign green
+              on the card and the only thing on it that is not printed. */}
+          <span className="story-seal">
+            EKATA
+            <span className="seal-lamp" aria-hidden="true" />
+          </span>
         </header>
         <div className="story-photo">
           {!sample && item.photoUrl && failedPhoto !== item.photoUrl ? (
@@ -85,6 +118,8 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
           )}
           {sample && <span className="story-sample">개발용 예시 · 실제 인물이 아닙니다</span>}
         </div>
+        {/* The name takes the headline slot a WELLKNEWS card gives its one sentence.
+            On a missing-child card the name is that sentence. */}
         <div className="story-identity">
           <h3>{item.name}</h3>
           <p>
@@ -93,16 +128,12 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
             {item.sex || '성별 정보 없음'}
             {item.currentAge !== undefined && <span> / 현재 추정 {item.currentAge}세</span>}
           </p>
-          <p>
-            {caseDate(item.missingDate)}
-            {item.missingDate ? ' 실종' : ' · 실종일'}
-          </p>
         </div>
-        <div className="story-location">
-          <span>발생지역</span>
-          <p>{item.missingArea || '정보 없음'}</p>
-        </div>
-        <div className="story-traits">
+        <div className="story-facts">
+          <div>
+            <span>발생지역</span>
+            <p>{item.missingArea || '정보 없음'}</p>
+          </div>
           <div>
             <span>신체특징 · 실종 당시</span>
             <p>{features}</p>
@@ -112,7 +143,7 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
             <p>{item.clothing || '정보 없음'}</p>
           </div>
         </div>
-        <footer className="story-contact">
+        <div className="story-report">
           <div className="story-call">
             <strong>182</strong>
             <span>
@@ -122,8 +153,35 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
             </span>
           </div>
           <p>공식정보 안내 → wellknews.github.io/ekata</p>
-          <small>자료 출처: {item.sourceLabel}</small>
-          {!sample && <small>공식정보 확인 {verificationTime(item.verifiedAt)}</small>}
+        </div>
+        <footer className="story-signature">
+          {/* The issue-date chip of a WELLKNEWS card, carrying the date this card is about. */}
+          <span className="story-stamp">{missingStamp(item.missingDate)}</span>
+          <div className="story-brand">
+            {failedWordmark ? (
+              <strong className="story-wordmark story-wordmark--text">WELLKNEWS</strong>
+            ) : (
+              <img
+                className="story-wordmark"
+                src="/wellknews-wordmark.png"
+                alt="WELLKNEWS"
+                onError={() => setFailedWordmark(true)}
+              />
+            )}
+            {/* Identity is the mark at the top; the working relationship is stated here,
+                where a co-publishing credit belongs. */}
+            <small>
+              An EKATA campaign
+              <br />
+              자료 출처: {item.sourceLabel}
+              {!sample && (
+                <>
+                  <br />
+                  공식정보 확인 {verificationTime(item.verifiedAt)}
+                </>
+              )}
+            </small>
+          </div>
         </footer>
       </div>
     </article>

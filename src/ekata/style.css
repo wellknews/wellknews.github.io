@@ -307,9 +307,48 @@ input:focus-visible {
   align-items: start;
 }
 
-/* The device shell is decoration wrapped around the Story, never part of it.
-   .story-frame stays the only container for the card, so giving it a 1080px width
-   still renders the exact 1080 x 1920 composition. */
+/* ── The border zone ─────────────────────────────────────────────────────────
+   Everything from here to .story-card is an embassy: a piece of WELLKNEWS ground
+   standing inside EKATA's. Both countries stay themselves and the crossing is what
+   is designed — a green sign on the campaign's side, a graphite wall, then the
+   account's black. Painting the shell green would annex the card; painting the page
+   black would evacuate the campaign. The border is the beautiful part.
+
+   The shell is decoration wrapped around the Story, never part of it. .story-frame
+   stays the only container the card measures, so giving it a 1080px width still
+   renders the exact 1080 x 1920 composition. */
+
+/* EKATA's own kicker grammar, pointed at the object it is hosting. */
+.story-passport {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 620;
+  letter-spacing: 0.14em;
+}
+
+.story-passport::before {
+  content: '';
+  width: 18px;
+  height: 2px;
+  flex: none;
+  background: currentColor;
+}
+
+.story-passport em {
+  color: var(--muted);
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.story-passport em::before {
+  content: '·';
+  margin-right: 8px;
+  color: var(--line);
+}
 .story-device {
   container-type: inline-size;
   position: relative;
@@ -324,7 +363,9 @@ input:focus-visible {
   z-index: -1;
   inset: 7% 1% 3%;
   border-radius: 50%;
-  background: radial-gradient(circle at 50% 44%, #bcff4524 0, transparent 68%);
+  /* The page's own light falling on a visitor. Weak enough that the card stays
+     black, present enough that the object is standing on EKATA ground. */
+  background: radial-gradient(circle at 50% 44%, #bcff4516 0, transparent 68%);
   filter: blur(38px);
   pointer-events: none;
 }
@@ -333,10 +374,11 @@ input:focus-visible {
   position: relative;
   border-radius: 7.4cqw;
   padding: 2.6cqw;
-  background: linear-gradient(158deg, #283021 0, #12160f 32%, #0b0e09 100%);
+  background: linear-gradient(158deg, #2b2b2b 0, #161616 32%, #0b0b0b 100%);
   box-shadow:
-    inset 0 0 0 0.2cqw #3b442f,
+    inset 0 0 0 0.2cqw #3d3d3d,
     inset 0 0.22cqw 0 #ffffff14,
+    /* The last green line before the wall. One hairline, on the outside. */ 0 0 0 1px #bcff4524,
     0 36px 74px -26px #000000e0;
 }
 
@@ -347,7 +389,7 @@ input:focus-visible {
   position: absolute;
   width: 0.7cqw;
   border-radius: 1cqw;
-  background: #242c1e;
+  background: #272727;
 }
 
 .story-shell::before {
@@ -387,7 +429,7 @@ input:focus-visible {
 }
 
 .chrome-progress span:first-child {
-  background: var(--green);
+  background: #f2f3ee;
 }
 
 .chrome-account {
@@ -407,8 +449,8 @@ input:focus-visible {
   height: 7.4cqw;
   flex: none;
   border-radius: 50%;
-  background: #1b2216 url('/logo.svg') center / 60% no-repeat;
-  box-shadow: inset 0 0 0 0.26cqw #4d5a41;
+  background: #1b1b1b url('/logo.svg') center / 60% no-repeat;
+  box-shadow: inset 0 0 0 0.26cqw #4d4d4d;
 }
 
 .chrome-account strong {
@@ -449,78 +491,167 @@ input:focus-visible {
   border-radius: 5.2cqw;
 }
 
+/* The plaque on the way out. */
 .story-device figcaption {
-  margin-top: 16px;
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
   color: var(--muted);
   font-size: 11px;
   line-height: 1.8;
   word-break: keep-all;
 }
 
+/* ── The Story itself: a WELLKNEWS card that happens to carry a case ──────────
+   Every value below is taken from what the WELLKNEWS forge actually prints, so
+   this card lands in the account's feed as one of its own rather than as a guest.
+
+     ground     #050505, flat. The forge fills the canvas black and lets the
+                photograph be the only colour on it.
+     desk       a red rule and English caps opened up with tracking, top left —
+                the one corner Instagram never covers.
+     headline   white, 800, negative tracking, bottom-weighted.
+     stamp      the burgundy date chip, ramped diagonally so it reads as printed
+                colour rather than a web button.
+     signature  the WELLKNEWS wordmark, the same file the app prints.
+
+   The campaign green stays on the page around the card and never enters it.
+   Nothing in the account has ever been that colour, and a Story is seen inside
+   the account, not inside this site. */
 .story-card {
   --story-safe-top: 23cqw;
   --story-safe-bottom: 25cqw;
-  --story-horizontal-padding: 7cqw;
+  --story-horizontal-padding: 6.667cqw;
   --story-body-size: 3.05cqw;
+  /* The name gets the headline slot, so it is sized by how long it is rather than
+     by how much else the card carries. A three-letter name set at a five-letter
+     size is the difference between a headline and a caption. */
+  --story-name-size: 11.2cqw;
+  --story-name-scale: 1;
+  --wk-paper: #ffffff;
+  --wk-body: #d8d8d3;
+  --wk-muted: #9a9a94;
+  --wk-faint: #6f6f69;
+  --wk-signal: #d05f5a;
+  --wk-rule: #ffffff26;
   position: relative;
   width: 100%;
   aspect-ratio: 9 / 16;
-  color: var(--paper);
-  background: linear-gradient(150deg, #20301a 0, #11150e 22%, #11150e 100%);
-  box-shadow:
-    inset 0 0 0 1px #455337,
-    0 28px 80px #0004;
+  overflow: hidden;
+  color: var(--wk-paper);
+  background: #050505;
+}
+
+/* The forge lays a paper texture over every card at 12% and it is what keeps the
+   black from looking like a switched-off screen. Reproduced rather than imported:
+   the original is a 2.3MB bitmap and this is a preview, not the export. */
+.story-grain {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.story-card--name-m {
+  --story-name-size: 9.4cqw;
+}
+
+.story-card--name-s {
+  --story-name-size: 7.8cqw;
+}
+
+.story-card--name-xs {
+  --story-name-size: 6.6cqw;
 }
 
 .story-card--dense {
-  --story-body-size: 2.55cqw;
+  --story-body-size: 2.75cqw;
+  --story-name-scale: 0.94;
 }
 
 .story-card--compact {
-  --story-body-size: 2.25cqw;
+  --story-body-size: 2.45cqw;
+  --story-name-scale: 0.88;
 }
 
+/* Every row takes the height its own words need and the photograph takes the rest.
+   A WELLKNEWS card is a photograph with type at the bottom of it, so when a case
+   carries more words the picture gives up the room — never the other way round.
+   When the picture reaches its floor the card has run out of page, and the grid
+   spills; the overflow check reads that as «this one needs a person». */
 .story-content {
   position: absolute;
+  z-index: 2;
   inset: var(--story-safe-top) var(--story-horizontal-padding) var(--story-safe-bottom);
   display: grid;
-  grid-template-rows: 5fr 28fr 15fr 10fr 22fr 15fr;
-  gap: 1%;
+  grid-template-rows: auto minmax(16cqw, 1fr) auto auto auto auto;
+  gap: 2.2cqw;
 }
 
 .story-content > * {
   min-width: 0;
-  min-height: 0;
 }
 
-.story-card--dense .story-content {
-  grid-template-rows: 5fr 26fr 14fr 11fr 29fr 15fr;
-  gap: 0.8%;
-}
-
+.story-card--dense .story-content,
 .story-card--compact .story-content {
-  grid-template-rows: 5fr 25fr 13fr 9fr 34fr 14fr;
-  gap: 0.6%;
+  gap: 1.8cqw;
 }
 
 .story-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 0.3cqw solid var(--green);
-  padding-top: 1cqw;
+  gap: 2cqw;
 }
 
-.story-header span {
-  font-size: 2.4cqw;
+/* The desk label of a WELLKNEWS card: 4px of signal red, then caps at 0.12em.
+   SOCIETY, POLITICS, CULTURE, ECONOMY, SECURITY — and now this one. */
+.story-desk {
+  display: flex;
+  align-items: center;
+  gap: 0.93cqw;
+  font-size: 1.95cqw;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
 }
 
-.story-header strong {
-  color: var(--green);
-  font-size: 2.8cqw;
-  font-weight: 600;
+.story-desk::before {
+  content: '';
+  width: 0.37cqw;
+  height: 2.22cqw;
+  background: var(--wk-signal);
+}
+
+/* ── The one place the two palettes meet ──────────────────────────────────────
+   Burgundy and neon do not blend; nothing useful is on the line between them.
+   What works — in Riso printing, in Businessweek, in every hi-vis marker on a
+   dark ground — is to give them different jobs and wildly different areas.
+
+     burgundy   a plane. The date chip alone is 0.47% of the canvas.
+     neon       a point. This lamp is 0.005% — about a hundredth of the chip.
+
+   At that ratio the green cannot compete; it punctuates. And it is not decoration:
+   fluorescent lime is the colour of being found — search, rescue, hi-vis — which
+   is the whole of what EKATA is for. So the card is printed matte everywhere and
+   lit in exactly one place. */
+.story-seal {
+  display: flex;
+  align-items: center;
+  gap: 0.9cqw;
+  font-size: 1.75cqw;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.seal-lamp {
+  width: 1cqw;
+  height: 1cqw;
+  flex: none;
+  /* The square from EKATA's own mark, and the card's only light source. */
+  background: #bcff45;
+  box-shadow: 0 0 1.7cqw #bcff4559;
 }
 
 .story-photo {
@@ -529,7 +660,10 @@ input:focus-visible {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #262d21;
+  /* Barely off the card's own black. The official photograph is contained, never
+     cropped, so a portrait source has to sit on a field rather than in a box —
+     a lighter plate would frame the letterboxing instead of hiding it. */
+  background: #0c0c0c;
 }
 
 .story-photo img {
@@ -540,9 +674,9 @@ input:focus-visible {
 
 .story-silhouette {
   align-self: end;
-  width: 50%;
+  width: 46%;
   height: 84%;
-  fill: #69725f;
+  fill: #2e2e2c;
 }
 
 .photo-note {
@@ -555,153 +689,149 @@ input:focus-visible {
   text-align: center;
 }
 
+/* A sample marker has to survive being screenshotted out of context, so it takes
+   the card's own boxed-label form rather than a colour that means something else. */
 .story-sample {
   position: absolute;
   top: 2cqw;
   right: 2cqw;
   left: 2cqw;
-  padding: 1.1cqw;
-  color: #11150e;
-  background: var(--green);
-  font-size: 2.5cqw;
+  border: 0.17cqw solid #ffffffd6;
+  padding: 1cqw;
+  color: var(--wk-paper);
+  background: #050505c4;
+  font-size: 2.4cqw;
   font-weight: 650;
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
+/* A WELLKNEWS card gives its one sentence the biggest type on the canvas.
+   On this card the name is that sentence. */
+.story-identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .story-identity h3 {
-  margin: 0 0 1.2cqw;
-  font-size: 7.4cqw;
-  font-weight: 730;
-  line-height: 1.1;
-  letter-spacing: -0.055em;
+  margin: 0 0 1.1cqw;
+  font-size: calc(var(--story-name-size) * var(--story-name-scale));
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -0.02em;
   overflow-wrap: anywhere;
 }
 
 .story-identity p {
-  color: #d2d6cb;
-  font-size: 2.85cqw;
-  line-height: 1.55;
+  color: var(--wk-body);
+  font-size: 3.4cqw;
+  line-height: 1.45;
 }
 
-.story-card--dense .story-identity h3,
+.story-identity p span {
+  color: var(--wk-muted);
+}
+
 .story-card--compact .story-identity h3 {
   margin-bottom: 0.8cqw;
-  font-size: 6.6cqw;
 }
 
 .story-card--dense .story-identity p,
 .story-card--compact .story-identity p {
-  font-size: 2.45cqw;
-  line-height: 1.42;
+  font-size: 2.8cqw;
+  line-height: 1.4;
 }
 
-.story-location,
-.story-traits {
-  border-top: 0.12cqw solid #526047;
+.story-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9cqw;
+  border-top: 0.1cqw solid var(--wk-rule);
   padding-top: 1.8cqw;
 }
 
-.story-location > span,
-.story-traits span {
+.story-facts span {
   display: block;
-  margin-bottom: 0.8cqw;
-  color: #b9c5ad;
-  font-size: 2.4cqw;
+  margin-bottom: 0.7cqw;
+  color: var(--wk-muted);
+  font-size: 2.15cqw;
   line-height: 1.3;
+  letter-spacing: 0.03em;
 }
 
-.story-location p,
-.story-traits p {
+.story-facts p {
   font-size: var(--story-body-size);
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
-.story-traits {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6cqw;
-}
-
-.story-card--dense .story-location,
-.story-card--dense .story-traits,
-.story-card--compact .story-location,
-.story-card--compact .story-traits {
+.story-card--dense .story-facts,
+.story-card--compact .story-facts {
+  gap: 1.15cqw;
   padding-top: 1.25cqw;
 }
 
-.story-card--dense .story-location > span,
-.story-card--dense .story-traits span,
-.story-card--compact .story-location > span,
-.story-card--compact .story-traits span {
-  margin-bottom: 0.5cqw;
-  font-size: 2.05cqw;
+.story-card--dense .story-facts span,
+.story-card--compact .story-facts span {
+  margin-bottom: 0.45cqw;
+  font-size: 1.95cqw;
 }
 
-.story-card--dense .story-traits,
-.story-card--compact .story-traits {
-  gap: 0.8cqw;
+.story-card--dense .story-facts p,
+.story-card--compact .story-facts p {
+  line-height: 1.32;
 }
 
-.story-card--dense .story-location p,
-.story-card--dense .story-traits p,
-.story-card--compact .story-location p,
-.story-card--compact .story-traits p {
-  line-height: 1.3;
-}
-
-.story-contact {
+/* The one thing this card asks the reader to do. Signal red is the account's
+   accent, so the number is loud without introducing a colour. */
+.story-report {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border-top: 0.25cqw solid var(--green);
-  padding-top: 1.1cqw;
+  gap: 1.7cqw;
+  border-top: 0.22cqw solid var(--wk-signal);
+  padding-top: 1.4cqw;
 }
 
 .story-call {
   display: flex;
   align-items: center;
-  gap: 3cqw;
+  gap: 2.6cqw;
 }
 
 .story-call strong {
-  color: var(--green);
-  font-size: 8cqw;
-  font-weight: 700;
+  color: var(--wk-signal);
+  font-size: 7.4cqw;
+  font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.035em;
 }
 
 .story-call span {
+  color: var(--wk-body);
   font-size: 2.9cqw;
   line-height: 1.3;
 }
 
 .story-call small {
-  color: #c3ccb9;
+  color: var(--wk-muted);
   font-size: 2.3cqw;
 }
 
-.story-contact > p {
-  font-size: 2.7cqw;
+.story-report > p {
+  color: var(--wk-body);
+  font-size: 2.6cqw;
   line-height: 1.3;
 }
 
-.story-contact > small {
-  display: block;
-  color: #bdc5b3;
-  font-size: 2.15cqw;
-  line-height: 1.3;
-}
-
-.story-card--dense .story-contact,
-.story-card--compact .story-contact {
-  padding-top: 0.8cqw;
+.story-card--dense .story-report,
+.story-card--compact .story-report {
+  padding-top: 0.9cqw;
 }
 
 .story-card--dense .story-call strong,
 .story-card--compact .story-call strong {
-  font-size: 7cqw;
+  font-size: 6.4cqw;
 }
 
 .story-card--dense .story-call span,
@@ -710,15 +840,77 @@ input:focus-visible {
 }
 
 .story-card--dense .story-call small,
-.story-card--compact .story-call small,
-.story-card--dense .story-contact > small,
-.story-card--compact .story-contact > small {
-  font-size: 1.95cqw;
+.story-card--compact .story-call small {
+  font-size: 2cqw;
 }
 
-.story-card--dense .story-contact > p,
-.story-card--compact .story-contact > p {
-  font-size: 2.3cqw;
+.story-card--dense .story-report > p,
+.story-card--compact .story-report > p {
+  font-size: 2.25cqw;
+}
+
+.story-signature {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2cqw;
+  align-items: flex-start;
+}
+
+/* The issue-date chip, in the place and the ramp the forge prints it. One word
+   turns the account's publication stamp into this card's date. */
+.story-stamp {
+  border-radius: 0.28cqw;
+  padding: 0.83cqw 2.22cqw;
+  background: linear-gradient(135deg, var(--wk-signal) 0, #551320 100%);
+  font-size: 2.4cqw;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.story-brand {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2cqw;
+}
+
+.story-wordmark {
+  width: 26.5cqw;
+  flex: none;
+  opacity: 0.9;
+}
+
+.story-wordmark--text {
+  font-size: 4.2cqw;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* Required attribution. It sits on the wordmark's baseline instead of under it,
+   so the signature keeps the shape the account's cards end with. */
+.story-brand small {
+  color: var(--wk-faint);
+  font-size: 1.8cqw;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.story-card--dense .story-signature,
+.story-card--compact .story-signature {
+  gap: 1.1cqw;
+}
+
+.story-card--dense .story-stamp,
+.story-card--compact .story-stamp {
+  padding: 0.7cqw 1.9cqw;
+  font-size: 2.15cqw;
+}
+
+.story-card--dense .story-brand small,
+.story-card--compact .story-brand small {
+  font-size: 1.65cqw;
 }
 
 /* Web actions beside the Story */
@@ -947,9 +1139,9 @@ details[open] summary::after {
   flex-direction: column;
   justify-content: center;
   border: 0;
-  padding: 24cqw 7cqw;
-  background: linear-gradient(150deg, #20301a 0, #11150e 22%, #11150e 100%);
-  box-shadow: inset 0 0 0 1px #455337;
+  padding: 24cqw 6.667cqw;
+  background: #050505;
+  box-shadow: inset 0 0 0 1px #2a2a2a;
   font-size: 3.4cqw;
 }
 
