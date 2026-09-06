@@ -83,6 +83,7 @@ const PAGES = [
     path: '/session/commander-at-home',
     kind: 'session',
   },
+  { name: 'code/the-middle-was-olive', path: '/code/the-middle-was-olive', kind: 'code' },
   { name: 'code/not-on-the-list', path: '/code/not-on-the-list', kind: 'code' },
   { name: 'session-index', path: '/session', kind: 'index' },
   { name: 'thread-index', path: '/thread', kind: 'index' },
