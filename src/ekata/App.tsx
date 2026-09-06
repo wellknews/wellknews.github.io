@@ -84,13 +84,39 @@ export default function App() {
         ) : (
           <section className="featured-case" aria-labelledby="featured-title">
             <div className="featured-heading" data-reveal>
-              <h1 id="featured-title">함께 찾습니다.</h1>
+              <p className="featured-kicker">
+                안전Dream 공개정보
+                {show && item.status === 'sample' && <em>개발용 예시</em>}
+              </p>
+              <h1 id="featured-title">실종아동을 찾습니다</h1>
             </div>
             {show ? (
               <div className="case-spread">
-                <div className="story-frame">
-                  <EkataStoryCard key={item.id} record={item} />
-                </div>
+                <figure className="story-device" data-reveal>
+                  <div className="story-shell">
+                    {/* Decorative device chrome. It sits in the Story safe zones, never in the export. */}
+                    <div className="story-chrome" aria-hidden="true">
+                      <div className="chrome-progress">
+                        <span />
+                        <span />
+                        <span />
+                      </div>
+                      <div className="chrome-account">
+                        <span className="chrome-avatar" />
+                        <strong>wellknews</strong>
+                        <small>지금</small>
+                        <span className="chrome-more">···</span>
+                      </div>
+                      <div className="chrome-reply">메시지 보내기</div>
+                    </div>
+                    <div className="story-frame">
+                      <EkataStoryCard key={item.id} record={item} />
+                    </div>
+                  </div>
+                  <figcaption>
+                    인스타그램 스토리로 게시되는 형태입니다. 실제 게시물이 아닙니다.
+                  </figcaption>
+                </figure>
                 <ReportSection key={item.id} record={item} />
               </div>
             ) : (

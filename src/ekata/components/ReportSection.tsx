@@ -1,6 +1,6 @@
 import type { MissingChildCase } from '../types/missingChild'
 import { Arrow } from './Publisher'
-import { officialCaseUrl, caseShareUrl } from '../lib/caseAdapter'
+import { officialCaseUrl, caseShareUrl, verificationTime } from '../lib/caseAdapter'
 import { CaseDetails } from './CaseDetails'
 import { ShareButton } from './ShareButton'
 
@@ -9,7 +9,7 @@ export function ReportSection({ record }: { record: MissingChildCase }) {
     <aside className="case-actions" id="report" aria-label="제보와 정보 확인">
       <div className="report-main" data-reveal>
         <a className="telephone" href="tel:182" aria-label="실종아동 제보 182 전화 연결">
-          <span className="phone-label">실종아동 제보</span>
+          <span className="phone-label">경찰청 실종아동찾기센터</span>
           <span className="phone-number">
             182
             <Arrow />
@@ -47,6 +47,27 @@ export function ReportSection({ record }: { record: MissingChildCase }) {
               : 'EKATA · ' + record.name + ' 실종 정보'
           }
         />
+      </div>
+      <div className="case-provenance">
+        <dl>
+          <div>
+            <dt>자료 출처</dt>
+            <dd>{record.sourceLabel}</dd>
+          </div>
+          {record.status !== 'sample' && (
+            <div>
+              <dt>공식정보 확인</dt>
+              <dd>{verificationTime(record.verifiedAt)}</dd>
+            </div>
+          )}
+        </dl>
+        <p>
+          에카타는 제보를 대신 접수하지 않습니다. 공개된 정보를 한 번 더 전하고 공식 창구로
+          안내합니다.
+        </p>
+        <a href="/ekata/policy/">
+          운영 원칙 보기 <Arrow diagonal={false} />
+        </a>
       </div>
     </aside>
   )

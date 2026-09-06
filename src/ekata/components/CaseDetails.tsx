@@ -24,7 +24,7 @@ export function CaseDetails({ record }: { record: MissingChildCase }) {
   return (
     <>
       <button className="text-link" type="button" onClick={() => dialog.current?.showModal()}>
-        정보 크게 보기 <span aria-hidden="true">＋</span>
+        정보 자세히 보기 <span aria-hidden="true">＋</span>
       </button>
       <dialog ref={dialog} className="case-dialog" aria-labelledby="case-dialog-title">
         <div className="dialog-heading">
