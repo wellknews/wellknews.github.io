@@ -1,0 +1,51 @@
+name: Prune merged branches
+
+# main에 다 들어간 브랜치만 지운다.
+#
+# 지울 목록을 사람이 적어 넣지 않는다. 러너가 매번 스스로 «이 브랜치의 커밋이
+# 전부 main에 있는가»를 세고, 하나라도 없으면 건드리지 않는다. 목록을 적어 두는
+# 방식은 적을 때는 맞았다가 나중에 틀리고, 틀린 줄 모른 채로 돌아간다.
+#
+# 그래서 이 워크플로는 실수로 돌려도 작업 중인 브랜치를 지울 수 없다. 지우는
+# 조건이 «이름이 목록에 있음»이 아니라 «지워도 잃을 것이 없음»이기 때문이다.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prune-branches
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Delete branches whose commits are all in main
+        run: |
+          git fetch --prune origin '+refs/heads/*:refs/remotes/origin/*'
+
+          deleted=0
+          kept=0
+
+          for ref in $(git for-each-ref --format='%(refname:short)' refs/remotes/origin \
+                        | grep -vx 'origin/HEAD' | grep -vx 'origin/main'); do
+            branch="${ref#origin/}"
+            ahead="$(git rev-list --count "origin/main..$ref")"
+
+            if [ "$ahead" != "0" ]; then
+              echo "keep    $branch — main에 없는 커밋 $ahead개"
+              kept=$((kept + 1))
+              continue
+            fi
+
+            git push origin --delete "$branch"
+            echo "delete  $branch"
+            deleted=$((deleted + 1))
+          done
+
+          echo "deleted: $deleted, kept: $kept"
