@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T12:28:08.765Z",
+  "generatedAt": "2026-09-06T18:25:22.237Z",
   "prototype": false,
   "articles": [
     {
@@ -254,18 +254,220 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/fight-aging-newsletter-september-6th-2026",
       "author": "Reason",
       "publishedAt": "2026-09-06T11:26:54.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Newsletters"
       ],
-      "translationStatus": "failed",
+      "translationStatus": "done",
       "contentPolicy": "full",
       "category": "age",
       "trustLevel": 3,
       "careScore": 0.7,
       "curiosityScore": 0,
-      "contentType": "opinion"
+      "contentType": "opinion",
+      "titleKo": "에이징과 싸우세요! 뉴스레터, 2026년 9월 6일",
+      "summaryKo": "노화와 싸우자! 노화 메커니즘을 현대 의학의 통제 하에 두어 모든 노화 관련 질병을 종식시키기 위한 목표와 관련된 뉴스와 논평을 발행합니다. 이 주간 뉴스레터는 수천 명의 관심 있는 구독자에게 발송됩니다. 뉴스레터 구독을 원하시면 다음 https://www.fightaging.org/newsletter/ 를 방문해 주세요. 구독 취소를 원하시면 이메일을 보내거나 이 이메일에 답글을 달 수 있습니다.",
+      "bodyKo": [
+        "노화와 싸우자! 노화 메커니즘을 현대 의학의 통제 하에 두어 모든 노화 관련 질병을 종식시키기 위한 목표와 관련된 뉴스와 논평을 발행합니다. 이 주간 뉴스레터는 수천 명의 관심 있는 구독자에게 발송됩니다. 뉴스레터 구독을 원하시면 다음 https://www.fightaging.org/newsletter/ 를 방문해 주세요: 구독 취소를 원하시면, 제목이나 본문에 \"구독 취소\"를 newsletter@fightaging.org 으로 보내거나 이 이메일에 답글을 달아 주세요.",
+        "Reason은 Fight Aging!의 창립자입니다. Repair Biotechnologies는 투자자, 기업가 및 롱제비티 산업과 그 복잡성에 관심 있는 이들에게 전략적 컨설팅 서비스를 제공합니다. 더 알아보려면: https://www.fightaging.org/services/",
+        "롱제비티 중재를 위한 기존 임상 시험 데이터에서 노화 시계에 대해 무엇을 배울 수 있을까요? 면역계 신호는 죽상동맥경화증 발생 단기 위험과 상관관계가 있습니다. 대사 질환에서 노화 미세아교세포가 분비하는 DLK1, 노화 뇌 기능 장애를 일으키는 노화 미세아교세포 분비, PTBP1의 표적 감소가 알츠하이머병 마우스 모델에서 인지 장애를 역전시킵니다. 파리의 오번역 돌연변이는 놀랍게도 수명을 연장합니다. 박테리아 지산(Lipoic Acid) 단백질 리가세(Ligase A)은 포유류 미토콘드리아 기능과 건강을 개선합니다. 혈액 검사의 기초로 아밀로이드-β 씨앗 투여가 가능합니다. 알츠하이머병의 경우, 쥐에서 인지 저하의 원인으로서 올리고덴드로사이트의 NRF2 하향 조절 뇌 부위는 시누클레이노병증에 대한 취약성을 다르게 보입니다. 아디포넥틴 수용체 작용제는 쥐의 근육 성장을 촉진합니다. 클로내 혈액 조혈은 특발성 폐섬유증과 연관되며, 박쥐 종의 유전체 서열 분석은 롱제비티 원인을 찾기 위해 사용됩니다. 백세 노인의 자손은 사망률과 연령 관련 질환 위험이 감소하여 알츠하이머병에서 ERBB4 과발현이 중요한 메커니즘임을 시사합니다",
+        "기존 임상시험 데이터에서 롱제비티 개입에 대한 노화 시계에 대해 무엇을 배울 수 있을까요? https://www.fightaging.org/archives/2026/08/what-can-be-learned-about-aging-clocks-from-existing-clinical-trial-data-for-롱제비티-개입/",
+        "노화 시계는 나이에 따라 변하는 생물학적 데이터군에 대해 이미 잘 확립된 기계 학습 기법을 사용하여 쉽게 만들 수 있습니다. 대규모 연구 집단에 대한 오믹스 데이터가 매우 많기 때문에 오믹스 데이터가 선호되지만, 간단한 혈액 검사, 영상 데이터, 기타 여러 항목을 이용한 임상 화학 결과를 이용해 시계가 만들어졌습니다. 시계는 기준 집단의 나이를 예측하도록 보정되며, 기준 집단이 아닌 사람들에게 사용할 경우 대부분의 시계는 노화에 더 크게 영향을 받는 사람들의 나이가 더 높을 것으로 예측하는 경향이 있습니다. 따라서 연령보다 시계 나이가 높을수록 적어도 인구 대비 사망 위험 증가, 연령 관련 질환 존재 등과 상관관계가 있습니다.",
+        "노화 시계 개발의 가장 중요한 목표는 하나 이상의 시계가 노화 관련 새로운 개입의 질을 평가하는 데 사용될 수 있음을 입증하는 것입니다. 잠재적인 회춘 치료가 효과적인지 신속히 평가할 수 있는 방법이 생긴다면, 연구자들이 신속하게 최선의 방안을 찾고 최적화할 수 있게 되어 이 분야가 혁신될 것입니다. 안타깝게도, 이러한 상황에서 시계가 신뢰할 수 있다는 신뢰는 느리고 비용이 많이 드는 수명 측정을 통해 개입에 맞춰 보정하는 것 외에는 불가능하며, 이는 본래의 목적을 무색하게 만듭니다. 안타깝게도 시계를 도출하는 데 사용된 데이터와 노화의 근본 메커니즘 간에 명확한 직접적 연결고리가 아직 없습니다. 어떤 시계든 노화 치료 접근법의 효과를 과소평가하거나 과대평가할 수 있으며, 실제로 그런지는 현재로서는 알 수 없습니다.",
+        "연구 커뮤니티가 이 도전에 접근하는 방법은 동물 연구와 인간 임상시험 모두에서 가능한 한 많은 다양한 시계의 행동에 관한 데이터를 최대한 수집하는 것입니다. 이 증가하는 데이터 중에서 어떤 시계의 형태와 측정 지표가 신뢰할 수 있는지에 대한 패턴과 이해가 드러나길 기대합니다. 오늘의 오픈 액세스 논문은 이 분야에서 진전을 보여주는 사례로, 말기 건강과 기대 수명에 영향을 미칠 것으로 알려져 있거나 기대되는 개입에 대해 지금까지 수집된 인체 임상시험 데이터를 평가한 것입니다. 분명히, 노화 시계가 등장한 이후 인간을 대상으로 엄격히 평가된 개입 목록은 현재 효과가 대체로 제한적입니다: 운동, 식단(칼로리 제한 포함), 메트포르민, 치료적 혈장 교환 등. 그럼에도 불구하고, 현재의 진보 상태에서도 배워야 할 점이 남아 있다.",
+        "인간에서 후생유전적 노화 바이오마커의 롱제비티 개입에 대한 반응성",
+        "노화 바이오마커는 연구자들이 10년에 걸친 임상시험 없이도 노화 개입의 영향을 신속히 모니터링할 수 있게 해줄 수 있습니다. 하지만 후생유전학적 시계와 같은 노화 바이오마커를 대리 평가 지표로 사용하기 전에, 노화를 표적으로 하는 개입에 대한 반응성을 검증해야 합니다. 여기서는 51개의 공공 및 민간 종단 중재 연구를 모은 조화 데이터베이스인 TranslAGE를 큐레이션하며, 각 연구별로 16개의 주요 후생유전학적 시계와 94개의 DNA 메틸화(DNAm) 바이오마커를 계산하여 각 시계에서 관찰된 변화를 설명할 수 있습니다.",
+        "이 데이터베이스를 사용하여 다양한 중재와 DNAm 바이오마커 전반에 걸친 반응성 패턴을 발견합니다. 예를 들어, 사망률이나 노화 속도를 예측하도록 훈련된 시계는 모든 중재에서 가장 강한 반응을 보이며 서로 일관된 결과를 보입니다; 약리학적 및 생활습관 중재는 DNAm 바이오마커로부터 가장 강한 반응을 유도합니다; 연구 집단의 특성과 연구 기간은 DNAm 바이오마커가 중재에 반응성을 결정하는 핵심 요인입니다. 더불어, 다중 하위 점수를 가진 시계(즉, '설명 가능한 시계')는 단일 점수 시계보다 중재의 반응성에 대한 특이성과 더 큰 메커니즘적 통찰을 제공합니다.",
+        "이러한 발견은 여러 검사, 연구 기간, 연구 집단 및 표본 크기를 최소화하기 위해 중재 및 특정 DNAm 바이오마커 하위 집합의 선택을 안내함으로써 향후 임상시험 설계에 도움을 주며, 궁극적으로 대리 노화 평가 지표로 사용할 수 있는 DNAm 바이오마커를 발견하는 데 기여할 수 있습니다.",
+        "면역계 신호는 죽상동맥경화증 발병 단기 위험과 상관관계가 https://www.fightaging.org/archives/2026/09/immune-system-signatures-correlate-with-the-near-term-risk-of-developing-atherosclerosis/",
+        "죽상동맥경화증은 보편적입니다; 모든 사람은 어느 시점에, 어느 정도 동맥에 지방성 죽상경화성 플라크가 생깁니다. 플라크는 혈관을 좁혀 혈류를 방해하고, 불안정한 플라크가 파열되면 심장마비, 뇌졸중, 색전증이 발생합니다. 죽상동맥경화증은 인간 사망의 가장 큰 원인이며, 현재 의료계가 할 수 있는 최선은 플라크 성장을 늦추는 것입니다. 저밀도 지단백(LDL) 입자에 의해 간에서 외부로 콜레스테롤이 배출되는 양을 줄이는 데 기반한 확립된 치료법은 최대 15% 정도의 사망 위험 감소를 제공하며, 플라크를 의미 있게 퇴행시키지는 못합니다. 흥미롭게도, 죽상동맥경화의 원인은 충분히 복잡하고 다양해서, 생활 습관 변화와 약물 치료의 조합으로 10% 이상의 플라크 퇴행을 보이는 행운의 사람들이 몇 명 있습니다. 반대로, 첫 심장마비나 뇌졸중 직후 병원에 온 대부분의 사람들은 실제로 LDL 콜레스테롤 수치가 높지 않으며, 임상적으로 LDL 콜레스테롤에 대한 지속적인 집중에서 거의 이득을 얻지 못할 가능성이 큽니다.",
+        "죽상동맥경화증 초기 단계에서 존재하는 플라크의 정도를 평가하는 것은 그리 쉽지 않습니다. 영상 기술은 지난 10년에서 15년 사이에 크게 발전했지만, 여전히 소량의 플라크를 구분하는 데 어려움을 겪고 있습니다. 초기 단계에서는 거의 평가가 이루어지지 않습니다. 많은 사람들은 자신이 고위험군에 속하는지 아닌지 너무 늦게 알게 됩니다. 만성 염증, 과체중, 대사 질환 등과 같은 단순한 위험 요인은 잘 알려져 있습니다. 하지만 Lp(a)가 죽상동맥경화증 위험에서 차지하는 역할에 대한 발견과 지속적인 연구가 보여주듯, 대사의 특정 차이가 어떻게 동맥경화성 병변의 발생 속도에 차이를 가져오는지에 대해서는 아직 많은 부분이 기록되지 않았습니다. 왜 특정 사람이 특정 정도의 죽상동맥경화를 보이는지는 여전히 대부분 미스터리로 남아 있습니다.",
+        "죽상동맥경화증 위험, 발병, 진행의 차이가 면역계 구성의 특정 차이에서 유용하게 상관관계가 있을 수 있다는 점은 충분히 그럴듯해 보입니다. 이 중 일부는 과체중, 만성 염증, 대사 기능 장애 환자에게 더 가능성이 높지만(보장되지는 않습니다) 존재할 가능성이 높습니다. 근본적으로 죽상동맥경화성 병변은 대식세포 기능 장애의 결과입니다. 대식세포는 혈관벽 내 과도한 콜레스테롤을 제거하고 손상을 복구하는 선천 면역 세포입니다. 병변은 대식세포 무덤과 같아서 끊임없이 더 많은 대식세포를 불러들여 염증 상태로 몰아넣고, 과도한 콜레스테롤과 기타 지질의 독성 혼합물로 죽입니다. 하지만 대식세포는 진공 상태에서 작동하지 않으며, 다른 면역 구획 내 세포의 활동에 강한 영향을 받습니다. 예를 들어, 동물 실험에서 적응 면역계의 T 세포가 플라크 성장에 영향을 미친다는 충분한 증거가 있습니다.",
+        "CD8+ 효과기 기억과 조절 T 세포 역학은 건강한 노화에서 아임상적 죽상동맥경화성 플라크 형성을 예측합니다",
+        "노화와 관련된 동맥벽의 구조 및 기능 변화는 내피 기능 장애를 촉진하고 죽상동맥경화증 발병을 가속화합니다. 중요한 점은 이 과정이 임상 증상이 나타나기 훨씬 전부터 시작된다는 것입니다. 이 조용한 단계 동안에는 조기 혈관 손상과 아임상적 죽상동맥경화성 플라크(SAP) 형성이 이미 일어나고 있지만 발견되지 않은 상태로 남아 있을 수 있습니다. 따라서 이러한 조기 변화를 감지하는 것은 예방 개선과 적시한 개입을 가능하게 하는 데 매우 중요합니다. 면역학적 기전과 염증이 동맥 형성의 중심 요인으로 점점 더 인식되고 있습니다. T 세포는 만성 혈관 염증 유지에 중요한 역할을 합니다. CD4+와 CD8+ T세포 하위 집합은 촉진 및 항염증 효과를 통해 플라크 생물학을 조절하는 반면, 조절 T 세포(Tregs)는 면역 활성화를 제한하고 플라크를 안정화하여 보호 효과를 발휘합니다. Treg 활동 감소는 혈관 손상 가속화와 연관되어 있습니다. 또한, 인터루킨(I)L-1β, IL-6, IL-18, 종양 괴사 인자-알파(TNF-α와 같은 사이토카인을 포함한 광범위한 매개체 네트워크가 내피 활성화, 동맥 재형성, 플라크 진행에 기여합니다. 성장 분화 인자-15(GDF-15), 오스테오프로테저린(OPG) 같은 순환 단백질과 함께 이러한 면역 관련 경로들은 신흥 혈관 취약성에 대한 초기 통찰을 제공하는 복잡한 조절 네트워크를 형성합니다.",
+        "건강하고 약물 복용이 없는 고령인의 심폐 건강 상태 코호트에서 이전 횡단면 연구들은 SAP가 뚜렷한 세포 및 분자 면역 신호를 동반함을 보여주었습니다. SAP 환자들은 면역노화의 특징을 보였으며, 여기에는 순진한 CD4+ T 세포 비율 감소, CD4+ 및 CD8+ 같은 분화된 하위 세포의 확장, 염증 매개체 증가, 세포 노화세포의 분자 특성, 그리고 Treg 하위 집단 내 변화가 포함됩니다. 이 발견들은 면역계 변화가 초기 플라크 형성에서 중요한 역할을 한다는 점을 강조하며, 면역학적 프로파일링이 임상 증상 이전에 혈관 위험이 증가한 개인을 식별하는 데 도움이 될 수 있음을 시사했습니다.",
+        "3년간의 종단 연구에서 49명의 건강한 노인(63.8세± 3.8세)이 기저 및 추적 관찰에서 경동맥 초음파, T 세포 표현형 분석, 혈청 단백질 프로파일링, 체성분 평가 및 적합성 검사를 받았습니다. 추적 관찰 시 참가자들은 SAP 없음, 새로운 SAP 또는 지속성 SAP로 분류되었습니다. 우리는 기저선 결정 요인과 개인내 변화를 분석하여 발생 플라크 형성을 예측하였습니다. 초기 플라크가 없던 사람들 중 30.3%에서 새로운 SAP가 발생했습니다. 기저 검사에서 CD8+ 효과기 기억(EM) T 세포의 빈도가 낮고, CD45RA(EMRA) T 세포 및 조절 T 세포(Tregs)를 재발현하는 CD8+ 효과기 메모리 빈도가 높을수록 새로운 SAP 발생 확률이 높았습니다. 시간이 지남에 따라 CD8+ EM T 세포의 확장이 새로운 SAP의 가장 일관된 독립 변수였으며, Tregs와 Treg/Teff 비율의 감소가 동반되었다. 기저선 시점의 혈관 세포 부착 분자-1(VCAM-1)은 추가적인 독립 예측 변수였다. 내장 지방 증가와 VO2피크 감소는 새로운 SAP와 연관이 있었으나, 면역 지표가 대사 변수나 혈청 사이토카인보다 더 견고했다.",
+        "대사 질환에서의 노세포 https://www.fightaging.org/archives/2026/09/senescent-cells-in-metabolic-disorders/",
+        "제2형 당뇨병이나 지방간질환으로 인한 대사 기능 장애 관련 지방간염(MASH)과 같은 가장 흔한 대사 질환은 과체중과 좌식 생활로 인한 대사 기능 장애의 결과입니다. 이러한 질환은 마르고 건강한 사람에게는 드물며, 노화로 인해 신진대사가 더 취약하고 염증을 일으키는 후반부에도 나타납니다. 과도한 내장 지방 조직은 노화 세포 축적을 촉진하는 것으로 알려져 있습니다. 세포는 평생 동안 노화되지만, 젊은 시절에는 면역 체계에 의해 신속히 제거됩니다. 나이가 들면서 그 정리 능력이 약해지면서 노화 세포가 오래 머물고 축적됩니다. 과체중으로 인한 대사 기능 장애는 이 과정을 가속화합니다.",
+        "오늘의 오픈 액세스 논문에서 연구자들은 대사 기능 장애와 노화 세포 부담 간의 양방향 관계를 검토합니다. 대사 기능 장애는 노화세포를 촉진하고, 노화 세포의 염증성 분비물은 간과 같은 대사 활성 조직의 기능을 더욱 방해합니다. 현재 상당수의 기업들이 체내에서 노화 세포의 상당 부분을 제거할 수 있는 세놀리틱 약물을 개발 중이며, 다사티닙과 퀘르세틴 조합과 같은 저렴한 1세대 세놀리틱 치료제도 조금만 노력하면 누구나 쉽게 구할 수 있지만, 대사 질환은 연구개발 커뮤니티의 우선순위에서 상당히 낮습니다. 임상 시험이 곧 진행될 가능성은 낮아 보이지만, 점점 더 많은 사람들이 상인용액 비허가 사용을 선택하고 있으며, 이는 안타깝게도 특정 사용 사례에서 치료제가 효과적인지에 대한 확실한 데이터를 거의 생성하지 못합니다.",
+        "대사는 활발하지만 기능 장애: 노년 세포와 SASP의 영향",
+        "세포 노화세포와 그 분비 표현형(SASP)은 여러 조직에서 만성 염증과 대사 기능 장애의 중요한 원인으로 부상하고 있습니다. 지방 조직에서는 텔로미어 소멸, 산화 스트레스, 염증 촉진 신호가 결합되어 전지방세포와 성숙한 지방세포를 조기 노화세포로 밀어냅니다. 이 노화 지방세포는 사이토카인, 화학계, 매트릭스 재형성 효소가 풍부한 복잡한 SASP를 분비하여 국소 '메타플라미네이션'을 지속시키고, 인슐린 신호를 저해하며, 전신 지방독성을 촉진합니다.",
+        "간에서는 간세포와 별세포 노화세포 유사하게 지방증의 진행에 기여하며, SASP 인자가 섬유화, 면역 세포 침투, 대사 재프로그래밍을 촉진합니다. 췌장과 골격근에서는 노화세포가 각각 β세포 기능과 포도당 흡수를 저해하여 인슐린 저항성과 고혈당을 더욱 악화시킵니다. 종합적으로 노화세포와 만성 SASP의 누적 부담은 피드 포워드 사이클을 강조합니다: 대사 스트레스가 노화세포를 유발하고, 지속적인 SASP는 조직 기능 장애를 증폭시키고 질병 진행을 가속화합니다.",
+        "급성적이고 일시적인 노화세포가 상처 치유와 종양 억제에 보호 역할을 할 수 있음에도 불구하고, 노령 또는 비만자 내 노화 세포의 축적은 비만, 제2형 당뇨병, MASLD/MASH 및 관련 심장대사 장애의 근본 원인인 '염증'이라 불리는 병원성 SASP 환경을 만듭니다. 설치류 모델에서 노화 세포 표지 부담 감소는 대사 지표 개선, 섬유화 감소, 인슐린 감수성 향상과 연관되어 있습니다. 이 발견들은 대사 질환에서 세노테라피의 번역 가능성을 시사하지만, 인간에서 질병 발병을 지연시키거나 되돌릴 수 있는지는 아직 확립되지 않았습니다.",
+        "노화 미세아교세포는 노화 뇌 기능 장애를 일으키는 DLK1을 분비 https://www.fightaging.org/archives/2026/09/senescent-microglia-secrete-dlk1-which-causes-dysfunction-in-the-aging-brain/",
+        "노화 세포는 나이가 들면서 몸 곳곳의 조직에 축적되어 염증성 분비물로 조직 구조와 기능을 방해합니다. 노화 세포의 증가하는 부담은 퇴행성 노화의 중요한 원인입니다. 세포는 어떤 형태의 스트레스로 인한 손상에 반응하거나, 더 흔히 체세포가 세포 복제의 하이플릭 한계에 도달할 때 노화됩니다. 젊은 시절에는 노화 세포가 면역 체계에 의해 효율적으로 제거되지만, 면역계 노화로 인해 노화 세포가 오래 머물며 수가 증가할 수 있습니다. 면역 세포 자체도 다양한 문제에 더 큰 복제로 반응하여 노력을 배가하기 때문에 하이플릭 한계에 도달해 복제 노화세포에 들어가기 쉽습니다.",
+        "신경퇴행성 질환과 노화 뇌 상태에 대한 연구는 점점 중추신경계에 거주하는 선천 면역 세포인 미세아교세포의 부적응적 행동에 초점을 맞추고 있으며, 이는 신체 다른 곳의 대식세포와 유사합니다. 미세아교세포는 병원체와 기능 장애 세포를 공격하는 것뿐만 아니라 정상 조직 유지와 신경 회로 유지에도 참여합니다. 미세아교세포가 지나치게 염증을 일으키면, 노화 상태에 들어가든 아니든 뇌가 피해를 입습니다. 염증성 미세아교세포는 신경퇴행성 질환과 노화 관련 인지 기능 저하의 중요한 구성 요소로 보입니다. 오늘 공개된 논문에서 보듯, 노화 미세아교세포는 특정 면에서 명백히 해롭습니다.",
+        "텔로미어가 짧아진 노화 미세아세포는 용해성 DLK1을 분비하여 노화 관련 저수초화 및 신경 기능 장애를 유발합니다",
+        "최종 복제 문제로 인한 텔로미어의 치명적 단축은 세포 주기 정지를 유도하고 세포를 복제성 노화세포로 이끕니다. 뇌의 교세포(예: 미세교세포, 성상교세포, 올리고덴드로사이트)는 발달 후에도 증식 능력을 유지하며, 중추신경계(CNS) 및 기타 스트레스 요인 손상에 반응하여 증식력이 증가합니다. 따라서 교세포는 강한 복제 스트레스를 받고, 백질에서는 텔로미어 단축이 감지되는 반면, 회색질의 텔로미어 길이는 비교적 변하지 않습니다.",
+        "교세포 노화세포는 뇌를 정상 노화에서 병리적 노화로 전환시키고, AD(알츠병) 병리의 축적과 확산을 촉진하는 것으로 제안되었습니다. 미세아교세포는 중추신경계에 위치한 상주 대식세포로, 면역 감시와 손상 및 병원성 종에 대한 선천적 면역 반응을 담당합니다. 미세아교세포는 타우오병증과 아밀로이드 베타(Aβ) 축적을 포함한 신경퇴행성 병리에 반응하여 증식 프로그램의 재활성화와 관련된 복제 스트레스 증가에 취약합니다.",
+        "본서에서는 노화 미세아교세포가 변화된 분비 프로필을 통해 다른 세포 유형에 해로운 영향을 미친다는 직접적인 증거를 보고합니다. 텔로미어 단축 생쥐의 뇌를 조사하여 지방 부화증, 저수초화, 미세아교세포 위축, 인지 기능 결손을 관찰했습니다. 단핵 RNA 시퀀싱(snRNA-seq)은 교세포 노화 가속화와 미세아교세포 노화세포 경로 상승을 밝혀냈습니다. 인간 유도 다능 줄기세포(iPSC) 유래 미세아교세포의 노화세포 모델에서, 델타 유사 비정규 노치 리간드 1(DLK1)이 새로운 노화세포 관련 리간드로 확인되었다. 용해성 DLK1(sDLK1)은 텔로미어로 단축되고 자연적으로 노화된 마우스의 뇌척수액에서 증가했으며, 이 증가는 미세아교세포 고갈로 제거되었다.",
+        "생체 내 sDLK1 상승은 저수초화를 유발하고 희소돌기교세포 계통 진행을 차단했으며, 이러한 효과는 과도한 sDLK1의 해로운 특성을 보여줍니다. 인간 iPSC 시스템에서 sDLK1은 희소돌기교세포 성숙을 방해하고 흥분성 신경세포의 칼슘 신호 전달을 변화시킵니다. 이 발견들은 미세아교세포 노화세포가 텔로미어 단축의 핵심 결과임을 확인하며, sDLK1이 미세아교세포에서 유래한 노화세포 리간드로서 올리고덴드로사이트와 노화 시 신경 기능 장애를 유발한다는 사실을 밝혀냅니다.",
+        "알츠하이머병 마우스 모델에서 PTBP1의 표적 감소가 인지 장애를 되돌리다 https://www.fightaging.org/archives/2026/09/targeted-reduction-of-ptbp1-reverses-cognitive-impairment-in-a-mouse-model-of-alzheimers-disease/",
+        "유전자 치료와 면역요법을 포함한 더 정교한 의학 형태들은 뇌에 전달하는 데 어려움을 겪고 있습니다. 적어도 실질적인 전달 옵션이 훨씬 적으며, 존재하는 어떤 것도 원하는 사용 사례에 맞지 않을 수도 있습니다. 혈액-뇌 장벽은 대부분의 접근법에서 정맥 주사의 경로를 방해하며, 대부분의 세포와 분자가 순환에서 뇌 조직으로 통과하는 것을 차단합니다. 뇌나 뇌척수액 저장소에 직접 주입하는 것도 가능하지만, 이는 매우 침습적이고 도전적이어서 일반적인 사용을 배제하기 어렵습니다.",
+        "뇌는 다양한 세포 유형으로 구성되어 있으며, 더 정교한 접근법은 특정 영역이나 세포 유형에 특이성을 요구합니다. 소분자는 신체 어디에나 쉽게 통과할 수 있지만, 특정 세포 유형에서 선택적 활성을 유도하는 목적에는 적합하지 않습니다. 이러한 선택성은 관심 세포 유형에만 활성화된 프로모터에 발현이 조율되는 모든 형태의 유전자 치료로 쉽게 달성할 수 있습니다. 하지만 그런 능력을 가진 유전자 치료는 뇌에 도달하기 매우 어렵거나 다른 특성들이 있어 장애물이 됩니다. 현재 혈액-뇌 장벽을 통과할 수 있는 AAV 바이러스 벡터 형태가 존재하지만, AAV는 페이로드 크기가 제한되어 있고, 프로모터 기반 선택성, 언제든지 치료를 중단할 수 있는 능력 등 다양한 부가 효과를 위해 페이로드 크기가 필요합니다.",
+        "그래서 사람들이 새로운 접근법을 시도하는 모습을 보는 것은 항상 흥미롭습니다. 오늘의 오픈 액세스 논문은 정맥 주사를 통해 혈액-뇌 장벽을 통과해 뇌의 성상교세포에 항체를 선택적으로 전달하는 방법을 제시합니다. 성상교세포는 기존 신경망에 통합되어 인지 기능 상실을 되돌리는 뉴런으로 재프로그래밍됩니다. 치료는 알츠하이머병에 초점을 맞추고 있으며, 이 질환의 마우스 모델이 인위적이기 때문에 주장된 진보에 너무 흥분하기 전에 잠시 기다리는 것이 좋습니다. 너무 많은 접근법이 쥐를 개선하지만, 인간 상태에서는 잘 작동하지 않습니다. 더 일반적으로, 특정 뇌세포 내에서 특정 단백질을 분해하는 항체를 전달하는 현실적인 접근법은 매우 흥미로운 기술입니다.",
+        "나노 이레이저 기반 성인 신경재생을 통해 알츠하이머병의 진행을 되돌립니다",
+        "주요 인지 회로에서 신경세포가 되돌릴 수 없게 소실된다는 사실은 핵심 치료적 도전 과제를 부각시킨다: 알츠하이머병(AD)에서 신경퇴행이 뇌의 고유 수리 능력을 능가한다. 성상교세포에서 뉴런으로(AtN) 재프로그래밍은 최근 재생 전략으로 매력적인 것으로 부상하고 있다. 성상교세포는 풍부하고 지역적으로 분포하며 증식성이 있어 내인성 세포 저장소로서 새로운 뉴런이 제자리에서 생성될 수 있기 때문이다. AtN 전환을 유도하기 위해 제안된 분자 표적 중 폴리피리미딘 경로 결합 단백질 1(PTBP1)이 특히 주목받고 있다. PTBP1은 비신경세포 스플라이싱 프로그램을 유지하는 RNA 결합 단백질이다; 그 하향 조절은 발달 중 신경세포 분화의 특징이다. 초기 연구들은 성상교세포나 기타 교세포에서 PTBP1을 억제하면 신경 전사 프로그램을 시작하고, 파킨슨병과 망막 손상 모델에서 기능적 뉴런과 유사한 세포를 생성할 수 있으며, 이는 단일 요인 재프로그래밍 결절로서 PTBP1에 대한 강한 관심을 불러일으켰다고 보고했습니다. 그러나 이후 계통 추적 연구에서는 PTBP1 고갈만으로는 성체 포유류 뇌에서 진정한 AtN 전환을 촉진하기에 충분하지 않을 수 있다는 상반된 결과가 나왔으며, 일부 보고된 전환이 기존 뉴런으로의 바이러스 프로모터 누출을 반영한다는 우려가 제기되었습니다.",
+        "PTBP1 기반 재프로그래밍을 치료용으로 번역하는 데 있어 주요 기술적 장애물은 생체 내에서 성상교세포에 재프로그래밍 에이전트를 정확하고 효율적이며 세포 유형 선택적으로 전달하면서 뉴런 및 기타 세포 유형의 오프 표적 교란을 피하는 것입니다. 바이러스 shRNA, CRISPR, 안티센스 올리고뉴클레오타이드 등 기존 PTBP1 넉다운 방법들은 신경세포, 미세아세포 또는 말초 조직에 대한 비표적 효과 없이 성상교세포 제한 억제를 달성하는 데 어려움을 겪고 있습니다.",
+        "최근 우리 연구팀은 프로테아좀 매개 분해를 통해 해당 항체를 세포 내 전달하여 특정 단백질을 다운-컨트롤할 수 있는 나노-ERASER 시스템을 개발하여, 성체 동물과 질병 모델에서 처음으로 트림-어웨이를 달성했습니다. 따라서 우리는 나노-이레이저 기반 트림-어웨이 플랫폼을 설계하여 (1) 성인 뇌의 성상교세포에 항-PTBP1 항체(aPTBP1)를 효과적으로 전달하고, (2) TRIM21 매개 프로테아솜 제거를 통해 내인성 PTBP1의 빠른 세포내 분해를 유도합니다. 트림-어웨이 메커니즘은 표적 단백질을 단백질 수준에서 직접 고갈시키며, 전사 또는 RNA 표적 접근법의 한계를 우회하고 시간적으로 정확한 단백질 수준 조절을 제공합니다. 혈액뇌장벽(BBB) 표적 리간드와 효율적인 내도체체 탈출 및 세포내 항체 방출을 위해 설계된 고분자 나노캐리어를 결합함으로써, 이 시스템은 성상교세포에서 일시적이고 국소적인 PTBP1 소모를 달성하면서 신경세포 및 말초 조직에 대한 노출을 최소화하는 것을 목표로 합니다. 이를 통해 단백질 수준에서의 일시적인 PTBP1 절제가 신경 세포 접합 프로그램을 활성화하고 AD 병리와 관련된 성상교세포 전환을 촉진하는 데 충분한지 엄밀한 검증 플랫폼을 제공합니다.",
+        "우리의 새로운 시스템으로 치료가 인지, 학습, 기억력을 크게 향상시켜, 5XFAD 마우스 모델에서 AD와 관련된 결손을 진정한 기능적 역전으로 입증했습니다. PTBP1 재프로그래밍을 둘러싼 오랜 논란을 해소하고, 현장 신경 재생을 위한 중개 생체재료 기반 플랫폼을 구축함으로써, 이 연구는 AD를 늦추는 것뿐만 아니라 그로 인해 파괴되는 신경 회로를 재건하는 데 초점을 맞춘 혁신적인 치료 패러다임을 제시합니다.",
+        "파리의 오번역 돌연변이는 놀랍게도 수명을 연장 https://www.fightaging.org/archives/2026/08/mistranslation-mutations-in-flies-surprisingly-extend-life/",
+        "단백질의 아미노산 성분을 전신적으로 변화시켜 모든 단백질이 다중 단일 염기화 다형성을 갖게 하는 유전자 발현 메커니즘의 변화가 꽤 해로울 것이라고 생각할 수 있습니다. 하지만 파리에서 입증된 것처럼 RNA를 단백질로 오번역하는 일부 형태는 실제로 수명을 연장합니다. 왜 이런 일이 일어나는지는 현재로서는 밝혀지지 않았습니다. 이는 일종의 호르메틱 효과로, 오번역이 스트레스 반응을 유발하여 세포를 전체적으로 정화하는 것으로 추정됩니다. 그러나 여기서 제시된 증거는 스트레스와 스트레스 반응이 오번역으로 인한 롱제비티에 의미 있는 역할을 한다는 점을 반박합니다.",
+        "유전자를 단백질로 정확히 번역하는 것은 유기체 적합도에 매우 중요하며, 이 과정에서 발생하는 오류는 보통 해롭고 단백질독성 스트레스를 유발합니다. 오번역은 초기 폴리펩타이드 사슬에 포함된 아미노산이 유전 암호에 의해 결정되는 것과 일치하지 않을 때 발생합니다. 초파리 Drosophila melanogaster의 발린-세린-오번역(V→S) 및 트레오닌-세린(T→S) 오번역 모델은 처녀 암컷 롱제비티에서 성별 특이적 증가를 보였습니다. 우리는 생식의 추가된 스트레스 요인이 이 오번역으로 인한 수명 증가를 없앨 것으로 예측합니다. 암컷은 체세포보다 생식 조직을 우선시하기 때문에, 프로테오독성 스트레스가 교미한 암컷의 체세포 조직에서 단백질 손상과 세포 사멸을 증가시킬 수 있습니다.",
+        "우리는 롱제비티, 산란, 산란 능력을 측정하여 V→S와 T→S가 D. melanogaster를 잘못 번역하는 데 미치는 번식의 영향을 측정했습니다. 우리의 예측과 달리, V→S와 T→S 오번역은 비오역군에 비해 성별 특이적 교미 암컷 롱제비티 증가를 초래했습니다. 또한, 오역만의 순수한 부가적 효과를 넘어 교미된 암컷의 사망 위험도 감소했습니다. 이러한 효과는 오역한 암컷의 산란율이나 수정율 감소로는 설명할 수 없습니다. 따라서 오역으로 인한 추가적인 단백질독성 스트레스는 번식의 해로운 영향을 악화시키지 않고 오히려 암컷 번식으로 인한 수명 단축을 완화할 수 있음을 발견했습니다.",
+        "박테리아 지산성 단백질 리가세는 포유류 미토콘드리아 기능과 건강 https://www.fightaging.org/archives/2026/08/bacterial-lipoic-acid-protein-ligase-a-improves-mammalian-mitochondrial-function-and-health/",
+        "여기서 연구자들은 미토콘드리아 대사를 개선하기 위해 포유류에 박테리아 효소인 지포산 단백질 리가아제 A(LplA)를 도입하는 유전자 치료 연구를 보고합니다. LplA는 단백질의 리포일화를 수행하며, 지산을 단백질에 결합시키며, 이는 포유류의 유사 효소보다 다소 더 효율적으로 수행됩니다. 리포일화는 대사 조절에 관여하는 것으로 알려져 있으며, 주로 리포일화 결핍 상태를 배경으로 연구되고 있습니다. 하지만 여기서는 건강한 개인의 노화 과정에서 대사 증진에 초점을 맞추고 있습니다. 이 연구는 흥미롭지만, 현재로서는 투자자와 규제 당국을 설득해 박테리아 단백질을 인간에 치료의 기초로 도입하는 것을 승인하도록 하는 것은 매우 어렵습니다; 부정적인 면역 반응이 발생할 것이라는 강한 가정이 있으며, 따라서 그렇지 않다는 증거에 대한 높은 기준이 설정되어 있습니다.",
+        "1차 에너지 생산자로서 미토콘드리아는 효율적인 산화 인산화를 통해 아데노신 5′-삼인산(ATP)을 생성하지만, 이 과정은 생리적 수준에서 중요한 신호전달 매개체로 작용하는 활성 산소종(ROS)을 생성하며, 과도하게 축적되면 세포 노화와 기능 저하의 원인이 됩니다. 따라서 에너지 생산과 ROS 관리 간의 최적의 균형을 유지하여 진정으로 효율적이고 깨끗한 에너지 대사를 달성하는 것이 필수적인 과제입니다. 이러한 생화학적 맥락은 에너지 대사를 촉진하면서도 산화 손상을 최소화하는 개입이 가능한지, 즉 활력과 롱제비티의 이점을 결합할 수 있는가 하는 핵심 질문을 제기합니다.",
+        "리포일화는 효소 활성에 직접적인 영향을 미치는 필수적인 번역 후 변형이며, 효소를 포함한 기질은 전략적 대사 문지기 역할을 합니다. 고등 진핵생물에서는 여러 효소가 순차적으로 리포일화를 조율하는 반면, 대장균에서는 단일 효소인 LplA만으로도 놀라운 효율로 전체 과정을 완료할 수 있습니다. 최근 연구들은 이 박테리아 효소가 리포일화 결핍을 보완할 뿐만 아니라 에너지 생산을 크게 증진하는 대사 증진제 역할도 한다는 것을 입증했습니다.",
+        "우리는 Caenorhabditis elegans와 마우스 모델에서 종간 발현 연구를 수행하고, 생애 단계 전반에 걸친 포괄적인 생리학적 평가를 수행했습니다. 결과는 이 효소 개입이 리포일화와 에너지 대사를 효과적으로 향상시키면서 ROS 수준을 낮춘다는 것을 보여줍니다. 이 긍정적인 대사 상태는 초기 생애의 운동성과 스트레스 저항력 향상, 그리고 중재 시점의 건강 수명 연장 등 광범위한 생리학적 이점으로 이어집니다.",
+        "알츠하이머병 혈액 검사의 기초로서 아밀로이드-β 씨앗 투여 https://www.fightaging.org/archives/2026/09/amyloid-%ce%b2-seeding-as-a-basis-for-a-blood-test-for-alzheimers-disease/",
+        "예를 들어, 순환하는 타우 단백질 품종의 존재를 기반으로 알츠하이머병 위험과 진행을 평가하는 혈액 검사가 존재하지만, 개선의 여지가 많습니다. 여기서 연구진은 혈액 내 아주 소량의 잘못 접힌 아밀로이드-β을 측정하는 방법이 환자에게 합리적으로 잘 작동한다는 증거를 제시합니다. 아밀로이드 연쇄 가설은 알츠하이머병 연구 개발 분야의 많은 부분을 계속 이끌고 있습니다; 잘못 접힌 아밀로이드-β은 수년에 걸쳐 뇌에서 천천히 퍼지며, 결국 만성 염증과 타우 응집 간의 피드백 루프가 특징인 이후 질환 단계를 촉진할 만큼 충분한 기능 장애를 일으킵니다. 잘못 접힌 아밀로이드-β의 성장을 추적하는 것은 알츠하이머병 초기 단계의 위험과 진행을 평가하는 접근법으로서 타당합니다.",
+        "알츠하이머병(AD) 병태생리의 특징 중 하나는 뇌에서 β-아밀로이드(Aβ) 단백질의 잘못 접히고 응집하는 것으로, 이는 타우 병리, 신경염증, 시냅스 손실, 신경퇴행, 인지 저하를 초래합니다. 잘못 접힌 Aβ 집합체, 즉 '씨앗'은 작고 용해성 있는 올리고머부터 풍부한 β 시트 2차 구조를 가진 크고 불용성 섬유까지 다양합니다. 특이한 구조 때문에 Aβ 씨앗은 자연적으로 접힌 Aβ를 손상시키고, 병원성 조립체의 응집과 형성을 촉진하는데, 이는 프리온과 유사한 과정입니다. 이 과정은 기존 씨앗의 농도에 따라 새로운 응집체가 생성되는 2차 핵생성 메커니즘을 따릅니다.",
+        "이 시딩 핵생성 메커니즘을 바탕으로, 단백질 오포름 고리 증폭(PMCA)이 생물학적 샘플에서 미량의 잘못 접힌 단백질을 검출 가능한 수준으로 증폭하는 데 개발되었습니다. 이 기술은 종자 증식을 위해 반복적인 배양 및 증폭 과정을 사용합니다. 그러나 이러한 기법을 AD 진단에 적용하는 것은 상대적으로 제한적입니다. 본 연구에서는 실시간 초음파 기반 PMCA 방법을 사용하여 플라즈마 Aβ 응집 시딩 활동을 검출했습니다. 2020년 12월부터 2024년 5월까지 총 549명의 참가자가 모집되었습니다. 실시간 초음파 기반 단백질 오스폴딩 순환 증폭 분석법을 사용하여 혈장 Aβ 응집 시딩 활도를 측정하였습니다. 플라즈마 Aβ 응집 시딩 활동의 바이오마커로서의 진단 성능을 평가하였습니다.",
+        "검증 단계에서 혈장 Aβ 집적 시딩 활동은 높은 진단 정확도를 보였으며, 인지 장애 상태와 인지장애 면적(곡선 아래 면적[AUC] = 0.93)과 구별하는 데 최적의 컷오프 값은 42.91, 비AD 치매에서 AD는 42.02, 비AD 치매로 인한 경도 인지 장애는 43.24였습니다. 혈장 Aβ 시딩 활동은 인지 기능과 유의하게 상관관계를 보였습니다(미니 정신상태 검사(MMSE) 점수: rs = -0.68; 임상 치매 등급[CDR] 점수: rs = 0.71).",
+        "이 결과는 혈장 Aβ 응집 시딩 활동이 AD와 MCI를 모두 식별하는 데 유망한 최소 침습 바이오마커가 될 수 있음을 시사합니다. 이 바이오마커는 임상적 단계별로 AD의 조기 발견과 감별 진단을 촉진할 수 있습니다.",
+        "쥐에서 인지 저하의 원인으로서 희돌기세포의 NRF2 하향 조절이 https://www.fightaging.org/archives/2026/09/nrf2-downregulation-in-oligodendrocytes-as-a-contributing-cause-of-cognitive-decline-in-mice/",
+        "뇌에 거주하는 올리고덴드로사이트는 축삭 주변의 절연 미엘린 외피를 유지하는 역할을 하며, 이는 뉴런 간 전기 신호 전달에 필요한 역할을 합니다. 미엘린 완전성 상실은 여러 쇠약한 질환의 원인이지만, 노화와 어느 정도 관련이 있습니다. 이것이 연령 관련 인지 저하에 얼마나 큰 기여를 하는지는 미해결 질문입니다. 연구자들은 연령 관련 올리고덴드로사이트의 행동과 수초 구조 변화가 단순히 재수초화 감소와 수초 완전성 상실이라는 개념보다 더 복잡하며, 쥐의 인지 저하 경로에 의미 있는 차이가 있음을 증거합니다."
+      ]
+    },
+    {
+      "id": "dezeen:1116a340ae",
+      "slug": "hudson-architects-transforms-neglected-nightclub-into-king-s-1116a3",
+      "titleOriginal": "Hudson Architects transforms neglected nightclub into King's Lynn Library",
+      "summaryOriginal": "UK studio Hudson Architects has converted a disused commercial building in Norfolk into a public library, wrapping its existing concrete structure in a skin of cement shingles. Named King's Lynn Library, the project adapted the neglected structure of a former nightclub, car park and retail store into a more central home for the local library, The post Hudson Architects transforms neglected nightcl",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "UK studio Hudson Architects has converted a disused commercial building in Norfolk into a public library , wrapping its existing concrete structure in a skin of cement shingles ."
+        },
+        {
+          "kind": "text",
+          "text": "Named King's Lynn Library, the project adapted the neglected structure of a former nightclub, car park and retail store into a more central home for the local library, which was underused due to its location on the town's outskirts."
+        },
+        {
+          "kind": "text",
+          "text": "A key aspect of Hudson Architects ' approach was to reduce the size of the existing concrete structure to echo the scale of the neighbouring buildings, freeing up space to create an expanded public street at its entrance."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/kings-lynn-library-hudson-architects-architecture-public-space-norfolk_dezeen_2364_col_0.jpg",
+          "alt": "King"
+        },
+        {
+          "kind": "text",
+          "text": "Hudson Architects has completed King's Lynn Library \"A major element of our role was to turn the building's rather lumpen presence into something more attractive, welcoming and better attuned to its location on the edge of a conservation area and the town's modern shopping district,\" studio director Louise Boddy told Dezeen."
+        },
+        {
+          "kind": "text",
+          "text": "\"So much of the building's success arises from the early decision to retain as much of the original building as possible,\" she added."
+        },
+        {
+          "kind": "text",
+          "text": "Modifications to the existing structure included carving out a large skylit atrium out of its centre and cutting the southern corner to address the street with a glazed frontage."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/kings-lynn-library-hudson-architects-architecture-public-space-norfolk_dezeen_2364_col_2.jpg",
+          "alt": "Cement shingles"
+        },
+        {
+          "kind": "text",
+          "text": "It is clad in shingles Inside, the concrete structure of King's Lynn Library is left exposed to frame the interiors, softened by a zigzagging timber stair and panelled walls."
+        },
+        {
+          "kind": "text",
+          "text": "Meanwhile, externally, it has been clad in cement shingles with a pale colour palette that references the tones of the neighbouring buildings."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/kings-lynn-library-hudson-architects-architecture-public-space-norfolk_dezeen_2364_col_5.jpg",
+          "alt": "King"
+        },
+        {
+          "kind": "text",
+          "text": "There is a children's library with a castle theme \"Despite its dramatic transformation, it is not immediately obvious to visitors that this is an older, reused building,\" Boddy said."
+        },
+        {
+          "kind": "text",
+          "text": "\"The building's history, including all its dents and marks, reveals itself slowly, and we think that is part of the joy of experiencing it,\" she continued. \"Different shades of cement shingles to create a mottled and varied effect across the facade, echoing the tones and textures of nearby buildings.\""
+        },
+        {
+          "kind": "text",
+          "text": "Read: Demountable timber library in Amsterdam is \"a living room for the neighbourhood\" On the ground floor, a children's library has been given a castle theme that nods to the medieval town centre, with arched and crenellated play structures and shelving beneath a ceiling of wavy timber acoustic baffles."
+        },
+        {
+          "kind": "text",
+          "text": "Above, the first floor contains open reading areas, with long desks positioned around the edge of the central atrium, and staff spaces at the perimeter alongside an additional stair and lift that ensure the library is fully accessible."
+        },
+        {
+          "kind": "text",
+          "text": "The more enclosed second floor contains a series of educational rooms including a training kitchen, positioned to overlook the city through rows of large square windows."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/kings-lynn-library-hudson-architects-architecture-public-space-norfolk_dezeen_2364_col_10-scaled.jpg",
+          "alt": "Atrium with wooden staircase"
+        },
+        {
+          "kind": "text",
+          "text": "The library is organised around a central atrium Previous projects by Hudson Architects include a low-carbon home in Norfolk that was built using cob – an unfired earth-based construction material consisting of clay-rich earth, water and fibrous material such as straw."
+        },
+        {
+          "kind": "text",
+          "text": "Other libraries recently featured on Dezeen include a demountable timber structure designed as \"a living room\" for Amsterdam and one in Luanda that winds around existing trees on its site ."
+        },
+        {
+          "kind": "text",
+          "text": "The post Hudson Architects transforms neglected nightclub into King's Lynn Library appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/06/hudson-architects-kings-lynn-library",
+      "author": "Jon Astbury",
+      "publishedAt": "2026-09-06T10:00:32.000Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Architecture",
+        "UK",
+        "England",
+        "Libraries",
+        "Norfolk",
+        "Adaptive reuse"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/08/kings-lynn-library-hudson-architects-architecture-public-space-norfolk_dezeen_2364_sq2-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "skin",
+      "trustLevel": 3,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "news",
+      "titleKo": "허드슨 건축사무소가 방치된 나이트클럽을 킹스 린 도서관으로 탈바꿈",
+      "summaryKo": "영국 스튜디오 허드슨 아키텍츠는 노퍽의 폐쇄된 상업 건물을 공공 도서관으로 개조했으며, 기존 콘크리트 구조물을 시멘트 슁글로 감쌌습니다. 킹스 린 도서관이라는 이름의 이 프로젝트는 방치된 옛 나이트클럽, 주차장, 소매점 건물을 지역 도서관의 중심 공간으로 개조했습니다. 허드슨 건축가가 방치된 밤을 탈바꿈시킨 후",
+      "bodyKo": [
+        "영국 스튜디오 허드슨 아키텍츠는 노퍽에 있던 폐쇄된 상업용 건물을 공공 도서관으로 개조했으며, 기존 콘크리트 구조물을 시멘트 싱글로 감싸고 있습니다.",
+        "킹스 린 도서관이라는 이름의 이 프로젝트는 이전에 나이트클럽, 주차장, 소매점이었던 방치된 건물을 마을 외곽에 위치해 활용이 적었던 지역 도서관의 보다 중심 공간으로 개조했습니다.",
+        "허드슨 건축사무소의 핵심 접근법 중 하나는 기존 콘크리트 구조물의 크기를 줄여 인근 건물들의 규모에 맞추어 입구에 확장된 공공 도로를 조성하는 것이었습니다.",
+        "허드슨 아키텍츠가 킹스 린 도서관을 완성했습니다. \"우리 역할의 주요 요소 중 하나는 건물의 다소 단조로운 존재감을 보존 지역과 도시의 현대 쇼핑 지구 경계에 더 잘 맞게 매력적이고 환영하는 모습으로 바꾸는 것이었습니다.\"",
+        "\"건물의 성공 중 많은 부분은 원래 건물의 일부를 최대한 보존하기로 한 초기 결정에서 비롯되었습니다,\"라고 그녀는 덧붙였습니다.",
+        "기존 구조의 수정에는 중앙에 큰 천채광이 있는 아트리움을 개조하고, 남쪽 모서리를 잘라 거리를 향해 유리 마감 정면을 갖추는 것이 포함되었습니다.",
+        "내부는 지그재로 된 목재 계단과 패널 벽으로 부드럽게 감싸는 킹스 린 도서관 콘크리트 구조가 내부를 감싸도록 노출되어 있습니다.",
+        "외관은 시멘트 슁글로 덮여 있으며, 인근 건물들의 색조를 연출한 연한 색상 팔레트를 사용하고 있습니다.",
+        "성을 테마로 한 어린이 도서관도 있습니다. \"극적인 변신에도 불구하고, 방문객들이 이 건물이 오래되고 재사용된 건물임을 즉시 알아차리기 어렵다\"고 보디는 말했습니다.",
+        "\"건물의 역사, 모든 움푹 들어간 자국과 자국들이 서서히 드러나고 있으며, 그것이 바로 이곳을 경험하는 즐거움의 일부라고 생각합니다.\"라고 그녀는 덧붙였다. \"다양한 색조의 시멘트 슁글로 외관에 얼룩덜룩하고 다양한 효과를 만들어내며, 인근 건물들의 색조와 질감을 반영합니다.\"",
+        "읽어보세요: 암스테르담의 분리형 목재 도서관은 \"동네를 위한 거실\" 1층에는 중세 도심을 연상시키는 성 테마의 어린이 도서관이 있으며, 아치형 놀이 구조물과 성벽 모양의 놀이 구조물, 물결 모양의 목재 음향 배플 아래 선반이 있습니다.",
+        "1층 위에는 중앙 아트리움 가장자리에 긴 책상이 배치된 오픈 독서 공간과 외곽에 직원 공간, 추가 계단과 엘리베이터가 있어 도서관이 완전히 접근 가능하도록 합니다.",
+        "더 밀폐된 2층에는 교육 주방을 포함한 일련의 교육실이 있으며, 큰 사각형 창문들이 줄지어 도시를 내려다볼 수 있도록 배치되어 있습니다.",
+        "도서관은 중앙 아트리움을 중심으로 구성되어 있습니다. 허드슨 건축사무소의 이전 프로젝트로는 노퍽에 위치한 저탄소 주택이 있는데, 이 주택은 점토가 풍부한 흙, 물, 짚 같은 섬유질 재료로 이루어진 비구운 토지 기반 건축 자재입니다.",
+        "최근 Dezeen에 소개된 다른 도서관으로는 암스테르담의 '거실'로 설계된 탈착 가능한 목재 구조물과 현장 내 기존 나무를 감싸는 루안다의 도서관이 있습니다.",
+        "\"허드슨 건축사무소가 방치된 나이트클럽을 킹스 린 도서관으로 탈바꿈시켰다\"는 글이 Dezeen에 처음 게재되었습니다."
+      ]
     },
     {
       "id": "dezeen:429655f079",
@@ -451,7 +653,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/06/eight-wooden-staircases-lookbooks",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-06T09:00:29.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -464,13 +666,50 @@
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/cobalt-coach-house-foils-sq-411x411.jpg"
       },
-      "translationStatus": "failed",
+      "translationStatus": "done",
       "contentPolicy": "full",
       "category": "culture",
       "trustLevel": 3,
       "careScore": 0,
       "curiosityScore": 0.7,
-      "contentType": "news"
+      "contentType": "news",
+      "titleKo": "재료를 최대한 활용한 8개의 나무 계단이 있습니다",
+      "summaryKo": "파란색 염색된 합판과 매듭진 낙엽송이 최신 주거용 인테리어 룩북에 등장하며, 강렬한 목재 계단을 중심으로 합니다. 건축가들의 목재 건축에 대한 욕구는 끝이 없으며, 최근 전 세계 목재 프로젝트들은 암스테르담의 분리형 도서관부터 포르투갈의 삼나무와 삼본 닭장까지 다양합니다. 다음 주택들 이후 8개의 목재 계단이",
+      "bodyKo": [
+        "파란색 염색된 합판과 매듭진 낙엽송이 최신 주거용 인테리어 룩북에 등장하며, 강렬한 목재 계단을 중심으로 합니다.",
+        "건축가들의 목재 건축에 대한 욕구는 끝이 없으며, 최근 전 세계 목재 프로젝트들은 암스테르담의 철거 가능한 도서관부터 포르투갈의 삼나무와 삼본 크리트 닭장에 이르기까지 다양합니다.",
+        "다음 주택들도 다양한 형태의 나무 계단으로 정의되는 내부 디자인에서 이 소재를 최대한 활용하고 있습니다.",
+        "이번 룩북 시리즈의 최신 작품으로, Dezeen의 아카이브에서 시각적 영감을 얻었습니다. 더 많은 영감을 원한다면 다채로운 수도꼭지, 경치 좋은 욕실, 인상적인 파티오가 등장한 이전 룩북을 참고하세요.",
+        "상단: 라미로 차베스 촬영. 위 사진: 프렌치 & 타이 코발트 코치 하우스, 영국, Foils 촬영",
+        "합판 계단이 이 동남부 런던 주택의 중심을 이루며, 코발트 블루 스테인으로 물들어 소용돌이 같은 결을 드러냅니다.",
+        "영국 건축 스튜디오 포일스는 펙햄의 옛 마차 차고를 개조하여 공간을 확장했으며, 5부분으로 나누어 현장에서 조립한 맞춤형 계단을 추가했습니다.",
+        "사진: 라미로 차베스 목재 별관, 멕시코, 페드로 & 후아나 촬영",
+        "목재 별관은 발레 데 브라보에 위치한 멕시코 주택 확장 건물로, 두 개의 강철 U자빔과 말린 소나무로 구상되었습니다.",
+        "계단 내부도 소나무로 마감되었고, 창문형 창문이 뚫려 있었습니다.",
+        "건축 스튜디오 페드로 & 후아나는 \"이 프로젝트는 멕시코에서 목재로 설계하는 것이 가능하고, 아름답고, 모든 것이 콘크리트로 이루어진 만연한 건축보다 더 지속 가능한 해답임을 증명하는 실험실 역할을 했다\"고 말할 수 있다.",
+        "사진 제공: 앤서니 콜먼 런던 하우스, 영국, 웨인드 고힐 및 포터 건축 제작",
+        "현장 밖에서 제작되어 퍼즐처럼 조립된 이 각진 나무 계단은 런던 서부 셰퍼즈 부시 주택의 정원에 있는 작은 주거지를 정의합니다.",
+        "계단은 부지의 세 층을 모두 연결하며, 전부 엔지니어드 목재 재료와 매듭진 라치 마감재로 지어졌습니다.",
+        "네덜란드 아호프의 알렉스 백스터 반 촬영, 줄리아 반 뵈닝겐 촬영",
+        "네덜란드 건축 디자이너 줄리아 반 뵈니겐은 헬더란트에 있는 이 19세기 헛간을 개조하여 네 개의 침실과 넓은 오픈 플랜 생활 공간을 갖춘 임대 주택으로 만들었습니다.",
+        "거실 공간의 중심에는 곡선형 합판 계단이 있어, 헛간의 전통적인 목재 기둥과 들보와 유쾌한 대조를 이룹니다.",
+        "사진 제공: 크로아티아 토마즈 그레고릭 등대, OFIS 아히텍티 촬영",
+        "등대는 크로아티아 크레스 섬에 위치한 독특한 석조 건물로, 가구 역할을 하며 자연광이 내부에 들어오도록 하는 슬레이트 목재 골조로 리노베이션되었습니다.",
+        "슬로베니아 스튜디오 OFIS Arhitekti는 인상적인 골조에 계단을 포함시켜 주택의 3층을 유연하게 연결했습니다.",
+        "사진 제공: 레오나르도 피노티 카사 토메 다 실바, 브라질, 마르코스 베르톨디 아르키테토스 촬영",
+        "단일 석식 나선형 계단이 현지 업체 마르코스 베르톨디 아르키테토스가 소유한 쿠리치바 주택 카사 토메 베이라 다 실바의 중심에 자리 잡고 있습니다.",
+        "목재로 지어진 계단식 구조물은 격자형 목재 스크린으로 둘러싸여 자연광을 개방형 실내 공간으로 들여보냅니다.",
+        "카사 토메 베이라 다 실바에 대해 더 알아보세요 ›",
+        "사진 제공: 짐 스티븐슨, 스코틀랜드 아버 하우스, 브라운 & 브라운",
+        "스코틀랜드 건축 스튜디오 브라운 & 브라운은 낡은 농가에서 회수한 돌과 목재, 판자 표시가 있는 콘크리트를 결합해 아버 하우스에 생명을 불어넣었습니다.",
+        "애버딘의 보존 지역에 위치한 이 집은 단단하게 꼬인 자작나무 합판 계단과 함께 식사 및 통행 공간을 갖추고 있습니다.",
+        "브라운 & 브라운은 \"계단은 목재 발판을 개별적으로 잘라 손으로 쌓아 부드럽고 구불구불한 포물선 곡선을 형성하며 3주에 걸쳐 조립되었습니다.\"라고 말했습니다.",
+        "사진 제공: 로렌조 잔드리 런던 하우스, 영국, 파올로 코스 건축가 촬영",
+        "이 동런던 주택에서 거주자들이 앉거나 대화하거나 작품을 읽을 수 있도록 설계된 초넓은 계단으로, 지역 스튜디오 파올로 코스 아키텍츠가 설계했습니다.",
+        "두툼한 나무 블록으로 만들어진 이 계단은 인접한 벽을 덮고 있는 같은 오크 책장과 연결되어 있습니다.",
+        "이번 룩북 시리즈의 최신 작품으로, Dezeen의 아카이브에서 시각적 영감을 얻었습니다. 더 많은 영감을 원한다면 다채로운 수도꼭지, 경치 좋은 욕실, 인상적인 파티오가 등장한 이전 룩북을 참고하세요.",
+        "이 글은 Dezeen에 처음 게재된 '재료를 최대한 활용하는 8개의 나무 계단'입니다."
+      ]
     },
     {
       "id": "dezeen:1a70487d6a",
@@ -561,7 +800,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/06/plana-house-kristijan-markoc-downloadable-timber-home",
       "author": "Starr Charles",
       "publishedAt": "2026-09-06T05:00:32.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -571,13 +810,35 @@
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/plana-house-kristijan-markoc-downloadable-timber-home_dezeen_2364_col_4-411x411.jpg"
       },
-      "translationStatus": "failed",
+      "translationStatus": "done",
       "contentPolicy": "full",
       "category": "culture",
       "trustLevel": 3,
       "careScore": 0,
       "curiosityScore": 0.7,
-      "contentType": "news"
+      "contentType": "news",
+      "titleKo": "플라나 하우스는 컴팩트 목재 주택을 위한 무료 다운로드 디자인입니다",
+      "summaryKo": "건축가 크리스티얀 마르코크는 어떤 부지에도 적응할 수 있도록 설계된 '의도적으로 소박한' 2베드룸 목조 주택 템플릿을 다운로드 가능하게 만들었습니다. 플라나 하우스라는 이름의 이 복제 가능한 주택 디자인은 42평방미터의 컴팩트한 평면을 가지며, 쉽게 구할 수 있는 자재로 지을 수 있는 단순한 경사진 지붕 구조로 구성되어 있습니다. 이 집은 마르콕이 설계했으며, 플라나 하우스 1 이후의 시대에",
+      "bodyKo": [
+        "건축가 크리스티얀 마르코크는 어떤 부지에도 적응할 수 있도록 설계된 '의도적으로 소박한' 2베드룸 목조 주택 템플릿을 제작했습니다.",
+        "플라이나 하우스라는 이름의 이 복제 가능한 주택 디자인은 42제곱미터 평면을 가졌으며, 쉽게 구할 수 있는 자재를 사용해 지을 수 있는 단순한 경사진 지붕 구조로 구성되어 있습니다.",
+        "이 집은 스위스 스튜디오 Plana Architecture의 창립자인 마르콕이 설계했으며, 전통적인 주택 디자인보다 접근성이 좋은 대안으로 설계되었으며, 경제성, 적응성, 그리고 직관적인 건축 과정을 우선시합니다.",
+        "이 아이디어의 핵심은 주민들이 다시 주택 건설 과정에 참여하도록 하는 것이었고, 마르콕은 프로젝트를 위해 무료로 이용 가능한 기술 도면 세트를 제작하게 되었습니다.",
+        "사람들이 '적응하고 잠재적으로 자신의 집을 짓는' 수 있는 자료",
+        "\"전통적으로 집을 짓는 데 필요한 지식의 많은 부분은 집을 짓고 거주하는 사람들과 공동체가 공유했어요,\"라고 마르콕은 디진에게 말했습니다.",
+        "\"플라이나 하우스는 건축 도면 전체를 무료로 제공함으로써 그 지식을 다시 공유하려 합니다. 이를 통해 사람들이 이해하고 적응하며 잠재적으로 자신의 집을 짓는 데 활용할 수 있도록 합니다.\"",
+        "플라나 하우스 프로토타입을 건설할 계획을 가진 마르콕은 모듈러 건축에 대한 지식을 바탕으로 영국과 아일랜드 건축 규정에 따라 설계했습니다.",
+        "구조가 적응 가능하긴 하지만, 플라나 하우스의 어떤 건축도 지역 건축 규정을 충족하기 위해 면허가 있는 건축가나 자격을 갖춘 전문가의 검토를 받아야 한다고 마르콕은 설명했습니다.",
+        "플라이나 하우스는 기성 재료로 지을 수 있는 단순한 목재 구조를 가지고 있습니다. \"이 집은 모듈러 건축 방식을 활용한 경험을 바탕으로 개발된 매우 효율적인 구조 격자에 기반한 단순한 목재 프레임을 사용해 건물을 최대한 효율적이고 경제적으로 만들기 위해 개발되었습니다.\"라고 마르콕은 설명했습니다.",
+        "\"모든 치수, 세부 사항, 시공 방법은 공사 전에 면허가 있는 건축가나 자격을 갖춘 전문가가 현지 건축 규정, 부지 조건 및 적용 기준을 준수하도록 검증하고 조정해야 한다\"고 덧붙였다.",
+        "마르콕의 설계 렌더링에는 전부 목재 패널로 덮인 단순한 단층 목재 프레임이 있으며, 표준 기성 재료로 제작할 수 있습니다.",
+        "외부적으로는 지역에서 구할 수 있는 다양한 재료로 마감할 예정입니다. 유연성을 위해 집은 스크류 파일이나 패드 기초 위에 지을 수 있어 가벼운 터치 방식을 취할 수 있습니다.",
+        "읽기: Woonpioniers의 네덜란드 주택 인접 모델, \"테트리스 게임\" \"[이 구조물] 지역 철물점에서 쉽게 구할 수 있는 자재에 의존하며, 단순하고 친숙한 형태 덕분에 매우 다른 지역 맥락 속에서도 자연스럽게 자리 잡을 수 있으며, 외장 재료는 지역 기후, 가용성, 예산에 맞게 조정됩니다,\"라고 마르콕은 말했습니다.",
+        "내부는 직사각형 평면이 두 개의 윙으로 나뉘어 있으며, 한쪽 끝에는 오픈 플랜의 거실, 식당, 주방 공간, 다른 쪽 끝에는 두 개의 침실과 욕실이 있습니다.",
+        "일련의 창문들이 빛을 내부로 끌어들이며, 경사진 지붕은 4미터 폭의 공간 안에 더 넓은 공간을 만들어줍니다.",
+        "다른 곳에서는 운피오니에르가 위트레흐트의 한 박공 지붕 건물 안에 두 가족을 위한 맞물리는 집 두 채를 완성했습니다.",
+        "Plana House는 컴팩트 목조 주택을 위한 무료 다운로드 설계라는 글이 Dezeen에 처음 게재되었습니다."
+      ]
     },
     {
       "id": "hackaday:28926b5a56",
@@ -611,7 +872,7 @@
       "originalUrl": "https://hackaday.com/2026/09/05/can-ai-now-design-pcbs-that-just-work",
       "author": "Maya Posch",
       "publishedAt": "2026-09-06T02:00:46.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Artificial Intelligence",
@@ -888,7 +1149,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/05/combat-boots-accessories-footwear-projects-hame-university-of-applied-sciences-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-05T18:00:34.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -958,60 +1219,6 @@
         "학생: Mailis Purho 과정: 프로토타이핑 및 패션 기법 이메일: mailis.purho[at]gmail.com",
         "이 학교 공연은 Dezeen과 Häme 응용과학대학교의 파트너십입니다. Dezeen 파트너십 콘텐츠에 대해 더 알아보세요.",
         "Häme 응용과학대학교의 신발 프로젝트 중 모듈러 전투화라는 글이 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "hackaday:68aa6f555b",
-      "slug": "voicebox-fx-is-a-blueprint-for-circuitpython-i2s-68aa6f",
-      "titleOriginal": "Voicebox FX is a Blueprint for CircuitPython I2S Audio",
-      "summaryOriginal": "[Adafruit]’s Voicebox FX gadget is a fun, well-documented project that serves another useful purpose: being a fantastic reference design for audio on CircuitPython, with I2S audio components. Be sure to …read more",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "[Adafruit]’s Voicebox FX gadget is a fun, well-documented project that serves another useful purpose: being a fantastic reference design for audio on CircuitPython, with I 2 S audio components. Be sure to check it out if you have a project that involves any of that and could use a few pointers, or if you just want to jog a few ideas loose."
-        },
-        {
-          "kind": "text",
-          "text": "I 2 S (Inter-IC Sound) is a protocol aimed squarely at moving audio data between components as digital signals. Our own [Jenny List] can tell you everything you need to know about I 2 S. It’s a relatively simple interface that is not at all fussy about actually being used for audio, and that has led to it being put to some unusual uses."
-        },
-        {
-          "kind": "text",
-          "text": "The Voicebox FX uses an I 2 S microphone, an I 2 S amplifier, and an RP2350 microcontroller to record and play sound as well as offer a variety of effects controlled by physical inputs. It’s all wrapped up in a slick 3D printed case, and while it’s a fantastic reference design, it looks like a fun toy in its own right."
-        }
-      ],
-      "sourceName": "Hackaday",
-      "sourceUrl": "https://hackaday.com/",
-      "originalUrl": "https://hackaday.com/2026/09/05/voicebox-fx-is-a-blueprint-for-circuitpython-i2s-audio",
-      "author": "Donald Papp",
-      "publishedAt": "2026-09-05T17:00:28.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
-      "language": "en",
-      "keywords": [
-        "Microcontrollers",
-        "Portable Audio Hacks",
-        "3d printed",
-        "audio",
-        "CircuitPython",
-        "diy",
-        "I2S",
-        "rp2350"
-      ],
-      "image": {
-        "url": "https://hackaday.com/wp-content/uploads/2026/09/Voicebox-FX-Demo-0-35-screenshot-banner.png"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "Voicebox FX는 CircuitPython I2S 오디오용 청사진입니다",
-      "summaryKo": "[Adafruit]의 Voicebox FX 장치는 재미있고 잘 문서화된 프로젝트로, CircuitPython에서 I2S 오디오 컴포넌트를 사용하는 훌륭한 레퍼런스 디자인이라는 유용한 목적을 수행합니다. 꼭 ... 더 읽기",
-      "bodyKo": [
-        "[Adafruit]의 Voicebox FX 장치는 재미있고 잘 문서화된 프로젝트로, CircuitPython에서 I 2 S 오디오 컴포넌트를 사용하는 훌륭한 레퍼런스 디자인이라는 유용한 목적을 가지고 있습니다. 만약 이와 관련된 프로젝트가 있다면 팁이 필요하거나, 단순히 아이디어를 떠올리고 싶다면 꼭 확인해 보세요.",
-        "I 2 S(Inter-IC Sound)는 오디오 데이터를 구성 요소 간 디지털 신호로 이동시키는 데 초점을 맞춘 프로토콜입니다. 저희 [Jenny List]가 I 2 S에 대해 알아야 할 모든 것을 알려줄 수 있습니다. 이 인터페이스는 비교적 단순하며 실제로 오디오에 사용되는지에 대해 전혀 신경 쓰지 않으며, 그래서 독특한 용도로 활용되기도 했습니다.",
-        "보이스박스 FX는 I 2 S 마이크, I 2 S 앰프, RP2350 마이크로컨트롤러를 사용해 소리를 녹음하고 재생하며, 물리적 입력으로 제어하는 다양한 이펙트를 제공합니다. 모든 것이 세련된 3D 프린팅 케이스에 감싸져 있으며, 훌륭한 레퍼런스 디자인이면서도 그 자체로 재미있는 장난감처럼 보입니다."
       ]
     },
     {
@@ -1135,7 +1342,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/05/anti-ai-designs-roundup",
       "author": "Amy Peacock",
       "publishedAt": "2026-09-05T09:00:01.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1260,7 +1467,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/05/dyson-first-electric-toothbrush-this-week",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-05T05:00:27.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1465,7 +1672,7 @@
       "originalUrl": "https://toybook.com/designer-artist-feature",
       "author": "Ashley Pelletier",
       "publishedAt": "2026-09-05T02:00:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -1611,7 +1818,7 @@
       "originalUrl": "https://toybook.com/five-below-says-its-americas-greatest-little-toy-store-strategy-is-taking-shape",
       "author": "James Zahn",
       "publishedAt": "2026-09-05T00:02:48.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Financial",
@@ -1758,16 +1965,16 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/surrane-design-hommali-west-village-new-york",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-09-04T17:00:46.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
         "Interiors",
         "Exclusives",
-        "New York City",
-        "West Village",
         "USA",
-        "Restaurants"
+        "Restaurants",
+        "New York City",
+        "West Village"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/hommali-new-york-city-surrane-design_dezeen_2364_sqex-411x411.jpg"
@@ -1839,7 +2046,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/how-blackwing-pencils-are-made-video",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-04T16:30:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Design",
@@ -1936,7 +2143,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/imagina-floral-tiles-casalgrande-padana-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-04T13:00:13.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2093,7 +2300,7 @@
       "originalUrl": "https://toybook.com/unboxing-the-magic-behind-a-decade-of-lol-surprise",
       "author": "Nicole Savas",
       "publishedAt": "2026-09-04T13:00:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Backstory",
@@ -2190,7 +2397,7 @@
       "originalUrl": "https://toybook.com/sesame-street-grover-launch",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-04T13:00:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -2258,7 +2465,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/offspring-of-centenarians-exhibit-reduced-mortality-and-risk-of-age-related-disease",
       "author": "Reason",
       "publishedAt": "2026-09-04T10:03:40.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -2410,17 +2617,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/masa-cafe-studio-cadena-medellin-wooden-columns",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-04T10:00:35.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
         "Interiors",
         "Exclusives",
-        "Studio Cadena",
-        "Medellín",
         "Wood",
         "Cafes",
-        "Colombia"
+        "Colombia",
+        "Studio Cadena",
+        "Medellín"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_sq-new-411x411.jpg"
@@ -2596,7 +2803,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/mo6-carbon-storing-material-elementic",
       "author": "Nat Barker",
       "publishedAt": "2026-09-04T09:30:19.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2776,7 +2983,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/dyson-toothbrush-camerajet-interview",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-04T09:00:22.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2922,7 +3129,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/fitbit-luffu-link-ai-powered-wristband-health-family",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-04T08:00:45.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3079,7 +3286,7 @@
       "originalUrl": "https://toybook.com/the-toy-book-august-2026-power-rankings",
       "author": "James Zahn",
       "publishedAt": "2026-09-04T05:08:42.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "News",
@@ -3229,7 +3436,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/ryno-london-rooftop-terrace-integrated-terracing-system",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-04T04:00:44.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3272,7 +3479,7 @@
       "id": "lifespan-io:d176156141",
       "slug": "the-last-generation-to-die-interview-with-tim-d17615",
       "titleOriginal": "The Last Generation to Die: Interview With Tim Maupin",
-      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation technologies arrive and who gets left behind. The project has now […]",
+      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -3392,7 +3599,7 @@
       "originalUrl": "https://lifespan.io/the-last-generation-to-die-interview-with-tim-maupin",
       "author": "Steve Hill",
       "publishedAt": "2026-09-03T20:00:48.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Advocacy",
@@ -3403,13 +3610,45 @@
       "image": {
         "url": "https://lifespan.io/wp-content/uploads/2026/09/Last-Generation-to-Die-262x187.png"
       },
-      "translationStatus": "failed",
+      "translationStatus": "done",
       "contentPolicy": "full",
       "category": "culture",
       "trustLevel": 4,
       "careScore": 0,
       "curiosityScore": 0.7,
-      "contentType": "research"
+      "contentType": "research",
+      "titleKo": "마지막 세대가 죽음: 팀 모핀과의 인터뷰",
+      "summaryKo": "영화감독 팀 모핀은 수년간 《라스트 제너레이션 투 다이》를 개발해 왔는데, 이 영화는 근미래 배경에서 [...]",
+      "bodyKo": [
+        "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해 왔습니다. 이 프로젝트는 현재 인류 미래에 대한 낙관적인 비전을 모색하는 글로벌 대회인 미래 비전 XP라이즈의 상위 65위에 진입했습니다. 우리는 그와 이야기의 개인적 이해관계, 긍정적인 미래 이야기를 만드는 도전, 그리고 영화의 중심 딜레마가 점점 더 긴급하게 느껴지는 이유에 대해 이야기를 나누었습니다.",
+        "함께해 주셔서 감사합니다, 팀. 흥미로운 소식은 당신의 영화 중 하나가 미래 비전 XPrize에 후보로 올랐다는 것입니다. 대회의 과제는 인류의 낙관적이고 풍요로운 미래를 묘사한 3분 분량의 SF 예고편을 만드는 것입니다. 대상은 자신의 비전을 장편 영화로 만드는 데 260만 달러+를 받으며, 준우승자에게는 100만 달러 이상의 상금이 주어집니다. 팀, 그 부분에 대해 조금 이야기해 주실 수 있나요? 네, 이 영화는 제가 꽤 오랫동안 작업해온 롱제비티에 초점을 맞춘 영화 '라스트 제너레이션 투 다이'입니다. X 프라이즈 미래 비전 콘테스트에서 2500개 이상의 출품작 중 상위 65위 안에 들었는데, 정말 흥미로운 소식입니다.",
+        "좋네요, 몇 년 전에 예고편을 봤을 때 정말 흥미로운 아이디어라고 생각했는데, 후보에 오른 걸 보니 정말 기쁩니다. 상위 65편에 들었다는 건 정말 대단한 성과입니다. 그럼 다음에는 어떻게 될까요? 다음 단계는 상위 10개를 선정하는 것이고, 그 다음 상위 5개로 내려갑니다. 상위 5개는 문샷 이벤트에 참가하는데, 이건 꽤 큰 의미가 있죠. 심사위원은 닐 드그래스 타이슨, 미라 레인, 닐 스티븐슨, 그리고 로드 로덴베리입니다. 그래서 이 프로젝트에는 중요한 이름들이 많이 참여합니다. 그 후 라이브로 피치하고, 예고편을 상영하며, 그날 밤 현장에서 실제로 우승자를 선정합니다.",
+        "정말 중요한 행사니까 행운을 빌고, 앞으로 어떻게 될지 지켜봐야겠어요. 상위 10명도 초대받을 거라 상위 10명 안에 들면 정말 좋을 것 같아요.",
+        "좋아요, 그럼 영화 자체에 대해 좀 더 이야기해 주실 수 있나요? 몇 년 전에 단편 영화로 만들어서 몇몇 영화제에서 상영했어요. 항상 장편 영화로 상상했지만, 2019년에 아버지가 돌아가신 후에 다시 그 과정에 다시 뛰어들었어요. 그때 다시 대본으로 돌아갔고, 어떤 면에서는 이전과는 다르게 작품을 직접 경험하게 되어 훨씬 더 쓸 수 있게 되었어요. 그 후로 훨씬 더 현실감 있게 다가왔고, 지금도 그렇습니다. 어머니도 나이가 들어가고 계시고, 그 모습을 직접 느끼고 있어서 매우 개인적이고 진짜 같은 영화입니다.",
+        "이야기는 가까운 미래를 배경으로 하며, 릴리라는 여성 과학자가 노화를 늦추고 심지어 되돌릴 새로운 기술의 최전선에 서 있습니다. 그녀의 아버지 올리버는 심각한 심장 문제를 가지고 있었고, 그녀는 그를 이 기술로 재판에 참여시켜 마지막 수단으로 그를 구할 수 있게 합니다. 그리고 그 방법은 정말 효과가 있어요, 정말 잘 작동해서, 그는 실제로 젊어지기 시작하고 동시에 훨씬 건강해집니다.",
+        "영화 도중 릴리의 어머니는 희귀 신경퇴행성 질환에 걸립니다. 하지만 그녀는 임상시험의 포함 기준에 부합하지 않고, 의료진은 그녀에게 기술을 시도하는 것을 두려워해 어머니의 건강이 악화되고, 아버지의 나이가 역전되어 건강이 오히려 호전됩니다.",
+        "그래서 영화가 진행될수록 그녀의 부모님 사이에 흥미로운 역학 관계가 나타납니다. 롱제비티 관점에서, 현재의 노화 방식과 새로운 재생 기술이 도입되면 어떤 일이 일어날지 생각해보는 훌륭한 사고 실험이라고 생각합니다. 사건이 전개될 때 사람들의 마음을 아주 직접적으로 울려 퍼지길 바랍니다.",
+        "그리고 회사 내 일부 사람들이 이 기술로 이익을 극대화하려 한다는 추가 플롯이 있는데, 그녀도 그것에 맞서 싸우고 있어요. 결국 이 영화는 씁쓸하면서도 달콤한 작품이라고 할 수 있어요. 한편으로는 매우 긍정적이면서도 또 다른 면에서는 매우 현실적이고 미묘한 면이 있죠.",
+        "제 관점에서는, 이 두 세계의 간극을 배경으로 영화를 설정하면 이런 상황이 일어날 수밖에 없다고 생각합니다. 어떤 사람들은 안타깝게도 살아남지 못하고, 어떤 사람들은 나이 되돌리는 기술을 얻게 될 것입니다. 그 지점을 설정하는 것이 정말 좋다고 생각합니다. 왜냐하면 그 관점에서 본질적으로 갈등이 있고, 두 가지 역학이 한 지점에서 동시에 볼 수 있기 때문입니다.",
+        "그게 바로 이 영화의 주제입니다. 이 영화가 이 기술을 더 빨리 도입하고 지원하려는 사람들을 격려하길 바랍니다.",
+        "좋은 시놉시스네요. 원작 예고편을 봤는데, 항상 흥미로운 아이디어라고 생각했어요. 이 단계에 도달해 정말 기쁘고, 당연히 이 영화가 상위 5위 안에 들길 바라고 있어요. 왜냐하면 매우 중요한 가까운 미래 가능성을 탐구하고 있기 때문이죠. 임상시험에 참여할 자격이 되는 부모와 그렇지 않은 부모 사이의 영화 내 역학 관계가 특히 시의적절하게 느껴집니다. 최초의 생의학 수리 치료가 이제 인간 임상시험에 들어가면서, 접근성과 다중 질환 접근법을 어떻게 규제해야 하는지에 대한 질문이 이론적인 문제가 아니라 현실이 되고 있습니다. 그럼 이 영화가 처음 어떻게 시작되었는지 이야기해 봅시다. 이 영화가 시작될 당시 우리 단체인 Lifespan.io 에서 시작된 것으로 알고 있습니다. 그게 어떻게 시작되었고, 영화 제작에 어떻게 도움이 되었는지 조금 말씀해 주실 수 있나요? 네, 물론입니다. 저는 영화에 다시 참여하기 시작한 시기와 거의 동시에 Lifespan.io 에서 일하기 시작했는데, 같은 목표를 가진 사람들이 주변에 있었고 실제 연구 보도를 보는 것이 영화에 큰 도움이 되었기 때문에 정말 좋은 타이밍이었습니다. 그래서 당시 Lifespan.io 에 참여한 것은 영화에 유익했을 뿐만 아니라 개인적으로도 활력을 불어넣었습니다.",
+        "게다가 Lifespan.io 의 키스 코미토와 올리버 메드베딕도 영화의 자문 역할을 했습니다. Lifespan.io 초기 시절 재정 후원자로서 영화 제작을 도왔습니다.",
+        "영화를 계속 진행하고 지금의 모습으로 이끌 수 있도록 하는 것에 대해 이야기하자면, 구체적으로는 해파리와의 연결고리에 대해 이야기해 보겠습니다. 해파리에 대해 조금 이야기해 주시고, 그것이 영화를 지금의 위치에 올리는 데 어떻게 도움이 되었는지 말씀해 주실 수 있나요? 젤리피시는 어떤 면에서는 라이프스팬과 관련된 단체이며, 키스 코미토도 포함되어 있습니다. 그 아이디어는 롱제비티 관련 영화와 미디어에 집중하는 영화 제작자와 예술가 커뮤니티를 구축하는 것이었습니다. 긍정적인 미래의 측면을 보여주는 영화들입니다. 지난 몇 년간의 목표는 그 커뮤니티를 지원하고 이 프로젝트들을 지원하는 방법을 찾는 것이었습니다. 특히 독립 영화에 대한 자금 조달은 항상 도전적이기 때문에, 젤리피시 DAO는 암호화폐 모델로 시작되었습니다.",
+        "하지만 우리는 암호화폐 자금 조달을 넘어 독특하고 혁신적인 자금 조달 모델을 모색 중이며, 롱제비티 관련 영화를 성장시키고 지원할 수 있는 모델을 찾고 있습니다. 또한 분산형 과학이 공공 자금으로는 지원하지 못할 일을 할 수 있는 좋은 시험 사례이기도 합니다.",
+        "상의 개념에 대해 좀 더 넓게 말하자면, 경쟁 작품들은 모두 미래 긍정적 초점을 가진 것 같아요. 이는 많은 미래를 배경으로 한 영화들이 주로 디스토피아 스토리라인을 가진 것과 정반대입니다. 이에 대해 어떻게 생각하시나요? 디스토피아와 긍정적인 스토리텔링은 항상 흥미로운 주제이며, 디스토피아 이야기에도 나름의 자리가 있다는 데 동의합니다. 일종의 시뮬레이션이라 할 수 있죠, 상황이 어떻게 흘러갈 수 있을지 상상하는 데 좋다고 생각합니다.",
+        "하지만 저는 이 대회의 전제에는 강하게 동의합니다. 우리는 디스토피아적 이야기가 많고, 어쩌면 너무 많다고 할 수 있습니다. 이제는 반대 방향으로 균형을 맞춰야 할 때라고 생각합니다. 어떤 사람들은 지금 우리가 다소 어두운 시기에 살고 있다고 주장할 수도 있고, 저는 그에 맞서 긍정적인 비전을 투영해야 한다고 생각합니다. 또한 영화와 문화가 미래에 일어나는 방식을 어느 정도 형성한다는 점도 분명합니다.",
+        "그래서 긍정적인 이미지를 계속 내보함으로써 우리는 더 나은 미래를 향해 나아가고 있다고 생각해요. 비록 단순한 영화처럼 보일지라도, 저는 이 작품이 사람들의 심리를 스쳐 실제로 변화를 준다고 믿어요. 솔직히 이 콘테스트를 개최한 것에 정말 감사해요. 왜냐하면 이게 꼭 필요한 균형 잡기 역할을 한다고 생각하거든요.",
+        "하지만 앞으로 긍정적인 영화를 만드는 것은 쉽지 않다는 것을 인정합니다. 디스토피아 영화는 명확한 악당과 더 명확한 갈등이 있기 때문에 쓰고 만들기 쉽습니다. 갈등이 있고, 사람들을 사로잡으면서도 궁극적으로 긍정적인 결말로 끝나는 무언가를 만드는 것은 도전입니다. 콘테스트에 참가한 다른 창작자들이 그것을 찾으려 노력하는 모습을 보는 것도 정말 흥미로웠습니다.",
+        "저는 분명히 이것이 가치 있는 도전이며 추진할 가치가 있다고 생각합니다. 미래에 긍정적인 프레이밍을 갖는 것도 생의학 수리 분야에도 중요합니다. 이 분야는 과대평가하고 기대에 미치지 못하는 경향이 있어 이미지가 다소 훼손되었습니다. 이 분야가 실제로 무엇을 하고 있는지, 즉 우리가 노화하고 병에 걸리는 근본적인 원인을 치료하는 것에 대해 많은 잘못된 정보, 과장, 그리고 오해가 있습니다. 이런 영화들이 그런 이미지를 개선하는 데 도움이 될 수 있다고 생각하시나요? 저는 그렇다고 생각합니다. 제 영화는 불멸처럼 거창하지는 않은 꽤 미묘한 접근법을 취하고 있다고 생각합니다. 이 분야에서 흔히 간과되는 부분들을 좀 더 현실적으로 바라보고 있습니다. 노화를 목표로 한다면 동시에 여러 질병과 싸우는 것이라는 점에서 매우 타당한 개념들입니다. 이런 영화는 단순히 설교적인 정보를 주는 것이 아니라, 이야기 전개로 그 점을 이해할 수 있게 전달할 수 있습니다.",
+        "그래서 네, 저도 동의합니다. 그리고 이 기술을 억만장자만이 가질 것이라는 우려 같은 다른 이야기들도 있는데, 이것이 잠재적 위험으로 생각하지 않는다는 뜻은 아니지만, 동시에 이것이 모두를 위한 것이어야 한다는 반대 의견을 추진하고 있으며, 우리가 그렇게 만들기로 결정한다면 실제로 가능하다는 생각을 밀어붙이고 있습니다. 그래서 저는 긍정적인 방향으로 나아가려는 비전이 중요하다고 생각합니다, 특히 영화 형식에서는 더욱 그렇습니다.",
+        "만약 영화가 상위 5위 안에 들면 어떤 영향력을 가질 수 있다고 생각하나요? 좋은 질문이에요! 그 지점에 오르면, 제가 들은 바로는 상위 5위 안에 들면 더 많은 노출을 얻을 수 있다고 하더군요. 무대에 서서 Range Media Partners 등 여러 회사가 바로 그 자리에 있기 때문이죠. 그래서 훨씬 더 많은 관심을 받고 잠재적으로 자금도 받을 가능성이 높다고 생각합니다.",
+        "또 한 가지 언급할 점은 놀라운 출연진이 있다는 것입니다. 에드 해리스, 릴리 라베, 마무두 아티가 합류했습니다. 독립 영화로서는 정말 대단한 성과이며, 훌륭한 배우들이 관심을 갖게 된 것은 큰 성과이며, 그들이 그 속도를 높일 수도 있다고 생각합니다.",
+        "이상적으로는, 우리가 상위 5위 안에 들면 양산에 훨씬 더 가까워질 수 있을 거예요. 이상적인 생산 창은 내년 봄이나 여름이 될 거예요. 그래서 콘테스트에서 상위 5위 안에 드는 것이 분명히 그 속도를 높이는 데 도움이 될 거예요.",
+        "와, 몇 년 전에 본 원래 예고편보다 훨씬 업그레이드된 것 같네요. 공모전 버전은 어디서 볼 수 있나요? 사람들은 FutureVision XPrize에서 The Last Generation to Die 공모전 영상을 볼 수 있고, 이 영상과 대회에 참가한 다른 영화들에 투표할 수도 있습니다. 그들은 단순한 소셜 미디어 기반 대회가 아닌 꽤 멋진 투표 플랫폼을 가지고 있습니다. 두 개의 예고편을 주고, 한 장에 투표해서 순환하는 방식입니다. 이런 것들에서 보통 보는 것보다 조금 더 멋지니까, 꼭 가서 투표해 보시길 권합니다.",
+        "젤리피시에는 '센티'라는 또 다른 영화가 있습니다. 모두가 그곳의 영화를 꼭 보시고 이 상을 응원해 보시길 권합니다. 우리는 더 많은 영화가 필요하다고 생각하고, 앞으로도 계속 그렇게 할 것 같습니다.",
+        "정말 좋네요. 정확히 언제 최종 후보가 발표될지 알고 있나요? 다음 주쯤이면 톱 10이 발표될 것 같아요, 아주 빨리요. 그리고 그 다음 주에 톱 다섯 명이 나올 수도 있어요. 그래서 앞으로 2주 안에 아마 톱 5가 발표될 거예요.",
+        "오늘 시간 내어 인터뷰해 주셔서 감사합니다, 팀, 그리고 당신의 영화에 행운이 함께하길 바랍니다. 《마지막 세대 투 다이》가 분명히 보여주듯, 인간 임상시험에서 최초의 생의학 수리 치료법이 도입되면서 접근성과 형평성에 관한 문제가 뚜렷하게 떠오릅니다. 이러한 기술들이 사회 전반에 이익이 되도록 보장하는 것은 단순한 도덕적 문제가 아니라 경제적 문제이며, 우리는 최근 백서 '왜 민주화하는 젊음이 경제적 필연인가'에서 더 자세히 탐구했습니다. 작은 부탁을 드리고 싶습니다. 우리는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻입니다. 크든 작든 모든 기부는 독립적이고 윤리적인 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 기부❤️하겠습니다"
+      ]
     },
     {
       "id": "toy-book:68cceab2ea",
@@ -3455,7 +3694,7 @@
       "originalUrl": "https://toybook.com/build-a-bear-national-teddy-bear-day-news",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-03T19:39:19.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Cute, Cuddly, & Collectible",
@@ -3618,16 +3857,16 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/justin-blinder-citibike-ground-truth-new-york-city-housing",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-09-03T18:35:53.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
         "Technology",
+        "USA",
         "Housing",
         "New York City",
         "Electric bikes",
-        "Bike sharing",
-        "USA"
+        "Bike sharing"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/ground-truth-citibike-justin-blinder_dezeen_2364_sq-1-411x411.jpg"
@@ -3707,7 +3946,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/senescent-microglia-secrete-dlk1-which-causes-dysfunction-in-the-aging-brain",
       "author": "Reason",
       "publishedAt": "2026-09-03T18:16:33.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -3821,7 +4060,7 @@
       "originalUrl": "https://toybook.com/tb-september-2026-compliance",
       "author": "Guest Author",
       "publishedAt": "2026-09-03T18:00:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Compliance & Regulations",
@@ -4052,7 +4291,7 @@
       "originalUrl": "https://toybook.com/goliath-sanrio-suite-spaces-line-launch",
       "author": "Samantha Connell",
       "publishedAt": "2026-09-03T17:05:13.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "News",
@@ -4268,7 +4507,7 @@
       "originalUrl": "https://toybook.com/stern-pinball-fallout-hands-on",
       "author": "James Zahn",
       "publishedAt": "2026-09-03T17:02:49.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -4515,7 +4754,7 @@
       "originalUrl": "https://toybook.com/emotional-support-nfl-footballs-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-03T16:59:51.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -4631,7 +4870,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/imagina-abstract-tiles-casalgrande-padana-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T13:00:22.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -4697,7 +4936,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/genome-sequencing-of-bat-species-in-search-of-causes-of-longevity",
       "author": "Reason",
       "publishedAt": "2026-09-03T10:22:31.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -4981,7 +5220,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/london-design-festival-2026-highlights",
       "author": "Gabriella Wong",
       "publishedAt": "2026-09-03T10:15:08.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5148,7 +5387,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/emeco-sues-zara-home-20-06-chair-norman-foster",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-03T09:45:43.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -5268,7 +5507,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/strut-table-pouf-yagmur-koylu-yet-design-studio-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-03T09:30:31.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -5406,7 +5645,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/poor-collectives-debut-rug-collection-borrows-shapes-from-londons-trellick-tower",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-03T08:00:51.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5622,14 +5861,14 @@
       "originalUrl": "https://www.dezeen.com/2026/09/03/bin-wu-design-language-timeless-east",
       "author": "Christina Yao",
       "publishedAt": "2026-09-03T05:00:16.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "all",
         "Interiors",
-        "China",
         "Books",
-        "Roundups"
+        "Roundups",
+        "China"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/bin-wu-book-the-design-language-of-timeless-east_dezeen_2364_col_sq-411x411.jpg"
@@ -5678,181 +5917,6 @@
       ]
     },
     {
-      "id": "dezeen:cef0e609e5",
-      "slug": "studios-turning-to-ai-floor-plan-generator-laiout-cef0e6",
-      "titleOriginal": "Studios turning to AI floor plan generator laiout to speed up design process",
-      "summaryOriginal": "Promotion: global commercial design studios, including JLL Design, are using AI floor plan generator laiout to \"evaluate more layout options earlier\". laiout launched in 2021 to change how commercial space is planned by improving the early stages of the design process. The generator is described as a \"complete, end-to-end office space planning platform\", differentiating it The post Studios turning",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Promotion: global commercial design studios, including JLL Design, are using AI floor plan generator laiout to \"evaluate more layout options earlier\"."
-        },
-        {
-          "kind": "text",
-          "text": "laiout launched in 2021 to change how commercial space is planned by improving the early stages of the design process. The generator is described as a \"complete, end-to-end office space planning platform\", differentiating it from a rendering tool, BIM integration or single-purpose test-fit generator."
-        },
-        {
-          "kind": "text",
-          "text": "According to the company, by switching to laiout, work that once took days across multiple disconnected tools can now be completed in a single automated workflow."
-        },
-        {
-          "kind": "text",
-          "text": "The AI software is now used to generate more than five million square metres of commercial space each month, including in JLL Design 's 65 global studios, where laiout was recently adopted."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/Laiout_dezeen_2364_col_3.jpg",
-          "alt": "laiout screenshot"
-        },
-        {
-          "kind": "text",
-          "text": "By using laiout, designers can adjust their design and see key metrics update live. Image courtesy of laiout \"As a designer myself, I know how much creativity gets lost to mundane, repetitive processes,\" said Cristiano Coretti, chief product officer at laiout. \"Automating that work doesn't reduce design – it gives designers more room to do what only they can do.\""
-        },
-        {
-          "kind": "text",
-          "text": "The company explained that laiout generates the first draft, with designers shaping the final space in minutes afterwards."
-        },
-        {
-          "kind": "text",
-          "text": "Here, division of labour \"is not a compromise – it's where design quality and commercial performance meet\"."
-        },
-        {
-          "kind": "text",
-          "text": "\"Our starting point with any new platform is a straightforward question: does this solve a real problem in our design process at the scale we operate?\" said JLL Design global design operations lead Romeu Carpinteiro."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/07/laiout-ai-floor-plan-generator-jll-design_dezeen_2364_col_0.jpg",
-          "alt": "On"
-        },
-        {
-          "kind": "text",
-          "text": "JLL Design delivered On's office. Image courtesy of JLL Design. Photographer: Tomooki Kengaku laiout quickly generates usable office layouts based on real-world, site-specific constraints."
-        },
-        {
-          "kind": "text",
-          "text": "\"Early-stage space planning involves significant constraint-solving work, building codes, capacity calculations, and compliance checks that consume time before creative design decisions can begin,\" explained Carpinteiro."
-        },
-        {
-          "kind": "text",
-          "text": "\"When we evaluated laiout, we were looking for a platform that could handle that systematic work reliably across different markets, freeing our designers to focus on decisions that require human judgment and spatial expertise,\" he added."
-        },
-        {
-          "kind": "text",
-          "text": "According to laiout, dramatically reducing the time it takes to create an initial office layout means design teams have more time to amend and iterate the designs to better suit the client's needs."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/07/laiout-ai-floor-plan-generator-jll-design_dezeen_2364_col_2.jpg",
-          "alt": "Zurich’s Milan office"
-        },
-        {
-          "kind": "text",
-          "text": "JLL Design also completed Zurich's Milan office. Image courtesy of JLL Design. Photographer: Davide Galli At JLL Design, the studio explained they have experienced a marked shift in how design teams spend their time."
-        },
-        {
-          "kind": "text",
-          "text": "\"The measurable change with laiout is in how our teams allocate their time,\" explained Carpinteiro. \"We can now evaluate more layout options earlier in the design process, respond to competitive briefs faster, and redirect designer hours toward refinement and client engagement rather than production of initial options.\""
-        },
-        {
-          "kind": "text",
-          "text": "JLL Design's studio survey recorded a 50 per cent reduction in test-fit time following adoption of laiout. Following successful pilots that demonstrated consistent performance across multiple markets and building types, JLL Design rolled out laiout across every design studio globally last month."
-        },
-        {
-          "kind": "text",
-          "text": "According to the studio, laiout has also been adopted across multiple departments, including Occupancy Planning."
-        },
-        {
-          "kind": "text",
-          "text": "In practice, that means test fits that once took days can now take as little as a few minutes, up to 40 minutes on average. JLL Design explained that as a result, teams can pursue more opportunities, respond to competitive briefs faster, and are quicker to win deals."
-        },
-        {
-          "kind": "text",
-          "text": "\"We've spent years building our own algorithms to create a platform that has been independently measured to cut production time by up to 93 per cent, depending on project complexity and how far a team is into adoption, \" said laiout CEO Wouter Merkestein."
-        },
-        {
-          "kind": "text",
-          "text": "\"Designers tell us the quick iteration sparks their creativity, while freeing up time for details they previously couldn't get to. Quality goes up as time spent goes down.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/Laiout_dezeen_2364_col_5.jpg",
-          "alt": "laiout screenshot"
-        },
-        {
-          "kind": "text",
-          "text": "Designers can turn any floor plan into a photorealistic render in seconds. Image courtesy of laiout laiout is used in over 46 countries and across every JLL Design studio globally."
-        },
-        {
-          "kind": "text",
-          "text": "According to the company, it has grown organically, market by market, rather than through a single top-down decision."
-        },
-        {
-          "kind": "text",
-          "text": "To learn more about laiout, visit its website ."
-        },
-        {
-          "kind": "text",
-          "text": "This article was written for laiout as part of a partnership. Find out more about Dezeen partnership content here ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Studios turning to AI floor plan generator laiout to speed up design process appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/03/laiout-ai-floor-plan-generator-jll-design",
-      "author": "Dezeen staff",
-      "publishedAt": "2026-09-03T04:00:19.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Design",
-        "Promotions",
-        "Artificial intelligence (AI)"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/09/Laiout_dezeen_2364_col_0-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "디자인 프로세스를 가속화하기 위해 AI 평면도 생성기를 활용하는 스튜디오",
-      "summaryKo": "홍보: JLL 디자인을 포함한 글로벌 상업 디자인 스튜디오들이 AI 평면도 생성기를 활용해 \"더 많은 레이아웃 옵션을 더 일찍 평가\"하고 있습니다. LAIOUT는 2021년에 상업 공간 계획 방식을 바꾸기 위해 출시되었으며, 디자인 프로세스 초기 단계를 개선했습니다. 이 생성기는 \"완전한, 종단 간 사무실 공간 계획 플랫폼\"으로 설명되며, 스튜디오 전환 후",
-      "bodyKo": [
-        "홍보: JLL 디자인을 포함한 글로벌 상업 디자인 스튜디오들이 AI 평면도 생성기를 활용해 \"더 많은 레이아웃 옵션을 더 일찍 평가\"하고 있습니다.",
-        "LAIOUT는 2021년에 상업 공간 계획 방식을 바꾸기 위해 초기 설계 과정을 개선하기 위해 출시되었습니다. 이 생성기는 \"완전하고 종단 간 사무실 공간 계획 플랫폼\"으로 설명되며, 렌더링 도구, BIM 통합 또는 단일 목적 테스트 핏 생성기와는 차별화됩니다.",
-        "회사에 따르면, 레이어로 전환함으로써 여러 개의 분리된 도구를 거쳐 며칠씩 걸리던 작업이 이제는 하나의 자동화된 워크플로우로 완료될 수 있게 되었습니다.",
-        "이 AI 소프트웨어는 현재 매달 500만 평방미터 이상의 상업 공간을 생성하는 데 사용되고 있으며, 최근 laiout가 도입된 JLL 디자인의 65개 글로벌 스튜디오에서도 활용되고 있습니다.",
-        "laiout를 사용하면 디자이너들은 디자인을 조정하고 주요 지표가 실시간으로 업데이트되는 것을 볼 수 있습니다. 이미지 제공: laiout \"저도 디자이너로서, 반복적이고 일상적인 프로세스에 얼마나 많은 창의성이 사라지는지 압니다,\"라고 laiout의 최고 제품 책임자 크리스티아노 코레티가 말했습니다. \"그 작업을 자동화한다고 해서 디자인이 줄어드는 것이 아니라 오히려 디자이너들이 자신만이 할 수 있는 일을 할 수 있는 공간이 더 많이 생깁니다.\"",
-        "회사는 레이아웃이 첫 초안을 생성하고, 디자이너들이 몇 분 후에 최종 공간을 형성한다고 설명했습니다.",
-        "여기서 노동 분업은 \"타협이 아니라 디자인 품질과 상업적 성능이 만나는 지점\"입니다.",
-        "\"새로운 플랫폼에서 출발점은 명확합니다: 우리가 운영하는 규모의 설계 과정에서 실제로 문제를 해결할 수 있는가?\"라고 JLL 디자인 글로벌 디자인 운영 책임자 로메우 카르핀테이로가 말했습니다.",
-        "JLL 디자인이 온의 사무실을 제공했습니다. 이미지 제공: JLL 디자인 사진작가: 토무키 켄가쿠는 실제 세계의 장소별 제약 조건을 바탕으로 사용 가능한 사무실 레이아웃을 빠르게 생성합니다.",
-        "\"초기 단계 공간 계획은 상당한 제약 해소 작업, 건축법, 수용 능력 계산, 준수 점검을 포함하며, 창의적인 설계 결정을 시작하기 전에 시간이 소요된다\"고 카르핀테이로는 설명했다.",
-        "\"우리가 laiout를 평가할 때, 우리는 다양한 시장에서 체계적인 작업을 신뢰성 있게 처리할 수 있는 플랫폼을 찾고 있었으며, 이를 통해 디자이너들이 인간의 판단과 공간적 전문성이 필요한 결정에 집중할 수 있도록 해방시켰습니다,\"라고 그는 덧붙였습니다.",
-        "laiout에 따르면, 초기 사무실 레이아웃 제작에 걸리는 시간을 획기적으로 줄이면 디자인 팀이 고객의 요구에 더 잘 맞게 디자인을 수정하고 반복할 시간이 더 많아집니다.",
-        "JLL 디자인은 취리히 밀라노 사무실도 완성했습니다. 이미지 제공: JLL 디자인 사진작가: 다비데 갈리 JLL 디자인의 스튜디오는 디자인 팀이 시간을 보내는 방식에 뚜렷한 변화가 있었다고 설명했습니다.",
-        "\"레이어트의 측정 가능한 변화는 우리 팀이 시간을 어떻게 배분하는지에 있습니다,\"라고 카르핀테이로는 설명했습니다. \"이제 디자인 과정 초기에 더 많은 레이아웃 옵션을 평가하고, 경쟁 브리프에 더 빠르게 대응하며, 디자이너 시간을 초기 옵션 생산보다는 다듬음과 고객 참여에 집중할 수 있습니다.\"",
-        "JLL 디자인의 스튜디오 설문조사에서는 라이아웃 도입 후 테스트 적합 시간이 50% 감소한 것으로 나타났습니다. 여러 시장과 건물 유형에서 일관된 성능을 입증한 성공적인 시범 사업 이후, JLL 디자인은 지난달 전 세계 모든 디자인 스튜디오에 라이아웃을 도입했습니다.",
-        "스튜디오에 따르면, laiout는 점유 계획 등 여러 부서에서도 채택되었습니다.",
-        "실제로는 며칠이 걸리던 테스트 핏이 이제는 몇 분, 평균적으로 최대 40분까지 걸릴 수 있게 되었습니다. JLL 디자인은 그 결과 팀들이 더 많은 기회를 추구하고, 경쟁 브리프에 더 빠르게 대응하며, 더 빠르게 계약을 따낼 수 있다고 설명했습니다.",
-        "\"우리는 프로젝트 복잡성과 팀의 채택 진행 상황에 따라 최대 93%까지 생산 시간을 단축할 수 있는 플랫폼을 독립적으로 측정하기 위해 수년간 자체 알고리즘을 구축해왔다,\"고 라우트 CEO Wouter Merkestein은 말했다.",
-        "\"디자이너들은 빠른 반복이 창의력을 자극하고, 이전에는 다룰 수 없었던 세부 사항에 시간을 할애할 수 있다고 말합니다. 시간이 줄어들수록 품질도 올라갑니다.\"",
-        "디자이너들은 어떤 평면도든 몇 초 만에 사진처럼 사실적인 렌더링으로 변환할 수 있습니다. 이미지 제공: laiout laiout는 46개국 이상과 전 세계 모든 JLL 디자인 스튜디오에서 사용되고 있습니다.",
-        "회사에 따르면, 단일 상향식 결정이 아니라 시장별로 유기적으로 성장해왔다고 합니다.",
-        "laiout에 대해 더 알고 싶다면 웹사이트를 방문해 주세요.",
-        "이 글은 파트너십의 일환으로 laiout를 위해 작성되었습니다. Dezeen 파트너십 콘텐츠에 대해 더 알아보세요.",
-        "\"스튜디오가 디자인 프로세스를 가속화하기 위해 AI 평면도 생성기를 도입했다\"는 글은 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
       "id": "fight-aging:3a5e8588c1",
       "slug": "senescent-cells-in-metabolic-disorders-3a5e85",
       "titleOriginal": "Senescent Cells in Metabolic Disorders",
@@ -5888,7 +5952,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/senescent-cells-in-metabolic-disorders",
       "author": "Reason",
       "publishedAt": "2026-09-02T18:22:53.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -5915,7 +5979,7 @@
       "id": "lifespan-io:8cb78c75c6",
       "slug": "invested-in-her-campaign-extends-fundraising-deadline-8cb78c",
       "titleOriginal": "Invested in Her Campaign Extends Fundraising Deadline",
-      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October 1, 2026, as they work toward a $250,000 […]",
+      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -5959,7 +6023,7 @@
       "originalUrl": "https://lifespan.io/invested-in-her-campaign-extends-fundraising-deadline",
       "author": "Press release",
       "publishedAt": "2026-09-02T17:55:38.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -5976,7 +6040,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "그녀의 캠페인에 투자하다 모금 마감 연장",
-      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인'의 마감일을 2026년 10월 1일로 연장하며, 25만 달러를 목표로 하고 있습니다 [...]",
+      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인' 마감일을 10월로 연장하고 있습니다 [...]",
       "bodyKo": [
         "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인'의 마감일을 2026년 10월 1일로 연장하며, 난소 노화와 폐경에 관한 초기 연구 지원을 위한 25만 달러 모금 목표를 향해 나아가고 있습니다.",
         "수억 명의 여성이 남성보다 더 오래 살지만 건강이 좋지 않은 상태로 더 오랜 시간을 보냅니다. 이 격차를 유발하는 생물학적 원인은 난소 노화와 폐경기 전환에 뿌리를 두고 있으며, 이 분야는 의학에서 가장 자금이 부족한 분야 중 하나입니다. Invested IN Her 프로젝트는 엄마, 딸, 전 세계 여성들을 위해 그 격차를 해소하는 과학 연구를 위해 25만 달러를 모금하고 있습니다.",
@@ -6017,7 +6081,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/an-adiponectin-receptor-agonist-promotes-muscle-growth-in-rats",
       "author": "Reason",
       "publishedAt": "2026-09-02T10:20:03.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -6095,7 +6159,7 @@
       "originalUrl": "https://www.creativeboom.com/news/the-royal-college-of-art-is-bringing-communication-and-design-together-in-one-school-and-thats-big-news",
       "author": "Tom May",
       "publishedAt": "2026-09-02T05:45:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "News"
@@ -6129,7 +6193,7 @@
       "id": "lifespan-io:591dca2c3c",
       "slug": "rejuvenation-roundup-august-2026-591dca",
       "titleOriginal": "Rejuvenation Roundup August 2026",
-      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews […]",
+      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become the CEOs of Their Own Health: Wei-Wu He is […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -6298,7 +6362,7 @@
       "originalUrl": "https://lifespan.io/rejuvenation-roundup-august-2026",
       "author": "Editorial",
       "publishedAt": "2026-09-01T16:52:55.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "News",
@@ -6315,7 +6379,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "리유버네이션 라운드업 2026년 8월",
-      "summaryKo": "노화를 제대로 풀어내는 것은 때로는 개인적인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다. 인터뷰 [...]",
+      "summaryKo": "노화를 제대로 풀어내려면 때로는 개인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다. 인터뷰 웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다: 웨이우 허는 [...]",
       "bodyKo": [
         "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다.",
         "웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다 : 웨이우 허는 과학자와 사업가가 결합된 독특한 인물로, 현재 회사는 정밀 의료를 활용해 사람들의 수명을 연장하는 데 집중하고 있습니다.",
@@ -6564,7 +6628,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/what-gta-6s-trailers-tell-us-about-vice-city-lucia-and-the-biggest-creative-launch-of-the-decade",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-27T12:00:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -6572,19 +6636,64 @@
       "image": {
         "url": "https://media.creativeboom.com/c5a0a901-6fe0-4f7c-93ab-190e3a7c3437/conversions/6cad1e231b0d08cc516e88068de23eccff663de8-medium.webp"
       },
-      "translationStatus": "failed",
+      "translationStatus": "done",
       "contentPolicy": "full",
       "category": "play",
       "trustLevel": 3,
       "careScore": 0,
       "curiosityScore": 0.7,
-      "contentType": "news"
+      "contentType": "news",
+      "titleKo": "GTA 6의 확장 룩이 바이스 시티, 루시아, 그리고 지난 10년간 가장 큰 창작 출시에 대해 우리에게 알려주는 것들",
+      "summaryKo": "GTA 5는 여성으로 플레이할 수 없었기 때문에 일부러 건너뛰었어요. 13년이 지난 지금, 락스타가 마침내 (어느 정도) 그 문제를 해결했어요. 그리고 26분간의 게임 내 영상 후, 저는 이번 주 휴가를 예약할 거예요...",
+      "bodyKo": [
+        "GTA 5는 여성으로 플레이할 수 없었기 때문에 일부러 건너뛰었습니다. 13년이 지난 지금, 락스타가 마침내 (어느 정도) 그 문제를 해결했습니다. 그리고 26분간의 게임 내 영상 후, 저는 일주일 휴가를 예약했습니다.",
+        "고백할 게 있어. 사실 두 가지야. 첫째, 나는 비디오 게임의 열렬한 팬이야. 둘째, GTA 5는 거의 해본 적이 없어.",
+        "저는 80년대 중반 아버지가 ZX 스펙트럼을 집에 가져온 이후로 게이머가 되었습니다. 그 버전은 말랑거리는 키보드가 달린 버전입니다. 일곱 살 때 매닉 마이너와 제트 셋 윌리에게 하루 종일 시간을 잃었죠. 그러다 90년대에 아타리 ST가 등장했고, 건틀릿과 봄 잭이 나왔으며, 제 막다른 골목에서 온 친구들이 컴퓨터 앞에 몇 시간씩 모여 있었습니다. 나중에 플레이스테이션을 들고 대학에 갔는데, 그곳에서 와이프아웃, 스트리트 파이터, 그리고 여러 리즐라가 제 시간을 압도했는데, 저는 공부해야 할 시간이었습니다.",
+        "그래도 괜찮은 배경 이야기가 있는 게임에 주말을 기꺼이 잃을 거예요. 하지만 GTA 5는 세 명의 남자만 플레이할 수 있었고 다른 선택지가 없었어요. 그래서 2014년쯤 컨트롤러를 내려놓고 다시는 그 가상 세계에 들어가지 않았어요. 항의한 건 아니었어요. 그냥 공감할 수가 없었어요.",
+        "이제 루시아 카미노스가 있습니다. 락스타 게임즈 게임의 여성 주인공입니다. 누군가 이 사람들에게 메달을 건네주세요. 많은 열정적인 게이머들처럼 오늘 넷플릭스에서 'Extended Look'을 봤습니다. 26분 분량의 트레일러로, 우리가 본 게임 중 가장 긴 영상을 보여주었습니다. GTA 6는 11월 19일, 목요일에 출시됩니다. 그럼 긴 주말을 기대할 수 있겠네요. 며칠 더 쉴 생각입니다.",
+        "아트와 디자인 관점에서 두 개의 예고편, 박스 아트 공개, 그리고 30분짜리 쇼케이스가 우리에게 무엇을 말해주나요?",
+        "드디어 여성 주인공이 등장했다. 해피 데이즈. 루시아는 시리즈에서 처음으로 엑스트라나 매춘부가 아닌 여성 주인공이다. 그녀는 이야기의 절반이다. 내가 연기할 수 있는 실제 주인공이다. 그리고 나는 그녀와 그녀의 공동 출연자 제이슨 듀발을 거의 언제든지 번갈아 출연할 수 있다. (솔직히 말하면 그녀와 계속 함께할 수 있으면 좋겠다.)",
+        "이 점이 정말 중요합니다. 게임은 지구상에서 가장 큰 엔터테인먼트 산업입니다. 영화와 음악을 합친 것보다 더 큽니다. GTA 5는 전 세계적으로 약 2억 3천만 장이 판매된 역대 최고 수익의 엔터테인먼트 작품입니다. 그리고 항상 시대정신을 반영해 왔습니다.",
+        "물론 그게 항상 좋은 일만은 아니죠. 그런데도 락스타는 그냥 풍자이자 약간의 재미라고 말해요. 그럴 만하죠. 하지만 제가 기억하는 한, 여성들은 스트리퍼, 여자친구 정도만 있었고, 그 외에는 별로 없었어요.",
+        "GTA 6는 다른 모습을 반영합니다. 루시아는 웃음거리도 상품도 아닙니다. 오해하지 마세요. 남성의 시선은 여전히 분명히 존재합니다. 그녀는 아름답습니다. 노출이 심한 옷을 입습니다. 그리고 여성스러운 순간들이 매우 많습니다. 공식 락스타 웹사이트에서 다운로드할 수 있는 배경화면들은 대부분 그녀를 조력자로 보여줍니다. 하지만 아마 제가 너무 깊게 해석하는 걸 수도 있겠네요. 뭐 어쨌든요. 그녀는 범죄 기록이 있고, 성격이 급하며 계획이 있는 캐릭터입니다. 그리고 게임은 그녀의 관계를 감정의 중심으로 다룹니다.",
+        "GTA가 대중문화가 어디에 위치해 있는지를 보여주는 스냅샷이라면, 우리가 어느 정도 진전을 이뤘다는 증거입니다. 그 문장의 아이러니를 이해합니다. 이 게임이 여전히 남성 중심 세계의 폭력에 관한 게임이라는 걸 압니다. 하지만 도난당한 차를 운전하는 데 13년과 10억 달러가 걸렸습니다.",
+        "더 이상 단순한 '예쁜 얼굴'이 아니다. 오늘 공개된 영상에는 깊이 있는 여성 캐릭터가 보여준다. 그녀는 옛날 공포 영화에서 보는 고전적인 바보들처럼 통나무에 걸려 넘어져 결국 죽는 모습이 아니다. 그녀에게는 배경 이야기가 있다. 그녀는 막 감옥에서 나왔고 발목 태그를 착용하고 있다. 그때부터 게임이 시작된다. 총을 들고 싸우는 장면이 나오고, 어느 순간에는 신발의 스파이크 굽으로 공격자를 물리친다.",
+        "또 다른 장면에서는 그녀가 핫핑크 아파트에 서서 옥상 바인 에플루비아에서 칵테일 때 입을 드레스를 고르라고 제이슨에게 묻는다. 가정 내 장면은 락스타가 이 장면을 즐기고 있음을 보여준다. 범죄 게임이 아니라 로맨틱 코미디에서 기대할 법한 요소들을 넣는다.",
+        "캐릭터 디자인으로 직업을 꾸리는 사람이라면 누구나 흥미로울 것이다: 락스타는 4인조 버전을 시도하다가 몇 명으로 정했다고 전해진다. 내가 알기로는 플롯과 영화에 대해 알기로, 이 버전이 가장 잘 맞는다. 두 사람이 있으면 긴장감이 있다. 그들은 과거가 있고, 대화하고, 싸우고, 함께 아파트를 공유한다. 우리 모두가 공감할 수 있는 부분이다.",
+        "그리고 애니메이션도 있죠. 와. 아직도 빛이 캐릭터 얼굴에 비치는 모습이 감탄이 안 돼요. 그리고 머리카락도요! 와, 머리카락이요. 실제처럼 움직이네요. 8비트 그래픽으로 게임 경력을 시작한 소녀에게 정말 놀라운 디테일이에요.",
+        "게임에 대한 소란 예상대로 GTA 6 온라인에 대한 기대감은 압도적으로 남성 중심입니다. 네, 대부분의 설문조사에서 여성은 전체 플레이어의 절반 정도에 해당합니다. 다만 여성들이 이런 게임을 잘 선택하지 않는 경우가 많을 뿐입니다. 여성 주인공이 등장하면서 상황이 바뀔 수도 있습니다.",
+        "지난 2년 동안 우리는 예고편 분석과 유튜브에서 \"우리가 아는 모든 것을 소개한다\"는 영상들을 보았는데, 대부분 남성들로부터 나왔다. 상상할 수 있듯이, 그들은 스트립 클럽에 꽤 흥분하고 있다(의심할 여지 없이 가장 현실적인 가슴을 가진 곳이다). 그리고 무기와 자동차에 대한 집착이 많다. 루시아가 언급될 때는 보니와 클라이드 같은 영화에서 '여자친구'로 등장하는 경우가 많다. 마치 제이슨이 전부이고 그녀가 플러스원인 것처럼 말이다.",
+        "그리고 밈들도 있다. 인스타그램에서는 'GTA 출시 당시 내 아내' 농담을 계속 보여줘요, 보통 TV 앞에 기대어 있는 호머 심슨 사진이 나오죠. 그 중 하나에 \"마지나 리사가 나오는 버전도 보고 싶다\"고 댓글을 남겼는데, 아무런 반응도 없었어요. 또 농담 삼아 병가를 치는 남자들이 많고, '고생 많은 여자'가 문가에서 눈을 굴리는 모습도 많아요. 뭐, 별로 해가 되지 않네요. 하지만 그 모든 장면에서 누가 컨트롤러를 들고 있는지 주목하세요. 우리 집에서도 저예요. 그리고 11월 중순이 되면 소파를 차지하는 사람이 저예요.",
+        "참고로 저는 이 모든 것이 악의적이라고 생각하지 않습니다. 그저 대형 게임을 둘러싼 해설 생태계일 뿐입니다. 특정 청중에 의해, 그리고 특정 청중을 위해 만들어진 것입니다. 단지 자신들이 무엇을 논평하는지에 따라잡지 못했을 뿐입니다.",
+        "안타깝게도 게임에는 어두운 면도 있습니다. 2014년 게이머게이트에서는 게임을 만들거나 글을 쓰거나 단순히 비판한 여성들이 인터넷에서 괴롭힘을 당했습니다. 그들은 믿을 수 없을 만큼 악랄한 협박을 받았고, 뉴욕 타임스의 헤드라인을 장식하고 유엔에서도 논의되었습니다. 10년이 넘는 시간이 지난 지금, 트위치에서 스트리밍하는 여성들은 이 장르를 음울하게 만들어버렸습니다. 저는 남성들로 가득한 로비에서 여성 목소리가 헤드셋을 통해 들려오는 순간 무슨 일이 벌어지는지 계속해서 봅니다. \"주방으로 돌아가라\"는 더 부드러운 모욕입니다... 나머지는 상상할 수 있을 겁니다. 우울하긴 하지만, 그 여성들이 모두를 이겨 세션에서 이길 때는 매우 만족스럽습니다.",
+        "그래서 GTA 6 관련 콘텐츠가 남성 편향인 걸 볼 때, 중립적인 공간에서의 약간의 불균형을 말하는 게 아닙니다. 역사적으로 여성들에게 환영받지 못한다고 분명히 말해온 공간이기 때문입니다.",
+        "그래서 루시아가 저와 다른 여성 게이머들에게 그렇게 큰 의미가 있는 거예요. 가장 큰 엔터테인먼트 산업에서 가장 큰 크리에이티브 스튜디오인 락스타도 이제 그녀가 주인공이라고 말하고 있어요. 그들은 천천히 시간을 들였죠. 제가 아는 확장 영상을 본 사람들 중 절반은 저처럼 GTA 5를 쉬었던 여성들이에요. 요즘은 새로운 관객층이 생겼고, 온라인 콘텐츠에서 그런 모습이 더 많이 반영되었으면 좋겠어요. 좋아요, 불평은 여기까지, 다시 게임으로 돌아가세요.",
+        "플로리다의 영광을 모아낸 GTA 6는 가상의 레오니다 주를 배경으로 하며, 그 중심에는 록스타의 마이애미인 바이스 시티가 있다. 아트 디렉션은 스튜디오가 이 장소에 대해 상당한 사전 조사를 했다는 것을 보여준다.",
+        "열성 팬들이 디테일에 집착하는 모습이 정말 마음에 듭니다. 그들은 트레일러 스틸러와 사우스 비치의 실제 사진을 비교하며 거의 동일하다고 느꼈습니다. 오션 드라이브의 아르데코 양식 전면과 윈우드의 벽화, 그리고 섬들을 연결하는 유명한 제방까지 모두 포함됩니다.",
+        "유사점은 거기서 끝나지 않습니다. 그리고 예상대로 GTA에서는 실제 장소에 허구의 이름이 붙여집니다. 에버글레이즈에서 영감을 받은 그라스리버스라는 늪지대가 있고, 악어와 플라밍고도 곳곳에 있습니다(레드 데드에서 사냥하는 걸 정말 좋아했거든요). 그리고 세부 묘사를 보면, 물 위에 레이 트레이싱으로 반사된 모습도 보입니다. 정말 말도 안 되죠... 좋은 의미로요.",
+        "그리고 풍자도 있다. 록스타의 세계관. 그래픽 디자이너들은 패러디 브랜드로 가득 찬 장면을 발견하는 것을 좋아할 것이다. 세산타 노브는 루이비통에서 영감을 받은 럭셔리 패션 하우스다. 우리는 패트리어트 비어가 돌아오는 것을 본다. 그리고 \"United States of Paranoia\"라고 적힌 달러 지폐도 있다. 심지어 우리가 소파에서 둠스크롤하는 것과 의심스럽게 닮은 가상의 소셜 피드를 중심으로 한 전체 세그먼트도 있다.",
+        "누군가는 이 모든 가상의 로고를 디자인하는 영광스러운 임무를 맡았고, 광고판, 광고, 패스트푸드점, 심지어 루시아와 제이슨의 아파트 텔레비전 광고까지 디자인했다.",
+        "예상대로 록스타는 정치, 바이럴 트렌드, 이야기를 너무 빨리 시대에 뒤떨어뜨릴 만한 요소는 피했다. 그들은 대화가 막히거나 편을 들지 않도록 했다.",
+        "열성 팬들을 위한 향수 박스 아트는 우리 창작자들이 가장 기대하는 부분입니다. 6월에 공개된 이 작품은 2002년 원작 바이스 시티 커버에 거의 모든 장면을 그대로 반영한 오마주입니다. GTA III 이래로 사용해온 만화책 모자이크로, 이번에는 네온 조명과 현대적인 플로리다 스타일로 가득 차 있습니다.",
+        "스피드보트, 스포츠카, 헬리콥터, 악어가 있다. 자세히 보면 캐릭터 중 한 명의 팔에 '바이스 베이비' 문신이 새겨져 있다. 이 디자인 연속성은 록스타가 20년이 지난 지금도 자사 시각적 자산의 가치를 잘 이해하고 있음을 보여준다.",
+        "전 세계가 멈출까? 게이머가 아니라면, 다음 장면은 정말 놀라울 것이다. GTA 6의 두 번째 예고편은 첫 24시간 동안 4억 7,500만 회 시청되었다. 예산은 10억 달러 이상에 달한다는 소문이 돌고 있으며(일부는 20억 달러에 가깝다고도 한다). 이는 지금까지 만들어진 엔터테인먼트 중 가장 비싼 작품이 될 것이다. 뉴주(Newzoo)는 출시 첫 주에만 3,700만에서 5,100만 장 사이가 팔릴 것으로 예상한다.",
+        "그리고 남편이 지적한 점이 있습니다: 생산성입니다. 미국 생산성 손실로 약 10억 달러(약 7억 5천만 파운드)가 예상됩니다. 대략적으로 계산한 것은 150만 명의 미국인이 하루 휴가를 낸다고 가정하고, 이를 평균 노동자의 GDP 기여도를 곱한 것입니다. 그리고 이것은 미국만의 경우입니다.",
+        "그게 사실인지는 모르겠지만, 캘리포니아 시미밸리에 있는 자동차 튜닝 업체인 버거 모터스포츠가 직원들이 그날 '바이스 시티'에 있을 거라고 경고한 후 11월 19일에 \"회사 전역의 운영 중단\"을 발표했다는 사실이 정말 좋습니다. 아마도 오랜만에 본 가장 영리한 홍보 전략일 겁니다. 브라보 버거.",
+        "이 모든 게 좀 어리석은 걸까요? 비디오 게임 때문에 이렇게 떠들썩한 거요. 저는 그렇지 않다고 생각합니다, 창의성에 열정을 가진 사람으로서는요. 이 디자인 작품은 스튜디오가 13년, 수천 명의 직원, 막대한 예산을 주어 자신들이 진정으로 관심을 가질 무언가를 만들 때 어떤 일이 벌어질 수 있는지 보여줍니다.",
+        "락스타는 출시를 두 번 연기하며 두 번 모두 사과했습니다. 하지만 GTA 6는 준비가 되기 전까지는 출시하지 않을 예정이었습니다. 너무 많은 것이 걸려 있습니다. 또한 싱글 플레이 캠페인에 마이크로트랜잭션이 없고, 게임 콘텐츠에 생성형 AI가 사용되지 않았다는 점도 마음에 듭니다. 이 논쟁에서 어느 입장에 있든, 이는 장인정신에 대한 의도를 보여주는 것입니다. 80시간에 달하는 스토리(락스타 노스의 공동 스튜디오장 롭 넬슨에 따르면 플레이 시간이 그렇게 걸린다고 합니다)는 인간이 그려지고, 모델링하고, 애니메이션을 맡고, 목소리를 냈습니다.",
+        "솔직히 말해 이 광기에 대해 중요한 점을 말씀드려야겠습니다. GTA는 폭력적입니다. 장관스럽고, 만화 같으며, 때로는 불편할 정도로요. 차량 강탈, 총격전, 마약, 갱단 등 다양한 요소가 등장합니다. 이런 장면은 탑다운 시절부터 시리즈의 핵심이었습니다. 하레 크리슈나가 많이 들리면, 차를 이리저리 굴려 그들을 찾아 한 번에 모두 쓰러뜨렸습니다. '구랑가' 보너스는 항상 도파민을 자극해 주었습니다.",
+        "이번에는 그래픽이 엄청나게 훌륭하다. 너무 현실적이어서, 6성 경찰 추격전 영상이 아침 TV에서 돌면 또 다른 금지 요구가 일어날 것 같다. 이 논쟁은 1997년부터 이어져 왔다. 분명 다시 등장할 것이다.",
+        "그래서 또 다른 고백을 하자면, 얼마 전, 인스타그램에 수염 난 남자가 운전대를 잡고 턱을 꽉 깨물고 눈물이 흐르는 영화 스틸 사진이 나왔다. 캡션에는 \"수년간 기다린 후 GTA 6에서 처음으로 보행자를 치는 나\"라는 자막이 붙어 있었다. 나는 이 순간과 모든 미친 광란과 총격전이 기대되어 크게 웃었다. 그리고 나는 네가 만날 수 있는 가장 부드럽고 친절한 48세 여성이다. 욕조에서 거미를 구하고, 수영장에서 두꺼비를 구한다. 산책할 때 낯선 사람들의 개를 쓰다듬는다. 그리고 자선단체에 기부한다. 하지만 11월이 되면 나는 바이스 시티에서 말로 표현할 수 없는 일을 할 것이다.",
+        "내 남자 친구들은 다 똑같아. 여자를 싫어하지 않아. 그리고 파리 한 마리도 해치지 않을 거야. 그런데도 우리 모두는 스포츠카를 훔쳐서 다시 경찰을 따돌릴 기회를 인내심 있게 기다리고 있어.",
+        "그럼 레오니다에서 보자. 내 말 믿어줘... 크리에이티브 붐은 11월 19일에 잊혀질 거야. 아, 그 주에는 콘텐츠가 있을 거야; 단지 내가 끼어들지 않을 뿐이야. 나는 오션 드라이브 근처 어딘가에서 발목 태그와 나쁜 아이디어를 가지고 있을 거야, 루시아와 제이슨의 관계가 줄거리를 통과했는지 알아볼 거야. 록스타가 정말 진전을 이루었는지. 이봐, 또 컨트롤러를 내려놓게 될지도 몰라.",
+        "무슨 일이 있든, GTA 6는 2013년 이후 게임 세계에서 가장 야심찬 아트 부서가 무엇을 해왔는지 밝혀줄 것입니다. 우리는 모든 소문을 반박할 것입니다, 예를 들면... 우리 캐릭터가 플레이할수록 나이가 든다는 게 사실인가요? 헬스장에 가거나 너무 많은 정크푸드로 몸을 망가뜨리면 더 좋은 몸을 만들 수 있나요? 지도가 레드 데드 리뎀션 2의 세 배나 큰까요? 이 모든 것이 저와 수백만 명의 다른 게이머들이 빨리 알고 싶어 하는 내용입니다. 이번 주는 휴가를 예약하세요. 저는 그럴 거라고 확신합니다."
+      ]
     },
     {
       "id": "lifespan-io:d2b8c8131e",
       "slug": "short-intense-exercise-elicits-beneficial-metabolic-changes-d2b8c8",
       "titleOriginal": "Short, Intense Exercise Elicits Beneficial Metabolic Changes",
-      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated […]",
+      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -6673,7 +6782,7 @@
       "originalUrl": "https://lifespan.io/short-intense-exercise-elicits-beneficial-metabolic-changes",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-08-26T16:43:46.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Exercise",
@@ -6692,7 +6801,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "짧고 강도 높은 운동은 유익한 대사 변화를 유도합니다",
-      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 단백질을 자극하는 [...]",
+      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 순환 단백질과 대사산물 수치에 더 큰 변화를 보였습니다 [...]",
       "bodyKo": [
         "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1].",
         "짧고 강도 높은 운동 vs 길고 중간 정도의 운동은 건강에 긍정적인 영향을 미칠 수 있는 잘 알려진 생활 습관 요인입니다. 운동은 다양한 세포에서 분비되고 몸 안에서 순환하는 인자들을 통해 여러 세포, 조직, 장기에 이익을 줍니다 [2]. 하지만 투자 대비 가장 큰 운동 유형은 여전히 논쟁 중입니다. 마찬가지로, 운동 효과를 매개하는 순환 요인들도 아직 완전히 정의되지 않았습니다.",
@@ -6836,7 +6945,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/bob-neville-on-berghaus-manchester-culture-and-the-british-brand-everyone-thinks-is-german",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-26T11:00:00.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
+      "fetchedAt": "2026-09-06T18:25:22.237Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -6875,174 +6984,6 @@
         "60년과 새로운 장의 시작, 오늘은 멋진 대칭을 가졌습니다. 리본을 자르는 사람은 피터 로키였는데, 뉴캐슬 그 가게에서 60년이 지난 공동 창립자이며, 영국 등반계에서 가장 유명한 인물 중 한 명이자 수십 년간 버그하우스 이야기의 일부인 크리스 보닝턴 경과 함께했습니다. 모험가이자 브랜드 홍보대사인 에드 잭슨도 그 자리에 있었습니다. 맨체스터의 한 쇼핑센터에서, 이슬비가 내리는 수요일 아침, 가위를 들고 60년간의 신뢰를 쌓아왔습니다.",
         "저와 [Gloaming](https://www.gloaming.uk/)의 모건 바필드, 그리고 디지털 크리에이터 [제시 알렉산드라](https://www.instagram.com/jessealexandra/)와 함께요. 다시 제 옷장으로 돌아가게 되네요. 오늘 아침에 들어왔을 때 Berghaus는 북부 레이버들과 열성적인 오아시스 팬들을 위한 곳이라고 생각했어요. 대부분 남성들이요. JD 스포츠 브랜드였지만 오래전에 잊혀진 줄 알았죠. 대신 제가 발견한 것은 마음과 영혼이 있는 브랜드였어요. 인상적인 여성 컬렉션도 있었고요. 저는 그걸 응원하며 떠났어요.",
         "한 가게가 모든 것을 바꾼다고 가장하지는 않을 것이다. 하지만 뉴발란스를 다시 멋지게 만든 사람이 말하듯, 자랑스러워할 것이 많고, 60년이 지난 지금도 이 이야기는 마침내 전할 곳이 생겼다."
-      ]
-    },
-    {
-      "id": "lifespan-io:b3f58ddae4",
-      "slug": "how-old-fat-cells-trigger-inflammation-and-raise-b3f58d",
-      "titleOriginal": "How Old Fat Cells Trigger Inflammation and Raise Risks",
-      "summaryOriginal": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people. Too much of a regulator leads […]",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Using cohort studies and a mouse model, researchers have found that the circulating factor ANGPTL8, which is produced by senescent fat cells, is related to age-related diseases and mortality in mice and people."
-        },
-        {
-          "kind": "text",
-          "text": "Too much of a regulator leads to dysregulation"
-        },
-        {
-          "kind": "image",
-          "url": "https://lifespan.io/wp-content/uploads/2025/05/Inflammation.jpg",
-          "alt": "Inflammation"
-        },
-        {
-          "kind": "text",
-          "text": "Chronic Inflammation Chronic inflammation refers to a persistent, low-grade buzz of immune activity that settles into the body without the drama of an infection or obvious injury. In the world of aging, this slow, smoldering fire is often called inflammaging, a term coined by Claudio Franceschi to capture the systemic, hard-to-detect inflammation that creeps in with advancing years. Read More"
-        },
-        {
-          "kind": "text",
-          "text": "This paper introduces itself with a standard explanation of the relationship between senescence and inflammaging, including the contributions of the senescence-associated secretory phenotype (SASP) that senescent cells emit. The authors state the need for a clear understanding of the “molecular mediators” involved, focusing specifically on the contributions of fat (adipose) tissue, which has been identified in previous work as a crucial link [1]."
-        },
-        {
-          "kind": "text",
-          "text": "Adipose tissue is not just energy storage; it is an endocrine organ all its own that regulates metabolism [2], and the aging of this tissue pushes it towards dysregulation and inflammation [3]. This includes SASP emissions, which senescent adipose tissue creates in sufficient quantities to stimulate systemic inflammation [4]. This paper makes it clear that aging fatty tissues are a cause, rather than just a consequence, of other aspects of aging [5]."
-        },
-        {
-          "kind": "text",
-          "text": "The related molecule on which this paper focuses is ANGPTL8, a metabolic regulator that itself is upregulated when insulin is administered [6]. However, this team has previously pinpointed it as being related to multiple serious metabolic issues, such as diabetes-related kidney disease (nepropathy) [7]. Other teams have corroborated such findings, finding it to be related to diabetic atherosclerosis [8] and a higher risk of future heart attacks in existing cardiovascular disease patients [9]. Additionally, higher circulating ANGPTL8 levels have been found to be associated with all-cause mortality in diabetic patients [10]."
-        },
-        {
-          "kind": "text",
-          "text": "A significant predictor As the first part of this paper, the researchers built their own biomarker-based clock, MBA8-Clock using data from the China Cardiometabolic Disease and Cancer Cohort, which recruited nearly ten thousand people. Comparing five separate algorithms, the team found that a multilayer perceptron-based framework was the best way to utilize this clock, as it gave estimated ages with an error rate of approximately five years."
-        },
-        {
-          "kind": "text",
-          "text": "This clock contained many basic measurements of metabolic health, including ANGPTL8. The researchers found that circulating ANGPTL8 values of approximately 250 nanograms per liter of serum were associated with the lowest biological age estimations. At values higher than that, particularly in people with four times as much or more, biological age was likely to be estimated markedly higher. Removing ANGPTL8 from the clock notably diminished its predictive abilities. The researchers hold that “circulating ANGPTL8 represents a consistent, biologically meaningful contributor to age prediction across individuals.”"
-        },
-        {
-          "kind": "text",
-          "text": "The next step was to create another clock, AIMR-Model, this one based on all-cause mortality over a ten-year period. The researchers used five algorithmic analyses, and this time they discovered that an extreme gradient-based framework yielded the most accurate results. Once more, ANGPTL8 was found to be a significant contributor; people who had been found to have higher ANGPTL8 levels were significantly more likely to have died within 10 years of that initial assessment. Further analysis revealed that “ANGPTL8 may amplify age-related clinical vulnerability rather than acting solely as an isolated risk marker,” as it was consistently found to occur alongside high blood pressure and other well-known risk factors for age-related disease."
-        },
-        {
-          "kind": "text",
-          "text": "Mice without ANGPTL8 live longer The researchers then turned to mice. As in humans, ANGPTL8 naturally increases in mice with age: 4-month-old (young) wild-type mice have significantly less of it than their 22-month-old (old) counterparts. As expected, the source was found to be the adipose tissue rather than the liver or any other organs; while hepatocytes did somewhat increase their production of the protein, that was localized rather than systemic."
-        },
-        {
-          "kind": "text",
-          "text": "In addition, the researchers created a group of mice that do not express the murine gene Angptl8 . Compared to their wild-type counterparts, the old Angptl8 -less mice performed considerably better on various physical tests at older ages. They had less fat mass, less senescence in their fat, and reductions in circulating SASP factors. They were also able to hang onto a rotarod longer, performed better on a treadmill, engaged in more exploratory behavior, and had more gastrocnemius muscle mass along with more fast-twitch fibers. Finally, and perhaps most importantly, these mice also lived longer."
-        },
-        {
-          "kind": "image",
-          "url": "https://lifespan.io/wp-content/uploads/2026/08/Survival-curve-ANGPTL8.png",
-          "alt": "Survival curve ANGPTL8"
-        },
-        {
-          "kind": "text",
-          "text": "The specific pathway involved in the relationship between ANGPTL8 and senescence was identified. This protein was found to bind to AKT2 on the molecular level, affecting the fundamental AKT/mTOR/S6K pathway, and this finding was confirmed in mice; mice with Angptl8 turned off have significantly decreased activity of AKT, mTOR, and S6K. Deriving fat precursor cells (preadipocytes) from older mice confirmed these findings, and experiments using cells with Angptl8 overexpression found that AKT is indeed necessary for ANGPTL8 to contribute to cellular senescence."
-        },
-        {
-          "kind": "text",
-          "text": "These researchers are of the clear opinion that they have hit upon a significant target, stating that “from a translational standpoint, the dual identity of ANGPTL8 as both a circulating biomarker and a functional effector of aging is particularly compelling.” However, this paper did not test any potential method of removing circulating ANGPTL8 from the bloodstreams of wild-type animals. If such a drug can be developed and proven to work in a human clinical trial, it may be possible to grant additional healthspan and lifespan to older people suffering from metabolic issues."
-        },
-        {
-          "kind": "text",
-          "text": "We would like to ask you a small favor. We are a non-profit foundation , and unlike some other organizations, we have no shareholders and no products to sell you. All our news and educational content is free for everyone to read, but it does mean that we rely on the help of people like you. Every contribution, no matter if it’s big or small, supports independent ethical journalism and sustains our future. Yes I will donate❤️"
-        },
-        {
-          "kind": "text",
-          "text": "Literature [1] Hotamisligil, G. S. (2017). Inflammation, metaflammation and immunometabolic disorders. Nature , 542 (7640), 177-185."
-        },
-        {
-          "kind": "text",
-          "text": "[2] Ou, M. Y., Zhang, H., Tan, P. C., Zhou, S. B., & Li, Q. F. (2022). Adipose tissue aging: mechanisms and therapeutic implications. Cell death & disease , 13 (4), 300."
-        },
-        {
-          "kind": "text",
-          "text": "[3] Tchkonia, T., Morbeck, D. E., Von Zglinicki, T., Van Deursen, J., Lustgarten, J., Scrable, H., … & Kirkland, J. L. (2010). Fat tissue, aging, and cellular senescence. Aging cell , 9 (5), 667-684."
-        },
-        {
-          "kind": "text",
-          "text": "[4] Dahlquist, K. J., & Camell, C. D. (2022). Aging leukocytes and the inflammatory microenvironment of the adipose tissue. Diabetes , 71 (1), 23-30."
-        },
-        {
-          "kind": "text",
-          "text": "[5] Franceschi, C., Garagnani, P., Vitale, G., Capri, M., & Salvioli, S. (2017). Inflammaging and ‘Garb-aging’. Trends in Endocrinology & Metabolism , 28 (3), 199-212."
-        },
-        {
-          "kind": "text",
-          "text": "[6] Abu-Farha, M., Ghosh, A., Al-Khairi, I., Madiraju, S. M., Abubaker, J., & Prentki, M. (2020). The multi-faces of Angptl8 in health and disease: Novel functions beyond lipoprotein lipase modulation. Progress in lipid research , 80 , 101067."
-        },
-        {
-          "kind": "text",
-          "text": "[7] Pan, L., He, Y., Xiang, Y., Mao, B., Meng, X., Guo, Y., … & Yu, X. (2025). Angiopoietin-like protein 8 mediates inflammation and fibrosis of tubular cells in diabetic kidney disease progression by interacting with Akt2. Metabolism , 156418."
-        },
-        {
-          "kind": "text",
-          "text": "[8] Ye, H., Zhu, Q., Zong, Q., Luo, S., Ji, Z., Zhang, R., & Zou, H. (2026). Elevated ANGPTL8 (Angiopoietin‐Like Protein 8) Levels as a Novel Predictor of Atherosclerosis in Type 2 Diabetes: Beyond Lipid Metabolism. Journal of the American Heart Association , 15 (3), e044806."
-        },
-        {
-          "kind": "text",
-          "text": "[9] Morinaga, J., Kashiwabara, K., Torigoe, D., Okadome, Y., Aizawa, K., Uemura, K., … & Oike, Y. (2023). Plasma ANGPTL8 levels and risk for secondary cardiovascular events in Japanese patients with stable coronary artery disease receiving statin therapy. Arteriosclerosis, thrombosis, and vascular biology , 43 (8), 1549-1559."
-        },
-        {
-          "kind": "text",
-          "text": "[10] Zou, H., Xu, Y., Chen, X., Yin, P., Li, D., Li, W., … & Yu, X. (2020). Predictive values of ANGPTL8 on risk of all-cause mortality in diabetic patients: results from the REACTION Study. Cardiovascular Diabetology , 19 (1), 121."
-        }
-      ],
-      "sourceName": "Lifespan.io",
-      "sourceUrl": "https://www.lifespan.io/",
-      "originalUrl": "https://lifespan.io/how-old-fat-cells-trigger-inflammation-and-raise-risks",
-      "author": "Josh Conway",
-      "publishedAt": "2026-08-20T22:15:04.000Z",
-      "fetchedAt": "2026-09-06T12:28:08.765Z",
-      "language": "en",
-      "keywords": [
-        "News",
-        "Cellular Senescence",
-        "Diabetes",
-        "Metabolic Syndrome",
-        "Metabolism",
-        "mTOR",
-        "White Adipose Tissue"
-      ],
-      "image": {
-        "url": "https://lifespan.io/wp-content/uploads/2026/08/Fat-cells-262x187.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 4,
-      "careScore": 0.7,
-      "curiosityScore": 0,
-      "contentType": "research",
-      "titleKo": "오래된 지방 세포가 염증을 유발하고 위험을 높이는 방법",
-      "summaryKo": "코호트 연구와 마우스 모델을 활용해 연구자들은 노화된 지방 세포가 생성하는 순환 인자 ANGPTL8가 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다. 조절 요인이 너무 많으면 [...]",
-      "bodyKo": [
-        "코호트 연구와 마우스 모델을 활용해 노화 지방 세포가 생성하는 순환 인자 ANGPTL8가 쥐와 인간의 연령 관련 질병과 사망률과 관련이 있음을 발견했습니다.",
-        "조절 요인이 너무 많으면 조절 장애가 생깁니다",
-        "만성 염증 만성 염증은 감염이나 명백한 부상의 극적인 문제 없이 몸에 자리 잡는 지속적이고 저강도의 면역 활동 윙윙거림을 의미합니다. 노화 세계에서 이 느리고 타오르는 불꽃은 흔히 염증이라고 불리는데, 이는 클라우디오 프란체스키가 나이가 들면서 서서히 나타나는 전신적이고 감지하기 어려운 염증을 표현하기 위해 만든 용어입니다. 더 읽기",
-        "이 논문은 노화세포와 염증 사이의 관계에 대한 표준적인 설명과 함께 노화 세포가 방출하는 노화세포 관련 분비 표현형(SASP)의 기여를 소개합니다. 저자들은 관련 \"분자 매개체\"에 대한 명확한 이해가 필요하며, 특히 이전 연구에서 중요한 연관성으로 확인된 지방(지방) 조직에 초점을 맞춥니다 [1].",
-        "지방 조직은 단순한 에너지 저장이 아닙니다; 지방 조직은 신진대사를 조절하는 독자적인 내분비 기관이며[2], 이 조직의 노화는 이를 조절 장애와 염증으로 유도합니다 [3]. 여기에는 노화 지방 조직이 충분한 양을 생성하여 전신 염증을 유발하는 SASP가 포함됩니다 [4]. 이 논문은 노화가 노화의 다른 측면의 결과가 아니라 원인임을 분명히 합니다 [5].",
-        "이 논문이 집중하는 관련 분자는 ANGPTL8로, 인슐린 투여 시 대사 조절제로 상향 조절됩니다 [6]. 하지만 이 연구팀은 이전에 당뇨병 관련 신장 질환(네프로병증)과 같은 여러 심각한 대사 문제와 관련이 있다고 밝혀낸 바 있습니다 [7]. 다른 연구팀도 이러한 발견을 확인하며, 당뇨병성 동맥경화와 관련 있다고 확인했습니다 [8] 기존 심혈관 질환 환자의 미래 심장마비 위험 증가[9]. 또한, 순환 ANGPTL8 수치가 당뇨병 환자의 모든 원인 사망과 연관되어 있음도 밝혀졌습니다 [10].",
-        "중요한 예측 변수 이 논문의 첫 부분에서 연구진은 중국의 심대사질환 및 암 코호트 데이터를 활용해 자체 바이오마커 기반 시계인 MBA8-Clock을 만들었으며, 이 코호트는 약 1만 명을 모집했습니다. 다섯 개의 별도 알고리즘을 비교한 결과, 연구팀은 다층 퍼셉트론 기반 프레임워크가 이 시계를 활용하는 가장 좋은 방법임을 발견했습니다. 이는 약 5년의 오류율로 추정 연령을 제공했습니다.",
-        "이 시계에는 ANGPTL8 등 대사 건강의 기본 측정값이 많이 포함되어 있었습니다. 연구진은 혈청당 약 250나노그램의 순환 ANGPTL8 생물학적 나이 추정치와 연관되어 있음을 발견했습니다. 특히 4배 이상 많은 사람들의 경우 그보다 높은 수치에서는 생물학적 나이 현저히 더 높게 추정될 가능성이 높았습니다. 시계에서 ANGPTL8을 제거하면 예측 능력이 현저히 저하되었습니다. 연구진은 \"순환 ANGPTL8이 개인 간 연령 예측에 일관되고 생물학적으로 의미 있는 기여를 한다\"고 주장합니다.",
-        "다음 단계는 10년간의 모든 원인 사망률을 기반으로 한 또 다른 시계인 AIMR 모델을 만드는 것이었습니다. 연구진은 다섯 가지 알고리즘 분석을 사용했고, 이번에는 극단적인 구배 기반 프레임워크가 가장 정확한 결과를 내는 것을 발견했습니다. 다시 한 번, ANGPTL8가 중요한 원인으로 밝혀졌습니다; ANGPTL8 수치가 높다고 밝혀진 사람들은 초기 평가 후 10년 이내에 사망할 가능성이 훨씬 높았습니다. 추가 분석 결과, \"ANGPTL8 고립된 위험 지표로만 작용하기보다는 연령 관련 임상 취약성을 증폭시킬 수 있다\"는 사실이 밝혀졌습니다. 이는 고혈압 및 연령 관련 질환의 잘 알려진 위험 요인들과 함께 일관되게 나타나기 때문입니다.",
-        "ANGPTL8이 없는 쥐는 더 오래 살기 연구진은 이후 쥐에 대해 연구를 돌렸다. 인간과 마찬가지로, ANGPTL8 생병 쥐는 나이가 들수록 자연스럽게 증가한다: 4개월 된 야생형 쥐는 22개월 된 개체들보다 지방 농도가 현저히 적다. 예상대로 그 원인은 간이나 다른 장기가 아닌 지방 조직임이 밝혀졌다; 간세포가 단백질 생산을 다소 증가시켰지만, 이는 전신이 아니라 국소적인 것이었다.",
-        "또한, 연구진은 쥐 유전자 Angptl8을 발현하지 않는 쥐 그룹을 만들었습니다. 야생형 마우스와 비교했을 때, 오래된 Angptl8 없는 마우스는 고령 시 다양한 신체 검사에서 훨씬 더 좋은 성과를 보였습니다. 이들은 지방량이 적고, 지방의 노화세포가 적으며, 순환하는 SASP 인자가 감소했습니다. 또한 로타로드를 더 오래 유지할 수 있었고, 러닝머신에서 더 좋은 성과를 냈으며, 더 많은 탐색 행동을 보였고, 복근 근육량과 빠른 근육 섬유도 더 많았습니다. 마지막으로, 아마도 가장 중요한 점은, 이 쥐들이 더 오래 살았다는 것입니다.",
-        "ANGPTL8와 노화세포 사이의 관계에 관여하는 특정 경로가 밝혀졌다. 이 단백질은 분자 수준에서 AKT2에 결합하여 기본적인 AKT/mTOR/S6K 경로에 영향을 미치는 것으로 밝혀졌으며, 이 발견은 쥐에서도 확인되었다; Angptl8이 꺼진 마우스는 AKT, mTOR, S6K의 활성이 유의미하게 감소했다. 노년 마우스에서 지방 전구세포(전지방 세포)를 얻은 결과가 이 결과를 확인했으며, Angptl8 과발현 세포를 이용한 실험에서는 AKT가 ANGPTL8가 세포 노화세포에 기여하는 데 실제로 필요하다는 것을 발견했다.",
-        "이 연구자들은 \"중개 관점에서 ANGPTL8가 순환 바이오마커이자 노화의 기능적 효과자라는 이중 정체성이 특히 설득력 있다\"고 밝히며 중요한 목표를 달성했다고 명확히 생각합니다. 하지만 이 논문은 야생형 동물의 혈류에서 순환 ANGPTL8을 제거하는 잠재적 방법을 시험하지 않았습니다. 만약 이러한 약물이 개발되어 인간 임상시험에서 효과가 입증된다면, 대사 문제를 겪는 노인들에게 추가 건강수명과 수명을 부여할 수 있을 것입니다.",
-        "작은 부탁을 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻입니다. 크고 작음에 상관없이 모든 기부는 독립적이고 윤리적인 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 기부하겠습니다❤️",
-        "문헌 [1] 호타미슬리길, G. S. (2017). 염증, 대화성 발화(metaflamation) 및 면역대사 장애. Nature, 542 (7640), 177-185.",
-        "[2] Ou, M. Y., Zhang, H., Tan, P. C., Zhou, S. B., Li, Q. F. (2022). 지방 조직 노화: 기전 및 치료적 함의. Cell death and disease, 13 (4), 300.",
-        "[3] 치코니아, T., 모르벡, D. E., 폰 즈글리니츠키, T., 반 듀르센, J., 러스트가르텐, J., 스크레이블, H., ... & 커클랜드, J. L. (2010). 지방 조직, 노화 및 세포 노화세포. 노화 세포, 9 (5), 667-684.",
-        "[4] 달퀴스트, K. J., & 카멜, C. D. (2022). 노화 백혈구와 지방 조직의 염증성 미세환경. 당뇨병, 71 (1), 23-30.",
-        "[5] 프란체스키, C., 가라냐니, P., 비탈레, G., 카프리, M., 살비올리, S. (2017). 염증 유발과 '쓰레기 노화'. 내분비학 및 대사 동향, 28 (3), 199-212.",
-        "[6] 아부-파르하, M., 고쉬, A., 알-카이리, I., 마디라주, S. M., 아부바커, J., & 프렌트키, M. (2020). 건강과 질병에서 Angptl8의 다면성: 지단백질 리파아제 조절을 넘어선 새로운 기능. 지질 연구 진전, 80, 101067.",
-        "[7] 판, L., 허, Y., 샹, Y., 마오, B., 멍, X., 궈, Y., ... & 유, X. (2025). 혈관생성계유사 단백질 8은 Akt2와 상호작용하여 당뇨병 신장 질환 진행에서 세뇨관 세포의 염증과 섬유화를 매개한다. 대사, 156418.",
-        "[8] 예, H., 주, Q., 종, Q., 루오, S., 지, Z., 장, R., & 조우, H. (2026). 제2형 당뇨병에서 죽상동맥경화의 새로운 예측인자로서의 ANGPTL8(피지오포이틴 유사 단백질 8) 상승: 지질 대사를 넘어서. 미국 심장 협회 저널, 15 (3), e044806.",
-        "[9] 모리나가, J., 카시와바라, K., 토리고에, D., 오카도메, Y., 아이자와, K., 우에무라, K., ... & 오이케, Y. (2023). 안정 관상동맥질환 환자 중 스타틴 치료를 받는 일본 환자의 혈장 ANGPTL8 수준과 2차 심혈관 사건 위험. 동맥경화, 혈전증 및 혈관생물학, 43권 8호, 1549-1559.",
-        "[10] Zou, H., Xu, Y., Chen, X., Yin, P., Li, D., Li, W., ... & Yu, X. (2020). 당뇨병 환자의 전원인 사망 위험에 대한 ANGPTL8 예측 가치: REACTION 연구 결과. 심혈관 당뇨병학, 19 (1), 121."
       ]
     }
   ]
