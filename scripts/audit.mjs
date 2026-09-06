@@ -524,9 +524,25 @@ async function auditDevices(page, screen, where, dir) {
       await page.mouse.move(x, y, { steps: 12 })
     }
 
-    await page.waitForTimeout(700)
+    /*
+     * 달라질 때까지 기다린다. 한 번만 읽지 않는다.
+     *
+     * 700ms를 기다리고 한 번 재던 때가 있었다. 대부분 맞았지만 가끔 틀렸고,
+     * 틀리는 방향이 나빴다 — 살아 있는 장치가 죽은 것으로 나온다. 장치마다
+     * 전이 시간이 다르고 그중 하나는 steps()라서 값이 계단으로 늦게 오는데,
+     * 고정된 한 순간에 재면 그 계단 사이에 떨어질 수 있다.
+     *
+     * 달라지면 곧바로 멈추고, 안 달라지면 기한까지 기다린다. 이렇게 하면
+     * 통과가 헐거워지지 않는다 — 일찍 멈추는 것은 실제로 달라졌을 때뿐이다.
+     */
+    let after = before
 
-    const after = await page.evaluate(device.read)
+    for (let waited = 0; waited < 2000; waited += 50) {
+      await page.waitForTimeout(50)
+      after = await page.evaluate(device.read)
+      if (device.changed(before, after)) break
+    }
+
     const afterPixels = await pixels(page, seen, `${stem}-after.png`)
 
     if (device.hold) await page.mouse.up()
