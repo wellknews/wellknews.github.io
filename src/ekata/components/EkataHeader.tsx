@@ -4,7 +4,7 @@ type EkataPage = 'campaign' | 'why' | 'policy'
 
 const navigation: { page: EkataPage; label: string; href: string }[] = [
   { page: 'campaign', label: '캠페인', href: '/ekata/' },
-  { page: 'why', label: 'WHY', href: '/ekata/why/' },
+  { page: 'why', label: '만든 이유', href: '/ekata/why/' },
   { page: 'policy', label: '운영 원칙', href: '/ekata/policy/' },
 ]
 

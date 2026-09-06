@@ -260,27 +260,201 @@ input:focus-visible {
 }
 
 .featured-heading {
-  margin-bottom: 28px;
+  margin-bottom: 32px;
+}
+
+.featured-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 560;
+  letter-spacing: 0.06em;
+}
+
+.featured-kicker::before {
+  content: '';
+  width: 18px;
+  height: 2px;
+  flex: none;
+  background: currentColor;
+}
+
+.featured-kicker em {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.featured-kicker em::before {
+  content: '·';
+  margin-right: 8px;
+  color: var(--line);
 }
 
 .featured-heading h1 {
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: clamp(30px, 3.6vw, 48px);
   font-weight: 620;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.05em;
+  word-break: keep-all;
 }
 
 .case-spread {
   display: grid;
   grid-template-columns: minmax(0, 480px) minmax(0, 1fr);
   gap: clamp(60px, 9vw, 150px);
-  align-items: stretch;
+  align-items: start;
 }
 
-/* The Story is one composition at every size, including a future 1080px export. */
+/* The device shell is decoration wrapped around the Story, never part of it.
+   .story-frame stays the only container for the card, so giving it a 1080px width
+   still renders the exact 1080 x 1920 composition. */
+.story-device {
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0;
+}
+
+.story-device::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 7% 1% 3%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 44%, #bcff4524 0, transparent 68%);
+  filter: blur(38px);
+  pointer-events: none;
+}
+
+.story-shell {
+  position: relative;
+  border-radius: 7.4cqw;
+  padding: 2.6cqw;
+  background: linear-gradient(158deg, #283021 0, #12160f 32%, #0b0e09 100%);
+  box-shadow:
+    inset 0 0 0 0.2cqw #3b442f,
+    inset 0 0.22cqw 0 #ffffff14,
+    0 36px 74px -26px #000000e0;
+}
+
+/* Two hairlines read as a phone without turning this into a product mockup. */
+.story-shell::before,
+.story-shell::after {
+  content: '';
+  position: absolute;
+  width: 0.7cqw;
+  border-radius: 1cqw;
+  background: #242c1e;
+}
+
+.story-shell::before {
+  top: 21%;
+  right: -0.58cqw;
+  height: 9%;
+}
+
+.story-shell::after {
+  top: 16%;
+  left: -0.58cqw;
+  height: 14%;
+}
+
+/* Chrome lives in the Story safe zones, so it never covers case information. */
+.story-chrome {
+  position: absolute;
+  z-index: 2;
+  inset: 2.6cqw;
+  pointer-events: none;
+}
+
+.chrome-progress {
+  position: absolute;
+  top: 3.4cqw;
+  right: 3.4cqw;
+  left: 3.4cqw;
+  display: flex;
+  gap: 1cqw;
+}
+
+.chrome-progress span {
+  height: 0.62cqw;
+  flex: 1;
+  border-radius: 1cqw;
+  background: #f2f3ee2e;
+}
+
+.chrome-progress span:first-child {
+  background: var(--green);
+}
+
+.chrome-account {
+  position: absolute;
+  top: 7.4cqw;
+  right: 3.4cqw;
+  left: 3.4cqw;
+  display: flex;
+  align-items: center;
+  gap: 2.2cqw;
+  color: #e7ebe1;
+  font-size: 2.7cqw;
+}
+
+.chrome-avatar {
+  width: 7.4cqw;
+  height: 7.4cqw;
+  flex: none;
+  border-radius: 50%;
+  background: #1b2216 url('/logo.svg') center / 60% no-repeat;
+  box-shadow: inset 0 0 0 0.26cqw #4d5a41;
+}
+
+.chrome-account strong {
+  font-weight: 620;
+}
+
+.chrome-account small {
+  color: #a9b3a0;
+  font-size: 2.4cqw;
+}
+
+.chrome-more {
+  margin-left: auto;
+  color: #cfd6c8;
+  font-size: 3.2cqw;
+  letter-spacing: 0.08em;
+}
+
+.chrome-reply {
+  position: absolute;
+  right: 3.4cqw;
+  bottom: 4.4cqw;
+  left: 3.4cqw;
+  display: flex;
+  height: 9.2cqw;
+  align-items: center;
+  border: 0.24cqw solid #ffffff33;
+  border-radius: 9cqw;
+  padding-inline: 4.4cqw;
+  color: #c7cfbf;
+  font-size: 2.9cqw;
+}
+
 .story-frame {
   container-type: inline-size;
   width: 100%;
-  max-width: 480px;
+  overflow: hidden;
+  border-radius: 5.2cqw;
+}
+
+.story-device figcaption {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+  word-break: keep-all;
 }
 
 .story-card {
@@ -552,7 +726,6 @@ input:focus-visible {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  justify-content: space-between;
   padding: 40px 0 0;
   scroll-margin-top: 30px;
 }
@@ -588,6 +761,7 @@ input:focus-visible {
   color: #c0c7b9;
   font-size: 17px;
   line-height: 1.8;
+  word-break: keep-all;
 }
 
 .primary-link {
@@ -645,6 +819,50 @@ input:focus-visible {
 .case-utilities {
   margin-top: 45px;
   padding-bottom: 10px;
+}
+
+.case-provenance {
+  margin-top: 44px;
+  border-top: 1px solid var(--line);
+  padding-top: 30px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.case-provenance dl {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.case-provenance dl > div {
+  display: flex;
+  gap: 12px;
+}
+
+.case-provenance dt {
+  min-width: 66px;
+  flex: none;
+  color: #7f887a;
+}
+
+.case-provenance dd {
+  margin: 0;
+  color: #cbd3c3;
+}
+
+.case-provenance p {
+  margin-top: 16px;
+  word-break: keep-all;
+}
+
+.case-provenance a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
 }
 
 .report-help {
@@ -720,6 +938,18 @@ details[open] summary::after {
   border: 1px solid var(--line);
   padding: 30px;
   line-height: 1.8;
+}
+
+.story-frame .story-hold {
+  display: flex;
+  aspect-ratio: 9 / 16;
+  flex-direction: column;
+  justify-content: center;
+  border: 0;
+  padding: 24cqw 7cqw;
+  background: linear-gradient(150deg, #20301a 0, #11150e 22%, #11150e 100%);
+  box-shadow: inset 0 0 0 1px #455337;
+  font-size: 3.4cqw;
 }
 
 .case-unavailable p {
@@ -1157,12 +1387,13 @@ details[open] summary::after {
 .primary-link > [aria-hidden],
 .phone-number > [aria-hidden],
 .text-link > [aria-hidden],
+.case-provenance a > [aria-hidden],
 .why-closing a > [aria-hidden] {
   display: inline-block;
   transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-:is(.header-contact, .primary-link, .telephone, a.text-link, .why-closing a):is(
+:is(.header-contact, .primary-link, .telephone, a.text-link, .case-provenance a, .why-closing a):is(
     :hover,
     :focus-visible
   )
@@ -1305,8 +1536,7 @@ button.text-link:active > span {
   }
 
   .campaign-nav {
-    justify-content: space-between;
-    gap: 16px;
+    gap: 26px;
   }
 
   .campaign-nav a {
@@ -1323,16 +1553,12 @@ button.text-link:active > span {
   }
 
   .featured-heading h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .case-spread {
     grid-template-columns: 1fr;
     gap: 30px;
-  }
-
-  .story-frame {
-    margin-inline: auto;
   }
 
   .case-actions {
@@ -1380,6 +1606,11 @@ button.text-link:active > span {
     grid-template-columns: 1fr 1fr;
     gap: 22px;
     margin-top: 8px;
+  }
+
+  .case-provenance {
+    margin-top: 32px;
+    padding-top: 24px;
   }
 
   .case-dialog {
@@ -1520,6 +1751,10 @@ button.text-link:active > span {
 
   .masthead-title p {
     font-size: 9px;
+  }
+
+  .campaign-nav {
+    gap: 18px;
   }
 
   .case-utilities {
