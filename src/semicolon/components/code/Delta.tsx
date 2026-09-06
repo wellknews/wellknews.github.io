@@ -66,8 +66,14 @@ export function Delta({ rows }: Props) {
             <div className={styles.head}>
               <p className={styles.label}>{row.label}</p>
 
+              {/*
+                변화가 없으면 부호를 붙이지 않는다. 0에 −를 붙이면 «아주 조금
+                줄었다»로 읽히는데, 이 장치에서 «그대로»는 결과가 없는 것이
+                아니라 결과다 — 아래 줄의 막대 두 개가 같은 길이인 것이 그
+                기록의 핵심인 경우가 있다.
+              */}
               <p className={`mono ${styles.change}`}>
-                {change > 0 ? '+' : '−'}
+                {change === 0 ? '' : change > 0 ? '+' : '−'}
                 {Math.abs(change)}%
               </p>
             </div>

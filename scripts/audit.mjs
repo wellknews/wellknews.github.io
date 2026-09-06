@@ -89,6 +89,7 @@ const PAGES = [
     path: '/session/commander-at-home',
     kind: 'session',
   },
+  { name: 'code/the-middle-was-olive', path: '/code/the-middle-was-olive', kind: 'code' },
   { name: 'code/not-on-the-list', path: '/code/not-on-the-list', kind: 'code' },
   /*
    * 없는 주소. 장치가 없어 오래 볼 것은 없지만, 주소를 적는 자리가 둘 있고
@@ -239,6 +240,25 @@ async function auditClipping(page, screen, dir) {
 /* ─────────────────────────────  2. 죽은 장치  ───────────────────────────── */
 
 /**
+ * 점이 실제로 옮겨 간 거리(px). transform 문자열이 아니라 숫자를 본다.
+ *
+ * 처음에는 getComputedStyle의 transform 문자열을 그대로 비교하고 «'none'만
+ * 아니면 반응한 것»으로 셌다. 그 판정이 양쪽으로 틀렸다.
+ *
+ *   · 거짓 통과. 세 기호의 점은 steps()로 계단을 밟아 움직이는데, 첫 계단
+ *     전의 값이 matrix(1, 0, 0, 1, 0, 0) — 즉 «변환은 걸렸고 0px 움직인»
+ *     상태다. 문자열로는 'none'과 다르므로 반응한 것으로 셌다.
+ *   · 거짓 실패. 더 일찍 읽으면 아직 'none'이라 죽은 장치로 셌다.
+ *
+ * 이 장치가 확인해야 하는 것은 «변환이 걸렸는가»가 아니라 «점이 옮겨 갔는가»다.
+ * 그러면 재는 것도 문자열이 아니라 거리여야 한다. 거리를 재는 쪽(__dotShift)은
+ * auditDevices가 판면 안에 심는다.
+ */
+function dotMoved(before, after) {
+  return after !== null && after !== before && after !== 0
+}
+
+/**
  * 만질 수 있게 만든 것이 실제로 반응하는지.
  *
  * 각 항목은 «어디를 건드리면 어떤 표시가 바뀌어야 하는가»로 적는다. 마우스가
@@ -372,31 +392,22 @@ const DEVICES = [
     kind: 'index',
     label: '벽에 부딪히는 점',
     target: '[class*="PageHead-module__figure"]:has(.kindRunner)',
-    read: () => {
-      const dot = document.querySelector('.kindRunner')
-      return dot ? getComputedStyle(dot).transform : null
-    },
-    changed: (before, after) => before !== after && after !== 'none',
+    read: () => window.auditDotShift('.kindRunner'),
+    changed: dotMoved,
   },
   {
     kind: 'index',
     label: '흘러 나가는 점들',
     target: '[class*="PageHead-module__figure"]:has(.kindTrail)',
-    read: () => {
-      const dot = document.querySelector('.kindTrail')
-      return dot ? getComputedStyle(dot).transform : null
-    },
-    changed: (before, after) => before !== after && after !== 'none',
+    read: () => window.auditDotShift('.kindTrail'),
+    changed: dotMoved,
   },
   {
     kind: 'index',
     label: '눈금을 건너뛰는 점',
     target: '[class*="PageHead-module__figure"]:has(.kindStep)',
-    read: () => {
-      const dot = document.querySelector('.kindStep')
-      return dot ? getComputedStyle(dot).transform : null
-    },
-    changed: (before, after) => before !== after && after !== 'none',
+    read: () => window.auditDotShift('.kindStep'),
+    changed: dotMoved,
   },
 
   {
@@ -405,6 +416,13 @@ const DEVICES = [
     target: '[class*="Miss-module__shot"]',
     read: () => getComputedStyle(document.querySelector('[class*="Miss-module__strike"]')).scale,
     changed: (before, after) => before !== after,
+    /*
+     * 누르는 자리는 항목 전체지만 달라지는 자리는 겨눈 곳의 이름 위 1px 줄
+     * 하나다. 항목 전체를 재면 옆의 «왜 빗나갔는지»가 분모로 들어가고, 설명이
+     * 길수록 같은 줄이 덜 움직인 것처럼 나온다. 실제로 한 기록이 그 때문에
+     * 0.094%로 걸렸다 — 장치는 멀쩡하고 문장이 길었을 뿐이다.
+     */
+    watch: '[class*="Miss-module__at"]',
     /* 쥐고 있는 동안에만 줄이 물러난다. 놓으면 돌아오므로 쥔 채로 재야 한다. */
     hold: true,
   },
@@ -490,6 +508,21 @@ async function auditDevices(page, screen, where, dir) {
     content: '[class*="Field-module__field"] { display: none !important; }',
   })
 
+  /* 거리를 재는 함수를 판면 안에 심는다. 위의 read가 그 안에서 돈다. */
+  await page.evaluate(() => {
+    window.auditDotShift = (selector) => {
+      const dot = document.querySelector(selector)
+
+      if (!dot) return null
+
+      const { transform } = getComputedStyle(dot)
+
+      if (transform === 'none') return 0
+
+      return Math.round(new DOMMatrixReadOnly(transform).m41)
+    }
+  })
+
   for (const device of devices) {
     const target = page.locator(device.target).first()
 
@@ -503,7 +536,17 @@ async function auditDevices(page, screen, where, dir) {
      * 죽은 것으로 나온다.
      */
     await page.mouse.move(0, 0)
-    await target.scrollIntoViewIfNeeded()
+
+    /*
+     * 판면 한가운데로 끌어온다. 화면에 들어오기만 하면 되는 것이 아니다.
+     *
+     * scrollIntoViewIfNeeded는 «보이면 그만»이라 요소를 판면 맨 위에 붙여
+     * 놓는데, 그 자리는 고정 헤더가 덮고 있다. 그러면 좌표는 맞는데 커서가
+     * 헤더를 짚고, 멀쩡한 장치가 죽은 것으로 나온다. 실제로 코드 목록이
+     * 글 한 편 늘어 길어지자마자 그 일이 났다 — 좁은 판면은 헤더가 고정이
+     * 아니라서 넓은 판면에서만 났고, 그래서 판면을 바꿔 가며 봐야 보였다.
+     */
+    await target.evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' }))
     await page.waitForTimeout(400)
 
     /* 화면 이름에 슬래시가 들어가므로 파일 이름으로 쓰기 전에 바꾼다. */
@@ -535,9 +578,25 @@ async function auditDevices(page, screen, where, dir) {
       await page.mouse.move(x, y, { steps: 12 })
     }
 
-    await page.waitForTimeout(700)
+    /*
+     * 달라질 때까지 기다린다. 한 번만 읽지 않는다.
+     *
+     * 700ms를 기다리고 한 번 재던 때가 있었다. 대부분 맞았지만 가끔 틀렸고,
+     * 틀리는 방향이 나빴다 — 살아 있는 장치가 죽은 것으로 나온다. 장치마다
+     * 전이 시간이 다르고 그중 하나는 steps()라서 값이 계단으로 늦게 오는데,
+     * 고정된 한 순간에 재면 그 계단 사이에 떨어질 수 있다.
+     *
+     * 달라지면 곧바로 멈추고, 안 달라지면 기한까지 기다린다. 이렇게 하면
+     * 통과가 헐거워지지 않는다 — 일찍 멈추는 것은 실제로 달라졌을 때뿐이다.
+     */
+    let after = before
 
-    const after = await page.evaluate(device.read)
+    for (let waited = 0; waited < 2000; waited += 50) {
+      await page.waitForTimeout(50)
+      after = await page.evaluate(device.read)
+      if (device.changed(before, after)) break
+    }
+
     const afterPixels = await pixels(page, seen, `${stem}-after.png`)
 
     if (device.hold) await page.mouse.up()
@@ -547,8 +606,32 @@ async function auditDevices(page, screen, where, dir) {
 
     /* 상태가 바뀌었는가. */
     if (!device.changed(before, after)) {
+      /*
+       * 왜 안 바뀌었는지까지 적는다.
+       *
+       * «반응하지 않는다»만 있으면 그 다음에 할 일이 손으로 다시 재 보는
+       * 것뿐이고, 손으로 재면 대개 멀쩡하다. 정말로 죽은 장치인지, 커서가
+       * 엉뚱한 데 떨어진 것인지, 덮인 것인지는 실패한 그 순간에만 알 수 있다.
+       */
+      const spot = await page.evaluate(
+        ([px, py, selector]) => {
+          const top = document.elementFromPoint(px, py)
+          const gate = top?.closest('.kindGate, a, button')
+
+          return {
+            top: top ? `${top.tagName}.${String(top.className).slice(0, 40)}` : '없음',
+            inTarget: Boolean(top?.closest(selector)),
+            hovered: gate ? gate.matches(':hover') : null,
+            scrollY: Math.round(window.scrollY),
+          }
+        },
+        [x, y, device.target],
+      )
+
       fail(
         `${screen.name} ${subject} ${input}에 반응하지 않는다 (${before} → ${after}). ` +
+          `커서 (${Math.round(x)}, ${Math.round(y)})에 있던 것은 ${spot.top}, ` +
+          `대상 안인가 ${spot.inTarget}, hover ${spot.hovered}, scrollY ${spot.scrollY}. ` +
           `이 입력을 쓰는 사람에게는 없는 기능이다.`,
       )
       continue
