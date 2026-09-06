@@ -15,7 +15,7 @@ export const semicolon = {
   name: 'SEMICOLON',
   /** 이 공간에서 가장 강한 시각 자산. 로고를 따로 만들지 않는 이유다. */
   mark: ';',
-  url: 'https://wellknews.github.io/;',
+  url: 'https://wellknews.github.io/;/',
 
   hero: {
     /**

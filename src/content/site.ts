@@ -21,7 +21,14 @@ export type NavItem = {
 /** ELSEWHERE에 걸리는 하위 프로젝트 한 줄. 새 관심사가 생기면 여기에만 추가한다. */
 export type Elsewhere = {
   name: string
-  /** 루트 기준 경로. 이 문자열이 화면에도 그대로 노출된다. */
+  /**
+   * 루트 기준 경로. 이 문자열이 화면에도 그대로 노출되고 링크의 주소이기도 하다.
+   *
+   * 슬래시로 끝난다. 세 곳 모두 서버에 index.html이 있는 실제 디렉터리이고,
+   * 슬래시 없이 부르면 브라우저가 301을 한 번 타고 슬래시가 붙은 주소로
+   * 옮겨 간다. 화면에 적는 주소가 «도착하는 주소»가 아니면, 그 글자는
+   * 안내가 아니라 대략적인 설명이 된다.
+   */
   path: string
   summary: string
 }
@@ -114,12 +121,12 @@ export const site = {
       },
       {
         name: 'SEMICOLON',
-        path: '/;',
+        path: '/;/',
         summary: 'A pause inside a busy life.',
       },
       {
         name: 'MAMABOY',
-        path: '/mamaboy',
+        path: '/mamaboy/',
         summary: 'CARE + CURIOSITY',
       },
     ] satisfies Elsewhere[],
