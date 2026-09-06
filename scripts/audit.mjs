@@ -35,6 +35,12 @@
  *                   들여쓰여 있지 않은지. 브라우저 기본 들여쓰기 40px가
  *                   남으면 가운데 맞춤 장치의 잉크가 통째로 20px 밀린다.
  *                   Course와 Breakdown이 그렇게 밀린 채 배포된 적이 있다.
+ *  10. 남의 주소 표기  화면에 적힌 주소가 이 공간의 표기를 따르는지.
+ *                   여기서는 '/;'로 시작하고 슬래시로 끝나지 않는다. 바깥
+ *                   (루트의 진입로)은 문서의 주소라 슬래시로 끝나고, 그
+ *                   규칙을 안쪽으로 가져오면 히어로의 '/;'와 문들의
+ *                   '/;/session'이 서로 다른 체계가 된다. 404의 돌아가는
+ *                   링크에 '/;/'라고 적힌 채 배포된 적이 있다.
  *
  * 실행: npm run audit   (개발 서버가 떠 있어야 한다. 없으면 알아서 띄운다.)
  */
@@ -84,6 +90,11 @@ const PAGES = [
     kind: 'session',
   },
   { name: 'code/not-on-the-list', path: '/code/not-on-the-list', kind: 'code' },
+  /*
+   * 없는 주소. 장치가 없어 오래 볼 것은 없지만, 주소를 적는 자리가 둘 있고
+   * 그중 하나(돌아가는 링크)에 바깥의 표기가 새어 들어온 적이 있다.
+   */
+  { name: 'not-found', path: '/no-such-place', kind: 'not-found' },
   { name: 'session-index', path: '/session', kind: 'index' },
   { name: 'thread-index', path: '/thread', kind: 'index' },
   { name: 'code-index', path: '/code', kind: 'index' },
@@ -991,6 +1002,69 @@ async function auditListIndent(page, screen, pageName) {
   }
 }
 
+/* ──────────────────────────  10. 남의 주소 표기  ────────────────────────── */
+
+/**
+ * 화면에 적힌 주소가 이 공간의 표기를 따르는지.
+ *
+ * 이 공간은 자기 주소를 '/;'로 시작하고 슬래시로 끝나지 않게 적는다.
+ * 히어로의 '/;'와 문들의 '/;/session'이 같은 모양이어야 그 넷이 한 체계로
+ * 읽힌다. 규칙 자체는 src/semicolon/router.tsx의 BASE에 적혀 있다.
+ *
+ * 바깥은 반대다. 루트의 진입로에 적히는 것은 문서의 주소이고, 셋 다
+ * index.html이 있는 실제 디렉터리라 슬래시로 끝난다(/;/, /mamaboy/, /ekata/).
+ * 두 규칙이 다른 것은 가리키는 것이 다르기 때문인데, 그래서 한쪽이 다른 쪽으로
+ * 새기 쉽다 — 실제로 404의 돌아가는 링크에 바깥의 표기를 그대로 적어 '/;/'가
+ * 배포된 적이 있다.
+ *
+ * 요소가 아니라 텍스트 노드를 걷는다. 돌아가는 링크는 '←'와 주소가 한 <a>
+ * 안에 나란히 있어서 주소가 자기 요소를 갖지 않는다 — 요소만 훑던 첫 판은
+ * 바로 그 자리를 못 보고 지나갔다. 터졌던 자리를 못 보는 검사는 검사가 아니다.
+ *
+ * '/;'를 담은 것만 본다. 이 공간의 주소는 전부 BASE에서 나오므로 반드시
+ * 그것을 담고 있고, 조판에 쓰는 장식용 빗금(Faces의 '/')은 담고 있지 않다.
+ */
+async function auditAddressStyle(page, screen, pageName) {
+  const written = await page.evaluate(() => {
+    const out = []
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT)
+
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      /* 주소 뒤의 화살표는 «이어진다»는 뜻으로 붙이는 것이라 벗겨 낸다. */
+      const text = node.textContent.trim().replace(/\s*\u2192$/, '')
+
+      if (!/^\/;[A-Za-z0-9\-_/.]*$/.test(text)) continue
+
+      const host = node.parentElement
+      if (!host) continue
+
+      const style = getComputedStyle(host)
+      if (style.display === 'none' || style.visibility === 'hidden') continue
+
+      out.push({
+        text,
+        cls: typeof host.className === 'string' && host.className ? host.className : host.tagName,
+      })
+    }
+
+    return out
+  })
+
+  const wrong = written.filter((a) => a.text.endsWith('/'))
+
+  if (wrong.length) {
+    fail(
+      `${screen.name} ${pageName}에 이 공간의 표기를 따르지 않는 주소가 ` +
+        `${wrong.length}개 있다 — ${wrong.map((a) => `"${a.text}"(${a.cls})`).join(', ')}. ` +
+        `여기서는 슬래시로 끝나지 않는다(router.tsx의 BASE).`,
+    )
+  } else if (written.length) {
+    pass(`${screen.name} ${pageName}에 적힌 주소 ${written.length}개가 이 공간의 표기를 따른다`)
+  } else {
+    fail(`${screen.name} ${pageName}에서 주소를 하나도 찾지 못했다 — 검사가 자리를 놓치고 있다.`)
+  }
+}
+
 /* ─────────────────────────────  실행  ───────────────────────────── */
 
 async function waitForServer(url, tries = 60) {
@@ -1067,6 +1141,7 @@ for (const screen of SCREENS) {
     await auditGutter(page, screen, target.name)
     await auditReach(page, screen, target.name)
     await auditListIndent(page, screen, target.name)
+    await auditAddressStyle(page, screen, target.name)
     await auditDevices(page, screen, target, dir)
     await auditReplay(page, screen, target)
 

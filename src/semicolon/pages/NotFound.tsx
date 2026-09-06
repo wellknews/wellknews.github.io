@@ -1,6 +1,6 @@
 import { BackLink } from '../components/BackLink'
 import { semicolon } from '../content/site'
-import { currentPath, path } from '../router'
+import { BASE, currentPath, path } from '../router'
 import styles from './NotFound.module.css'
 
 /**
@@ -25,7 +25,7 @@ export function NotFound() {
       </div>
 
       <div className={styles.back}>
-        <BackLink to={path.home} label={path.home} />
+        <BackLink to={path.home} label={BASE} />
       </div>
     </div>
   )
