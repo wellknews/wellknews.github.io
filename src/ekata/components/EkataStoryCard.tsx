@@ -88,7 +88,13 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
           {/* Same label grammar as every WELLKNEWS card: a red rule, then English caps
               opened up with tracking. The desk is what changes, never the form. */}
           <span className="story-desk">MISSING</span>
-          <span className="story-credit">AN EKATA CAMPAIGN</span>
+          {/* The campaign's mark, diagonally opposite the desk rule — the two flags at
+              either end of a shared masthead. The lit square is the only campaign green
+              on the card and the only thing on it that is not printed. */}
+          <span className="story-seal">
+            EKATA
+            <span className="seal-lamp" aria-hidden="true" />
+          </span>
         </header>
         <div className="story-photo">
           {!sample && item.photoUrl && failedPhoto !== item.photoUrl ? (
@@ -162,7 +168,11 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
                 onError={() => setFailedWordmark(true)}
               />
             )}
+            {/* Identity is the mark at the top; the working relationship is stated here,
+                where a co-publishing credit belongs. */}
             <small>
+              An EKATA campaign
+              <br />
               자료 출처: {item.sourceLabel}
               {!sample && (
                 <>

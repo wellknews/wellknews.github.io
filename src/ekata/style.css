@@ -624,13 +624,34 @@ input:focus-visible {
   background: var(--wk-signal);
 }
 
-/* The campaign credit the API review settled on. Kept quiet: the account posts
-   this, the campaign only carries it. */
-.story-credit {
-  color: var(--wk-faint);
+/* ── The one place the two palettes meet ──────────────────────────────────────
+   Burgundy and neon do not blend; nothing useful is on the line between them.
+   What works — in Riso printing, in Businessweek, in every hi-vis marker on a
+   dark ground — is to give them different jobs and wildly different areas.
+
+     burgundy   a plane. The date chip alone is 0.47% of the canvas.
+     neon       a point. This lamp is 0.005% — about a hundredth of the chip.
+
+   At that ratio the green cannot compete; it punctuates. And it is not decoration:
+   fluorescent lime is the colour of being found — search, rescue, hi-vis — which
+   is the whole of what EKATA is for. So the card is printed matte everywhere and
+   lit in exactly one place. */
+.story-seal {
+  display: flex;
+  align-items: center;
+  gap: 0.9cqw;
   font-size: 1.75cqw;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.16em;
+}
+
+.seal-lamp {
+  width: 1cqw;
+  height: 1cqw;
+  flex: none;
+  /* The square from EKATA's own mark, and the card's only light source. */
+  background: #bcff45;
+  box-shadow: 0 0 1.7cqw #bcff4559;
 }
 
 .story-photo {
