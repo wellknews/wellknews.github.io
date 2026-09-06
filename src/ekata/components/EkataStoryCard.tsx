@@ -75,9 +75,11 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
                 <circle cx="120" cy="79" r="42" />
                 <path d="M34 260v-42c0-49 38-83 86-83s86 34 86 83v42z" />
               </svg>
-              <span className="photo-note">
-                {sample ? '개발용 실루엣' : '사진을 불러올 수 없습니다 · 공식정보를 확인해 주세요'}
-              </span>
+              {!sample && (
+                <span className="photo-note">
+                  사진을 불러올 수 없습니다 · 공식정보를 확인해 주세요
+                </span>
+              )}
             </>
           )}
           {sample && <span className="story-sample">개발용 예시 · 실제 인물이 아닙니다</span>}
@@ -120,11 +122,7 @@ export function EkataStoryCard({ record }: { record: MissingChildCase }) {
           </div>
           <p>공식정보 안내 → wellknews.github.io/ekata</p>
           <small>자료 출처: {item.sourceLabel}</small>
-          <small>
-            {sample
-              ? 'SAMPLE DATA · 공식정보 확인 대상 아님'
-              : '공식정보 확인 ' + verificationTime(item.verifiedAt)}
-          </small>
+          {!sample && <small>공식정보 확인 {verificationTime(item.verifiedAt)}</small>}
         </footer>
       </div>
     </article>

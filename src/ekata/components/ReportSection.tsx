@@ -1,39 +1,53 @@
+import type { MissingChildCase } from '../types/missingChild'
 import { Arrow } from './Publisher'
-import { OFFICIAL_URL } from '../lib/caseAdapter'
-export function ReportSection() {
+import { officialCaseUrl, caseShareUrl } from '../lib/caseAdapter'
+import { CaseDetails } from './CaseDetails'
+import { ShareButton } from './ShareButton'
+
+export function ReportSection({ record }: { record: MissingChildCase }) {
   return (
-    <section className="report-strip" id="report" aria-labelledby="report-title">
-      <div className="report-heading" data-reveal>
-        <h2 id="report-title">실종아동 제보</h2>
-      </div>
-      <div className="report-content" data-reveal>
-        <p>
-          목격한 시간과 장소, 기억나는 특징을
-          <br className="desktop-break" /> 공식 창구로 직접 전해주세요.
+    <aside className="case-actions" id="report" aria-label="제보와 정보 확인">
+      <div className="report-main" data-reveal>
+        <a className="telephone" href="tel:182" aria-label="실종아동 제보 182 전화 연결">
+          <span className="phone-label">실종아동 제보</span>
+          <span className="phone-number">
+            182
+            <Arrow />
+          </span>
+        </a>
+        <p className="report-intro">
+          기억나는 단서가 있다면
+          <br />
+          공식 창구로 전해주세요.
         </p>
-        <div className="report-links">
-          <a className="telephone" href="tel:182" aria-label="실종아동 찾기 182 전화 연결">
-            <span className="phone-label">실종아동 찾기</span>
-            <span className="phone-number">
-              182
-              <Arrow diagonal />
-            </span>
-          </a>
-          <div className="report-secondary">
-            <a href={OFFICIAL_URL} target="_blank" rel="noreferrer">
-              안전Dream 방문 <Arrow diagonal />
-              <span className="sr-only"> (새 창)</span>
-            </a>
-            <p>
-              긴급한 상황은{' '}
-              <a href="tel:112" aria-label="긴급 신고 112 전화 연결">
-                112
-              </a>
-            </p>
-          </div>
-        </div>
-        <small>에카타는 제보를 대신 접수하지 않습니다.</small>
+        <a
+          className="primary-link"
+          href={officialCaseUrl(record.officialUrl)}
+          target="_blank"
+          rel="noreferrer"
+        >
+          안전Dream 공식정보 <Arrow />
+          <span className="sr-only"> (새 창)</span>
+        </a>
+        <details className="report-help">
+          <summary>제보 안내</summary>
+          <p>
+            목격한 시간과 장소, 기억나는 특징을 전해주세요. 긴급한 상황은 <a href="tel:112">112</a>
+            로 신고해 주세요. 에카타는 제보를 대신 접수하지 않습니다.
+          </p>
+        </details>
       </div>
-    </section>
+      <div className="case-utilities">
+        <CaseDetails record={record} />
+        <ShareButton
+          url={caseShareUrl(record)}
+          title={
+            record.status === 'sample'
+              ? 'EKATA 개발용 예시 · 실제 인물이 아닙니다'
+              : 'EKATA · ' + record.name + ' 실종 정보'
+          }
+        />
+      </div>
+    </aside>
   )
 }

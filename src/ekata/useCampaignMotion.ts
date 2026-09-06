@@ -32,7 +32,17 @@ export function useCampaignMotion() {
         },
         { threshold: 0.08 },
       )
-      page.querySelectorAll('[data-reveal]').forEach((element) => observer.observe(element))
+      const seen = new WeakSet<Element>()
+      const observeNewContent = () => {
+        page.querySelectorAll('[data-reveal]').forEach((element) => {
+          if (seen.has(element)) return
+          seen.add(element)
+          observer.observe(element)
+        })
+      }
+      observeNewContent()
+      const contentObserver = new MutationObserver(observeNewContent)
+      contentObserver.observe(page, { childList: true, subtree: true })
 
       const sheet = page.querySelector<HTMLElement>('.campaign-poster')
       const progress = page.querySelector<HTMLElement>('.reading-line')!
@@ -79,6 +89,7 @@ export function useCampaignMotion() {
       updateProgress()
       dispose = () => {
         observer.disconnect()
+        contentObserver.disconnect()
         resize.disconnect()
         animations.forEach((animation) => animation.cancel())
         reset()

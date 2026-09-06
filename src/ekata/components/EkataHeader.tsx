@@ -20,9 +20,7 @@ export function EkataHeader({ policy = false }: { policy?: boolean }) {
           웰뉴스 캠페인
         </p>
       </div>
-      <div className="edition-line">
-        <span>한 번 더, 기억해 주세요.</span>
-      </div>
+      <div className="edition-line" aria-hidden="true" />
     </header>
   )
 }

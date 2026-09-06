@@ -26,7 +26,7 @@ export function ShareButton({ url, title }: { url: string; title: string }) {
   return (
     <div className="share-action">
       <button className="text-link" type="button" onClick={() => void share()}>
-        공유 / 주소 복사 <span aria-hidden="true">↗</span>
+        공유하기 <span aria-hidden="true">↗</span>
       </button>
       <output className="copy-status" aria-live="polite">
         {message}

@@ -20,10 +20,6 @@ export function AboutEkata() {
             <br />
             EKATA는 그 질문에서 시작했습니다.
           </p>
-          <p>
-            웰뉴스의 하루 한 장의 스토리.
-            <br />한 사람의 정보를 이곳에서도 함께 확인합니다.
-          </p>
         </div>
         <div className="name-note" data-reveal>
           <h3>에카타.</h3>
