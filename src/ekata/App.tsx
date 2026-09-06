@@ -93,6 +93,13 @@ export default function App() {
             {show ? (
               <div className="case-spread">
                 <figure className="story-device" data-reveal>
+                  {/* The Story is a WELLKNEWS object standing on an EKATA page, so the
+                      border between them is named rather than blurred: the campaign's
+                      green stays outside the glass, the account's black starts inside. */}
+                  <p className="story-passport">
+                    WELLKNEWS STORY
+                    <em>게시 예정 형태</em>
+                  </p>
                   <div className="story-shell">
                     {/* Decorative device chrome. It sits in the Story safe zones, never in the export. */}
                     <div className="story-chrome" aria-hidden="true">
