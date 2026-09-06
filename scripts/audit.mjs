@@ -228,6 +228,25 @@ async function auditClipping(page, screen, dir) {
 /* ─────────────────────────────  2. 죽은 장치  ───────────────────────────── */
 
 /**
+ * 점이 실제로 옮겨 간 거리(px). transform 문자열이 아니라 숫자를 본다.
+ *
+ * 처음에는 getComputedStyle의 transform 문자열을 그대로 비교하고 «'none'만
+ * 아니면 반응한 것»으로 셌다. 그 판정이 양쪽으로 틀렸다.
+ *
+ *   · 거짓 통과. 세 기호의 점은 steps()로 계단을 밟아 움직이는데, 첫 계단
+ *     전의 값이 matrix(1, 0, 0, 1, 0, 0) — 즉 «변환은 걸렸고 0px 움직인»
+ *     상태다. 문자열로는 'none'과 다르므로 반응한 것으로 셌다.
+ *   · 거짓 실패. 더 일찍 읽으면 아직 'none'이라 죽은 장치로 셌다.
+ *
+ * 이 장치가 확인해야 하는 것은 «변환이 걸렸는가»가 아니라 «점이 옮겨 갔는가»다.
+ * 그러면 재는 것도 문자열이 아니라 거리여야 한다. 거리를 재는 쪽(__dotShift)은
+ * auditDevices가 판면 안에 심는다.
+ */
+function dotMoved(before, after) {
+  return after !== null && after !== before && after !== 0
+}
+
+/**
  * 만질 수 있게 만든 것이 실제로 반응하는지.
  *
  * 각 항목은 «어디를 건드리면 어떤 표시가 바뀌어야 하는가»로 적는다. 마우스가
@@ -361,31 +380,22 @@ const DEVICES = [
     kind: 'index',
     label: '벽에 부딪히는 점',
     target: '[class*="PageHead-module__figure"]:has(.kindRunner)',
-    read: () => {
-      const dot = document.querySelector('.kindRunner')
-      return dot ? getComputedStyle(dot).transform : null
-    },
-    changed: (before, after) => before !== after && after !== 'none',
+    read: () => window.auditDotShift('.kindRunner'),
+    changed: dotMoved,
   },
   {
     kind: 'index',
     label: '흘러 나가는 점들',
     target: '[class*="PageHead-module__figure"]:has(.kindTrail)',
-    read: () => {
-      const dot = document.querySelector('.kindTrail')
-      return dot ? getComputedStyle(dot).transform : null
-    },
-    changed: (before, after) => before !== after && after !== 'none',
+    read: () => window.auditDotShift('.kindTrail'),
+    changed: dotMoved,
   },
   {
     kind: 'index',
     label: '눈금을 건너뛰는 점',
     target: '[class*="PageHead-module__figure"]:has(.kindStep)',
-    read: () => {
-      const dot = document.querySelector('.kindStep')
-      return dot ? getComputedStyle(dot).transform : null
-    },
-    changed: (before, after) => before !== after && after !== 'none',
+    read: () => window.auditDotShift('.kindStep'),
+    changed: dotMoved,
   },
 
   {
@@ -394,6 +404,13 @@ const DEVICES = [
     target: '[class*="Miss-module__shot"]',
     read: () => getComputedStyle(document.querySelector('[class*="Miss-module__strike"]')).scale,
     changed: (before, after) => before !== after,
+    /*
+     * 누르는 자리는 항목 전체지만 달라지는 자리는 겨눈 곳의 이름 위 1px 줄
+     * 하나다. 항목 전체를 재면 옆의 «왜 빗나갔는지»가 분모로 들어가고, 설명이
+     * 길수록 같은 줄이 덜 움직인 것처럼 나온다. 실제로 한 기록이 그 때문에
+     * 0.094%로 걸렸다 — 장치는 멀쩡하고 문장이 길었을 뿐이다.
+     */
+    watch: '[class*="Miss-module__at"]',
     /* 쥐고 있는 동안에만 줄이 물러난다. 놓으면 돌아오므로 쥔 채로 재야 한다. */
     hold: true,
   },
@@ -477,6 +494,21 @@ async function auditDevices(page, screen, where, dir) {
    */
   const masked = await page.addStyleTag({
     content: '[class*="Field-module__field"] { display: none !important; }',
+  })
+
+  /* 거리를 재는 함수를 판면 안에 심는다. 위의 read가 그 안에서 돈다. */
+  await page.evaluate(() => {
+    window.auditDotShift = (selector) => {
+      const dot = document.querySelector(selector)
+
+      if (!dot) return null
+
+      const { transform } = getComputedStyle(dot)
+
+      if (transform === 'none') return 0
+
+      return Math.round(new DOMMatrixReadOnly(transform).m41)
+    }
   })
 
   for (const device of devices) {
