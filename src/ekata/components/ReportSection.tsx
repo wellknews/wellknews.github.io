@@ -9,7 +9,7 @@ export function ReportSection({ record }: { record: MissingChildCase }) {
     <aside className="case-actions" id="report" aria-label="제보와 정보 확인">
       <div className="report-main" data-reveal>
         <a className="telephone" href="tel:182" aria-label="실종아동 제보 182 전화 연결">
-          <span className="phone-label">실종아동 제보</span>
+          <span className="phone-label">경찰청 실종아동찾기센터</span>
           <span className="phone-number">
             182
             <Arrow />

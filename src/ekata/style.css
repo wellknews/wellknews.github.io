@@ -184,7 +184,7 @@ input:focus-visible {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 3px 0 25px;
+  padding: 4px 0 24px;
 }
 
 .ekata-wordmark {
@@ -211,7 +211,7 @@ input:focus-visible {
   position: relative;
   display: flex;
   align-items: stretch;
-  gap: 38px;
+  gap: 40px;
   border-top: 2px solid var(--green);
   border-bottom: 1px solid var(--line);
 }
@@ -256,7 +256,7 @@ input:focus-visible {
 
 /* One Story */
 .featured-case {
-  padding: 44px 0 76px;
+  padding: 48px 0 80px;
 }
 
 .featured-heading {
@@ -737,7 +737,8 @@ input:focus-visible {
 
 .phone-label {
   color: #c0c7b9;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: -0.01em;
 }
 
 .phone-number {
@@ -757,7 +758,7 @@ input:focus-visible {
 }
 
 .report-intro {
-  margin-top: 25px;
+  margin-top: 24px;
   color: #c0c7b9;
   font-size: 17px;
   line-height: 1.8;
@@ -772,7 +773,7 @@ input:focus-visible {
   margin-top: 40px;
   border-top: 1px solid #647c48;
   border-bottom: 1px solid #647c48;
-  padding: 22px 0;
+  padding: 24px 0;
   color: var(--green);
   font-size: 15px;
   font-weight: 600;
@@ -817,14 +818,14 @@ input:focus-visible {
 }
 
 .case-utilities {
-  margin-top: 45px;
-  padding-bottom: 10px;
+  margin-top: 48px;
+  padding-bottom: 8px;
 }
 
 .case-provenance {
-  margin-top: 44px;
+  margin-top: 48px;
   border-top: 1px solid var(--line);
-  padding-top: 30px;
+  padding-top: 32px;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.8;
@@ -866,7 +867,7 @@ input:focus-visible {
 }
 
 .report-help {
-  margin-top: 15px;
+  margin-top: 16px;
   color: var(--muted);
   font-size: 12px;
 }
@@ -1523,7 +1524,8 @@ button.text-link:active > span {
   }
 
   .masthead-title {
-    padding: 8px 0 22px;
+    display: block;
+    padding: 8px 0 24px;
   }
 
   .ekata-wordmark {
@@ -1531,8 +1533,11 @@ button.text-link:active > span {
   }
 
   .masthead-title p {
-    flex-shrink: 0;
-    font-size: 10px;
+    margin-top: 10px;
+    padding-bottom: 0;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: left;
   }
 
   .campaign-nav {
@@ -1545,7 +1550,7 @@ button.text-link:active > span {
   }
 
   .featured-case {
-    padding: 28px 0 44px;
+    padding: 32px 0 48px;
   }
 
   .featured-heading {
@@ -1558,7 +1563,7 @@ button.text-link:active > span {
 
   .case-spread {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 32px;
   }
 
   .case-actions {
@@ -1568,7 +1573,7 @@ button.text-link:active > span {
   .report-main {
     display: grid;
     grid-template-columns: auto 1fr;
-    column-gap: 26px;
+    column-gap: 24px;
     align-items: center;
   }
 
@@ -1577,8 +1582,8 @@ button.text-link:active > span {
   }
 
   .phone-number {
-    gap: 18px;
-    font-size: 74px;
+    gap: 16px;
+    font-size: 64px;
   }
 
   .phone-number > span {
@@ -1592,7 +1597,7 @@ button.text-link:active > span {
 
   .primary-link {
     grid-column: 1 / -1;
-    margin-top: 20px;
+    margin-top: 24px;
     padding-block: 18px;
   }
 
@@ -1604,7 +1609,7 @@ button.text-link:active > span {
   .case-utilities {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    gap: 24px;
     margin-top: 8px;
   }
 
