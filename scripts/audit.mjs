@@ -524,7 +524,17 @@ async function auditDevices(page, screen, where, dir) {
      * 죽은 것으로 나온다.
      */
     await page.mouse.move(0, 0)
-    await target.scrollIntoViewIfNeeded()
+
+    /*
+     * 판면 한가운데로 끌어온다. 화면에 들어오기만 하면 되는 것이 아니다.
+     *
+     * scrollIntoViewIfNeeded는 «보이면 그만»이라 요소를 판면 맨 위에 붙여
+     * 놓는데, 그 자리는 고정 헤더가 덮고 있다. 그러면 좌표는 맞는데 커서가
+     * 헤더를 짚고, 멀쩡한 장치가 죽은 것으로 나온다. 실제로 코드 목록이
+     * 글 한 편 늘어 길어지자마자 그 일이 났다 — 좁은 판면은 헤더가 고정이
+     * 아니라서 넓은 판면에서만 났고, 그래서 판면을 바꿔 가며 봐야 보였다.
+     */
+    await target.evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' }))
     await page.waitForTimeout(400)
 
     /* 화면 이름에 슬래시가 들어가므로 파일 이름으로 쓰기 전에 바꾼다. */
@@ -584,8 +594,32 @@ async function auditDevices(page, screen, where, dir) {
 
     /* 상태가 바뀌었는가. */
     if (!device.changed(before, after)) {
+      /*
+       * 왜 안 바뀌었는지까지 적는다.
+       *
+       * «반응하지 않는다»만 있으면 그 다음에 할 일이 손으로 다시 재 보는
+       * 것뿐이고, 손으로 재면 대개 멀쩡하다. 정말로 죽은 장치인지, 커서가
+       * 엉뚱한 데 떨어진 것인지, 덮인 것인지는 실패한 그 순간에만 알 수 있다.
+       */
+      const spot = await page.evaluate(
+        ([px, py, selector]) => {
+          const top = document.elementFromPoint(px, py)
+          const gate = top?.closest('.kindGate, a, button')
+
+          return {
+            top: top ? `${top.tagName}.${String(top.className).slice(0, 40)}` : '없음',
+            inTarget: Boolean(top?.closest(selector)),
+            hovered: gate ? gate.matches(':hover') : null,
+            scrollY: Math.round(window.scrollY),
+          }
+        },
+        [x, y, device.target],
+      )
+
       fail(
         `${screen.name} ${subject} ${input}에 반응하지 않는다 (${before} → ${after}). ` +
+          `커서 (${Math.round(x)}, ${Math.round(y)})에 있던 것은 ${spot.top}, ` +
+          `대상 안인가 ${spot.inTarget}, hover ${spot.hovered}, scrollY ${spot.scrollY}. ` +
           `이 입력을 쓰는 사람에게는 없는 기능이다.`,
       )
       continue
