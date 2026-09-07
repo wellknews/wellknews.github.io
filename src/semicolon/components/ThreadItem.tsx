@@ -39,8 +39,22 @@ export function ThreadItem({ thread, level, linked, endmark }: Props) {
   /* 없는 글을 가리키고 있으면 아무것도 그리지 않는다. */
   const prior = thread.follows ? findThread(thread.follows) : undefined
 
+  /*
+   * 곁가지는 목록에서만 물러난다.
+   *
+   * aside가 하는 말은 «이 글은 본류가 아니다»인데, 그 말은 옆에 본류가 있어야
+   * 성립한다. level이 1이면 이 글이 곧 그 페이지라 옆에 아무도 없고, 그때
+   * 오른쪽으로 물러나면 물러난 것이 아니라 판면 절반이 그냥 빈다.
+   *
+   * loud는 그대로 둔다. «이 문장이 전부다»는 옆에 아무도 없어도 참이고,
+   * 오히려 혼자 있을 때 더 참이다. 관계를 말하는 형식과 그 글 자체를 말하는
+   * 형식의 차이다.
+   */
+  const form = thread.form ?? 'note'
+  const seated = form === 'aside' && level === 1 ? 'note' : form
+
   return (
-    <article className={styles.item} data-form={thread.form ?? 'note'} data-linked={linked}>
+    <article className={styles.item} data-form={seated} data-linked={linked}>
       <div className={styles.aside}>
         {linked ? (
           <Link to={to} className={`mono ${styles.date}`} aria-label={accessibleTitle}>
