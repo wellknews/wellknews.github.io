@@ -41,9 +41,6 @@
  *                   규칙을 안쪽으로 가져오면 히어로의 '/;'와 문들의
  *                   '/;/session'이 서로 다른 체계가 된다. 404의 돌아가는
  *                   링크에 '/;/'라고 적힌 채 배포된 적이 있다.
- *  13. 굳은 잉크    지나간 문단의 잉크가 가라앉는지. 이 규칙에는 표시가 없어서
- *                   죽으면 글이 한 가지 색으로 돌아갈 뿐이고, 그건 원래
- *                   그랬던 것과 구분되지 않는다.
  *  12. 뜻을 잃은 날짜  덧붙임의 날짜가 원래 날짜와 같은 칼럼에 앉는지.
  *                   이 자리에는 «덧붙임»이라는 글자가 없어서, 정렬이 깨지면
  *                   두 번째 날짜는 본문에 섞인 숫자가 된다. 덧붙인 글이 아직
@@ -1361,121 +1358,6 @@ async function auditAddition(page, screen, pageName) {
   }
 }
 
-/**
- * 지나간 문단의 잉크가 실제로 가라앉는가.
- *
- * 이 규칙에는 표시가 없다. 죽으면 글이 그냥 한 가지 색으로 돌아갈 뿐이고,
- * 그건 원래 그랬던 것과 구분되지 않는다 — 없어진 줄도 모르고 지나간다.
- *
- * 한 문단을 두 자리에서 잰다. 판면 아래쪽에 있을 때와 위쪽으로 올라갔을 때.
- * 같은 문단이므로 물려받은 잉크도, 글자 크기도, 부모도 전부 같다 — 달라지는
- * 것은 자리 하나뿐이라 결과가 이 규칙 말고 다른 것을 잴 수가 없다.
- *
- * 처음에는 화면에 보이는 문단 여럿을 한 번에 비교했다. 그 검사는 멀쩡한
- * 규칙을 열 번 «고장»이라고 불렀다 — 잰 자리가 사진 위여서 문단이 없거나,
- * 보이는 문단이 전부 아직 읽는 줄 아래여서 다 같은 색인 것이 당연했기
- * 때문이다. 여러 개를 한꺼번에 보는 대신 하나를 두 번 보는 쪽으로 바꿨다.
- *
- * 색은 픽셀이 아니라 계산된 값으로 읽는다. 이 층 뒤에는 색면이 깔려 있고
- * 위쪽은 고정 헤더가 덮고 있어서, 찍어서 재면 규칙이 아니라 그 둘을 잰다.
- */
-async function auditReadingSettle(page, screen, pageName) {
-  /* 스크롤이 멎을 때까지 기다린다. 이 공간은 부드러운 스크롤을 쓴다. */
-  const settle = async () => {
-    let resting = null
-
-    for (let i = 0; i < 60; i += 1) {
-      const y = await page.evaluate(() => Math.round(window.scrollY))
-
-      if (y === resting) break
-
-      resting = y
-      await page.waitForTimeout(100)
-    }
-
-    await page.waitForTimeout(400)
-  }
-
-  /*
-   * 본문이 없는 기록은 건너뛴다.
-   *
-   * 어떤 기록은 처음부터 끝까지 장치로만 되어 있다 — 대화 화면을 그린 것이
-   * 그렇다. 거기 있는 말풍선은 읽는 사람의 본문이 아니라 «이런 화면이 있었다»는
-   * 그림이라 이 규칙이 닿으면 안 되고, 닿지 않는 것이 맞으므로 고장도 아니다.
-   *
-   * «문단이 없다»가 아니라 «본문 자리 자체가 없다»로 가른다. 클래스가 통째로
-   * 떨어져 나가면 본문이 있는 기록 다섯 편이 세 판면에서 전부 실패하므로,
-   * 이 건너뛰기가 그 사고를 덮지 않는다.
-   */
-  if ((await page.locator('.reading').count()) === 0) return
-
-  /* 판면을 통째로 덮는 문단은 «위»와 «아래»가 동시에 참이라 비교 대상이 아니다. */
-  const target = await page.evaluate(() => {
-    const h = window.innerHeight
-    const all = [...document.querySelectorAll('.reading p')].filter(
-      (el) => el.getBoundingClientRect().height < h * 0.4 && el.textContent.trim().length > 20,
-    )
-
-    if (all.length === 0) return null
-
-    /* 앞뒤로 스크롤할 여지가 있도록 가운데쯤의 문단을 고른다. */
-    const el = all[Math.floor(all.length / 2)]
-
-    el.dataset.auditSettle = 'yes'
-
-    return { text: el.textContent.slice(0, 16), total: all.length }
-  })
-
-  if (!target) {
-    fail(
-      `${screen.name} ${pageName}에서 잴 만한 문단을 하나도 찾지 못했다 — 검사가 자리를 놓치고 있다.`,
-    )
-    return
-  }
-
-  /* 문단의 한가운데를 판면의 어느 높이에 둘지 정하고, 거기서 잉크를 읽는다. */
-  const inkAt = async (fraction) => {
-    await page.evaluate((f) => {
-      const el = document.querySelector('[data-audit-settle]')
-      const box = el.getBoundingClientRect()
-
-      window.scrollTo(0, window.scrollY + box.top + box.height / 2 - window.innerHeight * f)
-    }, fraction)
-
-    await settle()
-
-    return page.evaluate(() => {
-      const [r, g, b] = getComputedStyle(document.querySelector('[data-audit-settle]'))
-        .color.match(/[\d.]+/g)
-        .map(Number)
-
-      /* 밝기 하나로 줄인다. 이 공간의 잉크는 무채색이라 이것으로 충분하다. */
-      return Math.round(0.2126 * r + 0.7152 * g + 0.0722 * b)
-    })
-  }
-
-  const below = await inkAt(0.8)
-  const above = await inkAt(0.15)
-
-  await page.evaluate(() => {
-    delete document.querySelector('[data-audit-settle]').dataset.auditSettle
-  })
-
-  if (above <= below) {
-    fail(
-      `${screen.name} ${pageName}에서 지나간 문단이 가라앉지 않는다 — ` +
-        `«${target.text}»가 판면 80%에서 밝기 ${below}, 15%로 올라가서도 ${above}다. ` +
-        `표시가 없는 규칙이라 죽어도 화면은 멀쩡해 보인다.`,
-    )
-    return
-  }
-
-  pass(
-    `${screen.name} ${pageName}의 지나간 잉크가 가라앉는다 ` +
-      `(같은 문단이 판면 80%에서 ${below}, 15%에서 ${above})`,
-  )
-}
-
 /* ─────────────────────────────  실행  ───────────────────────────── */
 
 async function waitForServer(url, tries = 60) {
@@ -1556,7 +1438,6 @@ for (const screen of SCREENS) {
     await auditDevices(page, screen, target, dir)
     await auditReplay(page, screen, target)
 
-    if (target.kind === 'session') await auditReadingSettle(page, screen, target.name)
     if (target.kind === 'session') await auditClipping(page, screen, dir)
     if (target.name === 'thread-index') await auditThreadSpacing(page, screen, target.name)
     if (target.kind === 'index') await auditAddition(page, screen, target.name)
@@ -1577,60 +1458,6 @@ for (const screen of SCREENS) {
   }
 
   await still.close()
-
-  /*
-   * 스크롤 타임라인이 없는 브라우저에서도 잉크가 가라앉는가.
-   *
-   * 이 규칙의 CSS 문법은 아직 크로미움 계열에만 있다. 사파리와 파이어폭스에서는
-   * @supports가 통째로 막아서 아무 일도 일어나지 않고, 그래서 손으로 같은 일을
-   * 하는 길을 따로 냈다. 그런데 검사를 도는 브라우저에는 그 문법이 있으므로
-   * 가만히 두면 그 길만 영영 검사 밖에 남는다 — 정작 그 길이 필요한 사람들이
-   * 쓰는 쪽인데.
-   *
-   * 그래서 문법이 없는 척하게 만들고 한 번 더 본다. 앱에 검사용 스위치를 넣지
-   * 않는다. 판면 쪽에서 «없다»고 답하게 하는 것으로 충분하고, 그래야 배포되는
-   * 코드에 검사만을 위한 자리가 생기지 않는다.
-   */
-  const plain = await browser.newPage(context)
-
-  watch(plain, `${screen.name}(타임라인 없음)`)
-
-  /*
-   * 두 가지를 같이 해야 한다.
-   *
-   * 처음에는 CSS.supports만 가렸다. 그 검사는 대신 하는 길을 통째로 죽여 놓고
-   * 돌려도 통과했다 — JS의 CSS.supports를 바꿔도 CSS 엔진의 @supports는 그것을
-   * 보지 않으므로 원래 규칙이 그대로 돌았고, 검사는 규칙이 아니라 규칙의 그림자를
-   * 보고 있었다. 아무것도 보지 않으면서 통과라고 적는 검사가 제일 나쁘다.
-   *
-   * 그래서 판면 쪽 답과 CSS 규칙 둘 다 없앤다. 그러고 남는 것이 대신 하는
-   * 길뿐이라, 그때 잉크가 가라앉으면 그 길이 실제로 일한 것이다.
-   */
-  await plain.addInitScript(() => {
-    const real = CSS.supports.bind(CSS)
-
-    CSS.supports = (...args) =>
-      String(args[0]).includes('animation-timeline') ? false : real(...args)
-
-    const mute = () => {
-      const style = document.createElement('style')
-
-      style.textContent = '.reading p { animation-name: none !important }'
-      document.head.append(style)
-    }
-
-    if (document.head) mute()
-    else document.addEventListener('DOMContentLoaded', mute)
-  })
-
-  for (const target of PAGES.filter((page) => page.kind === 'session')) {
-    await plain.goto(`${BASE}${target.path}`, { waitUntil: 'networkidle' })
-    await plain.waitForTimeout(600)
-
-    await auditReadingSettle(plain, screen, `${target.name}(타임라인 없음)`)
-  }
-
-  await plain.close()
 }
 
 console.log('\n── 좁은 판면이 내용을 잃지 않았는가 ──')

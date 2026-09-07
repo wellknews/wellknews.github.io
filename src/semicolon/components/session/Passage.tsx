@@ -22,7 +22,7 @@ type Props = {
  */
 export function Passage({ children, tone = 'note' }: Props) {
   return (
-    <div className={`reading ${styles.passage}`} data-tone={tone}>
+    <div className={styles.passage} data-tone={tone}>
       {children}
     </div>
   )

@@ -15,7 +15,6 @@ import { SessionEntry } from './pages/SessionEntry'
 import { SessionIndex } from './pages/SessionIndex'
 import { ThreadEntry } from './pages/ThreadEntry'
 import { ThreadIndex } from './pages/ThreadIndex'
-import { useSettledInk } from './motion/useSettledInk'
 import { routeKey, useRoute, type Route } from './router'
 
 function render(route: Route) {
@@ -79,12 +78,6 @@ export default function App() {
   useEffect(() => {
     document.title = titleOf(route)
   }, [route])
-
-  /*
-   * 지나간 문단의 잉크를 가라앉히는 규칙은 CSS에 있다. 이 훅은 그 문법이 없는
-   * 브라우저에서만 같은 일을 대신하고, 있는 곳에서는 아무것도 하지 않는다.
-   */
-  useSettledInk(key)
 
   /*
    * SPA 안에서 링크를 따라가면 눌렀던 링크에 초점이 남는다. 그 링크가 새 화면에서
