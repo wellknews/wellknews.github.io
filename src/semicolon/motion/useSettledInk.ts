@@ -17,8 +17,8 @@ import { useEffect } from 'react'
  */
 
 /** CSS의 animation-range와 같은 구간. 한쪽만 고치면 두 화면이 갈라진다. */
-const FROM = 0.52
-const TO = 0.78
+const FROM = 0.48
+const TO = 0.76
 
 type Ink = [number, number, number]
 
@@ -71,7 +71,7 @@ export function useSettledInk(routeKey: string): void {
     if (quiet.matches) return
 
     const settled = resolveInk(
-      getComputedStyle(document.documentElement).getPropertyValue('--color-text-secondary'),
+      getComputedStyle(document.documentElement).getPropertyValue('--color-text-muted'),
     )
 
     /* 화면 안에 있는 문단만 갖고 있는다. 대개 열 몇 개라 매 프레임 훑어도 싸다. */
