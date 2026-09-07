@@ -114,6 +114,7 @@ const PAGES = [
   },
   { name: 'thread/related-but-unresolved', path: '/thread/related-but-unresolved', kind: 'index' },
   { name: 'thread/three-stage-lifting', path: '/thread/three-stage-lifting', kind: 'index' },
+  { name: 'thread/not-the-cookie', path: '/thread/not-the-cookie', kind: 'index' },
 ]
 
 const failures = []
