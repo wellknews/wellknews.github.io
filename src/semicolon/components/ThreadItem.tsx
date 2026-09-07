@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+
 import { findThread } from '../content/threads'
 import type { Thread } from '../content/types'
 import { Link, path } from '../router'
@@ -18,6 +20,13 @@ type Props = {
    * 아래의 매듭 한 줄(Closing)이 대신 찍는다. 둘 다 찍으면 ';'가 두 번 나온다.
    */
   endmark: boolean
+  /**
+   * 이 글과 바로 위 글 사이에 흐른 날수. 목록에서만 준다.
+   *
+   * 이 값이 위쪽 여백이 된다. 한 편만 있는 페이지에는 위에 아무 글도 없어서
+   * 잴 시간 자체가 없으므로 주지 않는다.
+   */
+  since?: number | undefined
 }
 
 /**
@@ -32,7 +41,7 @@ type Props = {
  * 이름을 붙여야 할 만큼 정리되지 않은 것도 그대로 남긴다.
  * 대신 날짜는 늘 있고, 그 날짜가 이 글의 주소다.
  */
-export function ThreadItem({ thread, level, linked, endmark }: Props) {
+export function ThreadItem({ thread, level, linked, endmark, since }: Props) {
   const Heading = level === 1 ? 'h1' : 'h2'
   const to = path.thread(thread.slug)
   const accessibleTitle = `${thread.date} — ${thread.title ?? thread.slug}`
@@ -54,7 +63,12 @@ export function ThreadItem({ thread, level, linked, endmark }: Props) {
   const seated = form === 'aside' && level === 1 ? 'note' : form
 
   return (
-    <article className={styles.item} data-form={seated} data-linked={linked}>
+    <article
+      className={styles.item}
+      data-form={seated}
+      data-linked={linked}
+      style={since === undefined ? undefined : ({ '--since': since } as CSSProperties)}
+    >
       <div className={styles.aside}>
         {linked ? (
           <Link to={to} className={`mono ${styles.date}`} aria-label={accessibleTitle}>

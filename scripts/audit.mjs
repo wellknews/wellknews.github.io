@@ -41,6 +41,10 @@
  *                   규칙을 안쪽으로 가져오면 히어로의 '/;'와 문들의
  *                   '/;/session'이 서로 다른 체계가 된다. 404의 돌아가는
  *                   링크에 '/;/'라고 적힌 채 배포된 적이 있다.
+ *  11. 멎은 시간    스레드 목록에서 글 사이의 빈 자리가 그 사이에 흐른 날수를
+ *                   따라가는지. 이 여백에는 라벨이 없어서 죽어도 화면은
+ *                   멀쩡해 보이고, 목록이 조용히 «고르게 쌓인 게시판»으로
+ *                   돌아간다. 눈으로는 잡을 수 없는 종류의 고장이다.
  *
  * 실행: npm run audit   (개발 서버가 떠 있어야 한다. 없으면 알아서 띄운다.)
  */
@@ -1207,6 +1211,77 @@ async function auditAddressStyle(page, screen, pageName) {
   }
 }
 
+/**
+ * 글 사이의 빈 자리가 그 사이에 흐른 시간을 따라가는가.
+ *
+ * 이 여백은 라벨이 없다. 그래서 죽으면 아무도 모른다 — 간격이 전부 같아져도
+ * 화면은 멀쩡해 보이고, 목록은 그냥 «고르게 쌓인 게시판»이 될 뿐이다.
+ * 눈으로는 잡을 수 없는 종류의 고장이라 재서 본다.
+ *
+ * 날짜는 화면에 이미 적혀 있다. 그 적힌 날짜에서 날수를 다시 세고, 여백이
+ * 그 순서를 따르는지만 본다. 컴포넌트의 상수(기준 여백·하루 폭·멈추는 날수)를
+ * 여기 옮겨 적지 않는다. 옮겨 적으면 한쪽을 고칠 때 다른 쪽이 조용히 낡고,
+ * 그때부터 이 검사는 지난 설계를 지키게 된다.
+ */
+async function auditThreadSpacing(page, screen, pageName) {
+  const rows = await page.evaluate(() =>
+    [...document.querySelectorAll('[class*="ThreadList-module__list"] > article')].map((el) => ({
+      date: el.querySelector('time')?.getAttribute('datetime') ?? '',
+      space: Math.round(parseFloat(getComputedStyle(el).marginTop)),
+    })),
+  )
+
+  if (rows.length < 3) {
+    fail(
+      `${screen.name} ${pageName}에서 스레드 항목을 ${rows.length}개밖에 찾지 못했다 — ` +
+        `검사가 자리를 놓치고 있다.`,
+    )
+    return
+  }
+
+  const DAY = 24 * 60 * 60 * 1000
+  /* 이음매 하나 = 위 글과 이 글 사이. 첫 글 위에는 잰 시간이 없어 이음매가 아니다. */
+  const seams = rows.slice(1).map((row, i) => ({
+    at: row.date,
+    days: Math.round(
+      (Date.parse(`${rows[i].date}T00:00:00Z`) - Date.parse(`${row.date}T00:00:00Z`)) / DAY,
+    ),
+    space: row.space,
+  }))
+
+  const shown = seams.map((s) => `${s.days}일→${s.space}px`).join(', ')
+  const sorted = [...seams].sort((a, b) => a.days - b.days)
+
+  /* 적게 비운 자리가 많이 비운 자리보다 넓으면 안 된다. */
+  for (let i = 1; i < sorted.length; i += 1) {
+    if (sorted[i].space < sorted[i - 1].space) {
+      fail(
+        `${screen.name} ${pageName}에서 시간이 여백을 거슬렀다 — ` +
+          `${sorted[i - 1].days}일이 ${sorted[i - 1].space}px인데 ` +
+          `${sorted[i].days}일이 ${sorted[i].space}px다 (${sorted[i].at} 위). 전부: ${shown}`,
+      )
+      return
+    }
+  }
+
+  /* 그리고 실제로 벌어지기는 하는가. 전부 같으면 규칙이 있으나 마나다. */
+  const narrow = sorted[0]
+  const wide = sorted[sorted.length - 1]
+
+  if (wide.days > narrow.days && wide.space <= narrow.space) {
+    fail(
+      `${screen.name} ${pageName}에서 시간이 여백을 만들지 않는다 — ` +
+        `${narrow.days}일도 ${wide.days}일도 ${narrow.space}px다. 전부: ${shown}`,
+    )
+    return
+  }
+
+  pass(
+    `${screen.name} ${pageName}의 빈 자리가 시간을 따라간다 ` +
+      `(${narrow.days}일 ${narrow.space}px → ${wide.days}일 ${wide.space}px)`,
+  )
+}
+
 /* ─────────────────────────────  실행  ───────────────────────────── */
 
 async function waitForServer(url, tries = 60) {
@@ -1288,6 +1363,7 @@ for (const screen of SCREENS) {
     await auditReplay(page, screen, target)
 
     if (target.kind === 'session') await auditClipping(page, screen, dir)
+    if (target.name === 'thread-index') await auditThreadSpacing(page, screen, target.name)
   }
 
   await page.close()
