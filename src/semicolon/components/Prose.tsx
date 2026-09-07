@@ -16,5 +16,5 @@ type Props = {
  * 아니라 주장의 근거이기 때문에, 글과 같은 폭으로 줄여 걸지 않는다.
  */
 export function Prose({ children }: Props) {
-  return <div className={styles.prose}>{children}</div>
+  return <div className={`reading ${styles.prose}`}>{children}</div>
 }
