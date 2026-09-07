@@ -410,6 +410,31 @@ const DEVICES = [
     changed: dotMoved,
   },
 
+  /*
+   * 앞 생각에서 흘러 들어오는 점. THREAD에만 있다.
+   *
+   * 이 게시판의 기호는 끝이 점 셋으로 흘러가는데, 그 점이 글에서도 실제로
+   * 이어져야 «이어지는 중»이 그림이 아니라 뜻이 된다. 안 움직이면 남는 것은
+   * 앞 글로 가는 평범한 링크 하나다.
+   */
+  {
+    kind: 'index',
+    label: '흘러 들어오는 점',
+    target: '[class*="ThreadItem-module__trailLink"]',
+    /* 점은 링크 왼쪽 끝의 좁은 자리에서만 움직인다. 링크 전체를 찍으면 묻힌다. */
+    watch: '[class*="ThreadItem-module__dots"]',
+    read: () => window.auditDotShift('[class*="ThreadItem-module__dots"] > span'),
+    changed: dotMoved,
+    /*
+     * 여기까지의 장치는 전부 눌러도 제자리에 남는 것들이었다. 이 자리는 다르다 —
+     * 링크라서 손가락으로 탭하면 앞 글로 넘어가고, «누른 뒤»를 잴 대상 자체가
+     * 화면에서 사라진다. 그러면 검사가 실패하는 것이 아니라 죽는다.
+     *
+     * 쥔 채로 재고, 손은 링크 밖에서 뗀다.
+     */
+    hold: true,
+  },
+
   {
     kind: 'code',
     label: '빗나간 진단',
@@ -547,6 +572,28 @@ async function auditDevices(page, screen, where, dir) {
      * 아니라서 넓은 판면에서만 났고, 그래서 판면을 바꿔 가며 봐야 보였다.
      */
     await target.evaluate((el) => el.scrollIntoView({ block: 'center', behavior: 'instant' }))
+
+    /*
+     * 스크롤이 멈출 때까지 기다린다.
+     *
+     * 이 공간은 부드러운 스크롤을 쓴다. 목록 깊은 곳(스레드 목록은 26,000px가
+     * 넘는다)에 있는 장치로 가면 그 거리를 한동안 기어가는데, 그동안 요소는
+     * 계속 움직이고 있다. Playwright의 boundingBox는 요소가 멈출 때까지
+     * 기다리므로 30초 기한을 넘기고 검사 자체가 죽는다. 실제로 그렇게 죽었다.
+     *
+     * 고정 시간으로 기다리면 긴 거리에서 또 모자란다. 멈춘 것을 확인하고 간다.
+     */
+    let resting = null
+
+    for (let i = 0; i < 60; i += 1) {
+      const y = await page.evaluate(() => Math.round(window.scrollY))
+
+      if (y === resting) break
+
+      resting = y
+      await page.waitForTimeout(100)
+    }
+
     await page.waitForTimeout(400)
 
     /* 화면 이름에 슬래시가 들어가므로 파일 이름으로 쓰기 전에 바꾼다. */
@@ -599,7 +646,18 @@ async function auditDevices(page, screen, where, dir) {
 
     const afterPixels = await pixels(page, seen, `${stem}-after.png`)
 
-    if (device.hold) await page.mouse.up()
+    /*
+     * 손을 뗄 때는 대상 밖으로 나가서 뗀다.
+     *
+     * 누른 자리에서 그대로 떼면 클릭이 되고, 그 자리가 링크면 페이지가 넘어간다.
+     * 다음 장치는 자기가 있어야 할 화면이 아닌 곳에서 자기를 찾게 된다.
+     * 누른 곳과 뗀 곳이 다르면 클릭은 두 자리의 공통 조상에서 일어나므로
+     * 링크가 눌리지 않는다. 재는 일은 위에서 이미 끝났다.
+     */
+    if (device.hold) {
+      await page.mouse.move(0, 0)
+      await page.mouse.up()
+    }
     const moved = movedFraction(beforePixels, afterPixels)
     const subject = `${device.label}${josa(device.label, '이', '가')}`
     const input = screen.touch ? '탭' : '커서'
