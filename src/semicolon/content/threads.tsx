@@ -604,7 +604,11 @@ export const threads: readonly Thread[] = [
     slug: 'thread-publisher-sketch',
     date: '2026-08-24',
     title: '글을 올리는 앱을 만들까 한다',
-    form: 'note',
+    /*
+     * 이 공간을 운영하다 생긴 불편이 다른 프로젝트로 뻗어 나가는 글이다.
+     * 본류에서 갈라지는 쪽이라 곁가지로 앉힌다.
+     */
+    form: 'aside',
     body: (
       <>
         <p>여기에 글을 쓰는 일이 생각보다 귀찮다.</p>
@@ -717,7 +721,9 @@ export const threads: readonly Thread[] = [
      * 바로 이해되지는 않는다는 것. 이 글이 하는 말이 그 둘 사이에 있다.
      */
     title: '바로 이해되지 않는 관련',
-    form: 'note',
+    /* 앞 글에서 갈라져 나온 생각이다. 본류가 아니므로 오른쪽으로 물러나 앉는다. */
+    form: 'aside',
+    follows: 'what-makes-people-follow',
     body: (
       <>
         <p>
@@ -947,9 +953,15 @@ export const threads: readonly Thread[] = [
      *
      * 제목을 물음으로 두고 이 문장을 그 답으로 둔다. 원래 이 문장이 하던
      * 일이 그것이다 — 여유를 어디에 둘 것인가에 대한 답.
+     *
+     * 그래서 이제 loud로 간다. 위의 반대는 «제목이 없다»에 대한 것이었고
+     * 제목이 생기면서 없어졌다. 그리고 물음과 답이라는 구조가 오히려 이
+     * 형식을 부른다 — 물음은 제목의 크기로, 답은 판면의 크기로. 본문이
+     * 제목보다 커지는 것이 이상해 보일 수 있는데, 여기서는 그쪽이 맞다.
      */
     title: '여유를 어디에 둘 것인가',
-    form: 'note',
+    form: 'loud',
+    follows: 'pause-inside',
     body: (
       <>
         <p>여유로운 삶을 추구하는 것이 아니라, 바쁜 삶 속에 여유를 삽입한다.</p>
@@ -961,6 +973,8 @@ export const threads: readonly Thread[] = [
     date: '2026-08-19',
     title: '왜 쉼표가 아니라 세미콜론인가',
     form: 'note',
+    /* «계속 이어지는 흐름의 중간에 잠시 삽입되는 하나의 구간» — 앞 글의 그 문장이다. */
+    follows: 'insert-not-escape',
     body: (
       <>
         <p>

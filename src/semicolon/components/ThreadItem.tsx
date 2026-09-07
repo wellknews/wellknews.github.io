@@ -1,3 +1,4 @@
+import { findThread } from '../content/threads'
 import type { Thread } from '../content/types'
 import { Link, path } from '../router'
 import { Prose } from './Prose'
@@ -35,6 +36,8 @@ export function ThreadItem({ thread, level, linked, endmark }: Props) {
   const Heading = level === 1 ? 'h1' : 'h2'
   const to = path.thread(thread.slug)
   const accessibleTitle = `${thread.date} — ${thread.title ?? thread.slug}`
+  /* 없는 글을 가리키고 있으면 아무것도 그리지 않는다. */
+  const prior = thread.follows ? findThread(thread.follows) : undefined
 
   return (
     <article className={styles.item} data-form={thread.form ?? 'note'} data-linked={linked}>
@@ -51,6 +54,42 @@ export function ThreadItem({ thread, level, linked, endmark }: Props) {
       </div>
 
       <div className={styles.main}>
+        {/*
+          이 생각이 이어져 나온 자리.
+
+          이 게시판의 기호는 끝이 닫히지 않고 점 셋으로 흘러간다. 그 점을
+          목록 머리에만 그려 두고 정작 글에서는 아무것도 이어지지 않으면,
+          그것은 뜻이 아니라 모양이다. 앞 글이 있는 글에서는 점이 실제로
+          그쪽에서 흘러 들어온다.
+
+          제목 위에 놓는다. 이 글을 읽기 전에 알아야 하는 것이지 읽고 나서
+          권하는 것이 아니다 — 뒤에 놓으면 «다음 글 보기»가 된다.
+        */}
+        {prior ? (
+          <p className={`mono ${styles.trail}`}>
+            <Link
+              to={path.thread(prior.slug)}
+              className={styles.trailLink}
+              aria-label={`이어지기 전의 글 — ${prior.title ?? prior.date}`}
+            >
+              <span className={styles.dots} aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
+              {/*
+                앞 글의 날짜는 적지 않는다.
+
+                이 글의 날짜가 바로 위에 있어서 두 개가 나란히 서면 어느 것이
+                이 글의 것인지 알 수 없다. 앞 글이 같은 날인 경우가 실제로
+                있어서 특히 그렇다. 어디서 왔는지는 제목이 말하고, 언제는
+                눌러 보면 그 글이 말한다.
+              */}
+              <span className={styles.trailTitle}>{prior.title ?? prior.date}</span>
+            </Link>
+          </p>
+        ) : null}
+
         {thread.title ? (
           <Heading className={styles.title}>{thread.title}</Heading>
         ) : (
