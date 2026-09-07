@@ -41,6 +41,10 @@
  *                   규칙을 안쪽으로 가져오면 히어로의 '/;'와 문들의
  *                   '/;/session'이 서로 다른 체계가 된다. 404의 돌아가는
  *                   링크에 '/;/'라고 적힌 채 배포된 적이 있다.
+ *  12. 뜻을 잃은 날짜  덧붙임의 날짜가 원래 날짜와 같은 칼럼에 앉는지.
+ *                   이 자리에는 «덧붙임»이라는 글자가 없어서, 정렬이 깨지면
+ *                   두 번째 날짜는 본문에 섞인 숫자가 된다. 덧붙인 글이 아직
+ *                   없으면 아무 말도 하지 않는다.
  *  11. 멎은 시간    스레드 목록에서 글 사이의 빈 자리가 그 사이에 흐른 날수를
  *                   따라가는지. 이 여백에는 라벨이 없어서 죽어도 화면은
  *                   멀쩡해 보이고, 목록이 조용히 «고르게 쌓인 게시판»으로
@@ -1282,6 +1286,78 @@ async function auditThreadSpacing(page, screen, pageName) {
   )
 }
 
+/**
+ * 덧붙임이 원래 날짜와 같은 칼럼에 앉는가, 그리고 끝 기호가 맨 뒤에 오는가.
+ *
+ * 이 자리에는 «덧붙임»이라는 글자가 없다. 무슨 일이 일어났는지를 말하는 것은
+ * 오직 «한 글에 날짜가 둘이고 둘이 같은 칼럼에 앉아 있다»는 사실 하나다.
+ * 그 정렬이 깨지면 두 번째 날짜는 뜻을 잃고 본문에 섞인 숫자가 된다 —
+ * 화면은 멀쩡해 보이고, 라벨이 없으니 무엇이 없어졌는지도 안 보인다.
+ *
+ * 덧붙임이 아직 하나도 없으면 아무 말도 하지 않는다. 없는 것을 두고 통과라고
+ * 적으면 그때부터 이 줄은 «검사했다»는 착각만 남긴다.
+ */
+async function auditAddition(page, screen, pageName) {
+  const found = await page.evaluate(() => {
+    const x = (node) => Math.round(node.getBoundingClientRect().x)
+
+    return [...document.querySelectorAll('article')]
+      .map((article) => {
+        const added = [...article.querySelectorAll('[class*="ThreadItem-module__addedOn"]')]
+
+        if (added.length === 0) return null
+
+        const own = article.querySelector('[class*="ThreadItem-module__aside"] time')
+        const end = article.querySelector('.endmark')
+        const last = added.at(-1)
+
+        return {
+          slug: article.querySelector('time')?.getAttribute('datetime') ?? '?',
+          ownX: own ? x(own.closest('p, a') ?? own) : null,
+          dates: added.map((node) => ({
+            on: node.querySelector('time')?.getAttribute('datetime') ?? '?',
+            x: x(node),
+          })),
+          /* 끝 기호는 마지막 덧붙임보다 아래에 있어야 한다. */
+          endBelow: end
+            ? end.getBoundingClientRect().top > last.getBoundingClientRect().bottom
+            : null,
+        }
+      })
+      .filter(Boolean)
+  })
+
+  /* 아직 덧붙인 글이 없다. 잴 것이 없으므로 아무 말도 하지 않는다. */
+  if (found.length === 0) return
+
+  for (const item of found) {
+    const off = item.dates.filter((d) => Math.abs(d.x - item.ownX) > 1)
+
+    if (off.length) {
+      fail(
+        `${screen.name} ${pageName}의 ${item.slug} 글에서 덧붙임 날짜가 원래 날짜와 ` +
+          `다른 칼럼에 앉았다 — 원래 ${item.ownX}px인데 ` +
+          `${off.map((d) => `${d.on}은 ${d.x}px`).join(', ')}. ` +
+          `이 자리에는 라벨이 없어서 정렬이 곧 뜻이다.`,
+      )
+      continue
+    }
+
+    if (item.endBelow === false) {
+      fail(
+        `${screen.name} ${pageName}의 ${item.slug} 글에서 끝 기호가 덧붙임보다 위에 있다 — ` +
+          `글이 끝나고 나서 글이 더 온다.`,
+      )
+      continue
+    }
+
+    pass(
+      `${screen.name} ${pageName}의 덧붙임 ${item.dates.length}개가 원래 날짜와 ` +
+        `같은 칼럼(${item.ownX}px)에 앉는다`,
+    )
+  }
+}
+
 /* ─────────────────────────────  실행  ───────────────────────────── */
 
 async function waitForServer(url, tries = 60) {
@@ -1364,6 +1440,7 @@ for (const screen of SCREENS) {
 
     if (target.kind === 'session') await auditClipping(page, screen, dir)
     if (target.name === 'thread-index') await auditThreadSpacing(page, screen, target.name)
+    if (target.kind === 'index') await auditAddition(page, screen, target.name)
   }
 
   await page.close()

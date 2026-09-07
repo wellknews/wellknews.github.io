@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import { Fragment, type CSSProperties } from 'react'
 
 import { findThread } from '../content/threads'
 import type { Thread } from '../content/types'
@@ -126,14 +126,38 @@ export function ThreadItem({ thread, level, linked, endmark, since }: Props) {
         )}
 
         <Prose>{thread.body}</Prose>
-
-        {/* 여기서 문장이 잠시 멈춘다는 표시 */}
-        {endmark ? (
-          <span className="endmark" aria-hidden="true">
-            ;
-          </span>
-        ) : null}
       </div>
+
+      {/*
+        나중에 돌아와 덧붙인 자리.
+
+        날짜가 원래 날짜와 같은 여백 칼럼에 앉는다. 그래서 «덧붙임»이라고
+        적지 않는다 — 한 글에 날짜가 둘이면 무슨 일이 있었는지 이미 읽힌다.
+        적는 순간 그 글자가 이 자리의 뜻을 대신하게 되고, 두 번째 날짜는
+        그 글자 옆의 부속물이 된다.
+      */}
+      {thread.additions?.map((addition) => (
+        <Fragment key={addition.date}>
+          <p className={`mono ${styles.date} ${styles.addedOn}`}>
+            <time dateTime={addition.date}>{addition.date}</time>
+          </p>
+          <div className={`${styles.main} ${styles.added}`}>
+            <Prose>{addition.body}</Prose>
+          </div>
+        </Fragment>
+      ))}
+
+      {/*
+        여기서 문장이 잠시 멈춘다는 표시.
+
+        덧붙임까지 다 지나고 나서 찍는다. 본문 안에 두면 나중에 덧붙인 문단이
+        끝 기호 뒤에 오게 되고, 그러면 «끝났다»가 두 번 일어난다.
+      */}
+      {endmark ? (
+        <span className={`endmark ${styles.end}`} aria-hidden="true">
+          ;
+        </span>
+      ) : null}
     </article>
   )
 }
