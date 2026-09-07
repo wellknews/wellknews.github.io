@@ -1577,6 +1577,60 @@ for (const screen of SCREENS) {
   }
 
   await still.close()
+
+  /*
+   * 스크롤 타임라인이 없는 브라우저에서도 잉크가 가라앉는가.
+   *
+   * 이 규칙의 CSS 문법은 아직 크로미움 계열에만 있다. 사파리와 파이어폭스에서는
+   * @supports가 통째로 막아서 아무 일도 일어나지 않고, 그래서 손으로 같은 일을
+   * 하는 길을 따로 냈다. 그런데 검사를 도는 브라우저에는 그 문법이 있으므로
+   * 가만히 두면 그 길만 영영 검사 밖에 남는다 — 정작 그 길이 필요한 사람들이
+   * 쓰는 쪽인데.
+   *
+   * 그래서 문법이 없는 척하게 만들고 한 번 더 본다. 앱에 검사용 스위치를 넣지
+   * 않는다. 판면 쪽에서 «없다»고 답하게 하는 것으로 충분하고, 그래야 배포되는
+   * 코드에 검사만을 위한 자리가 생기지 않는다.
+   */
+  const plain = await browser.newPage(context)
+
+  watch(plain, `${screen.name}(타임라인 없음)`)
+
+  /*
+   * 두 가지를 같이 해야 한다.
+   *
+   * 처음에는 CSS.supports만 가렸다. 그 검사는 대신 하는 길을 통째로 죽여 놓고
+   * 돌려도 통과했다 — JS의 CSS.supports를 바꿔도 CSS 엔진의 @supports는 그것을
+   * 보지 않으므로 원래 규칙이 그대로 돌았고, 검사는 규칙이 아니라 규칙의 그림자를
+   * 보고 있었다. 아무것도 보지 않으면서 통과라고 적는 검사가 제일 나쁘다.
+   *
+   * 그래서 판면 쪽 답과 CSS 규칙 둘 다 없앤다. 그러고 남는 것이 대신 하는
+   * 길뿐이라, 그때 잉크가 가라앉으면 그 길이 실제로 일한 것이다.
+   */
+  await plain.addInitScript(() => {
+    const real = CSS.supports.bind(CSS)
+
+    CSS.supports = (...args) =>
+      String(args[0]).includes('animation-timeline') ? false : real(...args)
+
+    const mute = () => {
+      const style = document.createElement('style')
+
+      style.textContent = '.reading p { animation-name: none !important }'
+      document.head.append(style)
+    }
+
+    if (document.head) mute()
+    else document.addEventListener('DOMContentLoaded', mute)
+  })
+
+  for (const target of PAGES.filter((page) => page.kind === 'session')) {
+    await plain.goto(`${BASE}${target.path}`, { waitUntil: 'networkidle' })
+    await plain.waitForTimeout(600)
+
+    await auditReadingSettle(plain, screen, `${target.name}(타임라인 없음)`)
+  }
+
+  await plain.close()
 }
 
 console.log('\n── 좁은 판면이 내용을 잃지 않았는가 ──')
