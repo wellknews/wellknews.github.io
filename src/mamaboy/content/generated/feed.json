@@ -1,7 +1,651 @@
 {
-  "generatedAt": "2026-09-08T06:30:54.709Z",
+  "generatedAt": "2026-09-08T12:32:04.954Z",
   "prototype": false,
   "articles": [
+    {
+      "id": "fight-aging:6b62f91068",
+      "slug": "dogs-exhibit-comorbidity-and-mortality-risk-in-much-6b62f9",
+      "titleOriginal": "Dogs Exhibit Comorbidity and Mortality Risk in Much the Same Way as Humans",
+      "summaryOriginal": "One of the goals of the Dog Aging Project is to better establish that the characteristics of aging in dogs are close enough to the characteristics of aging in humans to make the results of interventions on dog life span relevant to the development of human medicine. Thus the paper here, in which researchers establish that comorbidity, the presence of multiple age-related conditions in the same ind",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "One of the goals of the Dog Aging Project is to better establish that the characteristics of aging in dogs are close enough to the characteristics of aging in humans to make the results of interventions on dog life span relevant to the development of human medicine. Thus the paper here, in which researchers establish that comorbidity , the presence of multiple age-related conditions in the same individual, has much the same relationship with aging and mortality in dogs as it does in people. To have an age-related disease is to have a significant degree of dysfunction in some organ or tissue. The greater the burden of underlying cell and tissue damage resulting from aging, the more likely it is that multiple age-related conditions will emerge. Further, significant dysfunction in any one organ or tissue will tend to generate issues in other organs or tissues; everything connections everything else in our biology."
+        },
+        {
+          "kind": "text",
+          "text": "Multimorbidity , the presence of two or more conditions, is associated with a higher risk of death as individuals age. However, modeling multimorbidity in laboratory animals is difficult, if not impossible, because specific conditions are seldom individually diagnosed and treated in these settings. Because of their shared environment, physiology, and genetic diversity, and because they are medically managed as individuals, companion dogs have potential to serve as a translational multimorbidity model . Yet it is unknown how diagnoses accumulate over time, how these diagnoses are associated with mortality, and which multimorbid condition combinations are the most prevalent and hazardous."
+        },
+        {
+          "kind": "text",
+          "text": "Utilizing owner-reported data from over 50,000 dogs in the Dog Aging Project (DAP), we assessed how multimorbidities develop, learned which are the most prevalent, and evaluated their impact on survival. Like in humans, we show that the accumulation of conditions is associated with an increased risk of death in dogs. We also present data suggesting that future reported condition rates vary depending on the conditions a dog's owner already has reported. Not surprisingly, our analysis reveals that the overall canine aging process appears to be the driving factor behind disease development, more so than other covariates . Through classifying multimorbidities, we found that almost all either exhibit a synergistic effect or are driven by a single, predominant condition. In both cases, osteoarthritis , overweight, and cancer were highly prevalent throughout."
+        },
+        {
+          "kind": "text",
+          "text": "This analysis expands on previously conducted DAP work and further highlights the usefulness of the companion dog as a translational model for human aging."
+        },
+        {
+          "kind": "text",
+          "text": "Link: https://doi.org/10.1007/s11357-026-02342-4"
+        }
+      ],
+      "sourceName": "Fight Aging!",
+      "sourceUrl": "https://www.fightaging.org/",
+      "originalUrl": "https://www.fightaging.org/archives/2026/09/dogs-exhibit-comorbidity-and-mortality-risk-in-much-the-same-way-as-humans",
+      "author": "Reason",
+      "publishedAt": "2026-09-08T10:22:40.000Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
+      "language": "en",
+      "keywords": [
+        "Daily News"
+      ],
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 3,
+      "careScore": 0.95,
+      "curiosityScore": 0,
+      "contentType": "research",
+      "titleKo": "개도 인간과 거의 비슷한 방식으로 동반 질환과 사망 위험을 보입니다",
+      "summaryKo": "개 노화 프로젝트의 목표 중 하나는 개의 노화 특성이 인간의 노화 특성과 충분히 유사함을 더 잘 입증하여 개 수명에 대한 개입 결과가 인간 의학 개발에 적합하도록 하는 것입니다. 따라서 연구자들이 같은 질환 내에 여러 연령 관련 질환이 존재한다는 공존 질환을 입증한 논문은",
+      "bodyKo": [
+        "개 노화 프로젝트의 목표 중 하나는 개의 노화 특성이 인간의 노화 특성과 충분히 유사함을 입증하여 개 수명에 대한 개입 결과가 인간 의학 개발에 적합하게 만드는 것입니다. 따라서 연구자들이 밝힌 이 논문은 동반질환, 즉 한 개체 내에 여러 연령 관련 질환이 존재하는 것이 개의 노화와 사망률과 인간과 거의 동일한 관계를 맺는다는 것을 밝혀냅니다. 노화 관련 질환을 앓는다는 것은 어떤 장기나 조직에 상당한 수준의 기능 장애가 있다는 뜻입니다. 노화로 인한 기저 세포 및 조직 손상의 부담이 클수록 여러 연령 관련 질환이 발생할 가능성이 높아집니다. 더 나아가, 한 장기나 조직에서 심각한 기능 장애가 발생하면 다른 장기나 조직에도 문제를 일으키는 경향이 있습니다; 모든 것은 우리 생물학의 다른 모든 것과 연결되어 있습니다.",
+        "다중 질환, 즉 두 가지 이상의 질환이 존재하는 것은 개인이 나이가 들수록 사망 위험이 높아지는 것과 관련이 있습니다. 하지만 실험동물에서 다중 질환을 모델링하는 것은 어렵거나 불가능에 가깝습니다. 왜냐하면 특정 질환이 개별적으로 진단되고 치료되는 경우가 드물기 때문입니다. 공유된 환경, 생리학, 유전적 다양성 때문에, 그리고 개별적으로 의학적으로 관리되기 때문에, 반려견은 중개 다중 질환 모델로서 역할을 할 잠재력을 가지고 있습니다. 그러나 진단이 시간에 따라 어떻게 누적되는지, 이러한 진단이 사망률과 어떻게 연관되는지, 그리고 어떤 다중 질환 조합이 가장 흔하고 위험한지는 아직 알려져 있지 않습니다.",
+        "개 노화 프로젝트(DAP)에서 5만 마리 이상의 개에서 주인이 보고한 데이터를 활용하여, 우리는 다중 질환이 어떻게 발생하는지 평가하고, 가장 흔한 질환을 파악하며, 생존에 미치는 영향을 평가했습니다. 인간과 마찬가지로, 우리는 질환의 축적이 개의 사망 위험 증가와 연관되어 있음을 보여주었습니다. 또한 앞으로 보고된 질환률이 개 주인이 이미 보고한 상태에 따라 달라진다는 데이터도 제시했습니다. 예상대로, 우리의 분석 결과는 전체 개의 노화 과정이 다른 공변량보다 질병 발병의 주요 원인으로 보임을 보여줍니다. 다중 이환을 분류한 결과, 거의 모든 질환이 시너지 효과를 보이거나 단일 주요 질환에 의해 유발된다는 사실을 발견했습니다. 두 경우 모두 골관절염, 과체중, 암이 매우 유행했습니다.",
+        "이 분석은 이전에 수행된 DAP 연구를 확장하며, 반려견이 인간 노화의 번역 모델로서 얼마나 유용한지 더욱 강조합니다.",
+        "링크: https://doi.org/10.1007/s11357-026-02342-4"
+      ]
+    },
+    {
+      "id": "fight-aging:70b73e42a4",
+      "slug": "age-acceleration-in-various-proteomic-clocks-correlates-with-70b73e",
+      "titleOriginal": "Age Acceleration in Various Proteomic Clocks Correlates with Risk of Mortality and Age-Related Disease",
+      "summaryOriginal": "In recent years, researchers have been gathering as much data as possible on the behavior of aging clocks of various sorts. The study here is an example of the type, in which multiple proteomic clocks were assessed in large epidemiological study populations. As one might expect, where there is age acceleration, meaning a higher clock age than chronological age, this correlates with a greater risk ",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "In recent years, researchers have been gathering as much data as possible on the behavior of aging clocks of various sorts. The study here is an example of the type, in which multiple proteomic clocks were assessed in large epidemiological study populations. As one might expect, where there is age acceleration , meaning a higher clock age than chronological age, this correlates with a greater risk of age-related disease and mortality. Though as noted, clocks don't improve all that much on lifestyle indicators when it comes to the quality of the correlation. This sort of study helps to build a foundation of data as a reference for further exploration of clock behavior in response to interventions thought to affect the pace or state of degenerative aging."
+        },
+        {
+          "kind": "text",
+          "text": "Assessment of biological aging using proteomic clocks may enhance risk prediction and elucidate the molecular links between aging and chronic diseases. Here, among 17,473 participants of the European Prospective Investigation into Cancer and Nutrition , we examined associations of plasma SomaScan-based proteomic clocks , including organ-specific clocks , with risk factors, 24 incident chronic diseases and all-cause mortality, over up to 28 years of follow-up. Replication was conducted in the Whitehall II study ."
+        },
+        {
+          "kind": "text",
+          "text": "We show that the global age gap, an age acceleration score combining proteomic clocks, was associated with smoking, alcohol consumption, physical inactivity and higher risk of mortality, cardiovascular diseases , dementia and cancers of the liver, upper aero-digestive tract, lung and kidney. Lung, kidney and stomach cancers were more strongly associated with related organ-specific age gaps. Predictive performance of proteomic clocks for mortality was comparable to that of classical lifestyle risk factors. In summary, proteomic clocks appear promising biomarkers of generalized age-related disease risk."
+        },
+        {
+          "kind": "text",
+          "text": "Link: https://doi.org/10.1038/s43587-026-01163-6"
+        }
+      ],
+      "sourceName": "Fight Aging!",
+      "sourceUrl": "https://www.fightaging.org/",
+      "originalUrl": "https://www.fightaging.org/archives/2026/09/age-acceleration-in-various-proteomic-clocks-correlates-with-risk-of-mortality-and-age-related-disease",
+      "author": "Reason",
+      "publishedAt": "2026-09-08T10:10:00.000Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
+      "language": "en",
+      "keywords": [
+        "Daily News"
+      ],
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 3,
+      "careScore": 0.95,
+      "curiosityScore": 0,
+      "contentType": "research",
+      "titleKo": "다양한 단백질체 시계에서의 연령 가속은 사망 위험 및 연령 관련 질환과 상관관계가 있습니다",
+      "summaryKo": "최근 몇 년간 연구자들은 다양한 종류의 노화 시계의 거동에 관한 가능한 한 많은 데이터를 수집해 왔습니다. 이 연구는 대규모 역학 연구 집단에서 여러 프로테오믹 시계를 평가한 유형의 예입니다. 예상할 수 있듯이, 나이 가속, 즉 시계 나이가 연대기보다 높은 경우, 이는 더 큰 위험과 연관이 있습니다",
+      "bodyKo": [
+        "최근 몇 년간 연구자들은 다양한 종류의 노화 시계의 행동에 관한 가능한 한 많은 데이터를 수집해 왔습니다. 이 연구는 대규모 역학 연구 집단에서 여러 프로테오믹 시계를 평가한 유형의 예입니다. 예상할 수 있듯이, 나이 가속(나이 가속)이 있을 때, 이는 연령 관련 질병과 사망 위험이 더 높다는 의미입니다. 하지만 앞서 언급했듯이, 시계는 상관관계의 질에 있어 생활 습관 지표를 크게 개선하지 못합니다. 이러한 연구는 퇴행성 노화 속도나 상태에 영향을 미치는 것으로 여겨지는 개입에 대응하는 시계 행동을 더 깊이 탐구하기 위한 참고 자료 기반을 마련하는 데 도움을 줍니다.",
+        "프로테오믹 시계를 이용한 생물학적 노화 평가는 위험 예측을 향상시키고 노화와 만성 질환 간의 분자적 연관성을 명확히 할 수 있습니다. 여기서, 유럽 암 및 영양 전향 조사 참가자 17,473명 중 장기 특이적 시계를 포함한 혈장 SomaScan 기반 프로테오믹 시계가 위험 요인, 24건의 만성 질환 발생 및 모든 원인 사망률과 최대 28년간의 추적 관찰 기간 동안 연관성을 조사했습니다. 재현은 화이트홀 II 연구에서 수행되었습니다.",
+        "우리는 단백질체 시계를 결합한 연령 가속 점수인 글로벌 연령 격차가 흡연, 음주, 신체 활동 부족, 사망 위험 증가, 심혈관 질환, 치매, 간암, 상부 항공소화관암, 폐암, 신장암과 연관이 있음을 보였다. 폐암, 신장암, 위암은 관련 장기 특이적 연령 격차와 더 강하게 연관되었다. 사망률에 대한 단백질체 시계의 예측 성능은 고전적 생활습관 위험 요인과 유사했다. 요약하자면, 단백질체 시계는 일반화된 연령 관련 질환 위험의 유망한 생체지표로 보인다.",
+        "링크: https://doi.org/10.1038/s43587-026-01163-6"
+      ]
+    },
+    {
+      "id": "dezeen:19a6371262",
+      "slug": "dulux-reveals-sage-green-as-colour-of-the-19a637",
+      "titleOriginal": "Dulux reveals sage green as Colour of the Year 2027",
+      "summaryOriginal": "Paint brand Dulux has announced Soulful Sage – \"a versatile green that provides a flexible foundation for schemes\" – as its colour of the year for 2027. Dulux selected the soft grey-green as its annual colour of the year as it is a calm shade that has clear connections to nature. \"Taking us straight back The post Dulux reveals sage green as Colour of the Year 2027 appeared first on Dezeen .",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Paint brand Dulux has announced Soulful Sage – \"a versatile green that provides a flexible foundation for schemes\" – as its colour of the year for 2027."
+        },
+        {
+          "kind": "text",
+          "text": "Dulux selected the soft grey-green as its annual colour of the year as it is a calm shade that has clear connections to nature."
+        },
+        {
+          "kind": "text",
+          "text": "\"Taking us straight back to nature, it's a calm, uplifting shade – just what's needed today,\" the brand said."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/sage-green-colour-year-2027-dulux_dezeen_2364_col_8-scaled.jpg",
+          "alt": "Sage green is the Dulux Colour of the Year 2027"
+        },
+        {
+          "kind": "text",
+          "text": "Sage green is the Dulux Colour of the Year 2027 The selection is the result of research carried out throughout the year by the paint brand's parent company AkzoNobel. According to the brand, sage is a soothing and versatile colour, chosen as a response to the current feelings of global uncertainty."
+        },
+        {
+          "kind": "text",
+          "text": "\"To deliver projects that add lasting value, architects, specifiers and designers must consider how colour can support the intended purpose of a space, its functionality and the experience of the people using it,\" said Dulux."
+        },
+        {
+          "kind": "text",
+          "text": "\"AkzoNobel's annual ColourFutures research helps to inform this by translating emerging social and design trends into a practical colour direction that professionals can interpret and adapt for real projects.\""
+        },
+        {
+          "kind": "text",
+          "text": "Read: Rhythm of Blues named Dulux Colour of the Year 2026 \"For 2027, the research identified a move towards lighter, more considered environments that respond to the information overload and wider global uncertainty that people are experiencing,\" the brand continued."
+        },
+        {
+          "kind": "text",
+          "text": "\"These insights shaped Soulful Sage, a versatile green that provides a flexible foundation for schemes requiring different levels of warmth, neutrality or visual energy, depending on the brief.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/sage-green-colour-year-2027-dulux_dezeen_2364_col_4.jpg",
+          "alt": "Soulful Sage is the Dulux Colour of the Year"
+        },
+        {
+          "kind": "text",
+          "text": "According to Dulux the colour reflects \"wider global uncertainty\" Last year Dulux selected a trio of blue colours named Rhythm of Blues , as its Colour of the Year."
+        },
+        {
+          "kind": "text",
+          "text": "Rival colour arbiter Pantone, meanwhile, picked an understated, greyish white hue called Cloud Dancer ."
+        },
+        {
+          "kind": "text",
+          "text": "The post Dulux reveals sage green as Colour of the Year 2027 appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/08/sage-green-colour-year-2027-dulux",
+      "author": "Tom Ravenscroft",
+      "publishedAt": "2026-09-08T09:45:57.000Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Design",
+        "Green",
+        "Dulux",
+        "Colours of the year"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/sage-green-colour-year-2027-dulux_dezeen_2364_col_2-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "둘럭스가 2027년 올해의 색상으로 세이지 그린을 발표하다",
+      "summaryKo": "페인트 브랜드 둘럭스는 2027년 올해의 색상으로 소울풀 세이지를 발표했습니다. \"다양한 색상을 위한 유연한 기반을 제공하는 다재다능한 녹색\"입니다. 둘룩스는 자연과 명확한 연관이 있는 차분한 색상인 부드러운 회녹색을 연례 색상으로 선정했습니다. \"바로 과거로 돌아가서, 둘럭스가 2027년 올해의 색상으로 세이지 그린을 발표하다\"는 글은 Dezeen에 처음 게재되었습니다.",
+      "bodyKo": [
+        "페인트 브랜드 둘럭스는 2027년 올해의 색상으로 소울풀 세이지(Soulful Sage)를 발표했습니다. \"다양한 색상을 조합할 수 있는 유연한 기반을 제공하는 다재다능한 녹색\"입니다.",
+        "둘룩스는 자연과 명확한 연관이 있는 차분한 색조인 부드러운 회녹색을 연중 색상으로 선택했습니다.",
+        "\"자연으로 바로 돌아오게 하는 차분하고 고양되는 색상으로, 오늘날 꼭 필요한 색입니다,\"라고 브랜드는 말했습니다.",
+        "세이지 그린은 2027년 둘룩스 올해의 컬러입니다. 이 색상은 페인트 브랜드의 모회사인 악조노벨(AkzoNobel)이 연중 내내 실시한 연구의 결과입니다. 브랜드에 따르면, 세이지는 전 세계적인 불확실성에 대한 반응으로 선택된 부드럽고 다재다능한 색상입니다.",
+        "\"지속적인 가치를 더하는 프로젝트를 수행하기 위해서는 건축가, 사양 작성자, 디자이너가 색상이 공간의 의도된 목적, 기능성, 그리고 사용자 경험을 어떻게 지원할 수 있을지 고려해야 합니다,\"라고 둘룩스는 말했습니다.",
+        "\"AkzoNobel의 연례 ColourFutures 연구는 신흥 사회 및 디자인 트렌드를 전문가들이 실제 프로젝트에 해석하고 적용할 수 있는 실용적인 색상 방향으로 전환함으로써 이를 이해하는 데 도움을 줍니다.\"",
+        "읽어보세요: 리듬 오브 블루스, 2026년 둘럭스 올해의 색상 선정 \"2027년을 기준으로 연구는 정보 과부하와 전 세계적 불확실성에 대응하는 더 가볍고 신중한 환경으로의 전환을 확인했습니다,\"라고 브랜드는 덧붙였습니다.",
+        "\"이러한 통찰은 다재다능한 녹색 식물로, 요구에 따라 따뜻함, 중립성, 시각적 에너지가 요구되는 다양한 수준의 계획에 유연한 기반을 제공합니다.\"",
+        "Dulux에 따르면 이 색상은 \"더 넓은 글로벌 불확실성\"을 반영합니다. 작년 Dulux는 Rhythm of Blues라는 세 가지 파란색 색상을 올해의 색상으로 선정했습니다.",
+        "한편, 경쟁 컬러 심판인 팬톤은 '클라우드 댄서'라는 절제된 회백색 색조를 선택했다.",
+        "이 글은 듀럭스가 2027년 올해의 색상으로 세이지 그린을 공개하다 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:5f720add85",
+      "slug": "himacs-terrazzo-is-now-available-in-five-new-5f720a",
+      "titleOriginal": "HIMACS Terrazzo is now available in five new colourways",
+      "summaryOriginal": "Dezeen Showroom: HIMACS has added five colourways to its terrazzo-inspired collection, which have received a prestigious Red Dot Design Award 2026 in the product category. The HIMACS Terrazzo collection reimagines a timeless material technique through rich textures, a carefully balanced colour palette and distinctive, mineral-inspired patterns. The five additional HIMACS Terrazzo colours include T",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Dezeen Showroom: HIMACS has added five colourways to its terrazzo -inspired collection, which have received a prestigious Red Dot Design Award 2026 in the product category."
+        },
+        {
+          "kind": "text",
+          "text": "The HIMACS Terrazzo collection reimagines a timeless material technique through rich textures, a carefully balanced colour palette and distinctive, mineral-inspired patterns."
+        },
+        {
+          "kind": "text",
+          "text": "The five additional HIMACS Terrazzo colours include Terrazzo Ulivo, Terrazzo Nuvola, Terrazzo Sorrento, Terrazzo Marsala and Terrazzo Selva."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/himacs-terrazzo-new-colours-dezeen-showroom_dezeen_2364_col_4.jpg",
+          "alt": "HIMACS Terrazzo"
+        },
+        {
+          "kind": "text",
+          "text": "HIMACS Terrazzo Marsala has dark red tones intended for pairing with greys and beiges The latest colours have been recognised with the award, which celebrates the contemporary reinterpretation of traditional aesthetics, combining expressive design with responsible material innovation."
+        },
+        {
+          "kind": "text",
+          "text": "The hues incorporate SCS-certified pre-consumer recycled content, demonstrating how the demands of modern design can successfully coexist with enhanced sustainability in a high-performance solid surface."
+        },
+        {
+          "kind": "text",
+          "text": "The result is a versatile surface solution suited to hospitality, retail, workplace and residential environments. It also boasts the same aesthetics, durability and ease-of-maintenance that terrazzo is famous for."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/08/himacs-terrazzo-new-colours-dezeen-showroom_dezeen_2364_col_0-scaled.jpg",
+          "alt": "HIMACS Terrazzo"
+        },
+        {
+          "kind": "text",
+          "text": "HIMACS Terrazzo Ulivo is a densely speckled shade against a background of light olive tones \"The integration of production offcuts, recovered and reintroduced into new formulations during the fabrication process, supports a more circular approach to manufacturing,\" said Martin Saxby, director of HIMACS UK."
+        },
+        {
+          "kind": "text",
+          "text": "\"Among the awarded colours, Terrazzo Selva stands out with 25 per cent recycled content, one of the highest levels currently available within our extensive portfolio,\" Saxby added."
+        },
+        {
+          "kind": "text",
+          "text": "\"Safety is a further consideration when specifying materials, and HIMACS is entirely free of silica, nanoparticles, formaldehyde and VOCs,\" he continued."
+        },
+        {
+          "kind": "text",
+          "text": "Product: HIMACS Terrazzo Brand: HIMACS Contact: himacseu@lxhausys.com"
+        },
+        {
+          "kind": "text",
+          "text": "Dezeen Showroom offers an affordable space for brands to launch new products and showcase their designers and projects to Dezeen's huge global audience. For more details email showroom@dezeen.com ."
+        },
+        {
+          "kind": "text",
+          "text": "Dezeen Showroom is an example of partnership content on Dezeen. Find out more about partnership content here ."
+        },
+        {
+          "kind": "text",
+          "text": "The post HIMACS Terrazzo is now available in five new colourways appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/08/himacs-terrazzo-new-colourways-dezeen-showroom",
+      "author": "Dezeen staff",
+      "publishedAt": "2026-09-08T09:30:20.000Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Products",
+        "Design",
+        "Do not show on the Homepage",
+        "Dezeen Showroom",
+        "HIMACS",
+        "Surfaces",
+        "Tiles"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/08/himacs-terrazzo-new-colours-dezeen-showroom_dezeen_2364_col_4-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "product",
+      "titleKo": "HIMACS 테라조는 이제 다섯 가지 새로운 컬러로 출시되었습니다",
+      "summaryKo": "Dezeen 쇼룸: HIMACS는 테라조에서 영감을 받은 컬렉션에 다섯 가지 색상을 추가했으며, 이 컬러웨이는 권위 있는 레드 닷 디자인 어워드 2026 제품 부문을 수상했습니다. HIMACS 테라조 컬렉션은 풍부한 질감, 균형 잡힌 색상 팔레트, 그리고 독특한 미네랄에서 영감을 받은 패턴을 통해 시대를 초월한 소재 기법을 재구상합니다. 추가로 다섯 가지 HIMACS 테라조 색상에는 T 색상이 포함됩니다",
+      "bodyKo": [
+        "Dezeen Showroom: HIMACS는 테라조에서 영감을 받은 컬렉션에 다섯 가지 컬러웨이를 추가했으며, 이 컬러웨이는 2026년 레드닷 디자인 어워드 제품 부문에서 권위 있는 상을 수상했습니다.",
+        "HIMACS 테라조 컬렉션은 풍부한 질감, 균형 잡힌 색상 팔레트, 그리고 미네랄에서 영감을 받은 독특한 패턴을 통해 시대를 초월한 소재 기법을 재구상합니다.",
+        "추가로 다섯 가지 HIMACS 테라조 색상에는 테라초 울리보, 테라초 누볼라, 테라초 소렌토, 테라초 마르살라, 테라초 셀바가 있습니다.",
+        "HIMACS 테라조 마르살라는 회색과 베이지색과 어울리는 짙은 붉은 톤을 가지고 있습니다. 최신 색상은 전통 미학의 현대적 재해석을 기념하며, 표현력 있는 디자인과 책임 있는 소재 혁신을 결합한 상을 인정받았습니다.",
+        "색상은 SCS 인증 사전 소비자 재활용 성분을 포함하여, 현대 디자인의 요구와 향상된 지속 가능성이 고성능 단단한 표면에서 성공적으로 공존할 수 있음을 보여줍니다.",
+        "그 결과, 환대, 소매, 직장 및 주거 환경에 적합한 다목적 표면 솔루션이 탄생했습니다. 또한 테라조가 자랑하는 미관, 내구성, 유지보수 용이성을 자랑합니다.",
+        "HIMACS 테라조 울리보는 연한 올리브색 배경에 촘촘하게 점점이 박힌 색상입니다. \"생산 자재를 회수해 새로운 조형으로 재도입하는 것은 제조 방식의 순환적 접근을 뒷받침한다\"고 HIMACS UK 디렉터 마틴 색스비는 말했습니다.",
+        "\"수상 색상 중에서 테라조 셀바는 25%의 재활용 함량으로 두드러지며, 이는 현재 저희 광범위한 포트폴리오 내에서 가장 높은 수준 중 하나입니다,\"라고 삭스비는 덧붙였습니다.",
+        "\"안전성은 재료 지정 시 추가적인 고려사항이며, HIMACS는 규소, 나노입자, 포름알데히드, VOC가 전혀 없습니다,\"라고 그는 덧붙였습니다.",
+        "제품: HIMACS 테라조 브랜드: HIMACS 연락처: himacseu@lxhausys.com",
+        "Dezeen 쇼룸은 브랜드가 신제품을 출시하고 디자이너와 프로젝트를 Dezeen의 전 세계 대중에게 선보일 수 있는 저렴한 공간을 제공합니다. 자세한 내용은 showroom@dezeen.com 이메일을 보내세요.",
+        "Dezeen 쇼룸은 Dezeen의 파트너십 콘텐츠 예시입니다. 파트너십 콘텐츠에 대해 더 알아보세요.",
+        "이 글은 Dezeen에 처음 게재된 HIMACS 테라조가 다섯 가지 새로운 색상으로 출시되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:fe83810e8c",
+      "slug": "daniel-libeskind-wins-2026-praemium-imperiale-for-architecture-fe8381",
+      "titleOriginal": "Daniel Libeskind wins 2026 Praemium Imperiale for architecture",
+      "summaryOriginal": "Polish-American architect Daniel Libeskind has been named architecture laureate for this year's Praemium Imperiale awards by the Japan Art Association. Libeskind, who leads the New York-based Studio Libeskind, was selected for the award for his work creating \"emotionally resonant, innovative, and sustainable\" architecture. \"Daniel Libeskind is an internationally renowned architect and urban design",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Polish-American architect Daniel Libeskind has been named architecture laureate for this year's Praemium Imperiale awards by the Japan Art Association."
+        },
+        {
+          "kind": "text",
+          "text": "Libeskind, who leads the New York-based Studio Libeskind , was selected for the award for his work creating \"emotionally resonant, innovative, and sustainable\" architecture."
+        },
+        {
+          "kind": "text",
+          "text": "\"Daniel Libeskind is an internationally renowned architect and urban designer, celebrated for his ability to evoke cultural memory through emotionally resonant and original architecture,\" the Japan Art Association said."
+        },
+        {
+          "kind": "text",
+          "text": "\"Guided by a deep passion for music, philosophy, and literature, Libeskind creates architecture that is emotionally resonant, innovative, and sustainable.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/daniel-libeskind-praemium-imperiale-2026-news_dezeen_2364_col_3.jpg",
+          "alt": "Jewish Museum Berlin"
+        },
+        {
+          "kind": "text",
+          "text": "Libeskind has won the 2026 Praemium Imperiale for his \"emotionally resonant\" architecture Born in Łódź, Poland, in 1946, Libeskind is known for his deconstructionist style, which favours sharp angles and geometric structures."
+        },
+        {
+          "kind": "text",
+          "text": "Notable projects by the architect include the Jewish Museum Berlin in 2001 and Bundeswehr Museum of Military History in 2011."
+        },
+        {
+          "kind": "text",
+          "text": "More recently, the studio completed the Maggie's Centre at the Royal Free in London and the Atrium at Sumner in Brooklyn, New York ."
+        },
+        {
+          "kind": "text",
+          "text": "Alongside his built works, the awarding body also praised Libeskind's wider contributions to architectural education and his influence on shaping cultural spaces."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/daniel-libeskind-praemium-imperiale-2026-news_dezeen_2364_col_0.jpg",
+          "alt": "Bundeswehr Museum of Military History"
+        },
+        {
+          "kind": "text",
+          "text": "Notable projects by the architect include the Bundeswehr Museum of Military History \"Libeskind is also a prominent voice in the field, frequently speaking at universities and professional conferences on the art and impact of architecture,\" the Japan Art Association said."
+        },
+        {
+          "kind": "text",
+          "text": "\"His work and ideas have been featured in numerous exhibitions and publications, shaping contemporary architectural discourse and influencing the evolution of cities and cultural spaces.\""
+        },
+        {
+          "kind": "text",
+          "text": "Libeskind will receive an honorarium of 15 million yen (£70,000) as the winner of the architecture award, which is given out annually by the Japan Art Association under the patronage of Prince Hitachi, younger brother to the emperor emeritus of Japan."
+        },
+        {
+          "kind": "text",
+          "text": "Read: Kengo Kuma awarded Andrée Putman Lifetime Achievement Award by CDA The Praemium Imperiale is an annual global arts prize that celebrates creatives in the fields of architecture, painting, sculpture, music, theatre and film."
+        },
+        {
+          "kind": "text",
+          "text": "Named alongside Libeskind as this year's winners are actor Cate Blanchett for theatre and film and artists Herbert Blomstedt for music, Andy Goldsworthy for sculpture and Jenny Holzer for painting. All were praised for their creative impact on society."
+        },
+        {
+          "kind": "text",
+          "text": "\"This year's laureates share an immense passion for their respective craft as well as the land and people that inspire their art,\" Praemium Imperiale's International Advisor in the UK Lord Patten of Barnes said."
+        },
+        {
+          "kind": "text",
+          "text": "\"Together their body of work celebrates the beauty and transformative power of art for the individual and the society.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/daniel-libeskind-praemium-imperiale-2026-news_dezeen_2364_col_1.jpg",
+          "alt": "Maggie"
+        },
+        {
+          "kind": "text",
+          "text": "Recent projects by Studio Libeskind include the Maggie's Royal Free. Photo by Hufton+Crow Alongside the Praemium Imperiale Awards, the Japan Art Association selected children's art network La Source Garouste for the 2026 Grant for Young Artists."
+        },
+        {
+          "kind": "text",
+          "text": "Previous winners of the award's architecture category include Eduardo Souto de Moura , Shigeru Ban and Diébédo Francis Kéré ."
+        },
+        {
+          "kind": "text",
+          "text": "The photography is by Roland Horn, courtesy of the Japan Art Association, unless otherwise stated."
+        },
+        {
+          "kind": "text",
+          "text": "The post Daniel Libeskind wins 2026 Praemium Imperiale for architecture appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/08/daniel-libeskind-2026-praemium-imperiale-architecture-news",
+      "author": "Starr Charles",
+      "publishedAt": "2026-09-08T09:00:12.000Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Architecture",
+        "News",
+        "Daniel Libeskind",
+        "Praemium Imperiale",
+        "Studio Libeskind"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/daniel-libeskind-praemium-imperiale-sq_dezeen_2364_col_0-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "다니엘 리베스킨드, 2026년 프라에미움 임페리알레 건축상 수상",
+      "summaryKo": "폴란드계 미국인 건축가 다니엘 리베스킨드는 올해 일본 미술협회로부터 프라에미움 임페리알레 상의 건축 수상자로 선정되었습니다. 뉴욕에 기반을 둔 스튜디오 리베스킨트를 이끄는 리베스킨드는 \"감정적으로 울림 있고 혁신적이며 지속 가능한\" 건축을 창조한 작품으로 이 상을 수상했습니다. \"다니엘 리베스킨드는 국제적으로 저명한 건축가이자 도시 디자인입니다",
+      "bodyKo": [
+        "폴란드계 미국인 건축가 다니엘 리베스킨트가 올해 일본 미술협회로부터 프라에미움 임페리알레 상의 건축 상으로 선정되었습니다.",
+        "뉴욕에 기반을 둔 스튜디오 리베스킨드를 이끄는 리베스킨드는 \"감정적으로 울림 있고, 혁신적이며, 지속 가능한\" 건축물을 창조한 작품으로 이 상을 수상했습니다.",
+        "\"다니엘 리베스킨트는 국제적으로 유명한 건축가이자 도시 디자이너로, 감정적으로 울림 있고 독창적인 건축을 통해 문화적 기억을 불러일으키는 능력으로 찬사를 받고 있다\"고 일본 미술협회는 밝혔다.",
+        "\"음악, 철학, 문학에 대한 깊은 열정에 이끌려, 리베스킨드는 감정적으로 울림 있고 혁신적이며 지속 가능한 건축을 창조한다.\"",
+        "리베스킨트는 2026년 프라에미움 임페리알레(Praemium Imperiale)를 수상했으며, 그의 \"감정적으로 울림 있는\" 건축으로 1946년 폴란드 우치에서 태어난 리베스킨트는 날카로운 각도와 기하학적 구조를 선호하는 해체주의 스타일로 잘 알려져 있다.",
+        "건축가의 주요 프로젝트로는 2001년 베를린 유대인 박물관과 2011년 연방군 군사 역사 박물관이 있습니다.",
+        "최근에는 런던 로열 프리의 매기 센터와 뉴욕 브루클린의 섬너 아트리움을 완공했습니다.",
+        "그의 건축 작품과 더불어, 시상 기관은 리베스킨드가 건축 교육에 기여한 광범위한 공헌과 문화 공간 형성에 미친 영향도 칭찬했다.",
+        "건축가의 주목할 만한 프로젝트로는 분데스베어 군사 역사 박물관이 있다. \"리베스킨트는 건축의 예술과 영향에 대해 대학과 전문 학회에서 자주 강연하는 이 분야의 저명한 목소리이기도 하다\"고 일본 미술협회는 밝혔다.",
+        "\"그의 작품과 아이디어는 수많은 전시회와 출판물에 소개되어 현대 건축 담론을 형성하고 도시와 문화 공간의 진화에 영향을 미쳤다.\"",
+        "리베스킨트는 일본 미술협회가 매년 시여하는 건축상의 수상자로서 1,500만 엔(7만 파운드)의 상금을 받게 되며, 이 상은 일본 천황의 동생인 히타치 왕자의 후원으로 진행된다.",
+        "읽기: 켄고 쿠마가 CDA로부터 안드레 푸트만 평생 공로상 수상 프라에미움 임페리알레는 건축, 회화, 조각, 음악, 연극, 영화 분야의 창작자들을 기리는 연례 글로벌 예술상입니다.",
+        "올해 수상자로는 리베스킨드와 함께 연극 및 영화 부문 배우 케이트 블란쳇, 음악상 예술가 허버트 블롬스테트, 조각 부문 앤디 골즈워디, 회화상 제니 홀저가 선정되었습니다. 이들 모두 사회에 대한 창의적 영향력으로 찬사를 받았습니다.",
+        "\"올해 수상자들은 각자의 장인정신뿐만 아니라 그들의 예술에 영감을 주는 땅과 사람들에 대한 엄청난 열정을 공유합니다,\"라고 영국 주재 프라에미움 임페리알레 국제 고문 패튼 경이 말했습니다.",
+        "\"이들의 작품은 개인과 사회를 위한 예술의 아름다움과 변혁적 힘을 함께 기념합니다.\"",
+        "스튜디오 리베스킨드의 최근 프로젝트로는 매기의 '로열 프리'가 있습니다. 사진 제공: Hufton+Crow 프라에미움 임페리알레 어워드와 함께 일본 미술협회는 2026년 청소년 예술가 보조금 부문에 어린이 미술 네트워크 라 소스 가루스트를 선정했습니다.",
+        "이 상의 건축 부문 이전 수상자로는 에두아르도 소토 드 모우라, 반 시게루, 디에베도 프란시스 케레가 있습니다.",
+        "사진은 롤랜드 혼이 일본미술협회의 후원으로 제작했으며, 별도 명시가 없는 한 참고할 수 있습니다.",
+        "다니엘 리베스킨드, 2026년 건축 부문 프라에미움 임페리알레 수상이라는 글은 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
+      "id": "dezeen:58efa42378",
+      "slug": "bugaboo-makes-pram-from-orange-peel-and-old-58efa4",
+      "titleOriginal": "Bugaboo makes pram from orange peel and old egg cartons",
+      "summaryOriginal": "Students at Finland's Aalto University have collaborated with Dutch pram brand Bugaboo to create a pushchair using bio-based and biodegradable materials. Amsterdam brand Bugaboo originally approached Aalto University during last year's Dutch Design Week, where the school presented an exhibition of experimental biomaterials. To translate some of this biomaterial innovation into a functioning produc",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Students at Finland's Aalto University have collaborated with Dutch pram brand Bugaboo to create a pushchair using bio-based and biodegradable materials."
+        },
+        {
+          "kind": "text",
+          "text": "Amsterdam brand Bugaboo originally approached Aalto University during last year's Dutch Design Week , where the school presented an exhibition of experimental biomaterials ."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/aalto-university-bugaboo-biomaterial-pram-exclusive_dezeen_2364_col_5-scaled.jpg",
+          "alt": "Biomaterial Bugaboo"
+        },
+        {
+          "kind": "text",
+          "text": "Aalto University students have collaborated with Bugaboo to create a biomaterial pushchair To translate some of this biomaterial innovation into a functioning product, students from the Espoo institution's multidisciplinary chemarts course joined forces with the design team at Bugaboo."
+        },
+        {
+          "kind": "text",
+          "text": "The result is a version of the brand's stroller that's decked out in biodegradable materials but retains Bugaboo's classic black metal frame, including the wheels and seat belts."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/aalto-university-bugaboo-biomaterial-pram-exclusive_dezeen_2364_col_39-scaled.jpg",
+          "alt": "Tar-clad seat cover"
+        },
+        {
+          "kind": "text",
+          "text": "The plant-based seat cover was coated in water-repellent tar \"Sometimes, it's the unexpected or seemingly crazy ideas that open up new possibilities and start important conversations,\" Aalto University design lecturer Anna-Marie van der Lei told Dezeen."
+        },
+        {
+          "kind": "text",
+          "text": "\"We need to imagine and experiment with what our future material world could look like, whether that means creating canopies from peels or foams from egg cartons.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/aalto-university-bugaboo-biomaterial-pram-exclusive_dezeen_2364_col_50-scaled.jpg",
+          "alt": "Waste orange peel pram canopy"
+        },
+        {
+          "kind": "text",
+          "text": "Waste orange peel was used to develop the canopy Chemical engineering student Nikolai Kurochkin developed a composite material of sawdust and methyl cellulose that forms a sandy-hued back panel for the pushchair. Methyl cellulose is a compound derived from plant cellulose that can be used as a thickener and emulsifier."
+        },
+        {
+          "kind": "text",
+          "text": "The brown-coloured, plant-based leather seat cover was created by Alois Auer and Renata Khayrutdinova, who coated the material in tar to make it as water-repellent as possible."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/aalto-university-bugaboo-biomaterial-pram-exclusive_dezeen_2364_col_66.jpg",
+          "alt": "Bugaboo plant-based pram"
+        },
+        {
+          "kind": "text",
+          "text": "A biolace blanket covers the seat cushion \"The students developed the tar coating that gives the seat a pleasant scent as well as durability,\" explained bio products lecturer Tiina Nypelö."
+        },
+        {
+          "kind": "text",
+          "text": "\"With fully biodegradable materials, achieving water resistance is challenging,\" added van der Lei, who conceded that a fully waterproof biomaterial pram is still a work in progress."
+        },
+        {
+          "kind": "text",
+          "text": "The seat cover was inlaid with a mixture of materials to provide cushioning. Starch-based foam by Nooa Laisalmi was combined with recycled fibre-foam stuffing created by Elisabeth Baidoo from egg cartons that would have otherwise been thrown away."
+        },
+        {
+          "kind": "text",
+          "text": "Read: Finnish company launches \"world's most carbon-storing building material\" For the pram's woven canopy, Serranur Zileli developed a light brown material made from waste orange peel, which emits a subtle citrusy smell."
+        },
+        {
+          "kind": "text",
+          "text": "Julia Särkkä designed a delicate, biolace blanket in the same colour using hemp and lignin – one of the key polymers that give strength and durability to plant cell walls."
+        },
+        {
+          "kind": "text",
+          "text": "The pushchair's product labels are also cellulose-based, developed by Alessandra Fini, Bianca-Elena Galan and Cathrin Simbikangwa."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/aalto-university-bugaboo-biomaterial-pram-exclusive_dezeen_2364_col_53-scaled.jpg",
+          "alt": "Biolace blanket"
+        },
+        {
+          "kind": "text",
+          "text": "Starch-based and recycled fibre foam provide cushioning The pram was developed in Aalto University's Chemarts laboratory, with each student using specific processes and equipment depending on the biomaterial they were conceiving."
+        },
+        {
+          "kind": "text",
+          "text": "While the pushchair is currently only a concept model, the lecturers said that working with Bugaboo offered students the chance to work in a real-world context."
+        },
+        {
+          "kind": "text",
+          "text": "\"Students had opportunities to meet with Bugaboo's design lead and engineer and discuss their experiments,\" said Van der Lei."
+        },
+        {
+          "kind": "text",
+          "text": "\"Bugaboo gave us a lot of freedom, and the final stroller was developed by students who chose to continue working on the project themselves.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/aalto-university-bugaboo-biomaterial-pram-exclusive_dezeen_2364_col_52-scaled.jpg",
+          "alt": "Biomaterial Bugaboo buggy"
+        },
+        {
+          "kind": "text",
+          "text": "Working with Bugaboo gave the students the chance to consider the pram in a real-world context Known for championing biomaterials, researchers at Aalto University recently salvaged 300-year-old wood from the wreckage of a cargo ship in Oulu, which was transformed into yarn and knitted into a zero-waste dress ."
+        },
+        {
+          "kind": "text",
+          "text": "A slew of other projects exploring the potential of cellulose have been showcased at the institution in previous years."
+        },
+        {
+          "kind": "text",
+          "text": "The photography is by Esa Kapila , courtesy of Aalto University."
+        },
+        {
+          "kind": "text",
+          "text": "The post Bugaboo makes pram from orange peel and old egg cartons appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/08/bugaboo-biomaterial-pram-aalto-university-finland",
+      "author": "Jane Englefield",
+      "publishedAt": "2026-09-08T08:00:59.000Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Design",
+        "Biomaterials",
+        "Prams",
+        "Product design",
+        "Student projects",
+        "Materials",
+        "Bugaboo"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/bugaboo-stroller-aalto-university-biomaterials-pram-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "버가부는 오렌지 껍질과 오래된 달걀 상자로 유모차를 만든다",
+      "summaryKo": "핀란드 알토 대학교 학생들은 네덜란드 유모차 브랜드 Bugaboo와 협력하여 생체 기반 및 생분해성 소재를 사용한 유모차를 만들었습니다. 암스테르담 브랜드 Bugaboo는 작년 네덜란드 디자인 위크 기간 동안 알토 대학교에 처음 접근했으며, 당시 학교는 실험적인 생체재료 전시회를 선보였습니다. 이 생체재료 혁신 중 일부를 작동하는 제품으로 전환하기 위해",
+      "bodyKo": [
+        "핀란드 알토 대학교 학생들은 네덜란드 유모차 브랜드 Bugaboo와 협력하여 바이오 기반이자 생분해성 소재를 사용한 유모차를 만들었습니다.",
+        "암스테르담 브랜드 부가부는 작년 네덜란드 디자인 위크에서 알토 대학교에 처음 접근했으며, 당시 학교는 실험적인 생체재료 전시회를 선보였습니다.",
+        "알토 대학교 학생들은 부가부와 협력하여 생체 소재 유모차를 만들었습니다. 이 생체재료 혁신을 기능적인 제품으로 전환하기 위해, 에스포 기관의 다학제 체마츠 과정 학생들은 부가부 디자인 팀과 협력했습니다.",
+        "그 결과, 생분해성 소재로 꾸며진 브랜드 유모차 버전이 탄생했지만, 바퀴와 안전벨트를 포함한 Bugaboo의 클래식 검은 금속 프레임을 유지하고 있습니다.",
+        "식물성 좌석 커버는 방수 타르로 코팅되어 있었다. \"때로는 예상치 못하거나 미친 듯한 아이디어들이 새로운 가능성을 열고 중요한 대화를 시작하기도 한다,\"고 알토 대학교 디자인 강사 안나-마리 반 더 레이가 Dezeen에 말했다.",
+        "\"우리는 미래의 물질 세계가 어떤 모습일지 상상하고 실험해야 합니다. 그것이 껍질로 캐노피를 만들든, 계란 팩에서 거품을 만들든요.\"",
+        "폐오렌지 껍질은 캐노피 개발에 사용되었습니다. 화학공학도인 니콜라이 쿠로치킨은 톱밥과 메틸 셀룰로오스를 결합한 복합 재료를 개발하여 유모차용 모래빛 뒷판을 형성했습니다. 메틸 셀룰로오스는 식물 셀룰로오스에서 유래한 화합물로, 농도 및 유화제로 사용할 수 있습니다.",
+        "갈색 식물성 가죽 시트 커버는 알로이스 아우어와 레나타 카이루트디노바가 제작했으며, 타르를 코팅해 최대한 방수 효과를 냈습니다.",
+        "바이오레이스 담요가 좌석 쿠션을 덮고 있습니다. \"학생들은 좌석에 쾌적한 향과 내구성을 부여하는 타르 코팅을 개발했습니다.\"라고 바이오 제품 강사 티나 니펠로가 설명했습니다.",
+        "\"완전 생분해성 재료로 인해 방수 성능을 달성하는 것은 도전적이다,\"라고 반 더 레이는 덧붙였으며, 완전 방수 생체재료 유모차는 아직 개발 중임을 인정했다.",
+        "시트 커버에는 쿠셔닝을 제공하는 다양한 재료가 혼합되어 박혀 있었다. 누아 라이살미의 전분 기반 폼은 엘리자베스 바이두가 버릴 수 있었던 달걀 상자에서 만든 재활용 섬유 폼 충전재와 결합되었다.",
+        "읽어보세요: 핀란드 회사, \"세계에서 가장 탄소 저장 능력이 뛰어난 건축 자재\" 유모차의 직조 캐노피를 위해 Serranur Zileli는 폐오렌지 껍질로 만든 연한 갈색 소재를 개발했으며, 은은한 감귤 향이 납니다.",
+        "줄리아 사르크카는 식물 세포벽에 강도와 내구성을 부여하는 주요 폴리머 중 하나인 대마와 리그닌을 사용해 같은 색상의 섬세한 바이오레이스 담요를 디자인했습니다.",
+        "유모차의 제품 라벨도 셀룰로오스 기반으로, 알레산드라 피니, 비앙카-엘레나 갈란, 캐스린 심비캉과가 개발했습니다.",
+        "전분 기반 및 재활용 섬유 폼이 쿠션 효과를 제공합니다. 이 유모차는 알토 대학교 체마츠 연구실에서 개발되었으며, 각 학생은 자신이 구상하는 생체재료에 따라 특정 공정과 장비를 사용했습니다.",
+        "유모차는 현재 개념 모델에 불과하지만, 강사들은 Bugaboo와 함께 일하는 것이 학생들에게 실제 환경에서 작업할 기회를 제공한다고 말했습니다.",
+        "\"학생들은 부가부의 설계 책임자와 엔지니어를 만나 실험에 대해 논의할 기회를 가졌습니다,\"라고 반 더 레이는 말했습니다.",
+        "\"버가부는 우리에게 많은 자유를 주었고, 최종 유모차는 프로젝트를 계속하기로 선택한 학생들이 개발했습니다.\"",
+        "부가부와 함께 일하면서 학생들은 유모차를 실제 맥락에서 생각해볼 기회를 얻었습니다. 생체재료를 적극적으로 지지하는 것으로 알려진 알토 대학교 연구진은 최근 오울루에서 300년 된 목재를 회수해 실로 변형해 제로 웨이스트 드레스로 만들었습니다.",
+        "셀룰로오스의 잠재력을 탐구하는 여러 프로젝트들이 과거에도 이 기관에서 선보였습니다.",
+        "사진은 에사 카필라가 알토 대학교에서 제공했습니다.",
+        "Bugaboo가 오렌지 껍질과 오래된 계란 상자로 유모차를 만든다는 글은 Dezeen에 처음 게재되었습니다."
+      ]
+    },
     {
       "id": "creative-boom:9c7c6d40cf",
       "slug": "just-to-keep-drawing-the-tale-of-how-9c7c6d",
@@ -104,7 +748,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/just-to-keep-drawing-the-tale-of-how-innes-clark-designed-her-way-out-of-a-bakery-and-into-restaurant-branding",
       "author": "Ayla Angelos",
       "publishedAt": "2026-09-08T06:15:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -135,10 +779,222 @@
       ]
     },
     {
+      "id": "dezeen:5e67d54693",
+      "slug": "seven-collectible-pieces-from-design-miami-seoul-that-5e67d5",
+      "titleOriginal": "Seven collectible pieces from Design Miami Seoul that reimagine traditional Korean crafts",
+      "summaryOriginal": "Chairs made of wood lacquer and a lighting installation informed by paper-twining were among the highlights of the In Situ exhibition during Design Miami Seoul. Taking place from 31 August to 6 September, this year's Design Miami Seoul was held at Design Lab within the Zaha Hadid-designed Dongdaemun Design Plaza. Its In Situ exhibition spotlighted The post Seven collectible pieces from Design Miam",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Chairs made of wood lacquer and a lighting installation informed by paper-twining were among the highlights of the In Situ exhibition during Design Miami Seoul."
+        },
+        {
+          "kind": "text",
+          "text": "Taking place from 31 August to 6 September, this year's Design Miami Seoul was held at Design Lab within the Zaha Hadid-designed Dongdaemun Design Plaza ."
+        },
+        {
+          "kind": "text",
+          "text": "Its In Situ exhibition spotlighted Korean design from both emerging and established studios, spanning lighting, furniture, ceramics, and sculptural design."
+        },
+        {
+          "kind": "text",
+          "text": "Here Dezeen selects seven of the most interesting designs from In Situ:"
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_0-scaled.jpg",
+          "alt": "Design Miami Seoul In Situ exhibition"
+        },
+        {
+          "kind": "text",
+          "text": "This brass structure was designed to be a contemporary reinterpretation of traditional Korean candlesticks, with paper made from raw mulberry bark stitched around the frame."
+        },
+        {
+          "kind": "text",
+          "text": "Seoul-based Mano Design Studio was founded by Bo Ah Kim in 2016, who works at the intersection of traditional Korean craft and contemporary design."
+        },
+        {
+          "kind": "text",
+          "text": "\"The Biiit collection seeks to dissolve the hierarchy between maker and material in an era of uniform mass replication,\" said Kim."
+        },
+        {
+          "kind": "text",
+          "text": "\"Through a relational resonance built on mutual engagement, it aims to restore design's inherent, tactile 'thingness'.\""
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_1-scaled.jpg",
+          "alt": "Design Miami Seoul In Situ exhibition"
+        },
+        {
+          "kind": "text",
+          "text": "Seoul-based furniture designer Byungsub Kim designed a chair, shelving unit and bench for his Narrative series collection."
+        },
+        {
+          "kind": "text",
+          "text": "Kim combined stainless steel with Korean mother of pearl lacquerware – a traditional craft in which wood is lacquered and inlaid with mother of pearl – for the pieces."
+        },
+        {
+          "kind": "text",
+          "text": "\"The Narrative series illuminates the tension that exists among the passage of time harboured within materials, the remnants of discarded functions, and their newly bestowed roles,\" said Kim."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_3-scaled.jpg",
+          "alt": "Design Miami Seoul In Situ exhibition"
+        },
+        {
+          "kind": "text",
+          "text": "After Inage series and White Nostalgia series, by Hyunhee Kim"
+        },
+        {
+          "kind": "text",
+          "text": "Artist Hyunhee Kim developed a series of furniture informed by traditional Korean furniture and gyubang culture – the material and domestic culture associated with women's quarters in the traditional Korean home."
+        },
+        {
+          "kind": "text",
+          "text": "For the pieces, she deconstructed classical furniture forms and combined contemporary sculptural language with modern materials such as acrylic and aluminium, creating a dialogue between past and present."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_4.jpg",
+          "alt": "Design Miami Seoul In Situ exhibition"
+        },
+        {
+          "kind": "text",
+          "text": "Nodus is a lighting installation by Seoul-based architect Il Hoon Roh , which was informed by Korean's traditional paper-twining technique that first appeared in the 12th century."
+        },
+        {
+          "kind": "text",
+          "text": "Contemporary materials such as carbon fibre was combined with the heritage craft. Individual strands were twisted into knots which then accumulated to form a surface."
+        },
+        {
+          "kind": "text",
+          "text": "The work was created through the repetitive act of knotting, in reference to the name of the piece Nodus, which means knot in Latin."
+        },
+        {
+          "kind": "text",
+          "text": "\"The series represent both an artistic investigation into the evolving relationship between these disciplines and a compelling synthesis of traditional craftsmanship and cutting-edge contemporary materials,\" said Roh."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_8-scaled.jpg",
+          "alt": "Design Miami Seoul In Situ exhibition"
+        },
+        {
+          "kind": "text",
+          "text": "Design studio WKND Lab 's Guseul (sphere in Korean) is a lighting installation that featured a series of balls crafted by various traditional Korean techniques."
+        },
+        {
+          "kind": "text",
+          "text": "The black balls were made using Ottchil and mother of pearl, traditional wood lacquer inlaid with mother of pearl, while the red Chil-bo balls used a glass enamel technique and were made in collaboration with artisan Jeongkeun Park."
+        },
+        {
+          "kind": "text",
+          "text": "Founded by Eunji Jun and Halin Lee, WKND Lab aims to preserve traditional values by integrating them into contemporary work."
+        },
+        {
+          "kind": "text",
+          "text": "\"Guseul embodies the journey from a single dot to a profound line, symbolising the connection of diverse elements into a cohesive whole,\" said WKND Lab."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_2.jpg",
+          "alt": "Design Miami Seoul In Situ exhibition"
+        },
+        {
+          "kind": "text",
+          "text": "Design studio Mokamjunamoo presented Chimi Chair at the exhibition. It was informed by chimi, a sculptural element found at the ends of the ridge lines in traditional Korean wooden architecture."
+        },
+        {
+          "kind": "text",
+          "text": "\"Chimi Chair functions both as a utilitarian object and as an exploration of how the sculptural language of traditional architecture can be translated into a contemporary, everyday context,\" said Mokamjunamoo founder of Hwan Tae Kim."
+        },
+        {
+          "kind": "image",
+          "url": "https://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_9.jpg",
+          "alt": "Design Miami Seoul In Situ exhibition"
+        },
+        {
+          "kind": "text",
+          "text": "Metal artist Cheon Woosun created vessel-like forms by welding metal wires with silver."
+        },
+        {
+          "kind": "text",
+          "text": "Drawing from the shape of Korean ceramic jars, the vessels were formed by connecting individual wires, which the Woosun described as \"sketching in pencil\"."
+        },
+        {
+          "kind": "text",
+          "text": "Design Miami Seoul 2026 took place from 31 August to 6 September 2026 at Design Lab within Dongdaemun Design Plaza, Seoul, South Korea. See Dezeen Events Guid e for more design events and exhibitions around the world."
+        },
+        {
+          "kind": "text",
+          "text": "The post Seven collectible pieces from Design Miami Seoul that reimagine traditional Korean crafts appeared first on Dezeen ."
+        }
+      ],
+      "sourceName": "Dezeen",
+      "sourceUrl": "https://www.dezeen.com/",
+      "originalUrl": "https://www.dezeen.com/2026/09/08/design-miami-seoul-in-situ",
+      "author": "Christina Yao",
+      "publishedAt": "2026-09-08T05:00:14.000Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
+      "language": "en",
+      "keywords": [
+        "all",
+        "Design",
+        "Seoul",
+        "Exhibitions",
+        "South Korea",
+        "Collectible design"
+      ],
+      "image": {
+        "url": "http://static.dezeen.com/uploads/2026/09/design-miami-seoul-in-situ-exhibition-_dezeen_2364_col_sq-411x411.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "Design Miami Seoul에서 전통 한국 공예를 재해석한 7가지 수집 아이템",
+      "summaryKo": "나무 락커로 만든 의자와 종이 꼬임에서 영감을 받은 조명 설치물이 디자인 마이애미 서울 기간 동안 열린 In Situ 전시의 하이라이트 중 하나였습니다. 8월 31일부터 9월 6일까지 열린 올해 디자인 마이애미 서울은 자하하디드가 설계한 동대문 디자인 플라자 내 디자인 랩에서 열렸습니다. In Situ 전시는 디자인 미암의 7가지 수집품 이후 작품을 조명했습니다",
+      "bodyKo": [
+        "나무 래커로 만든 의자와 종이 꼬임을 활용한 조명 설치물이 디자인 마이애미 서울 기간 동안 열린 In Situ 전시의 하이라이트 중 하나였습니다.",
+        "올해 디자인 마이애미 서울은 8월 31일부터 9월 6일까지 진행되었으며, 자하하디드가 설계한 동대문 디자인 플라자 내 디자인 랩에서 개최되었습니다.",
+        "In Situ 전시는 조명, 가구, 도자기, 조각 디자인 등 신흥 및 기존 스튜디오의 한국 디자인을 조명했습니다.",
+        "여기서 Dezeen은 In Situ에서 가장 흥미로운 디자인 7가지를 선정했습니다:",
+        "이 황동 구조물은 전통 한국 촛대를 현대적으로 재해석하도록 설계되었으며, 프레임 주위에 생뽕나무 껍질로 만든 종이를 꿰매어 놓았습니다.",
+        "서울에 본사를 둔 마노 디자인 스튜디오는 2016년 전통 한국 공예와 현대 디자인의 교차점에서 활동하는 김보아에 의해 설립되었습니다.",
+        "김은 \"Biiit 컬렉션은 획일적인 대량 복제 시대에 제작자와 재료 사이의 위계질서를 해체하려 한다\"고 말했다.",
+        "\"상호 참여를 바탕으로 한 관계적 공명을 통해, 디자인의 본질적이고 촉각적인 '사물성'을 복원하는 것을 목표로 한다.\"",
+        "서울을 기반으로 활동하는 가구 디자이너 김병섭은 자신의 내러티브 시리즈 컬렉션을 위해 의자, 선반 유닛, 벤치를 디자인했습니다.",
+        "김은 스테인리스 스틸과 한국 자개(진주광개)를 결합했는데, 이 칠은 나무에 옻칠을 하고 자개를 상감하는 전통 공예입니다.",
+        "\"내러티브 시리즈는 재료 안에 담긴 시간의 흐름, 버려진 기능의 잔재, 그리고 새롭게 부여된 역할 사이에 존재하는 긴장을 밝힙니다,\"라고 김은 말했다.",
+        "김현희의 이나게 시리즈 및 화이트 노스탤지어 시리즈",
+        "김현희 예술가는 전통 한국 가구와 전통 한가정 내 여성 숙소와 관련된 물질적·가정문화인 규방 문화에서 영감을 받은 일련의 가구를 개발했다.",
+        "작품들을 위해 그녀는 고전적인 가구 형태를 해체하고 현대 조각 언어와 아크릴, 알루미늄 같은 현대 재료를 결합하여 과거와 현재의 대화를 창조했다.",
+        "노두스는 서울에 거주하는 건축가 일훈노가 만든 조명 설치물로, 12세기에 처음 등장한 한국의 전통 종이 꼬기 기법에서 영감을 받았습니다.",
+        "탄소 섬유와 같은 현대 재료가 헤리티지 크래프트와 결합되었습니다. 개별 가닥을 꼬아 매듭을 만들어 표면을 형성했습니다.",
+        "이 작품은 반복적인 매듭짓 행위를 통해 만들어졌으며, 라틴어로 '매듭'을 뜻하는 작품 제목인 '노두스(Nodus)'에서 유래합니다.",
+        "\"이 시리즈는 이러한 분야들 간의 진화하는 관계를 예술적으로 탐구하는 동시에 전통 장인정신과 최첨단 현대 소재의 매력적인 종합을 동시에 보여줍니다,\"라고 로는 말했습니다.",
+        "디자인 스튜디오 WKND Lab의 구슬(한국어로 구체)은 다양한 전통 한국 기법으로 만든 일련의 공들을 선보인 조명 설치물입니다.",
+        "검은 공은 오칠과 자개, 즉 전통 목재 옻칠에 자개를 상감해 만들어졌고, 붉은 칠보 공은 유리 에나멜 기법을 사용해 장인 박정근과 협업하여 제작되었습니다.",
+        "준은지와 이할린 씨가 설립한 WKND Lab은 전통적 가치를 현대 작품에 통합하여 보존하는 것을 목표로 합니다.",
+        "WKND 연구소는 \"구슬은 하나의 점에서 깊은 선으로의 여정을 구현하며, 다양한 요소들이 하나의 응집력 있는 전체로 연결되는 것을 상징합니다.\"라고 말했습니다.",
+        "디자인 스튜디오 모캄주나무는 전시회에서 치미 체어를 선보였습니다. 이 작품은 전통 한국 목조 건축에서 능선 끝에 위치한 조각 요소인 치미에서 영감을 받았습니다.",
+        "\"치미 체어는 실용적인 오브제이자 전통 건축의 조각적 언어가 현대적이고 일상적인 맥락에 어떻게 번역될 수 있는지를 탐구하는 동시에 기능한다\"고 홍태 김의 창립자 모캄주무는 말했다.",
+        "금속 예술가 천우선은 은으로 금속 와이어를 용접하여 그릇 같은 형태를 만들었다.",
+        "한국 도자기 항아리 모양을 본떠, 용기는 개별 전선을 연결해 만들어졌으며, 우선은 이를 '연필로 스케치한다'고 묘사했다.",
+        "Design Miami Seoul 2026은 2026년 8월 31일부터 9월 6일까지 서울 동대문디자인 플라자 내 디자인 랩에서 열렸습니다. 전 세계 더 많은 디자인 행사와 전시는 Dezeen Events Guid e를 참조하세요.",
+        "전통 한국 공예를 재해석한 Design Miami Seoul의 7가지 수집품 소설이 Dezeen에 처음 게재되었습니다."
+      ]
+    },
+    {
       "id": "lifespan-io:3a17f1d3b9",
       "slug": "mice-with-growth-hormone-halted-in-middle-age-3a17f1",
       "titleOriginal": "Mice With Growth Hormone Halted in Middle Age Live Longer",
-      "summaryOriginal": "Researchers publishing in Aging Cell have described how stopping growth hormone receptor production in midlife significantly lengthens the lives of mice. Growth but diabetes Growth hormone affects the metabolism of fats […]",
+      "summaryOriginal": "Researchers publishing in Aging Cell have described how stopping growth hormone receptor production in midlife significantly lengthens the lives of mice. Growth […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -226,7 +1082,7 @@
       "originalUrl": "https://lifespan.io/mice-with-growth-hormone-halted-in-middle-age-live-longer",
       "author": "Josh Conway",
       "publishedAt": "2026-09-07T19:59:35.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "News",
@@ -245,7 +1101,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "중년에 성장 호르몬이 멈춘 쥐는 더 오래 살다",
-      "summaryKo": "Aging Cell에 발표한 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 쥐의 수명이 크게 연장된다고 설명했습니다. 성장과 당뇨병 성장 호르몬은 지방 [...]",
+      "summaryKo": "Aging Cell에 발표한 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 쥐의 수명이 크게 연장된다고 설명했습니다. 성장 [...]",
       "bodyKo": [
         "Aging Cell에 발표한 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 쥐의 수명이 크게 연장된다고 설명했습니다.",
         "성장과 당뇨병 성장호르몬은 지방(지질)의 대사에 영향을 주어 순환 지방산 수치를 증가시키고 인슐린 유사 성장인자 1(IGF-1)을 증가시키며 인슐린 자체의 기능을 저하시킵니다 [1]. 성장호르몬은 조직 특이적 노화와 연관되어 있으며[2], 선천적으로 성장호르몬에 민감한 사람들(라론 증후군)은 당뇨병, 인지 기능 저하, 심혈관 문제 등 노화의 여러 측면에 대한 저항성이 증가합니다 [3].",
@@ -317,7 +1173,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/the-challenge-of-cheap-interventions-and-expensive-clinical-trials",
       "author": "Reason",
       "publishedAt": "2026-09-07T18:32:55.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Activism, Advocacy and Education"
@@ -426,7 +1282,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/07/arc-de-trump-construction-start",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-07T15:00:36.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -539,7 +1395,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/07/breccia-rosa-4d-tile-iris-ceramica-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-07T13:00:53.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -734,16 +1590,16 @@
       "originalUrl": "https://www.dezeen.com/2026/09/07/design-council-economy-report",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-07T10:00:11.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
         "News",
+        "UK",
         "Design Council",
         "Architecture and design education",
-        "Artificial intelligence (AI)",
-        "UK"
+        "Artificial intelligence (AI)"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/design-council-design-employment-by-region-infographic-sq-1-411x411.jpg"
@@ -862,7 +1718,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/07/grace-tile-collection-ceramiche-keope-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-07T09:30:26.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1028,7 +1884,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/07/oliver-stiff-fashion-furniture-chairs",
       "author": "Rachael Gilby",
       "publishedAt": "2026-09-07T08:00:07.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -1280,7 +2136,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/07/strut-table-pouf-yet-design-studio-furniture-lighting-dezeen-showroom",
       "author": "Alice Laycock",
       "publishedAt": "2026-09-07T07:00:40.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -1433,7 +2289,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/why-our-favourite-mindfulness-tools-might-be-training-us-to-avoid-our-feelings-not-face-them",
       "author": "Tom May",
       "publishedAt": "2026-09-07T06:00:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -1585,7 +2441,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/07/north-sea-coast-seaside-penthouse-merckx-holvoet-architecten",
       "author": "Tirthika Shah",
       "publishedAt": "2026-09-07T05:00:51.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1889,14 +2745,14 @@
       "originalUrl": "https://www.dezeen.com/2026/09/06/silk-fashion-collection-robins-hame-university-of-applied-sciences-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-06T18:00:55.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
         "School Shows",
+        "Häme University of Applied Sciences",
         "Student projects",
-        "Graduates",
-        "Häme University of Applied Sciences"
+        "Graduates"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/Häme-University-of-Applied-Sciences_dezeen_2364_col_1-411x411.jpg"
@@ -2217,7 +3073,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/fight-aging-newsletter-september-6th-2026",
       "author": "Reason",
       "publishedAt": "2026-09-06T11:26:54.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Newsletters"
@@ -2390,7 +3246,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/06/hudson-architects-kings-lynn-library",
       "author": "Jon Astbury",
       "publishedAt": "2026-09-06T10:00:32.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2616,15 +3472,15 @@
       "originalUrl": "https://www.dezeen.com/2026/09/06/eight-wooden-staircases-lookbooks",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-06T09:00:29.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
         "Lookbooks",
+        "Residential architecture and interiors",
         "Wood",
-        "Staircases",
-        "Residential architecture and interiors"
+        "Staircases"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/cobalt-coach-house-foils-sq-411x411.jpg"
@@ -2763,7 +3619,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/06/plana-house-kristijan-markoc-downloadable-timber-home",
       "author": "Starr Charles",
       "publishedAt": "2026-09-06T05:00:32.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3052,14 +3908,14 @@
       "originalUrl": "https://www.dezeen.com/2026/09/05/combat-boots-accessories-footwear-projects-hame-university-of-applied-sciences-schoolshows",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-05T18:00:34.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
         "School Shows",
-        "Graduates",
         "Häme University of Applied Sciences",
-        "Student projects"
+        "Student projects",
+        "Graduates"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/Häme-University-of-Applied-Sciences_dezeen_2364_col_0-411x411.jpg"
@@ -3245,7 +4101,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/05/anti-ai-designs-roundup",
       "author": "Amy Peacock",
       "publishedAt": "2026-09-05T09:00:01.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3370,7 +4226,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/05/dyson-first-electric-toothbrush-this-week",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-05T05:00:27.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3575,7 +4431,7 @@
       "originalUrl": "https://toybook.com/designer-artist-feature",
       "author": "Ashley Pelletier",
       "publishedAt": "2026-09-05T02:00:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -3721,7 +4577,7 @@
       "originalUrl": "https://toybook.com/five-below-says-its-americas-greatest-little-toy-store-strategy-is-taking-shape",
       "author": "James Zahn",
       "publishedAt": "2026-09-05T00:02:48.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Financial",
@@ -3868,7 +4724,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/04/surrane-design-hommali-west-village-new-york",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-09-04T17:00:46.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3949,7 +4805,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/how-blackwing-pencils-are-made-video",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-04T16:30:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Design",
@@ -3974,115 +4830,6 @@
         "캘리포니아 스톡턴에 본사를 둔 블랙윙은 디지털 기기가 우리의 관심을 사로잡는 시대에 아날로그 창작 도구에서 기쁨을 찾는 데 중점을 두고 있습니다. 제조사는 일본의 여러 전문 공장에서 시그니처 연필을 생산하며, 흑연 심을 정성스럽게 가공한 후 목공소로 보내집니다. 비하인드 신 영상에서 회사는 이 과정이 어떻게 진행되는지, 그리고 도구가 어떻게 형태를 갖추기 시작하는지를 공유합니다.",
         "나무 판자 사이에 끼워진 연필들은 각각 잘라 특유의 육각형 모양으로 다듬어집니다. 또 다른 공장에서는 도색과 라벨링을 담당하며, 스타일에 따라 연필에 최대 10번의 래커 칠을 하여 최종 색상과 느낌을 얻습니다. 마지막 단계로는 악기들이 스톡턴으로 이동해 독자적인 기계가 각 지우개를 부착하고, 손으로 점검한 후 12개 단위로 박스에 담깁니다.",
         "이런 이야기와 예술가들이 당신에게 중요한가요? 오늘 콜로설 멤버가 되어 월 7달러 정도의 비용으로 독립 예술 출판을 지원하세요. \"블랙윙 펜슬의 아날로그 창의성에 대한 송가의 비하인드 씬\" 기사는 Colossal에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "dezeen:cc185ba295",
-      "slug": "imagina-floral-tiles-by-casalgrande-padana-cc185b",
-      "titleOriginal": "Imagina Floral tiles by Casalgrande Padana",
-      "summaryOriginal": "Dezeen Showroom: designers can create feature walls of lush, modern botanicals using Imagina Floral large-scale decorative tiles, created by Casalgrande Padana. The Italian manufacturer's Imagina Floral tile collection features several floral designs, ranging from ethereal, evocative compositions to bold classics. The range was designed by Casalgrande Padana to create feature walls and dividing wa",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Dezeen Showroom: designers can create feature walls of lush, modern botanicals using Imagina Floral large-scale decorative tiles , created by Casalgrande Padana ."
-        },
-        {
-          "kind": "text",
-          "text": "The Italian manufacturer's Imagina Floral tile collection features several floral designs, ranging from ethereal, evocative compositions to bold classics."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/imagina-floral-tiles-casalgrande-padana-design_dezeen_2364_col_1-scaled.jpg",
-          "alt": "Imagina Floral tiles by Casalgrande Padana"
-        },
-        {
-          "kind": "text",
-          "text": "The Imagina Floral collection includes ethereal designs like Landscape Grid The range was designed by Casalgrande Padana to create feature walls and dividing walls with a seamless, matt look similar to wallpaper but with the durability of ceramic tile."
-        },
-        {
-          "kind": "text",
-          "text": "The range can be used both indoors and out, making it suitable for the garden terrace as well as the kitchen, bathroom and bedroom, spanning both residential and commercial spaces."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/imagina-floral-tiles-casalgrande-padana-design_dezeen_2364_col_4-scaled.jpg",
-          "alt": "Imagina Floral tiles by Casalgrande Padana"
-        },
-        {
-          "kind": "text",
-          "text": "Florilege is a bold take on classical florals The designs in the collection include the soft, romantic-feeling Landscape Grid and Windflowers, which evoke a forest and a field of of wildflowers respectively."
-        },
-        {
-          "kind": "text",
-          "text": "A different aesthetic comes from the Florilege design, which combines a traditional, detailed botanical print with modern desaturated colour and blown-up scale."
-        },
-        {
-          "kind": "text",
-          "text": "Product: Imagina Floral tiles Brand: Casalgrande Padana Contact: sara.costi@casalgrandepadana.it"
-        },
-        {
-          "kind": "text",
-          "text": "Material: ceramic Dimensions: 1200 x 2780 millimetres or 600 x 1200 millimetres"
-        },
-        {
-          "kind": "text",
-          "text": "Dezeen Showroom offers an affordable space for brands to launch new products and showcase their designers and projects to Dezeen's huge global audience. For more details email showroom@dezeen.com ."
-        },
-        {
-          "kind": "text",
-          "text": "Dezeen Showroom is an example of partnership content on Dezeen. Find out more about partnership content here ."
-        },
-        {
-          "kind": "text",
-          "text": "Click here to subscribe to our Dezeen Showroom new releases newsletter, a quarterly bulletin highlighting our editor's pick of the products we have published in the previous season."
-        },
-        {
-          "kind": "text",
-          "text": "The post Imagina Floral tiles by Casalgrande Padana appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/04/imagina-floral-tiles-casalgrande-padana-dezeen-showroom",
-      "author": "Dezeen staff",
-      "publishedAt": "2026-09-04T13:00:13.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Products",
-        "Design",
-        "Tiles",
-        "Do not show on the Homepage",
-        "Dezeen Showroom",
-        "Casalgrande Padana",
-        "Surfaces"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/08/imagina-floral-tiles-casalgrande-padana-design_dezeen_2364_sq-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "카살그란데 파다나의 상상용 꽃 타일",
-      "summaryKo": "Dezeen 쇼룸: 디자이너들은 Casalgrande Padana가 제작한 Imagina Floral 대형 장식 타일을 사용해 무성하고 현대적인 식물성 요소로 특징 벽을 만들 수 있습니다. 이탈리아 제조사의 Imagina Floral 타일 컬렉션은 신비롭고 감성적인 구성부터 대담한 클래식까지 다양한 꽃 디자인을 선보입니다. 이 라인업은 Casalgrande Padana가 디자인하여 특징 벽과 구분을 위한 공간",
-      "bodyKo": [
-        "Dezeen 쇼룸: 디자이너들은 Casalgrande Padana가 만든 Imagina Floral 대형 장식 타일을 사용해 무성하고 현대적인 식물성 요소로 만든 특징 벽을 만들 수 있습니다.",
-        "이탈리아 제조사의 이매지나 플로럴 타일 컬렉션은 신비롭고 감성적인 구성부터 대담한 클래식까지 다양한 플로럴 디자인을 선보입니다.",
-        "이매지나 플로럴 컬렉션에는 Landscape Grid와 같은 신비로운 디자인이 포함되어 있습니다. 이 라인은 Casalgrande Padana가 디자인하여 벽지와 유사한 매끄럽고 무미끄러운 느낌과 세라믹 타일의 내구성을 지닌 특징 벽과 나누는 벽을 만듭니다.",
-        "이 사료장은 실내외 모두에서 사용할 수 있어 정원 테라스뿐만 아니라 주방, 욕실, 침실 등 주거 및 상업 공간 모두에 적합합니다.",
-        "플로릴제는 고전적인 꽃들을 대담하게 재해석한 작품입니다. 컬렉션의 디자인에는 부드럽고 낭만적인 분위기의 랜드스케이프 그리드와 바람꽃이 포함되어 있는데, 각각 숲과 야생화 들판을 연상시킵니다.",
-        "전통적인 정교한 식물 프린트와 현대적인 채도가 낮은 색상, 확대된 스케일을 결합한 플로릴레지 디자인에서 다른 미학이 돋보입니다.",
-        "제품: 이매지나 플로럴 타일 브랜드: 카살그란데 파다나 연락처: sara.costi@casalgrandepadana.it",
-        "재료: 세라믹 크기: 1200 x 2780밀리미터 또는 600 x 1200밀리미터",
-        "Dezeen 쇼룸은 브랜드가 신제품을 출시하고 디자이너와 프로젝트를 Dezeen의 전 세계 대중에게 선보일 수 있는 저렴한 공간을 제공합니다. 자세한 내용은 showroom@dezeen.com 이메일을 보내세요.",
-        "Dezeen 쇼룸은 Dezeen의 파트너십 콘텐츠 예시입니다. 파트너십 콘텐츠에 대해 더 알아보세요.",
-        "디진 쇼룸 신제품 뉴스레터를 구독하려면 여기를 클릭하세요. 이 뉴스레터는 지난 시즌에 저희가 편집장이 선정한 제품을 소개하는 분기별 소식입니다.",
-        "Casalgrande Padana의 'Imagina Floral 타일'이라는 글이 Dezeen에 처음 게재되었습니다."
       ]
     },
     {
@@ -4203,7 +4950,7 @@
       "originalUrl": "https://toybook.com/unboxing-the-magic-behind-a-decade-of-lol-surprise",
       "author": "Nicole Savas",
       "publishedAt": "2026-09-04T13:00:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Backstory",
@@ -4300,7 +5047,7 @@
       "originalUrl": "https://toybook.com/sesame-street-grover-launch",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-04T13:00:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -4368,7 +5115,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/offspring-of-centenarians-exhibit-reduced-mortality-and-risk-of-age-related-disease",
       "author": "Reason",
       "publishedAt": "2026-09-04T10:03:40.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -4388,503 +5135,6 @@
         "심혈관 질환(CVD), 암, 고혈압, 뇌졸중 등 4가지 연령 관련 이환 질환의 사망 연령과 발병 연령의 차이는 Cox 비례 위험 회귀 모델링, 위험비(HR) 추정, 예상 발생 연령 지연 등을 사용하여 연구 코호트 내에서 평가되었습니다. 백세 노인 자녀와 대조군 참가자를 합쳐 LonGenity에서는 480명(중간 등록 연령 74세 [범위, 65-94세]; 여성 262명 [55%]; 백세 자녀 245명 [51%]), NECS에서는 1566명(중간 등록 연령 71세 [범위 39-100세]; 923명 여성 [59%]; 백세 자녀 1082명 [69%]), 1984년 영국 바이오뱅크(중위 등록 연령 65세 [범위, 42-71세]; 여성 1006명 [51%]; 백세 자녀 992명 [50%]).",
         "메타분석은 백세 자녀에서 사망, 심폐질환, 고혈압 위험이 일관되게 감소했으며, 사망 시 총 HR 추정치는 0.58, 심폐질환 0.67, 고혈압 0.68, 사망 시 3.12년, 고혈압 5.21년 지연을 보였습니다. 뇌졸중 위험도는 LonGenity(HR, 0.27)와 NECS(HR, 0.41)에서만 감소했습니다. 암과의 유의미한 연관성은 확인되지 않았습니다.",
         "링크: https://doi.org/10.1001/jamanetworkopen.2026.30964"
-      ]
-    },
-    {
-      "id": "dezeen:c00ff9defc",
-      "slug": "studio-cadena-fills-medell-n-cafe-with-31-c00ff9",
-      "titleOriginal": "Studio Cadena fills Medellín cafe with 31 towering wooden columns",
-      "summaryOriginal": "Architecture firm Studio Cadena has designed a forest-like interior for the Masa cafe in Medellín, Colombia, where over 30 plywood columns stretch to a concrete ceiling to create an \"atmosphere without walls or enclosure\". For the design of the spacious cafe in Colombia's second largest city, the studio focused on two main materials: concrete and The post Studio Cadena fills Medellín cafe with 31 ",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Architecture firm Studio Cadena has designed a forest-like interior for the Masa cafe in Medellín , Colombia, where over 30 plywood columns stretch to a concrete ceiling to create an \"atmosphere without walls or enclosure\"."
-        },
-        {
-          "kind": "text",
-          "text": "For the design of the spacious cafe in Colombia's second largest city, the studio focused on two main materials: concrete and wood."
-        },
-        {
-          "kind": "text",
-          "text": "The eatery's main area, a six-metre-tall room where guests can enjoy Masa's coffees, smoothies and food, is defined by two large concrete slabs that appear to be held up by numerous slender columns."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_9.jpg",
-          "alt": "Cafe with wooden pillars"
-        },
-        {
-          "kind": "text",
-          "text": "The Masa cafe in Medellín has towering wooden pillars However, the columns aren't load-bearing, but were introduced to create a striking interior that resembles a stylised forest."
-        },
-        {
-          "kind": "text",
-          "text": "\"They do not carry the building; they carry the room,\" Studio Cadena said."
-        },
-        {
-          "kind": "text",
-          "text": "\"Freed from load-bearing duty, they are multiplied across the interior to structure movement, filter light, and create a layered space, without the use of walls or partitions.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_4-scaled.jpg",
-          "alt": "Wooden pillars in cafe"
-        },
-        {
-          "kind": "text",
-          "text": "Studio Cadena combined concrete and wood for the interior To Studio Cadena founder Benjamin Cadena, the repetitive design is what defines the architecture of the space."
-        },
-        {
-          "kind": "text",
-          "text": "\"The concept was to shape the space's atmosphere without walls or enclosure,\" he told Dezeen."
-        },
-        {
-          "kind": "text",
-          "text": "\"31 wooden columns sit within a six-metre-tall volume between two slabs. One move, repeated, does all the architectural work.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_19.jpg",
-          "alt": "Dark room with pillars"
-        },
-        {
-          "kind": "text",
-          "text": "The cafe connects with the outdoors The architect carefully considered what material would have the most impact, landing on plywood due to its ability to subtly reflect the light in the space."
-        },
-        {
-          "kind": "text",
-          "text": "\"Untreated pine-faced plywood was used to form the six-meter-tall columns,\" Cadena said. \"Light bouncing off their surface is what gives the space its particular quality by introducing a diffused warmth.\""
-        },
-        {
-          "kind": "text",
-          "text": "Read: Jagged windows pierce Studio Cadena's Masa bakery in Bogotá His studio left the concrete structure exposed throughout the cafe to show the \"raw shell\" of the building, and refrained from adding too many materials to the pared-back space."
-        },
-        {
-          "kind": "text",
-          "text": "\"Few materials were used,\" Cadena explained. \"Wood, a marble counter, stainless steel for smaller pieces, with the structural shell left untouched.\""
-        },
-        {
-          "kind": "text",
-          "text": "\"It was an intentional choice to be resourceful, and reflects a recurring interest in reducing the design to the essential elements that shape how the space will be used and felt over time,\" Cadena continued."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_5.jpg",
-          "alt": "Circular opening in concrete wall"
-        },
-        {
-          "kind": "text",
-          "text": "A circular opening gives a view into the production space One side of the large room opens up towards a green outdoor space, with the wooden columns leading out towards the exterior to underline the connection to nature."
-        },
-        {
-          "kind": "text",
-          "text": "At the back of the room, a circular window gives visitors a view of the cafe's production area."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_15-scaled.jpg",
-          "alt": "Marble bar in Colombian cafe"
-        },
-        {
-          "kind": "text",
-          "text": "The studio added a marble bar to the interior Throughout the space, Studio Cadena chose to let the materials speak for themselves, rather than using different colours."
-        },
-        {
-          "kind": "text",
-          "text": "\"More than colour, the idea was contrast between the existing structure and what was introduced,\" Cadena said."
-        },
-        {
-          "kind": "text",
-          "text": "\"Materials were left untreated, with more attention given to texture than hue. Colour enters the space indirectly, through natural materials, vegetation, and ultimately its occupants.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_16.jpg",
-          "alt": "Cafe in Medellín"
-        },
-        {
-          "kind": "text",
-          "text": "Materials in the cafe were left untreated Other Medellín projects featured on Dezeen include a flat that \"channels the 1980s\" and a concrete office building on a steep hillsite ."
-        },
-        {
-          "kind": "text",
-          "text": "Architect: Benjamin Cadena / Studio Cadena Project team: Benjamin Cadena, Thomas Gomez, Ospina, Alma Karlsson"
-        },
-        {
-          "kind": "text",
-          "text": "The post Studio Cadena fills Medellín cafe with 31 towering wooden columns appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/04/masa-cafe-studio-cadena-medellin-wooden-columns",
-      "author": "Cajsa Carlson",
-      "publishedAt": "2026-09-04T10:00:35.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Interiors",
-        "Exclusives",
-        "Wood",
-        "Cafes",
-        "Colombia",
-        "Studio Cadena",
-        "Medellín"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/09/studio-cadena-masa-cafe-medellin_dezeen_2364_col_sq-new-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "스튜디오 카데나는 메데인 카페를 31개의 우뚝 솟은 나무 기둥으로 가득 채웁니다",
-      "summaryKo": "건축 사무소 Studio Cadena는 콜롬비아 메데인에 위치한 Masa 카페의 숲 같은 인테리어를 디자인했으며, 30개가 넘는 합판 기둥이 콘크리트 천장까지 이어져 \"벽이나 울타리 없는 분위기\"를 만들어냅니다. 콜롬비아 두 번째로 큰 도시인 메데인의 넓은 카페 디자인을 위해 스튜디오는 두 가지 주요 재료, 즉 콘크리트에 집중했으며, Studio Castina는 메데인 카페를 31개로 채웠습니다",
-      "bodyKo": [
-        "건축 사무소 스튜디오 카데나는 콜롬비아 메데인에 위치한 마사 카페를 위해 숲 같은 인테리어를 설계했으며, 30개가 넘는 합판 기둥이 콘크리트 천장까지 이어져 \"벽이나 울타리 없는 분위기\"를 만들어냅니다.",
-        "콜롬비아 제2의 도시인 이 넓은 카페 디자인을 위해 스튜디오는 콘크리트와 목재라는 두 가지 주요 재료에 집중했습니다.",
-        "식당의 주요 공간인 높이 6미터의 방으로, 손님들이 마사의 커피, 스무디, 음식을 즐길 수 있는 공간은 두 개의 큰 콘크리트 판으로 정의되어 있으며, 이 석판들은 여러 개의 가느다란 기둥에 의해 지탱된 듯 보입니다.",
-        "메데인의 마사 카페는 우뚝 솟은 나무 기둥을 가지고 있지만, 기둥들은 하중을 지탱하는 것이 아니라 스타일화된 숲을 연상시키는 인상적인 내부를 만들기 위해 도입되었습니다.",
-        "\"그들은 건물을 지탱하는 것이 아니라; 방을 지탱한다,\"고 스튜디오 카데나는 말했다.",
-        "\"하중 지중 의무에서 해방된 이 조각들은 내부에 분산되어 벽이나 칸막이 없이 움직임을 구조화하고 빛을 걸러내며 층층이 쌓인 공간을 만듭니다.\"",
-        "스튜디오 카데나는 인테리어에 콘크리트와 목재를 결합했습니다. 스튜디오 카데나 창립자 벤자민 카데나에게 반복적인 디자인이 공간의 건축을 정의합니다.",
-        "\"이 콘셉트는 벽이나 울타리 없이 공간의 분위기를 형성하는 것이었어요,\"라고 그는 디진에게 말했다.",
-        "\"31개의 목재 기둥이 두 개의 판 사이 높이 6미터 안에 자리 잡고 있습니다. 한 번의 움직임을 반복하여 모든 건축 작업을 수행합니다.\"",
-        "카페는 야외와 연결됩니다. 건축가는 어떤 재료가 가장 큰 영향을 미칠지 신중히 고민했으며, 공간 내 빛을 은은하게 반사할 수 있는 합판을 선택했습니다.",
-        "\"6미터 높이의 기둥을 만드는 데 처리되지 않은 소나무 면의 합판이 사용되었습니다,\"라고 카데나는 말했습니다. \"빛이 표면에서 반사되어 공간에 독특한 매력을 부여하며, 확산된 따뜻함을 더합니다.\"",
-        "읽어보세요: 뾰족한 창문들이 보고타의 스튜디오 카데나의 마사 베이커리를 뚫고 있습니다. 그의 작업실은 콘크리트 구조를 카페 전체에 노출시켜 건물의 '원초의 외형'을 보여주었고, 간결한 공간에 너무 많은 재료를 추가하지 않았습니다.",
-        "\"재료는 거의 사용되지 않았어요,\" 카데나가 설명했다. \"나무, 대리석 조리대, 작은 부품은 스테인리스 스틸, 구조 외피는 그대로 남겨두었어요.\"",
-        "\"이것은 의도적으로 자원을 활용한 선택이었으며, 공간이 시간이 지남에 따라 어떻게 사용되고 느껴질지에 대한 본질적인 요소들로 디자인을 축소하려는 반복적인 관심을 반영합니다,\"라고 카데나는 이어 말했습니다.",
-        "원형 출입구는 제작 공간 내부를 조망합니다. 넓은 방의 한쪽은 녹지 야외 공간으로 열리며, 나무 기둥들이 외부 쪽으로 이어져 자연과의 연결을 강조합니다.",
-        "방 뒤쪽에는 원형 창문이 있어 방문객들에게 카페 생산 구역을 조망할 수 있게 합니다.",
-        "스튜디오는 내부에 대리석 바를 추가했습니다. 공간 전반에 걸쳐 스튜디오 카데나는 다양한 색상을 사용하지 않고 재료가 스스로 말하도록 선택했습니다.",
-        "\"색상보다는, 기존 구조와 도입된 것 사이의 대비가 아이디어였다,\"고 카데나는 말했다.",
-        "\"재료는 처리되지 않고 색조보다는 질감에 더 많은 주의를 기울였다. 색은 자연 재료, 식물, 궁극적으로 그 안에 있는 존재들을 통해 간접적으로 공간에 들어온다.\"",
-        "카페 내 자재들은 처리되지 않은 채 방치되었습니다. Dezeen에 소개된 다른 메데인 프로젝트로는 1980년대를 담은 아파트와 가파른 언덕 부지에 위치한 콘크리트 오피스 빌딩이 있습니다.",
-        "건축가: 벤자민 카데나 / 스튜디오 카데나 프로젝트 팀: 벤자민 카데나, 토마스 고메즈, 오스피나, 알마 칼손",
-        "\"Studio Cadena가 메데인 카페를 31개의 우뚝 솟은 나무 기둥으로 가득 채운다\"는 글이 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "dezeen:3795f44a2d",
-      "slug": "dyson-toothbrush-updates-a-cleaning-routine-that-has-3795f4",
-      "titleOriginal": "Dyson toothbrush updates \"a cleaning routine that has remained largely unchanged for decades\"",
-      "summaryOriginal": "Following the unveiling of Dyson's CameraJet, the brand's Niamh Turney explained why it decided to redesign the toothbrush. Revealed earlier this week, the Dyson CameraJet toothbrush includes a mouthwash jet directed by a camera to remove plaque between teeth. According to Niamh Turney, senior commercial manager at Dyson, the brand made the move into dental The post Dyson toothbrush updates \"a cle",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Following the unveiling of Dyson 's CameraJet, the brand's Niamh Turney explained why it decided to redesign the toothbrush ."
-        },
-        {
-          "kind": "text",
-          "text": "Revealed earlier this week , the Dyson CameraJet toothbrush includes a mouthwash jet directed by a camera to remove plaque between teeth."
-        },
-        {
-          "kind": "text",
-          "text": "According to Niamh Turney, senior commercial manager at Dyson, the brand made the move into dental hygiene as it aims to disrupt areas of technology that have not been developed for a long time."
-        },
-        {
-          "kind": "text",
-          "text": "\"Every Dyson technology begins with identifying a problem that people have largely accepted and asking whether it can be solved differently,\" Turney told Dezeen."
-        },
-        {
-          "kind": "text",
-          "text": "\"Dyson enters categories where there is a clear unmet need and where its engineering, software and fluid dynamics expertise can deliver a meaningful improvement in performance.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/dyson-toothbrush-camerajet-interview-2_dezeen_2364_col_0-scaled.jpg",
-          "alt": "Niamh Turney"
-        },
-        {
-          "kind": "text",
-          "text": "Niamh Turney explained the thinking behind the Dyson CameraJet Dyson became a household brand after its founder, James Dyson, developed the bagless vacuum cleaner. Subsequently, the company has overhauled the design of other appliances including hand dryers, fans and heaters, while it recently unveiled its first headphones ."
-        },
-        {
-          "kind": "text",
-          "text": "The brand viewed electric toothbrushes as another device that had not seen a major development leap for years."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_col_29-scaled.jpg",
-          "alt": "Dyson unveils its first toothbrush that \"uses a camera to floss while you brush\""
-        },
-        {
-          "kind": "text",
-          "text": "Dyson's first toothbrush was unveiled earlier this week \"With oral care, we saw a routine that has remained largely unchanged for decades despite persistent challenges around flossing compliance and plaque removal between teeth,\" said Turney."
-        },
-        {
-          "kind": "text",
-          "text": "\"Our ambition is to bring a new level of technology, precision and performance to oral care, helping people achieve better oral health outcomes through a more effective daily routine,\" she continued."
-        },
-        {
-          "kind": "text",
-          "text": "\"As with many Dyson innovations, our goal is not simply to improve an existing product, but to rethink the category and challenge conventional approaches.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/dyson-toothbrush-camerajet-interview_dezeen_2364_col_6.jpg",
-          "alt": "Testing of Dyson toothbrush"
-        },
-        {
-          "kind": "text",
-          "text": "It was developed over six years According to Turney, electric toothbrushes were seen as an area with potential for improvement, since the majority of people do not clean their teeth as effectively as dentists suggest."
-        },
-        {
-          "kind": "text",
-          "text": "\"Oral care stood out because, despite decades of innovation elsewhere, people continue to struggle with effective routines,\" said Turney."
-        },
-        {
-          "kind": "text",
-          "text": "Read: Dyson's first toothbrush \"uses a camera to floss while you brush\" \"Flossing compliance remains low, many people miss the areas where plaque first forms, and oral health issues affect billions of people globally,\" she continued."
-        },
-        {
-          "kind": "text",
-          "text": "\"We saw an opportunity to rethink the category from first principles and develop a technology-led solution to help improve everyday oral care habits.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/dyson-camerajet-first-toothbrush-floss_dezeen_2364_col_39.jpg",
-          "alt": "Dyson toothbrush"
-        },
-        {
-          "kind": "text",
-          "text": "The brand hopes to change the process of cleaning teeth The brand, which has been developing the toothbrush for six years, aimed to shift the process of teeth cleaning by combining brushing and flossing into one action."
-        },
-        {
-          "kind": "text",
-          "text": "To do this, a jet was included in the head of the toothbrush, which sprays mouthwash into gaps between teeth directed by a camera."
-        },
-        {
-          "kind": "text",
-          "text": "\"Most electric toothbrushes focus solely on brushing and leave interdental cleaning, the gaps between teeth where plaque often accumulates, to a separate flossing step,\" said Turney."
-        },
-        {
-          "kind": "text",
-          "text": "\"The Dyson CameraJet is designed to do both simultaneously,\" she continued."
-        },
-        {
-          "kind": "text",
-          "text": "\"Rather than asking users to add another step to their routine, it combines brushing and interdental cleaning in one device. Our goal is to make effective oral care easier and more consistent by helping users clean the areas most commonly missed during brushing.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/dyson-toothbrush-camerajet-interview_dezeen_2364_col_8.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "According to Dyson, the camera system was trained on 470,000 dental images to recognise gaps between teeth. Using an artificial intelligence-powered algorithm, it takes 28 images per second to track the teeth and predict gaps."
-        },
-        {
-          "kind": "text",
-          "text": "Dyson said that 661 engineers worked on the project over its development, with the toothbrush tested using a proxy plaque that was developed in collaboration with the National University of Singapore's dentistry faculty."
-        },
-        {
-          "kind": "text",
-          "text": "Along with headphones, Dyson recently created the \"world's slimmest vacuum cleaner\" ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Dyson toothbrush updates \"a cleaning routine that has remained largely unchanged for decades\" appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/04/dyson-toothbrush-camerajet-interview",
-      "author": "Tom Ravenscroft",
-      "publishedAt": "2026-09-04T09:00:22.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Design",
-        "Interviews",
-        "Dyson",
-        "Toothbrushes"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/09/dyson-toothbrush-camerajet-interview_dezeen_2364_col_0-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "다이슨 칫솔은 \"수십 년간 거의 변하지 않은 청소 루틴을 업데이트합니다\"",
-      "summaryKo": "다이슨의 카메라젯 공개 이후, 브랜드의 니암 터니는 칫솔을 재설계하기로 한 이유를 설명했습니다. 이번 주 초에 공개된 다이슨 카메라젯 칫솔에는 치아 사이의 플라그를 제거하는 카메라에 의해 유도되는 구강청결제 제트가 포함되어 있습니다. 다이슨의 수석 상업 관리자 니암 터니에 따르면, 브랜드는 치과 분야로 진출했다고 합니다. 다이슨 칫솔 업데이트 \"한 클리",
-      "bodyKo": [
-        "다이슨의 카메라젯 공개 후, 브랜드의 니암 터니는 칫솔을 재설계하기로 한 이유를 설명했습니다.",
-        "이번 주 초에 공개된 다이슨 카메라젯 칫솔에는 치아 사이의 플라그를 제거하는 카메라가 지시하는 가글 제트가 포함되어 있습니다.",
-        "다이슨의 수석 상업 매니저인 니암 터니에 따르면, 이 브랜드는 오랫동안 개발되지 않은 기술 분야를 혁신하기 위해 치아 위생 분야로 진출했다고 합니다.",
-        "\"모든 다이슨 기술은 사람들이 대체로 받아들인 문제를 식별하고 그것을 다르게 해결할 수 있는지 묻는 것에서 시작된다,\"고 터니는 디진에 말했다.",
-        "\"다이슨은 명확한 미충족 수요가 있고, 엔지니어링, 소프트웨어 및 유체역학 전문성이 성과에 의미 있는 향상을 가져올 수 있는 카테고리에 진출합니다.\"",
-        "니암 터니는 다이슨 카메라젯의 배경에 대한 생각을 설명했습니다. 다이슨은 창립자 제임스 다이슨이 백 없는 진공청소기를 개발한 후 가정용 브랜드가 되었습니다. 이후 회사는 핸드 드라이어, 선풍기, 히터 등 다른 가전제품의 디자인을 전면적으로 개편했으며, 최근에는 첫 헤드폰도 공개했습니다.",
-        "브랜드는 전기 칫솔을 수년간 큰 발전이 없었던 또 다른 기기로 보았습니다.",
-        "다이슨의 첫 칫솔이 이번 주 초 공개되었습니다. \"구강 관리에서는 치실 준수와 치아 사이 플라그 제거에 대한 지속적인 어려움에도 불구하고 수십 년간 거의 변하지 않은 루틴을 보았습니다.\"라고 터니는 말했습니다.",
-        "\"우리의 목표는 구강 치료에 새로운 수준의 기술, 정밀도, 성능을 도입하여 사람들이 더 효과적인 일상을 통해 더 나은 구강 건강 결과를 달성하도록 돕는 것입니다.\"라고 그녀는 덧붙였습니다.",
-        "\"많은 다이슨 혁신과 마찬가지로, 우리의 목표는 단순히 기존 제품을 개선하는 것이 아니라 이 카테고리를 재고하고 기존의 접근법에 도전하는 것입니다.\"",
-        "이 프로그램은 6년에 걸쳐 개발되었습니다. 터니에 따르면, 전동 칫솔은 대부분의 사람들이 치과의사가 제안하는 만큼 효과적으로 치아를 청소하지 못하기 때문에 개선 가능성이 있는 분야로 여겨졌습니다.",
-        "\"구강 치료가 두드러진 이유는 수십 년간 다른 곳에서 혁신이 있었음에도 불구하고 사람들이 효과적인 일과를 유지하는 데 여전히 어려움을 겪고 있기 때문입니다,\"라고 터니는 말했습니다.",
-        "읽어보세요: 다이슨의 첫 칫솔은 \"양치질하는 동안 카메라를 사용한다\" \"치실 사용 순응률은 낮고, 많은 사람들이 플라그가 처음 형성되는 부위를 놓치고 있으며, 전 세계 수십억 명의 구강 건강 문제가 영향을 미친다\"고 그녀는 덧붙였습니다.",
-        "\"우리는 이 카테고리를 처음부터 재고하고, 일상적인 구강 관리 습관을 개선할 수 있는 기술 주도 솔루션을 개발할 기회를 보았습니다.\"",
-        "브랜드는 치아 세척 과정을 바꾸기를 희망합니다. 6년간 이 칫솔을 개발해온 이 브랜드는 양치와 치실 사용을 하나의 동작으로 결합하여 치아 세척 과정을 변화시키는 것을 목표로 했습니다.",
-        "이를 위해 칫솔 머리에 제트가 포함되어 있어 카메라가 조준하는 치아 사이 틈에 구강청결제를 분사합니다.",
-        "\"대부분의 전동 칫솔은 오로지 양치에만 집중하며, 치아 사이 플라그가 자주 쌓이는 틈인 치아 간 세척은 별도의 치실 사용으로 남겨둡니다,\"라고 터니는 말했습니다.",
-        "\"다이슨 카메라젯은 두 가지를 동시에 할 수 있도록 설계되었습니다.\"라고 그녀는 덧붙였습니다.",
-        "\"사용자가 루틴에 또 다른 단계를 추가하도록 요구하는 대신, 양치와 치간청소를 하나의 장치에 결합합니다. 저희의 목표는 양치 중 가장 자주 놓치는 부위를 청소할 수 있도록 도와 효과적인 구강 관리를 더 쉽고 일관되게 만드는 것입니다.\"",
-        "다이슨에 따르면, 이 카메라 시스템은 47만 장의 치아 이미지를 기반으로 치아 사이의 틈을 인식하도록 훈련되었습니다. 인공지능 기반 알고리즘을 사용해 초당 28장의 이미지를 사용해 치아를 추적하고 틈을 예측합니다.",
-        "다이슨은 661명의 엔지니어가 프로젝트 개발 과정에 참여했으며, 칫솔은 싱가포르 국립대학교 치과와 협력해 개발된 대리 플라크를 사용해 테스트했다고 밝혔다.",
-        "헤드폰과 함께 다이슨은 최근 \"세계에서 가장 슬림한 진공청소기\"를 만들었습니다.",
-        "\"수십 년간 거의 변하지 않은 청소 루틴을 업데이트하다\"는 다이슨 칫솔 업데이트라는 글이 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "dezeen:1fa020247e",
-      "slug": "fitbit-founders-launch-ai-powered-wristband-to-monitor-1fa020",
-      "titleOriginal": "Fitbit founders launch AI-powered wristband to monitor health of whole family",
-      "summaryOriginal": "Luffu Link is a sleek, wireless wristband designed to track multiple users at once, conceived by wearable technology company Fitbit to \"bring your family's health and safety together\". Available in onyx black, halo gold and sterling blue, the wristband features a metallic double-barrelled body connected to a minimalist strap and has a battery life of up The post Fitbit founders launch AI-powered w",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Luffu Link is a sleek, wireless wristband designed to track multiple users at once, conceived by wearable technology company Fitbit to \"bring your family's health and safety together\"."
-        },
-        {
-          "kind": "text",
-          "text": "Available in onyx black, halo gold and sterling blue, the wristband features a metallic double-barrelled body connected to a minimalist strap and has a battery life of up to five days."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/luffu-link-fitbit-family-ai-wearable-band-design_dezeen_2364_col_9-scaled.jpg",
-          "alt": "Luffu Link"
-        },
-        {
-          "kind": "text",
-          "text": "Luffu Link is a wireless wristband designed for families The lightweight wearable is the first physical component of the AI-powered Luffu app , which James Park and Eric Friedman of Google -owned Fitbit designed to gather the separate movements of a family and subsequently combine their health data."
-        },
-        {
-          "kind": "text",
-          "text": "Designed to be worn individually by a group of family members, each user's data is communicated via the app."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/luffu-link-fitbit-family-ai-wearable-band-design_dezeen_2364_col_2.jpg",
-          "alt": "Wearable technology by Fitbit"
-        },
-        {
-          "kind": "text",
-          "text": "The wearable comes in three colourways The screenless wristband features a singular voice-controlled button, fitted to record \"everyday health details\" ranging from information on symptoms and medications to mood changes and meal plans."
-        },
-        {
-          "kind": "text",
-          "text": "Luffu Link also continuously captures its user's background activity, including sleep patterns and calories burned each day, as well as their resting heart and breathing rates."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/luffu-link-fitbit-family-ai-wearable-band-design_dezeen_2364_col_10.jpg",
-          "alt": "Luffu Link app"
-        },
-        {
-          "kind": "text",
-          "text": "Luffu Link connects to an app The wristband's built-in GPS facilitates location sharing between families, alerting users when individuals enter or leave designated areas."
-        },
-        {
-          "kind": "text",
-          "text": "Double-pressing the wearable's button can also send a \"simple check-in\" to selected family members, saving the need to contact them by phone."
-        },
-        {
-          "kind": "text",
-          "text": "Park and Friedman were motivated to create the Luffu products after learning that almost one in four adults in the USA are family caregivers, according to a recent report that claimed this figure has risen by almost 50 per cent in the last decade."
-        },
-        {
-          "kind": "text",
-          "text": "Read: Google combines \"smarts and helpfulness\" with first smartwatch Their hope is that by wearing wristbands, families can sync their health and safety data to streamline their communication and close \"a major gap\" in consumer health tools."
-        },
-        {
-          "kind": "text",
-          "text": "\"Families are still piecing together information across wearables, patient portals, medication lists, calendars, notes, text threads, location apps and other disconnected tools,\" said the duo."
-        },
-        {
-          "kind": "text",
-          "text": "The pair explained that they wanted to avoid designing wristbands that look like \"bulky personal safety devices\", noting that while the Luffu app is compatible with existing individual wearables, Luffu Link was created to enhance the experience."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/09/luffu-link-fitbit-family-ai-wearable-band-design_dezeen_2364_col_3-scaled.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "Park and Friedman also considered the Luffu products' use of AI to collect data."
-        },
-        {
-          "kind": "text",
-          "text": "\"Advances in AI have made it possible to capture information far more simply and naturally, using voice, text, photos and connected data, while also understanding how those signals relate to one another over time,\" said the duo."
-        },
-        {
-          "kind": "text",
-          "text": "\"It's proactive intelligence designed to help families understand what matters and what to do next, not AI added for AI's sake,\" they claimed."
-        },
-        {
-          "kind": "text",
-          "text": "The world of wearable technology is ever-evolving. In June, tech giant Meta released its first in-house-designed AI smart glasses , with one of the three styles created in collaboration influencer Kylie Jenner – a much-debated launch that we discussed on our Dezeen Weekly podcast ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Fitbit founders launch AI-powered wristband to monitor health of whole family appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/04/fitbit-luffu-link-ai-powered-wristband-health-family",
-      "author": "Jane Englefield",
-      "publishedAt": "2026-09-04T08:00:45.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Products",
-        "Design",
-        "Product design",
-        "Google",
-        "Wearable technology",
-        "Fitbit",
-        "Health products"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/09/luffu-link-fitbit-family-ai-wearable-band-design-sq-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "핏빗 창립자들이 온 가족의 건강을 모니터링하기 위해 AI 기반 손목밴드를 출시하다",
-      "summaryKo": "Luffu Link는 여러 사용자를 동시에 추적할 수 있도록 설계된 세련된 무선 손목밴드로, 웨어러블 기술 회사 핏빗이 \"가족의 건강과 안전을 함께\"하기 위해 고안했습니다. 오닉스 블랙, 헤일로 골드, 스털링 블루로 제공되는 이 손목밴드는 메탈릭 더블 배럴 바디와 미니멀리스트 스트랩으로 연결되어 있으며 배터리 수명은 최고입니다. Fitbit 창립자들이 AI 기반 W 출시",
-      "bodyKo": [
-        "Luffu Link는 여러 사용자를 동시에 추적할 수 있도록 설계된 세련된 무선 손목밴드로, 웨어러블 기술 회사 Fitbit이 \"가족의 건강과 안전을 함께 지키는\" 목적으로 고안했습니다.",
-        "오닉스 블랙, 헤일로 골드, 스털링 블루로 출시된 이 손목밴드는 메탈릭 더블 배럴 바디와 미니멀리스트 스트랩으로 연결되어 있으며 배터리 수명은 최대 5일입니다.",
-        "Luffu Link는 가족을 위해 설계된 무선 손목밴드입니다. 이 가벼운 웨어러블은 AI 기반 Luffu 앱의 첫 번째 물리적 부품으로, 구글 소유 Fitbit의 James Park와 Eric Friedman이 가족의 개별 움직임을 수집하고 건강 데이터를 결합하도록 설계했습니다.",
-        "가족 구성원 그룹이 개별적으로 착용하도록 설계되었으며, 각 사용자의 데이터는 앱을 통해 전달됩니다.",
-        "웨어러블은 세 가지 색상으로 제공됩니다. 스크린리스 손목밴드는 음성 제어 버튼이 하나뿐이며, 증상과 약물 정보부터 기분 변화, 식단 계획 등 '일상 건강 세부사항'을 기록할 수 있습니다.",
-        "Luffu Link는 사용자의 배경 활동, 즉 수면 패턴과 하루 소모 칼로리, 휴식 시 심박수와 호흡 속도도 지속적으로 기록합니다.",
-        "Luffu Link는 앱과 연결됩니다. 손목밴드에 내장된 GPS는 가족 간 위치 공유를 가능하게 하며, 지정된 구역에 들어오거나 나갈 때 사용자에게 알림을 줍니다.",
-        "웨어러블 버튼을 두 번 누르면 선택된 가족에게 '간단한 체크인'을 보낼 수 있어 전화로 연락할 필요가 없습니다.",
-        "파크와 프리드먼은 최근 보고서에 따르면 미국 성인 거의 4명 중 1명이 가족 돌봄 제공자라는 사실을 알게 된 후 루푸 제품을 만들게 되었습니다. 이 수치는 지난 10년간 거의 50% 증가했다고 합니다.",
-        "읽어보세요: 구글은 최초의 스마트워치와 \"스마트와 유용성\"을 결합합니다. 그들은 손목밴드를 착용함으로써 가족들이 건강 및 안전 데이터를 동기화하여 소통을 간소화하고 소비자 건강 도구의 \"큰 격차\"를 해소할 수 있기를 기대하고 있습니다.",
-        "\"가족들은 여전히 웨어러블, 환자 포털, 약 목록, 달력, 메모, 텍스트 스레드, 위치 앱 및 기타 단절된 도구들 사이에서 정보를 조합하고 있다\"고 두 사람은 말했다.",
-        "두 사람은 \"부피가 큰 개인 안전장치\"처럼 보이는 손목밴드를 피하고 싶다고 설명했으며, Luffu 앱은 기존 개인 웨어러블과 호환되지만 Luffu Link는 경험을 향상시키기 위해 만들어졌다고 밝혔습니다.",
-        "파크와 프리드먼은 또한 루푸 제품들이 데이터를 수집하기 위해 AI를 사용하는 점도 고려했습니다.",
-        "\"AI의 발전으로 음성, 텍스트, 사진, 연결된 데이터를 훨씬 더 간단하고 자연스럽게 정보를 포착할 수 있게 되었으며, 시간이 지남에 따라 신호들이 어떻게 연관되는지도 이해할 수 있게 되었습니다,\"라고 두 사람은 말했습니다.",
-        "\"이는 가족들이 무엇이 중요한지, 다음에 무엇을 해야 할지 이해하도록 돕기 위해 설계된 선제적 지능이지, AI를 위해 추가된 것이 아닙니다.\"라고 그들은 주장했습니다.",
-        "웨어러블 기술의 세계는 끊임없이 진화하고 있습니다. 6월에 기술 대기업 메타는 인플루언서 카일리 제너와 협업하여 만든 세 가지 스타일 중 하나를 포함한 최초의 자체 설계 AI 스마트 글라스를 출시했습니다. 이 출시는 저희가 Dezeen Weekly 팟캐스트에서 논의한 많은 논란의 원인입니다.",
-        "\"핏빗 창립자들이 가족 전체 건강을 모니터링하기 위해 AI 기반 손목밴드를 출시하다\"는 글이 Dezeen에 처음 게재되었습니다."
       ]
     },
     {
@@ -5000,7 +5250,7 @@
       "originalUrl": "https://toybook.com/the-toy-book-august-2026-power-rankings",
       "author": "James Zahn",
       "publishedAt": "2026-09-04T05:08:42.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "News",
@@ -5047,153 +5297,10 @@
       ]
     },
     {
-      "id": "dezeen:6f33609147",
-      "slug": "ryno-equips-london-rooftop-with-integrated-terracing-system-6f3360",
-      "titleOriginal": "Ryno equips London rooftop with integrated terracing system",
-      "summaryOriginal": "Promotion: construction systems manufacturer Ryno's TerraSmart Lattice Rail System was chosen to connect the planting, balustrading, seating and entertainment spaces for interior studio Thirdway Group's rooftop terrace without penetrating the waterproofing. Ryno's system is a single integrated support structure, created to allow for multiple design elements to be seamlessly coordinated without str",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Promotion: construction systems manufacturer Ryno's TerraSmart Lattice Rail System was chosen to connect the planting, balustrading, seating and entertainment spaces for interior studio Thirdway Group's rooftop terrace without penetrating the waterproofing."
-        },
-        {
-          "kind": "text",
-          "text": "Ryno 's system is a single integrated support structure, created to allow for multiple design elements to be seamlessly coordinated without structural constraints."
-        },
-        {
-          "kind": "text",
-          "text": "The system incorporates Ryno's BaseLink – a freestanding connection component that allows a terrace's balustrades to be secured directly to the supporting structure without penetrating the roof waterproofing."
-        },
-        {
-          "kind": "text",
-          "text": "It also allows for multiple surface finishes to be added, including the brand's Vitrified Composite decking system ."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/RYNO_dezeen_2364_col_0-1.jpg",
-          "alt": "Ryno"
-        },
-        {
-          "kind": "text",
-          "text": "Ryno's system is a single integrated support structure As part of Thirdway's rooftop development, ledge and contour planters were added to accommodate integrated seating and provide access to rainwater outlets."
-        },
-        {
-          "kind": "text",
-          "text": "According to Ryno, this ensured maintenance requirements were added to the design without affecting the terrace's visual appearance."
-        },
-        {
-          "kind": "text",
-          "text": "LED downlighting was also integrated into the planter system to \"enhance the atmosphere\" for evening use, extending the space's usability beyond working hours."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/08/Ryno-render_dezeen_2364_col_0.jpg",
-          "alt": "Ryno"
-        },
-        {
-          "kind": "text",
-          "text": "The system incorporates the brand’s BaseLink solution, enabling the balustrade to connect directly to the substructure A late addition to the design process was the addition of a bar area, which was originally omitted due to additional structural supports."
-        },
-        {
-          "kind": "text",
-          "text": "Ryno explained that as an extension to the completed terrace, the planter design was altered to accommodate the feature with minimal disruption."
-        },
-        {
-          "kind": "text",
-          "text": "According to Thirdway, utilising Ryno's freestanding balustrade connection component allowed for Ryno's Linear Track system to be integrated directly into the decking and paving, eliminating the need for additional steelwork or disturbing the waterproofing system."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/07/ryno-terracing-system-dezeen_dezeen_2364_col_2.jpg",
-          "alt": "a rooftop terrace in London"
-        },
-        {
-          "kind": "text",
-          "text": "The TerraSmart Lattice Rail System was chosen to house planting, seating and entertainment spaces for a rooftop terrace According to the project team, the flexibility of Ryno's integrated terrace system allowed design decisions to remain open for longer than would typically be possible on a rooftop project."
-        },
-        {
-          "kind": "text",
-          "text": "An access gate was similarly connected directly to the terrace structure using the brand's integrated fixing baseplate, avoiding the need for separate structural steelwork."
-        },
-        {
-          "kind": "text",
-          "text": "The completed terrace now functions as an outdoor extension of Thirdway's headquarters, providing a space for informal meetings, events and day-to-day employee use."
-        },
-        {
-          "kind": "image",
-          "url": "https://static.dezeen.com/uploads/2026/07/ryno-terracing-system-dezeen_dezeen_2364_col_4.jpg",
-          "alt": "a rooftop terrace with seating"
-        },
-        {
-          "kind": "text",
-          "text": "The system also allows for multiple surface finishes to be added, including the brand's Vitrified Composite decking system Together with the new headquarters, it reflects Thirdway's commitment to investing in both its people and its clients, with the terrace providing the perfect setting to bring that vision to life."
-        },
-        {
-          "kind": "text",
-          "text": "\"It demonstrates how integrated rooftop systems can give designers greater freedom to realise ambitious rooftop environments while reducing coordination challenges between trades, suppliers and specialist contractors,\" said Ryno."
-        },
-        {
-          "kind": "text",
-          "text": "To learn more about Ryno and the project, visit its website here ."
-        },
-        {
-          "kind": "text",
-          "text": "This article was written for Ryno as part of a partnership. Find out more about our partnership content here ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Ryno equips London rooftop with integrated terracing system appeared first on Dezeen ."
-        }
-      ],
-      "sourceName": "Dezeen",
-      "sourceUrl": "https://www.dezeen.com/",
-      "originalUrl": "https://www.dezeen.com/2026/09/04/ryno-london-rooftop-terrace-integrated-terracing-system",
-      "author": "Dezeen staff",
-      "publishedAt": "2026-09-04T04:00:44.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
-      "language": "en",
-      "keywords": [
-        "all",
-        "Promotions"
-      ],
-      "image": {
-        "url": "http://static.dezeen.com/uploads/2026/07/ryno-dezeen_dezeen_2364_col_0-1-411x411.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "라이노는 런던 옥상에 통합 테라스 시스템을 설치합니다",
-      "summaryKo": "홍보: 건설 시스템 제조업체인 Ryno's TerraSmart 격자 레일 시스템이 내부 스튜디오 Thirdway Group의 옥상 테라스를 위한 식재, 난간, 좌석 및 엔터테인먼트 공간을 방수 방지 없이 연결하는 역할을 선택했습니다. Ryno의 시스템은 단일 통합 지지 구조로, 여러 설계 요소를 스트리트 없이 원활하게 조율할 수 있도록 설계되었습니다.",
-      "bodyKo": [
-        "홍보: 건설 시스템 제조업체 라이노의 테라스마트 격자 레일 시스템이 내부 스튜디오 서드웨이 그룹의 옥상 테라스를 위한 식재, 난간, 좌석 및 엔터테인먼트 공간을 방수 방지 없이 연결하는 데 선정되었습니다.",
-        "라이노의 시스템은 단일 통합 지지 구조로, 여러 설계 요소가 구조적 제약 없이 원활하게 조율될 수 있도록 설계되었습니다.",
-        "이 시스템은 라이노의 BaseLink를 통합하는데, 이는 테라스 난간을 지붕 방수층을 뚫지 않고 지지 구조물에 직접 고정할 수 있게 하는 독립형 연결 부품입니다.",
-        "또한 브랜드의 비트리파이드 컴포지트 데킹 시스템을 포함한 다양한 표면 마감 처리를 추가할 수 있습니다.",
-        "라이노 시스템은 단일 통합 지지 구조입니다. 서드웨이의 옥상 개발 과정에서 선반과 윤곽 화단이 추가되어 통합 좌석을 수용하고 빗물 배출구로 접근할 수 있게 되었습니다.",
-        "라이노에 따르면, 이로 인해 테라스의 시각적 외관에는 영향을 주지 않으면서 유지보수 요구사항이 추가될 수 있었습니다.",
-        "LED 다운라이트도 화분 시스템에 통합되어 저녁 사용을 위한 '분위기 향상'을 가능하게 하여 근무 시간 이후에도 공간의 사용 가능성을 연장했습니다.",
-        "이 시스템은 브랜드의 BaseLink 솔루션을 통합하여 난간이 하부 구조물에 직접 연결될 수 있게 합니다. 설계 과정 후반부에는 바 영역이 추가되었으나, 원래는 추가 구조 지지대로 인해 생략되었습니다.",
-        "라이노는 완성된 테라스 확장으로 플랜터 디자인이 최소한의 방해로 이 기능을 수용하도록 변경되었다고 설명했습니다.",
-        "서드웨이에 따르면, 라이노의 독립형 난간 연결 부품을 활용함으로써 라이노의 선형 트랙 시스템을 데크와 포장에 직접 통합하여 추가 강철 작업이나 방수 시스템 방해를 없앨 수 있었습니다.",
-        "테라스마트 격자 레일 시스템은 옥상 테라스의 식재, 좌석, 엔터테인먼트 공간을 마련하는 데 선택되었습니다. 프로젝트 팀에 따르면, 라이노의 통합 테라스 시스템의 유연성 덕분에 설계 결정이 일반적으로 옥상 프로젝트보다 더 오래 개설될 수 있었습니다.",
-        "출입문도 브랜드의 통합 고정 베이스플레이트를 사용해 테라스 구조물에 직접 연결되어 별도의 구조용 강철 작업이 필요 없었습니다.",
-        "완성된 테라스는 현재 서드웨이 본사의 야외 확장 공간으로 사용되며, 비공식 회의, 행사, 일상 직원들의 활용을 위한 공간을 제공합니다.",
-        "이 시스템은 브랜드의 Vitrified Composite 데킹 시스템을 포함한 다양한 표면 마감 처리를 추가할 수 있습니다. 새 본사와 함께 Thirdway가 직원과 고객 모두에게 투자하려는 의지를 반영하며, 테라스는 그 비전을 실현하는 완벽한 환경을 제공합니다.",
-        "\"통합 루프탑 시스템이 디자이너들에게 야심찬 옥상 환경을 실현할 수 있는 더 큰 자유를 제공하고, 기술, 공급업체, 전문 시공업체 간의 조정 문제를 줄여준다는 점을 보여줍니다.\"라고 라이노는 말했습니다.",
-        "라이노와 프로젝트에 대해 더 알고 싶다면 웹사이트를 방문해 주세요.",
-        "이 글은 파트너십의 일환으로 라이노를 위해 작성되었습니다. 파트너십 콘텐츠에 대해 더 알고 싶다면 여기를 참조하세요.",
-        "이 글은 Ryno가 런던 옥상에 통합 테라스 시스템을 설치하다 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
       "id": "lifespan-io:d176156141",
       "slug": "the-last-generation-to-die-interview-with-tim-d17615",
       "titleOriginal": "The Last Generation to Die: Interview With Tim Maupin",
-      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation technologies arrive and who gets left behind. The project has now reached the top […]",
+      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation technologies arrive and who gets left behind. The project has now reached the […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -5313,7 +5420,7 @@
       "originalUrl": "https://lifespan.io/the-last-generation-to-die-interview-with-tim-maupin",
       "author": "Steve Hill",
       "publishedAt": "2026-09-03T20:00:48.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Advocacy",
@@ -5332,7 +5439,7 @@
       "curiosityScore": 0.7,
       "contentType": "research",
       "titleKo": "마지막 세대가 죽음: 팀 모핀과의 인터뷰",
-      "summaryKo": "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해 왔습니다. 이 프로젝트는 이제 최고급에 도달했습니다 [...]",
+      "summaryKo": "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지에 관한 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해 왔습니다. 이 프로젝트는 이제 [...]",
       "bodyKo": [
         "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해 왔습니다. 이 프로젝트는 현재 인류 미래에 대한 낙관적인 비전을 모색하는 글로벌 대회인 미래 비전 XP라이즈의 상위 65위에 진입했습니다. 우리는 그와 이야기의 개인적 이해관계, 긍정적인 미래 이야기를 만드는 도전, 그리고 영화의 중심 딜레마가 점점 더 긴급하게 느껴지는 이유에 대해 이야기를 나누었습니다.",
         "함께해 주셔서 감사합니다, 팀. 흥미로운 소식은 당신의 영화 중 하나가 미래 비전 XPrize에 후보로 올랐다는 것입니다. 대회의 과제는 인류의 낙관적이고 풍요로운 미래를 묘사한 3분 분량의 SF 예고편을 만드는 것입니다. 대상은 자신의 비전을 장편 영화로 만드는 데 260만 달러+를 받으며, 준우승자에게는 100만 달러 이상의 상금이 주어집니다. 팀, 그 부분에 대해 조금 이야기해 주실 수 있나요? 네, 이 영화는 제가 꽤 오랫동안 작업해온 롱제비티에 초점을 맞춘 영화 '라스트 제너레이션 투 다이'입니다. X 프라이즈 미래 비전 콘테스트에서 2500개 이상의 출품작 중 상위 65위 안에 들었는데, 정말 흥미로운 소식입니다.",
@@ -5408,7 +5515,7 @@
       "originalUrl": "https://toybook.com/build-a-bear-national-teddy-bear-day-news",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-03T19:39:19.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Cute, Cuddly, & Collectible",
@@ -5482,7 +5589,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/senescent-microglia-secrete-dlk1-which-causes-dysfunction-in-the-aging-brain",
       "author": "Reason",
       "publishedAt": "2026-09-03T18:16:33.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -5596,7 +5703,7 @@
       "originalUrl": "https://toybook.com/tb-september-2026-compliance",
       "author": "Guest Author",
       "publishedAt": "2026-09-03T18:00:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Compliance & Regulations",
@@ -5827,7 +5934,7 @@
       "originalUrl": "https://toybook.com/goliath-sanrio-suite-spaces-line-launch",
       "author": "Samantha Connell",
       "publishedAt": "2026-09-03T17:05:13.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "News",
@@ -6043,7 +6150,7 @@
       "originalUrl": "https://toybook.com/stern-pinball-fallout-hands-on",
       "author": "James Zahn",
       "publishedAt": "2026-09-03T17:02:49.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Features",
@@ -6290,7 +6397,7 @@
       "originalUrl": "https://toybook.com/emotional-support-nfl-footballs-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-03T16:59:51.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -6337,59 +6444,10 @@
       ]
     },
     {
-      "id": "fight-aging:87a19af2a3",
-      "slug": "genome-sequencing-of-bat-species-in-search-of-87a19a",
-      "titleOriginal": "Genome Sequencing of Bat Species in Search of Causes of Longevity",
-      "summaryOriginal": "Long-lived bats are extreme outliers in the normal mammalian relationships between species body size, metabolic rate, and life span. They are small, have a high metabolic rate, and unlike near all other mammals with those characteristics, many bat species are long-lived. But bat species do exhibit a very wide range of life spans; near neighbor species can have very different paces of aging. Resear",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Long-lived bats are extreme outliers in the normal mammalian relationships between species body size, metabolic rate , and life span. They are small, have a high metabolic rate, and unlike near all other mammals with those characteristics, many bat species are long-lived. But bat species do exhibit a very wide range of life spans; near neighbor species can have very different paces of aging. Researchers here sequence the genomes of a number of different bat species in search of insight into the mechanisms driving longevity in bats. As is usually the case, the distant end goal of this sort of comparative biology of aging research is to find potential approaches to the development of longevity therapies. That is a long road, and little progress has been made beyond investigation. Only in recent years have the first speculative transfers of genes from long-lived species to short-lived species occurred, for example."
-        },
-        {
-          "kind": "text",
-          "text": "The genus Myotis is one of the largest clades of bats, and it exhibits some of the most extreme variation in lifespans among mammals, alongside unique adaptations to viral tolerance and immune defence. Here, to study the evolution of these phenotypes , we generated cell lines and near-complete genome assemblies for eight closely related Myotis species. Using genome-wide screens of positive selection , analyses of structural variation and functional experiments in primary cells, we identify patterns of adaptation contributing to longevity, cancer resistance, and viral interactions."
-        },
-        {
-          "kind": "text",
-          "text": "We demonstrate distinct modes of adaptation to DNA and RNA viruses compared with all other mammals, with bats exhibiting genome-wide over-representation of positive selection for DNA-virus-interacting proteins and elevated rates of copy-number variation for RNA-virus-interacting proteins. Characterization of Myotis-specific duplications of the key immune factor EIF2AK2 (also known as PKR ) reveals multiple ancient segregating trans-species copy-number polymorphisms . We show that the recurrent evolution of longevity seen in Myotis is associated with positive selection in cancer pathways, and demonstrate a unique response to DNA damage in primary cells of the long-lived Myotis lucifugus . Together, our results suggest that bats' remarkable longevity and immunity are linked through pleiotropic adaptations to viruses and ageing-related disease."
-        },
-        {
-          "kind": "text",
-          "text": "Link: https://doi.org/10.1038/s41586-026-10932-7"
-        }
-      ],
-      "sourceName": "Fight Aging!",
-      "sourceUrl": "https://www.fightaging.org/",
-      "originalUrl": "https://www.fightaging.org/archives/2026/09/genome-sequencing-of-bat-species-in-search-of-causes-of-longevity",
-      "author": "Reason",
-      "publishedAt": "2026-09-03T10:22:31.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
-      "language": "en",
-      "keywords": [
-        "Daily News"
-      ],
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 3,
-      "careScore": 0.95,
-      "curiosityScore": 0,
-      "contentType": "opinion",
-      "titleKo": "롱제비티 원인을 찾기 위한 박쥐 종의 유전체 서열 분석",
-      "summaryKo": "장수 박쥐는 종의 체형, 대사율, 수명 간의 일반적인 포유류 관계에서 극단적인 예외입니다. 이들은 작고 신진대사율이 높으며, 이런 특성을 가진 거의 모든 포유류와 달리 많은 박쥐 종은 장수를 자랑합니다. 하지만 박쥐 종은 매우 다양한 수명을 보입니다; 가까운 종들은 노화 속도가 매우 다를 수 있습니다. 리시어",
-      "bodyKo": [
-        "장수 박쥐는 종의 체형, 대사율, 수명 간의 정상적인 포유류 관계에서 극단적인 예외입니다. 이들은 작고 대사율이 높으며, 이러한 특성을 가진 거의 모든 포유류와 달리 많은 박쥐 종은 장수를 자랑합니다. 하지만 박쥐 종은 매우 넓은 수명 범위를 보이며; 가까운 종들은 노화 속도가 매우 다를 수 있습니다. 연구자들은 박쥐의 롱제비티 메커니즘에 대한 통찰을 찾기 위해 여러 박쥐 종의 게놈을 시퀀싱합니다. 보통 그렇듯이, 이러한 비교생물학 노화 연구의 먼 궁극적 목표는 롱제비티 치료법 개발에 잠재적 접근법을 찾는 것입니다. 그것은 긴 여정이며, 조사 외에는 거의 진전이 없습니다. 예를 들어, 장수 종에서 단수명 종으로의 유전자 전이가 최근에 처음으로 추측적으로 이루어졌습니다.",
-        "Myotis 속은 박쥐 중 가장 큰 계통군 중 하나로, 포유류 내에서 수명의 극단적 변이를 보여주며, 바이러스 내성과 면역 방어에 대한 독특한 적응도 함께 보입니다. 이 표현형들의 진화를 연구하기 위해 우리는 8종의 밀접한 관련 Myotis 종에 대한 세포주와 거의 완전한 게놈 조립체를 생성했습니다. 유전체 전역 스크리닝 긍정적 선택, 구조 변이 분석, 1차 세포 기능 실험을 통해 롱제비티, 암 저항성, 바이러스 상호작용에 기여하는 적응 패턴을 규명합니다.",
-        "우리는 다른 모든 포유류와 비교했을 때 DNA 및 RNA 바이러스에 대한 뚜렷한 적응 방식을 보여주었으며, 박쥐는 DNA-바이러스 상호작용 단백질에 대한 게놈 전반에 걸쳐 양성 선택이 과잉 대표되고, RNA-바이러스 상호작용 단백질의 복제수 변이율이 더 높음을 보입니다. Myotis 특이적 면역 인자 EIF2AK2(PKR)의 중복 특성 분석은 고대 분리된 여러 종 간 복제수 다형성을 밝혀냅니다. Myotis에서 관찰되는 롱제비티의 반복적 진화가 암 경로에서의 양성 선택과 연관되어 있으며, 장수 Myotis lucifugus의 1차 세포에서 DNA 손상에 대한 독특한 반응을 보입니다. 종합적으로 보면, 박쥐의 놀라운 롱제비티와 면역이 바이러스와 노화 관련 질병에 대한 다면성 적응을 통해 연관되어 있음을 시사합니다.",
-        "링크: https://doi.org/10.1038/s41586-026-10932-7"
-      ]
-    },
-    {
       "id": "lifespan-io:8cb78c75c6",
       "slug": "invested-in-her-campaign-extends-fundraising-deadline-8cb78c",
       "titleOriginal": "Invested in Her Campaign Extends Fundraising Deadline",
-      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign […]",
+      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October 1, […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -6433,7 +6491,7 @@
       "originalUrl": "https://lifespan.io/invested-in-her-campaign-extends-fundraising-deadline",
       "author": "Press release",
       "publishedAt": "2026-09-02T17:55:38.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -6450,7 +6508,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "그녀의 캠페인에 투자하다 모금 마감 연장",
-      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her '캠페인 [...]의 마감일을 연장하고 있습니다.",
+      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인' 마감일을 10월 1일로 연장합니다. [...]",
       "bodyKo": [
         "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인'의 마감일을 2026년 10월 1일로 연장하며, 난소 노화와 폐경에 관한 초기 연구 지원을 위한 25만 달러 모금 목표를 향해 나아가고 있습니다.",
         "수억 명의 여성이 남성보다 더 오래 살지만 건강이 좋지 않은 상태로 더 오랜 시간을 보냅니다. 이 격차를 유발하는 생물학적 원인은 난소 노화와 폐경기 전환에 뿌리를 두고 있으며, 이 분야는 의학에서 가장 자금이 부족한 분야 중 하나입니다. Invested IN Her 프로젝트는 엄마, 딸, 전 세계 여성들을 위해 그 격차를 해소하는 과학 연구를 위해 25만 달러를 모금하고 있습니다.",
@@ -6520,7 +6578,7 @@
       "originalUrl": "https://www.creativeboom.com/news/the-royal-college-of-art-is-bringing-communication-and-design-together-in-one-school-and-thats-big-news",
       "author": "Tom May",
       "publishedAt": "2026-09-02T05:45:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "News"
@@ -6554,7 +6612,7 @@
       "id": "lifespan-io:591dca2c3c",
       "slug": "rejuvenation-roundup-august-2026-591dca",
       "titleOriginal": "Rejuvenation Roundup August 2026",
-      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become the CEOs of […]",
+      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -6723,7 +6781,7 @@
       "originalUrl": "https://lifespan.io/rejuvenation-roundup-august-2026",
       "author": "Editorial",
       "publishedAt": "2026-09-01T16:52:55.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "News",
@@ -6740,7 +6798,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "리유버네이션 라운드업 2026년 8월",
-      "summaryKo": "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 다양한 균형을 풀어야 한다는 뜻입니다. 이번 달에 조사된 내용을 소개합니다. 인터뷰 웨이우 허: 사람들은 [...]의 CEO가 되어야 합니다.",
+      "summaryKo": "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용은 다음과 같습니다. 인터뷰 웨이우허: 사람들은 [...]",
       "bodyKo": [
         "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다.",
         "웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다 : 웨이우 허는 과학자와 사업가가 결합된 독특한 인물로, 현재 회사는 정밀 의료를 활용해 사람들의 수명을 연장하는 데 집중하고 있습니다.",
@@ -6989,7 +7047,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/what-gta-6s-trailers-tell-us-about-vice-city-lucia-and-the-biggest-creative-launch-of-the-decade",
       "author": "Katy Cowan",
       "publishedAt": "2026-08-27T12:00:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -7054,7 +7112,7 @@
       "id": "lifespan-io:d2b8c8131e",
       "slug": "short-intense-exercise-elicits-beneficial-metabolic-changes-d2b8c8",
       "titleOriginal": "Short, Intense Exercise Elicits Beneficial Metabolic Changes",
-      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels […]",
+      "summaryOriginal": "A new study compared high-intensity sprint-interval exercise with moderate-intensity exercise. The former produced larger changes in circulating protein and metabolite levels than the latter and stimulated proteins associated with cardiometabolic health benefits [1]. Short […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7143,7 +7201,7 @@
       "originalUrl": "https://lifespan.io/short-intense-exercise-elicits-beneficial-metabolic-changes",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-08-26T16:43:46.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
+      "fetchedAt": "2026-09-08T12:32:04.954Z",
       "language": "en",
       "keywords": [
         "Exercise",
@@ -7162,7 +7220,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "짧고 강도 높은 운동은 유익한 대사 변화를 유도합니다",
-      "summaryKo": "새로운 연구에서는 고강도 전력 질주-인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 순환 단백질과 대사물 수치에 더 큰 변화를 가져왔습니다 [...]",
+      "summaryKo": "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수준에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1]. 단기 [...]",
       "bodyKo": [
         "새로운 연구에서는 고강도 스프린트 인터벌 운동과 중간 강도 운동을 비교했습니다. 전자는 후자보다 순환 단백질과 대사물 수치에 더 큰 변화를 일으켰고, 심장대사 건강과 관련된 단백질을 자극했습니다 [1].",
         "짧고 강도 높은 운동 vs 길고 중간 정도의 운동은 건강에 긍정적인 영향을 미칠 수 있는 잘 알려진 생활 습관 요인입니다. 운동은 다양한 세포에서 분비되고 몸 안에서 순환하는 인자들을 통해 여러 세포, 조직, 장기에 이익을 줍니다 [2]. 하지만 투자 대비 가장 큰 운동 유형은 여전히 논쟁 중입니다. 마찬가지로, 운동 효과를 매개하는 순환 요인들도 아직 완전히 정의되지 않았습니다.",
@@ -7183,168 +7241,6 @@
         "작은 부탁을 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 뜻입니다. 크고 작음에 상관없이 모든 기부는 독립적인 윤리적 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 문헌을❤️ 기증하겠습니다 [1] 올슨, L., 보텔라, J., 배로우스, D., 로메로, E., 베어드, K., 카타야마, M., 킬리치, E., 페랄타, C., 자누, N., 샌포드, H., 패럴, L., 액셀로드, C. L., 플루친스카, K., 워커, J., 얀, L., 프레드릭슨, K., 푸르키, O., 로빈스, J. M., 비노그라도바, E. V., 몰리나, H., ... 코헨, P. (2026). 운동 강도는 장간 소통을 조절하며 인간의 심장대사 건강 결과와 관련이 있습니다. Cell 보고. 의학, 102988. 온라인 출판 선행.",
         "[2] 초우, L. S., 거스텐, R. E., 테일러, J. M., 페더슨, B. K., 반 프라그, H., 트라페, S., 페브라이오, M. A., 갈리스, Z. S., 가오, Y., 하우스, J. M., 란자, I. R., 라비, C. J., 리, C. H., 루시아, A., 모로, C., 판데이, A., 로빈스, J. M., 스탠포드, K. I., 새크레이, A. E., 빌레다, S., ... 스나이더, M. P. (2022). 건강, 회복력 및 질병에서의 엑서킨. Nature 리뷰. 내분비학, 18(5), 273–289.",
         "[3] 로빈스, J. M., 카츠, D. H., 매니, G. M., 라오, P., 스미스, G. R., 티와리, G., 진, C., 슈필만, G., 몬탈보, S., 아이어, G., 아마르, D., 리치, D., 코인, B. J., 린드홀름, M. E., 굿파스터, B., 월시, M. J., 클리시, C. B., 부란트, C. F., 거스텐, R. E., & MoTrPAC 연구 그룹 (2026). 급성 운동에 대한 혈액 생화학적 반응: 신체 활동 분자 변환기 컨소시엄(MoTrPAC)의 연구 결과. bioRxiv : 생물학 프리프린트 서버, 2026.03.02.704798."
-      ]
-    },
-    {
-      "id": "creative-boom:f800c67008",
-      "slug": "bob-neville-on-berghaus-manchester-culture-and-the-f800c6",
-      "titleOriginal": "Bob Neville on Berghaus, Manchester culture and the British brand everyone thinks is German",
-      "summaryOriginal": "Manchester saw the launch of Berghaus's first-ever standalone store today. We spoke to Pentland's global head of retail about heritage, wholesale, and what a shop can do that a random shelf can't. Ber...",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Manchester saw the launch of Berghaus's first-ever standalone store today. We spoke to Pentland's global head of retail about heritage, wholesale, and what a shop can do that a random shelf can't."
-        },
-        {
-          "kind": "text",
-          "text": "Berghaus opened its doors in the Manchester Arndale this morning, marking a new chapter for the British outdoor brand that has been around for more than 60 years."
-        },
-        {
-          "kind": "text",
-          "text": "Selling its latest collections, technical gear and even dog accessories, it promises to be more than a retail space. Like a \"gateway to the outdoors\" in a city that made Berghaus famous in the '90s, when the cool kids started wearing the gear on the streets. (Liam Gallagher famously wore a Berghaus jacket on stage in Oslo in 1997, no less.)"
-        },
-        {
-          "kind": "text",
-          "text": "What adds to Berghaus's charm is that people often mistake it for being German. Instead, climbers Peter Lockey and Gordon Davison founded it in Newcastle upon Tyne in 1966, selling other people's kit from a shop called the LD Mountain Centre, until they could make it better themselves."
-        },
-        {
-          "kind": "text",
-          "text": "A brand worth more I'll be honest. I've always had a soft spot for Berghaus. But it's not something I'd consider adding to my own wardrobe."
-        },
-        {
-          "kind": "text",
-          "text": "Maybe it was the mid-market ubiquity – placing itself deliberately below the premium technical labels and above supermarket brands. Maybe it was because it was sold everywhere by everyone. That's fine if you're a wholesale business (Pentland is a majority shareholder in JD Sports, after all), but it can mean a weak brand signal overall. Perhaps it's just as simple as not feeling a connection to the name."
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/1153ff77-1243-4386-8c3c-56ddeb7ca5ab/conversions/e5758bd8d317397269ba403dfa2ea4a828616686-medium.webp",
-          "alt": "Outside the Berghaus store in Manchester's Arndale"
-        },
-        {
-          "kind": "text",
-          "text": "Outside the Berghaus store in Manchester's Arndale"
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/ba621946-a1af-4136-a342-39c1095ad2c1/conversions/7436ef0f931198f52d322fc2b2c8f91c16c70623-medium.webp",
-          "alt": "Peter Lockey, founder, with Sir Chris Bonington, ambassador"
-        },
-        {
-          "kind": "text",
-          "text": "Peter Lockey, founder, with Sir Chris Bonington, ambassador And that's a damn shame... because Berghaus does have heritage. A backstory. Real founders who cared passionately about something. I always felt it was going to waste, especially as the outdoor gear market is on fire right now. How did it ever lose its way?"
-        },
-        {
-          "kind": "text",
-          "text": "A new approach Enter Bob Neville. Pentland's global head of retail and the man behind Berghaus's new chapter. He's got quite an interesting backstory of his own. He has a degree in product design, has won a few design competitions, and even had a toy sold at Toys R Us for a while."
-        },
-        {
-          "kind": "text",
-          "text": "That got him thinking about how people interact with products on the shelves and led him to a career in retail. He was born in France, raised in the UK, then spent about three decades based in Hong Kong across Adidas, New Balance and Under Armour. He's probably the reason why you're wearing brands you'd never have dreamed of entertaining a few years ago. He was the former MD of Clarks. And now he's on the top team at Pentland."
-        },
-        {
-          "kind": "text",
-          "text": "I met Bob at today's Manchester launch and went straight in with the hard question. The thing everyone wants to know: how did Berghaus, such a brilliant heritage brand, ever lose its way?"
-        },
-        {
-          "kind": "text",
-          "text": "\"Brands go in cycles. People come and go. And there's always a reset at some point,\" he says. \"This Manchester store marks a reset for Berghaus and a new chapter in its story.\""
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/b84b4676-7551-4401-8d85-2b665dc89714/conversions/87a8a88352b9c4c3a2fbf89c389f2ca31a3d62aa-medium.webp",
-          "alt": "Shoppers browse inside Berghaus's new standalone store at Manchester Arndale, with colourful clothing and accessories displayed around them"
-        },
-        {
-          "kind": "text",
-          "text": "Was it a matter of wholesale brand dilution – something we see so often in fashion? Bob wasn't drawn on specifics. But he did talk about the power of storytelling with heritage brands. \"There's a great story to tell here. Berghaus is a brand that has real heart and roots in northern England. So it felt right to launch here, close to so many beautiful spots.\" He was also quick to make one thing clear: this shop doesn't replace wholesale; it builds it. Which makes sense. It becomes a place where people can meet the brand properly, hear where it came from and why it exists... and then suddenly, that jacket on someone else's shelf means more. Bottom line – own the story, and everyone selling your gear benefits."
-        },
-        {
-          "kind": "text",
-          "text": "Bob has spent much of his career on one question: what makes a person, standing in a room full of stuff, reach for one thing rather than another? \"It's about emotional connection,\" he says. \"If people understand where you come from, where you're based and why you even exist, that's a story worth telling. It gives them a reason to buy.\""
-        },
-        {
-          "kind": "text",
-          "text": "Brands go in cycles. People come and go. And there's always a reset at some point."
-        },
-        {
-          "kind": "text",
-          "text": "What can a shop do that a shelf can't? So what makes this new store a \"gateway to the outdoors\"? If you've popped into outdoor clothing store Outsiders in the Northern Quarter, you'll see it's more than clothes – it's community. Berghaus wants the same magic. That's why there's a community hub with a 'Repairhaus' inside, where the team repairs well-loved gear free of charge. There are events planned, too. You can imagine outdoor enthusiasts (and the cool kids) hanging out here."
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/a9be0f30-39f2-482d-b575-b19dfe33c88f/conversions/761dd5842082d9712cfde2ff8f84af2960c90ad9-medium.webp",
-          "alt": "Busy Berghaus store in Manchester Arndale packed with customers browsing clothing displays and checkout counters during the brand's opening day"
-        },
-        {
-          "kind": "text",
-          "text": "I told Bob it was about time Berghaus embraced the outdoors with the fells full of youngsters discovering hiking and all the brilliant activities you can enjoy in the hills. \"The pandemic reminded everyone what was important,\" he says. \"And that's community. Being with others and spending time outside. We all realised what mattered. And people found the countryside was something we could all belong to.\""
-        },
-        {
-          "kind": "text",
-          "text": "Does it have plans to expand elsewhere? Japan, perhaps, where outdoor clothing is thriving? \"We've never had our own space like this before. It means we can invite people in, show them what Berghaus is about, and share its story. And then we'll see.\""
-        },
-        {
-          "kind": "text",
-          "text": "60 years and a new chapter Today had a nice symmetry. Cutting the ribbon was Peter Lockey – co-founder, and 60 years on from that shop in Newcastle – alongside Sir Chris Bonington, one of the most celebrated figures in British climbing and part of the Berghaus story for decades. Adventurer and brand ambassador Ed Jackson was there too. That's 60 years of credibility, in a shopping centre in Manchester, on a drizzly Wednesday morning, holding a pair of scissors."
-        },
-        {
-          "kind": "image",
-          "url": "https://media.creativeboom.com/f16d2196-ab57-4295-8a26-8dc8b3a62e5a/conversions/e9258b10ed7e3709bdc0cd3a984f3ffc4103ff80-medium.webp",
-          "alt": "Me with Morgan Barfield of Gloaming and Jesse Alexandra"
-        },
-        {
-          "kind": "text",
-          "text": "Me with Morgan Barfield of [Gloaming](https://www.gloaming.uk/) and digital creator, [Jesse Alexandra](https://www.instagram.com/jessealexandra/) Which brings me back to my own wardrobe. I walked in this morning thinking Berghaus was meant for northern ravers and hardcore Oasis fans. Blokes mostly. That it was a JD Sports brand, long forgotten. What I found instead was a brand with heart and soul. An impressive new women's collection, too. I left rooting for it."
-        },
-        {
-          "kind": "text",
-          "text": "I'm not going to pretend that one store changes everything. But as the man who helped to make New Balance cool again says, there's a lot to be proud of, and after 60 years, the story finally has somewhere to be told."
-        }
-      ],
-      "sourceName": "Creative Boom",
-      "sourceUrl": "https://www.creativeboom.com/",
-      "originalUrl": "https://www.creativeboom.com/insight/bob-neville-on-berghaus-manchester-culture-and-the-british-brand-everyone-thinks-is-german",
-      "author": "Katy Cowan",
-      "publishedAt": "2026-08-26T11:00:00.000Z",
-      "fetchedAt": "2026-09-08T06:30:54.709Z",
-      "language": "en",
-      "keywords": [
-        "Insight"
-      ],
-      "image": {
-        "url": "https://media.creativeboom.com/1153ff77-1243-4386-8c3c-56ddeb7ca5ab/conversions/e5758bd8d317397269ba403dfa2ea4a828616686-medium.webp"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "밥 네빌이 말하는 베르크하우스, 맨체스터 문화, 그리고 모두가 독일이라고 생각하는 영국 브랜드",
-      "summaryKo": "맨체스터에서 오늘 베르크하우스의 첫 독립 매장이 문을 열었습니다. 우리는 펜틀랜드의 글로벌 소매 책임자와 헤리티지, 도매, 그리고 가게가 아무 선반이 할 수 없는 역할에 대해 이야기를 나눴습니다. 버...",
-      "bodyKo": [
-        "맨체스터에서는 오늘 베르크하우스의 첫 독립 매장이 문을 열었습니다. 우리는 펜틀랜드의 글로벌 소매 책임자와 헤리티지, 도매, 그리고 가게가 평범한 선반이 할 수 없는 일을 할 수 있는 것들에 대해 이야기를 나눴습니다.",
-        "베르가우스는 오늘 아침 맨체스터 아른데일에서 문을 열었으며, 60년 넘게 이어져 온 영국 아웃도어 브랜드의 새로운 장을 열었습니다.",
-        "최신 컬렉션, 기술 장비, 심지어 개 액세서리까지 판매하며, 단순한 소매 공간 이상의 역할을 약속합니다. 90년대 베르가우스를 유명하게 만들었던 도시에서 '야외 활동으로 가는 관문' 같은 곳입니다. 그때 멋진 아이들이 거리에서 장비를 착용하기 시작했죠. (리암 갤러거는 1997년 오슬로 무대에서 베르가우스 재킷을 입은 것으로 유명합니다.)",
-        "베르크하우스의 매력을 더하는 점은 사람들이 종종 이곳을 독일산으로 착각한다는 점이다. 대신 등반가 피터 로키와 고든 데이비슨이 1966년 뉴캐슬어폰타인에서 이곳을 설립했으며, LD 마운틴 센터라는 가게에서 다른 사람들의 장비를 판매하며 스스로 더 나은 곳을 만들 때까지 사용했다.",
-        "솔직히 말해서, 더 가치 있는 브랜드입니다. 저는 항상 베르크하우스에 애정이 있었어요. 하지만 제 옷장에 추가할 생각은 없어요.",
-        "아마도 중견 시장의 보편성 때문일 수도 있습니다 – 프리미엄 기술 브랜드 아래, 슈퍼마켓 브랜드보다 일부러 자신을 높여 놓았기 때문입니다. 아마도 모두가 어디서나 판매했기 때문일 수도 있습니다. 도매업체라면 괜찮겠지만(펜틀랜드는 JD 스포츠의 과반주이기도 하니까요), 전반적으로 약한 브랜드 신호를 의미할 수 있습니다. 아마도 단순히 이름에 대한 연결감을 느끼지 못하는 것일 수도 있습니다.",
-        "맨체스터 아른데일의 베르크하우스 매장 밖",
-        "창립자 피터 로키와 대사 크리스 보닝턴 경 그리고 정말 안타까운 일이야... 베르크하우스에도 유산이 있어. 배경 이야기. 무언가에 열정을 쏟았던 진짜 창립자들. 특히 지금 아웃도어 장비 시장이 불타고 있는 상황에서 항상 헛되이 버릴 거라고 느꼈어. 어떻게 길을 잃은 걸까?",
-        "새로운 접근법이 등장합니다. 밥 네빌이 등장합니다. 펜틀랜드의 글로벌 소매 책임자이자 버그하우스의 새로운 장을 이끈 인물입니다. 그는 꽤 흥미로운 배경 이야기를 가지고 있습니다. 제품 디자인 학위를 가지고 있고, 몇 차례 디자인 공모전에서 우승했으며, 한때 토이저러스에서 장난감이 판매되기도 했습니다.",
-        "그 경험이 그로 하여금 사람들이 선반 위 상품과 어떻게 상호작용하는지에 대해 생각하게 했고, 소매업 경력으로 이어졌습니다. 그는 프랑스에서 태어나 영국에서 자랐으며, 이후 약 30년간 홍콩에서 아디다스, 뉴발란스, 언더아머 등에서 근무했습니다. 아마도 몇 년 전만 해도 상상도 못했던 브랜드를 입게 된 이유일 것입니다. 그는 클락스의 전 전임 전무이사였습니다. 그리고 지금은 펜틀랜드의 최고 팀에 있습니다.",
-        "오늘 맨체스터 런칭에서 밥을 만나 바로 어려운 질문을 던졌습니다. 모두가 궁금해하는 것은: 이렇게 훌륭한 전통 브랜드인 베르크하우스가 어떻게 길을 잃었는가?",
-        "\"브랜드는 주기적으로 변합니다. 사람들은 오고 갑니다. 그리고 언젠가는 항상 리셋이 있습니다,\" 그가 말합니다. \"이 맨체스터 매장은 베르크하우스의 리셋이자 새로운 이야기의 장을 의미합니다.\"",
-        "도매 브랜드 희석 문제였나요? 패션에서 자주 보는 현상인가요? 밥은 구체적인 내용을 밝히지 않았습니다. 하지만 그는 전통 브랜드와 함께하는 스토리텔링의 힘에 대해 이야기했습니다. \"여기에는 정말 멋진 이야기가 있습니다. 버그하우스는 진정한 마음과 북잉글랜드에 뿌리를 둔 브랜드입니다. 그래서 이렇게 아름다운 장소들이 많아진 곳에서 출범하는 것이 옳다고 느꼈습니다.\" 그는 또한 한 가지를 분명히 했습니다: 이 가게는 도매를 대체하는 것이 아니라; 그것을 구축하는 것입니다. 이는 당연한 일입니다. 사람들이 브랜드를 제대로 만나고, 그 출처와 존재 이유를 들을 수 있는 장소가 됩니다... 그리고 갑자기 다른 사람의 선반에 있는 그 재킷이 더 큰 의미를 갖게 됩니다. 결론은 – 이야기를 소유하고, 당신의 장비를 판매하는 모든 사람이 혜택을 받습니다.",
-        "밥은 경력의 대부분을 한 가지 질문에 쏟아왔다: 물건들로 가득한 방 안에 서 있는 사람이 왜 한 가지를 택하고 다른 것을 택하지 않는가? \"감정적 연결에 관한 것이다,\"라고 그는 말한다. \"사람들이 당신이 어디서 왔고, 어디에 기반을 두고 있으며, 왜 존재하는지 이해한다면, 그것은 전할 가치가 있는 이야기다. 그것이 그들이 구매할 이유를 준다.\"",
-        "브랜드는 주기적으로 움직입니다. 사람들은 오고 갑니다. 그리고 언젠가는 항상 리셋이 있습니다.",
-        "매장이 선반이 할 수 없는 무엇을 할 수 있을까요? 그렇다면 이 새 매장이 '야외 활동으로 가는 관문'인 이유는 무엇일까요? 노던 쿼터에 있는 아웃사이더스 아웃도어 의류 매장에 들러보셨다면, 이곳이 단순한 옷 그 이상인 커뮤니티임을 알 수 있을 겁니다. 버그하우스도 같은 마법을 원합니다. 그래서 '리페어하우스'가 내부에 있는 커뮤니티 허브가 있어, 팀이 사랑받는 장비를 무료로 수리합니다. 이벤트도 계획되어 있습니다. 야외 활동 애호가들과 멋진 아이들이 이곳에서 어울리는 모습을 상상할 수 있습니다.",
-        "저는 밥에게 베르가우스가 야외를 받아들일 때가 되었다고 말했습니다. 젊은이들이 산으로 가득한 언덕에서 하이킹과 다양한 멋진 활동을 발견할 수 있었죠. \"팬데믹은 모두에게 중요한 것이 무엇인지 상기시켰습니다,\" 그가 말합니다. \"그것은 공동체입니다. 다른 사람들과 함께 있고 밖에서 시간을 보내는 것. 우리는 모두 무엇이 중요한지 깨달았습니다. 그리고 사람들은 시골이 우리 모두가 속할 수 있는 곳임을 알게 되었습니다.\"",
-        "다른 곳으로도 확장할 계획이 있나요? 예를 들어, 아웃도어 의류가 번성하는 일본? \"우리는 이런 공간을 가진 적이 없어요. 사람들을 초대해서 베르가우스가 어떤 곳인지 보여주고, 그 이야기를 나눌 수 있다는 뜻이죠. 그리고 나서 지켜봐야죠.\"",
-        "60년과 새로운 장의 시작, 오늘은 멋진 대칭을 가졌습니다. 리본을 자르는 사람은 피터 로키였는데, 뉴캐슬 그 가게에서 60년이 지난 공동 창립자이며, 영국 등반계에서 가장 유명한 인물 중 한 명이자 수십 년간 버그하우스 이야기의 일부인 크리스 보닝턴 경과 함께했습니다. 모험가이자 브랜드 홍보대사인 에드 잭슨도 그 자리에 있었습니다. 맨체스터의 한 쇼핑센터에서, 이슬비가 내리는 수요일 아침, 가위를 들고 60년간의 신뢰를 쌓아왔습니다.",
-        "저와 [Gloaming](https://www.gloaming.uk/)의 모건 바필드, 그리고 디지털 크리에이터 [제시 알렉산드라](https://www.instagram.com/jessealexandra/)와 함께요. 다시 제 옷장으로 돌아가게 되네요. 오늘 아침에 들어왔을 때 Berghaus는 북부 레이버들과 열성적인 오아시스 팬들을 위한 곳이라고 생각했어요. 대부분 남성들이요. JD 스포츠 브랜드였지만 오래전에 잊혀진 줄 알았죠. 대신 제가 발견한 것은 마음과 영혼이 있는 브랜드였어요. 인상적인 여성 컬렉션도 있었고요. 저는 그걸 응원하며 떠났어요.",
-        "한 가게가 모든 것을 바꾼다고 가장하지는 않을 것이다. 하지만 뉴발란스를 다시 멋지게 만든 사람이 말하듯, 자랑스러워할 것이 많고, 60년이 지난 지금도 이 이야기는 마침내 전할 곳이 생겼다."
       ]
     }
   ]
