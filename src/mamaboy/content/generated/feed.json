@@ -1,12 +1,68 @@
 {
-  "generatedAt": "2026-09-11T18:27:43.914Z",
+  "generatedAt": "2026-09-12T00:31:01.757Z",
   "prototype": false,
   "articles": [
+    {
+      "id": "hackaday:9514172455",
+      "slug": "hand-coded-asm-powers-homebrew-snes-game-951417",
+      "titleOriginal": "Hand-Coded ASM Powers Homebrew SNES Game",
+      "summaryOriginal": "Nintendo has made many game consoles in its long history — one that famously overlaps that of the Ottoman Empire — but only one of them was ever Super. It’s …read more",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Nintendo has made many game consoles in its long history — one that famously overlaps that of the Ottoman Empire — but only one of them was ever Super . It’s that console, the Super Nintendo Entertainment System, that [Inkbox] has decided to delve deeply into as he crafts a game in assembly using all the hardware tricks he can ."
+        },
+        {
+          "kind": "text",
+          "text": "Hardware tricks he’ll need, given he’s limited to the two 64 kB RAM banks and 3.58 MHz Ricoh 6502-based CPU. Even the 4 MB limit he sets for a historically-accurate homemade cartridge seems positively claustrophobic by modern standards. The game he’s after making is a top-down adventure game a la Zelda , and [Inkbox] gets right into the weeds explaining how the SNES works as he shows his work in this nearly hour long video. If you’re looking for a deep dive into the architecture, along with how it is meant to be used, you could certainly find worse sources. Everything from the different graphics modes to what registers handle sound are covered in this and the previous video in the series."
+        },
+        {
+          "kind": "text",
+          "text": "We can’t help but call out his dedication to open source — the SNES Sound Engine he has put up on GitHub looks like it could be a real asset to anyone else doing this kind of homebrew. The game itself is on itch.io and is pay-what-you-want."
+        },
+        {
+          "kind": "text",
+          "text": "[Inkbox] doesn’t just limit himself to the SNES’s 6502-esqe assembly — he’s done impressive work in x86 ASM, too ."
+        }
+      ],
+      "sourceName": "Hackaday",
+      "sourceUrl": "https://hackaday.com/",
+      "originalUrl": "https://hackaday.com/2026/09/11/hand-coded-asm-powers-homebrew-snes-game",
+      "author": "Tyler August",
+      "publishedAt": "2026-09-11T18:30:34.000Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
+      "language": "en",
+      "keywords": [
+        "Games",
+        "Software Hacks",
+        "assembly",
+        "snes",
+        "super nintendo entertainment system"
+      ],
+      "image": {
+        "url": "https://hackaday.com/wp-content/uploads/2026/09/SNES-asm-2.jpg"
+      },
+      "translationStatus": "done",
+      "contentPolicy": "full",
+      "category": "play",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "news",
+      "titleKo": "손으로 코딩한 ASM 파워 홈브류 SNES 게임",
+      "summaryKo": "닌텐도는 오랜 역사 동안 많은 게임 콘솔을 만들어왔는데, 그 중 하나는 오스만 제국과 겹치는 것으로 유명하지만, 그중 단 한 대만이 슈퍼였습니다. 그건... 더 읽기",
+      "bodyKo": [
+        "닌텐도는 오랜 역사 동안 많은 게임 콘솔을 만들어왔는데, 그 중 하나는 오스만 제국의 콘솔과 겹치는 것으로 유명하지만, 그 중 단 한 대만이 슈퍼였습니다. 바로 그 콘솔, 슈퍼 닌텐도 엔터테인먼트 시스템(Super Nintendo Entertainment System)을 [잉크박스]가 하드웨어 기술을 활용해 조립 중인 게임을 깊이 탐구하기로 결정했습니다.",
+        "하드웨어 트릭이 필요할 텐데, 두 개의 64kB RAM 뱅크와 3.58 MHz 리코 6502 기반 CPU로 제한되어 있기 때문입니다. 역사적으로 정확한 자작 카트리지에 대해 설정한 4MB 제한조차도 현대 기준으로 보면 답답해 보입니다. 그가 만들고자 하는 게임은 젤다 스타일의 탑다운 어드벤처 게임이며, [Inkbox]는 거의 한 시간 분량의 영상에서 SNES의 작동 원리를 자세히 설명합니다. 아키텍처와 사용 방식을 깊이 있게 알고 싶다면, 더 나쁜 자료도 찾을 수 있습니다. 다양한 그래픽 모드부터 사운드를 처리하는 레지스터까지 모두 이 영상과 이전 시리즈에서 다루고 있습니다.",
+        "우리는 그의 오픈 소스에 대한 헌신을 부인하지 않을 수 없습니다 — 그가 GitHub에 올린 SNES 사운드 엔진은 이런 홈브류를 하는 다른 사람들에게 큰 자산이 될 수 있을 것 같습니다. 게임 자체는 itch.io 중이며, 원하는 만큼 지불할 수 있습니다.",
+        "[Inkbox]는 SNES의 6502 스타일 어셈블리에만 국한되지 않고 x86 ASM에서도 인상적인 작업을 해냈습니다."
+      ]
+    },
     {
       "id": "lifespan-io:3b9f07155b",
       "slug": "lung-fibrosis-drug-lowers-biological-age-estimates-3b9f07",
       "titleOriginal": "Lung Fibrosis Drug Lowers Biological Age Estimates",
-      "summaryOriginal": "Six different aging clocks detected younger blood protein profiles in patients taking the experimental lung-fibrosis drug rentosertib. This suggests possible anti-aging effects, but separating those from […]",
+      "summaryOriginal": "Six different aging clocks detected younger blood protein profiles in patients taking the experimental lung-fibrosis drug rentosertib. This suggests possible anti-aging effects, but separating those […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -94,7 +150,7 @@
       "originalUrl": "https://lifespan.io/lung-fibrosis-drug-lowers-biological-age-estimates",
       "author": "Arkadi Mazin",
       "publishedAt": "2026-09-11T17:22:17.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News",
@@ -115,7 +171,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "폐섬유증 약물, 생물학적 나이 추정치 감소",
-      "summaryKo": "여섯 가지 서로 다른 노화 시계가 실험적 폐섬유증 약물 렌토서티브를 복용하는 환자에서 젊은 혈액 단백질 프로필을 검출했습니다. 이는 노화 방지 효과 가능성을 시사하지만, 이를 구분하면 [...]",
+      "summaryKo": "여섯 가지 서로 다른 노화 시계가 실험적 폐섬유증 약물 렌토서티브를 복용하는 환자에서 젊은 혈액 단백질 프로필을 검출했습니다. 이는 가능한 항노화 효과를 시사하지만, 이를 구분하면 [...]",
       "bodyKo": [
         "6개의 서로 다른 노화 시계가 실험적 폐섬유증 치료제 렌토서티브를 복용하는 환자에서 젊은 혈액 단백질 프로필을 검출했습니다. 이는 노화 방지 효과 가능성을 시사하지만, 섬유증 치료의 좁은 이점과 구분하는 것은 여전히 도전 과제입니다 [1].",
         "AI가 개발한 약물 특정 질병을 위해 개발된 많은 약물들이 노화 관련 생물학적 과정에 작용합니다. 이로 인해 기회가 생깁니다: 임상시험은 약물이 의도한 질병을 치료하는지와 노화에 더 넓은 영향을 미치는지 모두 조사할 수 있습니다. 일반적인 임상 측정으로는 이러한 광범위한 효과를 확인할 수 없지만, 현재는 나이와 밀접하게 일치하거나 사망 위험을 예측하는 생물학적 나이 시계가 있습니다 [2]. 이 시계들은 중재가 노화에 미치는 영향을 추정하는 대리 지표로 수많은 임상시험에서 사용되었습니다.",
@@ -239,7 +295,7 @@
       "originalUrl": "https://toybook.com/jellycat-diner-debuts-new-exclusives-at-fao-schwarz",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-11T15:47:27.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News"
@@ -270,7 +326,7 @@
       "id": "lifespan-io:938fd6dc5d",
       "slug": "your-personal-longevity-assistant-evipedia-grok-bot-938fd6",
       "titleOriginal": "Your Personal Longevity Assistant: Evipedia Grok Bot",
-      "summaryOriginal": "With Grok Bot, SpaceXAi has created something really special and helpful. And the Evipedia Grok Bot turns this gem into something even more precious. A specialized AI assistant offering an evidence-based 2nd opinion on health […]",
+      "summaryOriginal": "With Grok Bot, SpaceXAi has created something really special and helpful. And the Evipedia Grok Bot turns this gem into something even more precious. A specialized AI […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -302,7 +358,7 @@
       "originalUrl": "https://lifespan.io/your-personal-longevity-assistant-evipedia-grok-bot",
       "author": "Press release",
       "publishedAt": "2026-09-11T14:34:47.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -317,9 +373,9 @@
       "trustLevel": 4,
       "careScore": 0.7,
       "curiosityScore": 0,
-      "contentType": "opinion",
+      "contentType": "research",
       "titleKo": "당신의 개인 롱제비티 비서: 에비피디아 그록 봇",
-      "summaryKo": "Grok Bot을 통해 SpaceXAi는 정말 특별하고 도움이 되는 무언가를 만들어냈습니다. 그리고 Evipedia Grok Bot은 이 보석을 더욱 소중한 것으로 만듭니다. 건강에 대한 근거 기반의 2차 의견을 제공하는 전문 AI 비서입니다 [...]",
+      "summaryKo": "Grok Bot을 통해 SpaceXAi는 정말 특별하고 도움이 되는 무언가를 만들어냈습니다. 그리고 Evipedia Grok Bot은 이 보석을 더욱 소중한 것으로 만듭니다. 특화된 AI [...]",
       "bodyKo": [
         "Grok Bot을 통해 SpaceXAi는 정말 특별하고 도움이 되는 무언가를 만들어냈습니다. 그리고 Evipedia Grok Bot은 이 보석을 더욱 소중한 것으로 만듭니다. 건강과 장롱제비티 개입에 대한 근거 기반의 2차 의견을 제공하는 전문 AI 비서입니다.",
         "Grok, AI4L 페르소나, Evipedia MCP 서버, 그리고 Evipedia가 호스팅하는 검색을 하나의 매우 유용한 동반자로 통합했습니다.",
@@ -463,7 +519,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/storage-cupboards-cabinets-furnishings-dezeen-showroom",
       "author": "Alice Laycock",
       "publishedAt": "2026-09-11T13:00:26.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -621,7 +677,7 @@
       "originalUrl": "https://toybook.com/go-glo-minis-launch",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-11T13:00:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News",
@@ -715,7 +771,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/masae-nagao-takeo-pepet-paper-friends",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-11T12:08:02.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Design",
@@ -869,7 +925,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/keiji-ashizawa-house-yatsugatake",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-11T10:30:01.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -949,7 +1005,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/inflammation-driven-by-fat-cells-as-a-contribution-to-atherosclerosis",
       "author": "Reason",
       "publishedAt": "2026-09-11T10:22:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1003,7 +1059,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/aging-is-complex-so-expect-high-variance-in-the-details-between-individuals",
       "author": "Reason",
       "publishedAt": "2026-09-11T10:11:52.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1174,7 +1230,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/london-designers-making-it-work",
       "author": "Amy Peacock",
       "publishedAt": "2026-09-11T09:42:22.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1299,7 +1355,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/cattle-chair-gibson-karlo-design-by-them-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-11T09:30:06.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -1382,7 +1438,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/dyson-camerajet-toothbrush-petra-heights-stone-building-dezeen-weekly-podcast",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-11T09:00:28.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Dezeen Weekly",
@@ -1462,7 +1518,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/dezeen-dispatch-ldf-2026",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-11T08:30:07.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1672,17 +1728,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/craft-x-tech-japanese-crafts-london-design-festival",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-11T08:00:53.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Furniture",
-        "all",
         "Lighting",
+        "all",
         "Products",
         "Design",
         "Installations",
-        "Exhibitions",
-        "London"
+        "Bethan Laura Wood",
+        "London Design Festival"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/craft-x-tech-tokai-japan_dezeen_2364_col_sq4-411x411.jpg"
@@ -1730,58 +1786,6 @@
         "LDF에서는 Dezeen 팀이 선정한 마르셀 브로이어 재해석 가구 컬렉션과 꼭 봐야 할 설치 작품들이 다수 포함되어 있습니다.",
         "Craft x Tech Tokai 프로젝트는 9월 12일부터 30일까지 V&A에서 열립니다. 주중에 열리는 다양한 전시, 설치, 강연에 대한 정보는 Dezeen Events Guide 런던 디자인 페스티벌 2026 가이드를 참고하세요.",
         "Craft x Tech, 일본 장인정신과 글로벌 디자인 사이의 \"연결점\"을 찾다 글은 Dezeen에 처음 게재되었습니다."
-      ]
-    },
-    {
-      "id": "hackaday:eea33d591b",
-      "slug": "this-circuit-sculpture-is-an-esp32-powered-console-eea33d",
-      "titleOriginal": "This Circuit Sculpture is an ESP32-Powered Console",
-      "summaryOriginal": "Expressif might not have intended the ESP32-S3 to become an emulation powerhouse, but that’s certainly what has happened. The little microcontroller seems perfect for recreating the Game Boys or Game …read more",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Expressif might not have intended the ESP32-S3 to become an emulation powerhouse, but that’s certainly what has happened. The little microcontroller seems perfect for recreating the Game Boys or Game Gears of years past, and there are a lot of software options to that end. Having grabbed firmware off a github repo, you still need a physical build to hold, and that’s where this one by [HVT Lab and Huy Vector] stands out ."
-        },
-        {
-          "kind": "text",
-          "text": "As you can see, they’re letting everything hang out — not even in a 90s-inspired clear case , but with an open frame of soldered brass, with just a small strip of 2 mm clear acrylic to help stabilize the buttons. That appears to be held with cyanoacrylate glue, but it’s brass and solder doing the majority of the structural work here. We might be a little more confident tossing this lovely device in a bag or pocket if the whole device was boxed in with that acrylic — shorting the exposed power bus on your keys sounds like a bummer — but we can’t argue with the aesthetic vision here. It’s a lovely build on the physical end."
-        },
-        {
-          "kind": "text",
-          "text": "From the video it looks like the software is based on Retro-Go , which we’ve seen in use before . In any case, there are plenty of open source projects you could load onto the ESP32-S3 powering this circuit sculpture, though, from NES to IBM PC ."
-        }
-      ],
-      "sourceName": "Hackaday",
-      "sourceUrl": "https://hackaday.com/",
-      "originalUrl": "https://hackaday.com/2026/09/11/this-circuit-sculpture-is-an-esp32-powered-console",
-      "author": "Tyler August",
-      "publishedAt": "2026-09-11T08:00:47.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
-      "language": "en",
-      "keywords": [
-        "handhelds hacks",
-        "Circuit Sculpture",
-        "emulation",
-        "emulator",
-        "ESP32-S3",
-        "game boy"
-      ],
-      "image": {
-        "url": "https://hackaday.com/wp-content/uploads/2026/09/esp32-gameboy-sculpt.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "play",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "이 회로 조각상은 ESP32 전원 콘솔입니다",
-      "summaryKo": "Expressif는 ESP32-S3가 에뮬레이션 강자가 되길 원하지 않았을지 모르지만, 실제로 그렇게 되었습니다. 작은 마이크로컨트롤러는 게임보이나 게임 ...",
-      "bodyKo": [
-        "Expressif는 ESP32-S3가 에뮬레이션 강자가 되길 원하지 않았을지 모르지만, 실제로 그렇게 되었습니다. 이 작은 마이크로컨트롤러는 과거의 게임보이나 게임기어를 재현하기에 완벽해 보이고, 이를 위한 다양한 소프트웨어 옵션이 있습니다. GitHub 저장소에서 펌웨어를 가져왔지만, 물리적 빌드가 필요합니다. 바로 이 [HVT Lab과 Huy Vector]의 버전이 돋보입니다.",
-        "보시다시피, 90년대풍의 투명 케이스가 아니라, 납땜된 황동 프레임에 2mm 투명 아크릴 조각을 붙여 버튼을 안정시키는 데 사용해 모든 것을 드러내고 있습니다. 그 부분은 시아노아크릴레이트 접착제로 고정된 것으로 보이지만, 대부분의 구조 작업은 황동과 납땜으로 이루어져 있습니다. 만약 전체 기기가 아크릴로 상자에 넣어졌다면 이 멋진 기기를 가방이나 주머니에 넣는 데 좀 더 자신 있게 쓸 수 있을 것 같아요 — 키 앞에서 노출된 전원 버스가 단락되는 건 아쉽겠지만 — 미적 비전에는 부정할 수 없습니다. 물리적 측면에서는 정말 멋진 조립입니다.",
-        "영상을 보면 소프트웨어가 이전에 사용된 Retro-Go를 기반으로 한 것 같습니다. 어쨌든 NES부터 IBM PC까지 ESP32-S3에 장착할 수 있는 오픈 소스 프로젝트가 많이 있습니다."
       ]
     },
     {
@@ -1921,17 +1925,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/11/le-grand-bouquet-uchronia-grand-palais-paris-design-week",
       "author": "Alyn Griffiths",
       "publishedAt": "2026-09-11T05:00:40.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
         "Design",
-        "Paris Design Week",
         "Furniture",
         "France",
         "Paris",
         "Installations",
-        "Sculptures"
+        "Sculptures",
+        "Grand Palais"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/le-grand-bouquet-uchronia-grand-palais-paris-design-week_dezeen_2364_sq_1-411x411.jpg"
@@ -1977,7 +1981,7 @@
       "id": "lifespan-io:2ebf5de3cf",
       "slug": "from-world-cup-champions-to-longevity-champions-2ebf5d",
       "titleOriginal": "From World Cup Champions to Longevity Champions",
-      "summaryOriginal": "Fresh from Spain’s spectacular victory in the 2026 FIFA World Cup, Madrid is preparing for another kind of world-class gathering: one focused not on winning more years of sporting glory, but on winning more healthy […]",
+      "summaryOriginal": "Fresh from Spain’s spectacular victory in the 2026 FIFA World Cup, Madrid is preparing for another kind of world-class gathering: one focused not on winning more years of sporting glory, but on winning more […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -2113,7 +2117,7 @@
       "originalUrl": "https://lifespan.io/from-world-cup-champions-to-longevity-champions",
       "author": "Press release",
       "publishedAt": "2026-09-10T22:26:30.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -2130,7 +2134,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "월드컵 챔피언에서 롱제비티 챔피언으로",
-      "summaryKo": "2026년 FIFA 월드컵에서 스페인의 화려한 승리를 거둔 직후, 마드리드는 또 다른 세계적 수준의 모임을 준비하고 있습니다. 이는 더 많은 스포츠 영광을 거두는 것이 아니라 더 건강한 [...]",
+      "summaryKo": "2026년 FIFA 월드컵에서 스페인이 화려하게 우승한 직후, 마드리드는 또 다른 세계적 수준의 모임을 준비하고 있습니다. 이는 스포츠 영광의 연장이 아니라 더 많은 [...]",
       "bodyKo": [
         "2026년 FIFA 월드컵에서 스페인이 화려하게 우승한 직후, 마드리드는 또 다른 세계적 수준의 모임을 준비하고 있다. 이는 스포츠 영광의 연장이 아니라 건강한 삶의 시간을 더 많이 얻는 데 초점을 맞춘 것이다.",
         "2026년 9월 30일과 10월 1일, 국제 롱제비티 서밋 마드리드 2026이 선도적인 과학자, 의사, 기업가, 투자자, 미래학자들을 한자리에 모아 인류의 가장 큰 도전 중 하나이자 잠재적으로 가장 큰 기회인 건강한 인간 생명 연장을 탐구할 예정입니다.",
@@ -2233,7 +2237,7 @@
       "originalUrl": "https://lifespan.io/calcium-mishandling-contributes-to-muscle-loss",
       "author": "Josh Conway",
       "publishedAt": "2026-09-10T19:29:07.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News",
@@ -2395,17 +2399,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/10/qastic-asa-plus-accessory-dwelling-unit-qastic-los-angeles",
       "author": "Jenna McKnight",
       "publishedAt": "2026-09-10T18:14:52.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
         "Architecture",
         "Exclusives",
+        "Accessory Dwelling Units",
+        "Vaulted ceilings",
+        "Residential architecture and interiors",
         "Los Angeles",
-        "Metal",
-        "California",
-        "USA",
-        "Houses"
+        "Metal"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/08/casa-plus-accessory-dwelling-unit-qastic-los-angeles_dezeen_2364_sq_0-411x411.jpg"
@@ -2480,7 +2484,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/suggesting-the-longevity-community-follow-the-cardiovascular-communitys-model-for-public-messaging",
       "author": "Reason",
       "publishedAt": "2026-09-10T17:59:53.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -2659,7 +2663,7 @@
       "originalUrl": "https://toybook.com/little-tikes-car-collection-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-10T17:11:58.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Driven to Play",
@@ -2769,7 +2773,7 @@
       "originalUrl": "https://toybook.com/licensing-awards-winners-2026-news",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-10T16:59:52.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Brand Licensing Europe",
@@ -2898,7 +2902,7 @@
       "originalUrl": "https://toybook.com/starbucks-care-bears-collection-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-10T16:14:12.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Collectibles",
@@ -3020,7 +3024,7 @@
       "originalUrl": "https://toybook.com/video-games-september-10",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-10T16:02:55.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -3160,7 +3164,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/hannah-buechler-loom-bands-wool-reliefs",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-10T13:50:03.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -3225,7 +3229,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/a-long-discussion-of-aging-clocks-and-what-they-actually-measure",
       "author": "Reason",
       "publishedAt": "2026-09-10T10:22:54.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3274,7 +3278,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/inhibition-of-the-pgam1-chk1-interaction-as-a-novel-approach-to-destroy-senescent-cells",
       "author": "Reason",
       "publishedAt": "2026-09-10T10:11:27.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3483,7 +3487,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/10/anab-jain-superflux-interview",
       "author": "Rima Sabina Aouf",
       "publishedAt": "2026-09-10T10:00:50.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3635,7 +3639,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/whistles-marks-50-years-by-casting-50-customers-found-through-mysterious-fly-posters-across-london",
       "author": "Katy Cowan",
       "publishedAt": "2026-09-10T10:00:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -3780,7 +3784,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/10/london-design-medal-2026-jonathan-anderson",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-10T09:45:12.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3992,7 +3996,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/10/currents-berlin-interview",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-09-10T09:30:45.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4196,7 +4200,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/10/six-rising-talents-london-design-scene",
       "author": "Jane Englefield",
       "publishedAt": "2026-09-10T08:00:42.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -4346,7 +4350,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/mother-design-gives-psychic-platform-keen-a-folk-art-rebrand-that-takes-on-minimalist-wellness",
       "author": "Katy Cowan",
       "publishedAt": "2026-09-10T06:00:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -4504,17 +4508,17 @@
       "originalUrl": "https://www.dezeen.com/2026/09/10/lozi-modular-plywood-furniture-compact-bedrooms",
       "author": "Alyn Griffiths",
       "publishedAt": "2026-09-10T05:00:44.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Furniture",
         "all",
         "Design",
-        "Plywood",
-        "Wood",
         "Modular furniture",
         "UK",
-        "Bedrooms"
+        "Bedrooms",
+        "London",
+        "London Design Festival"
       ],
       "image": {
         "url": "http://static.dezeen.com/uploads/2026/09/lozi-plywood-furniture-london-design-festival-modular-system-sq-411x411.jpg"
@@ -4651,7 +4655,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/10/25th-edition-of-tile-spain-awards-opens-entries",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-10T04:00:07.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4944,7 +4948,7 @@
       "originalUrl": "https://toybook.com/amazon-top-100-toys-2026",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-09T20:04:55.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News"
@@ -5127,7 +5131,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/09/tactile-wallcoverings-luxury-interiors-selected-wallpapers",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-09T20:00:56.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5317,7 +5321,7 @@
       "originalUrl": "https://toybook.com/mattel-american-girl-brooke-sumpter-collection-launch",
       "author": "Cassandra Schilling",
       "publishedAt": "2026-09-09T19:51:51.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -5403,7 +5407,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/semaglutide-to-reduce-calorie-intake-slows-aging-in-female-mice-as-might-be-expected",
       "author": "Reason",
       "publishedAt": "2026-09-09T18:39:58.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -5540,7 +5544,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/09/casalgrande-padana-porcelain-tiles-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-09T18:00:46.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5587,7 +5591,7 @@
       "id": "lifespan-io:53098f461d",
       "slug": "comparing-the-responsiveness-of-epigenetic-aging-biomarkers-53098f",
       "titleOriginal": "Comparing the Responsiveness of Epigenetic Aging Biomarkers",
-      "summaryOriginal": "In a recent study, researchers have evaluated how responsive several DNA methylation (DNAm) biomarkers are to a range of longevity interventions [1]. Waiting too long Testing lifespan-extending interventions in humans has a major problem: […]",
+      "summaryOriginal": "In a recent study, researchers have evaluated how responsive several DNA methylation (DNAm) biomarkers are to a range of longevity interventions [1]. Waiting too long Testing lifespan-extending interventions in humans has a major problem: it […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -5699,7 +5703,7 @@
       "originalUrl": "https://lifespan.io/comparing-the-responsiveness-of-epigenetic-aging-biomarkers",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-09-09T16:48:19.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News",
@@ -5800,7 +5804,7 @@
       "originalUrl": "https://toybook.com/bonkers-toys-the-rizzler-news",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-09T16:43:21.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Collectibles",
@@ -5916,7 +5920,7 @@
       "originalUrl": "https://toybook.com/claires-yaya-tea-collections-news",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-09T14:29:19.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -6022,7 +6026,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/09/tnk500-aurea-task-chair-alegre-design-actiu-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-09T13:00:03.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -6233,7 +6237,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/09/studio-ko-centre-contemporary-arts-tashkent",
       "author": "Lizzie Crook",
       "publishedAt": "2026-09-09T10:30:19.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6314,7 +6318,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/socioeconomic-and-demographic-differences-have-little-effect-on-human-longevity",
       "author": "Reason",
       "publishedAt": "2026-09-09T10:22:22.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -6366,7 +6370,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/automation-of-screening-studies-for-compounds-that-slow-aging-is-becoming-more-ambitious",
       "author": "Reason",
       "publishedAt": "2026-09-09T10:11:16.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -6540,7 +6544,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/09/london-design-galleries",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-09-09T10:00:45.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -6701,7 +6705,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/kent-wood-on-motion-design",
       "author": "Tom May",
       "publishedAt": "2026-09-09T06:45:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -6841,7 +6845,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/this-clever-design-trick-by-guinness-means-it-can-modernise-without-any-need-for-a-new-logo",
       "author": "Tom May",
       "publishedAt": "2026-09-09T06:00:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -6907,7 +6911,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/the-adaptive-cost-hypothesis-of-aging-a-viewpoint-on-antagonist-pleiotropy",
       "author": "Reason",
       "publishedAt": "2026-09-08T18:22:04.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -6930,113 +6934,10 @@
       ]
     },
     {
-      "id": "colossal:130bc11c99",
-      "slug": "edge-to-edge-splendor-fills-maria-yolanda-liebana-130bc1",
-      "titleOriginal": "Edge-to-Edge Splendor Fills Maria Yolanda Liebana’s Buoyant Paintings",
-      "summaryOriginal": "Tarot, ancient mythologies, pop culture, and personal narrative converge in the NYC-based artist's maximal works. Do stories and artists like this matter to you? Become a Colossal Member today and support independent arts publishing for as little as $7 per month. The article Edge-to-Edge Splendor Fills Maria Yolanda Liebana’s Buoyant Paintings appeared first on Colossal .",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Tarot, pop culture, and personal narrative converge in the maximalist, mixed-media paintings of Maria Yolanda Liebana . The New York-based artist opens her first institutional solo exhibition at Montclair State University ’s George Segal Gallery this month."
-        },
-        {
-          "kind": "text",
-          "text": "Titled A Place to Be Held , Liebana’s show revolves around a fantastical, Eden-like garden exploding with an extravaganza of rainbows, flowers, clouds, cosmic phenomena, and more. “The exhibition imagines a matriarchal world where chance, identity, and desire are always in motion,” says a statement."
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/liebana-5.jpg",
-          "alt": "a very colorful mixed-media painting with piped paint and beads by Maria Yolanda Liebana featuring three Black women in minimal garments, one seated on an embellished disco ball in front of a rainbow"
-        },
-        {
-          "kind": "text",
-          "text": "Liebana incorporates a wide range of materials into her vibrant works, including wallpaper, mirror tiles, pearls, glitter, disco balls, sequins, and rhinestones. She embraces the luminosity of joy and playfulness while nodding to Catholicism and ancient mythologies, invoked by symbols like chalices and cherubs."
-        },
-        {
-          "kind": "text",
-          "text": "As a first-generation Latinx immigrant who grew up in New Jersey, the artist has long been interested in the nature of selfhood and inheritance, and the birth of her daughter inspired a body of work that explores motherhood “as both a physical and spiritual terrain shaped by labor, wonder, and transformation.” She depicts confident, empowered women who dance, recline, and enjoy one another’s company, representing universal feminine dominion and strength."
-        },
-        {
-          "kind": "text",
-          "text": "A Place to Be Held opens on September 15 and continues through December 11 in Montclair, New Jersey. See more on the artist’s Instagram ."
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/liebana-7.jpg",
-          "alt": "a very colorful mixed-media painting with piped paint and beads by Maria Yolanda Liebana featuring a woman in stylized floral garments in a landscape with swans, clouds, rainbows, and flowers"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/liebana-6.jpg",
-          "alt": "a very colorful mixed-media painting with piped paint and beads by Maria Yolanda Liebana featuring a Black woman in a stylized body suit, surrounded by an aura of sun-like rays, flowers, rainbows, and other bright objects"
-        },
-        {
-          "kind": "text",
-          "text": "“The World according to April 26th 2023” (2023)"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/liebana-4.jpg",
-          "alt": "a very colorful mixed-media painting with piped paint and beads by Maria Yolanda Liebana featuring sunflowers and a woman in carnivalesque garments"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/liebana-3.jpeg",
-          "alt": "a detail of a very colorful mixed-media painting with piped paint and beads by Maria Yolanda Liebana featuring sunflowers and a woman in carnivalesque garments"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/liebana-1.jpeg",
-          "alt": "a detail of a very colorful mixed-media painting with piped paint and beads by Maria Yolanda Liebana featuring Black women in sparkly garments in front of rainbow, clouds, flames, and cupids"
-        },
-        {
-          "kind": "text",
-          "text": "Detail of “A Call to Heretics” Do stories and artists like this matter to you? Become a Colossal Member today and support independent arts publishing for as little as $7 per month. The article Edge-to-Edge Splendor Fills Maria Yolanda Liebana’s Buoyant Paintings appeared first on Colossal ."
-        }
-      ],
-      "sourceName": "Colossal",
-      "sourceUrl": "https://www.thisiscolossal.com/",
-      "originalUrl": "https://www.thisiscolossal.com/2026/09/maria-yolanda-liebana-mixed-media-paintings",
-      "author": "Kate Mothes",
-      "publishedAt": "2026-09-08T16:30:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
-      "language": "en",
-      "keywords": [
-        "Art",
-        "feminism",
-        "identity",
-        "Maria Yolanda Liebana",
-        "mixed media",
-        "painting",
-        "rainbows"
-      ],
-      "image": {
-        "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/liebana-2.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.7,
-      "contentType": "news",
-      "titleKo": "마리아 욜란다 리에바나의 경쾌한 그림들에 가장자리에서 가장자리까지 화려함이 가득 차 있다",
-      "summaryKo": "타로, 고대 신화, 대중문화, 그리고 개인적 서사가 뉴욕 기반의 이 예술가의 최대 작품에서 하나로 만나 있습니다. 이런 이야기와 예술가들이 당신에게 중요한가요? 오늘 콜로설 멤버가 되어 월 7달러 이하로 독립 예술 출판을 지원하세요. 기사 '엣지 투 엣지 스플렌더가 마리아 욜란다 리에바나의 부유한 그림을 채우다'는 Colossal에 처음 게재되었습니다.",
-      "bodyKo": [
-        "타로, 대중문화, 그리고 개인적 서사가 마리아 욜란다 리바나의 맥시멀리즘 혼합 매체 회화에서 만나 있습니다. 뉴욕을 기반으로 활동하는 이 예술가는 이번 달 몬트클레어 주립대학교 조지 시걸 갤러리에서 첫 기관 개인전을 엽니다.",
-        "'A Place to Be Held 'A Place to Be Held '라는 제목의 리에바나의 전시는 무지개, 꽃, 구름, 우주 현상 등 다양한 화려함으로 폭발하는 환상적이고 에덴 같은 정원을 중심으로 전개됩니다. \"이 전시는 우연, 정체성, 욕망이 항상 움직이는 모계 세계를 상상합니다,\"라고 한 성명이 전합니다.",
-        "리바나는 벽지, 거울 타일, 진주, 반짝이, 디스코 볼, 스팽글, 라인스톤 등 다양한 재료를 활기찬 작품에 포함시킨다. 그녀는 기쁨과 장난기의 빛을 받아들이면서도 가톨릭과 고대 신화에 고개를 끄덕이며, 성배와 천사 같은 상징을 통해 이를 연상시킨다.",
-        "뉴저지에서 자란 1세대 라틴계 이민자인 그녀는 오랫동안 자아와 유산의 본질에 관심을 가져왔으며, 딸의 탄생은 모성이라는 것을 \"노동, 경이로움, 변화로 형성된 신체적·영적 영역\"으로 탐구하는 작품군에 영감을 주었습니다. 그녀는 자신감 있고 힘을 얻은 여성들이 춤추고 누워 서로의 곁을 즐기는 모습을 묘사하며, 보편적인 여성의 지배와 강인함을 상징합니다.",
-        "'A Place to Be Held '는 9월 15일 뉴저지 몬트클레어에서 12월 11일까지 개막합니다. 더 많은 내용은 아티스트의 인스타그램에서 확인하세요.",
-        "\"2023년 4월 26일에 따른 세상\" (2023)",
-        "\"이단자들에게 부름\"의 세부 내용 이런 이야기와 예술가들이 당신에게 중요한가요? 오늘 바로 콜로설 회원이 되어 월 7달러 이하의 비용으로 독립 예술 출판을 지원하세요. 기사 '엣지 투 엣지 스플렌더가 마리아 욜란다 리에바나의 부유한 그림을 채운다'는 콜로설에 처음 게재되었습니다."
-      ]
-    },
-    {
       "id": "lifespan-io:705474baeb",
       "slug": "late-life-glp-1-treatment-increases-lifespan-in-705474",
       "titleOriginal": "Late-Life GLP-1 Treatment Increases Lifespan in Female Mice",
-      "summaryOriginal": "In a new study, semaglutide given late in life increased median lifespan in female mice by more than 12% and improved various health markers. Semaglutide’s effect possibly went beyond caloric restriction [1]. Old […]",
+      "summaryOriginal": "In a new study, semaglutide given late in life increased median lifespan in female mice by more than 12% and improved various health markers. Semaglutide’s effect possibly went beyond caloric restriction [1]. […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7120,7 +7021,7 @@
       "originalUrl": "https://lifespan.io/late-life-glp-1-treatment-increases-lifespan-in-female-mice",
       "author": "Arkadi Mazin",
       "publishedAt": "2026-09-08T14:52:19.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News",
@@ -7138,7 +7039,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "말기 GLP-1 치료가 암컷 쥐의 수명을 연장",
-      "summaryKo": "새로운 연구에서 말기에 투여된 세마글루타이드는 암컷 쥐의 중간 수명을 12% 이상 연장하고 다양한 건강 지표를 개선했습니다. 세마글루타이드의 효과는 칼로리 제한을 넘어섰을 가능성이 있습니다 [1]. 오래된 [...]",
+      "summaryKo": "새로운 연구에서 말기에 투여된 세마글루타이드는 암컷 쥐의 중간 수명을 12% 이상 연장하고 다양한 건강 지표를 개선했습니다. 세마글루타이드의 효과는 칼로리 제한을 넘어섰을 가능성이 있습니다 [1]. […]",
       "bodyKo": [
         "새로운 연구에서 말기에 투여된 세마글루타이드는 암컷 쥐의 중간 수명을 12% 이상 연장하고 다양한 건강 지표를 개선했습니다. 세마글루타이드의 효과는 칼로리 제한을 넘어섰을 가능성이 있습니다 [1].",
         "노년생쥐, 인슐린 분비와 식욕을 조절하는 호르몬에 작용하는 GLP-1 수용체 작용제가 비만 치료에 혁신을 가져왔으며, 겉보기에는 관련 없는 여러 질병에서 효과를 보였습니다. 이로 인해 약물의 효과가 칼로리 제한을 넘어서는지 의문이 제기되었습니다. 칼로리 제한 자체가 강력한 노화 방지 중재로서 동물 모델에서 견고한 건강수명과 수명 연장을 만들어냈습니다 [2]. 지금까지 인간 연구에서는 결정적인 결과를 내지 못했기 때문에, 모델 전 생애에 걸쳐 개입을 조사할 수 있는 동물 연구로 돌아가는 것이 가치가 있습니다.",
@@ -7159,60 +7060,6 @@
         "작은 부탁을 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 여러분 같은 분들의 도움에 의존하고 있습니다. 크고 작음에 상관없이 모든 기부는 독립적인 윤리적 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 문학을❤️ 기부하겠습니다 [1] 펑, Y., 바르테즈, M., 왕, Y., 첸, Y., 추, H., 왕, C. L., ... & 첸, D. (2026). 말기 세마글루타이드 치료는 암컷 쥐의 노화를 늦추고 수명을 연장합니다 Nature, 1-8.",
         "[2] Mattison, J. A., Colman, R. J., Beasley, T. M., Allison, D. B., Kemnitz, J. W., Roth, G. S., ... & Anderson, R. M. (2017). 칼로리 제한은 붉은털원숭이의 건강과 생존을 개선합니다. Nature communications, 8(1), 14063.",
         "[3] 뉴스옴, P., 프랑크, S., 해리슨, S., 라치우, V., 반 할, L., 칼라나, S., ... & 산얄, A. (2019). 제2형 당뇨병 및/또는 비만 환자에서 간 효소와 염증 표지자에 미치는 세마글루타이드의 영향. 소화약리학 및 치료학, 50(2), 193-203."
-      ]
-    },
-    {
-      "id": "fight-aging:6b62f91068",
-      "slug": "dogs-exhibit-comorbidity-and-mortality-risk-in-much-6b62f9",
-      "titleOriginal": "Dogs Exhibit Comorbidity and Mortality Risk in Much the Same Way as Humans",
-      "summaryOriginal": "One of the goals of the Dog Aging Project is to better establish that the characteristics of aging in dogs are close enough to the characteristics of aging in humans to make the results of interventions on dog life span relevant to the development of human medicine. Thus the paper here, in which researchers establish that comorbidity, the presence of multiple age-related conditions in the same ind",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "One of the goals of the Dog Aging Project is to better establish that the characteristics of aging in dogs are close enough to the characteristics of aging in humans to make the results of interventions on dog life span relevant to the development of human medicine. Thus the paper here, in which researchers establish that comorbidity , the presence of multiple age-related conditions in the same individual, has much the same relationship with aging and mortality in dogs as it does in people. To have an age-related disease is to have a significant degree of dysfunction in some organ or tissue. The greater the burden of underlying cell and tissue damage resulting from aging, the more likely it is that multiple age-related conditions will emerge. Further, significant dysfunction in any one organ or tissue will tend to generate issues in other organs or tissues; everything connections everything else in our biology."
-        },
-        {
-          "kind": "text",
-          "text": "Multimorbidity , the presence of two or more conditions, is associated with a higher risk of death as individuals age. However, modeling multimorbidity in laboratory animals is difficult, if not impossible, because specific conditions are seldom individually diagnosed and treated in these settings. Because of their shared environment, physiology, and genetic diversity, and because they are medically managed as individuals, companion dogs have potential to serve as a translational multimorbidity model . Yet it is unknown how diagnoses accumulate over time, how these diagnoses are associated with mortality, and which multimorbid condition combinations are the most prevalent and hazardous."
-        },
-        {
-          "kind": "text",
-          "text": "Utilizing owner-reported data from over 50,000 dogs in the Dog Aging Project (DAP), we assessed how multimorbidities develop, learned which are the most prevalent, and evaluated their impact on survival. Like in humans, we show that the accumulation of conditions is associated with an increased risk of death in dogs. We also present data suggesting that future reported condition rates vary depending on the conditions a dog's owner already has reported. Not surprisingly, our analysis reveals that the overall canine aging process appears to be the driving factor behind disease development, more so than other covariates . Through classifying multimorbidities, we found that almost all either exhibit a synergistic effect or are driven by a single, predominant condition. In both cases, osteoarthritis , overweight, and cancer were highly prevalent throughout."
-        },
-        {
-          "kind": "text",
-          "text": "This analysis expands on previously conducted DAP work and further highlights the usefulness of the companion dog as a translational model for human aging."
-        },
-        {
-          "kind": "text",
-          "text": "Link: https://doi.org/10.1007/s11357-026-02342-4"
-        }
-      ],
-      "sourceName": "Fight Aging!",
-      "sourceUrl": "https://www.fightaging.org/",
-      "originalUrl": "https://www.fightaging.org/archives/2026/09/dogs-exhibit-comorbidity-and-mortality-risk-in-much-the-same-way-as-humans",
-      "author": "Reason",
-      "publishedAt": "2026-09-08T10:22:40.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
-      "language": "en",
-      "keywords": [
-        "Daily News"
-      ],
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 3,
-      "careScore": 0.95,
-      "curiosityScore": 0,
-      "contentType": "research",
-      "titleKo": "개도 인간과 거의 비슷한 방식으로 동반 질환과 사망 위험을 보입니다",
-      "summaryKo": "개 노화 프로젝트의 목표 중 하나는 개의 노화 특성이 인간의 노화 특성과 충분히 유사함을 더 잘 입증하여 개 수명에 대한 개입 결과가 인간 의학 개발에 적합하도록 하는 것입니다. 따라서 연구자들이 같은 질환 내에 여러 연령 관련 질환이 존재한다는 공존 질환을 입증한 논문은",
-      "bodyKo": [
-        "개 노화 프로젝트의 목표 중 하나는 개의 노화 특성이 인간의 노화 특성과 충분히 유사함을 입증하여 개 수명에 대한 개입 결과가 인간 의학 개발에 적합하게 만드는 것입니다. 따라서 연구자들이 밝힌 이 논문은 동반질환, 즉 한 개체 내에 여러 연령 관련 질환이 존재하는 것이 개의 노화와 사망률과 인간과 거의 동일한 관계를 맺는다는 것을 밝혀냅니다. 노화 관련 질환을 앓는다는 것은 어떤 장기나 조직에 상당한 수준의 기능 장애가 있다는 뜻입니다. 노화로 인한 기저 세포 및 조직 손상의 부담이 클수록 여러 연령 관련 질환이 발생할 가능성이 높아집니다. 더 나아가, 한 장기나 조직에서 심각한 기능 장애가 발생하면 다른 장기나 조직에도 문제를 일으키는 경향이 있습니다; 모든 것은 우리 생물학의 다른 모든 것과 연결되어 있습니다.",
-        "다중 질환, 즉 두 가지 이상의 질환이 존재하는 것은 개인이 나이가 들수록 사망 위험이 높아지는 것과 관련이 있습니다. 하지만 실험동물에서 다중 질환을 모델링하는 것은 어렵거나 불가능에 가깝습니다. 왜냐하면 특정 질환이 개별적으로 진단되고 치료되는 경우가 드물기 때문입니다. 공유된 환경, 생리학, 유전적 다양성 때문에, 그리고 개별적으로 의학적으로 관리되기 때문에, 반려견은 중개 다중 질환 모델로서 역할을 할 잠재력을 가지고 있습니다. 그러나 진단이 시간에 따라 어떻게 누적되는지, 이러한 진단이 사망률과 어떻게 연관되는지, 그리고 어떤 다중 질환 조합이 가장 흔하고 위험한지는 아직 알려져 있지 않습니다.",
-        "개 노화 프로젝트(DAP)에서 5만 마리 이상의 개에서 주인이 보고한 데이터를 활용하여, 우리는 다중 질환이 어떻게 발생하는지 평가하고, 가장 흔한 질환을 파악하며, 생존에 미치는 영향을 평가했습니다. 인간과 마찬가지로, 우리는 질환의 축적이 개의 사망 위험 증가와 연관되어 있음을 보여주었습니다. 또한 앞으로 보고된 질환률이 개 주인이 이미 보고한 상태에 따라 달라진다는 데이터도 제시했습니다. 예상대로, 우리의 분석 결과는 전체 개의 노화 과정이 다른 공변량보다 질병 발병의 주요 원인으로 보임을 보여줍니다. 다중 이환을 분류한 결과, 거의 모든 질환이 시너지 효과를 보이거나 단일 주요 질환에 의해 유발된다는 사실을 발견했습니다. 두 경우 모두 골관절염, 과체중, 암이 매우 유행했습니다.",
-        "이 분석은 이전에 수행된 DAP 연구를 확장하며, 반려견이 인간 노화의 번역 모델로서 얼마나 유용한지 더욱 강조합니다.",
-        "링크: https://doi.org/10.1007/s11357-026-02342-4"
       ]
     },
     {
@@ -7317,7 +7164,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/just-to-keep-drawing-the-tale-of-how-innes-clark-designed-her-way-out-of-a-bakery-and-into-restaurant-branding",
       "author": "Ayla Angelos",
       "publishedAt": "2026-09-08T06:15:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -7351,7 +7198,7 @@
       "id": "lifespan-io:3a17f1d3b9",
       "slug": "mice-with-growth-hormone-halted-in-middle-age-3a17f1",
       "titleOriginal": "Mice With Growth Hormone Halted in Middle Age Live Longer",
-      "summaryOriginal": "Researchers publishing in Aging Cell have described how stopping growth hormone receptor production in midlife significantly lengthens the lives of mice. Growth but diabetes Growth hormone affects the metabolism of fats (lipids), increasing […]",
+      "summaryOriginal": "Researchers publishing in Aging Cell have described how stopping growth hormone receptor production in midlife significantly lengthens the lives of mice. Growth but diabetes Growth hormone affects the metabolism of fats (lipids), increasing the levels of circulating fatty acids while […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7439,7 +7286,7 @@
       "originalUrl": "https://lifespan.io/mice-with-growth-hormone-halted-in-middle-age-live-longer",
       "author": "Josh Conway",
       "publishedAt": "2026-09-07T19:59:35.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News",
@@ -7458,7 +7305,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "중년에 성장 호르몬이 멈춘 쥐는 더 오래 살다",
-      "summaryKo": "Aging Cell에 발표한 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 생쥐의 수명이 크게 연장된다고 설명했습니다. 성장과 당뇨병 성장호르몬은 지방(지질)의 대사에 영향을 주어 [...]",
+      "summaryKo": "Aging Cell에 발표된 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 생쥐의 수명이 크게 연장된다고 설명했습니다. 성장과 당뇨병 성장호르몬은 지방(지질)의 대사에 영향을 주어 순환 지방산 수치를 증가시키고, [...]",
       "bodyKo": [
         "Aging Cell에 발표한 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 쥐의 수명이 크게 연장된다고 설명했습니다.",
         "성장과 당뇨병 성장호르몬은 지방(지질)의 대사에 영향을 주어 순환 지방산 수치를 증가시키고 인슐린 유사 성장인자 1(IGF-1)을 증가시키며 인슐린 자체의 기능을 저하시킵니다 [1]. 성장호르몬은 조직 특이적 노화와 연관되어 있으며[2], 선천적으로 성장호르몬에 민감한 사람들(라론 증후군)은 당뇨병, 인지 기능 저하, 심혈관 문제 등 노화의 여러 측면에 대한 저항성이 증가합니다 [3].",
@@ -7575,7 +7422,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/why-our-favourite-mindfulness-tools-might-be-training-us-to-avoid-our-feelings-not-face-them",
       "author": "Tom May",
       "publishedAt": "2026-09-07T06:00:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -7618,7 +7465,7 @@
       "id": "lifespan-io:d176156141",
       "slug": "the-last-generation-to-die-interview-with-tim-d17615",
       "titleOriginal": "The Last Generation to Die: Interview With Tim Maupin",
-      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation technologies arrive and who gets left behind. The project has now reached […]",
+      "summaryOriginal": "Filmmaker Tim Maupin has spent a number of years developing The Last Generation to Die, a near-future film about what happens when the first true rejuvenation […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7738,7 +7585,7 @@
       "originalUrl": "https://lifespan.io/the-last-generation-to-die-interview-with-tim-maupin",
       "author": "Steve Hill",
       "publishedAt": "2026-09-03T20:00:48.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Advocacy",
@@ -7757,7 +7604,7 @@
       "curiosityScore": 0.7,
       "contentType": "research",
       "titleKo": "마지막 세대가 죽음: 팀 모핀과의 인터뷰",
-      "summaryKo": "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 《더 라스트 제너레이션 투 다이》를 수년간 개발해왔습니다. 이 프로젝트는 이제 [...]",
+      "summaryKo": "영화감독 팀 모핀은 첫 진정한 재생이 [...]에 이르렀을 때 벌어지는 이야기를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해왔습니다.",
       "bodyKo": [
         "영화감독 팀 모핀은 진정한 회춘 기술이 처음 등장했을 때 무슨 일이 벌어지고, 누가 뒤처지는지를 다룬 근미래 영화 《라스트 제너레이션 투 다이》를 수년간 개발해 왔습니다. 이 프로젝트는 현재 인류 미래에 대한 낙관적인 비전을 모색하는 글로벌 대회인 미래 비전 XP라이즈의 상위 65위에 진입했습니다. 우리는 그와 이야기의 개인적 이해관계, 긍정적인 미래 이야기를 만드는 도전, 그리고 영화의 중심 딜레마가 점점 더 긴급하게 느껴지는 이유에 대해 이야기를 나누었습니다.",
         "함께해 주셔서 감사합니다, 팀. 흥미로운 소식은 당신의 영화 중 하나가 미래 비전 XPrize에 후보로 올랐다는 것입니다. 대회의 과제는 인류의 낙관적이고 풍요로운 미래를 묘사한 3분 분량의 SF 예고편을 만드는 것입니다. 대상은 자신의 비전을 장편 영화로 만드는 데 260만 달러+를 받으며, 준우승자에게는 100만 달러 이상의 상금이 주어집니다. 팀, 그 부분에 대해 조금 이야기해 주실 수 있나요? 네, 이 영화는 제가 꽤 오랫동안 작업해온 롱제비티에 초점을 맞춘 영화 '라스트 제너레이션 투 다이'입니다. X 프라이즈 미래 비전 콘테스트에서 2500개 이상의 출품작 중 상위 65위 안에 들었는데, 정말 흥미로운 소식입니다.",
@@ -7793,7 +7640,7 @@
       "id": "lifespan-io:8cb78c75c6",
       "slug": "invested-in-her-campaign-extends-fundraising-deadline-8cb78c",
       "titleOriginal": "Invested in Her Campaign Extends Fundraising Deadline",
-      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October 1, 2026, as they work toward a $250,000 fundraising target […]",
+      "summaryOriginal": "Driven by ongoing support from their community, The Longevity Science Foundation is extending the deadline for the Invested in Her campaign to October 1, 2026, as they work toward […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7837,7 +7684,7 @@
       "originalUrl": "https://lifespan.io/invested-in-her-campaign-extends-fundraising-deadline",
       "author": "Press release",
       "publishedAt": "2026-09-02T17:55:38.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -7854,7 +7701,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "그녀의 캠페인에 투자하다 모금 마감 연장",
-      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 '투자된 그녀' 캠페인의 마감일을 2026년 10월 1일로 연장하며, 25만 달러 모금 목표를 향해 노력하고 있습니다 [...]",
+      "summaryKo": "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인' 기한을 2026년 10월 1일로 연장하며 [...]",
       "bodyKo": [
         "지역사회의 지속적인 지원에 힘입어, 롱제비티 과학재단은 'Invested in Her 캠페인'의 마감일을 2026년 10월 1일로 연장하며, 난소 노화와 폐경에 관한 초기 연구 지원을 위한 25만 달러 모금 목표를 향해 나아가고 있습니다.",
         "수억 명의 여성이 남성보다 더 오래 살지만 건강이 좋지 않은 상태로 더 오랜 시간을 보냅니다. 이 격차를 유발하는 생물학적 원인은 난소 노화와 폐경기 전환에 뿌리를 두고 있으며, 이 분야는 의학에서 가장 자금이 부족한 분야 중 하나입니다. Invested IN Her 프로젝트는 엄마, 딸, 전 세계 여성들을 위해 그 격차를 해소하는 과학 연구를 위해 25만 달러를 모금하고 있습니다.",
@@ -7924,7 +7771,7 @@
       "originalUrl": "https://www.creativeboom.com/news/the-royal-college-of-art-is-bringing-communication-and-design-together-in-one-school-and-thats-big-news",
       "author": "Tom May",
       "publishedAt": "2026-09-02T05:45:00.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News"
@@ -7958,7 +7805,7 @@
       "id": "lifespan-io:591dca2c3c",
       "slug": "rejuvenation-roundup-august-2026-591dca",
       "titleOriginal": "Rejuvenation Roundup August 2026",
-      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become the CEOs of Their Own Health: Wei-Wu […]",
+      "summaryOriginal": "Properly untangling aging means untangling its various counterbalances, sometimes on the individual level. Here’s what’s been investigated this month. Interviews Wei-Wu He: People Should Become the CEOs of Their Own Health: Wei-Wu He is an unusual combination […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8127,7 +7974,7 @@
       "originalUrl": "https://lifespan.io/rejuvenation-roundup-august-2026",
       "author": "Editorial",
       "publishedAt": "2026-09-01T16:52:55.000Z",
-      "fetchedAt": "2026-09-11T18:27:43.914Z",
+      "fetchedAt": "2026-09-12T00:31:01.757Z",
       "language": "en",
       "keywords": [
         "News",
@@ -8144,7 +7991,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "리유버네이션 라운드업 2026년 8월",
-      "summaryKo": "노화를 제대로 풀려야 한다는 것은 때로는 개인적인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용은 다음과 같습니다. 인터뷰 웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다: 웨이우 [...]",
+      "summaryKo": "노화를 제대로 풀어내려면 때로는 개인 차원에서 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다. 인터뷰 웨이우허: 사람들은 자신의 건강을 위해 CEO가 되어야 한다: 웨이우허는 독특한 조합입니다 [...]",
       "bodyKo": [
         "노화를 제대로 풀어낸다는 것은 때로는 개인적인 차원에서 얽힌 다양한 균형을 풀어야 합니다. 이번 달에 조사된 내용을 소개합니다.",
         "웨이우 허: 사람들은 자신의 건강 CEO가 되어야 합니다 : 웨이우 허는 과학자와 사업가가 결합된 독특한 인물로, 현재 회사는 정밀 의료를 활용해 사람들의 수명을 연장하는 데 집중하고 있습니다.",
