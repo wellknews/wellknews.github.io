@@ -1,0 +1,127 @@
+/*
+  거쳐 가는 자리들.
+
+  단계 사이의 연결선은 가로 판면에서만 옆으로 눕는다. 좁은 판면에서는 줄을
+  바꾸는 대신 세로로 세우는데, 가로로 접힌 화살표는 어느 쪽이 다음인지를
+  잃기 때문이다.
+*/
+
+.flow {
+  display: grid;
+  gap: 0;
+  margin: var(--space-block) 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .flow {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.step {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+  padding: 1rem 1.1rem 1.15rem;
+  border-top: 1px solid var(--color-line);
+}
+
+@media (min-width: 720px) {
+  .step {
+    padding-inline: 1rem;
+  }
+  .step:first-child {
+    padding-inline-start: 0;
+  }
+}
+
+/*
+  다음으로 이어진다는 표시.
+
+  화살표 글리프를 쓰지 않는다. 글리프는 글자 크기를 따라다녀서 판면이 바뀌면
+  선과 어긋나고, 읽는 기계에게는 «오른쪽 화살표»라고 소리 내어 읽힌다. 여기
+  필요한 것은 낱말이 아니라 이어져 있다는 사실이라 선으로 긋는다.
+*/
+.step::after {
+  content: '';
+  position: absolute;
+  background: var(--color-line-strong);
+}
+
+.step:last-child::after {
+  content: none;
+}
+
+.step::after {
+  left: 1.1rem;
+  bottom: -1px;
+  width: 1.5rem;
+  height: 1px;
+}
+
+@media (min-width: 720px) {
+  .step::after {
+    left: auto;
+    right: 0;
+    top: 1.45rem;
+    bottom: auto;
+    width: 1px;
+    height: 0.9rem;
+  }
+}
+
+.order {
+  font-size: var(--text-meta);
+  letter-spacing: var(--tracking-meta);
+  color: var(--color-text-muted);
+}
+
+.at {
+  font-size: var(--text-body);
+  font-weight: var(--weight-display);
+  line-height: 1.35;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.note {
+  font-size: var(--text-meta);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/*
+  이번에 바뀐 자리.
+
+  색으로만 가르지 않는다. 위에 굵은 선이 한 줄 더 얹히고 차례 숫자 자리에
+  낱말이 들어가므로, 색을 보지 못해도 어느 칸이 다른지 읽힌다.
+*/
+.mark {
+  border-top-color: var(--color-text);
+  border-top-width: 2px;
+  padding-top: calc(1rem - 1px);
+}
+
+.mark .at {
+  color: var(--color-text);
+}
+
+.mark .order {
+  color: var(--accent);
+}
+
+/*
+  바뀐 자리에 붙는 낱말. 차례 숫자와 같은 줄에 앉지만 고정폭을 쓰지 않는다 —
+  이유는 Flow.tsx의 주석에 적었다.
+*/
+.markNote {
+  font-size: var(--text-meta);
+  font-weight: var(--weight-display);
+  color: var(--accent);
+}
