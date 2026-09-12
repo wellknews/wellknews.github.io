@@ -136,7 +136,7 @@ export type Code = {
   revision?: Revision
   diff?: Diff
   meta?: Meta
-  /** 목록에 걸리는 한 줄. 무엇을 고쳤는지가 아니라 이 기록이 무엇을 보는지. */
+  /** 목록에 걸리는 한 줄. 이 업데이트로 무엇이 달라졌는지. */
   excerpt?: string
   body: ReactNode
   /** 작은 판면을 위한 다른 배치. 적지 않으면 body를 그대로 쓴다. */
