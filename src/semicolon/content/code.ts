@@ -1,4 +1,5 @@
 import { allGreenNobodyLooked } from './code/all-green-nobody-looked'
+import { deletedBeforeWeLooked } from './code/deleted-before-we-looked'
 import { notOnTheList } from './code/not-on-the-list'
 import { theMiddleWasOlive } from './code/the-middle-was-olive'
 import type { Code } from './types'
@@ -15,7 +16,12 @@ import type { Code } from './types'
  * 새 기록을 쓰려면 code/_template.tsx를 복사해 파일을 만들고 여기 맨 앞에 넣는다.
  * 순서는 최신 순으로 직접 정렬한다.
  */
-export const codes: readonly Code[] = [allGreenNobodyLooked, theMiddleWasOlive, notOnTheList]
+export const codes: readonly Code[] = [
+  deletedBeforeWeLooked,
+  allGreenNobodyLooked,
+  theMiddleWasOlive,
+  notOnTheList,
+]
 
 export function findCode(slug: string): Code | undefined {
   return codes.find((code) => code.slug === slug)

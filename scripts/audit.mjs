@@ -97,6 +97,11 @@ const PAGES = [
     path: '/session/commander-at-home',
     kind: 'session',
   },
+  {
+    name: 'code/deleted-before-we-looked',
+    path: '/code/deleted-before-we-looked',
+    kind: 'code',
+  },
   { name: 'code/all-green-nobody-looked', path: '/code/all-green-nobody-looked', kind: 'code' },
   { name: 'code/the-middle-was-olive', path: '/code/the-middle-was-olive', kind: 'code' },
   { name: 'code/not-on-the-list', path: '/code/not-on-the-list', kind: 'code' },
