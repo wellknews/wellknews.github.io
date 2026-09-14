@@ -136,8 +136,8 @@ export const site = {
     /** 사이트를 만든 사람. 브랜드 계정(CHANNELS)과 역할이 달라 중복이 아니다. */
     creditLabel: 'SITE BY',
     contacts: [
-      { label: 'Instagram @c.acne', href: 'https://instagram.com/c.acne', external: true },
-      { label: 'creator.acne@gmail.com', href: 'mailto:creator.acne@gmail.com', external: false },
+      { label: 'Instagram @muishiz', href: 'https://instagram.com/muishiz', external: true },
+      { label: 'muishizen51@gmail.com', href: 'mailto:muishizen51@gmail.com', external: false },
     ],
   },
 } as const
