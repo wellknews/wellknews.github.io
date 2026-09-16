@@ -1,7 +1,474 @@
 {
-  "generatedAt": "2026-09-16T16:52:07.667Z",
+  "generatedAt": "2026-09-16T21:15:55.855Z",
   "prototype": false,
   "articles": [
+    {
+      "id": "fight-aging:8abc73a954",
+      "slug": "the-most-powerful-economic-productivity-lever-of-all-8abc73",
+      "titleOriginal": "The Most Powerful Economic Productivity Lever of All Time",
+      "summaryOriginal": "A great deal of advocacy for the development of therapies to slow and reverse aging has moved on from a focus on reducing suffering. That the majority of the arguments now focus on economic productivity and reduced entitlement costs reflects a broad and possibly quite correct cynicism about what motivates the politicians, wealthy political influencers, and bureaucrats who collectively control the ",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "A great deal of advocacy for the development of therapies to slow and reverse aging has moved on from a focus on reducing suffering. That the majority of the arguments now focus on economic productivity and reduced entitlement costs reflects a broad and possibly quite correct cynicism about what motivates the politicians, wealthy political influencers, and bureaucrats who collectively control the largest flows of funding and support in our societies. Private funding for research and development focused on longevity remains very motivated by the potential reduced suffering, and indeed the potential to reduce one's own personal suffering in the years ahead. However, the longevity industry of the recent past, and for the near future, exists in a state of tension as it attempts to make the transition from a privately supported new venture to an established field supported by the full panoply of state controlled medical systems - to be as openly and comprehensively backed by governments as cancer research and development."
+        },
+        {
+          "kind": "text",
+          "text": "Most advocates these days appear to believe that the way to make this happen is to exploit the high level of anxiety in the ruling classes of much of the world that centers around the demographic transition to ever increasing numbers of older people, and the costs of old age. The governments of the world have largely chosen to exert a great deal of control over the development and provision of medicine, to the point of it becoming an expense for them, a burden much akin to the mess that was made of pension entitlements, the creation of large enough promises of future expenditure to financially ruin the systems created to manage them. Treatments for aging are a deus ex machina that will save the system, or that is the hope being pushed into government circles by advocates attempting to achieve greater support for the development of longevity therapeutics. The realpolitik always seems somewhat shabby in full daylight when it departs utterly from the considerations of what aging does to an individual, physically and mentally. The true reason to build therapies to treat aging is because this offers the strong possibility of a very sizable reduction in human suffering and death, not because it can prop up dysfunction systems of governance."
+        },
+        {
+          "kind": "text",
+          "text": "The longevity dividend: Why governments and markets must catch up"
+        },
+        {
+          "kind": "text",
+          "text": "'How much' often matters less than 'how fast'. Financial systems might comfortably accommodate a decade increase in life expectancy if it emerges gradually over half a century, but could they accommodate the same increase within 5 years? Economies are built to absorb gradual change and are much less comfortable with discontinuities. Human longevity may be approaching that kind of discontinuity . The latest scientific advances point to the emergence of what we have termed 'system-level' therapeutics capable of bringing about rapid, non-linear changes in both healthspan and lifespan trajectories, challenging the incremental paradigms that underpin current economic and demographic forecasting models. If they do, governments, healthcare systems, insurers and pension funds will have to respond to a break with history, not a continuation of it."
+        },
+        {
+          "kind": "text",
+          "text": "Public debate often treats longevity as a cost curve. That is only half the ledger. In an era of demographic ageing and stagnant economic growth forecasts, one overlooked truth is emerging: longevity science may be the most powerful economic productivity lever of all time. Governments spend billions annually on education, digital transformation and industrial innovation - all in the name of boosting national productivity. Yet few acknowledge that the single largest drag on workforce participation is declining health in midlife and beyond due to ageing. In the United States, the direct costs of chronic health conditions total around $1.1 trillion - equivalent to 5.8% of US gross domestic product (GDP). When indirect costs of lost economic productivity are included, the total costs of chronic diseases in the United States increase to $3.7 trillion - in other words, they equate to almost 20% of the US GDP."
+        },
+        {
+          "kind": "text",
+          "text": "The economic argument for longevity research is clear: targeting the root causes of ageing is not just a healthcare imperative, it is set to become a non-negotiable economic strategy. Governments should treat it as such, allocating funding accordingly and incentivising translational research , clinical trials, and public-private partnerships in this field. In the 20th century, public investment in antibiotics and vaccines changed the world. In the 21st century, ageing biology has the potential to do the same."
+        }
+      ],
+      "sourceName": "Fight Aging!",
+      "sourceUrl": "https://www.fightaging.org/",
+      "originalUrl": "https://www.fightaging.org/archives/2026/09/the-most-powerful-economic-productivity-lever-of-all-time",
+      "author": "Reason",
+      "publishedAt": "2026-09-16T18:01:15.000Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
+      "language": "en",
+      "keywords": [
+        "Medicine, Biotech, Research"
+      ],
+      "translationStatus": "failed",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 3,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "opinion"
+    },
+    {
+      "id": "longevity-technology:b1395a9f51",
+      "slug": "neurosense-splits-one-big-als-trial-into-three-b1395a",
+      "titleOriginal": "NeuroSense splits one big ALS trial into three",
+      "summaryOriginal": "Company bets that AI-assisted analysis and a leaner trial design can get PrimeC to patients years sooner than the usual approval path. Most people diagnosed with ALS don’t live past three years. Most drugs aiming to treat it spend longer than that just getting through a single confirmatory trial. That mismatch is the entire problem […] The post NeuroSense splits one big ALS trial into three appear",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Company bets that AI-assisted analysis and a leaner trial design can get PrimeC to patients years sooner than the usual approval path."
+        },
+        {
+          "kind": "text",
+          "text": "Most people diagnosed with ALS don’t live past three years. Most drugs aiming to treat it spend longer than that just getting through a single confirmatory trial. That mismatch is the entire problem NeuroSense Therapeutics is trying to solve."
+        },
+        {
+          "kind": "text",
+          "text": "Late last month, the Cambridge, Massachusetts-based biotech announced it’s scrapping the traditional single-trial approach for its lead ALS candidate, PrimeC, in favor of three shorter, narrower studies. Each is designed to answer one specific question instead of trying to prove everything at once inside a single, years-long trial [ 1 ]."
+        },
+        {
+          "kind": "text",
+          "text": "“One of the hardest constraints in ALS is not scientific; it is that the standard development path takes longer than patients have,” said Alon Ben-Noon, NeuroSense’s co-founder and CEO. “We have asked a straightforward question: what is the shortest reasonable route from the data we already hold to a therapy people can actually receive? This plan is our answer. It is faster, it costs less and it produces a stronger package, pharmacology, comparative clinical context and a pivotal dataset, than the single-trial approach would have.”"
+        },
+        {
+          "kind": "text",
+          "text": "PrimeC pairs two already-approved drugs, ciprofloxacin, an antibiotic and celecoxib, an anti-inflammatory, into a single extended-release formulation. The idea isn’t novel chemistry so much as novel packaging: combine two known drugs to hit several of ALS’s suspected drivers simultaneously – nervous-system inflammation, iron accumulation in neurons and RNA regulation gone haywire – rather than betting everything on one mechanism the way most single-molecule drugs do."
+        },
+        {
+          "kind": "text",
+          "text": "The first piece of the plan is almost entirely desk work. NeuroSense already has pharmacokinetic data showing that PrimeC’s specific formulation produces a different, synchronized absorption pattern than simply taking the two component drugs side by side."
+        },
+        {
+          "kind": "text",
+          "text": "Rather than run a new trial to prove that, the company is applying AI-based modeling to data it already collected, hunting for a sharper, more defensible read on how big that difference actually is and how consistently it shows up across patients. It’s less a discovery than an extraction, pulling a stronger claim out of a file the company already owns."
+        },
+        {
+          "kind": "text",
+          "text": "The second study is the riskier bet. NeuroSense plans to run PrimeC head-to-head against edaravone, an ALS drug already on the market. Most ALS trials compare a candidate against a placebo, which is the safer route; there’s nowhere to hide the results if a placebo comparison goes badly, but there’s also less to gain. A direct win against an established competitor would hand NeuroSense something no placebo trial can: proof PrimeC beats what doctors are already prescribing. That’s the kind of evidence insurers and physicians weigh when deciding what to cover and prescribe."
+        },
+        {
+          "kind": "text",
+          "text": "Piece three reshapes PARAGON, the Phase 3 trial NeuroSense already has FDA clearance to run. The redesigned version would be smaller, shorter, and enroll patients earlier in their disease course, when meaningful decline is easier to detect over a compressed timeline. NeuroSense says it intends to ask the FDA directly whether existing data could support full approval outright, or whether accelerated approval, with a confirmatory study required afterward, is the more realistic path."
+        },
+        {
+          "kind": "text",
+          "text": "There’s also a second front open in Canada. NeuroSense has finished the pre-submission process with Health Canada and is targeting a formal filing by December, a track that could put PrimeC in Canadian patients’ hands before the US process wraps up."
+        },
+        {
+          "kind": "text",
+          "text": "Underneath the trial mechanics, NeuroSense is testing something broader: whether AI-assisted analysis of data a company already has, paired with a leaner trial architecture, can shrink the distance between “we have promising evidence” and “patients can access this,” without cutting corners on rigor to get there."
+        },
+        {
+          "kind": "text",
+          "text": "For neurodegenerative disease specifically, where biological aging and disease progression run on the same clock, that kind of speed isn’t a nice-to-have. It’s the line between a therapy reaching someone in time to preserve years of function and reaching them after those years are already gone."
+        },
+        {
+          "kind": "text",
+          "text": "None of it is locked in yet. The FDA hasn’t signed off on the redesigned pivotal trial, and a head-to-head study against an approved competitor carries real reputational downside if PrimeC comes up short. However, the underlying argument – that the industry’s default trial timeline is itself an obstacle to treating aging-related disease, however sound the science behind a drug turns out to be – is one more companies working in this space are likely to test in the next few years."
+        },
+        {
+          "kind": "text",
+          "text": "[1] https://www.prnewswire.com/news-releases/neurosense-unveils-accelerated-capital-efficient-strategy-to-advance-primec-toward-potential-approval-in-als-302864893.html"
+        },
+        {
+          "kind": "text",
+          "text": "The post NeuroSense splits one big ALS trial into three appeared first on Longevity.Technology ."
+        }
+      ],
+      "sourceName": "Longevity.Technology",
+      "sourceUrl": "https://longevity.technology/",
+      "originalUrl": "https://longevity.technology/news/neurosense-splits-one-big-als-trial-into-three",
+      "author": "Kyle Umipig",
+      "publishedAt": "2026-09-16T17:13:00.000Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
+      "language": "en",
+      "keywords": [
+        "Biotech",
+        "ALS",
+        "clinical trial",
+        "clinical trials",
+        "drug development",
+        "NeuroSense",
+        "PrimeC"
+      ],
+      "image": {
+        "url": "https://longevity.technology/wp-content/uploads/2026/09/NeuroSense-splits-one-big-ALS-trial-into-three-1024x683.png"
+      },
+      "translationStatus": "failed",
+      "contentPolicy": "full",
+      "category": "culture",
+      "trustLevel": 3,
+      "careScore": 0,
+      "curiosityScore": 0.7,
+      "contentType": "research"
+    },
+    {
+      "id": "longevity-technology:795fcde18e",
+      "slug": "magnitude-s-worm-powered-drug-screening-lands-1-795fcd",
+      "titleOriginal": "Magnitude’s worm-powered drug screening lands $1.3m",
+      "summaryOriginal": "Durham University spinout Magnitude Biosciences raises $1.3 million to scale a platform that screens drugs in living worms, not petri dishes. There’s a particular kind of worm, about a millimeter long, that’s quietly become one of the most useful tools in aging research. C elegans has been a lab staple for decades because it shares […] The post Magnitude’s worm-powered drug screening lands $1.3m a",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Durham University spinout Magnitude Biosciences raises $1.3 million to scale a platform that screens drugs in living worms, not petri dishes."
+        },
+        {
+          "kind": "text",
+          "text": "There’s a particular kind of worm, about a millimeter long, that’s quietly become one of the most useful tools in aging research. C elegans has been a lab staple for decades because it shares a surprising number of genes and biological pathways with humans, and because researchers can watch its entire lifespan play out in a matter of weeks rather than years. A UK company built around exactly that idea, Magnitude Biosciences , just secured fresh funding to scale up what it’s doing with them."
+        },
+        {
+          "kind": "text",
+          "text": "The company, a contract research organization and Durham University spinout based in Sedgefield, has raised $1.3 million (£1.3 million) to accelerate the commercialization of VivoScan, its proprietary high-throughput screening platform. What makes VivoScan different from standard drug screening is right there in the name: it’s happening in a whole living organism, not in isolated cells or molecules in a dish."
+        },
+        {
+          "kind": "text",
+          "text": "Conventional high-throughput screening typically measures a handful of molecular or cellular endpoints. VivoScan instead uses hundreds of nematode worms at a time, combined with imaging, machine learning, and automation, to capture a much richer picture of how a compound actually behaves across a whole organism’s biology. The company says it can generate detailed, whole-organism data in weeks, compared to the years that similar work can take using traditional models."
+        },
+        {
+          "kind": "text",
+          "text": "It sounds like an odd pitch until you consider how much drug development currently fails. Compounds routinely look promising in isolated cells, then fail once tested in a full organism, because biology doesn’t work in isolated pieces. A platform that captures whole-organism responses earlier in the process, rather than discovering the problem years and millions of dollars later, has an obvious appeal to pharmaceutical companies trying to cut both cost and failure rates."
+        },
+        {
+          "kind": "text",
+          "text": "“Our ambition is to become the first company to provide a platform to screen millions of compounds in a whole organism. This investment in VivoScan gives us the opportunity to turn that ambition into reality and fundamentally change the scale and speed at which drug discovery can be done,” said Dr Fozia Saleem, CEO of Magnitude Biosciences. “We are building a platform that can move beyond simply screening more compounds. VivoScan generates rich, whole organism biological data that can help researchers understand how potential therapies affect health, aging and disease.”"
+        },
+        {
+          "kind": "text",
+          "text": "Saleem noted that making data generation faster and more cost-effective would enable them to help pharmaceutical and biotechnology companies identify better drug candidates earlier, which would ultimately accelerate the development of new treatments."
+        },
+        {
+          "kind": "text",
+          "text": "Northstar Ventures led the round, drawing on the North East Spinout Inspire Fund, the North East Innovation Fund, and the Northstar EIS Growth Fund, alongside investment from Maven’s regional funds and a group of new angel investors. The round also unlocked a further $217,000 grant (£217,000) through the Innovate UK Investor Partnership. It’s a fairly regional story in that sense, a company built on North East England’s university research ecosystem, funded largely by the same ecosystem’s investment infrastructure."
+        },
+        {
+          "kind": "text",
+          "text": "Magnitude has already delivered more than 120 projects for clients working across drug discovery, health and nutrition, and aging biology specifically, using its patented WormGazer technology alongside VivoScan. That last category is where the company’s ambitions and the longevity field’s needs line up most directly."
+        },
+        {
+          "kind": "text",
+          "text": "Aging research has a specific, stubborn problem: almost nothing about aging shows up quickly. A compound meant to extend healthspan can’t easily be tested the way a painkiller can, because the whole point is watching what happens over a long stretch of time, and mice alone take two to three years to show meaningful lifespan data. C elegans , with a lifespan measured in weeks, lets researchers run that same kind of longitudinal test dramatically faster, then flag the most promising candidates for further testing in mammals."
+        },
+        {
+          "kind": "text",
+          "text": "That’s precisely the gap Magnitude is aiming at. As the company put it in its own announcement, the goal is to help “accelerate the development of new drugs designed to extend the healthspan of our aging population.” Whether VivoScan becomes the industry-standard bridge between petri-dish chemistry and full clinical trials is still an open question, but the underlying bet, that screening in a living, aging organism beats screening in isolated cells, is one a growing share of the field seems to agree with."
+        },
+        {
+          "kind": "text",
+          "text": "Photograph courtesy of Magnitude Biosciences The post Magnitude’s worm-powered drug screening lands $1.3m appeared first on Longevity.Technology ."
+        }
+      ],
+      "sourceName": "Longevity.Technology",
+      "sourceUrl": "https://longevity.technology/",
+      "originalUrl": "https://longevity.technology/news/magnitudes-worm-powered-drug-screening-lands-1-3m",
+      "author": "Kyle Umipig",
+      "publishedAt": "2026-09-16T17:11:13.000Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
+      "language": "en",
+      "keywords": [
+        "Biotech",
+        "Investment",
+        "C elegans",
+        "drug development",
+        "drug discovery",
+        "Durham University",
+        "Magnitude Biosciences",
+        "VivoScan"
+      ],
+      "image": {
+        "url": "https://longevity.technology/wp-content/uploads/2026/09/Magnitude-Biosciences-secures-1.3m-investment-to-scale-pioneering-in-vivo-drug-discovery-platform-1024x683.jpg"
+      },
+      "translationStatus": "failed",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 3,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "news"
+    },
+    {
+      "id": "longevity-technology:0bf1a040fd",
+      "slug": "half-of-tested-antiaging-products-moved-nothing-in-0bf1a0",
+      "titleOriginal": "Half of tested antiaging products moved nothing in new study",
+      "summaryOriginal": "Yale-led analysis harmonized 51 studies under one standardized pipeline, and senolytics came out looking shaky. Send in a vial of blood, get back a number, skip the decades of waiting it used to take to know if something is actually slowing your aging. That’s the pitch behind epigenetic aging clocks, and it’s a big part […] The post Half of tested antiaging products moved nothing in new study appe",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Yale-led analysis harmonized 51 studies under one standardized pipeline, and senolytics came out looking shaky."
+        },
+        {
+          "kind": "text",
+          "text": "Send in a vial of blood, get back a number, skip the decades of waiting it used to take to know if something is actually slowing your aging. That’s the pitch behind epigenetic aging clocks, and it’s a big part of why direct-to-consumer biological age testing has grown into its own industry over the past few years. A new study just put that pitch under harsher scrutiny than it usually gets."
+        },
+        {
+          "kind": "text",
+          "text": "Researchers at Yale University, publishing in Nature Medicine on 21 August, pooled 51 published and private human intervention studies (3,128 blood samples in total) and ran each through the same standardized pipeline, calculating 16 widely used epigenetic clocks plus 94 additional DNA methylation biomarkers for each dataset [ 1 ]. Different studies have historically processed data differently, making honest comparisons across the field nearly impossible. This is one of the first attempts to fix that."
+        },
+        {
+          "kind": "text",
+          "text": "The results: 19 of the 51 interventions produced a statistically significant decrease in epigenetic age. After correcting for the false-positive risk that comes with testing so many biomarkers at once, that number dropped to 13. Five interventions actually increased epigenetic age. The remaining 26, a bit more than half the studies included, showed no significant movement either way."
+        },
+        {
+          "kind": "text",
+          "text": "Pick one of these already-published interventions at random, in other words, and the odds don’t favor it doing anything measurable at all."
+        },
+        {
+          "kind": "text",
+          "text": "The sharpest finding concerns senolytics, drugs designed to clear out senescent cells, the aged cells that stop dividing but keep pumping out inflammatory signals that damage the tissue around them. Senolytics also happen to be one of the most heavily marketed ideas in consumer longevity right now."
+        },
+        {
+          "kind": "text",
+          "text": "Five senolytic studies made it into the analysis, and the results didn’t line up. Different biomarkers moved in opposite directions within the same study. The same biomarker sometimes moved in opposite directions across separate studies of the same intervention. To separate real signal from noise, the researchers set two bars: a genuine effect should move biomarkers of the same generation, in the same direction and magnitude, within a single study, and a repeat study of the same intervention should reproduce that movement. Senolytics cleared neither one."
+        },
+        {
+          "kind": "text",
+          "text": "Only two interventions in the entire dataset cleared both bars. Anti-TNF therapies, anti-inflammatory drugs used for rheumatoid arthritis and inflammatory bowel disease, shifted nearly all second-generation biomarkers by comparable amounts across multiple independent studies."
+        },
+        {
+          "kind": "text",
+          "text": "Two separate Mediterranean diet protocols, tested in different healthy cohorts, decreased overlapping sets of biomarkers in ways that matched each other. As a category, drugs produced significantly bigger effects than either lifestyle changes or supplements."
+        },
+        {
+          "kind": "text",
+          "text": "There’s a finding here that matters just as much for anyone shopping for a consumer test: the clocks aren’t interchangeable. Older, first-generation clocks, including the original Horvath and Hannum measures, moved sporadically with no consistent pattern. The researchers found that a meaningful chunk of what the Horvath clock registers may just be random biological noise, not something an intervention could plausibly move."
+        },
+        {
+          "kind": "text",
+          "text": "Newer, second-generation clocks built for reliability did better. DunedinPACE, designed to track the pace of aging rather than accumulated age, decreased significantly in 16 interventions and increased in just one, the largest effect size anywhere in the analysis."
+        },
+        {
+          "kind": "text",
+          "text": "A related measure called PCGrimAge produced the strongest statistical evidence overall. Different clocks also suited different interventions better than others: DunedinPACE stood out for lifestyle changes, GrimAgeV2 for drugs."
+        },
+        {
+          "kind": "text",
+          "text": "The paper is unusually direct about its own limits. A biomarker responding to an intervention, the authors write, is a prerequisite for eventually using it as a shortcut for real health outcomes, not proof that it already works as one. A clock moving isn’t the same thing as a person becoming biologically younger, and the study can’t say whether the short-term shifts it measured actually translate into a longer or healthier life down the road."
+        },
+        {
+          "kind": "text",
+          "text": "One disclosure worth flagging: several authors are affiliated with TruDiagnostic , a commercial epigenetic testing company that supplied some of the private datasets and controls the algorithms behind two of the clocks analyzed. The paper discloses the relationship directly."
+        },
+        {
+          "kind": "text",
+          "text": "For a longevity field that has leaned hard on the promise of a fast blood-test answer, this study is a useful gut check. It doesn’t say biological age testing is worthless, and it doesn’t say every anti-aging product on the market is snake oil. It says the honest answer to “is this working,” for most products people are already paying for, is that nobody has rigorously checked yet. Until someone does, a lower number on a test report isn’t the same thing as more years or better years, actually gained."
+        },
+        {
+          "kind": "text",
+          "text": "[1] https://medicine.yale.edu/news-article/yale-researchers-create-roadmap-to-measure-whether-longevity-interventions-work/"
+        },
+        {
+          "kind": "text",
+          "text": "The post Half of tested antiaging products moved nothing in new study appeared first on Longevity.Technology ."
+        }
+      ],
+      "sourceName": "Longevity.Technology",
+      "sourceUrl": "https://longevity.technology/",
+      "originalUrl": "https://longevity.technology/news/half-of-tested-antiaging-products-moved-nothing-in-new-study",
+      "author": "Kyle Umipig",
+      "publishedAt": "2026-09-16T17:04:10.000Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
+      "language": "en",
+      "keywords": [
+        "Research",
+        "senolytics",
+        "Yale"
+      ],
+      "image": {
+        "url": "https://longevity.technology/wp-content/uploads/2026/09/Half-of-tested-antiaging-products-moved-nothing-in-new-study-1024x683.png"
+      },
+      "translationStatus": "failed",
+      "contentPolicy": "full",
+      "category": "age",
+      "trustLevel": 3,
+      "careScore": 0.7,
+      "curiosityScore": 0,
+      "contentType": "research"
+    },
+    {
+      "id": "toy-book:3075a466a7",
+      "slug": "cottage-door-press-promotes-literacy-with-cottage-door-3075a4",
+      "titleOriginal": "Cottage Door Press Promotes Literacy with Cottage Door Baby",
+      "summaryOriginal": "The line encourages developmental milestones with 30 new book titles. The post Cottage Door Press Promotes Literacy with Cottage Door Baby appeared first on The Toy Book .",
+      "bodyOriginal": [
+        {
+          "kind": "text",
+          "text": "Cottage Door Press expands its selection with the launch of Cottage Door Baby. The book line makes storytime meaningful with 30 engaging, sensory-rich titles designed to encourage learning, growth, and play for babies."
+        },
+        {
+          "kind": "text",
+          "text": "Babies ’ first steps toward language and literacy begin with the line’s Tuffy Teether Books. Each title delivers a durable, washable design, water- and rip-proof pages, playful images, and a built-in teether. Starting today, families can collect newborn-friendly titles like Tuffy: Hello, Garden! and Tuffy Book & Teether: My First Rodeo."
+        },
+        {
+          "kind": "text",
+          "text": "Cottage Door Baby also launches its Color-Changing Bath Books for bath time discoveries. The series features waterproof vinyl books with illustrations that change color when wet. It’s Bath Time, Baby! is available now, with Miffy’s Magical Colors coming next spring."
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/CottageDoorPress_CottageDoorBabyHelloGarden.jpg"
+        },
+        {
+          "kind": "text",
+          "text": "The Tuffy Teether Books features a washable design, waterproof pages, and a built-in teether. | Source: Cottage Door Press"
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/CottageDoorPress_CottageDoorBabyBathTimeBaby.jpg"
+        },
+        {
+          "kind": "text",
+          "text": "This vinyl book features illustrations that change color when wet. | Source: Cottage Door Press"
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/CottageDoorPress_CottageDoorBabyCuddlePuppy.jpg"
+        },
+        {
+          "kind": "text",
+          "text": "This book brings sensory fun with a finger puppet and ribbon tags. | Source: Cottage Door Press"
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/CottageDoorPress_CottageDoorBabyHelloGarden-300x169.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/CottageDoorPress_CottageDoorBabyBathTimeBaby-300x169.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/CottageDoorPress_CottageDoorBabyCuddlePuppy-300x169.jpg"
+        },
+        {
+          "kind": "text",
+          "text": "Families can expect more releases next year with the Crinkle Puppet Book series. These books bring a lightweight adaptation of Cottage Door Press ’s puppet-book format with crinkle textures and three ribbon tags. While Cuddle Puppy is available now, Bedtime with Miffy will release in the spring."
+        },
+        {
+          "kind": "text",
+          "text": "The Snuggle Lovey with Board Book series will also deliver new titles next year: Love You, Snuggly Bunny and Blessing for Baby . With this, families can expect a two-piece set featuring a cuddly lovey and an illustrated board book."
+        },
+        {
+          "kind": "image",
+          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/DisneyStore_LionelTrainSet-1.jpg"
+        },
+        {
+          "kind": "text",
+          "text": "RELATED Disney Store Unwraps Top Toys for 2026 Holiday Season"
+        },
+        {
+          "kind": "text",
+          "text": "From baby showers to exciting milestones, Cottage Door Baby offers accessible options for families and their newborns. For more information, visit cottagedoorpress.com/baby ."
+        },
+        {
+          "kind": "text",
+          "text": "A garden adventure begins with a colorful illustration book that doubles as a durable chew-safe toy for little hands and teething mouths. The book includes water- and rip-proof pages, a washable design, and a built-in teether."
+        },
+        {
+          "kind": "text",
+          "text": "Product Facts MSRP: $8.99 Age: 0+ Manufacturer: COTTAGE DOOR PRESS"
+        },
+        {
+          "kind": "text",
+          "text": "Buy Now The Toy Book participates in affiliate programs that may generate revenue for the site when a purchase is made through the links below."
+        },
+        {
+          "kind": "text",
+          "text": "Babies can enjoy bath-time adventures while in the tub with a waterproof vinyl book featuring illustrations that change color when wet."
+        },
+        {
+          "kind": "text",
+          "text": "Product Facts MSRP: $7.99 Age: 0+ Manufacturer: COTTAGE DOOR PRESS"
+        },
+        {
+          "kind": "text",
+          "text": "Buy Now The Toy Book participates in affiliate programs that may generate revenue for the site when a purchase is made through the links below."
+        },
+        {
+          "kind": "text",
+          "text": "A paws-itive delight, this board book features a lovable crinkle finger puppet, three silky tags, and a rhyming story about a puppy."
+        },
+        {
+          "kind": "text",
+          "text": "Product Facts MSRP: $7.99 Age: 0+ Manufacturer: COTTAGE DOOR PRESS"
+        },
+        {
+          "kind": "text",
+          "text": "Buy Now The Toy Book participates in affiliate programs that may generate revenue for the site when a purchase is made through the links below."
+        },
+        {
+          "kind": "text",
+          "text": "The post Cottage Door Press Promotes Literacy with Cottage Door Baby appeared first on The Toy Book ."
+        }
+      ],
+      "sourceName": "The Toy Book",
+      "sourceUrl": "https://toybook.com/",
+      "originalUrl": "https://toybook.com/cottage-door-baby-launch",
+      "author": "Taylor Battle",
+      "publishedAt": "2026-09-16T16:57:27.000Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
+      "language": "en",
+      "keywords": [
+        "Books",
+        "Entertainment",
+        "First Look",
+        "News",
+        "Retail",
+        "best books",
+        "best toys for infants",
+        "cottage door baby"
+      ],
+      "image": {
+        "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/CottageDoorPress_CottageDoorBabyFeature.jpg"
+      },
+      "translationStatus": "failed",
+      "contentPolicy": "full",
+      "category": "play",
+      "trustLevel": 2,
+      "careScore": 0,
+      "curiosityScore": 0.95,
+      "contentType": "news"
+    },
     {
       "id": "longevity-technology:8334fac27e",
       "slug": "617-billion-longevity-biotech-market-takes-shape-8334fa",
@@ -110,7 +577,7 @@
       "originalUrl": "https://longevity.technology/news/617-billion-longevity-biotech-market-takes-shape",
       "author": "Eleanor Garth",
       "publishedAt": "2026-09-16T16:51:56.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -254,7 +721,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/arquitectonica-msc-cruise-terminal-port-miami",
       "author": "Ellen Eberhardt",
       "publishedAt": "2026-09-16T16:00:05.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -365,7 +832,7 @@
       "originalUrl": "https://longevity.technology/news/the-blood-pressure-cuff-may-be-on-borrowed-time",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-16T15:49:36.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "AI/Digital",
@@ -640,7 +1107,7 @@
       "originalUrl": "https://toybook.com/disney-store-holiday-toys-2026-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-16T15:01:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -744,7 +1211,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/pablo-luna-studio-bamboo-climate-responsive-architecture",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-16T13:51:41.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Design",
@@ -835,7 +1302,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/gingko-lounge-chair-anne-mette-bartholin-cozmo-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-16T13:00:01.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -890,7 +1357,7 @@
       "originalUrl": "https://hackaday.com/2026/09/16/full-color-looks-great-on-3d-printed-sliding-puzzles",
       "author": "Donald Papp",
       "publishedAt": "2026-09-16T11:00:15.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "3d Printer hacks",
@@ -940,7 +1407,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/impaired-lactate-metabolism-in-liver-and-muscle-as-an-important-cause-of-sarcopenia",
       "author": "Reason",
       "publishedAt": "2026-09-16T10:22:21.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1061,7 +1528,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/eye-q-toaster-colour-sensor-sage-appliances",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-16T10:15:35.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1108,7 +1575,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/oxidation-of-sod1-in-skin-aging",
       "author": "Reason",
       "publishedAt": "2026-09-16T10:12:13.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -1230,7 +1697,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/yinka-illori-bins-ironing-board-brabantia",
       "author": "Tom Ravenscroft",
       "publishedAt": "2026-09-16T10:00:19.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1324,7 +1791,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/terre-radiator-sebastian-herkner-tubes-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-16T09:30:25.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1483,7 +1950,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/collate-lobby-fictional-1930s-hotel-suite",
       "author": "Amy Frearson",
       "publishedAt": "2026-09-16T08:30:55.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -1760,7 +2227,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/how-craft-conquered-design",
       "author": "Debika Ray",
       "publishedAt": "2026-09-16T08:00:26.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -1900,7 +2367,7 @@
       "originalUrl": "https://www.creativeboom.com/tips/are-you-getting-ghosted-more-than-ever-youre-not-alone",
       "author": "Tom May",
       "publishedAt": "2026-09-16T06:15:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Tips"
@@ -2017,7 +2484,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/trimble-sketchup-3d-basecamp-summit-trimble-dimensions-las-vegas",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-16T04:00:23.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2141,7 +2608,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/16/gargi-agrawalla-sivogo-james-dyson-award",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-09-15T23:01:24.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2168,7 +2635,7 @@
       "id": "lifespan-io:a90b824f36",
       "slug": "an-entirely-new-target-for-fighting-senescence-a90b82",
       "titleOriginal": "An Entirely New Target for Fighting Senescence",
-      "summaryOriginal": "Researchers have established how a protein that is nearly absent in the literature, PTCHD4, is linked to cellular senescence. Very little previous work In most papers, after a customary discussion of the mechanics of cellular senescence […]",
+      "summaryOriginal": "Researchers have established how a protein that is nearly absent in the literature, PTCHD4, is linked to cellular senescence. Very little previous work In most papers, after a customary discussion of the mechanics of cellular senescence and current methods of […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -2233,7 +2700,7 @@
       "originalUrl": "https://lifespan.io/an-entirely-new-target-for-fighting-senescence",
       "author": "Josh Conway",
       "publishedAt": "2026-09-15T22:41:22.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News",
@@ -2340,7 +2807,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/15/steelcases-worklife-studio-wellbeing",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-15T20:00:19.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -2399,7 +2866,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/telomerase-expression-in-the-immortal-hydra",
       "author": "Reason",
       "publishedAt": "2026-09-15T18:22:40.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -2472,7 +2939,7 @@
       "originalUrl": "https://toybook.com/mattel-bluey-five-brands-expansion",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-15T17:31:56.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Consumer Products & Lifestyle",
@@ -2579,7 +3046,7 @@
       "originalUrl": "https://longevity.technology/news/the-overlooked-leak-draining-longevity-clinic-revenue",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-15T17:13:15.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Clinics",
@@ -2669,7 +3136,7 @@
       "originalUrl": "https://longevity.technology/news/phytogaia-puts-palm-fruit-at-the-heart-of-healthy-aging",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-15T17:12:18.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Supplements",
@@ -2749,7 +3216,7 @@
       "originalUrl": "https://longevity.technology/news/rapalogix-opens-its-own-longevity-skin-lab-in-princeton",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-15T16:57:22.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Research",
@@ -2860,7 +3327,7 @@
       "originalUrl": "https://longevity.technology/news/japan-labs-tiny-couriers-chase-15-extra-years-with-xprize",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-15T15:58:42.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -2950,7 +3417,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/15/topo-portable-lamp-felix-pottinger-design-studio-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-15T13:00:39.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Maytoni",
@@ -3109,7 +3576,7 @@
       "originalUrl": "https://toybook.com/second-annual-collectors-choice-awards-launch-news",
       "author": "Ashley Pelletier",
       "publishedAt": "2026-09-15T13:00:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Awards",
@@ -3193,7 +3660,7 @@
       "originalUrl": "https://longevity.technology/news/hexembio-raises-15-5m-to-rejuvenate-aging-stem-cells",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-15T13:00:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Investment",
@@ -3271,7 +3738,7 @@
       "originalUrl": "https://toybook.com/happykids-mlb-clubhouse-partnership",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-15T12:59:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -3342,7 +3809,7 @@
       "originalUrl": "https://toybook.com/traverse-group-toyverse-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-15T12:46:50.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Building & Exploring",
@@ -3393,7 +3860,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/asymptomatic-persistent-infection-as-a-contribution-to-degenerative-aging",
       "author": "Reason",
       "publishedAt": "2026-09-15T10:22:21.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3434,7 +3901,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/p2rx7-antagonism-reduces-macrophage-senescence-in-the-aging-kidney",
       "author": "Reason",
       "publishedAt": "2026-09-15T10:11:39.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -3535,7 +4002,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/15/jony-ive-lovefrom-moncler-new-york",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-15T09:45:18.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3627,7 +4094,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/15/resincode-collection-vitra-dezeen-showroom",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-15T09:30:29.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "VitrA Tiles",
@@ -3823,7 +4290,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/15/shoreditch-design-week-ldf-duncan-riches-interview",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-15T09:00:10.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -3971,7 +4438,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/15/lee-broom-1970s-glamour-chant-chambers-installation",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-15T08:00:17.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4106,7 +4573,7 @@
       "originalUrl": "https://www.creativeboom.com/news/what-wewantmores-redesign-of-brus-bottles-can-teach-us-about-packaging-design-in-2026",
       "author": "Tom May",
       "publishedAt": "2026-09-15T04:30:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News"
@@ -4205,7 +4672,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/15/poke-ball-themed-hotel-not-a-hotel",
       "author": "Amy Peacock",
       "publishedAt": "2026-09-15T01:00:36.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4312,7 +4779,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/14/aeron-chair-herman-miller",
       "author": "Dezeen staff",
       "publishedAt": "2026-09-14T20:00:13.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -4482,7 +4949,7 @@
       "originalUrl": "https://toybook.com/international-peanuts-licensing-expansion-wildbrain-cplg",
       "author": "Katherine Hill",
       "publishedAt": "2026-09-14T19:44:59.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Brand Licensing Europe",
@@ -4545,7 +5012,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/midlife-growth-hormone-receptor-ablation-modestly-slows-aging-in-mice",
       "author": "Reason",
       "publishedAt": "2026-09-14T18:25:34.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Medicine, Biotech, Research"
@@ -4718,7 +5185,7 @@
       "originalUrl": "https://toybook.com/barbie-in-the-nutcracker-25th-anniversary-launch",
       "author": "Natalie Miller",
       "publishedAt": "2026-09-14T17:31:44.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Adorable, Fashionable, & Adventurous",
@@ -4805,7 +5272,7 @@
       "originalUrl": "https://longevity.technology/news/your-face-gets-antiaging-science-now-what",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-14T17:11:40.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -4891,7 +5358,7 @@
       "originalUrl": "https://longevity.technology/news/your-gut-just-joined-the-official-aging-checklist",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-14T17:08:58.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -5048,7 +5515,7 @@
       "originalUrl": "https://longevity.technology/news/next-generation-longevity-heads-to-osaka",
       "author": "Eleanor Garth",
       "publishedAt": "2026-09-14T17:02:57.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -5146,7 +5613,7 @@
       "originalUrl": "https://www.thisiscolossal.com/2026/09/friedrich-kunath-nearest-faraway-place-exhibition-paintings",
       "author": "Kate Mothes",
       "publishedAt": "2026-09-14T15:26:32.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Art",
@@ -5211,7 +5678,7 @@
       "originalUrl": "https://toybook.com/fizz-creations-fuggler-news",
       "author": "Taylor Battle",
       "publishedAt": "2026-09-14T15:22:44.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Entertainment",
@@ -5326,7 +5793,7 @@
       "originalUrl": "https://longevity.technology/news/can-we-make-the-brain-age-backwards",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-14T15:10:05.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -5479,7 +5946,7 @@
       "originalUrl": "https://toybook.com/game-store-day-is-growing-and-the-tabletop-community-is-ready-to-play",
       "author": "Toy Book Newsroom",
       "publishedAt": "2026-09-14T13:00:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Magazine",
@@ -5492,115 +5959,6 @@
       ],
       "image": {
         "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/GAMA_GSDTB_Editorial-Top.jpg"
-      },
-      "translationStatus": "failed",
-      "contentPolicy": "full",
-      "category": "play",
-      "trustLevel": 2,
-      "careScore": 0,
-      "curiosityScore": 0.95,
-      "contentType": "news"
-    },
-    {
-      "id": "toy-book:f4af72c5be",
-      "slug": "hess-toy-truck-launches-2026-collector-s-edition-f4af72",
-      "titleOriginal": "Hess Toy Truck Launches 2026 Collector’s Edition Tanker Trucks",
-      "summaryOriginal": "The limited-edition set pairs modern and vintage-inspired tanker trucks. The post Hess Toy Truck Launches 2026 Collector’s Edition Tanker Trucks appeared first on The Toy Book .",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Hess Toy Truck launches its 2026 Collector’s Edition: Tanker Trucks, a limited-edition two-in-one collectible that pairs a Modern Tanker with a Vintage Tanker inspired by the company’s early fuel delivery trucks."
-        },
-        {
-          "kind": "text",
-          "text": "The set is available online for free standard shipping and Energizer batteries included. Both vehicles feature premium matte green finishes and chrome-look details, and the set comes in display-ready packaging."
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-1.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-2.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-4.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-5.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-3.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-1-300x169.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-2-300x169.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-4-300x169.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-5-300x169.jpg"
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-3-300x169.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "The Modern Tanker features 109 working lights, five realistic sounds, six free-rolling wheels on three axles, and a rear opening door and slide-out loading ramp that provides access to the Vintage Tanker. The vehicle also introduces a premium matte-green finish paired with a chrome-colored reflective finish."
-        },
-        {
-          "kind": "text",
-          "text": "The Vintage Tanker features a premium matte-green finish with yellow accents, chrome-look embellishments, 28 LED lights, and a pull-back motor. The vehicle is designed to load directly into the Modern Tanker."
-        },
-        {
-          "kind": "text",
-          "text": "Combined, the two trucks feature 137 working lights and six unique animated lighting patterns. The Collector’s Edition packaging includes silver reflective foil detailing, a removable New York City skyline backdrop, a Certificate of Authenticity, and a special printed message from John B. Hess."
-        },
-        {
-          "kind": "image",
-          "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/claires_yaytea2.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "RELATED Claire’s and Yaya Tea Launch Boba-Inspired Collection"
-        },
-        {
-          "kind": "text",
-          "text": "The 2026 Collector’s Edition: Tanker Trucks are available at hesstoytruck.com ."
-        },
-        {
-          "kind": "text",
-          "text": "The post Hess Toy Truck Launches 2026 Collector’s Edition Tanker Trucks appeared first on The Toy Book ."
-        }
-      ],
-      "sourceName": "The Toy Book",
-      "sourceUrl": "https://toybook.com/",
-      "originalUrl": "https://toybook.com/hess-collectors-edition-2026-news",
-      "author": "Katherine Hill",
-      "publishedAt": "2026-09-14T12:00:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
-      "language": "en",
-      "keywords": [
-        "Driven to Play",
-        "News",
-        "Product Launches",
-        "best toy vehicles",
-        "Hess",
-        "popular collectibles"
-      ],
-      "image": {
-        "url": "https://toybook.com/wp-content/uploads/sites/4/2026/09/hess_collectorstruck26-7.jpg"
       },
       "translationStatus": "failed",
       "contentPolicy": "full",
@@ -5723,7 +6081,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/14/ryuichi-sasaki-architecture-shin-nakano-trapezoidal",
       "author": "Jon Astbury",
       "publishedAt": "2026-09-14T10:30:54.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -5770,7 +6128,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/growth-hormone-receptor-antagonism-modestly-slows-aging-in-mice",
       "author": "Reason",
       "publishedAt": "2026-09-14T10:22:13.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Daily News"
@@ -5925,7 +6283,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/14/studio-saar-atelier-one-pangolin-shield-bamboo-pavilion",
       "author": "Cajsa Carlson",
       "publishedAt": "2026-09-14T10:15:29.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "all",
@@ -6082,7 +6440,7 @@
       "originalUrl": "https://www.dezeen.com/2026/09/14/design-academy-eindhoven-kaldewei-behind-closed-doors",
       "author": "Jennifer Hahn",
       "publishedAt": "2026-09-14T10:00:39.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Furniture",
@@ -6186,7 +6544,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/we-are-pis-campaign-for-interrail-breaks-free-from-travel-advertising-cliches-to-reflect-how-passengers-actually-feel",
       "author": "Tom May",
       "publishedAt": "2026-09-14T05:45:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -6303,7 +6661,7 @@
       "originalUrl": "https://www.creativeboom.com/inspiration/pentagrams-twin-logos-for-doha-design-district-are-a-masterclass-in-crafting-a-sub-brand",
       "author": "Tom May",
       "publishedAt": "2026-09-14T05:30:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Inspiration"
@@ -6571,7 +6929,7 @@
       "originalUrl": "https://www.fightaging.org/archives/2026/09/fight-aging-newsletter-september-14th-2026",
       "author": "Reason",
       "publishedAt": "2026-09-13T11:06:05.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Newsletters"
@@ -6588,7 +6946,7 @@
       "id": "lifespan-io:3b9f07155b",
       "slug": "lung-fibrosis-drug-lowers-biological-age-estimates-3b9f07",
       "titleOriginal": "Lung Fibrosis Drug Lowers Biological Age Estimates",
-      "summaryOriginal": "Six different aging clocks detected younger blood protein profiles in patients taking the experimental lung-fibrosis drug rentosertib. This suggests possible anti-aging effects, but separating those from the narrower benefits of treating fibrosis remains a challenge [1]. […]",
+      "summaryOriginal": "Six different aging clocks detected younger blood protein profiles in patients taking the experimental lung-fibrosis drug rentosertib. This suggests possible anti-aging effects, but separating those from the narrower benefits […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -6676,7 +7034,7 @@
       "originalUrl": "https://lifespan.io/lung-fibrosis-drug-lowers-biological-age-estimates",
       "author": "Arkadi Mazin",
       "publishedAt": "2026-09-11T17:22:17.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News",
@@ -6769,7 +7127,7 @@
       "originalUrl": "https://longevity.technology/news/genflows-gene-therapy-turns-back-aging-in-dogs",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-11T16:54:19.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -6895,7 +7253,7 @@
       "originalUrl": "https://longevity.technology/news/sci-model-takes-longevity-beyond-the-clinic",
       "author": "Eleanor Garth",
       "publishedAt": "2026-09-11T16:43:14.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Ecosystem",
@@ -7016,7 +7374,7 @@
       "originalUrl": "https://longevity.technology/news/outer-bio-gives-scientists-a-month-to-study-aging-skin",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-11T16:39:17.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -7139,7 +7497,7 @@
       "originalUrl": "https://longevity.technology/news/retro-biosciences-tweaks-its-alzheimers-pill-dosing",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-11T16:34:05.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Biotech",
@@ -7279,7 +7637,7 @@
       "originalUrl": "https://longevity.technology/news/apple-watch-can-now-estimate-your-health-age",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-11T15:47:43.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "AI/Digital",
@@ -7404,7 +7762,7 @@
       "originalUrl": "https://longevity.technology/news/mito-health-passes-1-million-lab-tests-expands-beyond-longevity",
       "author": "Kyle Umipig",
       "publishedAt": "2026-09-11T15:46:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Diagnostics",
@@ -7450,7 +7808,7 @@
       "id": "lifespan-io:938fd6dc5d",
       "slug": "your-personal-longevity-assistant-evipedia-grok-bot-938fd6",
       "titleOriginal": "Your Personal Longevity Assistant: Evipedia Grok Bot",
-      "summaryOriginal": "With Grok Bot, SpaceXAi has created something really special and helpful. And the Evipedia Grok Bot turns this gem into something even more precious. A specialized AI assistant offering an evidence-based […]",
+      "summaryOriginal": "With Grok Bot, SpaceXAi has created something really special and helpful. And the Evipedia Grok Bot turns this gem into something even more precious. A specialized AI assistant […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7482,7 +7840,7 @@
       "originalUrl": "https://lifespan.io/your-personal-longevity-assistant-evipedia-grok-bot",
       "author": "Press release",
       "publishedAt": "2026-09-11T14:34:47.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -7500,92 +7858,10 @@
       "contentType": "research"
     },
     {
-      "id": "colossal:bbe3f1366b",
-      "slug": "say-hello-to-p-pet-a-pear-shaped-bbe3f1",
-      "titleOriginal": "Say Hello to PÉPET, a Pear-Shaped, Palm-Size Paper Pal",
-      "summaryOriginal": "Ever imagined a pear or an apple with a personality? Do stories and artists like this matter to you? Become a Colossal Member today and support independent arts publishing for as little as $7 per month. The article Say Hello to PÉPET, a Pear-Shaped, Palm-Size Paper Pal appeared first on Colossal .",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Have you ever imagined a pear or an apple with a personality? If the fruit suddenly had two eyes and a stem-like nose, it might look a little like PÉPET , the palm-size “paper friend” produced by TAKEO Co., Ltd. Originally designed by Masae Nagao , the colorful characters come with names like “Dandel,” “Fuji,” and “Sky.” They’re each composed of more than 400 of layers of colorful paper, and they adorably wobble and ruffle when handled."
-        },
-        {
-          "kind": "text",
-          "text": "Inspired by the saturated red and green of apples and their leaves, TAKEO will release a new edition named “Pomme” on October 14. Follow updates on the company’s Instagram ."
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/pepet-8.jpg",
-          "alt": "a small paper figure made from numerous layers of colored paper on a flexible central axis so that it looks like an anthropomorphized pear"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/pepet-3.jpg",
-          "alt": "a series of small paper figures made from numerous layers of colored paper on a flexible central axis so that they look like anthropomorphized pears"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/pepet-4.jpg",
-          "alt": "a series of small paper figures made from numerous layers of colored paper on a flexible central axis so that they look like anthropomorphized pears"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/pepet-6.jpg",
-          "alt": "a small paper figure made from numerous layers of colored paper on a flexible central axis so that it looks like an anthropomorphized pear"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/pepet-5.jpg",
-          "alt": "a series of small paper figures made from numerous layers of colored paper on a flexible central axis so that they look like anthropomorphized pears"
-        },
-        {
-          "kind": "image",
-          "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/pepet-7.jpg",
-          "alt": "a small paper figure made from numerous layers of colored paper on a flexible central axis so that it looks like an anthropomorphized pear, nestled inside of a box"
-        },
-        {
-          "kind": "text",
-          "text": "Do stories and artists like this matter to you? Become a Colossal Member today and support independent arts publishing for as little as $7 per month. The article Say Hello to PÉPET, a Pear-Shaped, Palm-Size Paper Pal appeared first on Colossal ."
-        }
-      ],
-      "sourceName": "Colossal",
-      "sourceUrl": "https://www.thisiscolossal.com/",
-      "originalUrl": "https://www.thisiscolossal.com/2026/09/masae-nagao-takeo-pepet-paper-friends",
-      "author": "Kate Mothes",
-      "publishedAt": "2026-09-11T12:08:02.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
-      "language": "en",
-      "keywords": [
-        "Design",
-        "humor",
-        "Japan",
-        "Masae Nagao",
-        "paper",
-        "toys"
-      ],
-      "image": {
-        "url": "https://www.thisiscolossal.com/wp-content/uploads/2026/09/pepet-1.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "culture",
-      "trustLevel": 3,
-      "careScore": 0,
-      "curiosityScore": 0.95,
-      "contentType": "news",
-      "titleKo": "배 모양에 손바닥 크기의 종이 친구 페펫에게 인사하세요",
-      "summaryKo": "배나 사과에 개성이 있는 모습을 상상해 본 적 있나요? 이런 이야기와 예술가들이 당신에게 중요한가요? 오늘 콜로설 멤버가 되어 월 7달러 정도의 비용으로 독립 예술 출판을 지원하세요. 기사 '페펫에게 인사하세요, 배 모양의 손바닥 크기의 종이 친구'는 Colossal에 처음 게재되었습니다.",
-      "bodyKo": [
-        "배나 사과에 개성이 있다고 상상해 본 적 있나요? 만약 과일이 갑자기 두 눈과 줄기 같은 코를 갖게 된다면, TAKEO 주식회사에서 생산한 손바닥 크기의 '종이 친구' 페펫과 조금 닮았을지도 모릅니다. 원래 나가오 마사에가 디자인한 이 다채로운 캐릭터들은 '단델', '후지', '하늘' 같은 이름을 가지고 있습니다. 각각 400겹이 넘는 다채로운 종이로 이루어져 있으며, 만질 때 귀엽게 흔들리고 구름이 납니다.",
-        "사과와 그 잎의 포화된 붉은색과 초록색에서 영감을 받아, TAKEO는 10월 14일에 \"Pomme\"라는 새로운 에디션을 출시할 예정입니다. 회사 인스타그램에서 업데이트를 팔로우하세요.",
-        "이런 이야기와 예술가들이 당신에게 중요한가요? 오늘 콜로설 멤버가 되어 월 7달러 정도의 비용으로 독립 예술 출판을 지원하세요. 이 기사 '배 모양, 손바닥 크기의 종이 친구 페펫에게 인사하세요'는 Colossal에 처음 게재되었습니다."
-      ]
-    },
-    {
       "id": "lifespan-io:2ebf5de3cf",
       "slug": "from-world-cup-champions-to-longevity-champions-2ebf5d",
       "titleOriginal": "From World Cup Champions to Longevity Champions",
-      "summaryOriginal": "Fresh from Spain’s spectacular victory in the 2026 FIFA World Cup, Madrid is preparing for another kind of world-class gathering: one focused not on winning more years of sporting glory, but on winning more […]",
+      "summaryOriginal": "Fresh from Spain’s spectacular victory in the 2026 FIFA World Cup, Madrid is preparing for another kind of world-class gathering: […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7721,7 +7997,7 @@
       "originalUrl": "https://lifespan.io/from-world-cup-champions-to-longevity-champions",
       "author": "Press release",
       "publishedAt": "2026-09-10T22:26:30.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Press Releases",
@@ -7738,7 +8014,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "월드컵 챔피언에서 롱제비티 챔피언으로",
-      "summaryKo": "2026년 FIFA 월드컵에서 스페인이 화려하게 우승한 직후, 마드리드는 또 다른 세계적 수준의 모임을 준비하고 있습니다. 이는 스포츠 영광의 연장이 아니라 더 많은 [...]",
+      "summaryKo": "2026년 FIFA 월드컵에서 스페인이 화려하게 우승한 직후, 마드리드는 또 다른 세계적 수준의 모임을 준비하고 있습니다: [...]",
       "bodyKo": [
         "2026년 FIFA 월드컵에서 스페인이 화려하게 우승한 직후, 마드리드는 또 다른 세계적 수준의 모임을 준비하고 있다. 이는 스포츠 영광의 연장이 아니라 건강한 삶의 시간을 더 많이 얻는 데 초점을 맞춘 것이다.",
         "2026년 9월 30일과 10월 1일, 국제 롱제비티 서밋 마드리드 2026이 선도적인 과학자, 의사, 기업가, 투자자, 미래학자들을 한자리에 모아 인류의 가장 큰 도전 중 하나이자 잠재적으로 가장 큰 기회인 건강한 인간 생명 연장을 탐구할 예정입니다.",
@@ -7773,7 +8049,7 @@
       "id": "lifespan-io:8bdec1b43b",
       "slug": "calcium-mishandling-contributes-to-muscle-loss-8bdec1",
       "titleOriginal": "Calcium Mishandling Contributes to Muscle Loss",
-      "summaryOriginal": "Researchers have discovered and explained how calcium mishandling in muscle cells leads to long-term muscle weakness in older people. Calcium is not just […]",
+      "summaryOriginal": "Researchers have discovered and explained how calcium mishandling in muscle cells leads to long-term muscle weakness in older people. Calcium is […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -7841,7 +8117,7 @@
       "originalUrl": "https://lifespan.io/calcium-mishandling-contributes-to-muscle-loss",
       "author": "Josh Conway",
       "publishedAt": "2026-09-10T19:29:07.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News",
@@ -7858,364 +8134,6 @@
       "careScore": 0.7,
       "curiosityScore": 0,
       "contentType": "research"
-    },
-    {
-      "id": "longevity-technology:416f68a0dd",
-      "slug": "glycanage-teams-up-with-japan-on-aging-science-416f68",
-      "titleOriginal": "GlycanAge teams up with Japan on aging science",
-      "summaryOriginal": "New MOU pairs GlycanAge’s glycan-based biological age test with ExoEarth’s exosome platform, bringing inflammaging testing deeper into Japan. Biological age testing is having a moment, and it has just gained a foothold in one of the world’s most aging-literate markets. GlycanAge, the UK-based company behind a glycan test that measures inflammaging, has signed a memorandum […] The post GlycanAge te",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "New MOU pairs GlycanAge’s glycan-based biological age test with ExoEarth’s exosome platform, bringing inflammaging testing deeper into Japan."
-        },
-        {
-          "kind": "text",
-          "text": "Biological age testing is having a moment, and it has just gained a foothold in one of the world’s most aging-literate markets. GlycanAge , the UK-based company behind a glycan test that measures inflammaging, has signed a memorandum of understanding with ExoEarth Corporation , a Tokyo life sciences firm, to expand biological age testing across Japan and run joint research into the biology of aging."
-        },
-        {
-          "kind": "text",
-          "text": "The deal is really two deals folded into one: a commercial push to get GlycanAge testing in front of more people in Japan, and a scientific collaboration that tries to connect two fairly different corners of longevity research."
-        },
-        {
-          "kind": "text",
-          "text": "GlycanAge built its business on glycans, sugar molecules attached to proteins in the blood, as a way of reading immune-system inflammation before it shows up on a standard blood panel. The company says its work draws on more than 30 years of glycoscience research and over 350 peer-reviewed publications."
-        },
-        {
-          "kind": "text",
-          "text": "ExoEarth’s angle is different. The company has focused its efforts on EXOCURE, a platform built around extracellular vesicles, tiny particles that cells use to communicate, sourced from stem cells derived from human exfoliated deciduous dental pulp – essentially, cells recovered from baby teeth. It’s an unusual starting material, but one that’s carved out a niche in Japan’s regenerative medicine scene."
-        },
-        {
-          "kind": "text",
-          "text": "Put the two together, and the pitch is that immune-aging biomarkers (GlycanAge’s specialty) and exosome biology (ExoEarth’s) can be tracked against each other over time, rather than studied in isolation."
-        },
-        {
-          "kind": "text",
-          "text": "The partnership calls for a longitudinal joint research program that uses GlycanAge testing to track biological-age and immune-related changes over time in people going through ExoEarth’s EXOCURE program. That’s about as specific as the announcement gets for now. The companies say details on participant numbers, how often measurements will be taken, and the exact research protocols are still being worked out, pending scientific, medical, ethical and regulatory review. In other words, the framework is signed, the study design isn’t finished yet."
-        },
-        {
-          "kind": "text",
-          "text": "“Japan is one of the world’s most advanced longevity markets, and ExoEarth is an ideal partner both to bring GlycanAge to more people here and to explore new science together. Combining our glycan biomarkers with ExoEarth’s expertise in exosome biology opens up exciting avenues for understanding how we age,” said Nikolina Lauc, CEO of GlycanAge."
-        },
-        {
-          "kind": "image",
-          "url": "https://longevity.technology/wp-content/uploads/2026/05/Nikolina-Lauc-1024x683.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "ExoEarth’s chief executive, Takashi Nishihira, framed the collaboration in more personal terms."
-        },
-        {
-          "kind": "text",
-          "text": "“From my own experience of continuously tracking my GlycanAge since my sixties, I have come to believe that age is more than just a number – it can serve as an important indicator for understanding and managing our own health. Through this collaboration with GlycanAge, we aim to promote a new culture of healthy longevity built around a simple cycle: measure, understand, act, and measure again. Together, we hope to bring this approach to the world,” he said."
-        },
-        {
-          "kind": "text",
-          "text": "Japan isn’t a random choice of market. It has one of the oldest populations on the planet, a well-established culture of preventive health checkups and consumers who are, by most accounts, comfortable paying for detailed health data about themselves. For a company selling a biological age test, that’s about as favorable a backdrop as exists anywhere."
-        },
-        {
-          "kind": "text",
-          "text": "It also fits a pattern that’s become familiar in the longevity space over the past couple of years: Western biomarker companies partnering with Asian life sciences firms rather than trying to build local distribution from scratch. The regulatory and cultural terrain in Japan’s healthcare system rewards local partnership over a solo entry."
-        },
-        {
-          "kind": "text",
-          "text": "What this deal really represents is an attempt to answer a question the longevity field keeps circling back to: does knowing your biological age actually change anything? GlycanAge and ExoEarth are betting that pairing two different biomarker systems, and tracking them over time rather than as one-off snapshots, gets closer to an answer than either test could on its own."
-        },
-        {
-          "kind": "text",
-          "text": "The research protocol isn’t public yet, but the underlying wager is the same one the entire biological-age testing industry is making: that measurement, done often enough and combined with the right intervention, becomes something people can actually act on, rather than a statistic that just tells them how worried to be."
-        },
-        {
-          "kind": "text",
-          "text": "The post GlycanAge teams up with Japan on aging science appeared first on Longevity.Technology ."
-        }
-      ],
-      "sourceName": "Longevity.Technology",
-      "sourceUrl": "https://longevity.technology/",
-      "originalUrl": "https://longevity.technology/news/glycanage-teams-up-with-japan-on-aging-science",
-      "author": "Kyle Umipig",
-      "publishedAt": "2026-09-10T16:42:59.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
-      "language": "en",
-      "keywords": [
-        "Investment",
-        "biological age test",
-        "biological age testing",
-        "ExoEarth",
-        "exosomes",
-        "GlycanAge",
-        "glycans",
-        "inflammaging"
-      ],
-      "image": {
-        "url": "https://longevity.technology/wp-content/uploads/2026/09/Glycanage-x-EXOEarth-1024x683.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 3,
-      "careScore": 0.95,
-      "curiosityScore": 0,
-      "contentType": "news",
-      "titleKo": "글리칸에이지, 일본과 함께 노화 과학 연구를 진행하다",
-      "summaryKo": "새로운 양해각서(MOU)는 글리칸에이지의 당간 기반 생물학적 나이 검사와 엑소어스의 엑소좀 플랫폼을 결합하여 염증 검사를 일본 깊숙이 확장했습니다. 생물학적 나이 검사는 주목받고 있으며, 세계에서 가장 노화 문해율이 높은 시장 중 하나에서 입지를 다졌습니다. 염증을 측정하는 글리칸 검사를 개발하는 영국 기반 회사인 글리칸에지는 각서에 서명했습니다 [...] 글리칸에지 이후",
-      "bodyKo": [
-        "새로운 MOU는 GlycanAge의 당당 기반 생물학적 나이 검사와 ExoEarth의 외국체 플랫폼을 결합하여 염증 검사를 일본 깊숙이 확장합니다.",
-        "생물학적 나이 검사는 현재 주목받고 있으며, 세계에서 가장 노화 문해율이 높은 시장 중 하나에서 입지를 다졌습니다. 염증을 측정하는 글리칸 검사를 개발하는 영국 기반 회사인 글리칸에지(GlycanAge)는 도쿄의 생명과학 기업인 엑소어스 코퍼레이션(ExoEarth Corporation)과 양해각서를 체결해 일본 전역에서 생물학적 나이 검사를 확대하고 노화 생물학에 대한 공동 연구를 진행하기로 했습니다.",
-        "이 계약은 사실상 두 가지 합쳐진 것으로, 일본에서 글리칸에이지 테스트를 더 많은 사람들에게 알리기 위한 상업적 추진과, 롱제비티 연구의 두 분야를 연결하려는 과학적 협력입니다.",
-        "글리칸에이지는 혈중 단백질에 결합된 당분자인 글리칸을 기반으로 사업을 구축했으며, 이는 표준 혈액 패널에 나타나기 전에 면역계 염증을 읽는 방법이었습니다. 회사는 30년 이상의 글리코과학 연구와 350편 이상의 동료 검토 논문을 바탕으로 한다고 말합니다.",
-        "ExoEarth의 관점은 다릅니다. 회사는 EXOCURE라는 플랫폼에 집중하고 있습니다. EXOCURE는 세포외 소포를 중심으로 한 플랫폼입니다. 세포가 소통하는 데 사용하는 작은 입자로, 인간이 각질을 제거한 유치성 치과에서 유래한 줄기세포에서 유래한 세포입니다. 즉, 유치에서 회수한 세포입니다. 이 물질은 독특한 시작 물질이지만, 일본 재생의학계에서 자리매김한 분야를 확립했습니다.",
-        "이 둘을 합치면, 면역 노화 바이오마커(글리칸에이지의 전문 분야)와 엑소좀 생물학(엑소어스의 특성)은 단독으로 연구하는 것이 아니라 시간에 따라 서로 추적할 수 있다는 주장이 됩니다.",
-        "이 파트너십은 ExoEarth의 EXOCURE 프로그램을 수치하는 사람들의 생물학적 연령 및 면역 관련 변화를 시간에 따라 추적하기 위해 글리칸나이 검사를 활용한 종단 공동 연구 프로그램을 요구합니다. 현재로서는 이 정도가 발표가 제공하는 가장 구체적인 내용입니다. 기업들은 참가자 수, 측정 빈도, 그리고 과학적, 의학적, 윤리적, 규제 검토를 기다리며 구체적인 연구 프로토콜에 관한 세부 사항을 설명했습니다. 즉, 프레임워크는 서명되었지만 연구 설계는 아직 완성되지 않았습니다.",
-        "\"일본은 세계에서 가장 진보된 롱제비티 시장 중 하나이며, ExoEarth는 글리칸에이지를 더 많은 사람들에게 알리고 함께 새로운 과학을 탐구하는 이상적인 파트너입니다. 우리의 글리칸 바이오마커와 엑소어스의 엑소좀 생물학 전문성을 결합하는 것은 우리가 어떻게 노화하는지 이해하는 흥미로운 길을 열어줍니다,\"라고 글리칸에지의 CEO 니콜리나 라우크는 말했습니다.",
-        "엑소어스의 최고경영자 니시히라 다카시는 이번 협업을 보다 개인적인 관점에서 설명했다.",
-        "\"60대 이후 글리칸에이지를 지속적으로 추적해온 경험을 통해, 나이는 단순한 숫자가 아니라 우리 자신의 건강을 이해하고 관리하는 중요한 지표가 될 수 있다고 믿게 되었습니다. 글리칸에이지와의 협업을 통해 우리는 단순한 사이클을 중심으로 건강한 롱제비티의 새로운 문화를 촉진하고자 합니다: 측정하고, 이해하고, 행동하고, 다시 측정하는 것입니다. 함께 이 접근법을 세상에 알리길 희망합니다.\"라고 그는 말했습니다.",
-        "일본은 무작위 시장이 아니다. 세계에서 가장 나이가 많은 인구 중 하나이며, 예방 건강 검진의 잘 자리 잡은 문화와 대부분의 평가에 따르면 자신에 대한 상세한 건강 정보를 지불하는 소비자들이 있다. 생물학적 나이 검사를 판매하는 회사로서는 어디서나 가장 유리한 배경 중 하나다.",
-        "또한 지난 몇 년간 롱제비티 분야에서 익숙해진 패턴에도 부합합니다: 서구 바이오마커 기업들이 아시아 생명과학 기업과 협력하며 처음부터 지역 유통을 구축하려 하지 않는 모습입니다. 일본 의료 시스템의 규제 및 문화적 환경은 단독 진출보다 지역 파트너십을 더 선호합니다.",
-        "이 거래가 진정으로 의미하는 것은 롱제비티 분야가 계속 되돌아가는 질문에 답하려는 시도입니다: 생물학적 나이를 아는 것이 실제로 무언가를 바꾸는가? 글리칸에지와 엑소어스는 두 가지 서로 다른 바이오마커 시스템을 짝지어 단발성 스냅샷이 아닌 시간에 따라 추적하는 것이 단독 검사보다 답에 더 가까워질 것이라고 내기하고 있습니다.",
-        "연구 프로토콜은 아직 공개되지 않았지만, 근본적인 내기는 생물학적 연령 검사 업계 전체가 하는 것과 같습니다: 충분히 자주 측정되고 적절한 개입과 결합되면, 단순히 걱정해야 할 정도를 알려주는 통계가 아니라 실제로 행동할 수 있는 것이 된다는 것입니다.",
-        "글리칸에이지, 일본과 함께 노화 과학에 관한 이야기가 롱제비티에 처음 게재되었습니다. 기술."
-      ]
-    },
-    {
-      "id": "longevity-technology:68f0a0ecb5",
-      "slug": "dkms-backs-1-08m-push-on-transplant-science-68f0a0",
-      "titleOriginal": "DKMS backs $1.08m push on transplant science",
-      "summaryOriginal": "New $1.08m grant aimed at the immune biology behind stem cell transplants, a research problem getting more urgent as more people live longer. Here’s why stem cell transplants belong in a longevity conversation at all: they are, in large part, a disease of getting older. The patients who need them skew heavily toward late middle […] The post DKMS backs $1.08m push on transplant science appeared fir",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "New $1.08m grant aimed at the immune biology behind stem cell transplants, a research problem getting more urgent as more people live longer."
-        },
-        {
-          "kind": "text",
-          "text": "Here’s why stem cell transplants belong in a longevity conversation at all: they are, in large part, a disease of getting older. The patients who need them skew heavily toward late middle age and beyond, and as the global population ages, demand for safer transplants is only going up."
-        },
-        {
-          "kind": "text",
-          "text": "Every improvement in how doctors manage the immune system after a transplant doesn’t just treat one disease; it chips away at one of the harder trade-offs in aging medicine: a treatment that might work, versus one that might seriously hurt the person receiving it. That’s the problem a new grant from DKMS , the international blood stem cell donor organization, wants a new generation of scientists to take on."
-        },
-        {
-          "kind": "text",
-          "text": "DKMS opened applications this month for its John Hansen Research Grant 2027 , worth close to $1.08 million (€1 million) total, split among early-career scientists, anyone who’s held a doctorate for ten years or less. The grant has run since 2015 and has quietly funded work on some of the field’s toughest, most persistent problems: transplant complications, donor matching, and diagnostics that catch trouble early [ 1 ]."
-        },
-        {
-          "kind": "text",
-          "text": "The basic idea behind a stem cell transplant is this: wipe out a patient’s diseased bone marrow, replace it with a donor’s healthy cells, and let those new cells rebuild the immune system from scratch. When it works, the donor’s immune cells go hunting for anything left behind and destroy it, something researchers call graft-versus-leukemia activity. That’s the goal."
-        },
-        {
-          "kind": "text",
-          "text": "But immune cells don’t always know where to stop. Sometimes they can’t tell the difference between a leftover cancer cell and a patient’s own healthy liver, skin, or gut. That’s graft-versus-host disease, and it can be brutal, in some cases more dangerous than the original diagnosis."
-        },
-        {
-          "kind": "image",
-          "url": "https://longevity.technology/wp-content/uploads/2026/09/DKMS-backs-1.08m-push-on-transplant-science-1024x683.jpg"
-        },
-        {
-          "kind": "text",
-          "text": "DKMS is committed to improving the treatment and chances of recovery for people with blood cancer and other diseases of the hematopoietic system through stem cell transplantation"
-        },
-        {
-          "kind": "text",
-          "text": "Finding ways to keep the beneficial part of that immune response while dialing back the harmful part is one of transplant medicine’s oldest unsolved problems, and it’s exactly what this funding is meant to chip away at. Eligible projects span cell therapy, transplant immunology, donor selection, and new diagnostic tools."
-        },
-        {
-          "kind": "text",
-          "text": "John A Hansen spent his career at Fred Hutchinson Cancer Research Center in Seattle before he died in 2019. His research is a big reason transplant matching works as well as it does today. Hansen helped figure out how to use HLA, essentially a genetic ID tag, to match donors and patients in a way that cuts down on complications. Before that kind of matching got precise, transplants were a lot closer to guesswork."
-        },
-        {
-          "kind": "text",
-          "text": "Professor Johannes Schetelig, who stepped into the role of DKMS Group’s Global Chief Scientific Officer this past July, says the grant isn’t just about writing checks. He wants young researchers connected to each other, since the resources this kind of work needs – patient samples, specialized labs, transplant data – are rarely sitting in one place. A lot of good ideas stall out simply because the right collaborators never find each other. That’s the gap he’s trying to close."
-        },
-        {
-          "kind": "text",
-          "text": "DKMS didn’t stop at one grant. It also opened its Impact Grant 2027 , aimed specifically at hospitals and researchers in Central and South America, Africa, and South and Southeast Asia, regions where transplant infrastructure is often thin on the ground. It’ll fund up to three projects at $129,600 (€120,000) each, over two years. The thinking here is straightforward: don’t just export research built for wealthy hospitals; fund the people already working the problem locally."
-        },
-        {
-          "kind": "text",
-          "text": "Blood cancer skews older. As more of the world lives longer, more people will need transplants, and the margin between a transplant that cures someone and one that harms them badly needs to get wider, not stay where it is. That’s not the kind of progress that makes for dramatic headlines. It’s slow, it’s technical and most of the people it eventually helps will never know a grant like this existed."
-        },
-        {
-          "kind": "text",
-          "text": "But that’s usually how it goes with the science that extends healthy years. It’s not one dramatic cure. It’s a hundred small fixes, made by researchers who got funded early enough to keep working on a hard problem instead of giving up on it. $1.08 million isn’t going to solve graft-versus-host disease by itself. It might just keep the right person in the lab a little longer."
-        },
-        {
-          "kind": "text",
-          "text": "[1] https://www.eurekalert.org/news-releases/1140150"
-        },
-        {
-          "kind": "text",
-          "text": "The post DKMS backs $1.08m push on transplant science appeared first on Longevity.Technology ."
-        }
-      ],
-      "sourceName": "Longevity.Technology",
-      "sourceUrl": "https://longevity.technology/",
-      "originalUrl": "https://longevity.technology/news/dkms-backs-1-08m-push-on-transplant-science",
-      "author": "Kyle Umipig",
-      "publishedAt": "2026-09-10T16:40:27.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
-      "language": "en",
-      "keywords": [
-        "Biotech",
-        "DKMS",
-        "stem cell",
-        "stem cell therapy",
-        "stem cell transplant",
-        "stem cell treatment"
-      ],
-      "image": {
-        "url": "https://longevity.technology/wp-content/uploads/2026/09/DKMS-backs-1.08m-push-on-transplant-science-1-1024x683.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 3,
-      "careScore": 0.7,
-      "curiosityScore": 0,
-      "contentType": "news",
-      "titleKo": "DKMS는 이식 과학에 108만 달러 추진을 지지하다",
-      "summaryKo": "줄기세포 이식의 면역 생물학을 대상으로 한 새로운 108만 달러 보조금 지원금이 수액되었으며, 이는 더 많은 사람들이 더 오래 살수록 더욱 시급해지고 있는 연구 문제입니다. 줄기세포 이식이 롱제비티 논의에 포함되어야 하는 이유는 대부분 나이 들기 때문이라는 점입니다. 이식이 필요한 환자들은 중후반 [...] 쪽으로 크게 치우쳐 있습니다. DKMS가 이식 과학에 대한 108만 달러 추진을 지지한다는 글이 먼저 나왔습니다",
-      "bodyKo": [
-        "줄기세포 이식의 면역 생물학을 대상으로 한 새로운 108만 달러 보조금이 도입되었으며, 이는 더 많은 사람들이 더 오래 살수록 점점 더 시급해지는 연구 문제입니다.",
-        "줄기세포 이식이 롱제비티 논의에 포함되어야 하는 이유가 바로 이것입니다: 줄기세포는 대부분 나이 들면서 생기는 질병입니다. 이식이 필요한 환자들은 중년 후반과 그 이후에 주로 치우쳐 있으며, 전 세계 인구가 고령화됨에 따라 더 안전한 이식에 대한 수요는 계속 증가하고 있습니다.",
-        "이식 후 의사들이 면역 체계를 관리하는 모든 개선은 단 한 가지 질병만 치료하는 것이 아닙니다; 이는 노화 의학에서 가장 어려운 절충 중 하나를 조금씩 없애는데, 즉 효과를 낼 수 있는 치료와 받는 사람에게 심각한 해를 끼칠 수 있는 치료법의 차이입니다. 이것이 바로 국제 혈액 줄기세포 기증 단체인 DKMS의 새로운 연구비가 새로운 세대의 과학자들이 맡길 바라는 문제입니다.",
-        "DKMS는 이번 달 존 한센 연구 보조금 2027 신청을 시작했으며, 총 금액은 약 108만 달러(100만 유로) 규모로, 박사 학위를 10년 이하로 보유한 초기 경력 과학자들에게 분배됩니다. 이 보조금은 2015년부터 운영되어 왔으며, 이식 합병증, 기증자 매칭, 조기 진단 등 분야에서 가장 어렵고 지속적인 문제에 조용히 자금을 지원해 왔습니다 [ 1].",
-        "줄기세포 이식의 기본 아이디어는 이렇습니다: 환자의 병든 골수를 제거하고, 기증자의 건강한 세포로 대체한 뒤, 그 새로운 세포들이 면역 체계를 처음부터 재건하게 하는 것입니다. 성공하면 기증자의 면역 세포가 남은 것을 찾아 파괴하는데, 연구자들은 이를 이식편 대 백혈병 활성이라고 부릅니다. 그것이 목표입니다.",
-        "하지만 면역 세포는 항상 어디서 멈춰야 할지 알지 못합니다. 때로는 남은 암세포와 환자의 건강한 간, 피부, 장을 구분하지 못할 때도 있습니다. 이것이 바로 이식편 대숙주 질환이며, 때로는 원래 진단보다 더 위험하고 잔인할 수 있습니다.",
-        "DKMS는 줄기세포 이식을 통해 혈액암 및 기타 조혈계 질환 환자의 치료와 회복 가능성을 향상시키는 데 전념하고 있습니다",
-        "유익한 면역 반응의 부분을 유지하면서 해로운 부분을 줄이도록 하는 방법을 찾는 것은 이식 의학에서 가장 오래된 미해결 문제 중 하나이며, 이번 자금 지원이 바로 그 부분을 조금씩 해결하려는 것입니다. 자격이 있는 프로젝트는 세포 치료, 이식 면역학, 기증자 선정, 그리고 새로운 진단 도구를 아우릅니다.",
-        "존 A 한센은 2019년 사망하기 전까지 시애틀의 프레드 허친슨 암 연구 센터에서 경력을 쌓았습니다. 그의 연구는 이식 매칭이 오늘날만큼 잘 작동하는 큰 이유입니다. 한센은 HLA(본질적으로 유전 ID 태그)를 사용해 기증자와 환자를 합병증을 줄이는 방법을 알아내는 데 기여했습니다. 그런 매칭이 정밀해지기 전에는 이식이 훨씬 추측에 가까웠습니다.",
-        "지난 7월 DKMS 그룹의 글로벌 최고 과학 책임자(CIO) 역할을 맡은 요하네스 셰텔릭 교수는 이 연구비가 단순히 수표를 쓰는 것이 아니라고 말합니다. 그는 젊은 연구자들이 서로 연결되어 있기를 원합니다. 왜냐하면 이 연구에 필요한 자원들—환자 샘플, 전문 실험실, 이식 데이터 등—이 한 곳에 모여 있는 경우가 드물기 때문입니다. 많은 좋은 아이디어가 올바른 협력자들이 서로를 찾지 못해 중단됩니다. 그가 좁히려는 간극이 바로 그 부분입니다.",
-        "DKMS는 한 가지 보조금에 그치지 않았습니다. 또한 2027년 임팩트 그랜트를 개설했는데, 이는 이식 인프라가 빈약한 중남미, 아프리카, 남아시아 및 동남아시아 지역의 병원과 연구자들을 대상으로 한 것입니다. 이 보조금은 2년에 걸쳐 각각 129,600달러(120,000유로)의 최대 세 개의 프로젝트에 자금을 지원할 예정입니다. 여기서 생각하는 바는 간단합니다: 부유한 병원을 위해 만들어진 연구를 단순히 수출하는 것만이 아니라; 이미 현지에서 문제를 해결하고 있는 사람들에게 자금을 지원해야 한다는 것입니다.",
-        "혈액암은 더 고령으로 치우쳐 있습니다. 더 많은 사람들이 더 오래 살수록 더 많은 사람들이 이식이 필요할 것이고, 누군가를 완치하는 이식과 심각한 해를 끼치는 이식 사이의 경계는 더 넓어져야 하며, 그 자리에 머무르는 것이 아닙니다. 그런 진전은 극적인 헤드라인을 만들 만한 것이 아닙니다. 느리고 기술적이며, 결국 도움을 받는 대부분의 사람들은 이런 연구비가 존재했다는 사실을 전혀 모를 것입니다.",
-        "하지만 건강한 수명을 연장하는 과학에서는 보통 그렇게 흘러갑니다. 하나의 극적인 치료법이 아닙니다. 어려운 문제를 포기하지 않고 일찍 연구할 수 있도록 자금을 지원받은 연구자들이 만든 수백 가지 작은 해결책들입니다. 108만 달러만으로는 이식편과 숙주 병을 해결할 수 없습니다. 그저 적합한 인재를 연구실에 조금 더 오래 남게 할 수도 있습니다.",
-        "[1] https://www.eurekalert.org/news-releases/1140150",
-        "DKMS가 이식 과학에 108만 달러 추진을 지지한다는 글이 롱제비티에 처음 게재되었습니다. 기술."
-      ]
-    },
-    {
-      "id": "longevity-technology:361f95526c",
-      "slug": "manila-s-biggest-aesthetics-empire-makes-a-move-361f95",
-      "titleOriginal": "Manila’s biggest aesthetics empire makes a move on longevity",
-      "summaryOriginal": "Aesthetics empire opens its first wellness clinic, and it says something about where precision longevity in Southeast Asia is heading. I’ve lived in the Philippines long enough to know exactly what the Belo name means here. For nearly three decades, it has been shorthand for one thing: looking good, whatever it takes. So when I […] The post Manila’s biggest aesthetics empire makes a move on longev",
-      "bodyOriginal": [
-        {
-          "kind": "text",
-          "text": "Aesthetics empire opens its first wellness clinic, and it says something about where precision longevity in Southeast Asia is heading."
-        },
-        {
-          "kind": "text",
-          "text": "I’ve lived in the Philippines long enough to know exactly what the Belo name means here. For nearly three decades, it has been shorthand for one thing: looking good, whatever it takes. So when I heard that Belo Medical Group had opened a clinic that wasn’t primarily about how you look, I’ll admit I did a double take."
-        },
-        {
-          "kind": "text",
-          "text": "The clinic is called Xiglo. It opened at 1 Proscenium in Rockwell, and Dr Vicki Belo hosted the launch herself, welcoming a guest list that read like a who’s who of Philippine entertainment. But underneath the party photos, the actual pitch of Xiglo is a bigger shift than a single opening night suggests."
-        },
-        {
-          "kind": "text",
-          "text": "“Many of us now pay as much attention to how we feel as to how we look,” is how the framing around the launch put it, and if you’ve spent any time around wellness culture in this region over the past couple of years, that line rings true. Looking good still matters – of course it does, this is still a Belo clinic – but sleep, energy, stress and how your body handles aging have crept into the same conversation as skin and silhouette. Xiglo is Belo’s answer to that shift: an aesthetics and wellness clinic built around the idea that appearance and internal health were never really separate questions."
-        },
-        {
-          "kind": "text",
-          "text": "“We’ve wanted to move into longevity for a few years now,” Belo said at the opening. “We really don’t do anything halfway,” she added, describing the time the group spent researching the field and consulting experts before the doors opened [ 1 ]."
-        },
-        {
-          "kind": "text",
-          "text": "What ‘precision longevity’ means in the chair"
-        },
-        {
-          "kind": "text",
-          "text": "The phrase Belo Medical Group keeps using is “precision longevity.” It simply means the plan is built around you – your medical history, your lifestyle, your test results, your actual goals – rather than a menu everyone gets handed regardless of what their body needs. A visit to Xiglo starts with a consultation with a longevity physician, and diagnostic testing follows to establish a baseline before any plan gets built."
-        },
-        {
-          "kind": "text",
-          "text": "The clinic developed its program with Dr Dominik Thor, president of the Geneva College of Longevity Science , who now serves as Belo Medical Group’s longevity consultant. Visits are by appointment, with aesthetic treatments and wellness services kept in separate rooms, and a personal concierge walking clients through the process – a structure that signals this isn’t meant to feel like a walk-in cosmetic clinic with a wellness corner bolted on."
-        },
-        {
-          "kind": "text",
-          "text": "Listening to what patients started asking for"
-        },
-        {
-          "kind": "text",
-          "text": "What struck me most, reading Belo Medical Group CEO Gina Lorenzana’s comments, was how much of this was framed as a response rather than a strategy dreamed up in a boardroom."
-        },
-        {
-          "kind": "text",
-          "text": "“We listened to our patients, and what they were asking for changed,” she said. “People still care about aesthetics, and we’re very good at that. But now they’re also concerned about what’s happening on the inside.”"
-        },
-        {
-          "kind": "text",
-          "text": "That’s a notable admission from a brand that built its entire identity on the outside. It also tracks with something I’ve been noticing in my own reporting on this region: longevity medicine has largely been a Western and East Asian story so far – think Singapore’s genomics push or Japan’s centenarian research – with Southeast Asian aesthetics markets treated as a separate, appearance-only category."
-        },
-        {
-          "kind": "text",
-          "text": "A major Philippine player publicly repositioning itself around internal health, not just outward polish, is a signal that the region’s wellness economy is maturing past the treatment-menu model."
-        },
-        {
-          "kind": "text",
-          "text": "Why this matters beyond one Manila launch"
-        },
-        {
-          "kind": "text",
-          "text": "It’s easy to read a celebrity-studded clinic opening as pure lifestyle coverage, and there’s plenty of that here too. But Xiglo is also a useful data point for anyone tracking how longevity science actually reaches ordinary consumers rather than biohacking early adopters. Aesthetics clinics already have the trust, the foot traffic, and the client relationships that longevity medicine still has to build from scratch in most markets. If a brand as culturally embedded as Belo is willing to reframe itself around aging well rather than just aging invisibly, that’s one more sign the longevity conversation is moving out of research labs and into the appointment books of the clinics people already know."
-        },
-        {
-          "kind": "text",
-          "text": "[1] https://mb.com.ph/2026/08/21/belo-medical-group-celebrates-a-new-chapter-in-beauty-and-longevity"
-        },
-        {
-          "kind": "text",
-          "text": "The post Manila’s biggest aesthetics empire makes a move on longevity appeared first on Longevity.Technology ."
-        }
-      ],
-      "sourceName": "Longevity.Technology",
-      "sourceUrl": "https://longevity.technology/",
-      "originalUrl": "https://longevity.technology/news/manilas-biggest-aesthetics-empire-makes-a-move-on-longevity",
-      "author": "Kyle Umipig",
-      "publishedAt": "2026-09-10T16:00:20.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
-      "language": "en",
-      "keywords": [
-        "Clinics",
-        "Ecosystem",
-        "aesthetics",
-        "beauty",
-        "Belo Medical Group",
-        "clinics",
-        "Dominik Thor",
-        "Geneva College of Longevity Science"
-      ],
-      "image": {
-        "url": "https://longevity.technology/wp-content/uploads/2026/09/Manilas-biggest-aesthetics-empire-makes-a-move-on-longevity-1024x683.jpg"
-      },
-      "translationStatus": "done",
-      "contentPolicy": "full",
-      "category": "age",
-      "trustLevel": 3,
-      "careScore": 0.7,
-      "curiosityScore": 0,
-      "contentType": "news",
-      "titleKo": "마닐라 최대 미학 제국이 롱제비티에 도전하다",
-      "summaryKo": "에스테틱스 엠파이어가 첫 번째 웰니스 클리닉을 오픈하며, 동남아시아에서 정밀 롱제비티가 앞으로 나아갈 방향을 말해줍니다. 저는 필리핀에 오래 살면서 여기서 벨로라는 이름이 무슨 뜻인지 정확히 알고 있습니다. 거의 30년 동안 벨로라는 이름은 한 가지를 간단히 의미해 왔습니다: 어떤 수단을 써서라도 멋져 보이는 것. 그래서 제가 [...] 마닐라 이후 가장 큰 미학 제국이 롱에브에 진출합니다",
-      "bodyKo": [
-        "에스테틱스 엠파이어가 첫 번째 웰니스 클리닉을 오픈하며, 이는 동남아시아에서 정밀 롱제비티가 앞으로 나아갈 방향을 잘 보여줍니다.",
-        "저는 필리핀에 오래 살면서 여기서 벨로라는 이름이 무슨 뜻인지 정확히 알고 있습니다. 거의 30년 동안 벨로라는 이름은 한 가지를 뜻하는 약어였습니다: 멋져 보이는 것, 무슨 수를 써서라도요. 그래서 벨로 메디컬 그룹이 외모가 아닌 클리닉을 열었다는 소식을 들었을 때, 솔직히 두 번 쳐다보았습니다.",
-        "클리닉 이름은 시글로(Xiglo)입니다. 록웰의 1 프로시니엄에서 문을 열었고, 비키 벨로 박사가 직접 출범식을 주최하며 필리핀 엔터테인먼트계의 유명 인사들을 환영했습니다. 하지만 파티 사진 아래에는 시글로의 실제 분위기가 단일 개막일보다 훨씬 더 큰 변화를 보여줍니다.",
-        "\"이제 우리 중 많은 이들이 외모만큼이나 느끼는 것에 더 신경 쓴다\"는 문구가 출시 글에서 표현했듯이, 지난 몇 년간 이 지역의 웰니스 문화를 조금이라도 접해본 사람이라면 이 말이 진실로 들린다. 멋져 보이는 것은 여전히 중요하다 – 물론 그래, 이곳은 여전히 벨로 클리닉이니까 – 하지만 수면, 에너지, 스트레스, 그리고 몸이 노화를 어떻게 다루는지도 피부와 실루엣과 같은 대화에 스며들었다. 시글로는 벨로가 그 변화에 대한 해답이다: 외모와 내부 건강이 결코 별개의 문제가 아니라는 생각을 바탕으로 세워진 미학 및 웰니스 클리닉이다.",
-        "\"우리는 몇 년 전부터 롱제비티 분야로 진출하고 싶어 했습니다,\" 벨로가 개막식에서 말했습니다. \"우리는 정말 중간에 하는 일이 없습니다,\" 그녀는 그룹이 문을 열기 전 이 분야를 연구하고 전문가들과 상담하는 데 보낸 시간을 설명하며 덧붙였습니다 [ ].",
-        "'정밀 롱제비티'가 의자에서 의미하는 바",
-        "벨로 메디컬 그룹이 계속 사용하는 표현은 '정밀 롱제비티'입니다. 이는 단지 여러분을 중심으로 계획이 세워지고, 여러분의 병력, 생활 방식, 검사 결과, 실제 목표 등을 중심으로 만들어지며, 모두가 자신의 몸에 필요한 메뉴를 받는 것이 아님을 의미합니다. 시글로 방문은 롱제비티 의사와의 상담으로 시작하며, 진단 검사를 통해 계획을 세우기 전에 기준선을 설정합니다.",
-        "이 클리닉은 현재 벨로 메디컬 그룹의 롱제비티 컨설턴트로 활동 중인 제네바 롱제비티 과학 대학 총장 도미닉 토르 박사와 함께 프로그램을 개발했습니다. 방문은 예약제로 진행되며, 미용 치료와 웰니스 서비스는 별도의 방에서 진행되며, 개인 컨시어지가 환자들을 안내합니다. 이는 웰니스 코너가 덧붙여진 워크인 미용 클리닉처럼 느껴지지 않도록 설계되었음을 보여줍니다.",
-        "환자들이 요청하기 시작한 것을 듣기 시작했습니다",
-        "벨로 메디컬 그룹 CEO 지나 로렌자나의 발언을 읽으며 가장 인상 깊었던 점은, 이 모든 것이 이사회에서 고안된 전략이 아니라 대응으로 포장되었다는 점이었습니다.",
-        "\"우리는 환자들의 말을 들었고, 그들이 요구하는 바가 변했습니다.\"라고 그녀는 말했습니다. \"사람들은 여전히 미용에 관심이 있고, 우리는 그 부분에 매우 능숙합니다. 하지만 이제는 내부에서 일어나는 일에도 관심을 갖고 있습니다.\"",
-        "이는 외부에서 정체성을 구축한 브랜드가 내놓은 주목할 만한 인정입니다. 또한 제가 이 지역을 취재하면서 느낀 점과도 일치합니다: 롱제비티 의학은 지금까지 주로 서구와 동아시아의 이야기였는데, 싱가포르의 유전체 추진이나 일본의 100세 연구를 떠올리면 됩니다. 동남아시아 미용 시장은 외모만을 위한 별도의 범주로 취급됩니다.",
-        "필리핀의 주요 기업이 외적 세련됨뿐만 아니라 내부 건강에 초점을 맞추는 주요 기업이 공개적으로 재포지셔닝하는 것은 이 지역의 건강 경제가 치료 메뉴 모델을 넘어 성숙해지고 있음을 시사합니다.",
-        "왜 이것이 마닐라 발사 한 번을 넘어 중요한가",
-        "유명인들이 출연한 클리닉을 순수한 라이프스타일 보도로 읽기 쉽고, 여기에도 그런 점이 많습니다. 하지만 시글로는 롱제비티 과학이 일반 소비자에게 실제로 도달하는 방식을 추적하는 데 유용한 데이터 포인트이기도 합니다. 미용 클리닉은 이미 신뢰, 방문객, 그리고 대부분의 시장에서 롱제비티 의학이 처음부터 구축해야 하는 고객 관계를 갖추고 있습니다. 벨로처럼 문화적으로 깊이 뿌리내려진 브랜드가 단순히 보이지 않게 노화하는 대신 잘 노화하는 방향으로 자신을 재구성할 의향이 있다면, 롱제비티 논의가 연구실을 넘어 이미 사람들이 알고 있는 클리닉의 예약 명부로 이동하고 있다는 또 하나의 신호입니다.",
-        "[1] https://mb.com.ph/2026/08/21/belo-medical-group-celebrates-a-new-chapter-in-beauty-and-롱제비티",
-        "마닐라 최대 미학 제국이 롱제비티에 진출하다 이 글은 롱제비티에 처음 게재되었습니다. 기술."
-      ]
     },
     {
       "id": "creative-boom:57cc8c77b1",
@@ -8304,7 +8222,7 @@
       "originalUrl": "https://www.creativeboom.com/news/whistles-marks-50-years-by-casting-50-customers-found-through-mysterious-fly-posters-across-london",
       "author": "Katy Cowan",
       "publishedAt": "2026-09-10T10:00:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News"
@@ -8419,7 +8337,7 @@
       "originalUrl": "https://www.creativeboom.com/news/mother-design-gives-psychic-platform-keen-a-folk-art-rebrand-that-takes-on-minimalist-wellness",
       "author": "Katy Cowan",
       "publishedAt": "2026-09-10T06:00:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News"
@@ -8439,7 +8357,7 @@
       "id": "lifespan-io:53098f461d",
       "slug": "comparing-the-responsiveness-of-epigenetic-aging-biomarkers-53098f",
       "titleOriginal": "Comparing the Responsiveness of Epigenetic Aging Biomarkers",
-      "summaryOriginal": "In a recent study, researchers have evaluated how responsive several DNA methylation (DNAm) biomarkers are to a range of longevity interventions [1]. […]",
+      "summaryOriginal": "In a recent study, researchers have evaluated how responsive several DNA methylation (DNAm) biomarkers are to a range of longevity interventions [1]. Waiting too long Testing lifespan-extending interventions in humans has a major problem: it […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8551,7 +8469,7 @@
       "originalUrl": "https://lifespan.io/comparing-the-responsiveness-of-epigenetic-aging-biomarkers",
       "author": "Anna Drangowska-Way",
       "publishedAt": "2026-09-09T16:48:19.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News",
@@ -8566,11 +8484,11 @@
       "contentPolicy": "full",
       "category": "age",
       "trustLevel": 4,
-      "careScore": 0.95,
+      "careScore": 1,
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "후생유전적 노화 바이오마커의 반응성 비교",
-      "summaryKo": "최근 연구에서 연구자들은 여러 DNA 메틸화(DNAm) 바이오마커가 다양한 롱제비티 개입에 얼마나 반응하는지를 평가했습니다 [1]. […]",
+      "summaryKo": "최근 연구에서 연구자들은 여러 DNA 메틸화(DNAm) 바이오마커가 다양한 롱제비티 중재에 얼마나 반응하는지 평가했습니다 [1]. 너무 오래 기다리기 수명 연장 중재를 인간에게 시험하는 데에는 큰 문제가 있습니다: [...]",
       "bodyKo": [
         "최근 연구에서 연구자들은 여러 DNA 메틸화(DNAm) 바이오마커가 다양한 롱제비티 개입에 얼마나 반응하는지를 평가했습니다 [1].",
         "너무 오래 기다리기 수명 연장 중재를 인간에게 시험하는 데는 큰 문제가 있습니다: 결과를 보는 데 수년, 심지어 수십 년이 걸릴 수 있습니다. 아무도 그렇게 오래 기다리고 싶어 하지 않습니다. 따라서 바이오마커와 같이 개입이 효과가 있는지 정확히 반영하는 대리 지표를 찾는 것이 필수적입니다. 노화 분야에서 가장 인기 있는 바이오마커 중 일부는 후생유전학적 노화 시계(epigenetic aging clocks)로, DNAm 바이오마커로서 개인의 생물학적 나이나 노화 속도를 반영하도록 설계되었습니다.",
@@ -8705,7 +8623,7 @@
       "originalUrl": "https://www.creativeboom.com/insight/kent-wood-on-motion-design",
       "author": "Tom May",
       "publishedAt": "2026-09-09T06:45:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Insight"
@@ -8845,7 +8763,7 @@
       "originalUrl": "https://www.creativeboom.com/news/this-clever-design-trick-by-guinness-means-it-can-modernise-without-any-need-for-a-new-logo",
       "author": "Tom May",
       "publishedAt": "2026-09-09T06:00:00.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News"
@@ -8865,7 +8783,7 @@
       "id": "lifespan-io:705474baeb",
       "slug": "late-life-glp-1-treatment-increases-lifespan-in-705474",
       "titleOriginal": "Late-Life GLP-1 Treatment Increases Lifespan in Female Mice",
-      "summaryOriginal": "In a new study, semaglutide given late in life increased median lifespan in female mice by more than 12% and improved various health markers. Semaglutide’s effect possibly went beyond caloric restriction [1]. Old mice, new drugs GLP-1 receptor agonists, […]",
+      "summaryOriginal": "In a new study, semaglutide given late in life increased median lifespan in female mice by more than 12% and improved various health markers. Semaglutide’s effect possibly went […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -8949,7 +8867,7 @@
       "originalUrl": "https://lifespan.io/late-life-glp-1-treatment-increases-lifespan-in-female-mice",
       "author": "Arkadi Mazin",
       "publishedAt": "2026-09-08T14:52:19.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News",
@@ -8967,7 +8885,7 @@
       "curiosityScore": 0,
       "contentType": "research",
       "titleKo": "말기 GLP-1 치료가 암컷 쥐의 수명을 연장",
-      "summaryKo": "새로운 연구에서, 생애 말기에 투여된 세마글루타이드는 암컷 쥐의 중간 수명을 12% 이상 연장하고 다양한 건강 지표를 개선시켰습니다. 세마글루타이드의 효과는 칼로리 제한을 넘어섰을 가능성이 있습니다 [1]. 노령 쥐, GLP-1 수용체 작용제의 신약 [...]",
+      "summaryKo": "새로운 연구에서, 생애 말기에 투여된 세마글루타이드는 암컷 쥐의 중간 수명을 12% 이상 연장시키고 다양한 건강 지표를 개선했습니다. 세마글루타이드의 효과는 [...]",
       "bodyKo": [
         "새로운 연구에서 말기에 투여된 세마글루타이드는 암컷 쥐의 중간 수명을 12% 이상 연장하고 다양한 건강 지표를 개선했습니다. 세마글루타이드의 효과는 칼로리 제한을 넘어섰을 가능성이 있습니다 [1].",
         "노년생쥐, 인슐린 분비와 식욕을 조절하는 호르몬에 작용하는 GLP-1 수용체 작용제가 비만 치료에 혁신을 가져왔으며, 겉보기에는 관련 없는 여러 질병에서 효과를 보였습니다. 이로 인해 약물의 효과가 칼로리 제한을 넘어서는지 의문이 제기되었습니다. 칼로리 제한 자체가 강력한 노화 방지 중재로서 동물 모델에서 견고한 건강수명과 수명 연장을 만들어냈습니다 [2]. 지금까지 인간 연구에서는 결정적인 결과를 내지 못했기 때문에, 모델 전 생애에 걸쳐 개입을 조사할 수 있는 동물 연구로 돌아가는 것이 가치가 있습니다.",
@@ -8994,7 +8912,7 @@
       "id": "lifespan-io:3a17f1d3b9",
       "slug": "mice-with-growth-hormone-halted-in-middle-age-3a17f1",
       "titleOriginal": "Mice With Growth Hormone Halted in Middle Age Live Longer",
-      "summaryOriginal": "Researchers publishing in Aging Cell have described how stopping growth hormone receptor production in midlife significantly lengthens the lives of mice. Growth […]",
+      "summaryOriginal": "Researchers publishing in Aging Cell have described how stopping growth hormone receptor production in midlife significantly lengthens the lives of mice. Growth but diabetes Growth hormone affects the metabolism of fats (lipids), increasing the […]",
       "bodyOriginal": [
         {
           "kind": "text",
@@ -9082,7 +9000,7 @@
       "originalUrl": "https://lifespan.io/mice-with-growth-hormone-halted-in-middle-age-live-longer",
       "author": "Josh Conway",
       "publishedAt": "2026-09-07T19:59:35.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "News",
@@ -9093,37 +9011,13 @@
       "image": {
         "url": "https://lifespan.io/wp-content/uploads/2026/09/Running-mouse-262x187.jpg"
       },
-      "translationStatus": "done",
+      "translationStatus": "failed",
       "contentPolicy": "full",
       "category": "age",
       "trustLevel": 4,
       "careScore": 0.7,
       "curiosityScore": 0,
-      "contentType": "research",
-      "titleKo": "중년에 성장 호르몬이 멈춘 쥐는 더 오래 살다",
-      "summaryKo": "Aging Cell에 발표한 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 쥐의 수명이 크게 연장된다고 설명했습니다. 성장 [...]",
-      "bodyKo": [
-        "Aging Cell에 발표한 연구자들은 중년기에 성장호르몬 수용체 생성을 중단하면 쥐의 수명이 크게 연장된다고 설명했습니다.",
-        "성장과 당뇨병 성장호르몬은 지방(지질)의 대사에 영향을 주어 순환 지방산 수치를 증가시키고 인슐린 유사 성장인자 1(IGF-1)을 증가시키며 인슐린 자체의 기능을 저하시킵니다 [1]. 성장호르몬은 조직 특이적 노화와 연관되어 있으며[2], 선천적으로 성장호르몬에 민감한 사람들(라론 증후군)은 당뇨병, 인지 기능 저하, 심혈관 문제 등 노화의 여러 측면에 대한 저항성이 증가합니다 [3].",
-        "성장호르몬과 노화 사이의 관계는 쥐와 사람 사이에서 유사하다 [4]. 성장호르몬 수치가 낮아진 쥐는 변형되지 않은 쥐보다 더 오래 살며[5], 이러한 쥐는 골관절염과 같은 쇠약한 연령 관련 질환도 유의미하게 감소한다 [6].",
-        "하지만 이 마우스 모델은 유전적으로 변형되어 출생부터 영향을 받습니다. 이를 임상에 도입하려면 성장 및 발달에 방해가 되지 않도록 성인기의 성장 호르몬을 조절해야 합니다. 이 팀은 이전에 젊은 성인기에 성장 호르몬이 교란되는 마우스 모델을 개발했으며, 이러한 마우스가 야생형 마우스보다 더 오래 산다는 것을 발견했습니다 [7].",
-        "이 연구에서 연구진은 이전 결과를 바탕으로 성장호르몬 수용체(GHR) 생성이 중단(녹아웃)되는 생후 12개월에 마우스 모델을 사용했습니다. 이는 인간의 중년과 거의 일치하는 시기로, 많은 사람들이 이 시기에 나이 관련 질환 치료를 시작했을 것으로 추정됩니다.",
-        "가장 오래 사는 쥐들은 더 오래 산다. 연구진이 처음 논의한 결과는 수명으로, 수컷과 암컷 모두에서 현저히 개선되었다. 이들은 후기 연령대에 변형되지 않은 쥐보다 키가 작고 작았지만, GHR KO 수컷은 수컷 대조군에 비해 생존 곡선이 개선되었다. GHR이 제거된 암컷은 체중이나 체격에 변화가 없었으나 생존 곡선도 개선되었다.",
-        "흥미롭게도, 이 수명 증가는 주로 가장 오래 사는 동물, 특히 암컷에서 발견되었습니다; 대조군과 GHR 녹아웃군의 가장 짧은 개체들은 거의 같은 나이에 사망했지만, GHR 녹아웃 그룹의 가장 오래 산 암컷 쥐는 가장 오래 산 암컷 대조 쥐보다 4개월 더 오래 살았습니다. 이 수명 증가는 특히 수컷에서 IGF-1의 유의미한 감소와 함께 일어났습니다.",
-        "정상적인 상황에서는 지방량 증가와 저지방량 감소가 우려 대상이며, 쥐의 건강수명 지표를 개선하는 치료는 종종 정반대 효과를 보입니다. 그러나 GHR 녹아웃 시술에서는 남녀 모두 대조군에 비해 후기 생애에 지방량이 증가하고 저지방량이 감소했습니다. 이로 인해 비만과 근육량 감소가 유발되었음에도 불구하고, 염증성 바이오마커는 거의 영향을 받지 않았고, 체력 검사 결과 쥐들은 전반적으로 약하지 않았으며, GHR 녹아웃 그룹의 수컷은 인슐린 반응이 개선되고 공복 혈당이 감소했습니다; 암컷은 이 부분에 영향을 받지 않았습니다.",
-        "조직 특이적 영향 척추뼈의 다공성 부분(척추 대동맥 골)은 수컷 쥐에서 유의미하게 보존되었으며, 다공성과 골밀도는 젊은 쥐와 더 유사했다. 암컷은 이 부위에 영향을 받지 않았다.",
-        "간은 성장호르몬 신호에 강하게 반응하므로, GHR이 차단되었을 때 간 유전자 발현이 유의미하게 변한 것은 놀라운 일이 아닙니다. 수컷이 암컷보다 더 강하게 영향을 받았습니다. 흥미롭게도, 수컷 마우스의 간은 암컷 마우스와 더 관련 있는 유전자 발현을 보이기 시작했으며, GHR이 제거된 암컷 마우스도 남성에서 더 강하게 발현되는 유전자 발현이 감소했습니다.",
-        "논문 말미에 연구진은 \"이러한 발견이 노화 생물학에서 GH/IGF-1 축의 중심적 역할을 강화하고, 성인기 동안 GH 신호전달의 약리학적 억제가 건강한 노화를 촉진하는 실현 가능한 전략이 될 수 있다는 개념을 뒷받침한다\"고 밝혔습니다. 그들은 Aging Cell에 보낸 짧은 통신에서 이 결과를 재확인하며, 성장호르몬을 완전히 제한하는 데 여러 잠재적 문제점이 있음을 지적하고, 성장호르몬 길항에 집중하는 치료법을 제시합니다.",
-        "이미 FDA에서 승인된 길항제인 페그비소만트가 존재하지만, 임상적으로 노화 방지 효과에 대해 시험된 적이 없습니다. 이 연구는 이러한 임상시험의 가능성을 입증하는 증거를 제공하지만, 조직 수준에서 성장호르몬에 영향을 미치는 치료가 사람들의 수명과 건강수명 증가를 실질적으로 제공할 가능성도 있습니다. 다만 이를 확인하기 위해서는 상당한 개발과 임상시험이 필요합니다.",
-        "작은 부탁을 드리고 싶습니다. 저희는 비영리 재단이며, 다른 일부 단체와 달리 주주도 없고 판매할 제품도 없습니다. 모든 뉴스와 교육 콘텐츠는 누구나 무료로 읽을 수 있지만, 이는 여러분 같은 분들의 도움에 의존한다는 의미입니다. 크고 작음에 상관없이 모든 기부는 독립적인 윤리 저널리즘을 지원하며 우리의 미래를 지탱합니다. 네, 저는 문학을❤️ 기부하겠습니다 [1] 비자야쿠마르, A., 노보샤들리, R., 우, Y., 야카르, S., 그리고 르로이스, D. (2010). 성장호르몬이 탄수화물과 지질 대사에 미치는 생물학적 영향. 성장호르몬 및 IGF 연구, 20 (1), 1-7.",
-        "[2] 체스노코바, V., 조니스, S., 에인스워스, R., 아파이딘, T., 발렌시아, C. W., 그레이너, E. C., ... 및 멜메드, S. (2025). 국소 성장 호르몬은 대장 상피 미세환경의 노화를 촉진한다. Aging Cell, 24 (10), e70187.",
-        "[3] 게바라-아기레, J., 미슈라, A., 카네파, M., 게바라, C., 빌라크레스, Á., 게바라, A., ... & 롱고, V. D. (2024). 성장호르몬 수용체 결핍을 가진 IGF-I 결핍 성인의 정상 또는 개선된 심혈관 위험인자. 의학, 5권 (7호), 816-825.",
-        "[4] 첸, Y., 베리먼, D. E., 바수, R., 리스트, E. O., 오카다, S., 영, J. A., ... & 콥칙, J. J. (2022). GH 및 IGF 계열에서 유전자 변형을 가진 쥐. 뇌하수체, 25 (1), 1-51.",
-        "[5] 바트케, A., & 다르시, J. (2017). GH와 노화: 함정과 새로운 통찰. 임상 내분비학 및 대사의 모범 사례 및 연구, 31 (1), 113-125.",
-        "[6] Liu, H., Davis, T., Duran-Ortiz, S., Martino, T., Erdely, A., Profio, S., ... & Zhu, S. (2024). 생쥐의 성장호르몬-수용체 교란은 골관절염과 연골혈구 비대를 감소시킵니다. Geroscience, 46 (5), 4895-4908.",
-        "[7] Duran‐Ortiz, S., List, E. O., Ikeno, Y., Young, J., Basu, R., Bell, S., ... & Kopchick, J. J. (2021). 성숙-성체 마우스에서 성장호르몬 수용체 유전자 교란은 수컷 인슐린 감수성을 향상시키고 암컷의 수명을 연장한다. 노화 세포, 20 (12), e13506.",
-        "[8] 롱고, V. D., 안테비, A., 바르트케, A., 바르질라이, N., 브라운-보그, H. M., 카루소, C., ... 및 폰타나, L. (2015). 인간 노화 지연을 위한 개입: 우리는 준비가 되었는가?. 노화 세포, 14 (4), 497-510."
-      ]
+      "contentType": "research"
     },
     {
       "id": "lifespan-io:d176156141",
@@ -9249,7 +9143,7 @@
       "originalUrl": "https://lifespan.io/the-last-generation-to-die-interview-with-tim-maupin",
       "author": "Steve Hill",
       "publishedAt": "2026-09-03T20:00:48.000Z",
-      "fetchedAt": "2026-09-16T16:52:07.667Z",
+      "fetchedAt": "2026-09-16T21:15:55.855Z",
       "language": "en",
       "keywords": [
         "Advocacy",
