@@ -58,6 +58,81 @@ const itinerary = (
   </>
 )
 
+/*
+ * 왜 이렇게 짰는가.
+ *
+ * 처음 판에는 이 구간이 통째로 없었다. 이상한 일정 다음에 바로 짜증이 왔고,
+ * 그러면 읽는 사람이 만나는 것은 «스스로 만든 일정에 스스로 화내는 사람»이
+ * 된다. 짜증이 이 기록의 출발점처럼 보이는 것이 문제였다 — 실제 출발점은
+ * 의도였고, 짜증은 그 의도가 당일에 무너진 자리에서 나온다. 무너질 것이
+ * 먼저 서 있어야 무너지는 것이 보인다.
+ *
+ * 그렇다고 일정의 의미를 앞에서 풀어 주지는 않는다. 여기 있는 것은 해설이
+ * 아니라 예약하던 날의 생각이고, 그 생각은 여행 당일에 이미 유효하지 않다.
+ */
+
+const flaw = (
+  <>
+    <p>요즘에는 완벽함보다 결함과 비완성에 더 큰 기대를 하는 것 같다.</p>
+    <p>불완전함에서 안정감을 찾으려는 시도가 이제부터 실천적 성격을 가지게 되는 것이다.</p>
+  </>
+)
+
+const discomfort = (
+  <>
+    <p>불편한 상황이 생각할 거리를 던져주는 게 맞는 것 같다.</p>
+  </>
+)
+
+const weathered = (
+  <>
+    <p>
+      나는 줄곧 아름다운 삶을 보고 모방하려고 노력했지만 시간은 속절없이 지나갔고 고된 직장생활은
+      나를 풍화시켰다.
+    </p>
+  </>
+)
+
+/*
+ * 밑바닥 체험이 아니다.
+ *
+ * 결핍되어 보이는 삶에서 무엇을 배웠다는 이야기로 쓰지 않는다. 그런 글은
+ * 남의 처지를 재료로 쓰고, 이 사람은 그때 그냥 무엇을 보게 될지 궁금해하고
+ * 있었다. 궁금했다는 것까지만 적는다.
+ */
+const other = (
+  <>
+    <p>그래서 이번에는 반대쪽이 궁금했다.</p>
+    <p>결핍되어 보이는 삶, 현실성보다 자극을 좇는 것처럼 보이는 삶에서도 얻을 것이 있는지.</p>
+    <p>홍대 지하돌 공연을 일정에 넣은 이유도 거기에 있다.</p>
+  </>
+)
+
+/*
+ * 경첩.
+ *
+ * 앞의 넷은 예약하던 날의 생각이고 여기서 그 생각이 당일의 생각과 갈라진다.
+ * 이 세 줄이 없으면 뒤에 오는 짜증이 어디서 나오는지 알 수 없고, 마지막 세
+ * 문장의 «이제야 이유가 생겼다»도 무엇이 없어졌다가 다시 생겼는지 가리킬
+ * 자리를 잃는다. 없어지는 장면을 본 사람만 다시 생기는 장면을 읽는다.
+ */
+const faded = (
+  <>
+    <p>하지만 그건 이 디저트바를 예약하던 당시의 내가 의도했던 바다.</p>
+    <p>몇 주가 지난 지금은 오히려 기대가 떨어지는 기현상이 발생했다.</p>
+    <p>아무튼 가보자.</p>
+  </>
+)
+
+const mirror = (
+  <>
+    <p>
+      엘리베이터에서 한껏 못생겨진 내 얼굴을 보고 있자니 어딘가 위로받고 싶은 마음이 한가득인데,
+      디저트바에서 그걸 기대하기는 어렵다.
+    </p>
+  </>
+)
+
 const why = (
   <>
     <p>왜 점심을 디저트로 먹으러 가는 건지 나도 모르겠다.</p>
@@ -170,13 +245,6 @@ const inspiration = (
   </>
 )
 
-const expectation = (
-  <>
-    <p>예약하던 당시에는 완벽한 디저트 경험에서 안정감을 얻으려는 기대가 어느 정도 있었다.</p>
-    <p>몇 주가 지나 당일이 되자 그 기대는 많이 떨어져 있었다.</p>
-  </>
-)
-
 const ending = (
   <>
     <p>생각을 너무 많이 했다.</p>
@@ -192,10 +260,22 @@ const ending = (
  * 장소는 사실상 하나뿐이고, 그것도 마지막에야 나온다. 여기서 일어난 일은 전부
  * 기차 안에서 일어났다.
  *
- * 흐름은 하나다. 납득되지 않는 일정 → 짜증 → 왜 포기하지 않는지 모르겠음 →
- * 그 감정이 «오기»라는 발견 → 이름을 붙인 직후의 평정. 그리고 그 뒤에야
- * 스피노자가 온다. 순서를 뒤집어 철학을 먼저 놓으면 이 글은 경험의 기록이
- * 아니라 이론의 예시가 되고, 그 순간 발견은 발견이 아니라 인용이 된다.
+ * 흐름은 하나다. 이상한 일정 → 그렇게 짠 이유 → 당일에 그 이유가 사라짐 →
+ * 짜증 → 왜 포기하지 않는지 모르겠음 → 그 감정이 «오기»라는 발견 → 이름을
+ * 붙인 직후의 평정. 그리고 그 뒤에야 스피노자가 온다. 순서를 뒤집어 철학을
+ * 먼저 놓으면 이 글은 경험의 기록이 아니라 이론의 예시가 되고, 그 순간
+ * 발견은 발견이 아니라 인용이 된다.
+ *
+ * 두 번째 칸이 처음 판에는 없었다. 이상한 일정 다음에 바로 짜증이 오니까
+ * 읽는 사람이 만나는 것이 «스스로 만든 일정에 스스로 화내는 사람»이 되었다.
+ * 짜증은 이 기록의 출발점이 아니라 의도가 무너진 자리이고, 무너질 것이 먼저
+ * 서 있지 않으면 무너지는 장면이 그냥 불평으로 읽힌다. 완벽함보다 결함에
+ * 기대를 걸어 보려던 생각, 불편함이 생각할 거리를 준다는 감, 아름다운 삶을
+ * 모방하다 풍화되었으니 이번에는 반대쪽이 궁금하다는 것 — 넷을 앞에 세우고
+ * 그 다음에 «그건 예약하던 당시의 나다»로 갈라 놓았다.
+ *
+ * 그 말을 뒤에서 한 번 더 하고 있던 문단은 지웠다. 기대가 떨어졌다는 사실은
+ * 한 번만 필요하고, 두 번째는 앞의 요약이 된다.
  *
  * 형태가 내용이라 `display: 'stage'`를 쓴다. 이 기록에만 있는 것은 둘이다.
  *
@@ -249,7 +329,29 @@ export const sugarDropReason: Session = {
           <Passage>{itinerary}</Passage>
         </Scene>
 
+        {/* 여기부터 넷은 예약하던 날의 생각이다. 아직 무너지기 전. */}
+        <Scene>
+          <Passage>{flaw}</Passage>
+        </Scene>
+
+        <Scene pace="brisk">
+          <Passage>{discomfort}</Passage>
+
+          <Passage>{weathered}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{other}</Passage>
+        </Scene>
+
+        {/* 경첩. 예약하던 날의 생각과 당일의 생각이 여기서 갈라진다. */}
+        <Scene>
+          <Passage>{faded}</Passage>
+        </Scene>
+
         <Scene pace="fast">
+          <Passage>{mirror}</Passage>
+
           <Passage>{why}</Passage>
         </Scene>
 
@@ -325,12 +427,8 @@ export const sugarDropReason: Session = {
           <Passage>{legacy}</Passage>
         </Scene>
 
-        <Scene>
-          <Passage>{inspiration}</Passage>
-        </Scene>
-
         <Scene air>
-          <Passage>{expectation}</Passage>
+          <Passage>{inspiration}</Passage>
         </Scene>
       </TrainDrift>
 
@@ -368,6 +466,22 @@ export const sugarDropReason: Session = {
       <TrainDrift>
         <Scene pace="brisk">
           <Passage>{itinerary}</Passage>
+
+          <Passage>{flaw}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{discomfort}</Passage>
+
+          <Passage>{weathered}</Passage>
+
+          <Passage>{other}</Passage>
+        </Scene>
+
+        <Scene>
+          <Passage>{faded}</Passage>
+
+          <Passage>{mirror}</Passage>
 
           <Passage>{why}</Passage>
         </Scene>
@@ -428,10 +542,8 @@ export const sugarDropReason: Session = {
           <Passage>{legacy}</Passage>
         </Scene>
 
-        <Scene>
+        <Scene air>
           <Passage>{inspiration}</Passage>
-
-          <Passage>{expectation}</Passage>
         </Scene>
       </TrainDrift>
 
