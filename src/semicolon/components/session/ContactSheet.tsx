@@ -7,29 +7,9 @@ import {
   type PointerEvent,
 } from 'react'
 
-import type { Cover } from '../../content/types'
 import { useInView } from '../../motion/useInView'
+import type { Shot } from './media'
 import styles from './ContactSheet.module.css'
-
-/**
- * 한 칸에 들어가는 것.
- *
- * 영상도 사진과 같은 칸을 쓴다. 자리를 더 주지 않고 작은 표시 하나만 둔다 —
- * 그날 찍을 때도 사진과 영상을 구분해서 찍은 것이 아니라 그냥 계속 찍었다.
- *
- * 영상에는 자막이 따라온다. 여기 올라오는 영상은 대부분 소리가 내용의
- * 절반이라, 소리를 못 듣는 사람에게 그 칸이 «움직이는 사진»으로 줄어든다.
- * «[무대 음악]» 한 줄짜리 vtt라도 있어야 무엇이 들리고 있었는지는 전해진다.
- * 그래서 선택 항목으로 두지 않고 타입이 같이 요구한다.
- */
-export type Shot = Cover & {
-  video?: {
-    /** 영상 파일의 주소. src는 이 영상의 첫 프레임 또는 대표 화면이 된다. */
-    src: string
-    /** 자막 파일(.vtt)의 주소. */
-    captions: string
-  }
-}
 
 type Props = {
   shots: readonly Shot[]

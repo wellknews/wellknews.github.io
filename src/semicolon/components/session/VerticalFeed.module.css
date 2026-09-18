@@ -1,0 +1,189 @@
+/*
+ * 한 장이 한 화면을 갖는다.
+ *
+ * 격자도 목록도 아니다. 세로로 내려가는 동안 한 번에 하나만 눈에 들어오고,
+ * 다음 장은 그다음 화면에 있다. 여기서 «한 번에 한 장»을 만드는 것은
+ * 스크립트가 아니라 높이다.
+ */
+.feed {
+  display: grid;
+  /*
+   * 판면의 여백은 지킨다.
+   *
+   * 이 구간은 Scene 밖에 놓이므로 자기 여백을 스스로 가져야 한다. 없으면
+   * 좁은 화면에서 사진도 아래의 숫자도 화면 양쪽 끝에 그대로 닿는다.
+   * 실제로 그랬다 — 숏폼 앱은 가장자리까지 쓰지만 여기는 세미콜론 안의
+   * 피드라, 이 지면에서 무언가가 화면 끝에 닿는 일은 없다.
+   */
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  padding-inline: var(--page-x);
+  list-style: none;
+}
+
+.slot {
+  display: grid;
+  place-items: center;
+  /*
+   * 한 장이 쓰는 화면.
+   *
+   * 100vh를 주지 않는다. 화면을 꽉 채우면 위아래로 무엇이 더 있는지가
+   * 사라져서 페이지가 아니라 뷰어가 되고, 모바일 주소창이 접히고 펴질 때마다
+   * 자리가 한 번씩 튄다. 조금 모자라게 두면 다음 장의 머리가 늘 보인다.
+   */
+  min-height: 84svh;
+  padding-block: clamp(16px, 3vh, 40px);
+}
+
+.card {
+  display: grid;
+  row-gap: clamp(10px, 1.6vw, 16px);
+  /*
+   * 판면.
+   *
+   * 스마트폰 폭까지 좁히지 않는다. 이 지면은 휴대폰을 그리는 것이 아니라
+   * 자기 판면 안에서 잠깐 다른 문법을 쓰는 것이고, 520px 아래로 내려가면
+   * 사진이 아니라 «작게 만든 화면»으로 보인다.
+   */
+  width: min(100%, 560px);
+  margin: 0;
+  justify-items: start;
+}
+
+/*
+ * 사진.
+ *
+ * 9:16으로 자르지 않는다. 숏폼의 비율을 흉내 내려고 실제 기록을 잘라내면
+ * 그 순간 이 사진들은 그날 찍힌 것이 아니라 이 연출에 맞춰진 것이 된다.
+ * 세로 사진은 세로대로, 가로 사진은 가로대로 제 비율을 지킨다.
+ */
+.media {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* 한 화면을 넘지 않는다. 넘으면 한 장을 보는 데도 스크롤이 필요해진다. */
+  max-height: 68svh;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+}
+
+.said {
+  display: grid;
+  row-gap: 6px;
+}
+
+.count {
+  color: var(--color-text-muted);
+  letter-spacing: 0.24em;
+}
+
+/*
+ * 사진 옆의 한마디.
+ *
+ * 설명문이 아니다. 무엇이 찍혀 있는지는 사진과 alt가 말하고, 여기 적히는
+ * 것은 그때 든 생각이다. 그래서 캡션의 글자체가 아니라 본문의 글자체를 쓴다.
+ */
+.note {
+  max-width: 28ch;
+  color: var(--color-text);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+/*
+ * 지나가는 방식.
+ *
+ * 들어올 때 아래에서 조금 올라오며 또렷해지고, 나갈 때 위로 조금 빠지며
+ * 흐려진다. 그게 전부다 — 회전도, 뒤집기도, 확대도, 깜빡임도 쓰지 않는다.
+ * 이 구간에서 이상해야 하는 것은 화면이 아니라 사진과 문장의 낙차다.
+ *
+ * 기본은 그냥 보이는 상태다. 타임라인을 모르는 화면과 움직임을 줄이기로 한
+ * 사람에게는 사진이 세로로 늘어선 목록이 된다. 한 장도 빠지지 않는다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .card {
+      animation-name: feed-pass;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+  }
+}
+
+@keyframes feed-pass {
+  0% {
+    opacity: 0;
+    translate: 0 6%;
+  }
+
+  26% {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  74% {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  100% {
+    opacity: 0;
+    translate: 0 -5%;
+  }
+}
+
+/*
+ * 작은 판면.
+ *
+ * 화면 폭을 적극적으로 쓰되 가장자리에 붙이지는 않는다. 이 공간에서 무언가가
+ * 화면 끝에 닿는 일은 없고, 그것은 사진도 같다. 여기는 숏폼 앱이 아니라
+ * 세미콜론 안의 피드다.
+ */
+@media (max-width: 599px) {
+  .slot {
+    min-height: 78svh;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .media {
+    max-height: 62svh;
+  }
+
+  /* 밀리는 폭을 낮춘다. 좁은 화면에서 6%는 화면 전체가 한 번 흔들리는 일이다. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .card {
+        animation-name: feed-pass-small;
+      }
+    }
+  }
+}
+
+@keyframes feed-pass-small {
+  0% {
+    opacity: 0;
+    translate: 0 2.5%;
+  }
+
+  26% {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  74% {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  100% {
+    opacity: 0;
+    translate: 0 -2%;
+  }
+}

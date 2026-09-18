@@ -1,5 +1,4 @@
 import { Aperture } from '../../components/session/Aperture'
-import { ContactSheet, type Shot } from '../../components/session/ContactSheet'
 import { Daybook, type Stop } from '../../components/session/Daybook'
 import { Descent } from '../../components/session/Descent'
 import { Dropout } from '../../components/session/Dropout'
@@ -19,7 +18,9 @@ import { Stretch } from '../../components/session/Stretch'
 import { Trace } from '../../components/session/Trace'
 import { Unfinished } from '../../components/session/Unfinished'
 import { Unvisited } from '../../components/session/Unvisited'
+import { VerticalFeed } from '../../components/session/VerticalFeed'
 import { Wait } from '../../components/session/Wait'
+import type { FeedShot } from '../../components/session/media'
 import type { Cover, Session } from '../types'
 
 /* ─────────────────────────────  사진  ─────────────────────────────
@@ -82,11 +83,16 @@ const stairwell: Cover | null = null
 /**
  * 지하돌 구간의 기록.
  *
- * 여기부터는 한 장씩 고르지 않는다. 그날 찍은 것을 그대로 늘어놓는 자리라
- * 배열의 길이 자체가 이 구간의 내용이다. 영상은 video에 주소를 적으면 같은
- * 칸을 쓴다.
+ * 한 장씩 본다. 격자에 늘어놓지 않고 한 장이 한 화면을 갖는다 — 무대에 선
+ * 사람들의 첫인상이 숏폼에서 보던 얼굴에 가까웠고, 그 사진을 다시 보는
+ * 방식도 그쪽의 문법을 잠깐 가져오기 때문이다(VerticalFeed).
+ *
+ * note는 사진 설명이 아니라 그때 든 생각이다. 전부 붙이지 않는다 — 두세
+ * 장이면 충분하고, 모든 장에 문장이 달리면 보는 일이 읽는 일로 바뀐다.
+ *
+ * 영상은 video에 주소와 자막을 적으면 같은 자리를 쓴다.
  */
-const underground: readonly Shot[] = []
+const underground: readonly FeedShot[] = []
 
 /* ─────────────────────────────  아침의 표  ─────────────────────────────
  *
@@ -401,13 +407,205 @@ const lucky = (
 /* 한 계단에 한 줄. 문장을 끊은 자리가 곧 계단의 수다. */
 const descent = ['그렇게', '계단을', '내려갔다.'] as const
 
+/*
+ * 기록의 모양이 달라지는 자리.
+ *
+ * 한동안 이 자리에 «사진을 여러 장 올릴 수 있는 구조가 필요했다»가 적혀
+ * 있었다. 그건 이 지면을 만들면서 한 생각이지 그날 지하에서 한 생각이
+ * 아니다. 만드는 사람의 메모가 본문에 서 있으면 읽는 사람은 갑자기 기록이
+ * 아니라 작업 로그를 읽게 된다. 그날 실제로 있었던 일만 남긴다 — 찍어 둔
+ * 것이 갑자기 많아졌다는 것.
+ */
 const changing = (
   <>
-    <p>그리고 여기서부터는 기록의 모양이 달라진다.</p>
-    <p>지하돌 때는 의외로 사진이 많았다.</p>
-    <p>앞부분처럼 사진 한 장을 골라놓고 글 하나를 붙이는 방식으로는 안 될 것 같았다.</p>
-    <p>사진을 여러 장 올릴 수 있는 구조가 필요했다.</p>
-    <p>여기서부터는 글뿐 아니라 보여주는 방식도 바뀌어야 한다.</p>
+    <p>지하로 내려간 뒤부터 사진이 갑자기 많아졌다.</p>
+    <p>한 장씩 골라 글을 붙이기에는 찍어 둔 것이 너무 많았다.</p>
+  </>
+)
+
+/* ─────────────────────────────  지하  ─────────────────────────────
+ *
+ * 이 하루에서 두 번째로 이름이 틀리는 자리다.
+ *
+ * 앞에서는 «이 감정은 벌이다»가 «오기»로 고쳐졌고, 여기서는 «기괴하고
+ * 퇴폐적인 사람들이 모인 곳»이 «생각보다 그냥 평범했다»로 고쳐진다. 그
+ * 구조를 문장으로 설명하지 않는다 — 두 번 다 같은 모양으로 일어났다는 것은
+ * 끝까지 읽은 사람이 알아채면 되는 것이고, 적어 버리면 알아챌 일이 없어진다.
+ *
+ * 그래서 반성도 교훈도 붙이지 않는다. 그날 남은 것은 «편견을 버려야 한다»가
+ * 아니라 «내 예상이 틀렸다» 하나다.
+ */
+
+const expecting = (
+  <>
+    <p>그런 생각으로 나는 지하돌 콘서트를 간 거였다.</p>
+  </>
+)
+
+/*
+ * 들어가기 전에 그리고 있던 얼굴.
+ *
+ * 순화하지 않는다. 이 세 낱말이 순해지면 뒤에 오는 «생각보다 너무 멀쩡했다»가
+ * 아무것도 뒤집지 못한다. 뒤집히는 것은 현실이 아니라 여기 적힌 예상이고,
+ * 예상이 과장되어 있었다는 사실이 이 구간의 내용이다.
+ */
+const slur = (
+  <>
+    <p>안경.</p>
+    <p>여드름.</p>
+    <p>돼지.</p>
+  </>
+)
+
+const wanted = (
+  <>
+    <p>멸칭으로는 안여돼.</p>
+    <p>나는 그들을 보고 싶었다.</p>
+  </>
+)
+
+const imagined = (
+  <>
+    <p>솔직히 일본 서브컬처의 퇴폐적이고 충동적이고, 현실 감각 없는 이들을 예상하고 있었다.</p>
+    <p>그런 사람들이 모인 곳을 직접 보고 싶었다.</p>
+  </>
+)
+
+const looking = (
+  <>
+    <p>그런데 막상 갔을 때, 입장 전 대기하는 동안 멋쩍게 주변을 둘러봤는데</p>
+    <p>그다지 심각한 수준의 모멸 인생이 없었다.</p>
+  </>
+)
+
+const different = (
+  <>
+    <p>생각했던 것과 조금 달랐다.</p>
+  </>
+)
+
+const patched = (
+  <>
+    <p>일본 서브컬처에서 연상되는 퇴폐적이고 충동적인, 현실 감각 없는 사람들을 예상했는데</p>
+    <p>그런 시초로 한국에 들여온 이 문화가 한국 패치가 된 건지</p>
+    <p>사람도 순둥하고 공연장도 쾌적했다.</p>
+  </>
+)
+
+const naming = (
+  <>
+    <p>굳이 지하 아이돌이라는 뭔가 네거티브한 표현을 그대로 써야 하나 싶을 정도였다.</p>
+  </>
+)
+
+const hall = (
+  <>
+    <p>공간 자체는 협소했다.</p>
+    <p>그런데 바닥 마감부터 벽면, 오디오, 무대 같은 시설은 깔끔했다. 직원들도 친절했다.</p>
+    <p>내가 상상했던 눅눅하고 음침하고 이상한 지하 공간과는 조금 거리가 있었다.</p>
+    <p>출연자들도 그렇게 기이하다고 느껴지지 않았다.</p>
+  </>
+)
+
+const impression = (
+  <>
+    <p>지하 아이돌들을 보고 느낀 첫인상은</p>
+  </>
+)
+
+/* 피드로 들어가는 문. 이 한 줄이 뒤에 오는 사진을 보는 방식을 정한다. */
+const tiktok = (
+  <>
+    <p>외모는 틱톡 인플루언서 같다는 것이었다.</p>
+  </>
+)
+
+const otaku = (
+  <>
+    <p>
+      내가 지하 아이돌이라는 단어에서 상상했던 이미지와는 꽤 달랐다. 외형만 놓고 보면 요즘 숏폼
+      플랫폼에서 볼 법한 틱톡 스타 같은 느낌에 가까웠다.
+    </p>
+    <p>
+      다만 노래나 춤, 무대에서 느껴지는 분위기는 달랐다. 그 부분에서는 확실히 오타쿠 무드가 짙게
+      느껴졌다.
+    </p>
+    <p>
+      외형은 틱톡 스타 같고, 공연이 시작되면 오타쿠 서브컬처의 분위기가 다시 나타나는 느낌이었다.
+    </p>
+  </>
+)
+
+/*
+ * 관객.
+ *
+ * 앞의 두 문단이 상상이고 뒤의 두 문단이 실제다. 순서를 바꾸지 않는다 —
+ * 실제를 먼저 적으면 뒤의 상상이 실제에 대한 평가가 되어 버린다. 상상이
+ * 먼저 서 있어야 그다음 문단이 그 상상을 무너뜨린다.
+ *
+ * 결론을 다른 미적 평가로 갈아타지 않는다. «잘생겼다»도 «못생기지 않았다»도
+ * 아니고 그냥 평범했다.
+ */
+const supposed = (
+  <>
+    <p>그녀들의 팬인 관객도 마찬가지였다.</p>
+    <p>
+      내가 상상했던 것은 달 표면같은 씹창난 피부와 무너져 내린 이목구비를 가진, 절망의 현존에 가까운
+      사람들이었다.
+    </p>
+  </>
+)
+
+const actual = (
+  <>
+    <p>그런데 실제로는 그 정도는 아니었다.</p>
+    <p>
+      길 가다가 만났다면 이 사람이 지하 아이돌을 보러 가는 사람이겠구나 하고 유추하기 어려울 정도로
+      평범한 외모였다.
+    </p>
+  </>
+)
+
+const ordinary = (
+  <>
+    <p>그러니까 앞에서 혼자 생각했던 내용과는 무관하게 그냥 일반적이었다고 해야 하나.</p>
+  </>
+)
+
+const friday = (
+  <>
+    <p>내가 공연을 본 건 마지막 타임까지는 아니었다.</p>
+    <p>오늘은 금요일이었다.</p>
+    <p>공연이 시작되고 시간이 지나면서 퇴근한 사람들이 들어오기 시작했다.</p>
+  </>
+)
+
+const crowding = (
+  <>
+    <p>사람이 점점 늘어났다.</p>
+    <p>원래도 넓은 공연장은 아니었는데 사람이 계속 들어오니까 좁은 공간의 밀도가 확 올라갔다.</p>
+    <p>나는 대략 오후 8시쯤 나왔다.</p>
+  </>
+)
+
+const notBoring = (
+  <>
+    <p>공연이 재미없어서 나온 건 아니었다.</p>
+    <p>그냥 좁은 공간에 사람이 너무 많아져서 나왔다.</p>
+  </>
+)
+
+const nothing = (
+  <>
+    <p>지하 아이돌도 내가 생각했던 만큼 기이하지 않았다.</p>
+    <p>공연장도 생각보다 깔끔했다. 직원들도 친절했다. 관객도 평범했다.</p>
+    <p>그리고 출연자들은 오히려 틱톡 인플루언서처럼 보였다.</p>
+  </>
+)
+
+const elsewhere = (
+  <>
+    <p>내가 생각하는 족속은 좀 더 찾기 어려운 곳에 있을지도 모른다는 생각이 들었다.</p>
   </>
 )
 
@@ -682,8 +880,96 @@ export const pushedUnderground: Session = {
         </Descent>
       </Scene>
 
-      {/* 여기서 판면의 규칙이 풀린다. 본문 폭을 지키던 것이 좌우로 퍼진다. */}
-      <ContactSheet shots={underground} label="아틀리에홀 지하 1층" />
+      {/*
+        지하.
+
+        판면이 다시 열린다. 계단에서 한 단계씩 좁아졌던 폭이 여기서 원래대로
+        돌아오고, 그 뒤로는 이 기록이 내내 써 온 평범한 문법이 이어진다.
+        그것이 이 구간의 내용이기도 하다 — 기괴할 것이라고 생각한 자리에서
+        지면이 하는 일이 하나도 특별해지지 않는다.
+      */}
+      <Scene air>
+        <Passage>{expecting}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{slur}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{wanted}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{imagined}</Passage>
+      </Scene>
+
+      {/* 공연이 시작되기도 전에 예상과 현실이 갈라진다. 앞뒤를 크게 비운다. */}
+      <Scene air>
+        <Passage>{looking}</Passage>
+
+        <Passage>{different}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{patched}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{naming}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{hall}</Passage>
+      </Scene>
+
+      {/* 피드로 들어가는 문. 이 한 줄이 뒤에 오는 사진을 보는 방식을 정한다. */}
+      <Scene air>
+        <Passage>{impression}</Passage>
+
+        <Passage tone="loud">{tiktok}</Passage>
+      </Scene>
+
+      {/* 격자가 아니라 한 장씩. 근거는 사진의 수가 아니라 바로 위의 한 줄이다. */}
+      <VerticalFeed shots={underground} label="아틀리에홀에서 찍은 지하돌" />
+
+      <Scene>
+        <Passage>{otaku}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{supposed}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{actual}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{ordinary}</Passage>
+      </Scene>
+
+      {/* 사람이 늘어나는 만큼 장면 사이가 좁아진다. 읽기가 어려워지지는 않는다. */}
+      <Scene pace="brisk">
+        <Passage>{friday}</Passage>
+      </Scene>
+
+      <Scene pace="fast">
+        <Passage>{crowding}</Passage>
+      </Scene>
+
+      <Scene pace="fast">
+        <Passage>{notBoring}</Passage>
+      </Scene>
+
+      {/* 밖으로 나왔다. 지면이 다시 열린다. */}
+      <Scene pace="brisk">
+        <Passage>{nothing}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage>{elsewhere}</Passage>
+      </Scene>
     </>
   ),
 
@@ -891,7 +1177,73 @@ export const pushedUnderground: Session = {
         </Descent>
       </Scene>
 
-      <ContactSheet shots={underground} label="아틀리에홀 지하 1층" />
+      <Scene air>
+        <Passage>{expecting}</Passage>
+
+        <Passage>{slur}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{wanted}</Passage>
+
+        <Passage>{imagined}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage>{looking}</Passage>
+
+        <Passage>{different}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{patched}</Passage>
+
+        <Passage>{naming}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{hall}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage>{impression}</Passage>
+
+        <Passage tone="loud">{tiktok}</Passage>
+      </Scene>
+
+      <VerticalFeed shots={underground} label="아틀리에홀에서 찍은 지하돌" />
+
+      <Scene>
+        <Passage>{otaku}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{supposed}</Passage>
+
+        <Passage>{actual}</Passage>
+      </Scene>
+
+      <Scene>
+        <Passage>{ordinary}</Passage>
+      </Scene>
+
+      <Scene pace="brisk">
+        <Passage>{friday}</Passage>
+
+        <Passage>{crowding}</Passage>
+      </Scene>
+
+      <Scene pace="fast">
+        <Passage>{notBoring}</Passage>
+      </Scene>
+
+      <Scene pace="brisk">
+        <Passage>{nothing}</Passage>
+      </Scene>
+
+      <Scene air>
+        <Passage>{elsewhere}</Passage>
+      </Scene>
     </>
   ),
 }
