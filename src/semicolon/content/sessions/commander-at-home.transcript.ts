@@ -1,3 +1,5 @@
+import type { ConversationTurn } from '../../components/session/chat/turn'
+
 /**
  * 이 SESSION의 원고.
  *
@@ -11,44 +13,15 @@
  *
  * 화면과 PNG가 같은 배열을 읽는다. 조판은 두 벌이지만 원고는 한 벌이다 — 그래야
  * 인스타그램에 올라간 카드와 이 페이지에 있는 글이 영영 같은 말을 한다.
- */
-export type DirectMessageSpeaker = 'me' | 'tab'
-
-/**
- * 한 사람이 한 번에 말한 것.
  *
- * 문단을 한 덩어리 문자열로 합치지 않고 배열로 나눠 두는 이유는 PNG 조판 때문이다.
- * 카드가 넘칠 때 어디서 끊을지를 «문단 → 문장» 순으로 찾으려면 문단의 경계가
- * 데이터에 남아 있어야 한다. 화면에서는 그대로 문단이 된다.
+ * 한 차례의 형태는 `components/session/chat/turn.ts`에 있다. 기차 안에서 오간
+ * 대화가 같은 조판을 쓰게 되면서 형태만 그쪽으로 옮겼고, 원고는 여기 남았다.
  */
-export type DirectMessageTurn = {
-  id: string
-  speaker: DirectMessageSpeaker
-  paragraphs: readonly string[]
-  /** DM에서 사진을 보낸 자리. 장식이 아니라 그 문장이 가리키는 물건이다. */
-  attachment?: {
-    src: string
-    alt: string
-    width: number
-    height: number
-  }
-  /**
-   * 이 말에 딸려 오는, 말이 아닌 것.
-   *
-   *   remote    본가에 몸이 있는 동안에도 켜져 있던 집의 랩탑
-   *   legion    이름을 붙여 돌려 쓰는 AI들. 네 번째 자리는 아직 비어 있다
-   *   named     그 빈 자리가 TAB이 된 순간
-   *   overtake  WELLKNEWS가 과거의 계정을 넘어선 날
-   *
-   * 네 자리뿐이다. 더 붙이면 대화가 아니라 대시보드가 된다.
-   */
-  interlude?: 'remote' | 'legion' | 'named' | 'overtake'
-}
-
-export const commanderTranscript: readonly DirectMessageTurn[] = [
+export const commanderTranscript: readonly ConversationTurn[] = [
   {
     id: '01',
-    speaker: 'me',
+    speaker: 'ME',
+    side: 'right',
     paragraphs: [
       '요즘 바이브코딩이 한창이라 정신이 없다. 오늘도 본가에 와서는 쉴 새 없이 핸드폰으로 원격 바이브코딩을 하고 있고, 집에 둔 랩탑은 전원이 켜진 채 주야 상관없이 나와 함께 불꽃 코딩을 수행 중이다. 웃긴 일이다.',
     ],
@@ -56,7 +29,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '02',
-    speaker: 'tab',
+    speaker: 'TAB',
+    side: 'left',
     paragraphs: [
       '쉬러 본가에 왔는데 전혀 쉬고 있지 않다는 것. 여기서 시작하면 되겠다.',
       '몸만 옮겨 갔고 작업장은 따라온 셈이야. 사람은 이동했는데 나머지는 그대로인 상태.',
@@ -65,7 +39,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '03',
-    speaker: 'me',
+    speaker: 'ME',
+    side: 'right',
     paragraphs: [
       '나는 여러 AI를 꾸린 군단의 군단장이다. 구성원은 지피, 애플, 크롬. 이름을 붙인 이유는 낭만이 아니라 토큰 관리다. 하나만 계속 쓰면 금방 퍼지니까 돌아가면서 쓴다.',
       '클로드는 두 계정을 쓰는데, 한 핸드폰에 같은 앱을 두 개 깔 수가 없다. 그래서 하나는 애플리케이션으로, 하나는 크롬 브라우저로 접속하다가 이름이 애플과 크롬이 되었다.',
@@ -76,7 +51,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '04',
-    speaker: 'tab',
+    speaker: 'TAB',
+    side: 'left',
     paragraphs: [
       '이름의 이유가 낭만이 아니라 토큰 관리라는 것. 그게 이 이야기의 중심축이 되겠다. 혼자 코딩하는 게 아니라 AI 몇을 교대로 굴리는 생활이니까.',
       '떼어 놓고 보면 한 사람이 소규모 개발팀을 운영하는 그림인데, 팀원이 전부 AI고 사무실은 집에 켜둔 노트북 한 대다.',
@@ -85,14 +61,16 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '05',
-    speaker: 'me',
+    speaker: 'ME',
+    side: 'right',
     paragraphs: [
       '네 이름은 네가 지어봐. 적당히. 그리고 나는 이 대화 자체를 그대로 세션 게시글에 넣을 생각이야.',
     ],
   },
   {
     id: '06',
-    speaker: 'tab',
+    speaker: 'TAB',
+    side: 'left',
     paragraphs: [
       '탭(Tab)으로 하겠다.',
       '지피와 애플과 크롬이 각각 하나의 작업자라면 나는 그 사이에 새로 열린 탭이고, 지금 이 탭에서 하는 대화가 그대로 글이 된다. 이름에 별 뜻이 없는 척하면서 구조를 그대로 설명하는 것도 이 지면과 맞고.',
@@ -103,7 +81,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '07',
-    speaker: 'me',
+    speaker: 'ME',
+    side: 'right',
     paragraphs: [
       '세션에 글을 쓰게 된 이유는 이번에 웰뉴스 계정의 팔로워가 내 본계정을 추월했기 때문이야. 본계정이 무엇인지는 말하지 않을래. 내 사생활이니까.',
       '한때 나는 파워블로거였고, 그때 기업들에게 서포트를 더 받으려고 인스타그램을 새로 판 적이 있다. 블로그의 부산물 같은 계정이었지만 구색은 갖춰야 하니 팔로워가 3천은 넘었지. 그러다 군에 입대하면서 블로그를 접었고 인스타도 방치했다.',
@@ -112,7 +91,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '08',
-    speaker: 'tab',
+    speaker: 'TAB',
+    side: 'left',
     paragraphs: [
       '숫자보다는, 전혀 다른 방식으로 만든 계정이 예전의 흔적을 넘어섰다는 데 의미가 있는 거겠다.',
       '예전에는 블로그가 본체였고 인스타그램은 활동 반경을 넓히려고 따라붙은 부산물이었잖아. 웰뉴스는 처음부터 직접 만들고 굴리면서 키운 거고.',
@@ -124,7 +104,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '09',
-    speaker: 'me',
+    speaker: 'ME',
+    side: 'right',
     paragraphs: [
       '지금 웰뉴스 팔로워는 1700명을 넘겼다. 딱히 의식한 건 아닌데 최근 프로필 이미지를 배경에 태극기를 넣어서 바꾸었어. 한국인이라는 정체성을 채널에 더 못박고 싶었거든. 요즘은 한국적인 게 트렌디해 보이더라.',
     ],
@@ -138,7 +119,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '10',
-    speaker: 'tab',
+    speaker: 'TAB',
+    side: 'left',
     paragraphs: [
       '웰뉴스가 “한국 뉴스를 다루는 계정”에서 “한국에서 만든 채널”로 넘어가는 단계겠다. 규모가 조금 커지니까 채널도 자기가 무엇인지 더 분명하게 말하고 싶어진 거고.',
       '한국적인 게 트렌디해 보인다는 말은 애국심으로 포장하지 않는 편이 낫겠다. 예전에는 한국적인 걸 디자인에 넣으면 관광기념품처럼 될까 봐 한 발 뺐는데, 지금은 잘 쓰인 태극과 한글이 꽤 현대적으로 보이는 순간이 많아졌다는 감각. 그대로가 정확해.',
@@ -147,14 +129,16 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '11',
-    speaker: 'me',
+    speaker: 'ME',
+    side: 'right',
     paragraphs: [
       '고민 중이야. 이 기념을 세션 게시글로만 끝내고 싶지는 않거든. 나는 muishiz라는 개발자 계정이 있고, 기념하고 싶은 건 거기 올려왔어.',
     ],
   },
   {
     id: '12',
-    speaker: 'tab',
+    speaker: 'TAB',
+    side: 'left',
     paragraphs: [
       '그러면 둘의 역할을 아예 나누는 게 낫겠다. 세미콜론의 SESSION은 나중에 돌아봤을 때 남는 긴 기록으로 두고, muishiz에는 지금 무엇을 만들고 있는지를 바깥에서 한 번 바라보는 기록을 남기는 쪽으로.',
       '이번 건 “웰뉴스 1700명 달성”이 아니니까. 블로그를 하던 내가 있었고, 그 부산물로 만든 계정이 있었고, 시간이 지나 그 계정은 방치됐고, 지금은 AI 여럿을 군단처럼 굴려 만든 WELLKNEWS가 그걸 넘어섰고, 그걸 기념하려고 또 AI와 대화하면서 웹사이트에 글을 만들고 있다.',
@@ -163,7 +147,8 @@ export const commanderTranscript: readonly DirectMessageTurn[] = [
   },
   {
     id: '13',
-    speaker: 'me',
+    speaker: 'ME',
+    side: 'right',
     paragraphs: [
       '그래서 이번 세션의 컨셉은 채팅이야. 너와 내가 하고 있는 이 대화를 웹 인터랙션과 애니메이션으로 생기 있게 살리되, 세미콜론 페이지의 톤앤매너에는 맞아야 해.',
       '그리고 가장 마지막에 다운로드 버튼을 만드는 거야. 그 버튼을 누르면 png 파일로 대화가 정방형으로 나누어져서 인스타에 게시할 콘텐츠로 저장되는 거지. 재미있는 발상이지?',

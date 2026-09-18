@@ -33,19 +33,32 @@
   row-gap: 12px;
 }
 
-.message[data-side='me'] {
+.message[data-side='right'] {
   justify-items: end;
   justify-self: end;
 }
 
-.message[data-side='tab'] {
+.message[data-side='left'] {
   justify-items: start;
   justify-self: start;
 }
 
+/*
+ * 누가 말했는가.
+ *
+ * 이 한 줄만 기준선에서 벗어날 수 있다. 기차 안의 대화에서는 원인을 알아내기
+ * 전까지 보조 정보가 제자리에 앉지 못하는데, 그 값을 내보내는 것은 바깥의
+ * TrainDrift이고 여기서는 받아 쓰기만 한다. 그 바깥에 놓인 대화에서는
+ * 기본값 0이라 아무 일도 일어나지 않는다.
+ *
+ * 흔들리는 것이 이름표뿐인 이유는, 말 자체가 흔들리면 읽는 사람의 눈이
+ * 대신 피곤해지기 때문이다. 정렬이 어긋난 것과 글이 안 읽히는 것은 다르다.
+ */
 .speaker {
   margin: 0;
   color: var(--color-text-muted);
+  translate: 0 var(--drift-off, 0px);
+  transition: translate var(--dur-slow) var(--ease-out);
 }
 
 /*
@@ -62,8 +75,8 @@
   background: rgb(255 255 255 / 0.5);
 }
 
-/* 내 말은 종이에 한 번 눌린 자리처럼 둔다. 선 대신 농도로 구분한다. */
-.message[data-side='me'] .bubble {
+/* 오른쪽에 앉는 말은 종이에 한 번 눌린 자리처럼 둔다. 선 대신 농도로 구분한다. */
+.message[data-side='right'] .bubble {
   border-color: transparent;
   background: rgb(17 17 17 / 0.05);
 }

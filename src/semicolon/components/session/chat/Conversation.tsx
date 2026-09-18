@@ -1,9 +1,11 @@
-import type { DirectMessageTurn } from '../../../content/sessions/commander-at-home.transcript'
 import { Interlude } from './Interlude'
+import type { ConversationTurn } from './turn'
 import styles from './Conversation.module.css'
 
 type Props = {
-  transcript: readonly DirectMessageTurn[]
+  turns: readonly ConversationTurn[]
+  /** 화면을 못 보는 사람에게 이 판면이 무엇인지. «ME와 TAB이 나눈 대화». */
+  label: string
 }
 
 /**
@@ -11,7 +13,7 @@ type Props = {
  *
  * 한 사람이 한 번에 보낸 것을 통째로 하나의 자리에 둔다. 말풍선과 사진과
  * 상태가 각각 다른 규칙으로 앉으면 페이지는 채팅이다가 도판이다가 다시
- * 채팅이 되는데, 이 기록에서는 형태가 곧 내용이라 그 흔들림이 곧 내용의
+ * 채팅이 되는데, 이 조판에서는 형태가 곧 내용이라 그 흔들림이 곧 내용의
  * 흔들림이다. 여기서 정하는 것은 좌우와 폭 하나뿐이고, 안에 무엇이 들어오든
  * 그것을 따른다.
  *
@@ -20,12 +22,10 @@ type Props = {
  * 여기서 하는 일은 스크롤을 따라 한 덩어리가 조용히 자리를 잡는 것뿐이고,
  * 그 진행도는 시간이 아니라 스크롤 위치가 쥐고 있다(Conversation.module.css).
  */
-function Message({ turn }: { turn: DirectMessageTurn }) {
-  const mine = turn.speaker === 'me'
-
+function Message({ turn }: { turn: ConversationTurn }) {
   return (
-    <article className={styles.message} data-side={mine ? 'me' : 'tab'}>
-      <p className={`mono ${styles.speaker}`}>{mine ? 'ME' : 'TAB'}</p>
+    <article className={styles.message} data-side={turn.side}>
+      <p className={`mono ${styles.speaker}`}>{turn.speaker}</p>
 
       <div className={styles.bubble}>
         {turn.paragraphs.map((paragraph, index) => (
@@ -55,9 +55,9 @@ function Message({ turn }: { turn: DirectMessageTurn }) {
 }
 
 /**
- * ME와 TAB이 주고받은 것.
+ * 두 사람이 주고받은 것.
  *
- * 이 기록의 본문은 대화를 옮겨 쓴 글이 아니라 대화 자체다. 그래서 문단을
+ * 어떤 기록의 본문은 대화를 옮겨 쓴 글이 아니라 대화 자체다. 그래서 문단을
  * 이어 붙인 판면 대신 좌우로 갈라진 판면을 쓴다 — 누가 말했는지가 내용의
  * 일부인 글에서, 말한 사람을 문장 앞의 이름표로만 남기면 그 사실이 조판에서
  * 사라진다.
@@ -65,12 +65,17 @@ function Message({ turn }: { turn: DirectMessageTurn }) {
  * DM의 형태를 빌리되 그 앱의 외양을 옮겨 오지는 않는다. 남기는 것은 좌우와
  * 연속과 첨부뿐이고, 둥근 꼬리·그림자·브랜드 색은 가져오지 않는다. 이 페이지는
  * 메신저의 스크린샷이 아니라 SEMICOLON의 한 편이어야 한다.
+ *
+ * 누구와의 대화인지는 여기서 정하지 않는다. 처음에는 ME와 TAB만 알고 있었고
+ * 그래서 이름이 조판 안에 박혀 있었는데, 기차에서 JIPPY와 한 대화가 들어오자
+ * 그 두 글자가 그대로 걸림돌이 되었다. 이름과 좌우는 원고가 들고 오고, 이
+ * 파일은 그 둘을 판면에 앉히는 일만 한다.
  */
-export function Conversation({ transcript }: Props) {
+export function Conversation({ turns, label }: Props) {
   return (
-    <section className={styles.thread} aria-label="ME와 TAB이 나눈 대화">
+    <section className={styles.thread} aria-label={label}>
       <ol className={styles.turns}>
-        {transcript.map((turn) => (
+        {turns.map((turn) => (
           <li key={turn.id}>
             <Message turn={turn} />
           </li>

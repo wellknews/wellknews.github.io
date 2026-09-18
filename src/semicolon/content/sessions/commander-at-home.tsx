@@ -60,7 +60,7 @@ export const commanderAtHome: Session = {
   body: (
     <>
       <Scene>
-        <Conversation transcript={commanderTranscript} />
+        <Conversation turns={commanderTranscript} label="ME와 TAB이 나눈 대화" />
       </Scene>
 
       {/* 대화와 버튼 사이의 침묵. 붙으면 버튼이 페이지의 꼬리가 된다. */}

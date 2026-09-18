@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import type { DirectMessageTurn } from '../../../content/sessions/commander-at-home.transcript'
+import type { ConversationTurn } from './turn'
 import styles from './ExportPanel.module.css'
 
 type Props = {
-  transcript: readonly DirectMessageTurn[]
+  transcript: readonly ConversationTurn[]
 }
 
 type State = 'idle' | 'rendering' | 'done' | 'failed'

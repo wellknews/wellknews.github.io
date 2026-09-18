@@ -8,6 +8,22 @@ type Props = {
   image: Cover
   /** 사진 아래에 붙는 아주 짧은 한마디. 설명문이 아니다. */
   note?: string
+  /**
+   * 손을 대기 전의 상태.
+   *
+   *   faded  기본. 채도와 대비가 한 단계 내려가 있다.
+   *   full   내려가지 않는다. 사진에 찍힌 색 자체가 그 기록의 내용일 때.
+   *
+   * 이 값이 생긴 이유는 어느 하루의 사실 때문이다. 성수의 기록에서 사진이
+   * 가라앉아 있는 것은 «그날 종일 흐렸고 사람은 지쳐 있었다»는 사실이지
+   * 이 공간의 사진 양식이 아니다. 기차의 기록에서 마지막에 놓이는 접시는
+   * 반대다 — 먹는 도중에 흰 크림과 자주색과 녹색이 섞여 버린 그 색이
+   * 그 장면의 전부라, 채도를 내리면 사진이 말하려던 것이 먼저 내려간다.
+   *
+   * 어느 쪽이든 사람이 보고 있는 자리가 제 색을 낸다는 것은 같다. 달라지는
+   * 것은 손을 대기 전이 어디에서 시작하는가뿐이다.
+   */
+  tone?: 'faded' | 'full'
 }
 
 /**
@@ -30,12 +46,12 @@ type Props = {
  * 지우는 것이 아니라 가라앉히는 것이다. 손을 대지 않아도 무엇이 찍혀 있는지는
  * 다 보인다. 사진을 못 보게 만들면서 반응을 얻는 것은 거래가 맞지 않는다.
  */
-export function Plate({ image, note }: Props) {
+export function Plate({ image, note, tone = 'faded' }: Props) {
   const hostRef = useRef<HTMLDivElement>(null)
   const light = usePointerLight(hostRef)
 
   return (
-    <figure className={styles.plate}>
+    <figure className={styles.plate} data-tone={tone}>
       <div className={styles.frame} ref={hostRef} data-lit="false" {...light}>
         <img
           className={styles.base}

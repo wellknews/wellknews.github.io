@@ -79,6 +79,11 @@ const SCREENS = [
  */
 const PAGES = [
   { name: 'home', path: '/', kind: 'home' },
+  {
+    name: 'session/sugar-drop-reason',
+    path: '/session/sugar-drop-reason',
+    kind: 'session',
+  },
   { name: 'session/wellknews-1k', path: '/session/wellknews-1k', kind: 'session' },
   { name: 'session/only-myself', path: '/session/only-myself', kind: 'session' },
   { name: 'session/divide-and-conquer', path: '/session/divide-and-conquer', kind: 'session' },

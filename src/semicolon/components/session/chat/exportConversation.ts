@@ -1,7 +1,4 @@
-import type {
-  DirectMessageSpeaker,
-  DirectMessageTurn,
-} from '../../../content/sessions/commander-at-home.transcript'
+import type { ConversationTurn } from './turn'
 
 /**
  * 대화를 인스타그램 캐러셀로 옮기는 일.
@@ -71,15 +68,24 @@ const ZIP_NAME = 'semicolon-commander-at-home-20260829.zip'
 
 /* ─────────────────────────────  조판  ───────────────────────────── */
 
-type TextBlock = {
+/**
+ * 한 덩어리가 누구의 말인지.
+ *
+ * 화면의 조판과 같은 것을 들고 다닌다 — 적히는 이름과 앉는 쪽. 이 둘을
+ * 하나로 합쳐 두었더니(«me면 오른쪽에 ME라고 적는다») 기차에서 JIPPY와 한
+ * 대화가 들어왔을 때 그 규칙이 통째로 막혔다. 이름은 원고가 말하고 자리는
+ * 원고가 정한다. 여기서는 받아 그린다.
+ */
+type Voice = Pick<ConversationTurn, 'speaker' | 'side'>
+
+type TextBlock = Voice & {
   kind: 'text'
-  speaker: DirectMessageSpeaker
   lines: string[]
   /** 이 줄 앞에서 문단이 바뀐다(블록 안에서의 상대 번호). */
   gaps: number[]
 }
 
-type ImageBlock = { kind: 'image'; speaker: DirectMessageSpeaker; src: string }
+type ImageBlock = Voice & { kind: 'image'; src: string }
 
 type Block = TextBlock | ImageBlock
 
@@ -241,7 +247,7 @@ function speak(ctx: CanvasRenderingContext2D, paragraphs: readonly string[]): Sp
  * 남은 자리에는 다음 말이 이어 앉는다. 말마다 새 장을 주면 카드가 대화의 두
  * 배로 늘어나고, 캐러셀에 올릴 수 있는 장 수를 금방 넘긴다.
  */
-function layout(ctx: CanvasRenderingContext2D, transcript: readonly DirectMessageTurn[]): Card[] {
+function layout(ctx: CanvasRenderingContext2D, transcript: readonly ConversationTurn[]): Card[] {
   ctx.font = `${BODY_SIZE}px ${SERIF}`
 
   const cards: Card[] = []
@@ -316,6 +322,7 @@ function layout(ctx: CanvasRenderingContext2D, transcript: readonly DirectMessag
       place({
         kind: 'text',
         speaker: turn.speaker,
+        side: turn.side,
         lines: lines.slice(cursor, cursor + take),
         gaps: paragraphStarts
           .filter((at) => at > cursor && at < cursor + take)
@@ -326,7 +333,7 @@ function layout(ctx: CanvasRenderingContext2D, transcript: readonly DirectMessag
     }
 
     if (turn.attachment) {
-      place({ kind: 'image', speaker: turn.speaker, src: turn.attachment.src })
+      place({ kind: 'image', speaker: turn.speaker, side: turn.side, src: turn.attachment.src })
     }
   }
 
@@ -368,11 +375,13 @@ function pad2(value: number): string {
   return String(value).padStart(2, '0')
 }
 
-function speakerLabel(ctx: CanvasRenderingContext2D, speaker: DirectMessageSpeaker, y: number) {
+function speakerLabel(ctx: CanvasRenderingContext2D, voice: Voice, y: number) {
+  const mine = voice.side === 'right'
+
   ctx.fillStyle = MUTED
   mono(ctx, LABEL_SIZE)
-  ctx.textAlign = speaker === 'me' ? 'right' : 'left'
-  ctx.fillText(speaker === 'me' ? 'ME' : 'TAB', speaker === 'me' ? CARD - PAD : PAD, y)
+  ctx.textAlign = mine ? 'right' : 'left'
+  ctx.fillText(voice.speaker, mine ? CARD - PAD : PAD, y)
   ctx.textAlign = 'left'
 }
 
@@ -383,10 +392,10 @@ function speakerLabel(ctx: CanvasRenderingContext2D, speaker: DirectMessageSpeak
  * 두 개의 디자인을 갖게 된다.
  */
 function drawText(ctx: CanvasRenderingContext2D, block: TextBlock, y: number): number {
-  const mine = block.speaker === 'me'
+  const mine = block.side === 'right'
   const x = mine ? CARD - PAD - BUBBLE_W : PAD
 
-  speakerLabel(ctx, block.speaker, y)
+  speakerLabel(ctx, block, y)
 
   const top = y + LABEL_BLOCK
   const height = blockHeight(block) - LABEL_BLOCK
@@ -421,11 +430,11 @@ function drawImage(
   image: HTMLImageElement,
   y: number,
 ): number {
-  const mine = block.speaker === 'me'
+  const mine = block.side === 'right'
   const x = mine ? CARD - PAD - IMAGE_BOX : PAD
   const top = y + LABEL_BLOCK
 
-  speakerLabel(ctx, block.speaker, y)
+  speakerLabel(ctx, block, y)
 
   /* 정사각형 안에 가운데를 맞춰 채운다(object-fit: cover와 같은 계산). */
   const width = image.naturalWidth || image.width
@@ -637,7 +646,7 @@ function save(blob: Blob, filename: string) {
  * 하지 않으면 눌리지 않은 것과 구별되지 않는다.
  */
 export async function exportConversation(
-  transcript: readonly DirectMessageTurn[],
+  transcript: readonly ConversationTurn[],
   onProgress: Progress,
 ): Promise<void> {
   const text = transcript.flatMap((turn) => turn.paragraphs).join('')

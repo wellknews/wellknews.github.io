@@ -1,7 +1,16 @@
-import type { DirectMessageTurn } from '../../../content/sessions/commander-at-home.transcript'
 import styles from './Interlude.module.css'
 
-type Kind = NonNullable<DirectMessageTurn['interlude']>
+/**
+ * 말에 딸려 올 수 있는, 말이 아닌 것.
+ *
+ *   remote    본가에 몸이 있는 동안에도 켜져 있던 집의 랩탑
+ *   legion    이름을 붙여 돌려 쓰는 AI들. 네 번째 자리는 아직 비어 있다
+ *   named     그 빈 자리가 TAB이 된 순간
+ *   overtake  WELLKNEWS가 과거의 계정을 넘어선 날
+ *
+ * 네 자리뿐이다. 더 붙이면 대화가 아니라 대시보드가 된다.
+ */
+export type InterludeKind = 'remote' | 'legion' | 'named' | 'overtake'
 
 /**
  * 본가에 몸이 있는 동안에도 집에서 돌아가던 것.
@@ -128,7 +137,7 @@ const KINDS = {
  * 같은 선이다. 대화에 있는 것은 세 가지뿐이다 — 말, 보낸 것, 그때 사실이던 것.
  * 셋 다 누가 말했는지에 매여 있고, 그래야 이 페이지가 끝까지 한 문법으로 읽힌다.
  */
-export function Interlude({ kind }: { kind: Kind }) {
+export function Interlude({ kind }: { kind: InterludeKind }) {
   const { label, body: Body, caption } = KINDS[kind]
 
   return (
