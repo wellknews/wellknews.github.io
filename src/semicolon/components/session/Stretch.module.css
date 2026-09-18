@@ -1,0 +1,58 @@
+/*
+ * 벌어지는 사다리.
+ *
+ * 문단마다 앞의 여백이 커진다. 첫 칸은 평소와 같아서 어디서부터 이상해졌는지
+ * 알 수 없고, 다섯 번째쯤에서야 화면이 비어 있다는 것을 느낀다. 그날 줄에 선
+ * 순서가 정확히 그랬다.
+ */
+.stretch > p {
+  max-width: var(--measure);
+  font-size: var(--text-body);
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+.stretch > p + p {
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+.stretch > p:nth-child(3) {
+  margin-top: clamp(56px, 9vw, 108px);
+}
+
+.stretch > p:nth-child(4) {
+  margin-top: clamp(96px, 16vw, 188px);
+}
+
+.stretch > p:nth-child(n + 5) {
+  margin-top: clamp(140px, 24vw, 280px);
+}
+
+@media (max-width: 599px) {
+  .stretch > p {
+    line-height: 1.7;
+  }
+
+  /*
+   * 작은 판면에서도 사다리는 사다리로 남아야 한다.
+   *
+   * 넓은 판면의 값을 그대로 쓰면 한 칸이 화면 두 개를 넘어가고, 그러면
+   * 기다림이 아니라 빈 페이지가 된다. 기본 간격이 줄어든 만큼 각 칸도 같이
+   * 내린다.
+   */
+  .stretch > p + p {
+    margin-top: 26px;
+  }
+
+  .stretch > p:nth-child(3) {
+    margin-top: 48px;
+  }
+
+  .stretch > p:nth-child(4) {
+    margin-top: 82px;
+  }
+
+  .stretch > p:nth-child(n + 5) {
+    margin-top: 124px;
+  }
+}

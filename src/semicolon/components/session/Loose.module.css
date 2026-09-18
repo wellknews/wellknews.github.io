@@ -1,0 +1,56 @@
+.loose {
+  display: grid;
+  row-gap: clamp(36px, 6vw, 72px);
+  /* 마지막 문장 뒤의 자리. 답이 들어오지 않는다는 것을 여백이 말한다. */
+  padding-bottom: clamp(88px, 18vw, 220px);
+}
+
+.loose > p {
+  max-width: 24em;
+  font-size: var(--text-body);
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+/*
+ * 세 자리.
+ *
+ * 첫 문장은 왼쪽 기준선, 두 번째는 조금 오른쪽, 마지막은 다시 가운데 근처로
+ * 돌아온다. 규칙적인 계단이 아니다 — 계단으로 보이면 순서가 생기고, 순서가
+ * 생기면 마지막이 결론이 된다.
+ */
+.loose > p:nth-child(2) {
+  margin-left: clamp(24px, 14vw, 200px);
+}
+
+.loose > p:nth-child(3) {
+  margin-left: clamp(12px, 6vw, 92px);
+}
+
+.loose > p:nth-child(n + 4) {
+  margin-left: clamp(18px, 10vw, 150px);
+}
+
+/*
+ * 작은 판면.
+ *
+ * 밀어내는 폭을 크게 낮춘다. 화면 폭이 좁으면 200px은 판면의 절반이고,
+ * 그만큼 밀면 어긋난 배치가 아니라 잘린 문단이 된다.
+ */
+@media (max-width: 599px) {
+  .loose > p {
+    line-height: 1.7;
+  }
+
+  .loose > p:nth-child(2) {
+    margin-left: 22px;
+  }
+
+  .loose > p:nth-child(3) {
+    margin-left: 10px;
+  }
+
+  .loose > p:nth-child(n + 4) {
+    margin-left: 16px;
+  }
+}

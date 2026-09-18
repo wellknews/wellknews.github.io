@@ -80,6 +80,11 @@ const SCREENS = [
 const PAGES = [
   { name: 'home', path: '/', kind: 'home' },
   {
+    name: 'session/pushed-underground',
+    path: '/session/pushed-underground',
+    kind: 'session',
+  },
+  {
     name: 'session/sugar-drop-reason',
     path: '/session/sugar-drop-reason',
     kind: 'session',

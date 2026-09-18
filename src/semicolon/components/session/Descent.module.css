@@ -1,0 +1,72 @@
+/*
+ * 네 단.
+ *
+ * --measure를 다시 정의한다. 이 아래의 문단은 전부 그 값을 쓰므로 판면이
+ * 한 번에 좁아지고, 가운데로 몰린다.
+ */
+.descent {
+  /*
+   * 폭을 명시한다.
+   *
+   * 없으면 이 칸이 글자 수만큼만 넓어진다 — 자동 여백을 가진 격자 항목은
+   * 늘어나지 않고 내용에 맞춰 줄어들기 때문이다. 그러면 좁아지는 것은 판면이
+   * 아니라 문장이 되고, 한 줄짜리 문단이 세 줄짜리 문단보다 좁게 앉는다.
+   * 여기서 좁아져야 하는 것은 글이 쓸 수 있는 자리이지 글 자체가 아니다.
+   */
+  width: 100%;
+  margin-inline: auto;
+}
+
+.descent[data-step='1'] {
+  --measure: 34em;
+
+  max-width: 34em;
+}
+
+.descent[data-step='2'] {
+  --measure: 30em;
+
+  max-width: 30em;
+}
+
+.descent[data-step='3'] {
+  --measure: 26em;
+
+  max-width: 26em;
+}
+
+.descent[data-step='4'] {
+  --measure: 22em;
+
+  max-width: 22em;
+}
+
+/*
+ * 작은 판면.
+ *
+ * 폭이 이미 화면이 정하고 있어서 여기서 한 번 더 좁히면 글줄이 끊긴다. 대신
+ * 좌우 여백을 조금씩 키운다 — 줄어드는 것은 같고, 줄어드는 방식만 이 판면의
+ * 것으로 바꾼다.
+ */
+@media (max-width: 599px) {
+  .descent[data-step='1'],
+  .descent[data-step='2'],
+  .descent[data-step='3'],
+  .descent[data-step='4'] {
+    --measure: 100%;
+
+    max-width: none;
+  }
+
+  .descent[data-step='2'] {
+    padding-inline: 10px;
+  }
+
+  .descent[data-step='3'] {
+    padding-inline: 22px;
+  }
+
+  .descent[data-step='4'] {
+    padding-inline: 36px;
+  }
+}

@@ -1,0 +1,239 @@
+.link {
+  display: grid;
+  row-gap: clamp(40px, 7vw, 88px);
+}
+
+/*
+ * 두 점 사이를 지나가는 본문.
+ *
+ * 판면 가운데로 옮긴다. 이 구간만 왼쪽 기준선을 벗어나는데, 여기가 이 기록에서
+ * 본문 레이아웃이 처음 깨지는 자리이기 때문이다. 좌우에 점이 하나씩 서는
+ * 배치에서 글이 왼쪽에 붙어 있으면 두 점이 글을 사이에 두지 못한다.
+ */
+.lead {
+  justify-self: center;
+  width: min(100%, 30rem);
+}
+
+/*
+ * 좌표가 맞는 자리.
+ *
+ * 문장이 먼저 서고, 그 바로 아래에 두 점이 놓인 줄이 있다. 선이 문장을
+ * 가로지르게 두지 않는다 — 글자 위로 선이 지나가면 그것은 연결이 아니라
+ * 취소선이다.
+ */
+.pivot {
+  position: relative;
+  display: grid;
+  row-gap: clamp(18px, 3vw, 30px);
+  justify-items: center;
+}
+
+.sentence {
+  max-width: 20ch;
+  font-size: clamp(1.375rem, 1rem + 1.9vw, 2.25rem);
+  font-weight: var(--weight-display);
+  line-height: 1.36;
+  letter-spacing: var(--tracking-title);
+  text-align: center;
+  text-wrap: balance;
+}
+
+/*
+ * 두 점이 놓인 줄.
+ *
+ * 기본은 맞아 있는 상태다. 어긋남은 연출이고 맞은 것이 결론이라, 연출을
+ * 모르는 화면에는 결론이 서 있어야 한다.
+ */
+.rail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: clamp(28px, 5vw, 44px);
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  margin-top: -2.5px;
+  border-radius: 50%;
+  background: var(--color-text);
+}
+
+.dot[data-side='left'] {
+  left: 0;
+}
+
+.dot[data-side='right'] {
+  right: 0;
+}
+
+/*
+ * 연결선.
+ *
+ * 없는 것이 기본이다. 맞는 순간에만 한 번 그어졌다가 사라진다.
+ */
+.wire {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  right: 3px;
+  height: 1px;
+  background: var(--color-text);
+  opacity: 0;
+  transform-origin: center;
+}
+
+.checksum {
+  color: var(--color-text-muted);
+  letter-spacing: 0.24em;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .pivot {
+      view-timeline-name: --pivot;
+    }
+
+    /*
+     * 오차가 줄어든다.
+     *
+     * 두 점이 서로 반대 방향으로 어긋나 있다가 같은 축으로 들어온다. 문장이
+     * 판면 한가운데에 올 때(cover 50%) 정확히 맞도록 범위를 잡는다.
+     */
+    .dot {
+      animation-name: link-align;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: --pivot;
+      animation-range: cover 14% cover 50%;
+    }
+
+    .dot[data-side='right'] {
+      animation-name: link-align-down;
+    }
+
+    /*
+     * 한 번 그어졌다가 사라진다.
+     *
+     * fill-mode를 주지 않는다. 이 좁은 구간 밖에서는 애니메이션이 아예 적용되지
+     * 않아 기본값(보이지 않음)으로 돌아가므로, 사라지는 것을 따로 그리지 않아도
+     * 된다. 여기서 선이 존재한 적이 있다는 사실만 남는다.
+     */
+    .wire {
+      animation-name: link-established;
+      animation-timing-function: var(--ease-out);
+      animation-timeline: --pivot;
+      animation-range: cover 50% cover 64%;
+    }
+
+    /* 수신값은 선이 지나간 뒤에 적힌다. 선보다 먼저 나오면 결과가 원인을 앞선다. */
+    .checksum {
+      animation-name: link-note;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: --pivot;
+      animation-range: cover 56% cover 66%;
+    }
+  }
+}
+
+@keyframes link-align {
+  from {
+    translate: 0 -14px;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes link-align-down {
+  from {
+    translate: 0 16px;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes link-established {
+  0% {
+    opacity: 0;
+    scale: 0 1;
+  }
+
+  26% {
+    opacity: 1;
+    scale: 1 1;
+  }
+
+  68% {
+    opacity: 1;
+    scale: 1 1;
+  }
+
+  100% {
+    opacity: 0;
+    scale: 1 1;
+  }
+}
+
+@keyframes link-note {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * 작은 판면.
+ *
+ * 어긋나는 폭을 절반 아래로 낮춘다. 좁은 화면에서 같은 거리로 어긋나면 두 점이
+ * 각각 딴 데를 보는 두 개의 요소가 되고, 맞았을 때의 차이도 그만큼 커져서
+ * 조용한 장면이 사건처럼 읽힌다.
+ */
+@media (max-width: 599px) {
+  .sentence {
+    line-height: 1.32;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .dot {
+        animation-name: link-align-small;
+      }
+
+      .dot[data-side='right'] {
+        animation-name: link-align-small-down;
+      }
+    }
+  }
+}
+
+@keyframes link-align-small {
+  from {
+    translate: 0 -6px;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes link-align-small-down {
+  from {
+    translate: 0 7px;
+  }
+
+  to {
+    translate: 0 0;
+  }
+}

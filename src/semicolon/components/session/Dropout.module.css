@@ -1,0 +1,75 @@
+.block {
+  display: grid;
+  row-gap: clamp(12px, 1.8vw, 18px);
+}
+
+.label {
+  color: var(--color-text-muted);
+  letter-spacing: 0.3em;
+}
+
+/*
+ * 최초 계획의 나머지.
+ *
+ * 아주 작게 둔다. 이동 중에 한 번 스쳐 가는 것이지 다시 세우는 표가 아니다.
+ */
+.dropout {
+  display: grid;
+  row-gap: 8px;
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-text-muted);
+}
+
+.dropout > li {
+  display: grid;
+  /* 화살표의 자리를 고정한다. 이름이 빠져도 줄이 왼쪽으로 당겨지지 않는다. */
+  grid-template-columns: 1.6ch minmax(0, 1fr);
+  column-gap: 8px;
+  align-items: baseline;
+}
+
+/* 첫 줄에는 화살표가 없다. 그래도 이름은 같은 칸에서 시작해야 순서로 읽힌다. */
+.dropout > li:first-child .name {
+  grid-column: 2;
+}
+
+.arrow {
+  color: var(--color-line-strong);
+}
+
+.name {
+  letter-spacing: 0.24em;
+}
+
+/*
+ * 빠져나가는 한 줄.
+ *
+ * 자리를 비우지 않고 잉크만 사라진다. 옆의 화살표는 끝까지 남는다 — 그
+ * 화살표가 «여기에 무언가가 있었다»는 유일한 표시다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .dropout {
+      view-timeline-name: --dropout;
+    }
+
+    .name[data-drops='true'] {
+      animation-name: dropout-leave;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --dropout;
+      animation-range: cover 42% cover 78%;
+    }
+  }
+}
+
+@keyframes dropout-leave {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

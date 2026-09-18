@@ -1,0 +1,22 @@
+.order {
+  display: grid;
+  row-gap: clamp(14px, 2vw, 20px);
+}
+
+.head {
+  color: var(--color-text);
+  letter-spacing: 0.3em;
+}
+
+.items {
+  display: grid;
+  row-gap: 5px;
+  list-style: none;
+  /* 기호를 그리지 않는 목록에 기본 들여쓰기가 남으면 판면의 기준선이 깨진다. */
+  padding-left: 0;
+  color: var(--color-text-muted);
+}
+
+.items > li {
+  letter-spacing: 0.2em;
+}

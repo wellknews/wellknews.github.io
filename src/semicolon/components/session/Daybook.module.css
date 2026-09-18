@@ -1,0 +1,79 @@
+/*
+ * 아침의 표.
+ *
+ * 줄 간격을 clamp()로 흔들지 않는다. 이 표에서 간격은 디자인이 아니라 주장이라
+ * 화면 폭에 따라 달라지면 안 된다 — 전부 같은 간격이라는 사실이 이 표의 전부다.
+ */
+.daybook {
+  display: grid;
+  row-gap: 18px;
+  list-style: none;
+  /* 기호를 그리지 않는 목록에 브라우저 기본 들여쓰기가 남으면 판면의 기준선이 깨진다. */
+  padding-left: 0;
+}
+
+.daybook > li {
+  display: grid;
+  /* 시각의 폭을 고정한다. 4자리 시각이 전부 같은 자리에서 끝나야 목적지도 같은 자리에서 선다. */
+  grid-template-columns: 5.5ch minmax(0, 1fr);
+  column-gap: clamp(20px, 3vw, 36px);
+  align-items: baseline;
+}
+
+.at {
+  color: var(--color-text);
+}
+
+.where {
+  color: var(--color-text);
+  letter-spacing: 0.2em;
+}
+
+/*
+ * 지나가는 동안 목적지만 물러난다.
+ *
+ * 투명도로 지우지 않고 잉크를 한 단계 물린다. 흐린 잉크는 종이 대비 6.85:1이라
+ * 끝까지 읽힌다 — 계획이 물러난 것이지 없어진 것이 아니다.
+ *
+ * 시각은 건드리지 않는다. 아래로 내려가면 그 숫자들이 여백을 따라온다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .daybook {
+      view-timeline-name: --daybook;
+    }
+
+    .where {
+      animation-name: daybook-recede;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: --daybook;
+      /* 아래 줄부터 차례로 물러난다. 한꺼번에 흐려지면 표가 고장 난 것처럼 보인다. */
+      animation-range: exit calc(10% + var(--step) * 8%) exit calc(50% + var(--step) * 8%);
+    }
+  }
+}
+
+@keyframes daybook-recede {
+  from {
+    color: var(--color-text);
+  }
+
+  to {
+    color: var(--color-text-muted);
+  }
+}
+
+@media (max-width: 599px) {
+  .daybook {
+    row-gap: 14px;
+  }
+
+  .daybook > li {
+    column-gap: 18px;
+  }
+
+  .where {
+    letter-spacing: 0.14em;
+  }
+}

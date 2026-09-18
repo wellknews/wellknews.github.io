@@ -1,0 +1,40 @@
+/*
+ * 옅게, 그러나 읽히게.
+ *
+ * 흐린 잉크는 종이 대비 6.85:1이라 끝까지 읽힌다. 투명도로 옅게 만들면 이름
+ * 자체를 못 읽게 되는데, 못 간 것이지 없던 곳이 아니다.
+ */
+.unvisited {
+  color: var(--color-text-muted);
+  font-size: clamp(1.125rem, 0.9rem + 1.1vw, 1.75rem);
+  letter-spacing: 0.42em;
+  /* 자간은 마지막 글자 뒤에도 붙는다. 그만큼 당겨 판면의 기준선에 맞춘다. */
+  margin-right: -0.42em;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .unvisited > span {
+      display: inline-block;
+      animation-name: unvisited-gone;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      /*
+       * 올라가는 동안이 아니라 판면 한가운데를 지나는 동안 사라진다. 자리를
+       * 뜨기 전에 없어지는 것이 요점이다.
+       */
+      animation-range: cover 40% cover 72%;
+    }
+  }
+}
+
+@keyframes unvisited-gone {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

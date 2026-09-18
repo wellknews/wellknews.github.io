@@ -1,0 +1,71 @@
+.pushed p {
+  max-width: var(--measure);
+  font-size: var(--text-body);
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+.pushed p + p {
+  margin-top: 1.5em;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /*
+     * 잠깐 반대로.
+     *
+     * 판면 한가운데를 지나는 동안에만 아래로 밀린다. 들어올 때와 나갈 때는
+     * 제자리다 — 끝까지 밀려 있으면 그것은 어긋난 배치이지 밀린 순간이 아니다.
+     */
+    .pushed {
+      animation-name: pushed-back;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: cover 30% cover 76%;
+    }
+  }
+}
+
+@keyframes pushed-back {
+  0% {
+    translate: 0 0;
+  }
+
+  46% {
+    translate: 0 36px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
+/* 작은 판면에서는 밀리는 폭을 절반 아래로 낮춘다. 여기서 36px은 두 줄이다. */
+@media (max-width: 599px) {
+  .pushed p {
+    line-height: 1.7;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .pushed {
+        animation-name: pushed-back-small;
+      }
+    }
+  }
+}
+
+@keyframes pushed-back-small {
+  0% {
+    translate: 0 0;
+  }
+
+  46% {
+    translate: 0 14px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}

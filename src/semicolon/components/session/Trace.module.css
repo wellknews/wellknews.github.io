@@ -1,0 +1,101 @@
+/*
+ * 여백 칼럼과 본문.
+ *
+ * 두 칸으로 나눈다. 시각이 본문 쪽으로 들어오는 것은 겹치는 것이 아니라
+ * 왼쪽 칸이 좁아지는 것이다 — 글자 위에 글자를 얹으면 그것은 압박이 아니라
+ * 읽을 수 없는 지면이다.
+ */
+.trace {
+  display: grid;
+  grid-template-columns: var(--trace-col, var(--margin-col)) minmax(0, 1fr);
+  column-gap: var(--trace-gap, clamp(20px, 3vw, 48px));
+}
+
+/*
+ * 본문 쪽.
+ *
+ * 한 자리 안의 문단과 문단 사이는 장면(Scene) 안의 간격과 같게 둔다. 이 칸이
+ * 따로 놀면 시각이 붙어 있는 구간만 다른 호흡을 갖게 된다.
+ */
+.body {
+  display: grid;
+  row-gap: clamp(28px, 5vw, 64px);
+  min-width: 0;
+}
+
+@media (max-width: 599px) {
+  .body {
+    row-gap: clamp(22px, 6vw, 34px);
+  }
+}
+
+/*
+ * 숫자가 앉는 자리.
+ *
+ * 본문이 지나가는 동안 그대로 있다가, 이 구간이 끝나면 다음 시각으로 교체된다.
+ * 붙잡아 두는 것은 화면이 아니라 이 구간이라, 다음 자리로 넘어가면 저절로
+ * 놓인다. 화면에 늘 붙어 있는 막대와 다른 점이 그것이다.
+ */
+.at {
+  position: sticky;
+  /* 머리가 붙어 다니는 판면에서는 그 아래에서 선다. */
+  top: calc(var(--header-h) + clamp(24px, 6vh, 64px));
+  align-self: start;
+  color: var(--color-text-muted);
+  /* 붙박인 숫자가 본문의 첫 줄과 같은 높이에서 시작한다. */
+  padding-top: 0.55em;
+}
+
+/*
+ * 시간이 들어오는 네 단.
+ *
+ * 값을 이어서 흘리지 않고 단으로 끊는다. 그날 시간이 다가온 것은 연속이 아니라
+ * 몇 번의 «아 씨» 였다.
+ */
+.trace[data-creep='1'] {
+  --trace-col: calc(var(--margin-col) * 0.62);
+}
+
+.trace[data-creep='2'] {
+  --trace-col: calc(var(--margin-col) * 0.3);
+  --trace-gap: clamp(14px, 2vw, 26px);
+}
+
+/*
+ * 마지막 단.
+ *
+ * 여백이 남지 않는다. 시각이 본문 바로 위에 선다 — 옆이 아니라 위라서,
+ * 읽기 시작하기 전에 몇 시인지를 먼저 읽게 된다. 공연장 문 앞에서 실제로
+ * 그랬다.
+ */
+.trace[data-creep='3'] {
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 10px;
+}
+
+.trace[data-creep='3'] .at {
+  position: static;
+  padding-top: 0;
+  color: var(--color-text);
+}
+
+/*
+ * 여백 칼럼이 없는 판면(≤899px).
+ *
+ * 붙박이지 않는다. 자리 맨 위에 한 번 적히고 본문이 그 아래로 간다. 여백이
+ * 없는 지면에서 여백에 두려고 하면 그것은 본문 위에 뜨는 막대가 되고,
+ * 이 공간에는 따라다니는 막대가 없다.
+ */
+@media (max-width: 899px) {
+  .trace,
+  .trace[data-creep='1'],
+  .trace[data-creep='2'] {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 10px;
+  }
+
+  .at {
+    position: static;
+    padding-top: 0;
+  }
+}

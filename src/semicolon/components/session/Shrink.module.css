@@ -1,0 +1,78 @@
+.shrink {
+  display: grid;
+  row-gap: clamp(10px, 1.6vw, 16px);
+  margin: 0;
+}
+
+/*
+ * 지면의 높이.
+ *
+ * 사진이 아니라 사진이 앉은 자리가 이 값을 가진다. 안쪽의 이미지는 늘
+ * 이 자리를 가득 채우고 가운데를 보여 준다.
+ */
+.frame {
+  height: 62vh;
+  overflow: hidden;
+}
+
+.frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+}
+
+.note {
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  color: var(--color-text-muted);
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .frame {
+      animation-name: shrink-give;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: view();
+      /* 판면을 지나 위로 올라가는 동안 줄어든다. 들어올 때는 제 높이다. */
+      animation-range: cover 44% cover 92%;
+    }
+  }
+}
+
+@keyframes shrink-give {
+  from {
+    height: 62vh;
+  }
+
+  to {
+    height: 38vh;
+  }
+}
+
+@media (max-width: 599px) {
+  .frame {
+    height: 52vh;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .frame {
+        animation-name: shrink-give-small;
+      }
+    }
+  }
+}
+
+@keyframes shrink-give-small {
+  from {
+    height: 52vh;
+  }
+
+  to {
+    height: 34vh;
+  }
+}

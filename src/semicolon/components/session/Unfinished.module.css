@@ -1,0 +1,42 @@
+/*
+ * 판면의 7할까지만.
+ *
+ * 왼쪽 기준선에서 시작한다. 가운데 정렬하면 양쪽에 같은 여백이 생겨서
+ * «짧은 구분선»이 되고, 그러면 덜 끝난 것이 아니라 작게 끝난 것이 된다.
+ */
+.unfinished {
+  display: block;
+  width: 70%;
+  height: 1px;
+  background: var(--color-line-strong);
+  transform-origin: left center;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .unfinished {
+      animation-name: unfinished-draw;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: view();
+      /*
+       * 이 선의 높이는 1픽셀이다.
+       *
+       * 그래서 entry로 범위를 잡으면 «들어오는 동안»이 1픽셀짜리 스크롤이
+       * 되고, 그어지는 일이 사실상 일어나지 않는다. 실제로 그랬다. 판면을
+       * 지나가는 전체 구간(cover)에서 아래쪽 절반을 쓴다.
+       */
+      animation-range: cover 10% cover 44%;
+    }
+  }
+}
+
+@keyframes unfinished-draw {
+  from {
+    scale: 0 1;
+  }
+
+  to {
+    scale: 1 1;
+  }
+}

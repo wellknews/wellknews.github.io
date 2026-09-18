@@ -1,0 +1,17 @@
+.stairs {
+  display: grid;
+  row-gap: clamp(10px, 1.6vw, 18px);
+}
+
+.stairs > p {
+  padding-left: calc(var(--step) * clamp(24px, 3.2vw, 40px));
+  font-size: var(--text-body);
+  line-height: 1.85;
+}
+
+@media (max-width: 599px) {
+  .stairs > p {
+    padding-left: calc(var(--step) * 14px);
+    line-height: 1.7;
+  }
+}

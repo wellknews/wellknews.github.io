@@ -1,0 +1,245 @@
+/*
+ * 기다린 구간.
+ *
+ * 기본은 평범한 세로 흐름이다. 시각 두 개가 나란히 있고, 사진이 있고, 그
+ * 아래에 그때 지나간 것들이 차례로 적혀 있다. 붙박이도 없고 겹치는 것도 없다.
+ *
+ * 붙잡아 두는 연출은 그 위에 얹는다. 스크롤 타임라인을 모르는 화면과 움직임을
+ * 줄이기로 한 사람에게 이 구간이 «한 시간 반짜리 빈 화면»이 되면 안 되기
+ * 때문이다. 기다렸다는 사실은 문장이 말하고, 기다리게 하는 것만 연출이 한다.
+ */
+.stage {
+  display: grid;
+  row-gap: clamp(20px, 3.5vw, 36px);
+  justify-items: center;
+}
+
+.clock {
+  color: var(--color-text);
+  font-size: clamp(1.125rem, 0.9rem + 1.1vw, 1.625rem);
+  letter-spacing: 0.24em;
+}
+
+.face {
+  display: inline-flex;
+  gap: 0.9em;
+}
+
+.held {
+  margin: 0;
+}
+
+.held img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.notes {
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+}
+
+.note {
+  max-width: 24ch;
+  color: var(--color-text-muted);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  text-align: center;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /*
+     * 지나가야 하는 거리.
+     *
+     * 이 높이가 그날 기다린 시간이다. 숫자로 적지 않고 화면 높이로 적는다.
+     * 줄이면 덜 기다린 것이 되고 늘리면 읽기를 포기하게 되므로, 화면 두 개
+     * 반쯤에서 멈춘다 — 실제로 줄도 생각보다 빨리 빠졌다.
+     */
+    .wait {
+      min-height: 260vh;
+      view-timeline-name: --wait;
+    }
+
+    .stage {
+      position: sticky;
+      top: calc(var(--header-h) + 8vh);
+      height: 70vh;
+      align-content: center;
+      /* 옆에 나타나는 기록이 이 판 안에서 자리를 잡는다. */
+      justify-items: center;
+    }
+
+    .held img {
+      max-height: 46vh;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /*
+     * 시각이 한 번에 바뀐다.
+     *
+     * 섞이지 않는다. 두 숫자 사이에 있었던 시간은 화면에 없고, 그 사이를
+     * 지나온 것은 읽는 사람의 손가락이다. 중간값을 그리면 그 사실이 없어진다.
+     */
+    .face {
+      position: relative;
+      display: inline-block;
+    }
+
+    .from {
+      animation-name: wait-leave;
+      animation-timing-function: steps(1, end);
+      animation-fill-mode: both;
+      animation-timeline: --wait;
+      animation-range: cover 84% cover 86%;
+    }
+
+    .to {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      animation-name: wait-arrive;
+      animation-timing-function: steps(1, end);
+      animation-fill-mode: both;
+      animation-timeline: --wait;
+      animation-range: cover 84% cover 86%;
+    }
+
+    /*
+     * 옆으로 지나가는 기록.
+     *
+     * 판면의 서로 다른 자리에서 하나씩 나타났다 사라진다. 같은 자리에서
+     * 갈아 끼우면 그것은 목록이 되고, 목록이 되면 «기다리는 동안 한 일»이라는
+     * 정리가 된다.
+     */
+    .notes {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
+    .note {
+      position: absolute;
+      width: max-content;
+      max-width: 40%;
+      margin: 0;
+      opacity: 0;
+      text-align: left;
+      animation-name: wait-note;
+      animation-timing-function: var(--ease-out);
+      animation-timeline: --wait;
+      animation-range: cover calc(18% + var(--slot) * 13%) cover calc(34% + var(--slot) * 13%);
+    }
+
+    .note:nth-child(5n + 1) {
+      left: 2%;
+      top: 16%;
+    }
+
+    .note:nth-child(5n + 2) {
+      right: 3%;
+      top: 38%;
+      text-align: right;
+    }
+
+    .note:nth-child(5n + 3) {
+      left: 8%;
+      top: 68%;
+    }
+
+    .note:nth-child(5n + 4) {
+      right: 9%;
+      top: 8%;
+      text-align: right;
+    }
+
+    .note:nth-child(5n + 5) {
+      left: 4%;
+      top: 88%;
+    }
+  }
+}
+
+@keyframes wait-leave {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes wait-arrive {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes wait-note {
+  0% {
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+ * 작은 판면.
+ *
+ * 붙박이는 그대로 두되 옆을 쓰지 않는다. 한 줄이 화면 폭을 거의 다 쓰는
+ * 지면에서 기록을 좌우에 흩어 놓으면 사진 위로 올라타거나 가장자리에서
+ * 잘린다. 같은 «지나감»을 사진 아래 한 자리에서 한다.
+ */
+@media (max-width: 599px) {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .wait {
+        min-height: 200vh;
+      }
+
+      .stage {
+        top: 10vh;
+        height: 76vh;
+      }
+
+      .held img {
+        max-height: 42vh;
+      }
+
+      .note,
+      .note:nth-child(5n + 1),
+      .note:nth-child(5n + 2),
+      .note:nth-child(5n + 3),
+      .note:nth-child(5n + 4),
+      .note:nth-child(5n + 5) {
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: 4%;
+        width: auto;
+        max-width: none;
+        text-align: center;
+      }
+    }
+  }
+}
