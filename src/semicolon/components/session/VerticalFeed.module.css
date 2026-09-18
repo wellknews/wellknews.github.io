@@ -7,23 +7,31 @@
  */
 .feed {
   display: grid;
-  /*
-   * 판면의 여백은 지킨다.
-   *
-   * 이 구간은 Scene 밖에 놓이므로 자기 여백을 스스로 가져야 한다. 없으면
-   * 좁은 화면에서 사진도 아래의 숫자도 화면 양쪽 끝에 그대로 닿는다.
-   * 실제로 그랬다 — 숏폼 앱은 가장자리까지 쓰지만 여기는 세미콜론 안의
-   * 피드라, 이 지면에서 무언가가 화면 끝에 닿는 일은 없다.
-   */
   width: min(100%, var(--content-max));
   margin-inline: auto;
-  padding-inline: var(--page-x);
   list-style: none;
+  /*
+   * 목록 자체에는 여백을 주지 않는다.
+   *
+   * 기호를 그리지 않는 목록에 안쪽 여백이 남아 있으면 그것은 판면의 여백이
+   * 아니라 «그리지도 않는 번호의 자리»가 된다. 검사가 그것을 잡는다.
+   * 판면의 여백은 아래에서 각 항목이 갖는다.
+   */
+  padding: 0;
 }
 
 .slot {
   display: grid;
   place-items: center;
+  /*
+   * 판면의 여백.
+   *
+   * 이 구간은 Scene 밖에 놓이므로 자기 여백을 스스로 가져야 한다. 없으면
+   * 좁은 화면에서 사진도 아래의 숫자도 화면 양쪽 끝에 그대로 닿는다.
+   * 숏폼 앱은 가장자리까지 쓰지만 여기는 세미콜론 안의 피드라, 이 지면에서
+   * 무언가가 화면 끝에 닿는 일은 없다.
+   */
+  padding-inline: var(--page-x);
   /*
    * 한 장이 쓰는 화면.
    *
@@ -41,11 +49,18 @@
   /*
    * 판면.
    *
-   * 스마트폰 폭까지 좁히지 않는다. 이 지면은 휴대폰을 그리는 것이 아니라
-   * 자기 판면 안에서 잠깐 다른 문법을 쓰는 것이고, 520px 아래로 내려가면
-   * 사진이 아니라 «작게 만든 화면»으로 보인다.
+   * 폭을 고정하지 않고 사진에 맞춘다.
+   *
+   * 560px로 못 박아 두었더니 세로 사진이 그 안에서 가운데로 앉고, 아래의
+   * 숫자와 한마디만 상자의 왼쪽 끝에 남았다. 사진과 글의 왼쪽이 서로 다른
+   * 자리에서 시작하는 지면이 된다. 여기서 기준선을 정하는 것은 상자가 아니라
+   * 사진이다.
+   *
+   * 스마트폰 폭까지 좁히지도 않는다. 이 지면은 휴대폰을 그리는 것이 아니라
+   * 자기 판면 안에서 잠깐 다른 문법을 쓰는 것이라, 위쪽 한계만 걸어 둔다.
    */
-  width: min(100%, 560px);
+  width: fit-content;
+  max-width: min(100%, 560px);
   margin: 0;
   justify-items: start;
 }
@@ -59,12 +74,11 @@
  */
 .media {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
   /* 한 화면을 넘지 않는다. 넘으면 한 장을 보는 데도 스크롤이 필요해진다. */
   max-height: 68svh;
-  object-fit: contain;
-  object-position: center;
   border-radius: 0;
 }
 
@@ -85,7 +99,7 @@
  * 것은 그때 든 생각이다. 그래서 캡션의 글자체가 아니라 본문의 글자체를 쓴다.
  */
 .note {
-  max-width: 28ch;
+  max-width: min(28ch, 100%);
   color: var(--color-text);
   font-size: var(--text-body);
   line-height: 1.6;
@@ -146,10 +160,6 @@
 @media (max-width: 599px) {
   .slot {
     min-height: 78svh;
-  }
-
-  .card {
-    width: 100%;
   }
 
   .media {

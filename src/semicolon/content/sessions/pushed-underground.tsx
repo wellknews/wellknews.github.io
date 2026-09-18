@@ -1,4 +1,3 @@
-import { Aperture } from '../../components/session/Aperture'
 import { Daybook, type Stop } from '../../components/session/Daybook'
 import { Descent } from '../../components/session/Descent'
 import { Dropout } from '../../components/session/Dropout'
@@ -25,23 +24,18 @@ import type { Cover, Session } from '../types'
 
 /* ─────────────────────────────  사진  ─────────────────────────────
  *
- * 둘은 왔고 둘은 아직이다.
+ * 열한 장이다. 강남의 줄, 보울, 그리고 지하에서 아홉 장.
  *
- * 없는 자리를 채우지 않는다. 이 공간의 사진은 장식이 아니라 증거라서,
- * 분위기를 만들려고 다른 데서 가져온 그림을 걸면 그 순간 이 기록은 그날
- * 있었던 일이 아니게 된다. 계단도 지하돌도 그날 실제로 찍힌 파일이 들어와야
- * 그 자리에 선다.
+ * 그 분포 자체가 이 하루의 형태다. 앞의 여덟 시간에서 남은 것이 두 장이고
+ * 마지막 한 시간 반에서 남은 것이 아홉 장이다. 무엇을 많이 찍었는지는
+ * 그날 무엇이 낯설었는지와 같은 말이다.
  *
- * 그때까지 그 장면들은 그리지 않는다. 화면에 회색 칸을 놓아 두면 그것은
- * «아직 안 왔다»가 아니라 «여기 뭔가 있어야 하는데 깨졌다»로 읽힌다.
+ * 계단 사진은 없다.
  *
- * 사진이 오면 하는 일은 두 가지다.
- *
- *   npm run photos pushed-underground <사진이 있는 폴더>
- *
- * 스크립트가 파일을 옮기고 실제 크기를 재서 Cover 객체를 찍어 준다. 그것을
- * 아래 자리에 붙이고 alt만 사람이 채운다 — 무엇이 찍혀 있는지는 그 자리에
- * 있던 사람만 안다.
+ * 한동안 그 자리를 비워 두고 세로 사진이 오면 아래로 열리게 해 두었는데
+ * (Aperture), 그날 계단에서는 찍은 것이 없다. 없는 것을 기다리느라 자리를
+ * 남겨 두지 않는다 — 계단을 내려간 일은 문장과 판면이 이미 말한다. 사진은
+ * 장식이 아니라 증거라서, 없으면 없는 것이다.
  */
 
 /*
@@ -77,8 +71,26 @@ const bowl: Cover = {
   height: 1402,
 }
 
-/** 지하로 내려가는 계단. 세로 사진이어야 한다 — 열리는 방향이 아래쪽이다. */
-const stairwell: Cover | null = null
+/*
+ * 무대에 선 사람.
+ *
+ * 이 하루에서 사진이 가장 많이 남은 한 사람이고, 표지도 이 사람이다. 그런데
+ * 이 기록이 이 사람에 대한 글은 아니다 — 여기서 이 얼굴이 하는 일은 하나다.
+ * 「지하 아이돌」이라는 말에서 떠올린 것과 실제로 무대에 서 있던 것 사이의
+ * 거리를 한 장으로 보여 주는 것.
+ *
+ * 그래서 하트를 만들고 웃는 장면을 골랐다. 기이한 쪽을 고르면 이 기록이
+ * 제 예상을 스스로 증명하는 글이 되고, 무대 한복판의 격한 장면을 고르면
+ * 공연 후기가 된다. 둘 다 그날 일어난 일이 아니다.
+ */
+const heartHands: Cover = {
+  src: '/media/session/pushed-underground/08-heart-hands.webp',
+  alt: '보라색 조명이 깔린 무대에서 검은 긴 머리의 출연자가 두 손으로 하트를 만들어 얼굴 앞에 대고 웃고 있다. 금색 견장이 달린 흰 상의에 체크무늬 치마, 무릎 위까지 오는 검은 양말 차림이다',
+  width: 900,
+  height: 1600,
+  /* 하트와 얼굴이 겹치는 자리. 목록의 한 조각도 여기를 잘라 보여 준다. */
+  focus: { x: 0.5, y: 0.19 },
+}
 
 /**
  * 지하돌 구간의 기록.
@@ -87,12 +99,70 @@ const stairwell: Cover | null = null
  * 사람들의 첫인상이 숏폼에서 보던 얼굴에 가까웠고, 그 사진을 다시 보는
  * 방식도 그쪽의 문법을 잠깐 가져오기 때문이다(VerticalFeed).
  *
- * note는 사진 설명이 아니라 그때 든 생각이다. 전부 붙이지 않는다 — 두세
- * 장이면 충분하고, 모든 장에 문장이 달리면 보는 일이 읽는 일로 바뀐다.
+ * 순서는 그날 무대에 선 순서 그대로다. 잘 나온 것을 앞으로 당기지 않는다 —
+ * 그러면 이것은 기록이 아니라 편집본이 되고, 세 번째 사람에서야 「그냥
+ * 평범했다」에 도착한 그날의 순서가 사라진다.
+ *
+ * note는 사진 설명이 아니라 그때 든 생각이다. 아홉 장 중 셋에만 붙는다.
+ * 전부 붙이면 사진마다 해설이 달린 것이 되고, 그러면 보는 일이 읽는 일로
+ * 바뀐다. 무엇이 찍혀 있는지는 사진과 alt가 이미 말한다.
  *
  * 영상은 video에 주소와 자막을 적으면 같은 자리를 쓴다.
  */
-const underground: readonly FeedShot[] = []
+const underground: readonly FeedShot[] = [
+  {
+    src: '/media/session/pushed-underground/03-sailor-hand-up.webp',
+    alt: '남색 배경의 무대에서 은회색 트윈테일에 흰 세일러 모자를 쓴 출연자가 한쪽 팔을 높이 들고 마이크를 잡은 채 노래하고 있다',
+    width: 900,
+    height: 1600,
+    note: '생각보다 너무 멀쩡했다.',
+  },
+  {
+    src: '/media/session/pushed-underground/04-sailor-point.webp',
+    alt: '같은 남색 배경 앞에서 은회색 트윈테일의 출연자가 한쪽 팔을 앞으로 뻗고 주먹을 쥔 자세로 정면을 보고 있다',
+    width: 900,
+    height: 1600,
+  },
+  {
+    src: '/media/session/pushed-underground/05-lean-sing.webp',
+    alt: '보라색 조명 아래에서 검은 긴 머리의 출연자가 상체를 앞으로 숙이고 두 손으로 마이크를 잡은 채 눈을 감고 노래하고 있다. 금색 견장이 달린 흰 상의와 체크무늬 치마를 입었다',
+    width: 900,
+    height: 1600,
+    note: '기이하다기보다는 익숙한 얼굴이었다.',
+  },
+  {
+    src: '/media/session/pushed-underground/06-blue-curtain.webp',
+    alt: '파란 막을 배경으로 검은 긴 머리의 출연자가 마이크를 두 손으로 모아 쥐고 웃으며 서 있다. 무릎 위까지 오는 검은 양말과 굽 있는 구두를 신었다',
+    width: 900,
+    height: 1600,
+  },
+  {
+    src: '/media/session/pushed-underground/07-mic-both-hands.webp',
+    alt: '보라색 조명 아래에서 검은 머리의 출연자가 마이크를 두 손으로 들어 얼굴 옆에 대고 옆을 보고 있다',
+    width: 900,
+    height: 1600,
+  },
+  heartHands,
+  {
+    src: '/media/session/pushed-underground/09-heart-eye.webp',
+    alt: '보라색 조명 아래에서 검은 머리의 출연자가 마이크를 든 채 두 손으로 하트를 만들어 한쪽 눈 앞에 대고 있다',
+    width: 900,
+    height: 1600,
+  },
+  {
+    src: '/media/session/pushed-underground/10-maid-crouch.webp',
+    alt: '검은 배경 앞에서 붉은 머리의 출연자가 붉은 메이드 원피스에 흰 앞치마 차림으로 쪼그려 앉아 한 손으로 턱을 괴고 있다',
+    width: 900,
+    height: 1600,
+    note: '내가 상상했던 세계와는 달랐다.',
+  },
+  {
+    src: '/media/session/pushed-underground/11-maid-cross.webp',
+    alt: '붉은 막을 배경으로 붉은 메이드 원피스를 입은 출연자가 마이크를 든 팔과 다른 팔을 가슴 앞에서 교차한 자세로 정면을 보고 있다',
+    width: 900,
+    height: 1600,
+  },
+]
 
 /* ─────────────────────────────  아침의 표  ─────────────────────────────
  *
@@ -624,6 +694,18 @@ export const pushedUnderground: Session = {
     location: '서울 용산 · 강남 · 상수',
   },
   excerpt: '완벽하게 정렬된 일정표가 하루를 못 버텼고, 마지막에 남은 건 시간이 미는 방향이었다.',
+  /*
+   * 표지.
+   *
+   * 하루의 마지막 자리에서 고른 한 장이다. 아침의 일정표를 표지로 삼는 쪽도
+   * 생각했지만, 그러면 이 기록이 「계획이 무너진 이야기」로 미리 정리된다.
+   * 실제로 이 하루가 도착한 곳은 계획의 잔해가 아니라 예상과 전혀 다르게
+   * 생긴 무대였고, 그 거리가 이 글의 두 번째 축이다.
+   *
+   * 표지가 제목보다 먼저 온다(Opening). 그래서 무엇에 대한 글인지가
+   * 어디까지의 글인지보다 앞선다.
+   */
+  cover: heartHands,
   display: 'stage',
 
   /*
@@ -866,13 +948,6 @@ export const pushedUnderground: Session = {
           <Stairs lines={descent} />
         </Descent>
       </Scene>
-
-      {/* 사진을 보는 것이 아니라 공간이 아래로 열린다. */}
-      {stairwell ? (
-        <Scene width="bleed">
-          <Aperture image={stairwell} />
-        </Scene>
-      ) : null}
 
       <Scene pace="rushed">
         <Descent step={4}>
@@ -1164,12 +1239,6 @@ export const pushedUnderground: Session = {
           <Stairs lines={descent} />
         </Descent>
       </Scene>
-
-      {stairwell ? (
-        <Scene width="bleed">
-          <Aperture image={stairwell} />
-        </Scene>
-      ) : null}
 
       <Scene pace="rushed">
         <Descent step={4}>
