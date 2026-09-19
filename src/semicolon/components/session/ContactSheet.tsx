@@ -7,12 +7,12 @@ import {
   type PointerEvent,
 } from 'react'
 
+import type { Cover } from '../../content/types'
 import { useInView } from '../../motion/useInView'
-import type { Shot } from './media'
 import styles from './ContactSheet.module.css'
 
 type Props = {
-  shots: readonly Shot[]
+  shots: readonly Cover[]
   /** 이 시트가 무엇의 기록인지. 낭독과 크게 보기의 이름에 쓰인다. */
   label: string
 }
@@ -196,19 +196,13 @@ export function ContactSheet({ shots, label }: Props) {
         {showing ? (
           <>
             <div className={styles.shown}>
-              {showing.video ? (
-                <video src={showing.video.src} poster={showing.src} controls playsInline>
-                  <track kind="captions" src={showing.video.captions} srcLang="ko" default />
-                </video>
-              ) : (
-                <img
-                  src={showing.src}
-                  alt={showing.alt}
-                  width={showing.width}
-                  height={showing.height}
-                  decoding="async"
-                />
-              )}
+              <img
+                src={showing.src}
+                alt={showing.alt}
+                width={showing.width}
+                height={showing.height}
+                decoding="async"
+              />
             </div>
 
             <div className={styles.controls}>
@@ -249,7 +243,7 @@ export function ContactSheet({ shots, label }: Props) {
 }
 
 type CellProps = {
-  shot: Shot
+  shot: Cover
   index: number
   label: string
   onOpen: (index: number) => void
@@ -281,12 +275,6 @@ function Cell({ shot, index, label, onOpen }: CellProps) {
         decoding="async"
         loading="lazy"
       />
-
-      {shot.video ? (
-        <span className={styles.play} aria-hidden="true">
-          ▶
-        </span>
-      ) : null}
 
       <span className="visually-hidden">{`${label} — 크게 보기`}</span>
     </button>

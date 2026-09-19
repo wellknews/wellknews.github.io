@@ -88,21 +88,6 @@
 }
 
 /*
- * 영상 표시.
- *
- * 재생 버튼을 흉내 내지 않는다. 동그란 판도 그림자도 없다. 이 칸에 소리와
- * 움직임이 들어 있다는 것만 아주 작게 알린다.
- */
-.play {
-  position: absolute;
-  right: 8px;
-  bottom: 6px;
-  color: var(--color-text);
-  font-size: 11px;
-  line-height: 1;
-}
-
-/*
  * ─────────────  인화  ─────────────
  *
  * 시트가 판면에 처음 들어올 때 칸들이 아주 짧은 시차로 차례차례 올라온다.
@@ -177,8 +162,7 @@
   min-height: 0;
 }
 
-.shown img,
-.shown video {
+.shown img {
   position: absolute;
   inset: 0;
   width: 100%;

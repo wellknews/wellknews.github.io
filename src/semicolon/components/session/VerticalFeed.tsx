@@ -1,5 +1,21 @@
-import type { FeedShot } from './media'
+import type { Cover } from '../../content/types'
 import styles from './VerticalFeed.module.css'
+
+/**
+ * 한 장씩 보는 자리에 들어가는 것.
+ *
+ * note는 사진 설명이 아니라 그때 든 생각이다. 무엇이 찍혀 있는지는 사진이
+ * 말하고 alt가 적는다. 모든 장에 붙이지 않는다 — 전부 붙으면 사진마다
+ * 해설이 달린 것이 되고, 그러면 보는 일이 읽는 일로 바뀐다.
+ *
+ * 이 타입은 이 부품이 들고 있는다. 한동안 media.ts에 사진과 영상을 함께
+ * 받는 Shot을 두고 두 부품이 나눠 썼는데, 이 저장소에 영상은 한 번도 들어온
+ * 적이 없다. 없는 것을 위해 만든 자리는 «나중에 쓸 것»이 아니라 아무도
+ * 지나가 보지 않은 길이다. 필요해지는 날 그때 만든다.
+ */
+export type FeedShot = Cover & {
+  note?: string
+}
 
 type Props = {
   shots: readonly FeedShot[]
@@ -54,38 +70,16 @@ export function VerticalFeed({ shots, label }: Props) {
       {shots.map((shot, index) => (
         <li className={styles.slot} key={shot.src}>
           <figure className={styles.card}>
-            {shot.video ? (
-              /*
-               * 저절로 재생되지 않는다.
-               *
-               * 자동재생은 음소거로 하더라도 사람이 시작하지 않은 움직임이고,
-               * 이 공간에는 그런 것이 없다. metadata까지만 받아 두어서 누르면
-               * 바로 시작한다.
-               */
-              <video
-                className={styles.media}
-                src={shot.video.src}
-                poster={shot.src}
-                width={shot.width}
-                height={shot.height}
-                controls
-                playsInline
-                preload="metadata"
-              >
-                <track kind="captions" src={shot.video.captions} srcLang="ko" default />
-              </video>
-            ) : (
-              <img
-                className={styles.media}
-                src={shot.src}
-                alt={shot.alt}
-                width={shot.width}
-                height={shot.height}
-                decoding="async"
-                /* 첫 장만 미리 받는다. 이 구간에 닿기 전에 나머지를 받을 이유가 없다. */
-                loading={index === 0 ? 'eager' : 'lazy'}
-              />
-            )}
+            <img
+              className={styles.media}
+              src={shot.src}
+              alt={shot.alt}
+              width={shot.width}
+              height={shot.height}
+              decoding="async"
+              /* 첫 장만 미리 받는다. 이 구간에 닿기 전에 나머지를 받을 이유가 없다. */
+              loading={index === 0 ? 'eager' : 'lazy'}
+            />
 
             <figcaption className={styles.said}>
               <p className={`mono ${styles.count}`}>

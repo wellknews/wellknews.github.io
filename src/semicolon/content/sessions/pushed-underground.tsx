@@ -17,9 +17,8 @@ import { Stretch } from '../../components/session/Stretch'
 import { Trace } from '../../components/session/Trace'
 import { Unfinished } from '../../components/session/Unfinished'
 import { Unvisited } from '../../components/session/Unvisited'
-import { VerticalFeed } from '../../components/session/VerticalFeed'
+import { VerticalFeed, type FeedShot } from '../../components/session/VerticalFeed'
 import { Wait } from '../../components/session/Wait'
-import type { FeedShot } from '../../components/session/media'
 import type { Cover, Session } from '../types'
 
 /* ─────────────────────────────  사진  ─────────────────────────────
@@ -106,8 +105,6 @@ const heartHands: Cover = {
  * note는 사진 설명이 아니라 그때 든 생각이다. 아홉 장 중 셋에만 붙는다.
  * 전부 붙이면 사진마다 해설이 달린 것이 되고, 그러면 보는 일이 읽는 일로
  * 바뀐다. 무엇이 찍혀 있는지는 사진과 alt가 이미 말한다.
- *
- * 영상은 video에 주소와 자막을 적으면 같은 자리를 쓴다.
  */
 const underground: readonly FeedShot[] = [
   {
