@@ -3,6 +3,7 @@ import { MetaLine } from '../components/MetaLine'
 import { Prose } from '../components/Prose'
 import { Materialize } from '../components/session/Materialize'
 import { Opening } from '../components/session/Opening'
+import { ReadingGuide } from '../components/session/ReadingGuide'
 import { findSession } from '../content/sessions'
 import { useViewport } from '../layout/useViewport'
 import { path } from '../router'
@@ -57,6 +58,19 @@ export function SessionEntry({ slug }: Props) {
             : {})}
         />
 
+        {/*
+          읽기 전에 놓는 좌표.
+
+          제목과 메타데이터 다음, 본문 앞이다. 자리를 여기로 고정해 두는
+          이유는 기록마다 다른 데 놓으면 그것이 «이 글의 장치»로 읽히기
+          때문이다. 판면의 한 층이 되려면 늘 같은 자리에 있어야 한다.
+        */}
+        {session.guide ? (
+          <div className="shell">
+            <ReadingGuide>{session.guide}</ReadingGuide>
+          </div>
+        ) : null}
+
         {arrangement}
 
         <div className="shell">
@@ -78,6 +92,8 @@ export function SessionEntry({ slug }: Props) {
 
           {session.subtitle ? <p className={styles.subtitle}>{session.subtitle}</p> : null}
         </header>
+
+        {session.guide ? <ReadingGuide>{session.guide}</ReadingGuide> : null}
 
         <div className={styles.body}>
           <div className={styles.aside}>

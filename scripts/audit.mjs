@@ -318,6 +318,16 @@ const DEVICES = [
   },
   {
     kind: 'session',
+    label: '읽기 전에 펼치는 주석',
+    target: '[class*="ReadingGuide-module__fold"]',
+    watch: '[class*="ReadingGuide-module__guide"]',
+    read: () =>
+      document.querySelector('[class*="ReadingGuide-module__fold"]')?.getAttribute('aria-expanded'),
+    changed: (before, after) => before !== after && after === 'true',
+    click: true,
+  },
+  {
+    kind: 'session',
     label: '앞뒤 시안 뒤집기',
     target: '[class*="Faces-module__flip"]',
     read: () => document.querySelector('[class*="Faces-module__faces"]')?.dataset.back,
