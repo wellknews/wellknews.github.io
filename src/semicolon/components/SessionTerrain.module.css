@@ -197,8 +197,7 @@
  * 셋 다 같은 일이어야 한다 — 한쪽에만 있으면 그 사람에게는 없는 기능이다.
  */
 .piece:hover .face,
-.piece:focus-visible .face,
-.group[data-open='true'] .piece:hover .face {
+.piece:focus-visible .face {
   opacity: 0;
 }
 
@@ -238,13 +237,14 @@
 /*
  * 손가락으로 펴 둔 조각.
  *
- * 커서의 hover와 같은 자리에 온다. 이 상태에서 한 번 더 찍으면 기록으로
+ * 커서의 hover와 정확히 같은 자리에 온다. 이 상태에서 한 번 더 찍으면 기록으로
  * 들어가고, 다른 조각을 찍으면 이쪽은 다시 사진으로 돌아간다.
+ *
+ * 한동안 여기가 «그 기록의 첫 조각»이었다. 찍은 자리는 그대로 사진인데 저 위의
+ * 다른 조각이 펴지는, 같은 장치가 커서와 손가락에게 다르게 동작하는 상태였다.
  */
-@media (hover: none) {
-  .group[data-open='true'] .piece[data-lead='true'] .face {
-    opacity: 0;
-  }
+.piece[data-open] .face {
+  opacity: 0;
 }
 
 /*

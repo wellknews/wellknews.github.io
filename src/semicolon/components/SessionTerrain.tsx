@@ -161,13 +161,15 @@ function piecesFor(session: Session, wide: boolean): Piece[] {
 function Piece({
   session,
   piece,
+  open,
   onEnter,
   onOpen,
   onPoint,
 }: {
   session: Session
   piece: Piece
-  onEnter: () => void
+  open: boolean
+  onEnter: (event: PointerEvent<Element>) => void
   onOpen: (event: MouseEvent<HTMLAnchorElement>) => void
   onPoint: (event: PointerEvent<Element>) => void
 }) {
@@ -179,6 +181,7 @@ function Piece({
       className={styles.piece}
       style={{ '--cols': piece.cols, '--rows': piece.rows } as CSSProperties}
       data-lead={piece.lead}
+      data-open={open ? true : undefined}
       data-bare={image ? undefined : true}
       onPointerEnter={onEnter}
       onPointerDown={onPoint}
@@ -266,10 +269,30 @@ export function SessionTerrain({ sessions, empty }: Props) {
    * 찍기가 커서의 자리를 대신하고, 그 상태에서 한 번 더 찍어야 기록으로
    * 들어간다. 손가락으로 온 사람도 사진이 정보로 바뀌는 장면을 보게 하려는
    * 것이고, 이 페이지에서 그 장면이 곧 목록을 읽는 방법이다.
+   *
+   * 기록이 아니라 조각을 기억한다. 처음에는 slug만 들고 있었는데, 그러면 같은
+   * 기록의 두 번째 조각을 찍었을 때 «이미 열려 있다»로 판정되어 그대로 이동해
+   * 버렸다. 찍은 자리가 아닌 다른 조각이 펴지기도 했다 — 커서는 조각 단위로
+   * 반응하는데 손가락만 기록 단위였으니, 같은 장치가 두 사람에게 다르게
+   * 동작한 셈이다.
    */
   const [open, setOpen] = useState<string | null>(null)
 
-  const enter = useCallback((slug: string) => setOpen(slug), [])
+  /*
+   * 커서가 지나가면 편다.
+   *
+   * 손가락은 여기서 걸러야 한다. 탭 한 번에도 pointerenter가 먼저 오기
+   * 때문에, 거르지 않으면 찍기도 전에 그 조각이 열린 상태가 되고 뒤따라오는
+   * click은 «이미 열려 있으니 가라»로 읽는다. 첫 찍기를 삼키려고 만든 장치가
+   * 첫 찍기에 이동하는 장치가 되어 있었다.
+   */
+  const enter = useCallback(
+    (key: string) => (event: PointerEvent<Element>) => {
+      if (event.pointerType === 'touch') return
+      setOpen(key)
+    },
+    [],
+  )
 
   /*
    * 방금 누른 것이 손가락인지.
@@ -293,11 +316,11 @@ export function SessionTerrain({ sessions, empty }: Props) {
    * 그 자리를 대신하고 두 번째에 기록으로 들어간다.
    */
   const openAt = useCallback(
-    (slug: string) => (event: MouseEvent<HTMLAnchorElement>) => {
-      if (!finger.current || open === slug) return
+    (key: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+      if (!finger.current || open === key) return
 
       event.preventDefault()
-      setOpen(slug)
+      setOpen(key)
     },
     [open],
   )
@@ -309,7 +332,7 @@ export function SessionTerrain({ sessions, empty }: Props) {
   return (
     <div
       className={styles.terrain}
-      data-open={open ?? undefined}
+      data-open={open ? open.slice(0, open.lastIndexOf('@')) : undefined}
       /* 판 밖을 찍으면 펴져 있던 조각이 닫힌다. */
       onPointerDown={(event) => {
         if (event.target === event.currentTarget) setOpen(null)
@@ -319,21 +342,25 @@ export function SessionTerrain({ sessions, empty }: Props) {
         <section
           key={session.slug}
           className={styles.group}
-          data-open={open === session.slug ? true : undefined}
+          data-open={open?.startsWith(`${session.slug}@`) ? true : undefined}
           aria-label={session.title}
         >
-          {piecesFor(session, wide).map((piece, index) => (
-            <Piece
-              // 한 기록 안에서 조각의 자리가 곧 정체성이다. 순서가 바뀔 일이 없다.
-              // oxlint-disable-next-line react/no-array-index-key
-              key={`${session.slug}-${index}`}
-              session={session}
-              piece={piece}
-              onEnter={() => enter(session.slug)}
-              onOpen={openAt(session.slug)}
-              onPoint={point}
-            />
-          ))}
+          {piecesFor(session, wide).map((piece, index) => {
+            /* 조각 하나를 가리키는 이름. 앞이 기록이고 뒤가 그 안에서의 자리다. */
+            const key = `${session.slug}@${index}`
+
+            return (
+              <Piece
+                key={key}
+                session={session}
+                piece={piece}
+                open={open === key}
+                onEnter={enter(key)}
+                onOpen={openAt(key)}
+                onPoint={point}
+              />
+            )
+          })}
         </section>
       ))}
     </div>

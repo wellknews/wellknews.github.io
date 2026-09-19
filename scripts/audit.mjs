@@ -326,6 +326,29 @@ const DEVICES = [
     changed: (before, after) => before !== after && after === 'true',
     click: true,
   },
+  /*
+   * 대화를 1:1 카드로 굽는 자리.
+   *
+   * 이것이 죽어도 화면은 멀쩡하다 — 버튼은 그대로 있고 목록도 본문도 그대로다.
+   * 조판이 원고의 형태를 읽는 방식이 바뀌면 조용히 깨지는 쪽이고, 실제로 그
+   * 형태를 한 번 갈아 본 적이 있다(ME/TAB이 원고에서 오게 된 날). 그때는 손으로
+   * 눌러 확인했는데, 손으로 한 번 확인한 것은 다음에도 확인된다는 뜻이 아니다.
+   *
+   * 끝까지 굽기를 기다리지 않는다. 여기서 보는 것은 «눌렀을 때 실제로 일이
+   * 시작되는가»이고, 그 사실은 버튼이 제 상태를 바꾸는 순간 이미 드러난다.
+   */
+  {
+    kind: 'session',
+    label: '1:1로 저장',
+    target: '[class*="ExportPanel-module__button"]',
+    watch: '[class*="ExportPanel-module__panel"]',
+    read: () => {
+      const note = document.querySelector('[class*="ExportPanel-module__note"]')
+      return note ? note.dataset.state : null
+    },
+    changed: (before, after) => before === 'idle' && after !== 'idle',
+    click: true,
+  },
   {
     kind: 'session',
     label: '앞뒤 시안 뒤집기',
