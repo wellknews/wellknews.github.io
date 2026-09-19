@@ -147,6 +147,25 @@ const fair = (
   </>
 )
 
+/*
+ * 층 전체를 보고 든 생각.
+ *
+ * 한동안 이 넷이 복도 안에서 다섯 걸음에 나뉘어 있었다. 복도는 걸어가며 주워
+ * 듣는 장치인데, 이것은 주워들은 말이 아니라 층을 보고 든 생각이다. 장치가
+ * 문장을 대신할 수 없는 자리라 본문으로 돌려보냈다.
+ */
+const fleaMarket = (
+  <>
+    <p>시그니엘의 한 층이 갑자기 웰메이드 플리마켓이 된 것 같아서 웃겼다.</p>
+    <p>
+      플리마켓이라는 표현이 모멸적으로 들릴 수도 있지만, 각 방에 있는 미술관장들의 목적은 꽤
+      명확했다.
+    </p>
+    <p>그림을 파는 것이었다.</p>
+    <p>그리고 그 취지는 생각보다 노골적이었다.</p>
+  </>
+)
+
 const afterCorridor = (
   <>
     <p>내가 미술 작품을 비웃고 싶어지는 이유도 조금 더 분명해졌다.</p>
@@ -286,154 +305,98 @@ function FloorShift() {
   )
 }
 
-type CorridorStep =
-  | {
-      id: string
-      kind: 'market'
-      text: string
-      phase: number
-    }
-  | {
-      id: string
-      kind: 'room'
-      text: string
-      verbatim: boolean
-      note?: string
-    }
+/*
+ * 복도에서 실제로 읽는 것.
+ *
+ * 따옴표를 쓸 수 있는 것은 문장 형태로 기억한 두 발화뿐이다. 세 번째는 방
+ * 안이 아니라 방과 방 사이에서 떠다닌 말이라 따옴표를 붙이지 않고, 문 앞이
+ * 아니라 문과 문 사이에 세운다.
+ */
+type CorridorStep = {
+  id: string
+  /** 문 앞에서 들은 말인지, 문과 문 사이에서 들은 말인지. */
+  at: 'door' | 'between'
+  text: string
+  /** 그대로 옮길 수 있는 발화인지. 요약해 기억한 말에는 따옴표를 붙이지 않는다. */
+  verbatim: boolean
+  note?: string
+}
 
 /*
- * 복도에서 실제로 읽는 순서.
+ * 세 걸음이다.
  *
- * 따옴표를 쓸 수 있는 것은 실제로 문장 형태로 기억한 두 발화뿐이다. 그 밖의
- * 항목은 대화의 내용을 요약해 기억한 것이므로 따옴표를 붙이지 않는다. 첫
- * 시안처럼 전부 직접 인용으로 만들면 기록을 정돈한 것이 아니라 말을 새로
- * 만들어낸 것이 된다.
+ * 처음에는 열세 걸음이었다. 플리마켓이라는 생각이 다섯 걸음에 나뉘어 있었고
+ * 잡담 한 문장이 네 개의 문으로 흩어져 있었다. 원문에서 복도의 몫은 실제로
+ * 들은 말 둘과 잡담 한 문장뿐인데, 장치가 그보다 열 배 길었다 — 한 편의
+ * 페이지가 27,500px이 되었고, 내용이 없는 자리를 스크롤이 대신 채웠다.
  *
- * 처음 다섯 칸은 같은 자리에 머문다. 수직 스크롤은 진행되지만 복도는 움직이지
- * 않고 문장만 바뀐다. 이것이 «WELL-MADE FLEA MARKET»에서 잠깐 멈추는 구간이다.
+ * 재료가 부족하면 장치를 늘리는 것이 아니라 깎는다. 플리마켓 대목은 복도에서
+ * 내려 본문으로 돌려보냈다 — 그것은 걸어가며 주워들은 말이 아니라 층 전체를
+ * 보고 든 생각이다. 복도에는 문 앞에서 실제로 들은 것만 남는다.
  */
 const corridorSteps: readonly CorridorStep[] = [
   {
-    id: 'market-0',
-    kind: 'market',
-    phase: 0,
-    text: '시그니엘의 한 층이 갑자기 웰메이드 플리마켓이 된 것 같아서 웃겼다.',
-  },
-  {
-    id: 'market-1',
-    kind: 'market',
-    phase: 1,
-    text: '플리마켓이라는 표현이 모멸적으로 들릴 수도 있지만,',
-  },
-  {
-    id: 'market-2',
-    kind: 'market',
-    phase: 2,
-    text: '각 방에 있는 미술관장들의 목적은 꽤 명확했다.',
-  },
-  {
-    id: 'market-3',
-    kind: 'market',
-    phase: 3,
-    text: '그림을 파는 것이었다.',
-  },
-  {
-    id: 'market-4',
-    kind: 'market',
-    phase: 4,
-    text: '그리고 그 취지는 생각보다 노골적이었다.',
-  },
-  {
-    id: 'room-kusama',
-    kind: 'room',
+    id: 'kusama',
+    at: 'door',
     verbatim: true,
     text: '요즘은 쿠사마 야요이보다 요시모토 나라가 뛰어넘었어요.',
     note: '무엇을?',
   },
   {
-    id: 'room-warhol',
-    kind: 'room',
+    id: 'warhol',
+    at: 'door',
     verbatim: true,
     text: '이 작가님은 차세대 앤디 워홀로 인정받기 시작했어요. 지금 사두시면 좋아요.',
     note: '앤디 워홀이 상업 작가여서 그런 비교를 한 거라면 차라리 설득력이 있겠다고 생각했지만, 나는 별로 인정하고 싶지 않았다.',
   },
   {
-    id: 'room-other-talk',
-    kind: 'room',
+    id: 'between',
+    at: 'between',
     verbatim: false,
     text: '방과 방 사이에서는 작품 이야기만 오간 것도 아니었다.',
-  },
-  /*
-   * 한 문장을 쉼표에서만 끊는다.
-   *
-   * 원문에서 이 넷은 «캔버스가 너무 비싸졌다는 얘기, 거래가 다 끊겼다는 얘기,
-   * …» 하고 쉼표로 이어진 한 문장이다. 복도가 문마다 한 줄씩 주워듣는 장치라
-   * 나누어 싣되, 나누는 자리는 원문이 이미 끊어 둔 자리로만 한다. 말을 새로
-   * 지어 이어 붙이지 않는다.
-   */
-  {
-    id: 'room-canvas',
-    kind: 'room',
-    verbatim: false,
-    text: '캔버스가 너무 비싸졌다는 얘기,',
-  },
-  {
-    id: 'room-deal',
-    kind: 'room',
-    verbatim: false,
-    text: '거래가 다 끊겼다는 얘기,',
-  },
-  {
-    id: 'room-relationship',
-    kind: 'room',
-    verbatim: false,
-    text: '누구와 사이가 나빠져서 슬펐다는 얘기,',
-  },
-  {
-    id: 'room-gift',
-    kind: 'room',
-    verbatim: false,
-    text: '명품 선물을 해주면 관계가 다시 풀릴 것 같다는 얘기 같은',
-  },
-  {
-    id: 'room-small-talk',
-    kind: 'room',
-    verbatim: false,
-    text: '소소한 잡담들도 흘러다녔다.',
+    note: '캔버스가 너무 비싸졌다는 얘기, 거래가 다 끊겼다는 얘기, 누구와 사이가 나빠져서 슬펐다는 얘기, 명품 선물을 해주면 관계가 다시 풀릴 것 같다는 얘기 같은 소소한 잡담들도 흘러다녔다.',
   },
 ] as const
 
-function CorridorDoor({ step }: { step: Extract<CorridorStep, { kind: 'room' }> }) {
+/**
+ * 문 하나와, 그 앞에서 주워들은 말.
+ *
+ * 문은 빈 사각형이 아니다. 한동안 커다란 테두리 상자 셋이 나란히 서 있고 그
+ * 옆에 글이 붙어 있었는데, 빈 상자는 아무것도 말하지 않아서 «만들다 만 것»으로
+ * 읽혔다. 문이 하는 말은 하나뿐이다 — 조금 열려 있다. 그래서 문을 좁게 세우고,
+ * 문짝을 살짝 돌려 그 뒤의 어둠이 세로로 한 줄 새어 나오게 한다. 안쪽을
+ * 그리지는 않는다. 실제로 본 적 없는 객실을 만들어내지 않기 위해서다.
+ *
+ * 문과 문 사이에서 들은 말은 문 앞에 세우지 않는다. 그 말은 방에서 나온 것이
+ * 아니라 복도에 떠다니던 것이라, 문짝이 닫힌 채로 지나간다.
+ */
+function CorridorDoor({ step }: { step: CorridorStep }) {
   return (
-    <div className={styles.doorScene}>
+    <div className={styles.doorScene} data-at={step.at}>
       <div className={styles.sideDoor} data-side="left" aria-hidden="true" />
-      <div className={styles.door}>
-        <div className={styles.doorLeaf} aria-hidden="true" />
+
+      <div className={styles.door} aria-hidden="true" />
+
+      {/*
+        주워듣는 자리.
+
+        한동안 이 글이 문 안에 들어 있으면서 문의 오른쪽 끝에서부터 밖으로
+        뻗어 있었다(left: 100% + 여백). 문 오른쪽에 남는 자리는 149px인데 글은
+        476px를 요구해서 327px가 무대 밖으로 잘려 나갔다. 무대가 overflow:
+        hidden이라 페이지는 가로로 밀리지 않았고, 그래서 «가로 넘침» 검사도
+        이것을 잡지 못했다. 자리를 격자에게 맡긴다 — 칼럼이 있는 한 넘칠 수 없다.
+      */}
+      <div className={styles.beside}>
+        <div className={styles.sideDoor} data-side="right" aria-hidden="true" />
         <div className={styles.voice}>
           {step.verbatim ? <p className={styles.quote}>“{step.text}”</p> : <p>{step.text}</p>}
           {step.note ? <p className={styles.roomNote}>{step.note}</p> : null}
         </div>
       </div>
-      <div className={styles.sideDoor} data-side="right" aria-hidden="true" />
     </div>
   )
 }
 
-/**
- * 87층의 객실 복도.
- *
- * 세로 스크롤은 페이지가 계속 가진다. 안에 별도 스크롤 상자를 만들지도,
- * wheel 이벤트를 가로채지도 않는다. 보이지 않는 눈금이 화면 가운데를 지날 때
- * 같은 자리에 다음 객실이 옆에서 들어온다. VerticalFeed와 같은 원리지만 이동
- * 방향만 수평이다.
- *
- * 실제 객실 번호와 갤러리 이름은 기록해 두지 않았다. 그래서 문 위에 8701,
- * 8702 같은 번호를 만들어 적지 않는다. 본문에는 «객실 번호 위에 갤러리 이름이
- * 붙어 있었다»는 실제 관찰만 남기고, 이 장치는 문이라는 구조만 가져온다.
- *
- * 움직임을 줄이기로 한 화면과 이 문법을 지원하지 않는 화면에서는 전부 세로
- * 목록으로 읽힌다. 장치가 없어져도 문장 하나가 빠지지 않는다.
- */
 function GalleryCorridor() {
   const [at, setAt] = useState(0)
   const rail = useRef<HTMLDivElement>(null)
@@ -479,14 +442,8 @@ function GalleryCorridor() {
         <ol className={styles.corridorFallback} role="list">
           {corridorSteps.map((step) => (
             <li key={step.id}>
-              {step.kind === 'market' ? (
-                <p>{step.text}</p>
-              ) : (
-                <>
-                  {step.verbatim ? <p>“{step.text}”</p> : <p>{step.text}</p>}
-                  {step.note ? <p className={styles.fallbackNote}>{step.note}</p> : null}
-                </>
-              )}
+              {step.verbatim ? <p>“{step.text}”</p> : <p>{step.text}</p>}
+              {step.note ? <p className={styles.fallbackNote}>{step.note}</p> : null}
             </li>
           ))}
         </ol>
@@ -496,14 +453,7 @@ function GalleryCorridor() {
         <p className={`mono ${styles.corridorFloor}`}>87F</p>
         <span className={styles.corridorLine} />
 
-        {current.kind === 'market' ? (
-          <div key={current.id} className={styles.market} data-phase={current.phase}>
-            <p className={`mono ${styles.marketLabel}`}>WELL-MADE FLEA MARKET</p>
-            <p className={styles.marketText}>{current.text}</p>
-          </div>
-        ) : (
-          <CorridorDoor key={current.id} step={current} />
-        )}
+        <CorridorDoor key={current.id} step={current} />
       </div>
 
       <div className={styles.corridorRail} ref={rail} aria-hidden="true">
@@ -582,25 +532,58 @@ export const signielExhibition: Session = {
   subtitle: 'SEOUL',
   meta: {
     date: '2026-09-19',
-    location: '서울 명동 · 용산 · 잠실',
+    /*
+     * 잠실 하나로 적는다.
+     *
+     * 명동에서 출발했고 용산역을 거쳤지만 그 둘은 지나간 자리다. 이 기록이
+     * 서 있는 곳은 87층이고, 목록의 메타데이터는 그날의 동선이 아니라 그
+     * 기록이 어디의 기록인지를 적는 자리다. 지나온 곳은 본문이 말한다.
+     */
+    location: '서울 잠실',
   },
   excerpt: '호텔 객실이 갤러리가 된 87층에서 그림보다 먼저 보인 것들이 있었다.',
 
   /*
-   * 제목은 「티파니에서 아침을」의 문형을 빌렸다.
+   * 도슨트의 자리다.
    *
-   * 그 사실은 제목만 보고는 알 수도 있고 모를 수도 있어서 Reading Guide에만
-   * 적는다. 전날 CHAGEE가 일정에서 빠졌다는 것도 다른 기록을 읽지 않은 사람에게
-   * 필요한 선행 정보라 여기까지는 말한다. 다음 날 다시 만나게 된다는 사실은
-   * 본문에서 발견해야 하므로 먼저 적지 않는다.
+   * 처음에는 여기에 «제목은 「티파니에서 아침을」의 문형을 빌렸다»부터 적혀
+   * 있었다. 그것은 배경이 아니라 쓴 사람의 해설이다 — 읽는 사람이 몰라서 막히는
+   * 자리가 아니라, 알아도 그만인 자리다. 이 저장소의 다른 안내는 그렇게 쓰이지
+   * 않았다. 군단이 실제 조직이 아니라는 것, 51%가 언제부터 쓰던 숫자인지,
+   * 분할 정복이 무엇인지 — 전부 그 글에서 «모르면 문장이 안 읽히는» 것들이다.
+   *
+   * 이 기록에서 그런 자리는 하나다. 호텔 객실이 갤러리가 되었다는 문장은
+   * 그런 형식의 행사가 있다는 것을 모르면 이상한 장면으로만 읽힌다.
+   *
+   * 마지막 문장이 무엇을 회수하는지는 적지 않는다. 그날의 태도가 비웃음인지
+   * 흥미인지도 적지 않는다. 그것은 읽으면서 알아채는 몫이고, 여기서 먼저
+   * 말하면 출발선이 아니라 정답지가 된다.
    */
   guide: (
     <>
-      <p>제목은 「티파니에서 아침을」의 문형을 빌렸다.</p>
       <p>
-        이 글의 시그니엘은 숙박한 호텔이 아니라 객실이 전시장으로 바뀐 공간이다. 전날 기록에서는
-        강남에서 가려던 CHAGEE가 시간 부족으로 일정에서 빠졌다.
+        아트페어 중에는 호텔에서 열리는 형식이 있다. 갤러리들이 객실을 하나씩 빌려 그 안을 그대로
+        전시장으로 쓴다.
       </p>
+
+      <p>
+        벽에 걸고, 창턱에 기대 놓고, 침대와 바닥까지 전시대가 된다. 객실 문 앞에는 호수 대신 그 방을
+        쓰는 갤러리의 이름이 붙는다. 이 글의 87층이 그런 층이었다.
+      </p>
+
+      <p>
+        시그니엘은 잠실 롯데월드타워 안에 있는 호텔이다. 79층이 그 호텔의 로비이고, 나는 숙박객이
+        아니라 그 위층에서 열린 행사를 보러 갔다.
+      </p>
+
+      <p>전날의 기록이 하나 앞에 있다.</p>
+
+      <p>
+        그날 강남에서 치폴레를 오래 기다렸고, 그 뒤에 가려던 CHAGEE는 시간이 모자라 일정에서 빠졌다.
+        이 글에서 두 이름이 다시 나오는 것은 그래서다.
+      </p>
+
+      <p>제목은 「티파니에서 아침을」의 문형을 빌렸다.</p>
     </>
   ),
   display: 'stage',
@@ -699,6 +682,17 @@ export const signielExhibition: Session = {
 
       <Scene width="bleed">
         <Plate image={windowArt} tone="full" />
+      </Scene>
+
+      {/*
+        층을 보고 든 생각. 복도로 들어가기 전에 한 번 선다.
+
+        표시는 한 번만 찍는다. 이 말이 재밌는 것은 «웰메이드 플리마켓»이라는
+        낙차 하나이고, 낙차는 반복하면 사라진다.
+      */}
+      <Scene air>
+        <p className={`mono ${styles.marketLabel}`}>WELL-MADE FLEA MARKET</p>
+        <Passage>{fleaMarket}</Passage>
       </Scene>
 
       <Scene width="bleed" air>
