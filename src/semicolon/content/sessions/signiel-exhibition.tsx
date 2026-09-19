@@ -410,39 +410,34 @@ function doorsAt(step: number): number[] {
 
 function Door({ x, open }: { x: number; open: boolean }) {
   const top = PLAN.floor - DOOR.height
-  const w = DOOR.width
-
-  /* 문짝은 경첩에서 돌아 나온다. 정면에서 보면 폭이 줄고 자유단이 살짝 기운다. */
-  const leaf = open ? w * 0.58 : w
+  const mid = top + DOOR.height * 0.52
 
   return (
     <g className={styles.door} data-open={open ? true : undefined}>
-      {/* 열린 틈. 문짝이 비켜난 만큼만 어둡다. 안쪽은 그리지 않는다. */}
+      {/* 문 안쪽. 문짝이 비켜난 만큼만 드러난다. 방 안을 그리지는 않는다. */}
       {open ? (
-        <rect className={styles.gap} x={x + leaf} y={top} width={w - leaf} height={DOOR.height} />
+        <rect className={styles.gap} x={x} y={top} width={DOOR.width} height={DOOR.height} />
       ) : null}
 
-      {/* 문틀 */}
-      <rect className={styles.frame} x={x} y={top} width={w} height={DOOR.height} />
+      <rect className={styles.frame} x={x} y={top} width={DOOR.width} height={DOOR.height} />
 
-      {/* 문짝. 열려 있으면 자유단이 위아래로 6씩 벌어진다. */}
-      <polygon
-        className={styles.leaf}
-        points={
-          open
-            ? `${x},${top} ${x + leaf},${top - 6} ${x + leaf},${PLAN.floor + 6} ${x},${PLAN.floor}`
-            : `${x},${top} ${x + w},${top} ${x + w},${PLAN.floor} ${x},${PLAN.floor}`
-        }
-      />
+      {/*
+        문짝. 경첩은 왼쪽이다.
 
-      {/* 손잡이. 사각형을 문으로 만드는 것은 사실 이 한 획이다. */}
-      <line
-        className={styles.knob}
-        x1={x + leaf - 18}
-        y1={top + DOOR.height * 0.52}
-        x2={x + leaf - 4}
-        y2={top + DOOR.height * 0.52}
-      />
+        여는 것을 가로 배율로 한다. 정면에서 본 문은 열릴수록 폭이 줄어드는
+        것으로 보이고, 줄어든 만큼 뒤의 어둠이 드러난다 — 실제로 눈에 들어오는
+        변화가 그것뿐이라 그것만 그린다. 손잡이도 같이 줄어드는데, 그것도 맞다.
+      */}
+      <g className={styles.swing}>
+        <rect className={styles.leaf} x={x} y={top} width={DOOR.width} height={DOOR.height} />
+        <line
+          className={styles.knob}
+          x1={x + DOOR.width - 18}
+          y1={mid}
+          x2={x + DOOR.width - 4}
+          y2={mid}
+        />
+      </g>
     </g>
   )
 }
@@ -473,9 +468,17 @@ function Corridor({ item, step, wide }: { item: Heard; step: number; wide: boole
         preserveAspectRatio="xMinYMax slice"
         aria-hidden="true"
       >
-        {doorsAt(step).map((x) => (
-          <Door key={x} x={x} open={false} />
-        ))}
+        {/*
+          지나가는 문들.
+
+          이쪽만 흐른다. 지금 지나는 방은 제자리에 서 있어야 아래의 글과 같은
+          세로선에 남는다 — 걷는 사람은 제자리이고 복도가 지나간다.
+        */}
+        <g className={styles.row}>
+          {doorsAt(step).map((x) => (
+            <Door key={x} x={x} open={false} />
+          ))}
+        </g>
 
         {/* 지금 지나는 방. 열려 있거나(방에서 들린 말) 닫혀 있다(복도의 말). */}
         <Door x={SEAT} open={!between} />

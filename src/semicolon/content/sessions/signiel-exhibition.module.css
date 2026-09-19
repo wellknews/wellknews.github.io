@@ -281,6 +281,15 @@
 .corridor {
   display: grid;
   row-gap: clamp(26px, 4vw, 48px);
+
+  /*
+   * 이 한 칸이 판면을 지나가는 진행. 도면 안의 두 움직임이 이것을 읽는다.
+   *
+   * 타임라인을 SVG 안의 요소에 직접 걸지 않는다. SVG의 도형은 CSS의 상자를
+   * 만들지 않아서 view()가 잴 것이 없다. 재는 일은 바깥의 상자가 하고, 안쪽은
+   * 이름으로 가져다 쓴다.
+   */
+  view-timeline-name: --walk;
 }
 
 .plan {
@@ -326,6 +335,84 @@
 /* 지나가는 문은 한 단계 물러선다. 지금 서 있는 문만 제 선으로 선다. */
 .door:not([data-open]) {
   opacity: 0.42;
+}
+
+/*
+ * 문짝이 열린 정도.
+ *
+ * 움직임이 없는 화면에서는 지금 지나는 방이 «열려 있다»로 서 있어야 한다.
+ * 그 상태가 기본값이고, 움직임은 그 앞뒤를 채운다.
+ */
+.swing {
+  transform-box: fill-box;
+  transform-origin: left center;
+}
+
+.door[data-open] .swing {
+  scale: 0.58 1;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /*
+     * 지나가며 열리고, 지나가면 닫힌다.
+     *
+     * 문이 열려 있는 채로 서 있기만 하면 그림이지, 지나간 것이 아니다. 방
+     * 앞에 이르렀을 때 열리고 멀어지면 닫혀야 그 한 마디를 «그 방 앞에서»
+     * 주운 것이 된다. 안쪽을 보여 주려는 것이 아니므로 절반쯤에서 멈춘다.
+     */
+    .door[data-open] .swing {
+      animation-name: door-swing;
+      animation-timing-function: var(--ease-out);
+      animation-fill-mode: both;
+      animation-timeline: --walk;
+      animation-range: entry 30% exit 70%;
+    }
+
+    /*
+     * 복도가 흘러간다.
+     *
+     * 한동안 이 자리에 아무 움직임도 없었다. 걸음마다 문의 위치를 다르게
+     * 그려 두기는 했는데, 세 걸음이 한 화면에 같이 보이는 일이 없어서 그
+     * 차이는 움직임으로 지각되지 않았다 — 서로 다른 정지 그림 세 장이었다.
+     */
+    .row {
+      animation-name: door-walk;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: --walk;
+      animation-range: cover;
+    }
+  }
+}
+
+@keyframes door-swing {
+  0% {
+    scale: 1 1;
+  }
+
+  34% {
+    scale: 0.58 1;
+  }
+
+  66% {
+    scale: 0.58 1;
+  }
+
+  100% {
+    scale: 1 1;
+  }
+}
+
+/* 문 사이 간격(240)의 절반. 한 칸을 다 지나가지는 않는다. */
+@keyframes door-walk {
+  from {
+    translate: 60px 0;
+  }
+
+  to {
+    translate: -60px 0;
+  }
 }
 
 /* ─────────────────────────────  주워들은 말  ─────────────────────────────
