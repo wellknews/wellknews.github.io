@@ -1,45 +1,119 @@
 /*
- * 장면이 쌓인 판.
+ * 기록의 목록이면서, 장면이 쌓인 판.
  *
- * 두 개의 틈이 이 판의 전부다. 조각과 조각 사이는 2px이고 기록과 기록 사이는
- * 그보다 조금 넓다. 몇 픽셀 차이라 눈으로 세지는 않지만 «여기까지가 하루»라는
- * 것은 읽힌다. 선을 긋거나 카드로 구획하면 이 판은 다시 목록이 된다.
- */
-/*
- * 두 틈은 하나의 규칙에서 나온다.
- *
- * 기록 사이의 틈을 clamp로 두었더니 화면 폭에 따라 17.92px 같은 값이 나왔다.
- * 눈으로 세는 값은 아니지만 이 판에서 그런 수는 규칙이 아니라 어림이다.
- * 조각 사이가 한 틈이고 기록 사이가 열 틈 — 그렇게 적어 두면 어느 폭에서도
- * 정수로 떨어지고, 두 틈의 관계도 값이 아니라 비율로 남는다.
+ * 기록마다 머리 한 줄이 서고 그 아래에 그날이 남긴 장면들이 붙는다. 한동안
+ * 머리가 없었다 — 제목과 날짜가 조각 밑에 깔려 있고 사진이 그 위를 덮어서,
+ * 다가가야 무슨 기록인지 알 수 있었다. 판은 조밀해졌지만 목록으로서는 못 쓰게
+ * 되었다. 서른세 조각이 경계 없이 이어져 어디서 한 기록이 끝나는지 짚을 수
+ * 없었고, 무엇이 있는지 알려면 서른세 번을 지나가 봐야 했다.
  */
 .terrain {
+  /*
+   * 두 개의 틈.
+   *
+   * 조각과 조각 사이는 2px이고, 기록과 기록 사이는 그 열 배다. 기록 사이의
+   * 틈을 clamp로 두었더니 화면 폭에 따라 17.92px 같은 값이 나왔다. 눈으로
+   * 세는 값은 아니지만 이 판에서 그런 수는 규칙이 아니라 어림이다. 비율로
+   * 적으면 어느 폭에서도 정수로 떨어진다.
+   */
   --seam: 2px;
   --break: calc(var(--seam) * 10);
 
-  /*
-   * 칸의 크기를 재는 자리.
-   *
-   * 판의 폭을 여기서 한 번 재고, 기록마다의 격자는 그 수를 읽어 쓴다. 처음에는
-   * 기록 쪽(.group)에 붙여 두었는데, 자기 자신에게 붙인 container-type은 자기
-   * 선언에는 걸리지 않는다 — 참조할 상자가 없으니 cqw가 조용히 창 폭으로
-   * 내려앉아, 1440에서는 판이 1096인데 1440을 재고 1280에서는 판이 1112인데
-   * 1280을 쟀다. 판이 넓어졌는데 칸이 낮아지는 구간까지 생겼다.
-   */
-  container-type: inline-size;
-
   display: grid;
-  row-gap: var(--break);
+  row-gap: clamp(36px, 4.5vw, 64px);
 }
 
 /*
- * 한 기록.
+ * 기록 하나.
+ *
+ * 왼쪽 여백 칼럼에 날짜와 장소가 앉고, 오른쪽 칼럼에 이름과 판이 앉는다.
+ * 이 저장소가 글을 앉히는 방식 그대로다(ThreadItem의 방주). 900px 아래에서는
+ * 여백 칼럼 자체가 0이 되므로(tokens.css) 위아래로 접힌다 — 옆에 둘 자리가
+ * 없으면 위아래로 놓는 편이 정직하다는 규칙이 이 판에도 그대로 걸린다.
+ */
+.record {
+  display: grid;
+  grid-template-columns: var(--margin-col) minmax(0, 1fr);
+  column-gap: clamp(20px, 3vw, 48px);
+  row-gap: clamp(10px, 1.2vw, 16px);
+}
+
+.aside {
+  grid-column: 1;
+}
+
+.meta {
+  /* 여백 칼럼에서는 값들이 세로로 쌓인다. */
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  grid-column: 2;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-lead);
+  font-weight: var(--weight-display);
+  line-height: 1.25;
+  letter-spacing: var(--tracking-title);
+  text-wrap: balance;
+}
+
+/*
+ * 제목만 링크다.
+ *
+ * 판 전체도 같은 곳으로 가지만, 차례로 읽히는 쪽에서 이 기록의 이름은 하나다.
+ */
+.seat {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.seat:focus-visible {
+  outline: 1px solid var(--color-line-strong);
+  outline-offset: 3px;
+}
+
+/*
+ * 한 줄.
+ *
+ * 좁은 판에서도 남긴다. 옆의 목록(CODE)은 여기서 한 줄을 지우는데, 거기서는
+ * 막대 하나가 그 기록의 얼굴이고 무엇을 볼지 미리 설명하지 않는 편이 맞다.
+ * 여기서는 이 한 줄이 기록과 기록을 갈라 주는 유일한 글이다. 지우면 좁은
+ * 판에서 목록이 날짜와 제목만 남은 목차가 되고, 넓은 판에 있던 문장이 좁은
+ * 판에서 사라진다.
+ */
+.line {
+  margin: clamp(6px, 0.8vw, 10px) 0 0;
+  max-width: var(--measure);
+  font-family: var(--font-serif);
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+/*
+ * 판이 앉는 칼럼.
+ *
+ * 칸의 크기를 재는 자리이기도 하다. 판 자신에게 container-type을 붙이면 자기
+ * 선언에는 걸리지 않아서 cqw가 조용히 창 폭으로 내려앉는다 — 1440에서 판이
+ * 880인데 1440을 재는 식이라, 판이 넓어졌는데 칸이 낮아지는 구간까지 생긴다.
+ */
+.plate {
+  grid-column: 2;
+  container-type: inline-size;
+  margin-top: clamp(4px, 0.6vw, 10px);
+}
+
+/*
+ * 그날의 장면들.
  *
  * 격자를 기록마다 따로 갖는다. 하나의 큰 격자에 전부 흘려 넣으면 조각들이
- * 기록의 경계를 넘어가 서로 붙고, 그러면 «어디까지가 한 날인지»가 사라진다.
- * 판이 하나로 보이는 것은 틈이 작기 때문이지 격자가 하나이기 때문이 아니다.
+ * 기록의 경계를 넘어가 서로 붙는다.
  */
-.group {
+.band {
   /*
    * 행의 높이를 열의 폭에서 끌어온다.
    *
@@ -71,66 +145,52 @@
 /*
  * 조각 하나.
  *
- * 사진과 정보가 같은 사각형을 번갈아 쓴다. 정보가 아래에 깔려 있고 사진이
- * 그 위를 덮는다 — 다가가면 사진이 걷히고 원래 있던 지면이 드러난다. 새
- * 패널이 뜨는 것이 아니라 같은 격자의 한 조각이 다른 상태가 되는 것이다.
+ * 사진 한 장이 차지하는 사각형이고, 그 기록으로 가는 문이기도 하다. 글자는
+ * 없다 — 이 기록이 무엇인지는 위의 머리가 이미 말했다.
  */
 .piece {
   position: relative;
   grid-column: span var(--cols);
   grid-row: span var(--rows);
   overflow: hidden;
-  /* 지면 그 자체. 사진이 걷힌 자리에 드러나는 것이 이 색이다. */
+  /*
+   * 지면 그 자체.
+   *
+   * 자르지 않는 이미지가 남긴 자리에 드러나는 것이 이 색이다. 사진 쪽에
+   * 배경으로 넣으면 사진에 걸어 둔 filter를 같이 먹어서, 조각 안의 «흰
+   * 자리»가 246,246,245이고 페이지의 지면이 250,250,248인 상태가 된다.
+   * 색을 건드리는 것은 사진뿐이고 종이는 어디서나 종이다.
+   */
   background: var(--color-bg);
-  color: inherit;
-  text-decoration: none;
 }
 
-/* 좁은 판면은 여섯 칸으로 짠다. 열을 줄이는 대신 한 조각을 키운다. */
-@media (max-width: 599px) {
-  .group {
-    --col: calc((100cqw - 5 * var(--seam)) / 6);
-
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  /* 조각이 작아진 만큼 여백도 한 단계 내린다. 기록과 기록 사이와 같은 값이다. */
-  .card {
-    padding: var(--break);
-  }
-}
-
-/*
- * 덮는 쪽.
- *
- * 원래 비율은 지키지 않는다. 이 판은 사진을 감상하는 갤러리가 아니라 장면이
- * 쌓인 지형이고, 비율을 저마다 지키면 격자가 무너져 결국 masonry가 된다.
- * 대신 무엇이 찍혀 있는지가 잘리지 않도록 그 사진이 스스로 말한 초점을
- * 기준으로 자른다(Cover.focus).
- */
 /*
  * 잘라 쓸 수 없는 이미지는 자르지 않는다.
  *
  * 장면이 아니라 놓인 것이라서, 잘라 채우면 토막이 난다. 시안 목업은 2.5:1
- * 조각 안에서 목과 밑단이 한꺼번에 날아갔고, 심볼은 귀와 입이 잘려 눈만
- * 남았다. 격자는 그대로다 — 조각의 크기는 여전히 판이 정하고, 달라지는 것은
- * 그 안에서 이미지가 제 모양을 지키느냐뿐이다. 남는 자리에는 아래의 지면이
- * 그대로 보이므로 «빈 칸»이 아니라 그것이 놓인 종이가 된다.
+ * 조각 안에서 목과 밑단이 한꺼번에 날아갔다. 격자는 그대로다 — 조각의
+ * 크기는 여전히 판이 정하고, 달라지는 것은 그 안에서 이미지가 제 모양을
+ * 지키느냐뿐이다.
  */
 .piece[data-whole] .face {
   object-fit: contain;
   /*
    * 초점은 여기서 쓰지 않는다. 자르지 않으므로 «어디를 남길지»를 고를 일이
-   * 없고, 그대로 두면 물건이 조각 안에서 한쪽으로 밀린다 — 앞면 시안이
-   * 그랬다(초점 x=0.6).
+   * 없고, 그대로 두면 이미지가 조각 안에서 한쪽으로 밀린다.
    */
   object-position: 50% 50%;
 }
 
+/*
+ * 사진.
+ *
+ * 원래 비율은 조각이 지켜 준다. 이 판은 사진을 감상하는 갤러리가 아니라
+ * 장면이 쌓인 지형이라 격자를 사진에 맞춰 무너뜨리지는 않지만, 대신 줄의
+ * 높이를 그 줄에 실린 사진이 가장 적게 잘리는 값으로 고른다. 그래도 남는
+ * 차이는 그 사진이 스스로 말한 초점을 기준으로 자른다(Cover.focus).
+ */
 .face {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -142,183 +202,66 @@
    * 간다. 제 색은 다가갔을 때 돌아온다.
    */
   filter: saturate(0.72) contrast(0.96);
-  transition:
-    opacity var(--dur-base) var(--ease-out),
-    filter var(--dur-base) var(--ease-out);
+  transition: filter var(--dur-base) var(--ease-out);
 }
 
 /*
- * 사진 밑에 깔아 두는 지면.
+ * 다가가면 그 기록이 제 색을 되찾는다.
  *
- * 사진에 투명한 자리가 있으면 그 구멍으로 아래의 글자가 그대로 올라온다.
- * 목업처럼 배경을 딴 사진이 그랬다 — 셔츠 둘레로 날짜와 제목과 한 줄이
- * 비쳐 나와서, 조각의 경계까지 사라진 채 페이지에 떠 있는 것처럼 보였다.
- *
- * 처음에는 이 색을 사진 자신의 배경으로 넣었는데, 그러면 사진에 걸어 둔
- * filter가 이 색까지 같이 먹는다. 실제로 조각 안의 «흰 자리»는 246,246,245이고
- * 페이지의 지면은 250,250,248이었다 — 네 단계 어두운 판이 종이 위에 얹혀
- * 있었고, 다가가 사진이 걷히는 순간 그 판이 제 색으로 튀었다. 그래서 지면은
- * 사진과 같은 층에 두지 않고 바로 밑의 한 겹으로 분리한다. 색을 건드리는 것은
- * 사진뿐이고 종이는 어디서나 종이다.
- *
- * 걷히는 것도 같이 걷힌다. 이 겹이 남으면 사진이 사라진 자리에 흰 판만 남는다.
+ * 한 조각이 아니라 기록 전체다. 이 판에서 손이 가리키는 단위는 사진 한 장이
+ * 아니라 하루이고, 실제로 눌렀을 때 가는 곳도 그 하루다. 조각 하나만
+ * 또렷해지면 «이 사진으로 간다»로 읽힌다.
  */
-.piece:not([data-bare='true'])::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: var(--color-bg);
-  transition: opacity var(--dur-base) var(--ease-out);
+@media (hover: hover) {
+  .record:hover .face {
+    filter: saturate(1) contrast(1);
+  }
 }
 
-/*
- * 드러나는 쪽.
- *
- * 늘 그려져 있다. 숨겨 두었다가 다가갈 때 띄우면 움직임을 끈 사람과 낭독으로
- * 듣는 사람에게 이 목록은 제목 없는 사진 무더기가 된다. 여기서 달라지는 것은
- * 이 글자가 있느냐 없느냐가 아니라 위에 사진이 덮여 있느냐다.
- */
-.card {
-  position: relative;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  /*
-   * 글은 조각의 가운데 선다.
-   *
-   * 한동안 첫 조각만 위에 붙이고 나머지는 가운데에 두었다. 규칙이 둘이면 판
-   * 위에서 글의 높이가 조각마다 달라지고, 걷히는 자리가 어디인지 눈이 매번
-   * 다시 찾는다. 위에 붙여 둔 쪽은 아래가 통째로 비기도 했다 — 남은 공간이
-   * 여백이 아니라 빈칸으로 보였다. 어느 조각이든 가운데다.
-   */
-  justify-content: center;
-  height: 100%;
-  /*
-   * 글이 조각의 가장자리에서 떨어지는 거리도 틈에서 끌어온다. clamp로 두면
-   * 1440에서 20.16px 같은 값이 나오는데, 이 판의 다른 두 틈은 2와 12라서 그
-   * 수만 혼자 어림이 된다. 열 틈만큼 — 넓은 판에서 20, 좁은 판에서 12다.
-   */
-  padding: calc(var(--seam) * 10);
-  gap: 6px;
-}
-
-.date {
-  font-size: var(--text-meta);
-  letter-spacing: var(--tracking-meta);
-  color: var(--color-text-muted);
-}
-
-/*
- * 제목의 크기는 조각의 크기를 따른다.
- *
- * 사진이 차지하던 면적이 글의 양을 정한다는 규칙은 글자 크기에도 걸린다.
- * 좁은 조각에 큰 제목을 넣으면 넘치고, 넓은 조각에 작은 제목을 넣으면
- * 걷어낸 자리가 비어 보인다.
- */
-.title {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: calc(0.8rem + var(--cols) * 0.19rem);
-  font-weight: var(--weight-display);
-  line-height: 1.32;
-  letter-spacing: var(--tracking-title);
-  color: var(--color-text);
-  /* 좁은 조각에서 제목이 칸을 넘치지 않게. 넘치면 잘린 글자가 보인다. */
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
-.where {
-  font-size: var(--text-meta);
-  /* 장소는 대개 한글이라 고정폭의 넓은 자간이 그대로 오면 헐겁게 벌어진다. */
-  letter-spacing: 0.02em;
-  color: var(--color-text-muted);
-}
-
-/*
- * 한 줄 설명.
- *
- * 기록마다 한 번만 나온다. 같은 기록의 조각이 여섯이라고 해서 같은 문장을
- * 여섯 번 읽을 이유가 없다. 이 줄이 붙는 조각이 그 기록에서 가장 큰
- * 조각이기도 해서, 사진이 차지하던 면적이 글의 양을 정한다는 규칙이 그대로
- * 지켜진다.
- */
-.line {
-  max-width: 34ch;
-  /*
-   * 제목 바로 아래에 붙인다. 아래 끝으로 밀어 두었더니 넓은 조각에서 가운데가
-   * 300px씩 비었다 — 여백이 아니라 빈칸으로 보였다. 걷어낸 자리에 남는 것은
-   * 종이 위의 글 한 덩어리이고, 덩어리는 흩어져 있지 않아야 한다.
-   */
-  margin: 0.7em 0 0;
-  font-family: var(--font-serif);
-  font-size: var(--text-meta);
-  line-height: 1.7;
-  color: var(--color-text-secondary);
-  text-wrap: pretty;
-}
-
-/*
- * 사진이 걷히는 순간.
- *
- * 커서가 지나가면, 키보드로 자리를 옮기면, 손가락으로 한 번 찍으면 일어난다.
- * 셋 다 같은 일이어야 한다 — 한쪽에만 있으면 그 사람에게는 없는 기능이다.
- */
-.piece:hover .face,
-.piece:focus-visible .face,
-.piece:hover::before,
-.piece:focus-visible::before {
-  opacity: 0;
-}
-
-.piece:focus-visible {
-  outline: 1px solid var(--color-line-strong);
-  outline-offset: -1px;
-}
-
-/*
- * 관계가 잠깐 보이는 자리.
- *
- * 한 조각에 다가가면 같은 기록의 나머지 조각이 제 색을 되찾고, 다른 기록의
- * 조각들은 한 단계 가라앉는다. 테두리를 그리지 않고도 «이 사진들은 같은
- * 기록이다»가 드러난다.
- *
- * 세기를 낮게 잡는다. 강하면 블록이 선택되는 게임 화면이 되고, 여기서 하려는
- * 것은 숨어 있던 관계가 잠깐 보이는 정도다.
- */
-/*
- * 가라앉히되 비치게 하지는 않는다.
- *
- * 처음에는 filter에 opacity()를 섞었다가 사진이 반투명해졌고, 그 밑에 깔린
- * 제목이 사진 위로 떠올랐다 — 걷히지 않은 조각에서 글자가 보이면 이 판의
- * 규칙(사진과 정보는 같은 자리를 번갈아 쓴다)이 그 자리에서만 깨진다.
- * 여기서 쓸 수 있는 것은 색을 빼는 값뿐이다.
- */
-.terrain:has(.group:hover) .group:not(:hover) .face,
-.terrain[data-open] .group:not([data-open]) .face {
-  filter: saturate(0.5) contrast(0.92) brightness(1.06);
-}
-
-.group:hover .face,
-.group[data-open='true'] .face {
+.record:focus-within .face {
   filter: saturate(1) contrast(1);
 }
 
+/* 좁은 판면은 여섯 칸으로 짠다. 열을 줄이는 대신 한 조각을 키운다. */
+@media (max-width: 599px) {
+  .band {
+    --col: calc((100cqw - 5 * var(--seam)) / 6);
+
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /*
+   * 한 줄은 좁은 판에서도 남는다.
+   *
+   * 옆의 목록(CODE)은 여기서 한 줄을 지운다 — 거기서는 막대 하나가 그 기록의
+   * 얼굴이고, 무엇을 볼지 미리 설명하지 않는 편이 맞다. 여기서는 그 한 줄이
+   * 기록과 기록을 갈라 주는 유일한 글이다. 지우면 좁은 판에서 목록이 날짜와
+   * 제목만 남은 목차가 되고, 넓은 판에는 있던 문장이 좁은 판에서 사라진다.
+   */
+}
+
 /*
- * 손가락으로 펴 둔 조각.
+ * 옆에 둘 자리가 없으면 위아래로 놓는다.
  *
- * 커서의 hover와 정확히 같은 자리에 온다. 이 상태에서 한 번 더 찍으면 기록으로
- * 들어가고, 다른 조각을 찍으면 이쪽은 다시 사진으로 돌아간다.
- *
- * 한동안 여기가 «그 기록의 첫 조각»이었다. 찍은 자리는 그대로 사진인데 저 위의
- * 다른 조각이 펴지는, 같은 장치가 커서와 손가락에게 다르게 동작하는 상태였다.
+ * 이 폭에서 --margin-col은 이미 0이다(tokens.css). 칼럼을 하나로 접고
+ * 메타데이터를 눕혀, 날짜와 장소가 제목 위에 한 줄로 앉는다.
  */
-.piece[data-open] .face,
-.piece[data-open]::before {
-  opacity: 0;
+@media (max-width: 899px) {
+  .record {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+  }
+
+  .aside,
+  .name,
+  .plate {
+    grid-column: 1;
+  }
+
+  .meta {
+    flex-direction: row;
+    gap: clamp(10px, 2.4vw, 16px);
+  }
 }
 
 /*
@@ -356,21 +299,8 @@
   }
 }
 
-/*
- * 손가락에는 커서 모양 같은 힌트가 없다.
- *
- * 그래서 사진을 조금 더 또렷하게 시작한다. 반응을 없애는 대신 시작점을
- * 옮기는 쪽이다 — 찍으면 사진이 걷히는 것은 커서와 똑같다.
- */
-@media (hover: none) {
-  .face {
-    filter: saturate(0.85) contrast(0.98);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .face,
-  .piece::before {
+  .face {
     transition: none;
   }
 }

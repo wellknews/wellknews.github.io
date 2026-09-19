@@ -166,6 +166,16 @@ type LinkProps = {
   /** 현재 위치를 가리키는 링크인지. 메뉴에서 쓴다. */
   current?: boolean | 'page' | 'location' | undefined
   'aria-label'?: string | undefined
+  'aria-hidden'?: boolean | undefined
+  /**
+   * 낭독과 키보드의 차례에서 빼는 자리.
+   *
+   * 같은 곳으로 가는 링크가 한 기록에 열 개씩 붙는 자리가 있다(SESSION 판의
+   * 사진 조각). 눈으로는 사진 한 장 한 장이 그 기록으로 가는 문이지만,
+   * 차례로 읽히면 같은 제목이 열 번 나오는 소음이 된다. 그 기록으로 가는
+   * 길은 위의 머리 하나면 된다.
+   */
+  tabIndex?: number | undefined
   /**
    * 손가락으로 찍었을 때의 반응(useTouchReveal).
    *
@@ -182,16 +192,12 @@ type LinkProps = {
   /**
    * 누른 것이 아직 «가겠다»가 아닐 때.
    *
-   * 여기서 preventDefault를 하면 이동하지 않는다. 손가락에는 hover가 없어서
-   * 첫 번째 찍기를 커서의 자리로 쓰는 화면이 있는데(SESSION의 판), 그런 곳은
-   * 첫 찍기를 삼키고 두 번째에 이동해야 한다.
-   *
-   * pointerdown에서 막아서는 안 된다 — 그쪽의 preventDefault는 뒤따라오는
-   * click까지 막아 주지 않아서, 화면은 펴지는데 이동도 같이 일어난다.
-   * 막는 자리는 click이어야 한다.
+   * 여기서 preventDefault를 하면 이동하지 않는다. 막는 자리는 click이어야
+   * 한다 — pointerdown의 preventDefault는 뒤따라오는 click까지 막아 주지
+   * 않아서, 화면은 반응하는데 이동도 같이 일어난다.
    */
   onClick?: ((event: MouseEvent<HTMLAnchorElement>) => void) | undefined
-  /** 상태를 CSS로 내보내는 자리. data-lead, data-bare처럼. */
+  /** 상태를 CSS로 내보내는 자리. data-whole처럼. */
   [attribute: `data-${string}`]: unknown
 }
 
