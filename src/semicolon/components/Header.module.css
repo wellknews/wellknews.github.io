@@ -48,23 +48,29 @@
   animation: mark-reink var(--dur-base) var(--ease-out) both;
 }
 
-/* 홈도 SESSION·THREAD와 같은 방식으로 현재 위치를 남긴다. */
-.mark::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 6px;
-  width: 12px;
-  height: 1px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform var(--dur-base) var(--ease-out);
+/*
+ * 기호는 밑줄을 긋지 않는다.
+ *
+ * 한동안 여기에도 오른쪽의 SESSION·CODE·THREAD와 같은 밑줄이 그어져 있었다.
+ * 「현재 위치를 같은 방식으로 남긴다」는 말은 그럴듯했지만, 밑줄은 낱말의
+ * 관습이다. 낱말 아래에 그은 선은 그 낱말을 가리키는데, 기호 아래에 그은 선은
+ * 기호의 일부처럼 보인다 — ';' 밑에 붙은 짧은 획 하나가 되어 버린다.
+ *
+ * 기호에는 색이 맞다. 기호는 획이 전부라서 획의 색이 곧 상태다.
+ */
+.mark {
+  color: var(--color-text);
+  transition: color var(--dur-base) var(--ease-out);
 }
 
-.mark[aria-current='page']::after {
-  transform: scaleX(1);
-  transform-origin: left;
+/*
+ * 처음은 검정이고, 그 자리에 도착했을 때만 물든다.
+ *
+ * 처음부터 색이 들어 있으면 그것은 상태가 아니라 브랜드 표시가 된다. 여기서
+ * 색은 «지금 이 자리에 있다»는 말 한 가지만 하고, 그 말이 참일 때만 나온다.
+ */
+.mark[aria-current='page'] {
+  color: var(--accent);
 }
 
 .nav {
@@ -109,23 +115,30 @@
 }
 
 @media (hover: hover) {
-  .mark:hover,
   .link:hover {
     color: var(--color-text);
-  }
-
-  .mark:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
   }
 
   .link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
   }
+
+  /*
+   * 다가가면 반쯤만 물든다.
+   *
+   * 색이 끝까지 오면 지나가는 것과 도착한 것이 같아진다. 절반은 «이쪽으로 가면
+   * 그 색이 된다»까지만 말한다. 이미 그 자리에 있으면 더 물들 것이 없다.
+   */
+  .mark:hover:not([aria-current='page']) {
+    color: color-mix(in oklab, var(--accent) 50%, var(--color-text));
+  }
 }
 
-.mark:focus-visible::after,
+.mark:focus-visible:not([aria-current='page']) {
+  color: color-mix(in oklab, var(--accent) 50%, var(--color-text));
+}
+
 .link:focus-visible::after {
   transform: scaleX(1);
   transform-origin: left;

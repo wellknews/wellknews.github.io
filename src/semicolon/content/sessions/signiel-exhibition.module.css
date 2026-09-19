@@ -421,7 +421,7 @@
  * 줍는다 — 문을 따라 글이 옮겨 다니면 읽는 자리가 매번 달라진다.
  */
 .heard {
-  max-width: 34ch;
+  max-width: var(--measure);
   margin-inline: 0;
   /*
    * 열린 문과 같은 세로선에서 시작한다.
@@ -433,13 +433,21 @@
   padding-inline: var(--seat) var(--page-x);
 }
 
-/* 밖에서 들어온 말. 본문과 같은 크기로 두지 않는다. */
+/*
+ * 밖에서 들어온 말.
+ *
+ * 활자를 새로 만들지 않는다. 이 공간의 산문에는 두 가지 앉음새밖에 없다 —
+ * 보통의 문단(Passage의 note)과 한두 문장짜리(loud). 한동안 이 인용이 그
+ * 둘 중 어느 것도 아닌 세 번째였다. 25.6px에 제목용 자간(-0.02em)이라 같은
+ * 글꼴인데도 다른 글꼴을 가져다 쓴 것처럼 읽혔다.
+ *
+ * 밖에서 들어온 말이라는 것은 따옴표와, 그 말이 문 앞에 혼자 서 있다는 사실이
+ * 이미 말한다. 활자는 본문 그대로 둔다.
+ */
 .said {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.14rem, 1rem + 0.7vw, 1.6rem);
-  line-height: 1.62;
-  letter-spacing: var(--tracking-title);
+  font-size: var(--text-body);
+  line-height: 1.85;
   text-wrap: pretty;
 }
 
@@ -450,12 +458,12 @@
  * «무엇을?»이 «요시모토 나라가 뛰어넘었어요» 바로 밑에 있어야 웃긴다.
  */
 .back {
-  max-width: 30ch;
-  margin: clamp(14px, 1.8vw, 22px) 0 0;
-  font-family: var(--font-serif);
-  font-size: var(--text-meta);
-  line-height: 1.75;
-  color: var(--color-text-muted);
+  /* 문단과 문단 사이. Passage가 쓰는 그 값이다. */
+  margin: 1.5em 0 0;
+  font-size: var(--text-body);
+  line-height: 1.85;
+  /* 낙차는 크기가 아니라 색으로 만든다. */
+  color: var(--color-text-secondary);
   text-wrap: pretty;
 }
 
@@ -578,8 +586,7 @@
  * 미술계에 건 선언이 되는데, 그날 그것은 문 앞에서 속으로 든 말이었다.
  */
 .closedFrame {
-  font-size: var(--text-meta);
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .closedLine {
