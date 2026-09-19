@@ -1,5 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react'
 
+import { useViewport } from '../../layout/useViewport'
 import { Amount } from '../../components/session/Amount'
 import { Move } from '../../components/session/Move'
 import { Passage } from '../../components/session/Passage'
@@ -343,24 +344,177 @@ const heard: readonly Heard[] = [
   },
 ] as const
 
-/**
- * 주워들은 말 하나.
+/* ─────────────────────────────  87층의 복도  ─────────────────────────────
  *
- * 복도를 그리지 않는다. 두 번 그려 봤고 두 번 다 실패했다 — 테두리 사각형
- * 셋은 빈 상자로 읽혔고, 굵고 가는 세로줄은 그냥 선으로 읽혔다. 원인은 그림이
- * 아니라 근거였다. 이 구간에는 복도 사진이 없고 객실 번호도 갤러리 이름도
- * 기록해 두지 않았다. 그릴 재료가 없는 자리에 그림을 요구하면 무엇을 그려도
- * 장식이 된다.
+ * 문을 두 번 그렸고 두 번 다 문으로 읽히지 않았다. 처음에는 커다란 테두리
+ * 사각형 셋이었고(빈 상자로 읽혔다), 다음에는 굵은 세로줄과 가는 세로줄이었다
+ * (그냥 선으로 읽혔다). 둘 다 같은 이유로 실패했다 — **그려 놓고 문이라는
+ * 신호를 하나도 주지 않았다.**
  *
- * 남은 것은 문장뿐이라 문장만 놓는다. «한 방씩 지나가며 한 마디씩 주웠다»는
- * 지면이 한다 — 한 번에 하나씩, 넓은 여백을 사이에 두고, 지나가면 없어진다.
+ * 문이 문으로 읽히려면 몇 가지가 필요하다. 바닥에 서 있어야 하고, 사람만 한
+ * 비율(대략 1:2)이어야 하고, 손잡이가 있어야 하고, 열려 있다면 문짝이 돌아간
+ * 모양이 보여야 한다. 이 넷이 없으면 어떤 사각형도 그냥 사각형이다.
+ *
+ * 호텔을 재현하지는 않는다. 개발 요청서가 적어 둔 것만 그린다 — 바닥선,
+ * 상단 기준선, 객실 문. 객실 번호와 갤러리 이름은 기록해 두지 않았으므로
+ * 그 자리를 지어내지 않는다.
  */
-function Heard({ item }: { item: Heard }) {
+
+/*
+ * 도면의 좌표계.
+ *
+ * 높이는 고정이고 폭만 판면을 따라간다. 좁은 판면에서 넓은 판면과 같은 폭을
+ * 쓰면 도면이 높이에 맞춰 확대되면서 왼쪽이 잘려 나가고, 하필 그 잘리는
+ * 자리에 열린 문이 있었다. 폭을 줄이면 확대는 늘 가로가 정하게 되고, 문의
+ * 자리와 글의 자리가 어느 폭에서도 같은 세로선에 남는다.
+ */
+const PLAN = { wide: 1200, narrow: 480, height: 360, floor: 330 } as const
+
+/** 문 하나. 100 × 215 — 1:2.15, 사람이 지나다니는 비율이다. */
+const DOOR = { width: 100, height: 215, pitch: 240 } as const
+
+/*
+ * 열린 문이 늘 서 있는 자리.
+ *
+ * 걷는 사람은 제자리에 있고 복도가 지나간다. 이 수는 아래의 글이 시작하는
+ * 자리이기도 하다 — 열린 문과 그 앞에서 주운 말은 같은 세로선에 선다. 두 값을
+ * 따로 적으면 화면 폭이 바뀔 때마다 어긋나므로, CSS에는 이 수를 비율로
+ * 내려보낸다(--seat).
+ */
+const SEAT = 79
+
+/*
+ * 한 걸음에서 세워 둘 문들.
+ *
+ * 열린 문은 늘 같은 자리(SEAT)에 서고, 나머지 문들이 걸음마다 왼쪽으로
+ * 흘러간다. 걷는 사람은 제자리에 있고 복도가 지나가는 셈이다.
+ *
+ * 미는 거리를 문 사이 간격의 3분의 1로 둔다. 한 칸을 통째로 밀면 미는 거리와
+ * 간격이 같아져서 세 걸음이 전부 똑같은 그림이 된다 — 움직이는 코드는 있는데
+ * 화면에서는 아무것도 움직이지 않는다. 한 번 그렇게 만들어 봤다.
+ */
+const DRIFT = DOOR.pitch / 3
+
+/** 열린 문의 자리를 비워 둔다. 겹쳐 그리면 문 두 짝이 한자리에 선다. */
+function doorsAt(step: number): number[] {
+  const out: number[] = []
+
+  for (let n = -2; n <= 6; n += 1) {
+    const x = SEAT + DOOR.pitch * n - DRIFT * step
+    if (Math.abs(x - SEAT) < DOOR.pitch * 0.72) continue
+    out.push(x)
+  }
+
+  return out
+}
+
+function Door({ x, open }: { x: number; open: boolean }) {
+  const top = PLAN.floor - DOOR.height
+  const w = DOOR.width
+
+  /* 문짝은 경첩에서 돌아 나온다. 정면에서 보면 폭이 줄고 자유단이 살짝 기운다. */
+  const leaf = open ? w * 0.58 : w
+
   return (
-    <div className={styles.heard}>
-      <p className={styles.said}>{item.verbatim ? `“${item.said}”` : item.said}</p>
-      {item.back ? <p className={styles.back}>{item.back}</p> : null}
+    <g className={styles.door} data-open={open ? true : undefined}>
+      {/* 열린 틈. 문짝이 비켜난 만큼만 어둡다. 안쪽은 그리지 않는다. */}
+      {open ? (
+        <rect className={styles.gap} x={x + leaf} y={top} width={w - leaf} height={DOOR.height} />
+      ) : null}
+
+      {/* 문틀 */}
+      <rect className={styles.frame} x={x} y={top} width={w} height={DOOR.height} />
+
+      {/* 문짝. 열려 있으면 자유단이 위아래로 6씩 벌어진다. */}
+      <polygon
+        className={styles.leaf}
+        points={
+          open
+            ? `${x},${top} ${x + leaf},${top - 6} ${x + leaf},${PLAN.floor + 6} ${x},${PLAN.floor}`
+            : `${x},${top} ${x + w},${top} ${x + w},${PLAN.floor} ${x},${PLAN.floor}`
+        }
+      />
+
+      {/* 손잡이. 사각형을 문으로 만드는 것은 사실 이 한 획이다. */}
+      <line
+        className={styles.knob}
+        x1={x + leaf - 18}
+        y1={top + DOOR.height * 0.52}
+        x2={x + leaf - 4}
+        y2={top + DOOR.height * 0.52}
+      />
+    </g>
+  )
+}
+
+/**
+ * 복도 한 칸과, 그 앞에서 주워들은 말.
+ *
+ * 걷는 사람은 제자리에 있고 복도가 지나간다. 열린 문은 늘 같은 자리(SEAT)에
+ * 서고, 그 아래 같은 칼럼에서 말을 줍는다 — 문이 움직이고 글이 따라다니면
+ * 읽는 자리가 매번 달라진다.
+ *
+ * 문과 문 «사이»에서 들은 말에는 열린 문이 없다. 그 말은 방에서 나온 것이
+ * 아니라 복도에 떠다니던 것이라, 그 걸음에서는 모든 문이 닫힌 채 지나간다.
+ */
+function Corridor({ item, step, wide }: { item: Heard; step: number; wide: boolean }) {
+  const between = !item.verbatim
+  const width = wide ? PLAN.wide : PLAN.narrow
+
+  return (
+    <div
+      className={styles.corridor}
+      style={{ '--seat': `${((SEAT / width) * 100).toFixed(3)}%` } as CSSProperties}
+    >
+      <svg
+        className={styles.plan}
+        viewBox={`0 0 ${width} ${PLAN.height}`}
+        /* 왼쪽 기준으로 자른다. 가운데 기준이면 열린 문이 먼저 잘린다. */
+        preserveAspectRatio="xMinYMax slice"
+        aria-hidden="true"
+      >
+        {doorsAt(step).map((x) => (
+          <Door key={x} x={x} open={false} />
+        ))}
+
+        {/* 지금 지나는 방. 열려 있거나(방에서 들린 말) 닫혀 있다(복도의 말). */}
+        <Door x={SEAT} open={!between} />
+
+        {/*
+        바닥. 문이 서 있는 자리다.
+
+        천장선도 그려 두었다가 지웠다. 도면을 판면 폭에 맞춰 자르면(slice) 위가
+        먼저 잘려서 그 선만 사라지고, 잘리지 않을 만큼 내려 그으면 문 위 19칸에
+        뜬금없는 가로줄 하나가 남는다. 문이 바닥에 서 있으면 벽은 이미 있다.
+      */}
+        <line className={styles.wall} x1="0" y1={PLAN.floor} x2={width} y2={PLAN.floor} />
+      </svg>
+
+      <div className={styles.heard} data-between={between ? true : undefined}>
+        <p className={styles.said}>{item.verbatim ? `“${item.said}”` : item.said}</p>
+        {item.back ? <p className={styles.back}>{item.back}</p> : null}
+      </div>
     </div>
+  )
+}
+
+/**
+ * 87층에서 주워들은 말 셋.
+ *
+ * 판면의 폭을 알아야 도면의 좌표계를 정할 수 있어서 한 겹 감싼다. body는
+ * 정적인 JSX라 그 안에서는 판면을 물어볼 수 없다.
+ */
+function Corridors() {
+  const wide = useViewport() !== 'compact'
+
+  return (
+    <>
+      {heard.map((item, index) => (
+        <Scene key={item.id} width="bleed" air>
+          <Corridor item={item} step={index} wide={wide} />
+        </Scene>
+      ))}
+    </>
   )
 }
 
@@ -594,11 +748,7 @@ export const signielExhibition: Session = {
         없고 객실 번호도 갤러리 이름도 기록해 두지 않았다. 지나가며 줍는다는
         것은 장면마다의 여백이 한다.
       */}
-      {heard.map((item) => (
-        <Scene key={item.id} air>
-          <Heard item={item} />
-        </Scene>
-      ))}
+      <Corridors />
 
       <Scene>
         <Passage>{afterCorridor}</Passage>
