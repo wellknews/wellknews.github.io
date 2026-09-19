@@ -29,7 +29,7 @@ const mockupFront: Cover = {
   height: 800,
   /* 화면 안에 있던 것 중 실제로 옷으로 옮겨간 부분. */
   focus: { x: 0.6, y: 0.33 },
-  cutout: true,
+  whole: true,
 }
 
 const mockupBack: Cover = {
@@ -37,7 +37,7 @@ const mockupBack: Cover = {
   alt: '같은 티셔츠 뒷면 시안. 등 위쪽에 흰 산세리프 대문자로 WELLKNEWS라고 적혀 있다.',
   width: 800,
   height: 800,
-  cutout: true,
+  whole: true,
 }
 
 const packaged: Cover = {
