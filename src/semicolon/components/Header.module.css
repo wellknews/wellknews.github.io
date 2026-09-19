@@ -64,12 +64,14 @@
 }
 
 /*
- * 처음은 검정이고, 그 자리에 도착했을 때만 물든다.
+ * 처음은 검정이고, 누르면 물든다.
  *
- * 처음부터 색이 들어 있으면 그것은 상태가 아니라 브랜드 표시가 된다. 여기서
- * 색은 «지금 이 자리에 있다»는 말 한 가지만 하고, 그 말이 참일 때만 나온다.
+ * «홈에 있는가»가 아니라 «눌렀는가»에 건다. 둘은 거의 같은 말이지만 한
+ * 자리에서 갈린다 — 홈으로 바로 들어온 사람에게는 처음부터 색이 들어 있게
+ * 되고, 그러면 그것은 상태가 아니라 처음부터 칠해진 표시다. 누를 이유도
+ * 사라진다. 눌러서 물드는 것과 물든 채로 놓여 있는 것은 다르다.
  */
-.mark[aria-current='page'] {
+.mark[data-lit] {
   color: var(--accent);
 }
 
@@ -130,12 +132,12 @@
    * 색이 끝까지 오면 지나가는 것과 도착한 것이 같아진다. 절반은 «이쪽으로 가면
    * 그 색이 된다»까지만 말한다. 이미 그 자리에 있으면 더 물들 것이 없다.
    */
-  .mark:hover:not([aria-current='page']) {
+  .mark:hover:not([data-lit]) {
     color: color-mix(in oklab, var(--accent) 50%, var(--color-text));
   }
 }
 
-.mark:focus-visible:not([aria-current='page']) {
+.mark:focus-visible:not([data-lit]) {
   color: color-mix(in oklab, var(--accent) 50%, var(--color-text));
 }
 

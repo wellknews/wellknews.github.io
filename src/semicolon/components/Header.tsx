@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import { semicolon } from '../content/site'
 import { Link, path, routeKey, type Route } from '../router'
 import styles from './Header.module.css'
@@ -29,6 +31,24 @@ export function Header({ route }: Props) {
   const at = (index: Route['kind'], entry: Route['kind']) =>
     route.kind === index ? 'page' : route.kind === entry ? 'location' : undefined
 
+  /*
+   * 기호에 색이 드는 조건.
+   *
+   * «홈에 있는가»가 아니라 «눌렀는가»다. 둘은 거의 같은 말이지만 한 자리에서
+   * 갈린다 — 홈으로 바로 들어온 사람에게는 처음부터 색이 들어 있게 된다.
+   * 그러면 그것은 상태가 아니라 처음부터 칠해진 표시이고, 누를 이유도
+   * 사라진다. 눌러서 물드는 것과 물든 채로 놓여 있는 것은 다르다.
+   *
+   * aria-current는 그대로 둔다. 낭독에는 «지금 이 페이지»가 여전히 사실이고,
+   * 그 사실과 색은 다른 것을 말한다.
+   */
+  const [lit, setLit] = useState(false)
+
+  /* 홈을 떠나면 꺼진다. 색이 가리키던 자리를 벗어났기 때문이다. */
+  useEffect(() => {
+    if (route.kind !== 'home') setLit(false)
+  }, [route.kind])
+
   return (
     <header className={styles.header}>
       <div className={`shell ${styles.inner}`}>
@@ -37,6 +57,8 @@ export function Header({ route }: Props) {
           className={styles.mark}
           aria-label={`${semicolon.name} 홈`}
           current={route.kind === 'home'}
+          data-lit={lit ? true : undefined}
+          onClick={() => setLit(true)}
         >
           {/*
             key가 바뀔 때마다 React가 이 span을 새로 붙이고, 그때 잉크가 한 번
