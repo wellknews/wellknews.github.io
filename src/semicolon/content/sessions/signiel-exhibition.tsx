@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 
 import { Amount } from '../../components/session/Amount'
 import { Move } from '../../components/session/Move'
@@ -306,191 +306,83 @@ function FloorShift() {
 }
 
 /*
- * 복도에서 실제로 읽는 것.
+ * 87층에서 주워들은 말.
  *
  * 따옴표를 쓸 수 있는 것은 문장 형태로 기억한 두 발화뿐이다. 세 번째는 방
- * 안이 아니라 방과 방 사이에서 떠다닌 말이라 따옴표를 붙이지 않고, 문 앞이
- * 아니라 문과 문 사이에 세운다.
+ * 안이 아니라 방과 방 사이에서 떠다닌 말이라 따옴표를 붙이지 않는다. 첫
+ * 시안처럼 전부 직접 인용으로 만들면 기록을 정돈한 것이 아니라 말을 새로
+ * 만들어낸 것이 된다.
  */
-type CorridorStep = {
+type Heard = {
   id: string
-  /** 문 앞에서 들은 말인지, 문과 문 사이에서 들은 말인지. */
-  at: 'door' | 'between'
-  text: string
   /** 그대로 옮길 수 있는 발화인지. 요약해 기억한 말에는 따옴표를 붙이지 않는다. */
   verbatim: boolean
-  note?: string
+  said: string
+  /** 그 말에 속으로 한 마디. */
+  back?: string
 }
 
-/*
- * 세 걸음이다.
- *
- * 처음에는 열세 걸음이었다. 플리마켓이라는 생각이 다섯 걸음에 나뉘어 있었고
- * 잡담 한 문장이 네 개의 문으로 흩어져 있었다. 원문에서 복도의 몫은 실제로
- * 들은 말 둘과 잡담 한 문장뿐인데, 장치가 그보다 열 배 길었다 — 한 편의
- * 페이지가 27,500px이 되었고, 내용이 없는 자리를 스크롤이 대신 채웠다.
- *
- * 재료가 부족하면 장치를 늘리는 것이 아니라 깎는다. 플리마켓 대목은 복도에서
- * 내려 본문으로 돌려보냈다 — 그것은 걸어가며 주워들은 말이 아니라 층 전체를
- * 보고 든 생각이다. 복도에는 문 앞에서 실제로 들은 것만 남는다.
- */
-const corridorSteps: readonly CorridorStep[] = [
+const heard: readonly Heard[] = [
   {
     id: 'kusama',
-    at: 'door',
     verbatim: true,
-    text: '요즘은 쿠사마 야요이보다 요시모토 나라가 뛰어넘었어요.',
-    note: '무엇을?',
+    said: '요즘은 쿠사마 야요이보다 요시모토 나라가 뛰어넘었어요.',
+    back: '무엇을?',
   },
   {
     id: 'warhol',
-    at: 'door',
     verbatim: true,
-    text: '이 작가님은 차세대 앤디 워홀로 인정받기 시작했어요. 지금 사두시면 좋아요.',
-    note: '앤디 워홀이 상업 작가여서 그런 비교를 한 거라면 차라리 설득력이 있겠다고 생각했지만, 나는 별로 인정하고 싶지 않았다.',
+    said: '이 작가님은 차세대 앤디 워홀로 인정받기 시작했어요. 지금 사두시면 좋아요.',
+    back: '앤디 워홀이 상업 작가여서 그런 비교를 한 거라면 차라리 설득력이 있겠다고 생각했지만, 나는 별로 인정하고 싶지 않았다.',
   },
   {
     id: 'between',
-    at: 'between',
     verbatim: false,
-    text: '방과 방 사이에서는 작품 이야기만 오간 것도 아니었다.',
-    note: '캔버스가 너무 비싸졌다는 얘기, 거래가 다 끊겼다는 얘기, 누구와 사이가 나빠져서 슬펐다는 얘기, 명품 선물을 해주면 관계가 다시 풀릴 것 같다는 얘기 같은 소소한 잡담들도 흘러다녔다.',
+    said: '방과 방 사이에서는 작품 이야기만 오간 것도 아니었다.',
+    back: '캔버스가 너무 비싸졌다는 얘기, 거래가 다 끊겼다는 얘기, 누구와 사이가 나빠져서 슬펐다는 얘기, 명품 선물을 해주면 관계가 다시 풀릴 것 같다는 얘기 같은 소소한 잡담들도 흘러다녔다.',
   },
 ] as const
 
 /**
- * 문 하나와, 그 앞에서 주워들은 말.
+ * 주워들은 말 하나.
  *
- * 문은 빈 사각형이 아니다. 한동안 커다란 테두리 상자 셋이 나란히 서 있고 그
- * 옆에 글이 붙어 있었는데, 빈 상자는 아무것도 말하지 않아서 «만들다 만 것»으로
- * 읽혔다. 문이 하는 말은 하나뿐이다 — 조금 열려 있다. 그래서 문을 좁게 세우고,
- * 문짝을 살짝 돌려 그 뒤의 어둠이 세로로 한 줄 새어 나오게 한다. 안쪽을
- * 그리지는 않는다. 실제로 본 적 없는 객실을 만들어내지 않기 위해서다.
+ * 복도를 그리지 않는다. 두 번 그려 봤고 두 번 다 실패했다 — 테두리 사각형
+ * 셋은 빈 상자로 읽혔고, 굵고 가는 세로줄은 그냥 선으로 읽혔다. 원인은 그림이
+ * 아니라 근거였다. 이 구간에는 복도 사진이 없고 객실 번호도 갤러리 이름도
+ * 기록해 두지 않았다. 그릴 재료가 없는 자리에 그림을 요구하면 무엇을 그려도
+ * 장식이 된다.
  *
- * 문과 문 사이에서 들은 말은 문 앞에 세우지 않는다. 그 말은 방에서 나온 것이
- * 아니라 복도에 떠다니던 것이라, 문짝이 닫힌 채로 지나간다.
+ * 남은 것은 문장뿐이라 문장만 놓는다. «한 방씩 지나가며 한 마디씩 주웠다»는
+ * 지면이 한다 — 한 번에 하나씩, 넓은 여백을 사이에 두고, 지나가면 없어진다.
  */
-function CorridorDoor({ step }: { step: CorridorStep }) {
+function Heard({ item }: { item: Heard }) {
   return (
-    <div className={styles.doorScene} data-at={step.at}>
-      <div className={styles.sideDoor} data-side="left" aria-hidden="true" />
-
-      <div className={styles.door} aria-hidden="true" />
-
-      {/*
-        주워듣는 자리.
-
-        한동안 이 글이 문 안에 들어 있으면서 문의 오른쪽 끝에서부터 밖으로
-        뻗어 있었다(left: 100% + 여백). 문 오른쪽에 남는 자리는 149px인데 글은
-        476px를 요구해서 327px가 무대 밖으로 잘려 나갔다. 무대가 overflow:
-        hidden이라 페이지는 가로로 밀리지 않았고, 그래서 «가로 넘침» 검사도
-        이것을 잡지 못했다. 자리를 격자에게 맡긴다 — 칼럼이 있는 한 넘칠 수 없다.
-      */}
-      <div className={styles.beside}>
-        <div className={styles.sideDoor} data-side="right" aria-hidden="true" />
-        <div className={styles.voice}>
-          {step.verbatim ? <p className={styles.quote}>“{step.text}”</p> : <p>{step.text}</p>}
-          {step.note ? <p className={styles.roomNote}>{step.note}</p> : null}
-        </div>
-      </div>
+    <div className={styles.heard}>
+      <p className={styles.said}>{item.verbatim ? `“${item.said}”` : item.said}</p>
+      {item.back ? <p className={styles.back}>{item.back}</p> : null}
     </div>
   )
 }
 
-function GalleryCorridor() {
-  const [at, setAt] = useState(0)
-  const rail = useRef<HTMLDivElement>(null)
-  const current = corridorSteps[at] ?? corridorSteps[0]!
-
-  useEffect(() => {
-    const node = rail.current
-    if (!node) return
-
-    const steps = [...node.children]
-    const watch = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue
-          const index = steps.indexOf(entry.target)
-          if (index >= 0) setAt(index)
-        }
-      },
-      { rootMargin: '-50% 0px -50% 0px', threshold: 0 },
-    )
-
-    for (const step of steps) watch.observe(step)
-    return () => watch.disconnect()
-  }, [])
-
-  return (
-    <div className={styles.corridor} style={{ '--count': corridorSteps.length } as CSSProperties}>
-      {/*
-        낭독과 reduced-motion의 본문.
-
-        움직이는 판은 aria-hidden이다. 읽어 주는 쪽은 이 목록 하나만 만나고,
-        화면에서 모션을 끈 사람에게도 바로 이 목록이 보인다.
-      */}
-      {/*
-        여백은 창이 갖고 목록은 갖지 않는다.
-
-        판면의 좌우 여백을 <ol>에 직접 주면, 기호를 하나도 그리지 않는 목록이
-        기호의 자리만큼 들여쓰인 것과 같은 모양이 된다. 이 저장소의 검사가
-        그것을 잡는다(«기울어진 목록»). 여백을 밖의 상자로 옮기면 목록은
-        들여쓰기 0으로 남는다.
-      */}
-      <div className={styles.corridorRead}>
-        <ol className={styles.corridorFallback} role="list">
-          {corridorSteps.map((step) => (
-            <li key={step.id}>
-              {step.verbatim ? <p>“{step.text}”</p> : <p>{step.text}</p>}
-              {step.note ? <p className={styles.fallbackNote}>{step.note}</p> : null}
-            </li>
-          ))}
-        </ol>
-      </div>
-
-      <div className={styles.corridorStage} aria-hidden="true">
-        <p className={`mono ${styles.corridorFloor}`}>87F</p>
-        <span className={styles.corridorLine} />
-
-        <CorridorDoor key={current.id} step={current} />
-      </div>
-
-      <div className={styles.corridorRail} ref={rail} aria-hidden="true">
-        {corridorSteps.map((step) => (
-          <div key={step.id} />
-        ))}
-      </div>
-    </div>
-  )
-}
-
-/*
- * 복도의 마지막 문.
+/**
+ * 마지막에 남은 말.
  *
- * 앞에서는 문이 조금씩 열리며 말을 주웠다. 마지막에는 반대로 문을 닫아 둔다.
- * 크게 선언하지 않고 문 안으로 들어가지 않은 채 끝낸다. 이 문장은 미술계에
- * 싸움을 걸기 위한 결론이 아니라, 구경하면서 속으로 든 말이었다.
+ * 여기에도 문을 그려 두었다가 지웠다. 빈 사각형 하나가 «닫힌 문»으로 읽히지
+ * 않는다. 닫아 두는 일은 문장이 이미 하고 있다 — 속으로만 말했고, 들어가지
+ * 않았고, 구경만 했다.
+ *
+ * 액자를 지우지 않는다. «진지한 척 좀 하지 마»만 남기면 이 문장은 미술계에
+ * 건 선언이 된다. 원문에서 이것은 앞뒤로 «솔직히 속으로는»과 «라고 말하고
+ * 싶은 순간도 있었다»에 싸여 있고, 그 두 마디가 이것을 속말로 붙들고 있다.
  */
-function ClosedDoor() {
+function Inside() {
   return (
-    <div className={styles.closedDoor}>
-      <span className={styles.closedLeaf} aria-hidden="true" />
-      {/*
-        액자를 지우지 않는다.
-
-        «진지한 척 좀 하지 마»만 남기면 이 문장은 미술계에 건 선언이 된다.
-        원문에서 이것은 앞뒤로 «솔직히 속으로는»과 «라고 말하고 싶은 순간도
-        있었다»에 싸여 있고, 그 두 마디가 이것을 속말로 붙들고 있다. 문을 닫아
-        두는 것과 같은 일을 문장이 이미 하고 있다.
-      */}
-      <div className={styles.closedText}>
-        <p className={styles.closedFrame}>솔직히 속으로는</p>
-        <p className={styles.closedLine}>진지한 척 좀 하지 마.</p>
-        <p className={styles.closedFrame}>라고 말하고 싶은 순간도 있었다.</p>
-        <p>그래도 내가 거기 맞짱 뜨러 간 건 아니었다.</p>
-        <p>그냥 구경하러 간 거였다.</p>
-      </div>
+    <div className={styles.closedText}>
+      <p className={styles.closedFrame}>솔직히 속으로는</p>
+      <p className={styles.closedLine}>진지한 척 좀 하지 마.</p>
+      <p className={styles.closedFrame}>라고 말하고 싶은 순간도 있었다.</p>
+      <p>그래도 내가 거기 맞짱 뜨러 간 건 아니었다.</p>
+      <p>그냥 구경하러 간 거였다.</p>
     </div>
   )
 }
@@ -695,9 +587,18 @@ export const signielExhibition: Session = {
         <Passage>{fleaMarket}</Passage>
       </Scene>
 
-      <Scene width="bleed" air>
-        <GalleryCorridor />
-      </Scene>
+      {/*
+        주워들은 말 셋. 한 번에 하나씩 지나간다.
+
+        복도를 그리지 않는다. 그릴 근거가 없어서다 — 이 구간에는 복도 사진이
+        없고 객실 번호도 갤러리 이름도 기록해 두지 않았다. 지나가며 줍는다는
+        것은 장면마다의 여백이 한다.
+      */}
+      {heard.map((item) => (
+        <Scene key={item.id} air>
+          <Heard item={item} />
+        </Scene>
+      ))}
 
       <Scene>
         <Passage>{afterCorridor}</Passage>
@@ -718,7 +619,7 @@ export const signielExhibition: Session = {
       </Scene>
 
       <Scene air>
-        <ClosedDoor />
+        <Inside />
       </Scene>
 
       <Scene>

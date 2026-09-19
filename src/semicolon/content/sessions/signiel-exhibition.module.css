@@ -272,269 +272,54 @@
  * prefers-reduced-motion: no-preference 안에서만 이 목록을 화면 밖으로 접고 대신
  * 나타난다. 지원하지 않는 브라우저에서는 이 목록이 그대로 완성본이다.
  */
-/*
- * 읽는 쪽의 상자.
+/* ─────────────────────────────  주워들은 말  ─────────────────────────────
  *
- * 판면의 좌우 여백은 여기가 갖는다. 목록에 직접 주면 기호를 그리지 않는
- * 목록이 기호의 자리만큼 들여쓰인 모양이 되고, 가운데 맞춤 장치 안에서 그
- * 차이의 절반만큼 잉크가 통째로 밀린다.
+ * 복도를 그리지 않는다.
+ *
+ * 두 번 그려 봤다. 한 번은 테두리 사각형 셋으로, 한 번은 굵은 세로줄과 가는
+ * 세로줄로. 둘 다 문으로 읽히지 않았다 — 앞의 것은 빈 상자였고 뒤의 것은
+ * 그냥 선이었다.
+ *
+ * 원인은 그림 실력이 아니라 근거였다. 이 구간에는 복도 사진이 없고, 객실
+ * 번호도 갤러리 이름도 기록해 두지 않았다. 그릴 재료가 하나도 없는 자리에
+ * 그림을 요구하면 무엇을 그려도 장식이 된다 — 이 공간이 «사진은 장식이 아니라
+ * 증거»라고 적어 둔 바로 그 자리다.
+ *
+ * 실제로 남은 것은 문장뿐이다. 그래서 문장만 놓는다. «한 방씩 지나가며 한
+ * 마디씩 주웠다»는 그림이 아니라 지면이 한다 — 한 번에 하나씩, 넓은 여백을
+ * 사이에 두고, 지나가면 없어진다.
  */
-.corridorRead {
-  padding: 0 var(--page-x);
-}
-
-.corridorFallback {
-  display: grid;
-  row-gap: clamp(28px, 6vw, 64px);
-  width: min(100%, var(--measure));
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-.corridorFallback li {
-  display: grid;
-  row-gap: 10px;
-}
-
-.corridorFallback p {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: var(--text-body);
-  line-height: 1.75;
-  text-wrap: pretty;
-}
-
-.fallbackNote {
-  color: var(--color-text-muted);
-  font-size: var(--text-meta) !important;
-}
-
-/* 향상된 복도와 눈금은 기본 상태에서 없다. */
-.corridorStage,
-.corridorRail {
-  display: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .corridor {
-    /*
-     * 한 걸음의 길이.
-     *
-     * 걸음이 셋뿐이라 하나하나가 충분히 머물러야 한다. 열세 걸음일 때는 짧게
-     * 끊어도 되었지만, 그때는 내용이 없는 자리를 스크롤이 대신 채우고 있었다.
-     */
-    --corridor-step: 78svh;
-    --corridor-top: calc(var(--header-h) + 5svh);
-    --corridor-height: 80svh;
-
-    position: relative;
-    height: calc(var(--count) * var(--corridor-step));
-  }
-
-  /*
-   * 화면에서는 접지만 DOM에서는 남긴다. 움직이는 stage는 aria-hidden이므로
-   * 낭독은 언제나 이 목록 하나만 읽는다.
-   */
-  .corridorFallback {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-
-  .corridorStage {
-    position: sticky;
-    top: var(--corridor-top);
-    display: grid;
-    grid-template-rows: auto 1fr;
-    width: min(100%, var(--content-max));
-    height: var(--corridor-height);
-    margin-inline: auto;
-    overflow: hidden;
-  }
-
-  /*
-   * 복도의 윗선 하나만 남긴다. 호텔을 3D로 재현하지 않는다. 실제 객실 번호와
-   * 갤러리 이름도 기록하지 않았으므로 그 자리를 가짜 글자로 채우지 않는다.
-   */
-  .corridorLine {
-    position: absolute;
-    top: clamp(38px, 6vw, 64px);
-    left: var(--page-x);
-    right: var(--page-x);
-    height: 1px;
-    background: var(--color-line-strong);
-    opacity: 0.7;
-  }
-
-  .corridorFloor {
-    z-index: 3;
-    justify-self: start;
-    margin: 0;
-    padding: 0 var(--page-x);
-    color: var(--color-text-muted);
-    letter-spacing: 0.26em;
-  }
-
-  .corridorRail {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: calc(50svh - var(--corridor-top));
-    display: grid;
-    grid-auto-rows: 1fr;
-    height: calc(var(--count) * var(--corridor-step) - var(--corridor-height));
-    pointer-events: none;
-  }
-}
-
-/* ─────────────────────────────  복도 안의 문  ───────────────────────────── */
-.doorScene {
-  position: absolute;
-  inset: clamp(54px, 8vw, 90px) var(--page-x) clamp(18px, 4vw, 42px);
-  display: grid;
-  /*
-   * 지나온 문 · 지금의 문 · 주워들은 말.
-   *
-   * 세 번째 칼럼이 글의 자리다. 이 자리를 격자에 두지 않고 문에서 밀어내는
-   * 방식으로 잡았을 때, 남는 폭보다 글이 넓어 무대 밖으로 잘려 나갔다.
-   */
-  grid-template-columns: minmax(0, 0.7fr) auto minmax(0, 1.9fr);
-  align-items: end;
-  column-gap: clamp(22px, 3.5vw, 52px);
-  animation: corridor-enter var(--dur-base) var(--ease-out) both;
-}
-
-/* 글이 앉는 칼럼. 다음 문은 그 뒤로 물러나 모서리만 비친다. */
-.beside {
-  position: relative;
-  align-self: stretch;
-  display: grid;
-  align-items: center;
-}
-
-/*
- * 문 하나.
- *
- * 문이 하는 말은 하나뿐이다 — 조금 열려 있다. 그 한 마디를 위해 큰 빈 상자를
- * 세울 이유가 없다. 한동안 480px짜리 테두리 사각형 셋이 나란히 서 있었는데,
- * 빈 상자는 아무것도 말하지 않아서 «만들다 만 것»으로 읽혔다.
- *
- * 복도를 지나며 실제로 눈에 들어오는 것은 문짝이 아니라 «벌어진 틈»이다.
- * 그래서 상자를 지우고 틈만 남긴다 — 바닥에서 올라온 어두운 세로줄 하나.
- * 지금 지나는 방의 틈은 벌어져 있고, 지나온 방과 다음 방의 틈은 가늘고
- * 흐리다. 안쪽은 그리지 않는다. 실제로 본 적 없는 객실을 만들어내지 않는다.
- */
-.sideDoor,
-.door {
-  position: relative;
-  align-self: end;
-  background: var(--color-text);
-}
-
-.door {
-  justify-self: end;
-  width: 7px;
-  height: min(46svh, 420px);
-  opacity: 0.66;
-  /* 폭이 아니라 가로 배율로 연다. 격자 칼럼을 흔들지 않는다. */
-  transform-origin: left center;
-  animation: door-ajar var(--dur-slow) var(--ease-out) both;
-}
-
-/*
- * 문과 문 사이에서 들은 말.
- *
- * 방에서 나온 말이 아니라 복도에 떠다니던 말이라, 열린 틈을 세우지 않는다.
- * 문틈 대신 바닥의 한 마디만 지나간다.
- */
-.doorScene[data-at='between'] .door {
-  height: min(22svh, 180px);
-  opacity: 0.3;
-  scale: 0.28 1;
-  animation: none;
-}
-
-@keyframes door-ajar {
-  from {
-    opacity: 0.28;
-    scale: 0.28 1;
-  }
-}
-
-/* 지나온 문과 다음 문. 복도가 이어진다는 것만 말한다. */
-.sideDoor {
-  width: 2px;
-  height: min(34svh, 300px);
-  opacity: 0.22;
-}
-
-.sideDoor[data-side='left'] {
-  justify-self: end;
-}
-
-.sideDoor[data-side='right'] {
-  position: absolute;
-  right: 8%;
-  bottom: 0;
-}
-
-/* 복도의 바닥. 틈들이 여기에서 올라선다. */
-.doorScene::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid var(--color-line);
-}
-
-.voice {
-  position: relative;
-  z-index: 4;
-  display: grid;
-  row-gap: clamp(12px, 2vw, 20px);
+.heard {
   max-width: 34ch;
-  background: var(--color-bg);
-  padding-block: 10px;
+  margin: 0 auto;
 }
 
-.voice p {
+/* 밖에서 들어온 말. 본문과 같은 크기로 두지 않는다. */
+.said {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 0.94rem + 0.35vw, 1.2rem);
-  line-height: 1.72;
+  font-size: clamp(1.14rem, 1rem + 0.7vw, 1.6rem);
+  line-height: 1.62;
+  letter-spacing: var(--tracking-title);
   text-wrap: pretty;
 }
 
-.quote {
-  color: var(--color-text);
-}
-
-.roomNote {
-  /* 위의 인용보다 넓어지지 않는다. 넓어지면 이 칼럼을 혼자 밀고 나간다. */
-  max-width: 100%;
+/*
+ * 그 말에 속으로 한 마디.
+ *
+ * 들은 말 아래에 붙고 한 단계 물러선다. 이 두 줄의 낙차가 이 구간의 전부다 —
+ * «무엇을?»이 «요시모토 나라가 뛰어넘었어요» 바로 밑에 있어야 웃긴다.
+ */
+.back {
+  max-width: 30ch;
+  margin: clamp(14px, 1.8vw, 22px) 0 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-meta);
+  line-height: 1.75;
   color: var(--color-text-muted);
-  font-size: var(--text-meta) !important;
+  text-wrap: pretty;
 }
 
-@keyframes corridor-enter {
-  from {
-    opacity: 0;
-    translate: 7% 0;
-  }
-
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
-}
-
-/* ─────────────────────────────  복도 정지 구간  ───────────────────────────── */
 /*
  * 층에 붙인 이름표 하나.
  *
@@ -556,21 +341,12 @@
   text-align: center;
 }
 
-/* ─────────────────────────────  마지막 닫힌 문  ───────────────────────────── */
-.closedDoor {
-  display: grid;
-  grid-template-columns: minmax(160px, 300px) minmax(0, 34ch);
-  align-items: center;
-  justify-content: center;
-  gap: clamp(30px, 7vw, 90px);
-}
-
-.closedLeaf {
-  display: block;
-  aspect-ratio: 0.62;
-  border: 1px solid var(--color-line-strong);
-}
-
+/* ─────────────────────────────  마지막에 남은 말  ─────────────────────────────
+ *
+ * 여기에도 문을 그려 두었다가 지웠다. 빈 사각형 하나가 «닫힌 문»이라고
+ * 읽히지 않는다. 닫아 두는 일은 문장이 이미 하고 있다 — 속으로만 말했고,
+ * 들어가지 않았고, 구경만 했다.
+ */
 .closedText {
   display: grid;
   row-gap: clamp(10px, 1.6vw, 16px);
@@ -691,80 +467,14 @@
 
 /* ─────────────────────────────  작은 판면  ───────────────────────────── */
 @media (max-width: 599px) {
-  .closedDoor {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .closedLeaf {
-    width: min(48vw, 190px);
-  }
-
   .closedText {
     width: min(100%, 30ch);
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .corridor {
-      --corridor-step: 56svh;
-      --corridor-top: 4svh;
-      --corridor-height: 88svh;
-    }
-
-    .corridorStage {
-      width: 100%;
-    }
-
-    /*
-     * 좁은 판면에는 옆자리가 없다.
-     *
-     * 글을 문 옆에 두면 둘 다 손톱만 해진다. 칼럼을 둘로 접고 글을 문 위에
-     * 겹쳐서 아래쪽에 앉힌다 — 문틈에서 주워듣는다는 것은 그대로다.
-     */
-    /*
-     * 좁은 판면에는 옆자리가 없다.
-     *
-     * 문틈과 글을 나란히 두면 둘 다 손톱만 해진다. 칼럼을 하나로 접고 위아래로
-     * 놓는다 — 문틈이 먼저 서고 그 아래에서 말을 줍는다.
-     */
-    .doorScene {
-      inset-inline: 16px;
-      grid-template-columns: minmax(0, 1fr);
-      align-content: end;
-      row-gap: clamp(18px, 5vw, 28px);
-      padding-bottom: 6%;
-    }
-
-    .sideDoor[data-side='left'] {
-      display: none;
-    }
-
-    .door {
-      grid-column: 1;
-      justify-self: start;
-      width: 6px;
-      height: min(26svh, 220px);
-    }
-
-    .beside {
-      grid-column: 1;
-      align-self: auto;
-    }
-
-    .beside .sideDoor {
-      display: none;
-    }
-
-    .voice {
-      max-width: none;
-    }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .densityNoise span,
-  .noise span,
-  .door {
+  .noise span {
     animation: none;
   }
 
