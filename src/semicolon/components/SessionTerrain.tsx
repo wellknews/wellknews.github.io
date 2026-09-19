@@ -21,27 +21,50 @@ type Props = {
 
 /* ─────────────────────────────  판을 나누는 법  ─────────────────────────────
  *
- * 한 줄의 생김새. spans의 합이 늘 판의 폭과 같아서 줄에 빈칸이 남지 않는다.
- * rows는 그 줄이 격자에서 몇 칸 높이인지다. 한 칸의 높이는 열 폭의 절반이라
- * [6]×4는 3:1 띠가 되고, [4,2]×4는 2:1과 정사각이 되고, [2,2,2]×3은 4:3 셋이
- * 된다 — 줄마다 다른 생김새가 나오면서도 한 화면에 여러 기록이 들어온다.
+ * 한 줄의 생김새 — 왼쪽부터의 폭이다. 합이 늘 판의 폭과 같아서 줄에 빈칸이
+ * 남지 않는다.
+ *
+ * 높이는 여기 적지 않는다. 판의 모든 줄이 같은 높이이고(SessionTerrain.module.css)
+ * 그 높이는 두 칸짜리 조각의 폭과 같다 — 그래서 [2]는 정확히 정사각형이고,
+ * [3]은 1.5:1, [5]는 2.5:1, [8]은 4:1이 된다. 한동안 줄마다 높이를 따로
+ * 주었는데, 그러면 한 장짜리 기록의 띠가 5.3:1까지 얇아져서 정사각형에 가까운
+ * 사진은 무엇이 찍혔는지 알 수 없는 조각이 되었다. 줄의 높이를 하나로 두면
+ * 기록의 무게는 «줄이 몇 개인가»로만 드러난다.
  */
-type Shape = { spans: readonly number[]; rows: number }
+type Shape = readonly number[]
 
 /**
- * 넓은 판면 — 여섯 칸.
+ * 넓은 판면 — 여덟 칸.
  *
- * 한 줄에 몇 장을 놓느냐로 표를 만든다. 첫 줄은 한 장, 두 번째 줄은 두 장,
- * 세 번째 줄은 세 장. 같은 수라도 둘 이상의 생김새가 있는 자리는 기록마다
- * 다른 것을 고르게 해서, 판 전체가 같은 무늬로 반복되지 않게 한다.
+ * 여섯 칸으로 시작했는데 판이 조밀해지지 않았다. 한 줄에 세 장이 한계라
+ * 조각 하나하나가 크고, 화면에 한 번에 들어오는 장면이 적었다 — 쌓인 것처럼
+ * 보이려면 작은 단위가 여럿 보여야 하는데 큰 단위가 몇 개 보였다. 칸을 늘려
+ * 한 줄에 넷까지 놓고 줄의 높이도 낮췄다.
+ *
+ * 한 줄에 몇 장을 놓느냐로 표를 만든다. 같은 수라도 둘 이상의 생김새가 있는
+ * 자리는 기록마다 다른 것을 고르게 해서, 판 전체가 같은 무늬로 반복되지 않게
+ * 한다.
  */
 const WIDE: readonly (readonly Shape[])[] = [
-  [{ spans: [6], rows: 4 }],
+  /*
+   * 한 장만 남은 날은 줄을 다 쓴다.
+   *
+   * 절반만 쓰게 두었더니 옆이 비어 판에 구멍이 생겼다. 구멍은 «작게 남았다»가
+   * 아니라 «덜 만들었다»로 읽힌다. 그다음에는 폭 대신 높이를 줄여 봤는데,
+   * 4:1이던 띠가 5.3:1이 되면서 정사각형인 사진 한 장이 눈만 남은 가로줄이
+   * 되었다. 그날의 몫이 작다는 것은 띠를 얇게 만들어서가 아니라 줄이 하나뿐인
+   * 것으로 이미 말해진다.
+   */
+  [[8]],
   [
-    { spans: [4, 2], rows: 4 },
-    { spans: [2, 4], rows: 4 },
+    [5, 3],
+    [3, 5],
   ],
-  [{ spans: [2, 2, 2], rows: 3 }],
+  [
+    [3, 3, 2],
+    [2, 3, 3],
+  ],
+  [[2, 2, 2, 2]],
 ]
 
 /**
@@ -51,10 +74,7 @@ const WIDE: readonly (readonly Shape[])[] = [
  * 조각이 손톱만 해지고, 그러면 장면이 아니라 무늬가 된다. 여기서 한 조각은
  * 화면의 절반이거나 한 줄 전체다.
  */
-const NARROW: readonly (readonly Shape[])[] = [
-  [{ spans: [4], rows: 4 }],
-  [{ spans: [2, 2], rows: 4 }],
-]
+const NARROW: readonly (readonly Shape[])[] = [[[4]], [[2, 2]]]
 
 /**
  * 기록마다 다른 배치를 주되, 늘 같은 배치를 준다.
@@ -68,6 +88,18 @@ function seedOf(slug: string): number {
   let sum = 0
   for (let at = 0; at < slug.length; at += 1) sum = (sum * 31 + slug.charCodeAt(at)) % 9973
   return sum
+}
+
+/**
+ * 한 줄을 놓는 순서.
+ *
+ * 첫 줄만 넓은 조각을 앞에 둔다. 기록의 첫 조각이 그 기록에서 가장 큰 조각이어야
+ * 하기 때문이다 — 장소와 한 줄 설명이 붙는 자리가 거기라서, 작은 조각이 앞에
+ * 오면 가장 많은 글이 가장 좁은 칸에 들어간다. 나머지 줄은 표에 적힌 순서를
+ * 그대로 쓴다. 거기까지 정렬하면 판이 왼쪽부터 작아지는 계단이 된다.
+ */
+function laid(shape: Shape, lead: boolean): Shape {
+  return lead ? [...shape].sort((a, b) => b - a) : shape
 }
 
 /**
@@ -85,12 +117,41 @@ function rowsFor(count: number, seed: number, table: readonly (readonly Shape[])
   let step = 0
 
   while (left > 0) {
-    let size = left <= widest ? left : (seed + step) % 2 === 0 ? widest : Math.max(1, widest - 1)
+    /*
+     * 첫 줄에는 네 장을 놓지 않는다.
+     *
+     * 네 장짜리 줄은 조각이 전부 2칸이라, 그 줄이 첫 줄이면 기록에서 가장 큰
+     * 조각이 가장 작은 조각과 같아진다. 장소와 한 줄 설명이 붙는 자리가 그
+     * 첫 조각이라서 글이 들어갈 데가 없어진다.
+     */
+    const most = step === 0 ? Math.min(widest, 3) : widest
+
+    let size = left <= most ? left : (seed + step) % 2 === 0 ? most : Math.max(1, most - 1)
 
     if (left - size === 1 && size > 1) size -= 1
 
-    const options = table[size - 1] ?? table[0]
-    out.push(options![(seed + step) % options!.length]!)
+    const options = table[size - 1] ?? table[0]!
+    const start = (seed + step) % options.length
+
+    /*
+     * 위아래 줄이 같은 자리에서 끊기지 않게 한다.
+     *
+     * 네 장짜리 기록에서 [5,3]이 두 번 이어 나온 적이 있다. 그러면 x=684에
+     * 세로 선이 기록을 위에서 아래까지 가로질러서, 조각들이 서로 물린 판이
+     * 아니라 두 칸짜리 표가 된다. 표에는 [5,3]과 [3,5]가 둘 다 있었는데도
+     * 그렇게 된 것은 첫 줄을 내림차순으로 세우는 규칙이 [3,5]를 [5,3]으로
+     * 되돌려 놓았기 때문이다 — 고르는 단계에서만 다르고 깔리고 나면 같았다.
+     * 그래서 고른 것이 아니라 «깔린 것»을 앞 줄과 대 본다.
+     */
+    let row = laid(options[start]!, step === 0)
+
+    for (let turn = 1; turn < options.length; turn += 1) {
+      const above = out.at(-1)
+      if (!above || above.join() !== row.join()) break
+      row = laid(options[(start + turn) % options.length]!, step === 0)
+    }
+
+    out.push(row)
 
     left -= size
     step += 1
@@ -99,11 +160,10 @@ function rowsFor(count: number, seed: number, table: readonly (readonly Shape[])
   return out
 }
 
-/** 한 조각이 판에서 차지하는 자리. */
+/** 한 조각이 판에서 차지하는 자리. 높이는 줄마다 같으므로 폭만 정하면 된다. */
 type Piece = {
   image: Cover | undefined
   cols: number
-  rows: number
   /** 그 기록의 첫 조각인지. 정보를 전부 펴 놓는 자리는 기록마다 하나다. */
   lead: boolean
 }
@@ -116,29 +176,20 @@ function piecesFor(session: Session, wide: boolean): Piece[] {
   const images = session.images ?? (session.cover ? [session.cover] : [])
   const table = wide ? WIDE : NARROW
 
+  const seed = seedOf(session.slug)
+
   if (images.length === 0) {
-    const only = table[0]![0]!
-    return [{ image: undefined, cols: only.spans[0]!, rows: only.rows, lead: true }]
+    return [{ image: undefined, cols: table[0]![0]![0]!, lead: true }]
   }
 
   const out: Piece[] = []
   let at = 0
 
-  for (const shape of rowsFor(images.length, seedOf(session.slug), table)) {
-    /*
-     * 첫 줄만 넓은 조각을 앞에 둔다.
-     *
-     * 기록의 첫 조각이 그 기록에서 가장 큰 조각이어야 한다. 장소와 한 줄
-     * 설명이 붙는 자리가 거기라서, 작은 조각이 앞에 오면 가장 많은 글이 가장
-     * 좁은 칸에 들어간다. 나머지 줄은 순서를 그대로 둔다 — 거기까지 정렬하면
-     * 판이 왼쪽부터 작아지는 계단이 된다.
-     */
-    const spans = at === 0 ? [...shape.spans].sort((a, b) => b - a) : shape.spans
-
-    for (const cols of spans) {
+  for (const row of rowsFor(images.length, seed, table)) {
+    for (const cols of row) {
       const image = images[at]
       if (!image) break
-      out.push({ image, cols, rows: shape.rows, lead: at === 0 })
+      out.push({ image, cols, lead: at === 0 })
       at += 1
     }
   }
@@ -179,10 +230,11 @@ function Piece({
     <Link
       to={path.session(session.slug)}
       className={styles.piece}
-      style={{ '--cols': piece.cols, '--rows': piece.rows } as CSSProperties}
+      style={{ '--cols': piece.cols } as CSSProperties}
       data-lead={piece.lead}
       data-open={open ? true : undefined}
       data-bare={image ? undefined : true}
+      data-cutout={image?.cutout ? true : undefined}
       onPointerEnter={onEnter}
       onPointerDown={onPoint}
       onClick={onOpen}
