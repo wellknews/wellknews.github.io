@@ -89,6 +89,11 @@ const PAGES = [
     path: '/session/sugar-drop-reason',
     kind: 'session',
   },
+  {
+    name: 'session/signiel-exhibition',
+    path: '/session/signiel-exhibition',
+    kind: 'session',
+  },
   { name: 'session/wellknews-1k', path: '/session/wellknews-1k', kind: 'session' },
   { name: 'session/only-myself', path: '/session/only-myself', kind: 'session' },
   { name: 'session/divide-and-conquer', path: '/session/divide-and-conquer', kind: 'session' },

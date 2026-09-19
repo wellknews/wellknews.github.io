@@ -26,17 +26,31 @@ import styles from './signiel-exhibition.module.css'
  */
 const ramen: Cover = {
   src: '/media/session/signiel-exhibition/01-ramen.webp',
-  alt: '흰 그릇에 담긴 진한 닭육수 라멘과 반숙란, 목이버섯, 파가 보이는 오레노라멘의 식탁',
-  width: 1152,
-  height: 1152,
+  alt: '흰 그릇에 담긴 진한 닭육수 라멘. 반숙란과 목이버섯과 파가 얹혀 있고 붉은 기름이 떠 있다',
+  width: 1086,
+  height: 1448,
 }
 
 const windowArt: Cover = {
   src: '/media/session/signiel-exhibition/02-window-art.webp',
-  alt: '서울 전경이 내려다보이는 높은 창 앞 대리석 턱에 푸른 추상화와 도시 풍경 그림이 기대어 놓여 있다',
-  width: 1152,
-  height: 1152,
-  focus: { x: 0.48, y: 0.6 },
+  alt: '서울 전경이 내려다보이는 높은 창가에 광택 나는 꽃 그림 석 점이 바닥과 창턱에 기대어 놓여 있고, 옆 좌대 위에 왕관을 쓴 붉은 캐릭터 조형물과 작가 이름이 적힌 상자가 있다',
+  width: 1086,
+  height: 1448,
+  /* 창밖의 도시가 아니라 바닥에 기대어 놓인 그림들이 이 사진의 내용이다. */
+  focus: { x: 0.4, y: 0.62 },
+}
+
+/*
+ * 마지막 한 장.
+ *
+ * 이 기록이 쓰인 자리다. 시그니엘에서 내려와 앉은 롯데월드몰 CHAGEE의 테이블
+ * 위이고, 전날 강남에서 못 갔던 곳이 여기 있었다는 사실이 이 사진의 내용이다.
+ */
+const chagee: Cover = {
+  src: '/media/session/signiel-exhibition/03-chagee.webp',
+  alt: '베이지색 테이블 위에 놓인 남색 별자리 무늬의 CHAGEE 테이크아웃 컵과 그 옆의 매장 이용 안내 팻말',
+  width: 1086,
+  height: 1448,
 }
 
 /* ─────────────────────────────  본문  ─────────────────────────────
@@ -51,59 +65,49 @@ const windowArt: Cover = {
 const start = (
   <>
     <p>토요일은 명동역에서 시작했다.</p>
-  </>
-)
-
-const locker = (
-  <>
-    <p>용산역에 들러 짐부터 맡겼다.</p>
-    <p>보관함 가격을 보고 잠깐 멈췄다.</p>
+    <p>용산역에 들러 짐을 맡겼는데, 보관함이 기본 2시간 1,000원에 이후 1시간당 200원이었다.</p>
   </>
 )
 
 const lockerAfter = (
   <>
     <p>
-      다른 데는 기본요금부터 4천 원 정도로 시작하는 곳도 많은데 여기는 거의 국가에서 운영하나 싶을
-      정도로 쌌다.
+      다른 곳은 시작부터 4천 원 정도 받는 경우가 많아서 거의 국가에서 운영하나 싶을 만큼 싸게
+      느껴졌다.
     </p>
-    <p>개혜자였다.</p>
-    <p>다음에도 이용해야겠다는 생각이 들었다.</p>
+    <p>다음에도 용산역을 거점으로 쓸 일이 있으면 다시 이용하고 싶을 정도였다.</p>
   </>
 )
 
 const mall = (
   <>
-    <p>롯데월드몰은 사람이 존나게 많았다.</p>
+    <p>그다음 잠실로 이동했다.</p>
+    <p>롯데월드몰은 사람이 정말 많았다.</p>
     <p>여기도 웨이팅, 저기도 웨이팅이었다.</p>
     <p>
-      전날 치폴레에서도 오래 기다렸지만 그때는 가을 바람도 불고 강남 거리를 지나가는 사람들을
-      구경하는 맛이라도 있었다.
+      전날 치폴레도 오래 기다렸지만 그때는 가을 바람도 불고 강남 사람들을 구경하는 맛이라도 있었다.
     </p>
-    <p>
-      롯데월드몰은 전부 실내라 개방감이 없고 사람이 빽빽해서, 기다리는 시간 자체는 더 짧아도 훨씬
-      답답했다.
-    </p>
+    <p>롯데월드몰은 전부 실내라 개방감이 없고 사람이 빽빽해서 훨씬 답답했다.</p>
   </>
 )
 
 const ramenRush = (
   <>
-    <p>오레노라멘은 약 30분 정도 만에 들어갔다.</p>
-    <p>라멘을 엄청 급하게 먹었다.</p>
+    <p>그래도 오레노라멘은 약 30분 정도 만에 들어갔다.</p>
+    <p>라멘은 엄청 급하게 먹었다.</p>
   </>
 )
 
 const ramenHabit = (
   <>
-    <p>먹는 속도도 늘었고 빠르기도 늘은 듯했다.</p>
-    <p>직장에서 밥 먹던 버릇이 여기에서도 쓰였나 보다.</p>
+    <p>먹는 속도도 늘었고 빠르게 먹는 데 익숙해진 것 같았다.</p>
+    <p>직장에서 밥 먹던 버릇이 여기에서도 쓰인 것 같았다.</p>
   </>
 )
 
 const refill = (
   <>
-    <p>면 반 덩이에 육수를 추가해도 추가금이 없었다.</p>
+    <p>면 반 덩이를 추가할 수 있었고 육수도 더 받을 수 있었는데 추가금은 없었다.</p>
   </>
 )
 
@@ -111,7 +115,7 @@ const signielDoor = (
   <>
     <p>그렇게 금방 먹고 시그니엘로 갔다.</p>
     <p>입구에서는 정장을 입은 문지기가 기분 좋게 인사해줬다.</p>
-    <p>기품인지 허영인지 모를 차림의 아트페어 참가자들과 함께 엘리베이터를 탔다.</p>
+    <p>기품인지 허영인지 모를 차림의 아트페어 참가자들과 함께 엘리베이터를 타고 79층으로 날았다.</p>
   </>
 )
 
@@ -121,96 +125,99 @@ const lobby = (
     <p>훈훈하게 생긴 서버들을 지나며 가볍게 주변을 훑어봤다.</p>
     <p>
       예전에 시그니엘에 왔을 때는 로비만 구경하고 내려갔는데, 이번에는 숙박객용 엘리베이터로
-      갈아탔다.
+      갈아타고 더 위로 올라갈 수 있었다.
     </p>
   </>
 )
 
 const pass = (
   <>
-    <p>이제는 7천 원짜리 통행권이 빛을 발하는 순간이었다.</p>
+    <p>그 순간에는 7천 원짜리 통행권이 드디어 빛을 발한다는 생각이 들었다.</p>
   </>
 )
 
 const fair = (
   <>
-    <p>87층에 도착했다.</p>
     <p>
-      아트페어에 온 사람들의 나이대는 대체로 40대를 넘길 올드비 쪽이었다. 간헐적으로 30대나 그보다
-      더 어려 보이는 사람들도 있었다.
+      아트페어 참가자들의 나이대는 대체로 40대를 넘긴 올드비 쪽이었고, 간헐적으로 30대나 그보다 더
+      어려 보이는 사람들도 있었다.
     </p>
-    <p>
-      호텔의 각 객실을 화랑처럼 쓰고 있었다. 객실 번호 위에는 각 갤러리의 이름이 붙어 있었다.
-    </p>
+    <p>행사 구성은 호텔 객실을 각각 화랑처럼 바꿔놓은 방식이었다.</p>
+    <p>객실 번호 위에는 각 갤러리 이름이 붙어 있었다.</p>
   </>
 )
 
 const afterCorridor = (
   <>
-    <p>내가 미술 작품을 비웃고 싶은 이유는 말하고자 하는 메시지보다 그럴싸한 포장이 더 드러나는 것 같아서다.</p>
-    <p>허영 같아서 웃기다는 거다.</p>
-    <p>재밌다는 거다.</p>
-    <p>싫다는 건 아니다.</p>
-    <p>그냥 장난스럽다는 거다.</p>
-    <p>위트 있다는 거다.</p>
+    <p>내가 미술 작품을 비웃고 싶어지는 이유도 조금 더 분명해졌다.</p>
+    <p>작품이 말하고자 하는 메시지보다 그럴싸한 포장이 더 먼저 드러나는 것 같아서다.</p>
+    <p>허영 같아서 웃긴다.</p>
+    <p>그렇다고 싫다는 뜻은 아니다.</p>
+    <p>그냥 장난스럽고, 위트 있다고 느끼는 쪽에 가깝다.</p>
   </>
 )
 
 const engineering = (
   <>
     <p>
-      대다수가 실제 효용 없는데 그들은 그걸 진지하게 논의하면서 최대한 있어 보이려고 노력한다.
+      대다수는 실용적 효용이 거의 없는 물건인데, 그걸 둘러싼 사람들은 아주 진지하게 논의하고 최대한
+      있어 보이려고 노력한다.
     </p>
-    <p>나는 오히려 그 사회공학이 배울 만하다고 생각했다.</p>
+    <p>나는 오히려 그 사회공학이 배울 만하다고 느꼈다.</p>
   </>
 )
 
 const nonverbal = (
   <>
-    <p>비언어를 읽고 쓰는 요령의 절벽 끝 같기도 했다.</p>
+    <p>어쩌면 비언어를 읽고 쓰는 요령의 절벽 끝 같은 곳일지도 모른다.</p>
   </>
 )
 
 const display = (
   <>
     <p>
-      미술관장들의 기분 좋은 허영은 예쁘고 센스 있는 패션으로도, 올드머니 패션으로도 디피되어
-      흥미로울 따름이었다.
+      미술관장들의 기분 좋은 허영은 예쁘고 센스 있는 패션으로도, 올드머니 스타일로도 디스플레이되고
+      있었다.
+    </p>
+    <p>
+      옷차림, 말투, 작품을 설명하는 방식, 어떤 이름을 자연스럽게 꺼내는지 같은 것들이 전부 하나의
+      장면처럼 보였다.
     </p>
   </>
 )
 
-const chagee = (
+const tea = (
   <>
     <p>구경을 끝내고 다시 내려왔다.</p>
-    <p>
-      그리고 어제 강남에서 결국 못 갔던 CHAGEE 매장이 롯데월드몰에도 있다는 것을 알게 됐다.
-    </p>
-    <p>그래서 그곳에서 이 글을 쓰게 된 것임.</p>
+    <p>그리고 어제 강남에서 결국 못 갔던 CHAGEE가 롯데월드몰에도 있다는 걸 알게 됐다.</p>
+    <p>지금은 롯데월드몰 CHAGEE에 앉아 이 글을 쓰고 있다.</p>
   </>
 )
 
-const crowdAtTea = (
-  <>
-    <p>사람이 존나 많다.</p>
-  </>
-)
-
+/*
+ * 소음과 노캔이 한 문장이다.
+ *
+ * 원문에서 «사람이 존나 많고»와 «노캔 헤드폰을 쓰고 있다»는 쉼표 하나로 이어진
+ * 한 문장이다. 앞뒤를 갈라 두 문단으로 만들면 읽기는 편해지지만 그날 실제로
+ * 적힌 문장이 아니게 된다. 주변이 사라지는 순간은 이 한 문장이 판면에 들어올
+ * 때로 잡는다.
+ */
 const anc = (
   <>
-    <p>여기가 어지간히 시끄러운 게 아니라서 노캔 헤드폰을 쓰고 있다.</p>
+    <p>사람이 존나 많고 어지간히 시끄러워서 노캔 헤드폰을 쓰고 있다.</p>
   </>
 )
 
 const x = (
   <>
-    <p>그리고 나는 지금 이 글을 죽은 텐타시온의 노래를 들으면서 쓰고 있다.</p>
+    <p>헤드폰에서는 죽은 텐타시온의 노래가 나온다.</p>
   </>
 )
 
 const black = (
   <>
-    <p>괜히 맞짱 뜨러 다니고 깝싸고 그러면 죽을 수도 있다는 블랙유머.</p>
+    <p>괜히 맞짱 뜨러 다니고 깝싸고 그러면</p>
+    <p>죽을 수도 있다.</p>
   </>
 )
 
@@ -228,7 +235,10 @@ const last = (
  */
 function LockerRate() {
   return (
-    <div className={styles.rate} aria-label="용산역 보관함 요금, 기본 2시간 1,000원, 이후 시간당 200원">
+    <div
+      className={styles.rate}
+      aria-label="용산역 보관함 요금, 기본 2시간 1,000원, 이후 시간당 200원"
+    >
       <p className={`mono ${styles.rateMain}`}>₩1,000 / 2H</p>
       <p className={`mono ${styles.rateMore}`}>+ ₩200 / H</p>
     </div>
@@ -307,37 +317,37 @@ const corridorSteps: readonly CorridorStep[] = [
     id: 'market-0',
     kind: 'market',
     phase: 0,
-    text: '시그니엘 87층은 갑작스레 웰메이드 플리마켓.',
+    text: '시그니엘의 한 층이 갑자기 웰메이드 플리마켓이 된 것 같아서 웃겼다.',
   },
   {
     id: 'market-1',
     kind: 'market',
     phase: 1,
-    text: '웃겼다.',
+    text: '플리마켓이라는 표현이 모멸적으로 들릴 수도 있지만,',
   },
   {
     id: 'market-2',
     kind: 'market',
     phase: 2,
-    text: '플리마켓이라는 표현이 모멸적으로 들릴 수도 있다.',
+    text: '각 방에 있는 미술관장들의 목적은 꽤 명확했다.',
   },
   {
     id: 'market-3',
     kind: 'market',
     phase: 3,
-    text: '그런데 실제로 각 방에 들어가 보면 미술관장들의 목적은 꽤 명확했다.',
+    text: '그림을 파는 것이었다.',
   },
   {
     id: 'market-4',
     kind: 'market',
     phase: 4,
-    text: '그림을 파는 것.',
+    text: '그리고 그 취지는 생각보다 노골적이었다.',
   },
   {
     id: 'room-kusama',
     kind: 'room',
     verbatim: true,
-    text: '요즘은 쿠사마 야요이보다 요시모토 나라가 뛰어 넘었어요.',
+    text: '요즘은 쿠사마 야요이보다 요시모토 나라가 뛰어넘었어요.',
     note: '무엇을?',
   },
   {
@@ -345,43 +355,51 @@ const corridorSteps: readonly CorridorStep[] = [
     kind: 'room',
     verbatim: true,
     text: '이 작가님은 차세대 앤디 워홀로 인정받기 시작했어요. 지금 사두시면 좋아요.',
-    note: '앤디 워홀이 상업 작가여서 그런 비교를 한 거라면 차라리 설득력이 있겠다고 생각했지만, 나는 별로 인정하고 싶지는 않았다.',
+    note: '앤디 워홀이 상업 작가여서 그런 비교를 한 거라면 차라리 설득력이 있겠다고 생각했지만, 나는 별로 인정하고 싶지 않았다.',
   },
   {
     id: 'room-other-talk',
     kind: 'room',
     verbatim: false,
-    text: '객실과 객실 사이에서는 작품에 대한 이야기만 돌아다니는 것도 아니었다.',
+    text: '방과 방 사이에서는 작품 이야기만 오간 것도 아니었다.',
   },
+  /*
+   * 한 문장을 쉼표에서만 끊는다.
+   *
+   * 원문에서 이 넷은 «캔버스가 너무 비싸졌다는 얘기, 거래가 다 끊겼다는 얘기,
+   * …» 하고 쉼표로 이어진 한 문장이다. 복도가 문마다 한 줄씩 주워듣는 장치라
+   * 나누어 싣되, 나누는 자리는 원문이 이미 끊어 둔 자리로만 한다. 말을 새로
+   * 지어 이어 붙이지 않는다.
+   */
   {
     id: 'room-canvas',
     kind: 'room',
     verbatim: false,
-    text: '캔버스가 너무 비싸졌다는 얘기.',
+    text: '캔버스가 너무 비싸졌다는 얘기,',
   },
   {
     id: 'room-deal',
     kind: 'room',
     verbatim: false,
-    text: '거래가 다 끊겼다는 얘기.',
+    text: '거래가 다 끊겼다는 얘기,',
   },
   {
     id: 'room-relationship',
     kind: 'room',
     verbatim: false,
-    text: '누구와 사이가 나빠져서 슬펐다는 얘기.',
+    text: '누구와 사이가 나빠져서 슬펐다는 얘기,',
   },
   {
     id: 'room-gift',
     kind: 'room',
     verbatim: false,
-    text: '명품 선물을 해주면 관계가 다시 풀릴 것 같다는 얘기.',
+    text: '명품 선물을 해주면 관계가 다시 풀릴 것 같다는 얘기 같은',
   },
   {
     id: 'room-small-talk',
     kind: 'room',
     verbatim: false,
-    text: '그런 소소한 잡담들도 여기저기서 흘러다녔다.',
+    text: '소소한 잡담들도 흘러다녔다.',
   },
 ] as const
 
@@ -449,20 +467,30 @@ function GalleryCorridor() {
         움직이는 판은 aria-hidden이다. 읽어 주는 쪽은 이 목록 하나만 만나고,
         화면에서 모션을 끈 사람에게도 바로 이 목록이 보인다.
       */}
-      <ol className={styles.corridorFallback}>
-        {corridorSteps.map((step) => (
-          <li key={step.id}>
-            {step.kind === 'market' ? (
-              <p>{step.text}</p>
-            ) : (
-              <>
-                {step.verbatim ? <p>“{step.text}”</p> : <p>{step.text}</p>}
-                {step.note ? <p className={styles.fallbackNote}>{step.note}</p> : null}
-              </>
-            )}
-          </li>
-        ))}
-      </ol>
+      {/*
+        여백은 창이 갖고 목록은 갖지 않는다.
+
+        판면의 좌우 여백을 <ol>에 직접 주면, 기호를 하나도 그리지 않는 목록이
+        기호의 자리만큼 들여쓰인 것과 같은 모양이 된다. 이 저장소의 검사가
+        그것을 잡는다(«기울어진 목록»). 여백을 밖의 상자로 옮기면 목록은
+        들여쓰기 0으로 남는다.
+      */}
+      <div className={styles.corridorRead}>
+        <ol className={styles.corridorFallback} role="list">
+          {corridorSteps.map((step) => (
+            <li key={step.id}>
+              {step.kind === 'market' ? (
+                <p>{step.text}</p>
+              ) : (
+                <>
+                  {step.verbatim ? <p>“{step.text}”</p> : <p>{step.text}</p>}
+                  {step.note ? <p className={styles.fallbackNote}>{step.note}</p> : null}
+                </>
+              )}
+            </li>
+          ))}
+        </ol>
+      </div>
 
       <div className={styles.corridorStage} aria-hidden="true">
         <p className={`mono ${styles.corridorFloor}`}>87F</p>
@@ -498,8 +526,18 @@ function ClosedDoor() {
   return (
     <div className={styles.closedDoor}>
       <span className={styles.closedLeaf} aria-hidden="true" />
+      {/*
+        액자를 지우지 않는다.
+
+        «진지한 척 좀 하지 마»만 남기면 이 문장은 미술계에 건 선언이 된다.
+        원문에서 이것은 앞뒤로 «솔직히 속으로는»과 «라고 말하고 싶은 순간도
+        있었다»에 싸여 있고, 그 두 마디가 이것을 속말로 붙들고 있다. 문을 닫아
+        두는 것과 같은 일을 문장이 이미 하고 있다.
+      */}
       <div className={styles.closedText}>
-        <p>진지한 척 좀 하지 마.</p>
+        <p className={styles.closedFrame}>솔직히 속으로는</p>
+        <p className={styles.closedLine}>진지한 척 좀 하지 마.</p>
+        <p className={styles.closedFrame}>라고 말하고 싶은 순간도 있었다.</p>
         <p>그래도 내가 거기 맞짱 뜨러 간 건 아니었다.</p>
         <p>그냥 구경하러 간 거였다.</p>
       </div>
@@ -530,7 +568,6 @@ function NoiseField() {
       </div>
 
       <div className={styles.noiseCopy}>
-        <Passage>{crowdAtTea}</Passage>
         <div ref={ref}>
           <Passage>{anc}</Passage>
         </div>
@@ -568,12 +605,17 @@ export const signielExhibition: Session = {
   ),
   display: 'stage',
   cover: windowArt,
-  images: [ramen, windowArt],
+  images: [ramen, windowArt, chagee],
 
   body: (
     <>
       <Scene>
-        <Place name="MYEONG-DONG STATION" address="서울 중구 퇴계로 지하 126" district="MYEONG-DONG" date="2026.09.19" />
+        <Place
+          name="MYEONG-DONG STATION"
+          address="서울 중구 퇴계로 지하 126"
+          district="MYEONG-DONG"
+          date="2026.09.19"
+        />
         <Passage>{start}</Passage>
       </Scene>
 
@@ -583,7 +625,6 @@ export const signielExhibition: Session = {
 
       <Scene>
         <Place name="YONGSAN STATION" address="서울 용산구 한강대로23길 55" district="YONGSAN" />
-        <Passage>{locker}</Passage>
         <LockerRate />
         <Passage>{lockerAfter}</Passage>
       </Scene>
@@ -692,7 +733,12 @@ export const signielExhibition: Session = {
 
       <Scene>
         <Place name="CHAGEE LOTTE WORLD" address="서울 송파구 올림픽로 300" district="JAMSIL" />
-        <Passage>{chagee}</Passage>
+        <Passage>{tea}</Passage>
+      </Scene>
+
+      {/* 이 글이 쓰인 자리. 시그니엘의 창가 그림 다음에 오는 유일한 사물이다. */}
+      <Scene width="bleed">
+        <Plate image={chagee} tone="full" />
       </Scene>
 
       <Scene width="bleed">

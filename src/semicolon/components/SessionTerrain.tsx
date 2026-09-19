@@ -345,7 +345,7 @@ function Record({ session, wide }: { session: Session; wide: boolean }) {
       {pieces.length > 0 ? (
         <div className={styles.plate}>
           <div className={styles.band}>
-            {pieces.map((piece, index) => (
+            {pieces.map((piece) => (
               /*
                * 조각도 같은 곳으로 간다.
                *
@@ -354,7 +354,7 @@ function Record({ session, wide }: { session: Session; wide: boolean }) {
                * 읽히면 목록이 아니라 소음이 된다. 눌리기는 그대로 눌린다.
                */
               <Link
-                key={`${session.slug}@${index}`}
+                key={piece.image.src}
                 to={to}
                 className={styles.piece}
                 style={{ '--cols': piece.cols, '--rows': piece.rows } as CSSProperties}

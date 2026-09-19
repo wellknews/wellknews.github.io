@@ -272,12 +272,23 @@
  * prefers-reduced-motion: no-preference 안에서만 이 목록을 화면 밖으로 접고 대신
  * 나타난다. 지원하지 않는 브라우저에서는 이 목록이 그대로 완성본이다.
  */
+/*
+ * 읽는 쪽의 상자.
+ *
+ * 판면의 좌우 여백은 여기가 갖는다. 목록에 직접 주면 기호를 그리지 않는
+ * 목록이 기호의 자리만큼 들여쓰인 모양이 되고, 가운데 맞춤 장치 안에서 그
+ * 차이의 절반만큼 잉크가 통째로 밀린다.
+ */
+.corridorRead {
+  padding: 0 var(--page-x);
+}
+
 .corridorFallback {
   display: grid;
   row-gap: clamp(28px, 6vw, 64px);
   width: min(100%, var(--measure));
   margin: 0 auto;
-  padding: 0 var(--page-x);
+  padding: 0;
   list-style: none;
 }
 
@@ -541,12 +552,24 @@
   text-wrap: pretty;
 }
 
-.closedText p:first-child {
-  color: var(--color-text);
+.closedText p {
+  color: var(--color-text-secondary);
 }
 
-.closedText p:not(:first-child) {
-  color: var(--color-text-secondary);
+/*
+ * 속말과 그것을 싸고 있는 두 마디.
+ *
+ * 가운데 한 줄만 제 색으로 서고 앞뒤의 «솔직히 속으로는»과 «라고 말하고 싶은
+ * 순간도 있었다»는 한 단계 물러선다. 이 두 마디가 지워지면 가운데 문장은
+ * 미술계에 건 선언이 되는데, 그날 그것은 문 앞에서 속으로 든 말이었다.
+ */
+.closedFrame {
+  font-size: var(--text-meta);
+  color: var(--color-text-muted);
+}
+
+.closedLine {
+  color: var(--color-text);
 }
 
 /* ─────────────────────────────  CHAGEE — 소음  ───────────────────────────── */
@@ -592,7 +615,6 @@
   opacity: 0.22;
   animation: noise-drift calc(4s + var(--i) * 0.08s) ease-in-out infinite alternate;
 }
-
 
 .noise span:nth-child(odd) {
   left: calc(2% + var(--i) * 0.75%);
