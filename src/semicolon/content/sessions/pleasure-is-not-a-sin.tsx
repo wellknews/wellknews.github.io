@@ -589,6 +589,9 @@ export const pleasureIsNotASin: Session = {
       <p>어디까지 이어지는지는 본문에서 확인하면 된다.</p>
     </>
   ),
+
+  /* 목록의 판에 오르는 장면들. 실린 순서 그대로. */
+  images: [yenaDjSet, yenaStage, nowimyoung, unknownPlate],
   display: 'stage',
 
   /*

@@ -1,5 +1,5 @@
 import { PageHead } from '../components/PageHead'
-import { SessionList } from '../components/SessionList'
+import { SessionTerrain } from '../components/SessionTerrain'
 import { semicolon } from '../content/site'
 import { sessions } from '../content/sessions'
 import { path } from '../router'
@@ -14,7 +14,7 @@ export function SessionIndex() {
         definition={semicolon.session.definition}
       />
 
-      <SessionList sessions={sessions} empty={semicolon.session.empty} />
+      <SessionTerrain sessions={sessions} empty={semicolon.session.empty} />
     </div>
   )
 }

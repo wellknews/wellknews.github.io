@@ -99,6 +99,9 @@ export const commanderAtHome: Session = {
 
   cover: taegeukRabbit,
 
+  /* 목록의 판에 오르는 장면들. 실린 순서 그대로. */
+  images: [taegeukRabbit],
+
   body: (
     <>
       <Scene>

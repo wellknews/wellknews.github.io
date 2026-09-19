@@ -425,6 +425,27 @@ const DEVICES = [
    * 세 페이지가 같은 kind('index')를 쓰므로 기호로 대상을 좁힌다. :has()가
    * 없으면 세션의 목록에서 스레드의 점을 찾다가 검사 자체가 죽는다.
    */
+  /*
+   * SESSION 목록의 판.
+   *
+   * 이 페이지에서 목록을 읽는 방법이 곧 이 장치다. 사진에 다가가면 그 사진이
+   * 걷히고 같은 자리에 기록의 이름이 드러난다 — 정보가 사진 위에 얹히는 것이
+   * 아니라 둘이 같은 사각형을 번갈아 쓴다. 이것이 죽으면 이 페이지는 제목
+   * 없는 사진 무더기가 되므로, 커서와 손가락 양쪽에서 실제로 걷히는지 본다.
+   *
+   * 손가락에서는 첫 번째 찍기가 커서의 hover를 대신하고 이동하지 않는다.
+   * 그래서 여기서 탭해도 검사가 다음 화면으로 넘어가지 않는다.
+   */
+  {
+    kind: 'index',
+    label: '걷히는 사진',
+    target: '[class*="SessionTerrain-module__piece"]',
+    read: () => {
+      const face = document.querySelector('[class*="SessionTerrain-module__face"]')
+      return face ? getComputedStyle(face).opacity : null
+    },
+    changed: (before, after) => Number(before) > 0.5 && Number(after) < 0.5,
+  },
   {
     kind: 'index',
     label: '벽에 부딪히는 점',

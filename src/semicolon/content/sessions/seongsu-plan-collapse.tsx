@@ -529,6 +529,9 @@ export const seongsuPlanCollapse: Session = {
       <p>없어진 것은 계획 자체라기보다 그 계획을 실행할 이유와 힘에 가깝다.</p>
     </>
   ),
+
+  /* 목록의 판에 오르는 장면들. 실린 순서 그대로. */
+  images: [musinsaLunch, humanmadeStore, potRitual],
   display: 'stage',
 
   /*

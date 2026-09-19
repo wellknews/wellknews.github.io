@@ -591,6 +591,9 @@ export const onlyMyself: Session = {
       <p>본문 후반부에서 다시 검토되는 것이 바로 이 51%다.</p>
     </>
   ),
+
+  /* 목록의 판에 오르는 장면들. 실린 순서 그대로. */
+  images: [kalguksu, blueBottle, whanki, chongYung, tschangYeul, naengmyeon],
   display: 'stage',
 
   /*

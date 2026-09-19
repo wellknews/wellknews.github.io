@@ -1,4 +1,11 @@
-import { useEffect, useState, type MouseEvent, type PointerEvent, type ReactNode } from 'react'
+import {
+  useEffect,
+  useState,
+  type CSSProperties,
+  type MouseEvent,
+  type PointerEvent,
+  type ReactNode,
+} from 'react'
 
 /**
  * 이 공간의 뿌리. 주소창에 그대로 노출되는 문자열이기도 하다.
@@ -169,6 +176,23 @@ type LinkProps = {
    */
   'data-touched'?: boolean | undefined
   onPointerDown?: ((event: PointerEvent<Element>) => void) | undefined
+  onPointerEnter?: ((event: PointerEvent<Element>) => void) | undefined
+  /** 격자 안에서 이 링크가 차지하는 자리처럼, 링크마다 달라지는 값. */
+  style?: CSSProperties | undefined
+  /**
+   * 누른 것이 아직 «가겠다»가 아닐 때.
+   *
+   * 여기서 preventDefault를 하면 이동하지 않는다. 손가락에는 hover가 없어서
+   * 첫 번째 찍기를 커서의 자리로 쓰는 화면이 있는데(SESSION의 판), 그런 곳은
+   * 첫 찍기를 삼키고 두 번째에 이동해야 한다.
+   *
+   * pointerdown에서 막아서는 안 된다 — 그쪽의 preventDefault는 뒤따라오는
+   * click까지 막아 주지 않아서, 화면은 펴지는데 이동도 같이 일어난다.
+   * 막는 자리는 click이어야 한다.
+   */
+  onClick?: ((event: MouseEvent<HTMLAnchorElement>) => void) | undefined
+  /** 상태를 CSS로 내보내는 자리. data-lead, data-bare처럼. */
+  [attribute: `data-${string}`]: unknown
 }
 
 /**
@@ -177,10 +201,13 @@ type LinkProps = {
  * 새 탭으로 열기, 가운데 클릭, 수식키 조합은 브라우저에 그대로 넘긴다.
  * 주소가 진짜 href로 들어 있어야 그 동작들이 살아 있다.
  */
-export function Link({ to, children, className, current, ...rest }: LinkProps) {
+export function Link({ to, children, className, current, onClick, ...rest }: LinkProps) {
   const ariaCurrent = current === true ? 'page' : current
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    /* 누른 쪽이 먼저 본다. 막으면 여기서 끝난다. */
+    onClick?.(event)
+
     if (event.defaultPrevented) return
     if (event.button !== 0) return
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return

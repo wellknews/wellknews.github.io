@@ -1,0 +1,301 @@
+/*
+ * 장면이 쌓인 판.
+ *
+ * 두 개의 틈이 이 판의 전부다. 조각과 조각 사이는 2px이고 기록과 기록 사이는
+ * 그보다 조금 넓다. 몇 픽셀 차이라 눈으로 세지는 않지만 «여기까지가 하루»라는
+ * 것은 읽힌다. 선을 긋거나 카드로 구획하면 이 판은 다시 목록이 된다.
+ */
+.terrain {
+  --seam: 2px;
+  --break: clamp(10px, 1.4vw, 18px);
+
+  display: grid;
+  row-gap: var(--break);
+}
+
+/*
+ * 한 기록.
+ *
+ * 격자를 기록마다 따로 갖는다. 하나의 큰 격자에 전부 흘려 넣으면 조각들이
+ * 기록의 경계를 넘어가 서로 붙고, 그러면 «어디까지가 한 날인지»가 사라진다.
+ * 판이 하나로 보이는 것은 틈이 작기 때문이지 격자가 하나이기 때문이 아니다.
+ */
+.group {
+  /*
+   * 행의 높이를 열의 폭에서 끌어온다.
+   *
+   * grid-auto-rows에 %를 쓰면 폭이 아니라 높이를 기준으로 읽는다. 높이가
+   * auto인 격자에서 그 값은 아무것도 가리키지 못해서 행이 통째로 내용 높이로
+   * 주저앉았고, 사진은 글자 높이만큼만 남은 띠가 되었다. cqw는 이 상자의
+   * 가로 폭을 재므로 그런 일이 없다.
+   */
+  container-type: inline-size;
+
+  --col: calc((100cqw - 5 * var(--seam)) / 6);
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /*
+   * 행은 열의 절반이다.
+   *
+   * 한 칸을 정사각형으로 두었더니 한 조각이 화면의 절반을 먹고, 판이 아니라
+   * 한 장씩 넘기는 화면이 되었다. 절반으로 낮추면 같은 폭에서 [6]은 3:1
+   * 띠가 되고 [4,2]는 2:1과 정사각이 되고 [2,2,2]는 4:3 셋이 된다 — 조각의
+   * 생김새가 서로 다르면서도 한 화면에 여러 기록이 들어온다.
+   */
+  grid-auto-rows: calc(var(--col) / 2);
+  gap: var(--seam);
+}
+
+/*
+ * 조각 하나.
+ *
+ * 사진과 정보가 같은 사각형을 번갈아 쓴다. 정보가 아래에 깔려 있고 사진이
+ * 그 위를 덮는다 — 다가가면 사진이 걷히고 원래 있던 지면이 드러난다. 새
+ * 패널이 뜨는 것이 아니라 같은 격자의 한 조각이 다른 상태가 되는 것이다.
+ */
+.piece {
+  position: relative;
+  grid-column: span var(--cols);
+  grid-row: span var(--rows);
+  overflow: hidden;
+  /* 지면 그 자체. 사진이 걷힌 자리에 드러나는 것이 이 색이다. */
+  background: var(--color-bg);
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 좁은 판면은 네 칸으로 짠다. 열을 줄이는 대신 한 조각을 키운다. */
+@media (max-width: 599px) {
+  .group {
+    --col: calc((100cqw - 3 * var(--seam)) / 4);
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*
+ * 덮는 쪽.
+ *
+ * 원래 비율은 지키지 않는다. 이 판은 사진을 감상하는 갤러리가 아니라 장면이
+ * 쌓인 지형이고, 비율을 저마다 지키면 격자가 무너져 결국 masonry가 된다.
+ * 대신 무엇이 찍혀 있는지가 잘리지 않도록 그 사진이 스스로 말한 초점을
+ * 기준으로 자른다(Cover.focus).
+ */
+.face {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--fx, 50%) var(--fy, 50%);
+  /*
+   * 판 전체가 한 장의 사진처럼 보이도록 채도를 한 단계 내려 둔다. 원색이
+   * 그대로 스물두 조각 붙어 있으면 그것은 축적이 아니라 콜라주다.
+   */
+  filter: saturate(0.82) contrast(0.97);
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    filter var(--dur-base) var(--ease-out);
+}
+
+/*
+ * 드러나는 쪽.
+ *
+ * 늘 그려져 있다. 숨겨 두었다가 다가갈 때 띄우면 움직임을 끈 사람과 낭독으로
+ * 듣는 사람에게 이 목록은 제목 없는 사진 무더기가 된다. 여기서 달라지는 것은
+ * 이 글자가 있느냐 없느냐가 아니라 위에 사진이 덮여 있느냐다.
+ */
+.card {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(12px, 1.4vw, 22px);
+  gap: 6px;
+}
+
+/*
+ * 첫 조각이 아닌 자리.
+ *
+ * 날짜와 제목뿐이라 위에 붙여 두면 아래가 통째로 빈다. 가운데로 옮기면 그
+ * 두 줄이 조각의 내용이 된다 — 남은 공간이 여백이지 빈칸이 아니게 된다.
+ */
+.piece:not([data-lead='true']) .card {
+  justify-content: center;
+}
+
+.date {
+  font-size: var(--text-meta);
+  letter-spacing: var(--tracking-meta);
+  color: var(--color-text-muted);
+}
+
+/*
+ * 제목의 크기는 조각의 크기를 따른다.
+ *
+ * 사진이 차지하던 면적이 글의 양을 정한다는 규칙은 글자 크기에도 걸린다.
+ * 좁은 조각에 큰 제목을 넣으면 넘치고, 넓은 조각에 작은 제목을 넣으면
+ * 걷어낸 자리가 비어 보인다.
+ */
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: calc(0.8rem + var(--cols) * 0.19rem);
+  font-weight: var(--weight-display);
+  line-height: 1.32;
+  letter-spacing: var(--tracking-title);
+  color: var(--color-text);
+  /* 좁은 조각에서 제목이 칸을 넘치지 않게. 넘치면 잘린 글자가 보인다. */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.where {
+  font-size: var(--text-meta);
+  /* 장소는 대개 한글이라 고정폭의 넓은 자간이 그대로 오면 헐겁게 벌어진다. */
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+}
+
+/*
+ * 한 줄 설명.
+ *
+ * 기록마다 한 번만 나온다. 같은 기록의 조각이 여섯이라고 해서 같은 문장을
+ * 여섯 번 읽을 이유가 없다. 이 줄이 붙는 조각이 그 기록에서 가장 큰
+ * 조각이기도 해서, 사진이 차지하던 면적이 글의 양을 정한다는 규칙이 그대로
+ * 지켜진다.
+ */
+.line {
+  max-width: 34ch;
+  /*
+   * 제목 바로 아래에 붙인다. 아래 끝으로 밀어 두었더니 넓은 조각에서 가운데가
+   * 300px씩 비었다 — 여백이 아니라 빈칸으로 보였다. 걷어낸 자리에 남는 것은
+   * 종이 위의 글 한 덩어리이고, 덩어리는 흩어져 있지 않아야 한다.
+   */
+  margin: 0.7em 0 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-meta);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  text-wrap: pretty;
+}
+
+/* 사진이 없는 기록. 걷어낼 것이 없으니 처음부터 지면이다. */
+.piece[data-bare='true'] .card {
+  justify-content: center;
+}
+
+/*
+ * 사진이 걷히는 순간.
+ *
+ * 커서가 지나가면, 키보드로 자리를 옮기면, 손가락으로 한 번 찍으면 일어난다.
+ * 셋 다 같은 일이어야 한다 — 한쪽에만 있으면 그 사람에게는 없는 기능이다.
+ */
+.piece:hover .face,
+.piece:focus-visible .face,
+.group[data-open='true'] .piece:hover .face {
+  opacity: 0;
+}
+
+.piece:focus-visible {
+  outline: 1px solid var(--color-line-strong);
+  outline-offset: -1px;
+}
+
+/*
+ * 관계가 잠깐 보이는 자리.
+ *
+ * 한 조각에 다가가면 같은 기록의 나머지 조각이 제 색을 되찾고, 다른 기록의
+ * 조각들은 한 단계 가라앉는다. 테두리를 그리지 않고도 «이 사진들은 같은
+ * 기록이다»가 드러난다.
+ *
+ * 세기를 낮게 잡는다. 강하면 블록이 선택되는 게임 화면이 되고, 여기서 하려는
+ * 것은 숨어 있던 관계가 잠깐 보이는 정도다.
+ */
+/*
+ * 가라앉히되 비치게 하지는 않는다.
+ *
+ * 처음에는 filter에 opacity()를 섞었다가 사진이 반투명해졌고, 그 밑에 깔린
+ * 제목이 사진 위로 떠올랐다 — 걷히지 않은 조각에서 글자가 보이면 이 판의
+ * 규칙(사진과 정보는 같은 자리를 번갈아 쓴다)이 그 자리에서만 깨진다.
+ * 여기서 쓸 수 있는 것은 색을 빼는 값뿐이다.
+ */
+.terrain:has(.group:hover) .group:not(:hover) .face,
+.terrain[data-open] .group:not([data-open]) .face {
+  filter: saturate(0.5) contrast(0.92) brightness(1.06);
+}
+
+.group:hover .face,
+.group[data-open='true'] .face {
+  filter: saturate(1) contrast(1);
+}
+
+/*
+ * 손가락으로 펴 둔 조각.
+ *
+ * 커서의 hover와 같은 자리에 온다. 이 상태에서 한 번 더 찍으면 기록으로
+ * 들어가고, 다른 조각을 찍으면 이쪽은 다시 사진으로 돌아간다.
+ */
+@media (hover: none) {
+  .group[data-open='true'] .piece[data-lead='true'] .face {
+    opacity: 0;
+  }
+}
+
+/*
+ * 아래에서 자리를 얻는다.
+ *
+ * 한꺼번에 다 그려져 있는 것처럼 보이지 않게 한다. 다만 «불러오는 중»으로
+ * 보여서도 안 된다 — 여기서 원하는 것은 아직 보지 않은 기록이 아래에서 계속
+ * 발견되는 감각이고, 그래서 움직임은 자리를 얻는 정도에서 끝난다.
+ *
+ * 끝난 상태가 기본이다. 타임라인을 모르는 브라우저에서도, 움직임을 줄이기로
+ * 한 사람에게도 판은 처음부터 전부 놓여 있다.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .piece {
+      animation-name: piece-settle;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: view();
+      animation-range: entry 4% entry 46%;
+    }
+  }
+}
+
+@keyframes piece-settle {
+  from {
+    opacity: 0;
+    /* 6px. 자리를 얻었다고 느껴지는 최소한. 더 주면 판이 출렁인다. */
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*
+ * 손가락에는 커서 모양 같은 힌트가 없다.
+ *
+ * 그래서 사진을 조금 더 또렷하게 시작한다. 반응을 없애는 대신 시작점을
+ * 옮기는 쪽이다 — 찍으면 사진이 걷히는 것은 커서와 똑같다.
+ */
+@media (hover: none) {
+  .face {
+    filter: saturate(0.92) contrast(0.99);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .face {
+    transition: none;
+  }
+}

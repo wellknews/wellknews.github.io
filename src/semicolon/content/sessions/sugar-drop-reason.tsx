@@ -405,6 +405,9 @@ export const sugarDropReason: Session = {
 
   cover: dessert,
 
+  /* 목록의 판에 오르는 장면들. 실린 순서 그대로. */
+  images: [dessert],
+
   /*
    * 넓은 판면의 배치.
    *

@@ -389,6 +389,9 @@ export const divideAndConquer: Session = {
       </p>
     </>
   ),
+
+  /* 목록의 판에 오르는 장면들. 실린 순서 그대로. */
+  images: [counter, lounge, flight],
   display: 'stage',
 
   /*

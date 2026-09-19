@@ -180,6 +180,9 @@ export const wellknews1k: Session = {
   /* 표지는 완성품이 아니라 시안이다. 아직 물건이 아닌 상태에서 시작해야 한다. */
   cover: mockupFront,
 
+  /* 목록의 판에 오르는 장면들. 실린 순서 그대로. */
+  images: [mockupFront, mockupBack, packaged, worn],
+
   /*
    * 넓은 판면의 배치.
    *
