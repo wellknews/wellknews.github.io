@@ -4,6 +4,7 @@ import { onlyMyself } from './sessions/only-myself'
 import { pleasureIsNotASin } from './sessions/pleasure-is-not-a-sin'
 import { pushedUnderground } from './sessions/pushed-underground'
 import { seongsuPlanCollapse } from './sessions/seongsu-plan-collapse'
+import { signielExhibition } from './sessions/signiel-exhibition'
 import { sugarDropReason } from './sessions/sugar-drop-reason'
 import { wellknews1k } from './sessions/wellknews-1k'
 import type { Session } from './types'
@@ -19,6 +20,7 @@ import type { Session } from './types'
  * 순서는 최신 순으로 직접 정렬한다 — 자동 정렬 규칙을 만들 만큼 많지 않다.
  */
 export const sessions: readonly Session[] = [
+  signielExhibition,
   pushedUnderground,
   sugarDropReason,
   commanderAtHome,
